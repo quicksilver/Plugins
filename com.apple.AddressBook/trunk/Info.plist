@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>181</string>
+	<string>155</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2006, Blacktree, Inc.</string>
 	<key>QSActions</key>
@@ -180,10 +180,10 @@
 			<key>QSABMimicActionProvider</key>
 			<string>QSABMimicActionProvider</string>
 		</dict>
-		<key>QSBundleChildPresets</key>
+		<key>QSBundleChildHandlers</key>
 		<dict>
 			<key>com.apple.AddressBook</key>
-			<string>QSPresetAddressBook</string>
+			<string>QSAddressBookObjectSource</string>
 		</dict>
 		<key>QSObjectHandlers</key>
 		<dict>

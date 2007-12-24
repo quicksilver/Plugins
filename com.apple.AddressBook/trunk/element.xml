@@ -1,4 +1,4 @@
-<element id="com.blacktree.Quicksilver.QSAddressBookPlugIn" name="Apple Address Book Module" version="119">
+<element name="Apple Address Book Module" id="com.blacktree.Quicksilver.QSAddressBookPlugIn" version="150">
     <info>
         <category>Contacts</category>
         <category>Applications</category>
@@ -77,28 +77,6 @@
             </catalog-preset>
         </extension>
         <extension point="com.blacktree.actions">
-            <action name="Show Contact" id="QSABContactShowAction">
-                <plist version="1.0">
-                    <dict>
-                        <key>actionClass</key>
-                        <string>QSABContactActions</string>
-                        <key>actionSelector</key>
-                        <string>showContact:</string>
-                        <key>directTypes</key>
-                        <array>
-                            <string>ABPeopleUIDsPboardType</string>
-                        </array>
-                        <key>icon</key>
-                        <string>com.apple.AddressBook</string>
-                        <key>name</key>
-                        <string>Show Contact</string>
-                        <key>precedence</key>
-                        <integer>3</integer>
-                        <key>validatesObjects</key>
-                        <false/>
-                    </dict>
-                </plist>
-            </action>
             <action name="Add Note..." id="QSABContactAddDataAction">
                 <plist version="1.0">
                     <dict>
@@ -116,6 +94,28 @@
                         <string>Add Note...</string>
                         <key>reverseArguments</key>
                         <true/>
+                        <key>validatesObjects</key>
+                        <false/>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Show Contact" id="QSABContactShowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSABContactActions</string>
+                        <key>actionSelector</key>
+                        <string>showContact:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>ABPeopleUIDsPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.AddressBook</string>
+                        <key>name</key>
+                        <string>Show Contact</string>
+                        <key>precedence</key>
+                        <integer>3</integer>
                         <key>validatesObjects</key>
                         <false/>
                     </dict>
@@ -142,6 +142,13 @@
                 </plist>
             </action>
         </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSABContactActions" class="QSABContactActions"/>
+            <action-provider id="QSABMimicActionProvider" class="QSABMimicActionProvider"/>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="ABPeopleUIDsPboardType" class="QSContactObjectHandler"/>
+        </extension>
         <extension point="QSAETypeConverters">
             <extension id="com.apple.addressbook.item-object" class="QSContactObjectHandler"/>
         </extension>
@@ -158,18 +165,11 @@
             </object-type>
         </extension>
         <extension point="QSObjectSources">
-            <object-source id="QSABMailRecentsObjectSource" class="QSABMailRecentsObjectSource"/>
             <object-source id="QSAddressBookObjectSource" class="QSAddressBookObjectSource"/>
+            <object-source id="QSABMailRecentsObjectSource" class="QSABMailRecentsObjectSource"/>
         </extension>
-        <extension point="QSObjectHandlers">
-            <object-handler id="ABPeopleUIDsPboardType" class="QSContactObjectHandler"/>
-        </extension>
-        <extension point="QSActionProviders">
-            <action-provider id="QSABContactActions" class="QSABContactActions"/>
-            <action-provider id="QSABMimicActionProvider" class="QSABMimicActionProvider"/>
-        </extension>
-        <extension point="QSBundleChildPresets">
-            <bundle-child-preset id="com.apple.AddressBook">QSPresetAddressBook</bundle-child-preset>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.apple.AddressBook" class="QSAddressBookObjectSource"/>
         </extension>
     </extensions>
 </element>

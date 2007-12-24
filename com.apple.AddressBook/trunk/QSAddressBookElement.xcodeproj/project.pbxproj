@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 44;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,37 +22,14 @@
 		E36CA8F907F203EF00EB928D /* ABPerson_Display.m in Sources */ = {isa = PBXBuildFile; fileRef = E36CA8F707F203EF00EB928D /* ABPerson_Display.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4D03FBB60D13279700AD14C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D03FBAF0D13279700AD14C6 /* Quicksilver.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7F9A7A640C49595900B5912D;
-			remoteInfo = Quicksilver;
-		};
-		4D03FBB80D13279700AD14C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D03FBAF0D13279700AD14C6 /* Quicksilver.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7F5D22470C49C18400812049;
-			remoteInfo = Core;
-		};
-		4D03FBBC0D13279E00AD14C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D03FBAF0D13279700AD14C6 /* Quicksilver.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7F9A7A630C49595900B5912D;
-			remoteInfo = Quicksilver;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		4D03FBAF0D13279700AD14C6 /* Quicksilver.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quicksilver.xcodeproj; path = ../../Quicksilver.xcodeproj; sourceTree = SOURCE_ROOT; };
-		4D0F0EE50D105D8C00B36DEF /* QSElement_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSElement_Debug.xcconfig; path = ../../../Configuration/QSElement_Debug.xcconfig; sourceTree = SOURCE_ROOT; };
-		4D0F0EE60D105D8C00B36DEF /* QSElement_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSElement_Prefix.pch; path = ../../../Configuration/QSElement_Prefix.pch; sourceTree = SOURCE_ROOT; };
-		4D0F0EE70D105D8C00B36DEF /* QSElement_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSElement_Release.xcconfig; path = ../../../Configuration/QSElement_Release.xcconfig; sourceTree = SOURCE_ROOT; };
-		4D0F0EF10D105E6A00B36DEF /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = ../../../Configuration/Common.xcconfig; sourceTree = SOURCE_ROOT; };
 		7F20FCC007EB0FAC007A01B3 /* QSAddressBookObjectSource.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSAddressBookObjectSource.nib; sourceTree = SOURCE_ROOT; };
+		7F3510040D15F06C00B2B814 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = Configuration/Common.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7F3510050D15F06C00B2B814 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7F3510060D15F06C00B2B814 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = Configuration/Developer.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7F3510070D15F06C00B2B814 /* QSElement.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSElement.xcconfig; path = Configuration/QSElement.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7F3510080D15F06C00B2B814 /* QSElement_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSElement_Prefix.pch; path = Configuration/QSElement_Prefix.pch; sourceTree = QS_SOURCE_ROOT; };
+		7F35100B0D15F06C00B2B814 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = QS_SOURCE_ROOT; };
 		7FBB894B0C0E77CC0093A56A /* element.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* Apple Address Book.element */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Apple Address Book.element"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,10 +62,9 @@
 		0259C574FE90428111CA0C5A /* QSAddressBookPlugIn */ = {
 			isa = PBXGroup;
 			children = (
-				4D0F0EE20D105D7400B36DEF /* Configuration */,
+				7F3510030D15F06C00B2B814 /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				0259C582FE90428111CA0C5A /* Resources */,
-				4D03FBAF0D13279700AD14C6 /* Quicksilver.xcodeproj */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
 			);
@@ -138,25 +114,18 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		4D03FBB00D13279700AD14C6 /* Products */ = {
+		7F3510030D15F06C00B2B814 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				4D03FBB70D13279700AD14C6 /* Quicksilver.app */,
-				4D03FBB90D13279700AD14C6 /* Core.element */,
+				7F3510040D15F06C00B2B814 /* Common.xcconfig */,
+				7F3510050D15F06C00B2B814 /* Debug.xcconfig */,
+				7F3510060D15F06C00B2B814 /* Developer.xcconfig */,
+				7F3510070D15F06C00B2B814 /* QSElement.xcconfig */,
+				7F3510080D15F06C00B2B814 /* QSElement_Prefix.pch */,
+				7F35100B0D15F06C00B2B814 /* Release.xcconfig */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4D0F0EE20D105D7400B36DEF /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				4D0F0EF10D105E6A00B36DEF /* Common.xcconfig */,
-				4D0F0EE50D105D8C00B36DEF /* QSElement_Debug.xcconfig */,
-				4D0F0EE60D105D8C00B36DEF /* QSElement_Prefix.pch */,
-				4D0F0EE70D105D8C00B36DEF /* QSElement_Release.xcconfig */,
-			);
-			name = Configuration;
-			sourceTree = "<group>";
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -173,7 +142,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4D03FBBD0D13279E00AD14C6 /* PBXTargetDependency */,
 			);
 			name = "Apple Address Book";
 			productInstallPath = "$(HOME)/Developer/Palettes";
@@ -187,39 +155,16 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7F07AEFE085E432900E2AFC4 /* Build configuration list for PBXProject "QSAddressBookElement" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.0";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSAddressBookPlugIn */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4D03FBB00D13279700AD14C6 /* Products */;
-					ProjectRef = 4D03FBAF0D13279700AD14C6 /* Quicksilver.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Apple Address Book */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4D03FBB70D13279700AD14C6 /* Quicksilver.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Quicksilver.app;
-			remoteRef = 4D03FBB60D13279700AD14C6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4D03FBB90D13279700AD14C6 /* Core.element */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = Core.element;
-			remoteRef = 4D03FBB80D13279700AD14C6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1AC9660486D14A00FE50C9 /* Resources */ = {
@@ -268,57 +213,31 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		4D03FBBD0D13279E00AD14C6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Quicksilver;
-			targetProxy = 4D03FBBC0D13279E00AD14C6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		4D0F0EE80D105D9B00B36DEF /* Release */ = {
+		7F07AEFC085E432900E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0F0EE70D105D8C00B36DEF /* QSElement_Release.xcconfig */;
+			baseConfigurationReference = 7F3510070D15F06C00B2B814 /* QSElement.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		4D0F0EE90D105D9B00B36DEF /* Release */ = {
+		7F07AF00085E432900E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F35100B0D15F06C00B2B814 /* Release.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = Info.plist;
-				PRODUCT_NAME = "Apple Address Book";
 			};
 			name = Release;
 		};
-		4D0F0EEA0D105D9F00B36DEF /* Standalone (Debug) */ = {
+		7F3510120D15F08E00B2B814 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0F0EE50D105D8C00B36DEF /* QSElement_Debug.xcconfig */;
+			baseConfigurationReference = 7F3510050D15F06C00B2B814 /* Debug.xcconfig */;
 			buildSettings = {
-				SYMROOT = build;
-			};
-			name = "Standalone (Debug)";
-		};
-		4D0F0EEB0D105D9F00B36DEF /* Standalone (Debug) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = Info.plist;
-				PRODUCT_NAME = "Apple Address Book";
-			};
-			name = "Standalone (Debug)";
-		};
-		7F07AEFC085E432900E2AFC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = Info.plist;
-				PRODUCT_NAME = "Apple Address Book";
 			};
 			name = Debug;
 		};
-		7F07AF00085E432900E2AFC4 /* Debug */ = {
+		7F3510130D15F08E00B2B814 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0F0EE50D105D8C00B36DEF /* QSElement_Debug.xcconfig */;
+			baseConfigurationReference = 7F3510070D15F06C00B2B814 /* QSElement.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
@@ -329,9 +248,8 @@
 		7F07AEFA085E432900E2AFC4 /* Build configuration list for PBXNativeTarget "Apple Address Book" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F07AEFC085E432900E2AFC4 /* Debug */,
-				4D0F0EE90D105D9B00B36DEF /* Release */,
-				4D0F0EEB0D105D9F00B36DEF /* Standalone (Debug) */,
+				7F07AEFC085E432900E2AFC4 /* Release */,
+				7F3510130D15F08E00B2B814 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -339,9 +257,8 @@
 		7F07AEFE085E432900E2AFC4 /* Build configuration list for PBXProject "QSAddressBookElement" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F07AF00085E432900E2AFC4 /* Debug */,
-				4D0F0EE80D105D9B00B36DEF /* Release */,
-				4D0F0EEA0D105D9F00B36DEF /* Standalone (Debug) */,
+				7F07AF00085E432900E2AFC4 /* Release */,
+				7F3510120D15F08E00B2B814 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

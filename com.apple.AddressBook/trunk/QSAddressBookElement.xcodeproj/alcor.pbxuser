@@ -2,7 +2,7 @@
 {
 	0259C573FE90428111CA0C5A /* Project object */ = {
 		activeArchitecture = i386;
-		activeBuildConfigurationName = Release;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = 7FBB8B4B0C0E7AF40093A56A /* QS */;
 		activeTarget = 8D1AC9600486D14A00FE50C9 /* Apple Address Book */;
 		addToTargets = (
@@ -33,7 +33,7 @@
 				PBXFileTableDataSourceColumnWidthsKey = (
 					22,
 					300,
-					64,
+					63.58349609375,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXExecutablesDataSource_ActiveFlagID,
@@ -85,8 +85,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 218832604;
-			PBXWorkspaceStateSaveDate = 218832604;
+			PBXPerProjectTemplateStateSaveDate = 220203841;
+			PBXWorkspaceStateSaveDate = 220203841;
 		};
 		sourceControlManager = 7F3019B40BBAFB3B00CEACB0 /* Source Control */;
 		userBuildSettings = {
@@ -179,8 +179,9 @@
 	};
 	E1CF96520733695700C99604 /* QSABSource.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1123, 5222}}";
-			sepNavSelRange = "{5631, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {950, 5418}}";
+			sepNavSelRange = "{8491, 79}";
+			sepNavVisRange = "{8271, 614}";
 			sepNavVisRect = "{{0, 2003}, {1123, 617}}";
 			sepNavWindowFrame = "{{229, 132}, {1168, 746}}";
 		};

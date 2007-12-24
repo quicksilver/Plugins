@@ -9,7 +9,7 @@
 }
 
 - (void)setQuickIconForObject:(QSObject *)object {
-    [object setIcon:[QSResourceManager imageNamed:@"vCardIcon"]];
+    [object setIcon:[QSResourceManager imageNamed:@"VCard"]];
 }
 
 - (BOOL)loadIconForObject:(QSObject *)object {
