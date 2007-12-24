@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>QSHomestarRunnerPlugIn</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSHomestarRunnerPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Homestar Runner Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>108</string>
+	<key>NSPrincipalClass</key>
+	<string>QSHomestarRunnerPlugIn</string>
+	<key>QSActionsTemplate</key>
+	<dict>
+		<key>QSHomestarRunnerPlugInAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHomestarRunnerPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>performActionOnObject:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSHomestarRunnerPlugIn_Type</string>
+			</array>
+			<key>name</key>
+			<string>Action: QSHomestarRunnerPlugIn</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Brian Donovan</string>
+		<key>categories</key>
+		<array/>
+		<key>description</key>
+		<string></string>
+		<key>relatedBundles </key>
+		<array/>
+		<key>webIcon</key>
+		<string></string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetHomestarRunnerMedia</string>
+			<key>icon</key>
+			<string>Homestar Runner.icns</string>
+			<key>name</key>
+			<string>Homestar Runner Media</string>
+			<key>source</key>
+			<string>QSHomestarRunnerPlugIn</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>com.homestarrunner.cast.list</key>
+			<string>QSHomestarRunnerSBEmailHandler</string>
+			<key>com.homestarrunner.sbemail</key>
+			<string>QSHomestarRunnerSBEmailHandler</string>
+			<key>com.homestarrunner.sbemail.list</key>
+			<string>QSHomestarRunnerSBEmailHandler</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSHomestarRunnerPlugIn</key>
+			<string>QSHomestarRunnerPlugIn</string>
+		</dict>
+	</dict>
+	<key>QSRequirementsTemplate</key>
+	<dict>
+		<key>bundlesTemplate</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string></string>
+				<key>name</key>
+				<string></string>
+				<key>version</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>feature</key>
+		<integer>0</integer>
+		<key>launchLoad</key>
+		<false/>
+		<key>pathsTemplate</key>
+		<array>
+			<string>/path/to/something</string>
+		</array>
+		<key>pluginsTemplate</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string></string>
+				<key>name</key>
+				<string></string>
+				<key>version</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>version</key>
+		<string>1337</string>
+	</dict>
+</dict>
+</plist>

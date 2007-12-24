@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSHomestarRunnerPlugIn' target in the 'QSHomestarRunnerPlugIn' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSHomestarRunnerPlugInType @"QSHomestarRunnerPlugInType"
+
