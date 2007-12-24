@@ -1,0 +1,62 @@
+<element name="Find Module" id="com.blacktree.Quicksilver.FindModule" version="45">
+    <info>
+        <category>Power User</category>
+        <category>Command Line</category>
+        <image>Find</image>
+    </info>
+    <requirements/>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action name="Find..." id="FindModuleFindAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>FindModule</string>
+                        <key>actionSelector</key>
+                        <string>performFind:withString:</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>'fold'</string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>findImage</string>
+                        <key>name</key>
+                        <string>Find...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Locate..." id="FindModuleLocateAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>FindModule</string>
+                        <key>actionSelector</key>
+                        <string>performLocate:withString:</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>'fold'</string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>findImage</string>
+                        <key>name</key>
+                        <string>Locate...</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="FindModule" class="FindModule"/>
+        </extension>
+        <extension point="QSPreferencePanes">
+            <preference-pane id="FindModulePrefPane" class="FindModulePrefPane"/>
+        </extension>
+    </extensions>
+</element>

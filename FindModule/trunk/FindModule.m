@@ -9,6 +9,8 @@
 #import "FindModule.h"
 #import "NSStringAdditions.h"
 
+
+
 #define kFindModuleFindAction @"FindModuleFindAction"
 #define kFindModuleLocateAction @"FindModuleLocateAction"
 #define kFindModuleTaskID @"FindModule-Search"
@@ -17,7 +19,7 @@ static NSArray *validPaths(NSArray *paths);
 
 @implementation FindModule
 - (id) init {
-	if ((self = [super init])) {
+	if (self = [super init]) {
 		findTask = nil;
 		findStatus = nil;
 		incrementalResults = nil;
@@ -230,7 +232,7 @@ static NSArray *validPaths(NSArray *paths) {
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSEnumerator *e = [paths objectEnumerator];
 	NSString *item;
-	while ((item = [e nextObject])) {
+	while (item = [e nextObject]) {
 		if ([fileManager fileExistsAtPath:item]) {
 			[validPaths addObject:item];
 		}
