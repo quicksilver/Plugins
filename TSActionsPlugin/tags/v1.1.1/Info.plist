@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>TS Actions Module</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.quicksilver.TSActionsPlugin</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Tildesoft Actions Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1.1</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>109</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Kevin Ballard</string>
+		<key>description</key>
+		<string>Provides arbitrary actions. Currently provides access to Google Cache, Wayback Archive, and BugMeNot logins for URLs.</string>
+		<key>infoFile</key>
+		<string>Info.rtf</string>
+		<key>webIcon</key>
+		<string>http://www.tildesoft.com/Images/bear.gif</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>TSActions</key>
+			<string>TSActions</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>version</key>
+		<string>CBB</string>
+	</dict>
+</dict>
+</plist>

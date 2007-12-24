@@ -1,0 +1,61 @@
+<element id="com.blacktree.quicksilver.TSCalculatorPlugin" name="Calculator Module" version="138">
+    <info>
+	<author>Kevin Ballard</author>
+        <category>Text Handling</category>
+	<category>Utilities</category>
+	<description>Allows calculation of mathematical expressions with the Calculate action</description>
+	<infoFile>Info.rtf</infoFile>
+        <image>com.apple.Calculator</image>
+    </info>
+    <requirements/>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action name="Calculate this expression" id="CalculatorCalculateFormulaAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>CalculatorActionProvider </string>
+                        <key>actionSelector</key>
+                        <string>calculate:</string>
+                        <key>directTypes</key>
+                        <array>
+				<string>QSFormulaType</string>
+				<string>NSStringPboardType</string>
+                        </array>
+			<key>displaysResult</key>
+			<true/>
+			<key>icon</key>
+			<string>com.apple.calculator</string>
+                        <key>name</key>
+                        <string>Calculate</string>
+                        <key>precedence</key>
+                        <integer>5</integer>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="CalculatorActionProvider" class="CalculatorActionProvider"/>
+        </extension>
+	<extension point="QSPreferencePanes">
+            <preference-pane name="Calculator" id="CalculatorPrefPane" class="CalculatorPrefPane">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>CalculatorPrefPane</string>
+                        <key>description</key>
+                        <string>Calculator Options</string>
+                        <key>icon</key>
+                        <string>com.apple.calculator</string>
+                        <key>name</key>
+                        <string>Calculator</string>
+                        <key>nibBundle</key>
+                        <string>com.blacktree.quicksilver.TSCalculatorPlugin</string>
+                        <key>nibName</key>
+                        <string>CalculatorPrefPane</string>
+                    </dict>
+                </plist>
+            </preference-pane>
+	</extension>
+    </extensions>
+</element>

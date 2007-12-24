@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'QSSherlockPlugIn' target in the 'QSSherlockPlugIn' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSSherlockPlugInType @"QSSherlockPlugInType"

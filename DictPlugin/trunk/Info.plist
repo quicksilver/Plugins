@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Dictionary Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSDictionaryPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Dictionary Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1.4</string>
+	<key>CFBundleVersion</key>
+	<string>AD</string>
+	<key>QSActions</key>
+	<dict>
+		<key>DictPluginDefineAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>DictPlugin</string>
+			<key>actionSelector</key>
+			<string>define:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Reference</string>
+			<key>name</key>
+			<string>Define with dict.org</string>
+			<key>runInMainThread</key>
+			<true/>
+		</dict>
+		<key>QSDictionaryLookupAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSDictionaryPlugIn</string>
+			<key>actionSelector</key>
+			<string>lookupWordInDictionary:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.Dictionary</string>
+			<key>name</key>
+			<string>Dictionary</string>
+			<key>runInMainThread</key>
+			<true/>
+		</dict>
+		<key>QSThesaurusLookupAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSDictionaryPlugIn</string>
+			<key>actionSelector</key>
+			<string>lookupWordInThesaurus:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.Dictionary</string>
+			<key>name</key>
+			<string>Thesaurus</string>
+			<key>runInMainThread</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Kevin Ballard</string>
+		<key>description</key>
+		<string>Adds a Define action to strings to fetch the definition from dict.org</string>
+		<key>icon</key>
+		<string>com.apple.Dictionary</string>
+		<key>infoFile</key>
+		<string>Info.rtf</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>DictPlugin</key>
+			<string>DictPlugin</string>
+			<key>QSDictionaryPlugIn</key>
+			<string>QSDictionaryPlugIn</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

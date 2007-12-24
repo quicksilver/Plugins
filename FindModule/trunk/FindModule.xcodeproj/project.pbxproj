@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A99AA4E06C1758A003DACE4 /* ActionNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A99AA4D06C1758A003DACE4 /* ActionNames.strings */; };
+		0AB0270206D046B00073A3CD /* Info.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AB0270106D046B00073A3CD /* Info.rtf */; };
+		0AB5042D06C2C696001041B3 /* FindModulePrefPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5042B06C2C696001041B3 /* FindModulePrefPane.m */; };
+		0AB504E706C2CC60001041B3 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB504E506C2CC60001041B3 /* NSStringAdditions.m */; };
+		0AB5055606C2DEE3001041B3 /* FindModulePrefPane.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB5055506C2DEE3001041B3 /* FindModulePrefPane.nib */; };
+		0AB505A806C2E2B0001041B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AB505A706C2E2B0001041B3 /* Localizable.strings */; };
+		0AB50BC706C34CD0001041B3 /* locate.sh in Resources */ = {isa = PBXBuildFile; fileRef = 0AB50BC606C34CD0001041B3 /* locate.sh */; };
+		4DB83C5E0D143C3300A0CA18 /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4DB83C5D0D143C3300A0CA18 /* element.xml */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1EAB046068128A200774DFF /* FindModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* FindModule.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DB83C7B0D143CA900A0CA18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB83C730D143CA900A0CA18 /* Quicksilver.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7F9A7A640C49595900B5912D /* Quicksilver.app */;
+			remoteInfo = Quicksilver;
+		};
+		4DB83C7D0D143CA900A0CA18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB83C730D143CA900A0CA18 /* Quicksilver.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7F5D22470C49C18400812049 /* Core.element */;
+			remoteInfo = Core;
+		};
+		4DB83C7F0D143CB200A0CA18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB83C730D143CA900A0CA18 /* Quicksilver.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F9A7A630C49595900B5912D /* Quicksilver */;
+			remoteInfo = Quicksilver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A99AA4D06C1758A003DACE4 /* ActionNames.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = ActionNames.strings; sourceTree = "<group>"; };
+		0AB0270106D046B00073A3CD /* Info.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Info.rtf; sourceTree = "<group>"; };
+		0AB5042A06C2C696001041B3 /* FindModulePrefPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindModulePrefPane.h; sourceTree = "<group>"; };
+		0AB5042B06C2C696001041B3 /* FindModulePrefPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindModulePrefPane.m; sourceTree = "<group>"; };
+		0AB504E406C2CC60001041B3 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		0AB504E506C2CC60001041B3 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		0AB5055506C2DEE3001041B3 /* FindModulePrefPane.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = FindModulePrefPane.nib; sourceTree = "<group>"; };
+		0AB505A706C2E2B0001041B3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		0AB50BC606C34CD0001041B3 /* locate.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = locate.sh; sourceTree = "<group>"; };
+		4DB83C400D1437DC00A0CA18 /* QSElement.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSElement.xcconfig; sourceTree = "<group>"; };
+		4DB83C410D1437DC00A0CA18 /* QSElement_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSElement_Debug.xcconfig; sourceTree = "<group>"; };
+		4DB83C420D1437DC00A0CA18 /* QSElement_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSElement_Prefix.pch; sourceTree = "<group>"; };
+		4DB83C430D1437DC00A0CA18 /* QSElement_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSElement_Release.xcconfig; sourceTree = "<group>"; };
+		4DB83C5D0D143C3300A0CA18 /* element.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
+		4DB83C730D143CA900A0CA18 /* Quicksilver.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quicksilver.xcodeproj; path = ../../Quicksilver.xcodeproj; sourceTree = SOURCE_ROOT; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; languageSpecificationIdentifier = html; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* Find Module.element */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find Module.element"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E1EAB045068128A200774DFF /* FindModule.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FindModule.m; sourceTree = "<group>"; };
+		E1EAB047068128A800774DFF /* FindModule.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FindModule.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* FindModule */ = {
+			isa = PBXGroup;
+			children = (
+				4DB83C730D143CA900A0CA18 /* Quicksilver.xcodeproj */,
+				4DB83C3C0D1437DC00A0CA18 /* Configuration */,
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = FindModule;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DB83C5D0D143C3300A0CA18 /* element.xml */,
+				0AB50BC606C34CD0001041B3 /* locate.sh */,
+				0AB0270106D046B00073A3CD /* Info.rtf */,
+				0AB505A706C2E2B0001041B3 /* Localizable.strings */,
+				0A99AA4D06C1758A003DACE4 /* ActionNames.strings */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+				0AB5055506C2DEE3001041B3 /* FindModulePrefPane.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* Find Module.element */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1EAB047068128A800774DFF /* FindModule.h */,
+				E1EAB045068128A200774DFF /* FindModule.m */,
+				0AB5042A06C2C696001041B3 /* FindModulePrefPane.h */,
+				0AB5042B06C2C696001041B3 /* FindModulePrefPane.m */,
+				0AB504E406C2CC60001041B3 /* NSStringAdditions.h */,
+				0AB504E506C2CC60001041B3 /* NSStringAdditions.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		4DB83C3C0D1437DC00A0CA18 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4DB83C400D1437DC00A0CA18 /* QSElement.xcconfig */,
+				4DB83C410D1437DC00A0CA18 /* QSElement_Debug.xcconfig */,
+				4DB83C420D1437DC00A0CA18 /* QSElement_Prefix.pch */,
+				4DB83C430D1437DC00A0CA18 /* QSElement_Release.xcconfig */,
+			);
+			name = Configuration;
+			path = ../../../Configuration;
+			sourceTree = SOURCE_ROOT;
+		};
+		4DB83C740D143CA900A0CA18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB83C7C0D143CA900A0CA18 /* Quicksilver.app */,
+				4DB83C7E0D143CA900A0CA18 /* Core.element */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* Find Module */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DB83C390D1437BF00A0CA18 /* Build configuration list for PBXNativeTarget "Find Module" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DB83C800D143CB200A0CA18 /* PBXTargetDependency */,
+			);
+			name = "Find Module";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = FindModule;
+			productReference = 8D1AC9740486D14A00FE50C9 /* Find Module.element */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4DB83C380D1437BF00A0CA18 /* Build configuration list for PBXProject "FindModule" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* FindModule */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4DB83C740D143CA900A0CA18 /* Products */;
+					ProjectRef = 4DB83C730D143CA900A0CA18 /* Quicksilver.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* Find Module */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4DB83C7C0D143CA900A0CA18 /* Quicksilver.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Quicksilver.app;
+			remoteRef = 4DB83C7B0D143CA900A0CA18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DB83C7E0D143CA900A0CA18 /* Core.element */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Core.element;
+			remoteRef = 4DB83C7D0D143CA900A0CA18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A99AA4E06C1758A003DACE4 /* ActionNames.strings in Resources */,
+				0AB5055606C2DEE3001041B3 /* FindModulePrefPane.nib in Resources */,
+				0AB505A806C2E2B0001041B3 /* Localizable.strings in Resources */,
+				0AB50BC706C34CD0001041B3 /* locate.sh in Resources */,
+				0AB0270206D046B00073A3CD /* Info.rtf in Resources */,
+				4DB83C5E0D143C3300A0CA18 /* element.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF /* FindModule.m in Sources */,
+				0AB5042D06C2C696001041B3 /* FindModulePrefPane.m in Sources */,
+				0AB504E706C2CC60001041B3 /* NSStringAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DB83C800D143CB200A0CA18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Quicksilver;
+			targetProxy = 4DB83C7F0D143CB200A0CA18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4DB83C320D1437BF00A0CA18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DB83C410D1437DC00A0CA18 /* QSElement_Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		4DB83C330D1437BF00A0CA18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DB83C430D1437DC00A0CA18 /* QSElement_Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		4DB83C340D1437BF00A0CA18 /* Standalone */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DB83C410D1437DC00A0CA18 /* QSElement_Debug.xcconfig */;
+			buildSettings = {
+				SYMROOT = build;
+			};
+			name = Standalone;
+		};
+		4DB83C350D1437BF00A0CA18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "Find Module";
+			};
+			name = Debug;
+		};
+		4DB83C360D1437BF00A0CA18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "Find Module";
+			};
+			name = Release;
+		};
+		4DB83C370D1437BF00A0CA18 /* Standalone */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "Find Module";
+			};
+			name = Standalone;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DB83C380D1437BF00A0CA18 /* Build configuration list for PBXProject "FindModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB83C320D1437BF00A0CA18 /* Debug */,
+				4DB83C330D1437BF00A0CA18 /* Release */,
+				4DB83C340D1437BF00A0CA18 /* Standalone */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Standalone;
+		};
+		4DB83C390D1437BF00A0CA18 /* Build configuration list for PBXNativeTarget "Find Module" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB83C350D1437BF00A0CA18 /* Debug */,
+				4DB83C360D1437BF00A0CA18 /* Release */,
+				4DB83C370D1437BF00A0CA18 /* Standalone */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Standalone;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

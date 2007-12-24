@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Calculator Module</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Calculator Module version 1.3.1, Copyright © 2004 TildeSoft.</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.quicksilver.TSCalculatorPlugin</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Calculator Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.3</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>142</string>
+	<key>QSActions</key>
+	<dict>
+		<key>CalculatorCalculateFormulaAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>CalculatorActionProvider</string>
+			<key>actionSelector</key>
+			<string>calculate:</string>
+			<key>description</key>
+			<string>Calculate this expression</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSFormulaType</string>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>displaysResult</key>
+			<true/>
+			<key>icon</key>
+			<string>com.apple.calculator</string>
+			<key>name</key>
+			<string>Calculate</string>
+			<key>precedence</key>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Kevin Ballard</string>
+		<key>categories</key>
+		<array>
+			<string>Text Handling</string>
+			<string>Utility</string>
+		</array>
+		<key>description</key>
+		<string>Allows calculation of mathematical expressions with the Calculate action</string>
+		<key>infoFile</key>
+		<string>Info.rtf</string>
+		<key>webIcon</key>
+		<string>http://quicksilver.blacktree.com/images/appicons/Calculator.gif</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>CalculatorActionProvider</key>
+			<string>CalculatorActionProvider</string>
+		</dict>
+		<key>QSPreferencePanes</key>
+		<dict>
+			<key>CalculatorPrefPane</key>
+			<dict>
+				<key>class</key>
+				<string>CalculatorPrefPane</string>
+				<key>description</key>
+				<string>Calculator Options</string>
+				<key>icon</key>
+				<string>com.apple.calculator</string>
+				<key>name</key>
+				<string>Calculator</string>
+				<key>nibBundle</key>
+				<string>com.blacktree.quicksilver.TSCalculatorPlugin</string>
+				<key>nibName</key>
+				<string>CalculatorPrefPane</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

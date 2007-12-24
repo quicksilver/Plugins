@@ -1,0 +1,1566 @@
+// !$*UTF8*$!
+{
+	0259C573FE90428111CA0C5A /* Project object */ = {
+		activeBuildConfigurationName = Development;
+		activeBuildStyle = 2E58F360FFB2326E11CA0CBA /* Development */;
+		activeTarget = 8D1AC9600486D14A00FE50C9 /* QSWeatherPlugin */;
+		addToTargets = (
+			8D1AC9600486D14A00FE50C9 /* QSWeatherPlugin */,
+			4E31B2BD091DC0400095630C /* QSPkg */,
+		);
+		breakpoints = (
+		);
+		breakpointsGroup = 4E31AFB5091D74010095630C /* XCBreakpointsBucket */;
+		codeSenseManager = 4E31AD760919B0790095630C /* Code sense */;
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					210,
+					20,
+					110,
+					109,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					566,
+					208,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					675,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					651,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					63,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 153197894;
+			PBXWorkspaceStateSaveDate = 153197894;
+		};
+		perUserProjectItems = {
+			4E31AD7B0919B0A90095630C /* PBXTextBookmark */ = 4E31AD7B0919B0A90095630C /* PBXTextBookmark */;
+			4E31AD7C0919B0A90095630C /* PBXTextBookmark */ = 4E31AD7C0919B0A90095630C /* PBXTextBookmark */;
+			4E31AD7D0919B0A90095630C /* PBXTextBookmark */ = 4E31AD7D0919B0A90095630C /* PBXTextBookmark */;
+			4E31AE70091D67150095630C /* PBXTextBookmark */ = 4E31AE70091D67150095630C /* PBXTextBookmark */;
+			4E31AE72091D67150095630C /* PBXTextBookmark */ = 4E31AE72091D67150095630C /* PBXTextBookmark */;
+			4E31AE74091D67150095630C /* PBXTextBookmark */ = 4E31AE74091D67150095630C /* PBXTextBookmark */;
+			4E31AE75091D67150095630C /* PBXTextBookmark */ = 4E31AE75091D67150095630C /* PBXTextBookmark */;
+			4E31AE78091D67150095630C /* PBXTextBookmark */ = 4E31AE78091D67150095630C /* PBXTextBookmark */;
+			4E31AE79091D67150095630C /* PBXTextBookmark */ = 4E31AE79091D67150095630C /* PBXTextBookmark */;
+			4E31AF0A091D67CA0095630C /* PBXTextBookmark */ = 4E31AF0A091D67CA0095630C /* PBXTextBookmark */;
+			4E31AF8E091D71660095630C /* PBXTextBookmark */ = 4E31AF8E091D71660095630C /* PBXTextBookmark */;
+			4E31AF8F091D71660095630C /* PBXTextBookmark */ = 4E31AF8F091D71660095630C /* PBXTextBookmark */;
+			4E31AF92091D71660095630C /* PBXTextBookmark */ = 4E31AF92091D71660095630C /* PBXTextBookmark */;
+			4E31AF96091D71660095630C /* PBXTextBookmark */ = 4E31AF96091D71660095630C /* PBXTextBookmark */;
+			4E31B082091DAAD60095630C /* PBXTextBookmark */ = 4E31B082091DAAD60095630C /* PBXTextBookmark */;
+			4E31B08B091DAAD60095630C /* PBXTextBookmark */ = 4E31B08B091DAAD60095630C /* PBXTextBookmark */;
+			4E31B0A3091DAAD60095630C /* PBXTextBookmark */ = 4E31B0A3091DAAD60095630C /* PBXTextBookmark */;
+			4E31B0AD091DAAD60095630C /* PBXTextBookmark */ = 4E31B0AD091DAAD60095630C /* PBXTextBookmark */;
+			4E31B128091DAF2C0095630C /* PBXTextBookmark */ = 4E31B128091DAF2C0095630C /* PBXTextBookmark */;
+			4E31B1EB091DBC2A0095630C /* PBXTextBookmark */ = 4E31B1EB091DBC2A0095630C /* PBXTextBookmark */;
+			4E31B1EE091DBC2A0095630C /* PBXTextBookmark */ = 4E31B1EE091DBC2A0095630C /* PBXTextBookmark */;
+			4E31B1FE091DBC2A0095630C /* PBXTextBookmark */ = 4E31B1FE091DBC2A0095630C /* PBXTextBookmark */;
+			4E31B201091DBC2A0095630C /* PBXTextBookmark */ = 4E31B201091DBC2A0095630C /* PBXTextBookmark */;
+			4E31B202091DBC2A0095630C /* PBXTextBookmark */ = 4E31B202091DBC2A0095630C /* PBXTextBookmark */;
+			4E31B218091DBC2A0095630C /* PBXTextBookmark */ = 4E31B218091DBC2A0095630C /* PBXTextBookmark */;
+			4E31B22A091DBE130095630C /* PBXTextBookmark */ = 4E31B22A091DBE130095630C /* PBXTextBookmark */;
+			4E31B22C091DBE130095630C /* PBXTextBookmark */ = 4E31B22C091DBE130095630C /* PBXTextBookmark */;
+			4E31B22E091DBE130095630C /* PBXTextBookmark */ = 4E31B22E091DBE130095630C /* PBXTextBookmark */;
+			4E31B230091DBE130095630C /* PBXTextBookmark */ = 4E31B230091DBE130095630C /* PBXTextBookmark */;
+			4E31B232091DBE130095630C /* PBXTextBookmark */ = 4E31B232091DBE130095630C /* PBXTextBookmark */;
+			4E31B234091DBE130095630C /* PBXTextBookmark */ = 4E31B234091DBE130095630C /* PBXTextBookmark */;
+			4E31B236091DBE130095630C /* PBXTextBookmark */ = 4E31B236091DBE130095630C /* PBXTextBookmark */;
+			4E31B238091DBE130095630C /* PBXTextBookmark */ = 4E31B238091DBE130095630C /* PBXTextBookmark */;
+			4E31B23A091DBE130095630C /* PBXTextBookmark */ = 4E31B23A091DBE130095630C /* PBXTextBookmark */;
+			4E31B23C091DBE130095630C /* PBXTextBookmark */ = 4E31B23C091DBE130095630C /* PBXTextBookmark */;
+			4E31B23F091DBE130095630C /* PBXTextBookmark */ = 4E31B23F091DBE130095630C /* PBXTextBookmark */;
+			4E31B240091DBE130095630C /* PBXTextBookmark */ = 4E31B240091DBE130095630C /* PBXTextBookmark */;
+			4E31B241091DBE130095630C /* PBXTextBookmark */ = 4E31B241091DBE130095630C /* PBXTextBookmark */;
+			4E31B243091DBE130095630C /* PBXTextBookmark */ = 4E31B243091DBE130095630C /* PBXTextBookmark */;
+			4E31B247091DBE130095630C /* PBXTextBookmark */ = 4E31B247091DBE130095630C /* PBXTextBookmark */;
+			4E31B24C091DBE130095630C /* PBXTextBookmark */ = 4E31B24C091DBE130095630C /* PBXTextBookmark */;
+			4E31B24D091DBE130095630C /* PBXTextBookmark */ = 4E31B24D091DBE130095630C /* PBXTextBookmark */;
+			4E31B24E091DBE130095630C /* PBXTextBookmark */ = 4E31B24E091DBE130095630C /* PBXTextBookmark */;
+			4E31B24F091DBE130095630C /* PBXTextBookmark */ = 4E31B24F091DBE130095630C /* PBXTextBookmark */;
+			4E31B251091DBE130095630C /* PBXTextBookmark */ = 4E31B251091DBE130095630C /* PBXTextBookmark */;
+			4E31B253091DBE130095630C /* PBXTextBookmark */ = 4E31B253091DBE130095630C /* PBXTextBookmark */;
+			4E31B255091DBE130095630C /* PBXTextBookmark */ = 4E31B255091DBE130095630C /* PBXTextBookmark */;
+			4E31B257091DBE130095630C /* PBXTextBookmark */ = 4E31B257091DBE130095630C /* PBXTextBookmark */;
+			4E31B259091DBE130095630C /* PBXTextBookmark */ = 4E31B259091DBE130095630C /* PBXTextBookmark */;
+			4E31B25B091DBE130095630C /* PBXTextBookmark */ = 4E31B25B091DBE130095630C /* PBXTextBookmark */;
+			4E31B25D091DBE130095630C /* PBXTextBookmark */ = 4E31B25D091DBE130095630C /* PBXTextBookmark */;
+			4E31B25F091DBE130095630C /* PBXTextBookmark */ = 4E31B25F091DBE130095630C /* PBXTextBookmark */;
+			4E31B261091DBE130095630C /* PBXTextBookmark */ = 4E31B261091DBE130095630C /* PBXTextBookmark */;
+			4E31B263091DBE130095630C /* PBXTextBookmark */ = 4E31B263091DBE130095630C /* PBXTextBookmark */;
+			4E31B288091DBE8F0095630C /* PBXBookmark */ = 4E31B288091DBE8F0095630C /* PBXBookmark */;
+			4E31B28B091DBE8F0095630C /* PBXBookmark */ = 4E31B28B091DBE8F0095630C /* PBXBookmark */;
+			4E5C67DF0921A4280014DDBD /* PBXTextBookmark */ = 4E5C67DF0921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67E00921A4280014DDBD /* PBXTextBookmark */ = 4E5C67E00921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67E10921A4280014DDBD /* PBXTextBookmark */ = 4E5C67E10921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67E30921A4280014DDBD /* PBXTextBookmark */ = 4E5C67E30921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67E40921A4280014DDBD /* PBXTextBookmark */ = 4E5C67E40921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67E50921A4280014DDBD /* PBXTextBookmark */ = 4E5C67E50921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67E60921A4280014DDBD /* PBXTextBookmark */ = 4E5C67E60921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67E70921A4280014DDBD /* PBXTextBookmark */ = 4E5C67E70921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67E80921A4280014DDBD /* PBXTextBookmark */ = 4E5C67E80921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67E90921A4280014DDBD /* PBXTextBookmark */ = 4E5C67E90921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67EA0921A4280014DDBD /* PBXTextBookmark */ = 4E5C67EA0921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67EB0921A4280014DDBD /* PBXTextBookmark */ = 4E5C67EB0921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67EC0921A4280014DDBD /* PBXTextBookmark */ = 4E5C67EC0921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67ED0921A4280014DDBD /* PBXTextBookmark */ = 4E5C67ED0921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67EE0921A4280014DDBD /* PBXTextBookmark */ = 4E5C67EE0921A4280014DDBD /* PBXTextBookmark */;
+			4E5C67F70921A50A0014DDBD /* PBXTextBookmark */ = 4E5C67F70921A50A0014DDBD /* PBXTextBookmark */;
+			4E5C68050921A5F60014DDBD /* PBXTextBookmark */ = 4E5C68050921A5F60014DDBD /* PBXTextBookmark */;
+			4E5C68070921A5F60014DDBD /* PBXTextBookmark */ = 4E5C68070921A5F60014DDBD /* PBXTextBookmark */;
+			4E5C68080921A5F60014DDBD /* PBXTextBookmark */ = 4E5C68080921A5F60014DDBD /* PBXTextBookmark */;
+			4E5C68090921A5F60014DDBD /* PBXTextBookmark */ = 4E5C68090921A5F60014DDBD /* PBXTextBookmark */;
+			4E5C680A0921A5F60014DDBD /* PBXTextBookmark */ = 4E5C680A0921A5F60014DDBD /* PBXTextBookmark */;
+			4E5C687809224DA30014DDBD /* PBXBookmark */ = 4E5C687809224DA30014DDBD /* PBXBookmark */;
+			4E5C68900922547F0014DDBD /* PBXTextBookmark */ = 4E5C68900922547F0014DDBD /* PBXTextBookmark */;
+			4E5C68920922547F0014DDBD /* PBXTextBookmark */ = 4E5C68920922547F0014DDBD /* PBXTextBookmark */;
+			4E5C68930922547F0014DDBD /* PBXTextBookmark */ = 4E5C68930922547F0014DDBD /* PBXTextBookmark */;
+			4E5C68940922547F0014DDBD /* PBXTextBookmark */ = 4E5C68940922547F0014DDBD /* PBXTextBookmark */;
+			4E5C68960922547F0014DDBD /* PBXTextBookmark */ = 4E5C68960922547F0014DDBD /* PBXTextBookmark */;
+			4E5C68980922547F0014DDBD /* PBXTextBookmark */ = 4E5C68980922547F0014DDBD /* PBXTextBookmark */;
+			4E5C68990922547F0014DDBD /* PBXTextBookmark */ = 4E5C68990922547F0014DDBD /* PBXTextBookmark */;
+			4E5C689B0922547F0014DDBD /* PBXTextBookmark */ = 4E5C689B0922547F0014DDBD /* PBXTextBookmark */;
+			4E5C689C0922547F0014DDBD /* PBXTextBookmark */ = 4E5C689C0922547F0014DDBD /* PBXTextBookmark */;
+			4E5C689E0922547F0014DDBD /* PBXTextBookmark */ = 4E5C689E0922547F0014DDBD /* PBXTextBookmark */;
+			4E5C689F0922547F0014DDBD /* PBXTextBookmark */ = 4E5C689F0922547F0014DDBD /* PBXTextBookmark */;
+			4E5C68A00922547F0014DDBD /* PBXTextBookmark */ = 4E5C68A00922547F0014DDBD /* PBXTextBookmark */;
+			4E5C68A20922547F0014DDBD /* PBXTextBookmark */ = 4E5C68A20922547F0014DDBD /* PBXTextBookmark */;
+			4E5C68A60922547F0014DDBD /* PBXTextBookmark */ = 4E5C68A60922547F0014DDBD /* PBXTextBookmark */;
+			4E5FF7CE0920184B00A63A6B /* PBXTextBookmark */ = 4E5FF7CE0920184B00A63A6B /* PBXTextBookmark */;
+			4E5FF8200920452F00A63A6B /* PBXTextBookmark */ = 4E5FF8200920452F00A63A6B /* PBXTextBookmark */;
+			4E5FF8230920452F00A63A6B /* PBXTextBookmark */ = 4E5FF8230920452F00A63A6B /* PBXTextBookmark */;
+			4E5FF839092048F700A63A6B /* PBXTextBookmark */ = 4E5FF839092048F700A63A6B /* PBXTextBookmark */;
+		};
+		sourceControlManager = 4E31AD750919B0790095630C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	32DBCF980370C29C00C91783 /* QSWeatherPlugin_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {632, 429}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {441, 429}}";
+		};
+	};
+	4E31AD750919B0790095630C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			SubversionToolPath = /usr/local/bin/svn;
+		};
+		scmType = scm.subversion;
+	};
+	4E31AD760919B0790095630C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	4E31AD7B0919B0A90095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1EAB047068128A800774DFF /* QSWeatherPlugin.h */;
+		name = "QSWeatherPlugin.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 259;
+		vrLoc = 0;
+	};
+	4E31AD7C0919B0A90095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1EAB045068128A200774DFF /* QSWeatherPlugin.m */;
+		name = "QSWeatherPlugin.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 222;
+		vrLoc = 0;
+	};
+	4E31AD7D0919B0A90095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32DBCF980370C29C00C91783 /* QSWeatherPlugin_Prefix.pch */;
+		name = "QSWeatherPlugin_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 274;
+		vrLoc = 0;
+	};
+	4E31ADF4091D62230095630C /* QSWeatherPluginAction.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 826}}";
+			sepNavSelRange = "{1662, 0}";
+			sepNavVisRect = "{{0, 214}, {873, 581}}";
+		};
+	};
+	4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1022, 4592}}";
+			sepNavSelRange = "{342, 0}";
+			sepNavVisRect = "{{0, 0}, {873, 581}}";
+		};
+	};
+	4E31ADF6091D62230095630C /* QSWeatherPluginSource.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 528}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {873, 528}}";
+		};
+	};
+	4E31ADF7091D62230095630C /* QSWeatherPluginSource.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1638}}";
+			sepNavSelRange = "{3558, 0}";
+			sepNavVisRect = "{{0, 1110}, {873, 528}}";
+		};
+	};
+	4E31AE6F091D67150095630C /* ReadMe.txt */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text;
+		name = ReadMe.txt;
+		path = /Users/churchil/Documents/projects/QSWeatherPlugin/ReadMe.txt;
+		sourceTree = "<absolute>";
+	};
+	4E31AE70091D67150095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D1AC9730486D14A00FE50C9 /* Info.plist */;
+		name = "Info.plist: 60";
+		rLen = 0;
+		rLoc = 1622;
+		rType = 0;
+		vrLen = 967;
+		vrLoc = 1095;
+	};
+	4E31AE72091D67150095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AE73091D67150095630C /* ReadMe.txt */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	4E31AE73091D67150095630C /* ReadMe.txt */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text;
+		name = ReadMe.txt;
+		path = /Users/churchil/Documents/projects/QSWeatherPlugin/ReadMe.txt;
+		sourceTree = "<absolute>";
+	};
+	4E31AE74091D67150095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF6091D62230095630C /* QSWeatherPluginSource.h */;
+		name = "QSWeatherPluginSource.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 250;
+		vrLoc = 0;
+	};
+	4E31AE75091D67150095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF7091D62230095630C /* QSWeatherPluginSource.m */;
+		name = "QSWeatherPluginSource.m: 11";
+		rLen = 0;
+		rLoc = 256;
+		rType = 0;
+		vrLen = 1018;
+		vrLoc = 0;
+	};
+	4E31AE78091D67150095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */;
+		name = "QSWeatherPluginAction.m: 20";
+		rLen = 0;
+		rLoc = 8309;
+		rType = 0;
+		vrLen = 421;
+		vrLoc = 0;
+	};
+	4E31AE79091D67150095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF4091D62230095630C /* QSWeatherPluginAction.h */;
+		name = "QSWeatherPluginAction.h: 17";
+		rLen = 0;
+		rLoc = 1288;
+		rType = 0;
+		vrLen = 422;
+		vrLoc = 0;
+	};
+	4E31AF0A091D67CA0095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AE6F091D67150095630C /* ReadMe.txt */;
+		name = "ReadMe.txt: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 517;
+		vrLoc = 0;
+	};
+	4E31AF58091D6D820095630C /* WeatherXMLParser.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1736}}";
+			sepNavSelRange = "{2500, 0}";
+			sepNavVisRect = "{{0, 1145}, {873, 581}}";
+		};
+	};
+	4E31AF59091D6D820095630C /* WeatherXMLParser.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 528}}";
+			sepNavSelRange = "{411, 0}";
+			sepNavVisRect = "{{0, 0}, {873, 528}}";
+		};
+	};
+	4E31AF5D091D6E030095630C /* WeatherObject.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1974}}";
+			sepNavSelRange = "{2766, 0}";
+			sepNavVisRect = "{{0, 1351}, {873, 581}}";
+		};
+	};
+	4E31AF5E091D6E030095630C /* WeatherObject.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1526}}";
+			sepNavSelRange = "{2183, 0}";
+			sepNavVisRect = "{{0, 931}, {873, 581}}";
+		};
+	};
+	4E31AF62091D6E3A0095630C /* NDFDStub.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2642, 1050}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {873, 528}}";
+		};
+	};
+	4E31AF63091D6E3A0095630C /* NDFDStub.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2636, 1876}}";
+			sepNavSelRange = "{983, 30}";
+			sepNavVisRect = "{{0, 0}, {873, 528}}";
+		};
+	};
+	4E31AF64091D6E3A0095630C /* WSGeneratedObj.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1176}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {873, 619}}";
+		};
+	};
+	4E31AF65091D6E3A0095630C /* WSGeneratedObj.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1058, 3052}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {873, 528}}";
+		};
+	};
+	4E31AF8E091D71660095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF58091D6D820095630C /* WeatherXMLParser.m */;
+		name = "WeatherXMLParser.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1411;
+		vrLoc = 0;
+	};
+	4E31AF8F091D71660095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF59091D6D820095630C /* WeatherXMLParser.h */;
+		name = "WeatherXMLParser.h: 28";
+		rLen = 0;
+		rLoc = 798;
+		rType = 0;
+		vrLen = 699;
+		vrLoc = 0;
+	};
+	4E31AF92091D71660095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF5D091D6E030095630C /* WeatherObject.m */;
+		name = "WeatherObject.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1370;
+		vrLoc = 0;
+	};
+	4E31AF96091D71660095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF63091D6E3A0095630C /* NDFDStub.m */;
+		name = "in_startDate,";
+		rLen = 30;
+		rLoc = 983;
+		rType = 0;
+		vrLen = 2242;
+		vrLoc = 0;
+	};
+	4E31AFB5091D74010095630C /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "Project Breakpoints";
+		objects = (
+		);
+	};
+	4E31B082091DAAD60095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B083091DAAD60095630C /* ndfd.1105051950.xml */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 3252;
+		vrLoc = 0;
+	};
+	4E31B083091DAAD60095630C /* ndfd.1105051950.xml */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.xml;
+		name = ndfd.1105051950.xml;
+		path = /Users/churchil/Documents/ndfd/ndfd.1105051950.xml;
+		sourceTree = "<absolute>";
+	};
+	4E31B08B091DAAD60095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF5E091D6E030095630C /* WeatherObject.h */;
+		name = "WeatherObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1033;
+		vrLoc = 989;
+	};
+	4E31B0A3091DAAD60095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B0A4091DAAD60095630C /* ndfd.1105051950.xml */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 3252;
+		vrLoc = 0;
+	};
+	4E31B0A4091DAAD60095630C /* ndfd.1105051950.xml */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.xml;
+		name = ndfd.1105051950.xml;
+		path = /Users/churchil/Documents/ndfd/ndfd.1105051950.xml;
+		sourceTree = "<absolute>";
+	};
+	4E31B0AD091DAAD60095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF62091D6E3A0095630C /* NDFDStub.h */;
+		name = "NDFDStub.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2532;
+		vrLoc = 0;
+	};
+	4E31B128091DAF2C0095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF65091D6E3A0095630C /* WSGeneratedObj.m */;
+		name = "WSGeneratedObj.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 519;
+		vrLoc = 0;
+	};
+	4E31B163091DB3D70095630C /* QSWeatherPreferencePane.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 528}}";
+			sepNavSelRange = "{203, 33}";
+			sepNavVisRect = "{{0, 0}, {873, 528}}";
+		};
+	};
+	4E31B164091DB3D70095630C /* QSWeatherPreferencePane.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 528}}";
+			sepNavSelRange = "{296, 0}";
+			sepNavVisRect = "{{0, 0}, {873, 528}}";
+		};
+	};
+	4E31B1EB091DBC2A0095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B1EC091DBC2A0095630C /* QSPreferencePane.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 789;
+		vrLoc = 0;
+	};
+	4E31B1EC091DBC2A0095630C /* QSPreferencePane.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSPreferencePane.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework/Versions/A/Headers/QSPreferencePane.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B1EE091DBC2A0095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32DBCF980370C29C00C91783 /* QSWeatherPlugin_Prefix.pch */;
+		name = "QSWeatherPlugin_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 274;
+		vrLoc = 0;
+	};
+	4E31B1FE091DBC2A0095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B1FF091DBC2A0095630C /* QSPreferencePane.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 789;
+		vrLoc = 0;
+	};
+	4E31B1FF091DBC2A0095630C /* QSPreferencePane.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSPreferencePane.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework/Versions/A/Headers/QSPreferencePane.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B201091DBC2A0095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B164091DB3D70095630C /* QSWeatherPreferencePane.m */;
+		name = "QSWeatherPreferencePane.m: 2";
+		rLen = 0;
+		rLoc = 36;
+		rType = 0;
+		vrLen = 83;
+		vrLoc = 0;
+	};
+	4E31B202091DBC2A0095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B163091DB3D70095630C /* QSWeatherPreferencePane.h */;
+		name = "QSWeatherPreferencePane.h: 4";
+		rLen = 0;
+		rLoc = 95;
+		rType = 0;
+		vrLen = 160;
+		vrLoc = 0;
+	};
+	4E31B218091DBC2A0095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF64091D6E3A0095630C /* WSGeneratedObj.h */;
+		name = "WSGeneratedObj.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1169;
+		vrLoc = 0;
+	};
+	4E31B22A091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B22B091DBE130095630C /* QSCGSEffectHelper.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 712;
+	};
+	4E31B22B091DBE130095630C /* QSCGSEffectHelper.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSCGSEffectHelper.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSCGSEffectHelper.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B22C091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B22D091DBE130095630C /* QSEmbeddedEffects.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1115;
+		vrLoc = 0;
+	};
+	4E31B22D091DBE130095630C /* QSEmbeddedEffects.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSEmbeddedEffects.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSEmbeddedEffects.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B22E091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B22F091DBE130095630C /* QSFadingView.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 282;
+		vrLoc = 0;
+	};
+	4E31B22F091DBE130095630C /* QSFadingView.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSFadingView.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSFadingView.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B230091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B231091DBE130095630C /* QSMoveHelper.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 777;
+		vrLoc = 0;
+	};
+	4E31B231091DBE130095630C /* QSMoveHelper.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSMoveHelper.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSMoveHelper.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B232091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B233091DBE130095630C /* QSShading.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	4E31B233091DBE130095630C /* QSShading.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSShading.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSShading.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B234091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B235091DBE130095630C /* QSTrackingWindow.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 278;
+		vrLoc = 0;
+	};
+	4E31B235091DBE130095630C /* QSTrackingWindow.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSTrackingWindow.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSTrackingWindow.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B236091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B237091DBE130095630C /* QSWarpEffects.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 319;
+		vrLoc = 0;
+	};
+	4E31B237091DBE130095630C /* QSWarpEffects.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSWarpEffects.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSWarpEffects.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B238091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B239091DBE130095630C /* QSWindow.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 961;
+	};
+	4E31B239091DBE130095630C /* QSWindow.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSWindow.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSWindow.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B23A091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B23B091DBE130095630C /* QSInterface.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 256;
+		vrLoc = 0;
+	};
+	4E31B23B091DBE130095630C /* QSInterface.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSInterface.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework/Versions/A/PrivateHeaders/QSInterface.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B23C091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B23D091DBE130095630C /* QSLargeTypeDisplay.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 301;
+		vrLoc = 0;
+	};
+	4E31B23D091DBE130095630C /* QSLargeTypeDisplay.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSLargeTypeDisplay.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework/Versions/A/PrivateHeaders/QSLargeTypeDisplay.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B23F091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B164091DB3D70095630C /* QSWeatherPreferencePane.m */;
+		name = "QSWeatherPreferencePane.m: 12";
+		rLen = 0;
+		rLoc = 296;
+		rType = 0;
+		vrLen = 303;
+		vrLoc = 0;
+	};
+	4E31B240091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF62091D6E3A0095630C /* NDFDStub.h */;
+		name = "NDFDStub.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1713;
+		vrLoc = 0;
+	};
+	4E31B241091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF63091D6E3A0095630C /* NDFDStub.m */;
+		name = "in_startDate,";
+		rLen = 30;
+		rLoc = 983;
+		rType = 0;
+		vrLen = 1445;
+		vrLoc = 0;
+	};
+	4E31B243091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF65091D6E3A0095630C /* WSGeneratedObj.m */;
+		name = "WSGeneratedObj.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 625;
+		vrLoc = 0;
+	};
+	4E31B247091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF59091D6D820095630C /* WeatherXMLParser.h */;
+		name = "WeatherXMLParser.h: _weather";
+		rLen = 0;
+		rLoc = 411;
+		rType = 0;
+		vrLen = 804;
+		vrLoc = 0;
+	};
+	4E31B24C091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF6091D62230095630C /* QSWeatherPluginSource.h */;
+		name = "QSWeatherPluginSource.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 250;
+		vrLoc = 0;
+	};
+	4E31B24D091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF7091D62230095630C /* QSWeatherPluginSource.m */;
+		name = "QSWeatherPluginSource.m: 92";
+		rLen = 0;
+		rLoc = 3558;
+		rType = 0;
+		vrLen = 1045;
+		vrLoc = 3004;
+	};
+	4E31B24E091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1EAB047068128A800774DFF /* QSWeatherPlugin.h */;
+		name = "QSWeatherPlugin.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 259;
+		vrLoc = 0;
+	};
+	4E31B24F091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E1EAB045068128A200774DFF /* QSWeatherPlugin.m */;
+		name = "QSWeatherPlugin.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 222;
+		vrLoc = 0;
+	};
+	4E31B251091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B252091DBE130095630C /* QSCGSEffectHelper.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 712;
+	};
+	4E31B252091DBE130095630C /* QSCGSEffectHelper.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSCGSEffectHelper.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSCGSEffectHelper.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B253091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B254091DBE130095630C /* QSEmbeddedEffects.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1115;
+		vrLoc = 0;
+	};
+	4E31B254091DBE130095630C /* QSEmbeddedEffects.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSEmbeddedEffects.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSEmbeddedEffects.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B255091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B256091DBE130095630C /* QSFadingView.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 282;
+		vrLoc = 0;
+	};
+	4E31B256091DBE130095630C /* QSFadingView.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSFadingView.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSFadingView.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B257091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B258091DBE130095630C /* QSMoveHelper.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 777;
+		vrLoc = 0;
+	};
+	4E31B258091DBE130095630C /* QSMoveHelper.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSMoveHelper.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSMoveHelper.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B259091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B25A091DBE130095630C /* QSShading.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	4E31B25A091DBE130095630C /* QSShading.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSShading.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSShading.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B25B091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B25C091DBE130095630C /* QSTrackingWindow.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 278;
+		vrLoc = 0;
+	};
+	4E31B25C091DBE130095630C /* QSTrackingWindow.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSTrackingWindow.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSTrackingWindow.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B25D091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B25E091DBE130095630C /* QSWarpEffects.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 319;
+		vrLoc = 0;
+	};
+	4E31B25E091DBE130095630C /* QSWarpEffects.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSWarpEffects.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSWarpEffects.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B25F091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B260091DBE130095630C /* QSWindow.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 961;
+	};
+	4E31B260091DBE130095630C /* QSWindow.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSWindow.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/PrivateHeaders/QSWindow.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B261091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B262091DBE130095630C /* QSInterface.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 256;
+		vrLoc = 0;
+	};
+	4E31B262091DBE130095630C /* QSInterface.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSInterface.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework/Versions/A/PrivateHeaders/QSInterface.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B263091DBE130095630C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B264091DBE130095630C /* QSLargeTypeDisplay.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 301;
+		vrLoc = 0;
+	};
+	4E31B264091DBE130095630C /* QSLargeTypeDisplay.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSLargeTypeDisplay.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework/Versions/A/PrivateHeaders/QSLargeTypeDisplay.h;
+		sourceTree = "<absolute>";
+	};
+	4E31B288091DBE8F0095630C /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 4E31B278091DBE730095630C /* sunny.jpg */;
+	};
+	4E31B28B091DBE8F0095630C /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 4E31B278091DBE730095630C /* sunny.jpg */;
+	};
+	4E31B2BD091DC0400095630C /* QSPkg */ = {
+		activeExec = 0;
+	};
+	4E5C67DF0921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF58091D6D820095630C /* WeatherXMLParser.m */;
+		name = "WeatherXMLParser.m: 74";
+		rLen = 0;
+		rLoc = 2500;
+		rType = 0;
+		vrLen = 870;
+		vrLoc = 2642;
+	};
+	4E5C67E00921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF5E091D6E030095630C /* WeatherObject.h */;
+		name = "WeatherObject.h: currentConditionIconURL";
+		rLen = 0;
+		rLoc = 2183;
+		rType = 0;
+		vrLen = 1324;
+		vrLoc = 990;
+	};
+	4E5C67E10921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF5D091D6E030095630C /* WeatherObject.m */;
+		name = "WeatherObject.m: 113";
+		rLen = 0;
+		rLoc = 2766;
+		rType = 0;
+		vrLen = 827;
+		vrLoc = 2403;
+	};
+	4E5C67E30921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */;
+		name = "http://www.nws.noaa.gov/data/current_obs";
+		rLen = 40;
+		rLoc = 6380;
+		rType = 0;
+		vrLen = 1750;
+		vrLoc = 4357;
+	};
+	4E5C67E40921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF5E091D6E030095630C /* WeatherObject.h */;
+		name = "WeatherObject.h: _iconURL";
+		rLen = 49;
+		rLoc = 1357;
+		rType = 0;
+		vrLen = 1288;
+		vrLoc = 990;
+	};
+	4E5C67E50921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF5D091D6E030095630C /* WeatherObject.m */;
+		name = "WeatherObject.m: 132";
+		rLen = 0;
+		rLoc = 3229;
+		rType = 0;
+		vrLen = 825;
+		vrLoc = 2268;
+	};
+	4E5C67E60921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF58091D6D820095630C /* WeatherXMLParser.m */;
+		name = "WeatherXMLParser.m: 74";
+		rLen = 0;
+		rLoc = 2500;
+		rType = 0;
+		vrLen = 870;
+		vrLoc = 2642;
+	};
+	4E5C67E70921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */;
+		name = "QSWeatherPluginAction.m: 180";
+		rLen = 0;
+		rLoc = 5649;
+		rType = 0;
+		vrLen = 1640;
+		vrLoc = 4388;
+	};
+	4E5C67E80921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF5D091D6E030095630C /* WeatherObject.m */;
+		name = "WeatherObject.m: 132";
+		rLen = 0;
+		rLoc = 3229;
+		rType = 0;
+		vrLen = 883;
+		vrLoc = 2210;
+	};
+	4E5C67E90921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF5E091D6E030095630C /* WeatherObject.h */;
+		name = "WeatherObject.h: currentConditionIcon";
+		rLen = 0;
+		rLoc = 2184;
+		rType = 0;
+		vrLen = 1321;
+		vrLoc = 990;
+	};
+	4E5C67EA0921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF5D091D6E030095630C /* WeatherObject.m */;
+		name = "WeatherObject.m: setVisibility:";
+		rLen = 0;
+		rLoc = 2697;
+		rType = 0;
+		vrLen = 822;
+		vrLoc = 2409;
+	};
+	4E5C67EB0921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF5E091D6E030095630C /* WeatherObject.h */;
+		name = "WeatherObject.h: currentConditionIconURL";
+		rLen = 0;
+		rLoc = 2183;
+		rType = 0;
+		vrLen = 1324;
+		vrLoc = 990;
+	};
+	4E5C67EC0921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */;
+		name = "QSWeatherPluginAction.m: 186";
+		rLen = 0;
+		rLoc = 6074;
+		rType = 0;
+		vrLen = 1663;
+		vrLoc = 4388;
+	};
+	4E5C67ED0921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF5D091D6E030095630C /* WeatherObject.m */;
+		name = "WeatherObject.m: 113";
+		rLen = 0;
+		rLoc = 2766;
+		rType = 0;
+		vrLen = 827;
+		vrLoc = 2403;
+	};
+	4E5C67EE0921A4280014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */;
+		name = "QSWeatherPluginAction.m: 157";
+		rLen = 0;
+		rLoc = 4673;
+		rType = 0;
+		vrLen = 1150;
+		vrLoc = 3185;
+	};
+	4E5C67F70921A50A0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF4091D62230095630C /* QSWeatherPluginAction.h */;
+		name = "QSWeatherPluginAction.h: _cachedWeatherIcon";
+		rLen = 67;
+		rLoc = 555;
+		rType = 0;
+		vrLen = 1320;
+		vrLoc = 390;
+	};
+	4E5C68050921A5F60014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF4091D62230095630C /* QSWeatherPluginAction.h */;
+		name = "QSWeatherPluginAction.h: displayNotification:andTitle:usingIcon:";
+		rLen = 0;
+		rLoc = 1662;
+		rType = 0;
+		vrLen = 1469;
+		vrLoc = 338;
+	};
+	4E5C68070921A5F60014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */;
+		name = "QSWeatherPluginAction.m: ensureForecastIsCurrent";
+		rLen = 0;
+		rLoc = 5509;
+		rType = 0;
+		vrLen = 1525;
+		vrLoc = 4276;
+	};
+	4E5C68080921A5F60014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF4091D62230095630C /* QSWeatherPluginAction.h */;
+		name = "QSWeatherPluginAction.h: displayNotification:andTitle:usingIcon:";
+		rLen = 0;
+		rLoc = 1662;
+		rType = 0;
+		vrLen = 1469;
+		vrLoc = 338;
+	};
+	4E5C68090921A5F60014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */;
+		name = "QSWeatherPluginAction.m: 200";
+		rLen = 0;
+		rLoc = 5410;
+		rType = 0;
+		vrLen = 1535;
+		vrLoc = 4492;
+	};
+	4E5C680A0921A5F60014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF4091D62230095630C /* QSWeatherPluginAction.h */;
+		name = "QSWeatherPluginAction.h: displayNotification:andTitle:usingIcon:";
+		rLen = 0;
+		rLoc = 1662;
+		rType = 0;
+		vrLen = 1469;
+		vrLoc = 338;
+	};
+	4E5C6857092241010014DDBD /* QSNotifyMediator.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = QSNotifyMediator.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework/Versions/A/Headers/QSNotifyMediator.h;
+		sourceTree = "<absolute>";
+	};
+	4E5C687809224DA30014DDBD /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 4E5C6857092241010014DDBD /* QSNotifyMediator.h */;
+	};
+	4E5C68900922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E5C68910922547F0014DDBD /* QSNotifyMediator.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 892;
+		vrLoc = 0;
+	};
+	4E5C68910922547F0014DDBD /* QSNotifyMediator.h */ = {
+		isa = PBXFileReference;
+		name = QSNotifyMediator.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework/Versions/A/Headers/QSNotifyMediator.h;
+		sourceTree = "<absolute>";
+	};
+	4E5C68920922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */;
+		name = "QSWeatherPluginAction.m: 14";
+		rLen = 0;
+		rLoc = 342;
+		rType = 0;
+		vrLen = 1118;
+		vrLoc = 0;
+	};
+	4E5C68930922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B163091DB3D70095630C /* QSWeatherPreferencePane.h */;
+		name = "- (IBAction)showHelp:(id)sender;";
+		rLen = 33;
+		rLoc = 203;
+		rType = 0;
+		vrLen = 241;
+		vrLoc = 0;
+	};
+	4E5C68940922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E5C68950922547F0014DDBD /* JavaCompiling.plist */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 286;
+		vrLoc = 0;
+	};
+	4E5C68950922547F0014DDBD /* JavaCompiling.plist */ = {
+		isa = PBXFileReference;
+		name = JavaCompiling.plist;
+		path = /Users/churchil/Documents/projects/QSWeatherPlugin/QSWeatherPlugin_PrefPane.nib/JavaCompiling.plist;
+		sourceTree = "<absolute>";
+	};
+	4E5C68960922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E5C68970922547F0014DDBD /* _QSWeatherPlugin_PrefPane_EOArchive.java */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2081;
+		vrLoc = 12379;
+	};
+	4E5C68970922547F0014DDBD /* _QSWeatherPlugin_PrefPane_EOArchive.java */ = {
+		isa = PBXFileReference;
+		name = _QSWeatherPlugin_PrefPane_EOArchive.java;
+		path = /Users/churchil/Documents/projects/QSWeatherPlugin/QSWeatherPlugin_PrefPane.nib/_QSWeatherPlugin_PrefPane_EOArchive.java;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1364, 3640}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 3049}, {873, 581}}";
+		};
+	};
+	4E5C68980922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */;
+		name = "QSWeatherPluginAction.m: 210";
+		rLen = 0;
+		rLoc = 6020;
+		rType = 0;
+		vrLen = 1580;
+		vrLoc = 4715;
+	};
+	4E5C68990922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E5C689A0922547F0014DDBD /* QSNotifyMediator.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 892;
+		vrLoc = 0;
+	};
+	4E5C689A0922547F0014DDBD /* QSNotifyMediator.h */ = {
+		isa = PBXFileReference;
+		name = QSNotifyMediator.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework/Versions/A/Headers/QSNotifyMediator.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {826, 634}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {826, 634}}";
+			sepNavWindowFrame = "{{82, 260}, {865, 763}}";
+		};
+	};
+	4E5C689B0922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */;
+		name = "data,@\"text\",title,@\"title\",icon,@\"icon\",[NSNumber numberWithInt:3600],@\"duration\",nil]];";
+		rLen = 190;
+		rLoc = 5874;
+		rType = 0;
+		vrLen = 1579;
+		vrLoc = 4718;
+	};
+	4E5C689C0922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E5C689D0922547F0014DDBD /* QSNotifyMediator.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 892;
+		vrLoc = 0;
+	};
+	4E5C689D0922547F0014DDBD /* QSNotifyMediator.h */ = {
+		isa = PBXFileReference;
+		name = QSNotifyMediator.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework/Versions/A/Headers/QSNotifyMediator.h;
+		sourceTree = "<absolute>";
+	};
+	4E5C689E0922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */;
+		name = "QSWeatherPluginAction.m: 14";
+		rLen = 0;
+		rLoc = 342;
+		rType = 0;
+		vrLen = 1118;
+		vrLoc = 0;
+	};
+	4E5C689F0922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31B163091DB3D70095630C /* QSWeatherPreferencePane.h */;
+		name = "- (IBAction)showHelp:(id)sender;";
+		rLen = 33;
+		rLoc = 203;
+		rType = 0;
+		vrLen = 241;
+		vrLoc = 0;
+	};
+	4E5C68A00922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E5C68A10922547F0014DDBD /* JavaCompiling.plist */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 286;
+		vrLoc = 0;
+	};
+	4E5C68A10922547F0014DDBD /* JavaCompiling.plist */ = {
+		isa = PBXFileReference;
+		name = JavaCompiling.plist;
+		path = /Users/churchil/Documents/projects/QSWeatherPlugin/QSWeatherPlugin_PrefPane.nib/JavaCompiling.plist;
+		sourceTree = "<absolute>";
+	};
+	4E5C68A20922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E5C68A30922547F0014DDBD /* _QSWeatherPlugin_PrefPane_EOArchive.java */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2118;
+		vrLoc = 12342;
+	};
+	4E5C68A30922547F0014DDBD /* _QSWeatherPlugin_PrefPane_EOArchive.java */ = {
+		isa = PBXFileReference;
+		name = _QSWeatherPlugin_PrefPane_EOArchive.java;
+		path = /Users/churchil/Documents/projects/QSWeatherPlugin/QSWeatherPlugin_PrefPane.nib/_QSWeatherPlugin_PrefPane_EOArchive.java;
+		sourceTree = "<absolute>";
+	};
+	4E5C68A60922547F0014DDBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E5C68A70922547F0014DDBD /* QSNotifyMediator.h */;
+		name = "(null): 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 892;
+		vrLoc = 0;
+	};
+	4E5C68A70922547F0014DDBD /* QSNotifyMediator.h */ = {
+		isa = PBXFileReference;
+		name = QSNotifyMediator.h;
+		path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework/Versions/A/Headers/QSNotifyMediator.h;
+		sourceTree = "<absolute>";
+	};
+	4E5FF7CE0920184B00A63A6B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D1AC9730486D14A00FE50C9 /* Info.plist */;
+		name = "Info.plist: 137";
+		rLen = 0;
+		rLoc = 3225;
+		rType = 0;
+		vrLen = 693;
+		vrLoc = 2515;
+	};
+	4E5FF8200920452F00A63A6B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E5FF7D90920190700A63A6B /* ndfd.xq */;
+		name = "ndfd.xq: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 849;
+		vrLoc = 0;
+	};
+	4E5FF8230920452F00A63A6B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E5FF7D90920190700A63A6B /* ndfd.xq */;
+		name = "ndfd.xq: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 849;
+		vrLoc = 0;
+	};
+	4E5FF839092048F700A63A6B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E31AF64091D6E3A0095630C /* WSGeneratedObj.h */;
+		name = "WSGeneratedObj.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1421;
+		vrLoc = 0;
+	};
+	8D1AC9600486D14A00FE50C9 /* QSWeatherPlugin */ = {
+		activeExec = 0;
+	};
+	8D1AC9730486D14A00FE50C9 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1918}}";
+			sepNavSelRange = "{3225, 0}";
+			sepNavVisRect = "{{0, 1342}, {873, 528}}";
+		};
+	};
+	E1EAB045068128A200774DFF /* QSWeatherPlugin.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {682, 524}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {682, 524}}";
+		};
+	};
+	E1EAB047068128A800774DFF /* QSWeatherPlugin.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 528}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {873, 528}}";
+		};
+	};
+}

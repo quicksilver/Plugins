@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict/>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>MYWeatherPlugin</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.MYWeatherPlugin</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Weather Plugin</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>1ED</string>
+	<key>NSMainNibFile</key>
+	<string>MYWeatherPrefPane</string>
+	<key>NSPrincipalClass</key>
+	<string>MYWeatherPlugin</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>MrChucho</string>
+		<key>categories</key>
+		<array/>
+		<key>description</key>
+		<string>Gets Current Conditions and Forecast</string>
+		<key>infoFile</key>
+		<string>Info.rtf</string>
+		<key>relatedBundles </key>
+		<array/>
+		<key>webIcon</key>
+		<string></string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetMYWeatherPlugin</string>
+			<key>name</key>
+			<string>Current Conditions and Forecast</string>
+			<key>source</key>
+			<string>MYWeatherPlugin_Source</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>MYWeatherPlugin_Source</key>
+			<string>MYWeatherPlugin_Source</string>
+		</dict>
+		<key>QSPreferencePanes</key>
+		<dict>
+			<key>MYWeatherPrefPane</key>
+			<string>MYWeatherPrefPane</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

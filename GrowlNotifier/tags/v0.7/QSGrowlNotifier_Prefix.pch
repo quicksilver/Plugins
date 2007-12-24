@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'QSGrowlNotifier' target in the 'QSGrowlNotifier' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+	#import <Growl/GrowlApplicationBridge.h>
+#endif
+
+

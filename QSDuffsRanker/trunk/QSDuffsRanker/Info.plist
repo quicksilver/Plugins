@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>TextMate Ranker</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.macromates.quicksilver.duff_string_ranker</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>TextMate Ranker</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>19</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Allan Odgaard</string>
+		<key>description</key>
+		<string>Ranking which prefers word boundaries. Change the default ranker in the Handlers preferences.</string>
+		<key>icon</key>
+		<string>com.macromates.textmate</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSStringRankers</key>
+		<dict>
+			<key>DuffStringRanker</key>
+			<string>DuffStringRanker</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>feature</key>
+		<integer>1</integer>
+		<key>version</key>
+		<string>3774</string>
+	</dict>
+</dict>
+</plist>

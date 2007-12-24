@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'QSShiiraPlugIn' target in the 'QSShiiraPlugIn' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSShiiraPlugInType @"QSShiiraPlugInType"

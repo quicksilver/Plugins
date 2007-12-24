@@ -1,0 +1,198 @@
+// !$*UTF8*$!
+{
+	0259C573FE90428111CA0C5A /* Project object */ = {
+		activeArchitecture = i386;
+		activeBuildConfigurationName = Release;
+		activeExecutable = 7FA210A90C6E55B500630971 /* Executable */;
+		activeTarget = 8D1AC9600486D14A00FE50C9 /* Apple Address Book Module */;
+		addToTargets = (
+			8D1AC9600486D14A00FE50C9 /* Apple Address Book Module */,
+		);
+		codeSenseManager = 7F3019B50BBAFB3B00CEACB0 /* Code sense */;
+		executables = (
+			7FA210A90C6E55B500630971 /* Executable */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					57.5835,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					57.58349609375,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					203,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 212130691;
+			PBXWorkspaceStateSaveDate = 212130691;
+		};
+		sourceControlManager = 7F3019B40BBAFB3B00CEACB0 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	7F23B8840C1AD95C002197EE /* QSPlugIn_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {713, 749}}";
+			sepNavSelRange = "{161, 0}";
+			sepNavVisRect = "{{0, 0}, {713, 749}}";
+			sepNavWindowFrame = "{{19, -5}, {758, 878}}";
+		};
+	};
+	7F23B8850C1AD95C002197EE /* QSPlugIn.xcconfig */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {830, 749}}";
+			sepNavSelRange = "{559, 0}";
+			sepNavVisRect = "{{117, 0}, {713, 749}}";
+			sepNavWindowFrame = "{{19, -5}, {758, 878}}";
+		};
+	};
+	7F3019B40BBAFB3B00CEACB0 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	7F3019B50BBAFB3B00CEACB0 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	7FA210A90C6E55B500630971 /* Executable */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = 7FA210AA0C6E55B500630971 /* Quicksilver.app */;
+		libgmallocEnabled = 0;
+		name = Executable;
+		sourceDirectories = (
+		);
+	};
+	7FA210AA0C6E55B500630971 /* Quicksilver.app */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = wrapper.application;
+		name = Quicksilver.app;
+		path = /Applications/Quicksilver.app;
+		sourceTree = "<absolute>";
+	};
+	8D1AC9600486D14A00FE50C9 /* Apple Address Book Module */ = {
+		activeExec = 0;
+	};
+	8D1AC9730486D14A00FE50C9 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 3052}}";
+			sepNavSelRange = "{1191, 0}";
+			sepNavVisRect = "{{0, 0}, {1049, 949}}";
+			sepNavWindowFrame = "{{19, 95}, {1094, 1078}}";
+		};
+	};
+	E1CF964E0733695700C99604 /* QSABMimicActionProvider.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {836, 1316}}";
+			sepNavSelRange = "{1151, 0}";
+			sepNavVisRange = "{827, 937}";
+			sepNavVisRect = "{{0, 517}, {453, 186}}";
+		};
+	};
+	E1CF96520733695700C99604 /* QSABSource.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1234, 5404}}";
+			sepNavSelRange = "{5632, 0}";
+			sepNavVisRange = "{4556, 1803}";
+			sepNavWindowFrame = "{{42, 39}, {1293, 812}}";
+		};
+	};
+	E1CF96F807336B5500C99604 /* QSObject_ContactHandling.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1250, 3920}}";
+			sepNavSelRange = "{8842, 0}";
+			sepNavVisRange = "{7992, 2093}";
+			sepNavWindowFrame = "{{614, 65}, {1293, 812}}";
+		};
+	};
+	E36CA8F707F203EF00EB928D /* ABPerson_Display.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {720, 1162}}";
+			sepNavSelRange = "{338, 5}";
+			sepNavVisRange = "{233, 376}";
+			sepNavWindowFrame = "{{529, 65}, {1293, 812}}";
+		};
+	};
+}

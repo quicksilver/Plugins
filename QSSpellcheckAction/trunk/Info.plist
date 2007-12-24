@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Spellcheck Action</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Spellcheck Action version 0.9, (c) 2004-05 Tim Kingman</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.quicksilver.TKSpellerPlugin</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Spellcheck Action</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.9</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1C</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>(c) 2004-05 Tim Kingman</string>
+	<key>NSPrincipalClass</key>
+	<string>SpellcheckActionProvider</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Tim Kingman</string>
+		<key>description</key>
+		<string>Offers spelling suggestions for an entered word.</string>
+		<key>infoFile</key>
+		<string>Info.rtf</string>
+		<key>requiresFeature</key>
+		<string>0</string>
+		<key>webIcon</key>
+		<string></string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>SpellcheckAction</key>
+			<string>SpellcheckActionProvider</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

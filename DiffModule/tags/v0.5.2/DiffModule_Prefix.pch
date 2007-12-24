@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'DiffModule' target in the 'DiffModule' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+    #import <AddressBook/AddressBook.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kDiffModuleType @"DiffModuleType"

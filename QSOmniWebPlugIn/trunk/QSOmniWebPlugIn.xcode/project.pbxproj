@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		0259C573FE90428111CA0C5A = {
+			buildSettings = {
+			};
+			buildStyles = (
+				2E58F360FFB2326E11CA0CBA,
+				2E58F361FFB2326E11CA0CBA,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 0259C574FE90428111CA0C5A;
+			projectDirPath = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9,
+			);
+		};
+		0259C574FE90428111CA0C5A = {
+			children = (
+				32DBCF9E0370C38000C91783,
+				32DBCF9F0370C38200C91783,
+				0259C582FE90428111CA0C5A,
+				1ED78706FE9D4A0611CA0C5A,
+				2E58F364FFB232C311CA0CBA,
+			);
+			isa = PBXGroup;
+			name = QSOmniWebPlugIn;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A = {
+			children = (
+				E172A30D079CD47C00BE19DD,
+				E172A30E079CD47C00BE19DD,
+				8D1AC9730486D14A00FE50C9,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//020
+//021
+//022
+//023
+//024
+//170
+//171
+//172
+//173
+//174
+		175C2D8008268BF20030B33B = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QSFoundation.framework;
+			path = /Applications/Quicksilver.app/Contents/Frameworks/QSFoundation.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		175C2D8108268BF20030B33B = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QSEffects.framework;
+			path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		175C2D8208268BF20030B33B = {
+			fileRef = 175C2D8008268BF20030B33B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		175C2D8308268BF20030B33B = {
+			fileRef = 175C2D8108268BF20030B33B;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//170
+//171
+//172
+//173
+//174
+//1E0
+//1E1
+//1E2
+//1E3
+//1E4
+		1ED78706FE9D4A0611CA0C5A = {
+			children = (
+				8D1AC9740486D14A00FE50C9,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//1E0
+//1E1
+//1E2
+//1E3
+//1E4
+//2E0
+//2E1
+//2E2
+//2E3
+//2E4
+		2E58F360FFB2326E11CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		2E58F361FFB2326E11CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+		2E58F364FFB232C311CA0CBA = {
+			children = (
+				175C2D8008268BF20030B33B,
+				175C2D8108268BF20030B33B,
+				E1022AE706B3469300299BEC,
+				E1022AE806B3469300299BEC,
+				DD92D38A0106425D02CA0E72,
+			);
+			isa = PBXGroup;
+			name = Frameworks;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//2E0
+//2E1
+//2E2
+//2E3
+//2E4
+//320
+//321
+//322
+//323
+//324
+		32DBCF980370C29C00C91783 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = QSOmniWebPlugIn_Prefix.pch;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 = {
+			children = (
+			);
+			isa = PBXGroup;
+			name = Classes;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 = {
+			children = (
+				32DBCF980370C29C00C91783,
+			);
+			isa = PBXGroup;
+			name = "Other Sources";
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//320
+//321
+//322
+//323
+//324
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+		8D1AC9600486D14A00FE50C9 = {
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9,
+				8D1AC96A0486D14A00FE50C9,
+				8D1AC96E0486D14A00FE50C9,
+				E1022B2806B3475D00299BEC,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = /Applications/Quicksilver.app/Contents/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSOmniWebPlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "OmniWeb Module";
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = "OmniWeb Module";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSOmniWebPlugIn;
+			productReference = 8D1AC9740486D14A00FE50C9;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1AC9660486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				E172A30F079CD47C00BE19DD,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96A0486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				E172A310079CD47C00BE19DD,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96E0486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9,
+				E1022AE906B3469300299BEC,
+				E1022AEA06B3469300299BEC,
+				175C2D8208268BF20030B33B,
+				175C2D8308268BF20030B33B,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC9700486D14A00FE50C9 = {
+			fileRef = DD92D38A0106425D02CA0E72;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D1AC9730486D14A00FE50C9 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist;
+			path = Info.plist;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8D1AC9740486D14A00FE50C9 = {
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = "OmniWeb Module.qsplugin";
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+//DD0
+//DD1
+//DD2
+//DD3
+//DD4
+		DD92D38A0106425D02CA0E72 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//DD0
+//DD1
+//DD2
+//DD3
+//DD4
+//E10
+//E11
+//E12
+//E13
+//E14
+		E1022AE706B3469300299BEC = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QSCore.framework;
+			path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E1022AE806B3469300299BEC = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QSInterface.framework;
+			path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E1022AE906B3469300299BEC = {
+			fileRef = E1022AE706B3469300299BEC;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1022AEA06B3469300299BEC = {
+			fileRef = E1022AE806B3469300299BEC;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1022B2806B3475D00299BEC = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+		E172A30D079CD47C00BE19DD = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = QSOmniWebParser.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E172A30E079CD47C00BE19DD = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = QSOmniWebParser.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E172A30F079CD47C00BE19DD = {
+			fileRef = E172A30D079CD47C00BE19DD;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E172A310079CD47C00BE19DD = {
+			fileRef = E172A30E079CD47C00BE19DD;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+	};
+	rootObject = 0259C573FE90428111CA0C5A;
+}

@@ -1,0 +1,680 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		0259C573FE90428111CA0C5A = {
+			buildSettings = {
+			};
+			buildStyles = (
+				2E58F360FFB2326E11CA0CBA,
+				2E58F361FFB2326E11CA0CBA,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 0259C574FE90428111CA0C5A;
+			projectDirPath = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9,
+			);
+		};
+		0259C574FE90428111CA0C5A = {
+			children = (
+				32DBCF9E0370C38000C91783,
+				32DBCF9F0370C38200C91783,
+				0259C582FE90428111CA0C5A,
+				1ED78706FE9D4A0611CA0C5A,
+				2E58F364FFB232C311CA0CBA,
+			);
+			isa = PBXGroup;
+			name = MYWeatherPlugin;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A = {
+			children = (
+				4EDA25D707600AA900EA2C3A,
+				4EB9780E075C32B900490E66,
+				8D1AC9730486D14A00FE50C9,
+				4E55E72F076E6108008087ED,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//020
+//021
+//022
+//023
+//024
+//1E0
+//1E1
+//1E2
+//1E3
+//1E4
+		1ED78706FE9D4A0611CA0C5A = {
+			children = (
+				8D1AC9740486D14A00FE50C9,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//1E0
+//1E1
+//1E2
+//1E3
+//1E4
+//2E0
+//2E1
+//2E2
+//2E3
+//2E4
+		2E58F360FFB2326E11CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		2E58F361FFB2326E11CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+		2E58F364FFB232C311CA0CBA = {
+			children = (
+				4E00E6610793295C00B56A6C,
+				4E00E6620793295C00B56A6C,
+				4EDE80D207836B3400971CEB,
+				4ECB617A075C250E00F59128,
+				DD92D38A0106425D02CA0E72,
+			);
+			isa = PBXGroup;
+			name = Frameworks;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//2E0
+//2E1
+//2E2
+//2E3
+//2E4
+//320
+//321
+//322
+//323
+//324
+		32DBCF980370C29C00C91783 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = MYWeatherPlugin_Prefix.pch;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 = {
+			children = (
+				4EDE80C307836AF700971CEB,
+				4EDE80C407836AF700971CEB,
+				4EDE80C507836AF700971CEB,
+				4EDE80C607836AF700971CEB,
+				4E26EB7907584279008BEAD8,
+				4E26EB7B07584279008BEAD8,
+				E1EAB045068128A200774DFF,
+				4EB977A5075C2D7300490E66,
+				4EE066410762B6C8002D698C,
+				4EE066430762B6C8002D698C,
+				4EE85F3C07656EF300BD5B55,
+			);
+			isa = PBXGroup;
+			name = Classes;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 = {
+			children = (
+				4EB977A6075C2D7300490E66,
+				32DBCF980370C29C00C91783,
+				E1EAB047068128A800774DFF,
+				4E26EB7A07584279008BEAD8,
+				4E26EB7807584279008BEAD8,
+				4EE066400762B6C8002D698C,
+				4EE066420762B6C8002D698C,
+				4EE85F3B07656EF300BD5B55,
+			);
+			isa = PBXGroup;
+			name = "Other Sources";
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//320
+//321
+//322
+//323
+//324
+//4E0
+//4E1
+//4E2
+//4E3
+//4E4
+		4E00E6610793295C00B56A6C = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QSInterface.framework;
+			path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		4E00E6620793295C00B56A6C = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QSCore.framework;
+			path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		4E00E6630793295C00B56A6C = {
+			fileRef = 4E00E6610793295C00B56A6C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4E00E6640793295C00B56A6C = {
+			fileRef = 4E00E6620793295C00B56A6C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4E26EB7807584279008BEAD8 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = MYWeatherPlugin_Action.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4E26EB7907584279008BEAD8 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = MYWeatherPlugin_Action.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4E26EB7A07584279008BEAD8 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = MYWeatherPlugin_Source.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4E26EB7B07584279008BEAD8 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = MYWeatherPlugin_Source.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4E26EB7C07584279008BEAD8 = {
+			fileRef = 4E26EB7807584279008BEAD8;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4E26EB7D07584279008BEAD8 = {
+			fileRef = 4E26EB7907584279008BEAD8;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4E26EB7E07584279008BEAD8 = {
+			fileRef = 4E26EB7A07584279008BEAD8;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4E26EB7F07584279008BEAD8 = {
+			fileRef = 4E26EB7B07584279008BEAD8;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4E3EF3900792373800A992DC = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir build/MYWeatherPlugin.qsplugin/Contents/Frameworks\ncp -r CURLHandle.framework build/MYWeatherPlugin.qsplugin/Contents/Frameworks ";
+		};
+		4E55E72F076E6108008087ED = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			path = 01.png;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4E55E730076E6108008087ED = {
+			fileRef = 4E55E72F076E6108008087ED;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EB977A5075C2D7300490E66 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = MYWeatherPrefPane.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EB977A6075C2D7300490E66 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = MYWeatherPrefPane.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EB977A7075C2D7300490E66 = {
+			fileRef = 4EB977A5075C2D7300490E66;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EB977A8075C2D7300490E66 = {
+			fileRef = 4EB977A6075C2D7300490E66;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EB9780E075C32B900490E66 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.nib;
+			path = MYWeatherPrefPane.nib;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EB9780F075C32B900490E66 = {
+			fileRef = 4EB9780E075C32B900490E66;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4ECB617A075C250E00F59128 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = PreferencePanes.framework;
+			path = /System/Library/Frameworks/PreferencePanes.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		4ECB617B075C250E00F59128 = {
+			fileRef = 4ECB617A075C250E00F59128;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EDA25D707600AA900EA2C3A = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.rtf;
+			path = Info.rtf;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EDA25D807600AA900EA2C3A = {
+			fileRef = 4EDA25D707600AA900EA2C3A;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EDE80C307836AF700971CEB = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = NDFDStub.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EDE80C407836AF700971CEB = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = NDFDStub.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EDE80C507836AF700971CEB = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = WSGeneratedObj.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EDE80C607836AF700971CEB = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = WSGeneratedObj.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EDE80C707836AF700971CEB = {
+			fileRef = 4EDE80C307836AF700971CEB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EDE80C807836AF700971CEB = {
+			fileRef = 4EDE80C407836AF700971CEB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EDE80C907836AF700971CEB = {
+			fileRef = 4EDE80C507836AF700971CEB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EDE80CA07836AF700971CEB = {
+			fileRef = 4EDE80C607836AF700971CEB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EDE80D207836B3400971CEB = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreServices.framework;
+			path = /System/Library/Frameworks/CoreServices.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		4EDE80D307836B3400971CEB = {
+			fileRef = 4EDE80D207836B3400971CEB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EE066400762B6C8002D698C = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = WeatherObject.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EE066410762B6C8002D698C = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = WeatherObject.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EE066420762B6C8002D698C = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = WeatherXMLParser.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EE066430762B6C8002D698C = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = WeatherXMLParser.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EE066440762B6C8002D698C = {
+			fileRef = 4EE066400762B6C8002D698C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EE066450762B6C8002D698C = {
+			fileRef = 4EE066410762B6C8002D698C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EE066460762B6C8002D698C = {
+			fileRef = 4EE066420762B6C8002D698C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EE066470762B6C8002D698C = {
+			fileRef = 4EE066430762B6C8002D698C;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EE85F3B07656EF300BD5B55 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = METARParser.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EE85F3C07656EF300BD5B55 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = METARParser.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		4EE85F3D07656EF300BD5B55 = {
+			fileRef = 4EE85F3B07656EF300BD5B55;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4EE85F3E07656EF300BD5B55 = {
+			fileRef = 4EE85F3C07656EF300BD5B55;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//4E0
+//4E1
+//4E2
+//4E3
+//4E4
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+		8D1AC9600486D14A00FE50C9 = {
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9,
+				8D1AC96A0486D14A00FE50C9,
+				8D1AC96E0486D14A00FE50C9,
+				E1022B2806B3475D00299BEC,
+				4E3EF3900792373800A992DC,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "/Applications/Quicksilver.app/Contents/Frameworks /Users/churchil/Documents/projects/MYWeatherPlugin /Users/churchil/Desktop \"/Users/churchil/Documents/CURLHandle/10.2+ compatible\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MYWeatherPlugin_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = MYWeatherPlugin;
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = MYWeatherPlugin;
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = MYWeatherPlugin;
+			productReference = 8D1AC9740486D14A00FE50C9;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1AC9660486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				4E26EB7C07584279008BEAD8,
+				4E26EB7E07584279008BEAD8,
+				4EB977A8075C2D7300490E66,
+				4EB9780F075C32B900490E66,
+				4EDA25D807600AA900EA2C3A,
+				4EE066440762B6C8002D698C,
+				4EE066460762B6C8002D698C,
+				4EE85F3D07656EF300BD5B55,
+				4E55E730076E6108008087ED,
+				4EDE80C707836AF700971CEB,
+				4EDE80C907836AF700971CEB,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96A0486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF,
+				4E26EB7D07584279008BEAD8,
+				4E26EB7F07584279008BEAD8,
+				4EB977A7075C2D7300490E66,
+				4EE066450762B6C8002D698C,
+				4EE066470762B6C8002D698C,
+				4EE85F3E07656EF300BD5B55,
+				4EDE80C807836AF700971CEB,
+				4EDE80CA07836AF700971CEB,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96E0486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9,
+				4ECB617B075C250E00F59128,
+				4EDE80D307836B3400971CEB,
+				4E00E6630793295C00B56A6C,
+				4E00E6640793295C00B56A6C,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC9700486D14A00FE50C9 = {
+			fileRef = DD92D38A0106425D02CA0E72;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D1AC9730486D14A00FE50C9 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist;
+			path = Info.plist;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8D1AC9740486D14A00FE50C9 = {
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = MYWeatherPlugin.qsplugin;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+//DD0
+//DD1
+//DD2
+//DD3
+//DD4
+		DD92D38A0106425D02CA0E72 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//DD0
+//DD1
+//DD2
+//DD3
+//DD4
+//E10
+//E11
+//E12
+//E13
+//E14
+		E1022B2806B3475D00299BEC = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+		E1EAB045068128A200774DFF = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = MYWeatherPlugin.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E1EAB046068128A200774DFF = {
+			fileRef = E1EAB045068128A200774DFF;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1EAB047068128A800774DFF = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = MYWeatherPlugin.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+	};
+	rootObject = 0259C573FE90428111CA0C5A;
+}

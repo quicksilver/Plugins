@@ -1,0 +1,31 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            CLASS = QSABMailRecentsObjectSource; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = QSAddressBookObjectSource; 
+        }, 
+        {
+            CLASS = QSAddressBookObjectSource; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {distributionList = NSPopUpButton; groupList = NSPopUpButton; }; 
+            SUPERCLASS = QSObjectSource; 
+        }, 
+        {
+            CLASS = QSAllApplicationsObjectSource; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = QSObjectSource; 
+        }, 
+        {CLASS = QSGroupObjectSource; LANGUAGE = ObjC; SUPERCLASS = QSObjectSource; }, 
+        {
+            CLASS = QSObjectSource; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {settingsView = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = QSVolumesObjectSource; LANGUAGE = ObjC; SUPERCLASS = QSObjectSource; }
+    ); 
+    IBVersion = 1; 
+}

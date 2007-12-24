@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Colloquy Module</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.TSColloquyPlugin</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Colloquy Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.5</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>10A</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Kevin Ballard</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Kevin Ballard</string>
+		<key>description</key>
+		<string>Provides access to Colloquy's known servers and rooms for both favorites and stored connections.</string>
+		<key>infoFile</key>
+		<string>Info.rtf</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>cc.javelin.colloquy</string>
+		</array>
+		<key>requiresPath</key>
+		<string>~/Library/Application Support/Colloquy</string>
+		<key>webIcon</key>
+		<string>http://blacktree.com/apps/quicksilver/images/appicons/Colloquy.gif</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetColloquyFavorites</string>
+			<key>name</key>
+			<string>Colloquy Favorites</string>
+			<key>source</key>
+			<string>ColloquySource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>ColloquyActionProvider</key>
+			<string>ColloquyActionProvider</string>
+		</dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>cc.javelin.colloquy</key>
+			<string>ColloquySource</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>ColloquyRoomType</key>
+			<string>ColloquySource</string>
+			<key>ColloquyServerType</key>
+			<string>ColloquySource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>ColloquySource</key>
+			<string>ColloquySource</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>version</key>
+		<string>CBB</string>
+	</dict>
+</dict>
+</plist>

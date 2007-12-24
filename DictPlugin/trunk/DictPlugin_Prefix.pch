@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'DictPlugin' target in the 'DictPlugin' project
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import <QSCore/QSCore.h>
+#import <QSFoundation/QSFoundation.h>
+#endif

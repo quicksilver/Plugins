@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'QSDuffStringRanker' target in the 'QSDuffStringRanker' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSDuffStringRankerType @"QSDuffStringRankerType"

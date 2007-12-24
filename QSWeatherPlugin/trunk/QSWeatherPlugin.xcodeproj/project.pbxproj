@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4E31B2BD091DC0400095630C /* QSPkg */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4E31B2C4091DC06D0095630C /* Build configuration list for PBXAggregateTarget "QSPkg" */;
+			buildPhases = (
+				4E31B2BC091DC0400095630C /* ShellScript */,
+			);
+			buildSettings = {
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = QSPkg;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+				4E31B2BF091DC0480095630C /* PBXTargetDependency */,
+			);
+			name = QSPkg;
+			productName = QSPkg;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		4E31ADF8091D62230095630C /* QSWeatherPluginAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */; };
+		4E31ADF9091D62230095630C /* QSWeatherPluginSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E31ADF7091D62230095630C /* QSWeatherPluginSource.m */; };
+		4E31AE84091D67440095630C /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E31AE80091D67440095630C /* QSCore.framework */; };
+		4E31AE85091D67440095630C /* QSEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E31AE81091D67440095630C /* QSEffects.framework */; };
+		4E31AE86091D67440095630C /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E31AE82091D67440095630C /* QSInterface.framework */; };
+		4E31AE87091D67440095630C /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E31AE83091D67440095630C /* QSFoundation.framework */; };
+		4E31AF5A091D6D820095630C /* WeatherXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E31AF58091D6D820095630C /* WeatherXMLParser.m */; };
+		4E31AF5F091D6E030095630C /* WeatherObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E31AF5D091D6E030095630C /* WeatherObject.m */; };
+		4E31AF66091D6E3A0095630C /* NDFDStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E31AF63091D6E3A0095630C /* NDFDStub.m */; };
+		4E31AF67091D6E3A0095630C /* WSGeneratedObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E31AF65091D6E3A0095630C /* WSGeneratedObj.m */; };
+		4E31B158091DB3460095630C /* QSWeatherPlugin_PrefPane.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4E31B157091DB3460095630C /* QSWeatherPlugin_PrefPane.nib */; };
+		4E31B165091DB3D70095630C /* QSWeatherPreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E31B164091DB3D70095630C /* QSWeatherPreferencePane.m */; };
+		4E31B279091DBE730095630C /* sunny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E31B278091DBE730095630C /* sunny.jpg */; };
+		4E5FF7DA0920190700A63A6B /* ndfd.xq in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FF7D90920190700A63A6B /* ndfd.xq */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1EAB046068128A200774DFF /* QSWeatherPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSWeatherPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		2E58F360FFB2326E11CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		4E31B2BE091DC0480095630C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = QSWeatherPlugin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32DBCF980370C29C00C91783 /* QSWeatherPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSWeatherPlugin_Prefix.pch; sourceTree = "<group>"; };
+		4E31ADF4091D62230095630C /* QSWeatherPluginAction.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSWeatherPluginAction.h; sourceTree = "<group>"; };
+		4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSWeatherPluginAction.m; sourceTree = "<group>"; };
+		4E31ADF6091D62230095630C /* QSWeatherPluginSource.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSWeatherPluginSource.h; sourceTree = "<group>"; };
+		4E31ADF7091D62230095630C /* QSWeatherPluginSource.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSWeatherPluginSource.m; sourceTree = "<group>"; };
+		4E31AE80091D67440095630C /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework; sourceTree = "<absolute>"; };
+		4E31AE81091D67440095630C /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSEffects.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework; sourceTree = "<absolute>"; };
+		4E31AE82091D67440095630C /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSInterface.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework; sourceTree = "<absolute>"; };
+		4E31AE83091D67440095630C /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSFoundation.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSFoundation.framework; sourceTree = "<absolute>"; };
+		4E31AF58091D6D820095630C /* WeatherXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = WeatherXMLParser.m; sourceTree = "<group>"; };
+		4E31AF59091D6D820095630C /* WeatherXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = WeatherXMLParser.h; sourceTree = "<group>"; };
+		4E31AF5D091D6E030095630C /* WeatherObject.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = WeatherObject.m; sourceTree = "<group>"; };
+		4E31AF5E091D6E030095630C /* WeatherObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = WeatherObject.h; sourceTree = "<group>"; };
+		4E31AF62091D6E3A0095630C /* NDFDStub.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NDFDStub.h; sourceTree = "<group>"; };
+		4E31AF63091D6E3A0095630C /* NDFDStub.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NDFDStub.m; sourceTree = "<group>"; };
+		4E31AF64091D6E3A0095630C /* WSGeneratedObj.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = WSGeneratedObj.h; sourceTree = "<group>"; };
+		4E31AF65091D6E3A0095630C /* WSGeneratedObj.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = WSGeneratedObj.m; sourceTree = "<group>"; };
+		4E31B157091DB3460095630C /* QSWeatherPlugin_PrefPane.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSWeatherPlugin_PrefPane.nib; sourceTree = "<group>"; };
+		4E31B163091DB3D70095630C /* QSWeatherPreferencePane.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSWeatherPreferencePane.h; sourceTree = "<group>"; };
+		4E31B164091DB3D70095630C /* QSWeatherPreferencePane.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSWeatherPreferencePane.m; sourceTree = "<group>"; };
+		4E31B278091DBE730095630C /* sunny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunny.jpg; sourceTree = "<group>"; };
+		4E5FF7D90920190700A63A6B /* ndfd.xq */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = ndfd.xq; sourceTree = "<group>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* QSWeatherPlugin.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSWeatherPlugin.qsplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E1EAB045068128A200774DFF /* QSWeatherPlugin.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSWeatherPlugin.m; sourceTree = "<group>"; };
+		E1EAB047068128A800774DFF /* QSWeatherPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSWeatherPlugin.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				4E31AE84091D67440095630C /* QSCore.framework in Frameworks */,
+				4E31AE85091D67440095630C /* QSEffects.framework in Frameworks */,
+				4E31AE86091D67440095630C /* QSInterface.framework in Frameworks */,
+				4E31AE87091D67440095630C /* QSFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSWeatherPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = QSWeatherPlugin;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FF7D90920190700A63A6B /* ndfd.xq */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+				4E31B278091DBE730095630C /* sunny.jpg */,
+				4E31B157091DB3460095630C /* QSWeatherPlugin_PrefPane.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* QSWeatherPlugin.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E31AE80091D67440095630C /* QSCore.framework */,
+				4E31AE81091D67440095630C /* QSEffects.framework */,
+				4E31AE82091D67440095630C /* QSInterface.framework */,
+				4E31AE83091D67440095630C /* QSFoundation.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4E31B163091DB3D70095630C /* QSWeatherPreferencePane.h */,
+				4E31B164091DB3D70095630C /* QSWeatherPreferencePane.m */,
+				4E31AF62091D6E3A0095630C /* NDFDStub.h */,
+				4E31AF63091D6E3A0095630C /* NDFDStub.m */,
+				4E31AF64091D6E3A0095630C /* WSGeneratedObj.h */,
+				4E31AF65091D6E3A0095630C /* WSGeneratedObj.m */,
+				4E31AF5D091D6E030095630C /* WeatherObject.m */,
+				4E31AF5E091D6E030095630C /* WeatherObject.h */,
+				4E31AF58091D6D820095630C /* WeatherXMLParser.m */,
+				4E31AF59091D6D820095630C /* WeatherXMLParser.h */,
+				4E31ADF4091D62230095630C /* QSWeatherPluginAction.h */,
+				4E31ADF5091D62230095630C /* QSWeatherPluginAction.m */,
+				4E31ADF6091D62230095630C /* QSWeatherPluginSource.h */,
+				4E31ADF7091D62230095630C /* QSWeatherPluginSource.m */,
+				E1EAB047068128A800774DFF /* QSWeatherPlugin.h */,
+				E1EAB045068128A200774DFF /* QSWeatherPlugin.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF980370C29C00C91783 /* QSWeatherPlugin_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* QSWeatherPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6B3EEB085CE8DF000735A8 /* Build configuration list for PBXNativeTarget "QSWeatherPlugin" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				BUILD_DIR = "$(SYMROOT)/PlugIns/";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Applications/Quicksilver.app/Contents/Frameworks,
+					/Volumes/Lore/Forge/Build,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSWeatherPlugin_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = QSWeatherPlugin;
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			dependencies = (
+			);
+			name = QSWeatherPlugin;
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSWeatherPlugin;
+			productReference = 8D1AC9740486D14A00FE50C9 /* QSWeatherPlugin.qsplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7F6B3EEF085CE8DF000735A8 /* Build configuration list for PBXProject "QSWeatherPlugin" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				2E58F360FFB2326E11CA0CBA /* Development */,
+				2E58F361FFB2326E11CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* QSWeatherPlugin */;
+			projectDirPath = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* QSWeatherPlugin */,
+				4E31B2BD091DC0400095630C /* QSPkg */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E31B158091DB3460095630C /* QSWeatherPlugin_PrefPane.nib in Resources */,
+				4E31B279091DBE730095630C /* sunny.jpg in Resources */,
+				4E5FF7DA0920190700A63A6B /* ndfd.xq in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E31B2BC091DC0400095630C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TARGET=QSWeatherPlugin.qsplugin\nQSPKG=QSWeatherPlugin.qspkg\nSTYLE=Development\ncd build/$STYLE\n# pre-compress: all\n# cp -R $(PLUGINPATH) .\nfind $TARGET/Contents/Resources/ -name \".svn\" | xargs rm -rf\nfind $TARGET/Contents/Resources/ -name \".DS_Store\" | xargs rm\n#find $TARGET/Contents/Frameworks/ -name \".svn\" | xargs rm -rf\n#find $TARGET/Contents/Frameworks/ -name \".DS_Store\" | xargs rm\n\n# clean-qspkg:\n# rm -rf $TARGET\nrm -f $QKPKG\nrm -f *qspkg\n\n# qspkg: clean-qspkg pre-compress\n# find $TARGET | cpio -o -H cpio -v -z -O $QKPKG \nditto -c -z --rsrc --keepParent $TARGET $QSPKG\nexit 0";
+		};
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF /* QSWeatherPlugin.m in Sources */,
+				4E31ADF8091D62230095630C /* QSWeatherPluginAction.m in Sources */,
+				4E31ADF9091D62230095630C /* QSWeatherPluginSource.m in Sources */,
+				4E31AF5A091D6D820095630C /* WeatherXMLParser.m in Sources */,
+				4E31AF5F091D6E030095630C /* WeatherObject.m in Sources */,
+				4E31AF66091D6E3A0095630C /* NDFDStub.m in Sources */,
+				4E31AF67091D6E3A0095630C /* WSGeneratedObj.m in Sources */,
+				4E31B165091DB3D70095630C /* QSWeatherPreferencePane.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E31B2BF091DC0480095630C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1AC9600486D14A00FE50C9 /* QSWeatherPlugin */;
+			targetProxy = 4E31B2BE091DC0480095630C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4E31B2C5091DC06D0095630C /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = QSPkg;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Development;
+		};
+		4E31B2C6091DC06D0095630C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = QSPkg;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		7F6B3EEC085CE8DF000735A8 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(QSFrameworks)",
+					"$(SYSTEM_APPS_DIR)/Quicksilver.app/Contents/Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSWeatherPlugin_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = QSWeatherPlugin;
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6B3EED085CE8DF000735A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(QSFrameworks)",
+					"$(SYSTEM_APPS_DIR)/Quicksilver.app/Contents/Frameworks",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSWeatherPlugin_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = QSWeatherPlugin;
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7F6B3EF0085CE8DF000735A8 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Development;
+		};
+		7F6B3EF1085CE8DF000735A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E31B2C4091DC06D0095630C /* Build configuration list for PBXAggregateTarget "QSPkg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E31B2C5091DC06D0095630C /* Development */,
+				4E31B2C6091DC06D0095630C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7F6B3EEB085CE8DF000735A8 /* Build configuration list for PBXNativeTarget "QSWeatherPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6B3EEC085CE8DF000735A8 /* Development */,
+				7F6B3EED085CE8DF000735A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F6B3EEF085CE8DF000735A8 /* Build configuration list for PBXProject "QSWeatherPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6B3EF0085CE8DF000735A8 /* Development */,
+				7F6B3EF1085CE8DF000735A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

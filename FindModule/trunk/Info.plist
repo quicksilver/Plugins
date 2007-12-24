@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Find Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.FindModule</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Find Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.2</string>
+	<key>CFBundleVersion</key>
+	<string>4A</string>
+	<key>NSPrincipalClass</key>
+	<string>FindModule</string>
+	<key>QSActions</key>
+	<dict>
+		<key>FindModuleFindAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>FindModule</string>
+			<key>actionSelector</key>
+			<string>performFind:withString:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>'fold'</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>findImage</string>
+			<key>name</key>
+			<string>Find...</string>
+		</dict>
+		<key>FindModuleLocateAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>FindModule</string>
+			<key>actionSelector</key>
+			<string>performLocate:withString:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>'fold'</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>findImage</string>
+			<key>name</key>
+			<string>Locate...</string>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Kevin Ballard</string>
+		<key>categories</key>
+		<array>
+			<string>Power User</string>
+			<string>Command Line</string>
+		</array>
+		<key>description</key>
+		<string>Provides Find and Locate actions for searching folders</string>
+		<key>icon</key>
+		<string>Find</string>
+		<key>infoFile</key>
+		<string>Info.rtf</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>com.apple.Finder</string>
+		</array>
+		<key>webIcon</key>
+		<string>image:Find</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>FindModule</key>
+			<string>FindModule</string>
+		</dict>
+		<key>QSPreferencePanes</key>
+		<dict>
+			<key>FindModulePrefPane</key>
+			<string>FindModulePrefPane</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>version</key>
+		<string>CBB</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Desktop Picture Action</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Desktop Picture Action version 1.4.5, (c) 2004-05 Tim Kingman</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.TKDesktopPlugin</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Desktop Picture Action</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.4.5</string>
+	<key>CFBundleVersion</key>
+	<string>19D</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>(c) 2004-05 Tim Kingman</string>
+	<key>NSPrincipalClass</key>
+	<string>DesktopPictureActionProvider</string>
+	<key>QSActions</key>
+	<dict>
+		<key>DesktopPictureAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>DesktopPictureActionProvider</string>
+			<key>actionSelector</key>
+			<string>setDesktop:onScreen:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>'fold'</string>
+				<string>'GIFf'</string>
+				<string>'JPEG'</string>
+				<string>'PICT'</string>
+				<string>'PNGf'</string>
+				<string>'TIFF'</string>
+				<string>GIF</string>
+				<string>JPEG</string>
+				<string>JPG</string>
+				<string>PCT</string>
+				<string>PICT</string>
+				<string>PNG</string>
+				<string>TIF</string>
+				<string>TIFF</string>
+				<string>gif</string>
+				<string>jpeg</string>
+				<string>jpg</string>
+				<string>pct</string>
+				<string>pict</string>
+				<string>png</string>
+				<string>tif</string>
+				<string>tiff</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>Apple URL pasteboard type</string>
+				<string>NSURLPboardType</string>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>SetDesktop</string>
+			<key>indirectOptional</key>
+			<true/>
+			<key>indirectTypes</key>
+			<array>
+				<string>QSDisplayParametersType</string>
+			</array>
+			<key>name</key>
+			<string>Set Desktop Picture</string>
+		</dict>
+<!--
+		<key>DesktopPictureURLAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>DesktopPictureActionProvider</string>
+			<key>actionSelector</key>
+			<string>setDesktopViaURL:onScreen:</string>
+			<key>directTypes</key>
+			<array>
+				<string>Apple URL pasteboard type</string>
+				<string>NSURLPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>SetDesktop</string>
+			<key>indirectOptional</key>
+			<true/>
+			<key>indirectTypes</key>
+			<array>
+				<string>QSDisplayParametersType</string>
+			</array>
+			<key>name</key>
+			<string>Set Desktop Picture from URL</string>
+		</dict>
+-->	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Tim Kingman</string>
+		<key>description</key>
+		<string>Set the desktop picture of any display to a file, folder, or URL.</string>
+		<key>infoFile</key>
+		<string>Info.rtf</string>
+		<key>requiresFeature</key>
+		<string>0</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>DesktopPictureAction</key>
+			<string>DesktopPictureActionProvider</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>version</key>
+		<string>1C2C</string>
+	</dict>
+</dict>
+</plist>

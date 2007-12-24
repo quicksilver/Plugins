@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A61AF05067688D900A28BC8 /* CalculatorAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A61AF03067688D900A28BC8 /* CalculatorAction.m */; };
+		0A83260706B74EBA00F4F4EE /* CalculatorPrefPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A83260506B74EBA00F4F4EE /* CalculatorPrefPane.m */; };
+		0AB0246506D0356D0073A3CD /* Info.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AB0246406D0356D0073A3CD /* Info.rtf */; };
+		4DB839FD0D13FAA700A0CA18 /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4DB839FC0D13FAA700A0CA18 /* element.xml */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		92D2EABB0D0D5CF8003EB1BD /* CalculatorPrefPane.nib in Resources */ = {isa = PBXBuildFile; fileRef = 92D2EAB90D0D5CF8003EB1BD /* CalculatorPrefPane.nib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A61AF03067688D900A28BC8 /* CalculatorAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorAction.m; sourceTree = "<group>"; };
+		0A61AF04067688D900A28BC8 /* CalculatorAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorAction.h; sourceTree = "<group>"; };
+		0A83260406B74EBA00F4F4EE /* CalculatorPrefPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorPrefPane.h; sourceTree = "<group>"; };
+		0A83260506B74EBA00F4F4EE /* CalculatorPrefPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorPrefPane.m; sourceTree = "<group>"; };
+		0AB0246406D0356D0073A3CD /* Info.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Info.rtf; sourceTree = "<group>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		4DB839950D13F43D00A0CA18 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		4DB839960D13F43D00A0CA18 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		4DB839970D13F43D00A0CA18 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = "/Volumes/myHD/Sources/Utilities/blacktree-alchemy-trunk/Configuration/Developer.xcconfig"; sourceTree = "<absolute>"; };
+		4DB839980D13F43D00A0CA18 /* QSElement.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSElement.xcconfig; sourceTree = "<group>"; };
+		4DB839990D13F43D00A0CA18 /* QSElement_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSElement_Debug.xcconfig; sourceTree = "<group>"; };
+		4DB8399A0D13F43D00A0CA18 /* QSElement_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSElement_Prefix.pch; sourceTree = "<group>"; };
+		4DB8399B0D13F43D00A0CA18 /* QSElement_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSElement_Release.xcconfig; sourceTree = "<group>"; };
+		4DB8399C0D13F43D00A0CA18 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		4DB8399D0D13F43D00A0CA18 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		4DB8399E0D13F43D00A0CA18 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		4DB8399F0D13F43D00A0CA18 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		4DB839A00D13F43D00A0CA18 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		4DB839FC0D13FAA700A0CA18 /* element.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* Calculator Module.element */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator Module.element"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		92D2EAB90D0D5CF8003EB1BD /* CalculatorPrefPane.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = CalculatorPrefPane.nib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* TSColloquyPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				4DB839940D13F43D00A0CA18 /* Configuration */,
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = TSColloquyPlugin;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92D2EAB90D0D5CF8003EB1BD /* CalculatorPrefPane.nib */,
+				0AB0246406D0356D0073A3CD /* Info.rtf */,
+				4DB839FC0D13FAA700A0CA18 /* element.xml */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0A61AF04067688D900A28BC8 /* CalculatorAction.h */,
+				0A61AF03067688D900A28BC8 /* CalculatorAction.m */,
+				0A83260406B74EBA00F4F4EE /* CalculatorPrefPane.h */,
+				0A83260506B74EBA00F4F4EE /* CalculatorPrefPane.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* Calculator Module.element */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		4DB839940D13F43D00A0CA18 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4DB839950D13F43D00A0CA18 /* Common.xcconfig */,
+				4DB839960D13F43D00A0CA18 /* Debug.xcconfig */,
+				4DB839970D13F43D00A0CA18 /* Developer.xcconfig */,
+				4DB839980D13F43D00A0CA18 /* QSElement.xcconfig */,
+				4DB839990D13F43D00A0CA18 /* QSElement_Debug.xcconfig */,
+				4DB8399A0D13F43D00A0CA18 /* QSElement_Prefix.pch */,
+				4DB8399B0D13F43D00A0CA18 /* QSElement_Release.xcconfig */,
+				4DB8399C0D13F43D00A0CA18 /* QSPlugIn.xcconfig */,
+				4DB8399D0D13F43D00A0CA18 /* QSPlugIn_Debug.xcconfig */,
+				4DB8399E0D13F43D00A0CA18 /* QSPlugIn_Prefix.pch */,
+				4DB8399F0D13F43D00A0CA18 /* QSPlugIn_Release.xcconfig */,
+				4DB839A00D13F43D00A0CA18 /* Release.xcconfig */,
+			);
+			name = Configuration;
+			path = ../../../Configuration;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* Calculator Module */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB8B956F0C24E834004C6479 /* Build configuration list for PBXNativeTarget "Calculator Module" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+				0A6B6F6406D152AD00205B03 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Calculator Module";
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = TSColloquyPlugin;
+			productReference = 8D5B49B6048680CD000E48DA /* Calculator Module.element */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = BB8B95730C24E834004C6479 /* Build configuration list for PBXProject "CalculatorPlugin" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* TSColloquyPlugin */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* Calculator Module */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AB0246506D0356D0073A3CD /* Info.rtf in Resources */,
+				92D2EABB0D0D5CF8003EB1BD /* CalculatorPrefPane.nib in Resources */,
+				4DB839FD0D13FAA700A0CA18 /* element.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A6B6F6406D152AD00205B03 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/bltrversion\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A61AF05067688D900A28BC8 /* CalculatorAction.m in Sources */,
+				0A83260706B74EBA00F4F4EE /* CalculatorPrefPane.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4DB8398A0D13F40300A0CA18 /* Standalone */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DB839990D13F43D00A0CA18 /* QSElement_Debug.xcconfig */;
+			buildSettings = {
+				SYMROOT = build;
+			};
+			name = Standalone;
+		};
+		4DB8398B0D13F40300A0CA18 /* Standalone */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = NO;
+				PRODUCT_NAME = "Calculator Module";
+			};
+			name = Standalone;
+		};
+		4DB8398C0D13F41200A0CA18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DB8399B0D13F43D00A0CA18 /* QSElement_Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		4DB8398D0D13F41200A0CA18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = NO;
+				PRODUCT_NAME = "Calculator Module";
+			};
+			name = Release;
+		};
+		BB8B95710C24E834004C6479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = NO;
+				PRODUCT_NAME = "Calculator Module";
+			};
+			name = Debug;
+		};
+		BB8B95750C24E834004C6479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DB839990D13F43D00A0CA18 /* QSElement_Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB8B956F0C24E834004C6479 /* Build configuration list for PBXNativeTarget "Calculator Module" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8B95710C24E834004C6479 /* Debug */,
+				4DB8398D0D13F41200A0CA18 /* Release */,
+				4DB8398B0D13F40300A0CA18 /* Standalone */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BB8B95730C24E834004C6479 /* Build configuration list for PBXProject "CalculatorPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8B95750C24E834004C6479 /* Debug */,
+				4DB8398C0D13F41200A0CA18 /* Release */,
+				4DB8398A0D13F40300A0CA18 /* Standalone */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

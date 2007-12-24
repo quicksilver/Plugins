@@ -1,0 +1,18 @@
+QSAdiumPlugIn TODO List
+- not started
++ in progress
+= done
+
+Features
+- Add 'Get Status' action to set the QS selection to the contact's status text
+= Display small icons in a container when drawn large to prevent pixelation
+- Add a catalog entry for all groups and all contacts which is off by default
+- Instead of just sending content to an offline user, queue it
+
+Bugs
+- Fix 'Use as Adium Status' crash
++ Allow more than just AIM accounts by switching from aim: to AppleScript (waiting on Adium's AppleScript support)
+- IM Text causes duplicate chat windows to open
+- IM Text doesn't use the user-specified formatting
+- Jump to best search mode doesn't work
+- Icons in cached availableAccounts NSArray are not always properly showed

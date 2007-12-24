@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A1D9C8F07377C390069C3C4 /* NSMutableStringAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = 0A1D9C8D07377C390069C3C4 /* NSMutableStringAdditions.h */; };
+		0A1D9C9007377C390069C3C4 /* NSMutableStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D9C8E07377C390069C3C4 /* NSMutableStringAdditions.m */; };
+		0AB01F4B06CC52040073A3CD /* Info.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AB01F4A06CC52040073A3CD /* Info.rtf */; };
+		0AD38B7306BD148C00F45CFC /* ActionNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AD38B1706BD0F2E00F45CFC /* ActionNames.strings */; };
+		0AD38B7406BD148C00F45CFC /* dict.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AD38B0506BD0E3B00F45CFC /* dict.jpg */; };
+		7FB0A2E60935FD5E00F75926 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FB0A2E50935FD5E00F75926 /* Info.plist */; };
+		7FB0A2E90935FD6700F75926 /* QSDictionaryPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0A2E80935FD6700F75926 /* QSDictionaryPlugIn.m */; };
+		7FC616B40935643A00E1D535 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC616B00935643A00E1D535 /* QSCore.framework */; };
+		7FC616B50935643A00E1D535 /* QSEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC616B10935643A00E1D535 /* QSEffects.framework */; };
+		7FC616B60935643A00E1D535 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC616B20935643A00E1D535 /* QSFoundation.framework */; };
+		7FC616B70935643A00E1D535 /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC616B30935643A00E1D535 /* QSInterface.framework */; };
+		7FD0C5C00936064B00F5C459 /* QSDictionaryLookup in Resources */ = {isa = PBXBuildFile; fileRef = 7FD0C5BF0936064B00F5C459 /* QSDictionaryLookup */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1EAB046068128A200774DFF /* DictPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* DictPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		2E58F360FFB2326E11CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0A1D9C8D07377C390069C3C4 /* NSMutableStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableStringAdditions.h; sourceTree = "<group>"; };
+		0A1D9C8E07377C390069C3C4 /* NSMutableStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableStringAdditions.m; sourceTree = "<group>"; };
+		0AB01F4A06CC52040073A3CD /* Info.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Info.rtf; sourceTree = "<group>"; };
+		0AD38B0506BD0E3B00F45CFC /* dict.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dict.jpg; sourceTree = "<group>"; };
+		0AD38B1506BD0F2900F45CFC /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ActionNames.strings; sourceTree = "<group>"; };
+		32DBCF980370C29C00C91783 /* DictPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictPlugin_Prefix.pch; sourceTree = "<group>"; };
+		7FB0A2E50935FD5E00F75926 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FB0A2E70935FD6700F75926 /* QSDictionaryPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSDictionaryPlugIn.h; sourceTree = "<group>"; };
+		7FB0A2E80935FD6700F75926 /* QSDictionaryPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSDictionaryPlugIn.m; sourceTree = "<group>"; };
+		7FC616B00935643A00E1D535 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = ../../../../Build/Release/QSCore.framework; sourceTree = SOURCE_ROOT; };
+		7FC616B10935643A00E1D535 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSEffects.framework; path = ../../../../Build/Release/QSEffects.framework; sourceTree = SOURCE_ROOT; };
+		7FC616B20935643A00E1D535 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSFoundation.framework; path = ../../../../Build/Release/QSFoundation.framework; sourceTree = SOURCE_ROOT; };
+		7FC616B30935643A00E1D535 /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSInterface.framework; path = ../../../../Build/Release/QSInterface.framework; sourceTree = SOURCE_ROOT; };
+		7FD0C5BF0936064B00F5C459 /* QSDictionaryLookup */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = QSDictionaryLookup; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* Dictionary Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dictionary Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E1EAB045068128A200774DFF /* DictPlugin.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DictPlugin.m; sourceTree = "<group>"; };
+		E1EAB047068128A800774DFF /* DictPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DictPlugin.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				7FC616B40935643A00E1D535 /* QSCore.framework in Frameworks */,
+				7FC616B50935643A00E1D535 /* QSEffects.framework in Frameworks */,
+				7FC616B60935643A00E1D535 /* QSFoundation.framework in Frameworks */,
+				7FC616B70935643A00E1D535 /* QSInterface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* DictPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = DictPlugin;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7FD0C5BF0936064B00F5C459 /* QSDictionaryLookup */,
+				7FB0A2E50935FD5E00F75926 /* Info.plist */,
+				0AB01F4A06CC52040073A3CD /* Info.rtf */,
+				0AD38B1706BD0F2E00F45CFC /* ActionNames.strings */,
+				0AD38B0506BD0E3B00F45CFC /* dict.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* Dictionary Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FC616B00935643A00E1D535 /* QSCore.framework */,
+				7FC616B10935643A00E1D535 /* QSEffects.framework */,
+				7FC616B20935643A00E1D535 /* QSFoundation.framework */,
+				7FC616B30935643A00E1D535 /* QSInterface.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1EAB047068128A800774DFF /* DictPlugin.h */,
+				E1EAB045068128A200774DFF /* DictPlugin.m */,
+				0A1D9C8D07377C390069C3C4 /* NSMutableStringAdditions.h */,
+				0A1D9C8E07377C390069C3C4 /* NSMutableStringAdditions.m */,
+				7FB0A2E70935FD6700F75926 /* QSDictionaryPlugIn.h */,
+				7FB0A2E80935FD6700F75926 /* QSDictionaryPlugIn.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF980370C29C00C91783 /* DictPlugin_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* Dictionary Module */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F07ADE9085E432400E2AFC4 /* Build configuration list for PBXNativeTarget "Dictionary Module" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = /Users/kevin/Dev/Quicksilver;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DictPlugin_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = DictPlugin;
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			dependencies = (
+			);
+			name = "Dictionary Module";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = DictPlugin;
+			productReference = 8D1AC9740486D14A00FE50C9 /* Dictionary Module.qsplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7F07ADED085E432400E2AFC4 /* Build configuration list for PBXProject "DictPlugin" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				2E58F360FFB2326E11CA0CBA /* Development */,
+				2E58F361FFB2326E11CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* DictPlugin */;
+			projectDirPath = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* Dictionary Module */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AD38B7306BD148C00F45CFC /* ActionNames.strings in Resources */,
+				0AD38B7406BD148C00F45CFC /* dict.jpg in Resources */,
+				0AB01F4B06CC52040073A3CD /* Info.rtf in Resources */,
+				0A1D9C8F07377C390069C3C4 /* NSMutableStringAdditions.h in Resources */,
+				7FB0A2E60935FD5E00F75926 /* Info.plist in Resources */,
+				7FD0C5C00936064B00F5C459 /* QSDictionaryLookup in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF /* DictPlugin.m in Sources */,
+				0A1D9C9007377C390069C3C4 /* NSMutableStringAdditions.m in Sources */,
+				7FB0A2E90935FD6700F75926 /* QSDictionaryPlugIn.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0AD38B1706BD0F2E00F45CFC /* ActionNames.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AD38B1506BD0F2900F45CFC /* English */,
+			);
+			name = ActionNames.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F07ADEA085E432400E2AFC4 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/kevin/Dev/Quicksilver,
+					"$(SRCROOT)/../../../../Build/Release",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DictPlugin_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = DictPlugin;
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F07ADEB085E432400E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DictPlugin_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Dictionary Module";
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7F07ADEC085E432400E2AFC4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/kevin/Dev/Quicksilver,
+					"$(SRCROOT)/../../../../Build/Release",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DictPlugin_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = DictPlugin;
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			name = Default;
+		};
+		7F07ADEE085E432400E2AFC4 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+		7F07ADEF085E432400E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		7F07ADF0085E432400E2AFC4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F07ADE9085E432400E2AFC4 /* Build configuration list for PBXNativeTarget "Dictionary Module" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07ADEA085E432400E2AFC4 /* Development */,
+				7F07ADEB085E432400E2AFC4 /* Release */,
+				7F07ADEC085E432400E2AFC4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F07ADED085E432400E2AFC4 /* Build configuration list for PBXProject "DictPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07ADEE085E432400E2AFC4 /* Development */,
+				7F07ADEF085E432400E2AFC4 /* Release */,
+				7F07ADF0085E432400E2AFC4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

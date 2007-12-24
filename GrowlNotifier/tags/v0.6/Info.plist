@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>QS Growl Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSGrowlPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Growl Notifier</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.6</string>
+	<key>CFBundleVersion</key>
+	<string>38</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Blacktree, Inc.</string>
+	<key>NSPrincipalClass</key>
+	<string>QSGrowlNotifier</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>description</key>
+		<string>Provides notification through Growl. See growl.info for compile instructions.</string>
+		<key>infoFile</key>
+		<string>Info.rtf</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>com.Growl.GrowlHelperApp</string>
+		</array>
+		<key>requiresPath</key>
+		<string>~/Library/Application Support/Growl</string>
+		<key>webIcon</key>
+		<string>http://blacktree.com/apps/quicksilver/images/appicons/Growl.gif</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSNotifiers</key>
+		<dict>
+			<key>com.Growl.GrowlHelperApp</key>
+			<string>QSGrowlNotifier</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

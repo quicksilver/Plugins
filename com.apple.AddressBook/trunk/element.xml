@@ -1,0 +1,175 @@
+<element id="com.blacktree.Quicksilver.QSAddressBookPlugIn" name="Apple Address Book Module" version="119">
+    <info>
+        <category>Contacts</category>
+        <category>Applications</category>
+        <image>com.apple.AddressBook</image>
+    </info>
+    <requirements/>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset name="Recent Mail Addresses" id="QSPresetABMailRecents">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetABMailRecents</string>
+                        <key>enabled</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Recent Mail Addresses</string>
+                        <key>source</key>
+                        <string>QSABMailRecentsObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+            <catalog-preset name="Apple Address Book" id="QSPresetAddressBookGroup">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetAddressBookGroup</string>
+                        <key>children</key>
+                        <array>
+                            <dict>
+                                <key>ID</key>
+                                <string>QSPresetAddressBook</string>
+                                <key>name</key>
+                                <string>Address Book Contacts</string>
+                                <key>source</key>
+                                <string>QSAddressBookObjectSource</string>
+                            </dict>
+                            <dict>
+                                <key>ID</key>
+                                <string>QSPresetAddressBookScripts</string>
+                                <key>enabled</key>
+                                <false/>
+                                <key>name</key>
+                                <string>Scripts (Address Book)</string>
+                                <key>requiresSettingsPath</key>
+                                <true/>
+                                <key>settings</key>
+                                <dict>
+                                    <key>folderDepth</key>
+                                    <integer>1</integer>
+                                    <key>folderTypes</key>
+                                    <array>
+                                        <string>scpt</string>
+                                    </array>
+                                    <key>parser</key>
+                                    <string>QSDirectoryParser</string>
+                                    <key>path</key>
+                                    <string>~/Library/Address Book Scripts</string>
+                                    <key>skipItem</key>
+                                    <true/>
+                                </dict>
+                                <key>source</key>
+                                <string>QSFileSystemObjectSource</string>
+                            </dict>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.AddressBook</string>
+                        <key>name</key>
+                        <string>Apple Address Book</string>
+                        <key>requiresBundle</key>
+                        <string>com.apple.AddressBook</string>
+                        <key>source</key>
+                        <string>QSGroupObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action name="Show Contact" id="QSABContactShowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSABContactActions</string>
+                        <key>actionSelector</key>
+                        <string>showContact:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>ABPeopleUIDsPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.AddressBook</string>
+                        <key>name</key>
+                        <string>Show Contact</string>
+                        <key>precedence</key>
+                        <integer>3</integer>
+                        <key>validatesObjects</key>
+                        <false/>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Add Note..." id="QSABContactAddDataAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSABMimicActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>addData:toContact:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>ABPeopleUIDsPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.AddressBook</string>
+                        <key>name</key>
+                        <string>Add Note...</string>
+                        <key>reverseArguments</key>
+                        <true/>
+                        <key>validatesObjects</key>
+                        <false/>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Edit Contact" id="QSABContactEditAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSABContactActions</string>
+                        <key>actionSelector</key>
+                        <string>editContact:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>ABPeopleUIDsPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.AddressBook</string>
+                        <key>name</key>
+                        <string>Edit Contact</string>
+                        <key>validatesObjects</key>
+                        <false/>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSAETypeConverters">
+            <extension id="com.apple.addressbook.item-object" class="QSContactObjectHandler"/>
+        </extension>
+        <extension point="QSTypeDefinitions">
+            <object-type name="Address Book Contacts" id="ABPeopleUIDsPboardType">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>com.apple.addressbook</string>
+                        <key>name</key>
+                        <string>Address Book Contacts</string>
+                    </dict>
+                </plist>
+            </object-type>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSABMailRecentsObjectSource" class="QSABMailRecentsObjectSource"/>
+            <object-source id="QSAddressBookObjectSource" class="QSAddressBookObjectSource"/>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="ABPeopleUIDsPboardType" class="QSContactObjectHandler"/>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSABContactActions" class="QSABContactActions"/>
+            <action-provider id="QSABMimicActionProvider" class="QSABMimicActionProvider"/>
+        </extension>
+        <extension point="QSBundleChildPresets">
+            <bundle-child-preset id="com.apple.AddressBook">QSPresetAddressBook</bundle-child-preset>
+        </extension>
+    </extensions>
+</element>

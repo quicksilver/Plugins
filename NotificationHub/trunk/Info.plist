@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>NotificationHub</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.NotificationHub</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>NotificationHub</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>4F</string>
+	<key>NSPrincipalClass</key>
+	<string>NotificationHub</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Kevin Ballard</string>
+		<key>categories</key>
+		<array/>
+		<key>description</key>
+		<string>Provides a way to use several notifiers at once</string>
+		<key>infoFile</key>
+		<string>Info.rtf</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSNotifiers</key>
+		<dict>
+			<key>com.blacktree.quicksilver.notificationhub</key>
+			<string>NotificationHub</string>
+		</dict>
+		<key>QSPreferencePanes</key>
+		<dict>
+			<key>NotificationHubPrefPane</key>
+			<dict>
+				<key>class</key>
+				<string>NotificationHubPrefPane</string>
+				<key>description</key>
+				<string>Lets you customize the notifications to send to different notifiers</string>
+				<key>icon</key>
+				<string>defaultAction</string>
+				<key>name</key>
+				<string>Notification Hub</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

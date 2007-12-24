@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Adium Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.AdiumPlugin</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Adium Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>27A</string>
+	<key>NSPrincipalClass</key>
+	<string>QSAdiumPlugIn</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Brian Donovan</string>
+		<key>categories</key>
+		<array>
+			<string>Internet</string>
+			<string>Communication</string>
+		</array>
+		<key>description</key>
+		<string>Enables chat actions for Adium and provides access to online buddies.</string>
+		<key>icon</key>
+		<string>com.adiumX.adiumX</string>
+		<key>infoFile</key>
+		<string>Info.rtf</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>com.adiumX.adiumX</string>
+		</array>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>com.adiumX.adiumX</key>
+			<string>QSAdiumObjectSource</string>
+		</dict>
+		<key>QSChatMediators</key>
+		<dict>
+			<key>com.adiumX.adiumX</key>
+			<string>QSAdiumMediator</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>com.adiumX.chatlist</key>
+			<string>QSAdiumObjectSource</string>
+			<key>com.adiumX.contact</key>
+			<string>QSAdiumObjectSource</string>
+			<key>com.adiumX.group</key>
+			<string>QSAdiumObjectSource</string>
+			<key>com.adiumX.log</key>
+			<string>QSAdiumObjectSource</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>plugins</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>com.blacktree.Quicksilver.QSChatSupport</string>
+				<key>name</key>
+				<string>Chat Support</string>
+			</dict>
+		</array>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>AdiumDefaultContactIcon</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.adiumX.adiumX</string>
+			<key>resource</key>
+			<string>DefaultIcon.png</string>
+		</dict>
+		<key>AdiumDefaultGroupIcon</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.blacktree.Quicksilver.AdiumPlugin</string>
+			<key>resource</key>
+			<string>DefaultGroup.png</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

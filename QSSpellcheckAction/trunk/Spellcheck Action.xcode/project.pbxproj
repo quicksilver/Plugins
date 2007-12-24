@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		0259C573FE90428111CA0C5A = {
+			buildSettings = {
+			};
+			buildStyles = (
+				2E58F360FFB2326E11CA0CBA,
+				2E58F361FFB2326E11CA0CBA,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 0259C574FE90428111CA0C5A;
+			projectDirPath = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9,
+			);
+		};
+		0259C574FE90428111CA0C5A = {
+			children = (
+				32DBCF9E0370C38000C91783,
+				32DBCF9F0370C38200C91783,
+				E1127F960695F44F008AE6A3,
+				0259C582FE90428111CA0C5A,
+				1ED78706FE9D4A0611CA0C5A,
+				2E58F364FFB232C311CA0CBA,
+			);
+			isa = PBXGroup;
+			name = TKDesktopModule;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A = {
+			children = (
+				58F08D66079C58610029C8DE,
+				5840455F06C11FFB00D22F17,
+				5840455B06C11FE400D22F17,
+				8D1AC9730486D14A00FE50C9,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//020
+//021
+//022
+//023
+//024
+//1E0
+//1E1
+//1E2
+//1E3
+//1E4
+		1ED78706FE9D4A0611CA0C5A = {
+			children = (
+				8D1AC9740486D14A00FE50C9,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//1E0
+//1E1
+//1E2
+//1E3
+//1E4
+//2E0
+//2E1
+//2E2
+//2E3
+//2E4
+		2E58F360FFB2326E11CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		2E58F361FFB2326E11CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+		2E58F364FFB232C311CA0CBA = {
+			children = (
+				E1022AE706B3469300299BEC,
+				E1022AE806B3469300299BEC,
+				DD92D38A0106425D02CA0E72,
+			);
+			isa = PBXGroup;
+			name = Frameworks;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//2E0
+//2E1
+//2E2
+//2E3
+//2E4
+//320
+//321
+//322
+//323
+//324
+		32DBCF9E0370C38000C91783 = {
+			children = (
+				58F0935B079C77840029C8DE,
+				58F09359079C777D0029C8DE,
+			);
+			isa = PBXGroup;
+			name = Classes;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 = {
+			children = (
+				58F09367079C78080029C8DE,
+			);
+			isa = PBXGroup;
+			name = "Other Sources";
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//320
+//321
+//322
+//323
+//324
+//580
+//581
+//582
+//583
+//584
+		5840455B06C11FE400D22F17 = {
+			children = (
+				5840455C06C11FE400D22F17,
+			);
+			isa = PBXVariantGroup;
+			name = ActionNames.strings;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		5840455C06C11FE400D22F17 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/ActionNames.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		5840455D06C11FE400D22F17 = {
+			fileRef = 5840455B06C11FE400D22F17;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		5840455F06C11FFB00D22F17 = {
+			children = (
+				5840456006C11FFB00D22F17,
+			);
+			isa = PBXVariantGroup;
+			name = InfoPlist.strings;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		5840456006C11FFB00D22F17 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		5840456106C11FFB00D22F17 = {
+			fileRef = 5840455F06C11FFB00D22F17;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		58F08D66079C58610029C8DE = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.rtf;
+			path = Info.rtf;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		58F08D67079C58610029C8DE = {
+			fileRef = 58F08D66079C58610029C8DE;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		58F09359079C777D0029C8DE = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = SpellcheckActionProvider.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		58F0935A079C777D0029C8DE = {
+			fileRef = 58F09359079C777D0029C8DE;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		58F0935B079C77840029C8DE = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = SpellcheckActionProvider.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		58F0935C079C77840029C8DE = {
+			fileRef = 58F0935B079C77840029C8DE;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		58F09367079C78080029C8DE = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = SpellcheckAction_Prefix.pch;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		58F09368079C78080029C8DE = {
+			fileRef = 58F09367079C78080029C8DE;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//580
+//581
+//582
+//583
+//584
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+		8D1AC9600486D14A00FE50C9 = {
+			buildPhases = (
+				E1022B2806B3475D00299BEC,
+				8D1AC9660486D14A00FE50C9,
+				8D1AC96A0486D14A00FE50C9,
+				8D1AC96E0486D14A00FE50C9,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = /Applications/Quicksilver.app/Contents/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SpellcheckAction_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Spellcheck Action";
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = "Spellcheck Action";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = TKDesktopModule;
+			productReference = 8D1AC9740486D14A00FE50C9;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1AC9660486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				5840455D06C11FE400D22F17,
+				5840456106C11FFB00D22F17,
+				58F08D67079C58610029C8DE,
+				58F0935A079C777D0029C8DE,
+				58F09368079C78080029C8DE,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96A0486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				58F0935C079C77840029C8DE,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96E0486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9,
+				E1022AE906B3469300299BEC,
+				E1022AEA06B3469300299BEC,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC9700486D14A00FE50C9 = {
+			fileRef = DD92D38A0106425D02CA0E72;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D1AC9730486D14A00FE50C9 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist;
+			path = Info.plist;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8D1AC9740486D14A00FE50C9 = {
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = "Spellcheck Action.qsplugin";
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+//DD0
+//DD1
+//DD2
+//DD3
+//DD4
+		DD92D38A0106425D02CA0E72 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//DD0
+//DD1
+//DD2
+//DD3
+//DD4
+//E10
+//E11
+//E12
+//E13
+//E14
+		E1022AE706B3469300299BEC = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QSCore.framework;
+			path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E1022AE806B3469300299BEC = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QSInterface.framework;
+			path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E1022AE906B3469300299BEC = {
+			fileRef = E1022AE706B3469300299BEC;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1022AEA06B3469300299BEC = {
+			fileRef = E1022AE806B3469300299BEC;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1022B2806B3475D00299BEC = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/bltrversion\" \"$INFOPLIST_FILE\"";
+		};
+		E1127F960695F44F008AE6A3 = {
+			children = (
+			);
+			isa = PBXGroup;
+			name = Templates;
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+	};
+	rootObject = 0259C573FE90428111CA0C5A;
+}
