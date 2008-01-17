@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>File Tagging Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSFileTagsPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>File Tagging Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>75</string>
+	<key>NSPrincipalClass</key>
+	<string>QSFileTagsPlugIn</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSAddFileTagsAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSFileTagsPlugInAction</string>
+			<key>actionSelector</key>
+			<string>addTagsForFile:tags:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Tag</string>
+			<key>name</key>
+			<string>Add Tags...</string>
+		</dict>
+		<key>QSRemoveFileTagsAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSFileTagsPlugInAction</string>
+			<key>actionSelector</key>
+			<string>removeTagsForFile:tags:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Tag</string>
+			<key>name</key>
+			<string>Remove Tags...</string>
+		</dict>
+		<key>QSSetFileTagsAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSFileTagsPlugInAction</string>
+			<key>actionSelector</key>
+			<string>setTagsForFile:tags:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Tag</string>
+			<key>name</key>
+			<string>Set Tags...</string>
+		</dict>
+		<key>QSShowFileTagsAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSFileTagsPlugInAction</string>
+			<key>actionSelector</key>
+			<string>showTags:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Tag</string>
+			<key>name</key>
+			<string>Show Tags</string>
+		</dict>
+		<key>QSShowTaggedFilesAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSFileTagsPlugInAction</string>
+			<key>actionSelector</key>
+			<string>showTaggedFilesInFinder:</string>
+			<key>directTypes</key>
+			<array>
+				<string>qs.tag.file</string>
+			</array>
+			<key>icon</key>
+			<string>Tag</string>
+			<key>name</key>
+			<string>Show Files Matching Tag</string>
+			<key>precedence</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>QSDefaults</key>
+	<dict>
+		<key>QSTagPrefix</key>
+		<string>@</string>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Files</string>
+		</array>
+		<key>description</key>
+		<string>Modify and find tags in file comments</string>
+		<key>icon</key>
+		<string>Tag</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetQSFileTagsPlugIn</string>
+			<key>name</key>
+			<string>File Tags</string>
+			<key>source</key>
+			<string>QSFileTagsPlugInSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSFileTagsPlugInAction</key>
+			<string>QSFileTagsPlugInAction</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>qs.tag.file</key>
+			<string>QSFileTagsPlugInSource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSFileTagsPlugInSource</key>
+			<string>QSFileTagsPlugInSource</string>
+		</dict>
+		<key>QSPreferencePanes</key>
+		<dict>
+			<key>QSFileTagsPrefPane</key>
+			<dict>
+				<key>class</key>
+				<string>QSPreferencePane</string>
+				<key>description</key>
+				<string>File Tagging Options</string>
+				<key>icon</key>
+				<string>Tag</string>
+				<key>name</key>
+				<string>Tags</string>
+				<key>nibBundle</key>
+				<string>com.blacktree.Quicksilver.QSFileTagsPlugIn</string>
+				<key>nibName</key>
+				<string>QSFileTagsPrefPane</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>feature</key>
+		<integer>1</integer>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>Tag</key>
+		<string>[com.blacktree.Quicksilver.QSFileTagsPlugIn]:Tag.png</string>
+	</dict>
+</dict>
+</plist>

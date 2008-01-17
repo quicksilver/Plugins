@@ -85,8 +85,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 220203841;
-			PBXWorkspaceStateSaveDate = 220203841;
+			PBXPerProjectTemplateStateSaveDate = 220679544;
+			PBXWorkspaceStateSaveDate = 220679544;
 		};
 		sourceControlManager = 7F3019B40BBAFB3B00CEACB0 /* Source Control */;
 		userBuildSettings = {
@@ -195,18 +195,20 @@
 	};
 	E1CF96F807336B5500C99604 /* QSObject_ContactHandling.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1520, 3990}}";
-			sepNavSelRange = "{11819, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1256, 3724}}";
+			sepNavSelRange = "{8584, 0}";
+			sepNavVisRange = "{7074, 1558}";
 			sepNavVisRect = "{{0, 1258}, {453, 186}}";
-			sepNavWindowFrame = "{{266, 51}, {1168, 746}}";
+			sepNavWindowFrame = "{{266, 58}, {617, 739}}";
 		};
 	};
 	E36CA8F707F203EF00EB928D /* ABPerson_Display.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {702, 1064}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {688, 1148}}";
+			sepNavSelRange = "{610, 28}";
+			sepNavVisRange = "{318, 1547}";
 			sepNavVisRect = "{{0, 0}, {702, 640}}";
-			sepNavWindowFrame = "{{65, 62}, {747, 769}}";
+			sepNavWindowFrame = "{{65, 56}, {747, 769}}";
 		};
 	};
 }
