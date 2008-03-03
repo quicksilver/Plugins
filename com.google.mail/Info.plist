@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Gmail Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSGmailPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Gmail Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>3E</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Mail &amp; Chat</string>
+			<string>Web</string>
+		</array>
+		<key>description</key>
+		<string>Enable mail actions for Gmail</string>
+		<key>icon</key>
+		<string>com.google.GmailNotifier</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>com.google.GmailNotifier</string>
+		</array>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSMailMediators</key>
+		<dict>
+			<key>com.google.GmailNotifier</key>
+			<string>QSGmailPlugIn</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

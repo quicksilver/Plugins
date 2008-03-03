@@ -1,0 +1,13 @@
+<element id="com.blacktree.Quicksilver.QSGmailPlugIn" name="Gmail Module" version="3E">
+    <info>
+        <category>Mail &amp; Chat</category>
+        <category>Web</category>
+        <image>com.google.GmailNotifier</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSMailMediators">
+            <extension id="com.google.GmailNotifier" class="QSGmailPlugIn"></extension>
+        </extension>
+    </extensions>
+</element>
