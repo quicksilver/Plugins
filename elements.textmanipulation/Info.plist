@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Text Manipulation</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSTextManipulationPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Text Manipulation Actions</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>6B</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSLineRefDeleteAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSTextManipulationPlugIn</string>
+			<key>actionSelector</key>
+			<string>deleteLineReference:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSLineReferenceType</string>
+			</array>
+			<key>enabled</key>
+			<false/>
+			<key>feature</key>
+			<integer>2</integer>
+			<key>name</key>
+			<string>Delete Line (UNSTABLE)</string>
+		</dict>
+		<key>QSLineRefEditAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSTextManipulationPlugIn</string>
+			<key>actionSelector</key>
+			<string>changeLineReference:to:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSLineReferenceType</string>
+			</array>
+			<key>enabled</key>
+			<false/>
+			<key>name</key>
+			<string>Change To...</string>
+		</dict>
+		<key>QSTextAppendAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSTextManipulationPlugIn</string>
+			<key>actionSelector</key>
+			<string>appendObject:toObject:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Append To...</string>
+		</dict>
+		<key>QSTextAppendReverseAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSTextManipulationPlugIn</string>
+			<key>actionSelector</key>
+			<string>appendObject:toObject:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>txt</string>
+				<string>rtf</string>
+				<string>rtfd</string>
+				<string>doc</string>
+				<string>'TEXT'</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+				<string>QSLineReferenceType</string>
+			</array>
+			<key>name</key>
+			<string>Append Text...</string>
+			<key>reverseArguments</key>
+			<true/>
+		</dict>
+		<key>QSTextPrependAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSTextManipulationPlugIn</string>
+			<key>actionSelector</key>
+			<string>prependObject:toObject:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>enabled</key>
+			<false/>
+			<key>name</key>
+			<string>Prepend To...</string>
+		</dict>
+		<key>QSTextPrependReverseAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSTextManipulationPlugIn</string>
+			<key>actionSelector</key>
+			<string>prependObject:toObject:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>txt</string>
+				<string>rtf</string>
+				<string>doc</string>
+				<string>rtfd</string>
+				<string>'TEXT'</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+				<string>QSLineReferenceType</string>
+			</array>
+			<key>enabled</key>
+			<false/>
+			<key>name</key>
+			<string>Prepend Text...</string>
+			<key>reverseArguments</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Text</string>
+		</array>
+		<key>description</key>
+		<string>Actions for appending text to files</string>
+		<key>icon</key>
+		<string>ClippingText</string>
+		<key>relatedBundles </key>
+		<array>
+			<string>com.apple.TextEdit</string>
+			<string>com.macromates.textmate</string>
+			<string>com.barebones.bbedit</string>
+		</array>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSTextManipulationPlugIn</key>
+			<string>QSTextManipulationPlugIn</string>
+		</dict>
+		<key>QSTypeDefinitions</key>
+		<dict>
+			<key>QSLineReferenceType</key>
+			<dict>
+				<key>icon</key>
+				<string>GenericDocumentIcon</string>
+				<key>name</key>
+				<string>Text Lines</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

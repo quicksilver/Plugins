@@ -1,0 +1,154 @@
+<element name="Text Manipulation Actions" id="com.blacktree.Quicksilver.QSTextManipulationPlugIn" version="42">
+    <info>
+        <category>Text</category>
+        <image>ClippingText</image>
+    </info>
+    <requirements/>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action name="Prepend To..." id="QSTextPrependAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSTextManipulationPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>prependObject:toObject:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>enabled</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Prepend To...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Append Text..." id="QSTextAppendReverseAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSTextManipulationPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>appendObject:toObject:</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>txt</string>
+                            <string>rtf</string>
+                            <string>rtfd</string>
+                            <string>doc</string>
+                            <string>'TEXT'</string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                            <string>QSLineReferenceType</string>
+                        </array>
+                        <key>name</key>
+                        <string>Append Text...</string>
+                        <key>reverseArguments</key>
+                        <true/>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Append To..." id="QSTextAppendAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSTextManipulationPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>appendObject:toObject:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>name</key>
+                        <string>Append To...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Delete Line (UNSTABLE)" id="QSLineRefDeleteAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSTextManipulationPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>deleteLineReference:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSLineReferenceType</string>
+                        </array>
+                        <key>enabled</key>
+                        <false/>
+                        <key>feature</key>
+                        <integer>2</integer>
+                        <key>name</key>
+                        <string>Delete Line (UNSTABLE)</string>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Prepend Text..." id="QSTextPrependReverseAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSTextManipulationPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>prependObject:toObject:</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>txt</string>
+                            <string>rtf</string>
+                            <string>doc</string>
+                            <string>rtfd</string>
+                            <string>'TEXT'</string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                            <string>QSLineReferenceType</string>
+                        </array>
+                        <key>enabled</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Prepend Text...</string>
+                        <key>reverseArguments</key>
+                        <true/>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Change To..." id="QSLineRefEditAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSTextManipulationPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>changeLineReference:to:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSLineReferenceType</string>
+                        </array>
+                        <key>enabled</key>
+                        <false/>
+                        <key>name</key>
+                        <string>Change To...</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSTextManipulationPlugIn" class="QSTextManipulationPlugIn"/>
+        </extension>
+        <extension point="QSTypeDefinitions">
+            <object-type name="Text Lines" id="QSLineReferenceType">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>GenericDocumentIcon</string>
+                        <key>name</key>
+                        <string>Text Lines</string>
+                    </dict>
+                </plist>
+            </object-type>
+        </extension>
+    </extensions>
+</element>
