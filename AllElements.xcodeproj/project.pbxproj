@@ -13,8 +13,17 @@
 			buildPhases = (
 			);
 			dependencies = (
-				7F69A70D0D20106000D5C99E /* PBXTargetDependency */,
-				7F69A70F0D20106000D5C99E /* PBXTargetDependency */,
+				4DB4A1030E100D570010C540 /* PBXTargetDependency */,
+				4DB4A1050E100D570010C540 /* PBXTargetDependency */,
+				4DB4A1070E100D570010C540 /* PBXTargetDependency */,
+				4DB4A1090E100D570010C540 /* PBXTargetDependency */,
+				4DB4A10B0E100D570010C540 /* PBXTargetDependency */,
+				4DB4A10D0E100D570010C540 /* PBXTargetDependency */,
+				4DB4A10F0E100D570010C540 /* PBXTargetDependency */,
+				4DB4A1110E100D570010C540 /* PBXTargetDependency */,
+				4DB4A1130E100D570010C540 /* PBXTargetDependency */,
+				4DB4A1150E100D570010C540 /* PBXTargetDependency */,
+				4DB4A1170E100D570010C540 /* PBXTargetDependency */,
 			);
 			name = "Build All";
 			productName = "Build ALl";
@@ -22,79 +31,281 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXContainerItemProxy section */
-		7F69A6EC0D200F5700D5C99E /* PBXContainerItemProxy */ = {
+		4DB4A0910E100BFD0010C540 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7F69A6E30D200F5700D5C99E /* QSAddressBookElement.xcodeproj */;
+			containerPortal = 4DB4A08A0E100BFD0010C540 /* ColloquyPlugin.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9 /* Apple Address Book.element */;
-			remoteInfo = "Apple Address Book";
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
+			remoteInfo = "Colloquy Module";
 		};
-		7F69A6F70D200F7000D5C99E /* PBXContainerItemProxy */ = {
+		4DB4A09A0E100C0A0010C540 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7F69A6EE0D200F7000D5C99E /* FindElement.xcodeproj */;
+			containerPortal = 4DB4A0930E100C0A0010C540 /* QSAddressBookPlugIn.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9 /* Find.element */;
-			remoteInfo = Find;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Apple Address Book Module";
 		};
-		7F69A70C0D20106000D5C99E /* PBXContainerItemProxy */ = {
+		4DB4A0A30E100C130010C540 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7F69A6EE0D200F7000D5C99E /* FindElement.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9 /* Find */;
-			remoteInfo = Find;
+			containerPortal = 4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
+			remoteInfo = "Calculator Module";
 		};
-		7F69A70E0D20106000D5C99E /* PBXContainerItemProxy */ = {
+		4DB4A0AC0E100C1A0010C540 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7F69A6E30D200F5700D5C99E /* QSAddressBookElement.xcodeproj */;
+			containerPortal = 4DB4A0A50E100C1A0010C540 /* QSGmailPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Gmail Module";
+		};
+		4DB4A0B50E100C2B0010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0AE0E100C2B0010C540 /* DiffModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = DiffModule;
+		};
+		4DB4A0BE0E100CDB0010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0B70E100CDB0010C540 /* TextManipulationElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Text Manipulation";
+		};
+		4DB4A0C70E100CE70010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0C00E100CE70010C540 /* FindModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Find Module";
+		};
+		4DB4A0D50E100CF80010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0CE0E100CF80010C540 /* GrowlNotifier.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Growl Module";
+		};
+		4DB4A0DE0E100D030010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0D70E100D030010C540 /* NotificationHub.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = NotificationHub;
+		};
+		4DB4A0E70E100D0E0010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0E00E100D0E0010C540 /* QSFileTagsPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "File Tagging Module";
+		};
+		4DB4A0F00E100D170010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Desktop Picture Action";
+		};
+		4DB4A1020E100D570010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0A50E100C1A0010C540 /* QSGmailPlugIn.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9 /* Apple Address Book */;
-			remoteInfo = "Apple Address Book";
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = "Gmail Module";
+		};
+		4DB4A1040E100D570010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0B70E100CDB0010C540 /* TextManipulationElement.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = "Text Manipulation";
+		};
+		4DB4A1060E100D570010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0AE0E100C2B0010C540 /* DiffModule.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = DiffModule;
+		};
+		4DB4A1080E100D570010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0930E100C0A0010C540 /* QSAddressBookPlugIn.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = "Apple Address Book Module";
+		};
+		4DB4A10A0E100D570010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A08A0E100BFD0010C540 /* ColloquyPlugin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
+			remoteInfo = "Colloquy Module";
+		};
+		4DB4A10C0E100D570010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
+			remoteInfo = "Calculator Module";
+		};
+		4DB4A10E0E100D570010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0C00E100CE70010C540 /* FindModule.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = "Find Module";
+		};
+		4DB4A1100E100D570010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0CE0E100CF80010C540 /* GrowlNotifier.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = "Growl Module";
+		};
+		4DB4A1120E100D570010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0D70E100D030010C540 /* NotificationHub.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = NotificationHub;
+		};
+		4DB4A1140E100D570010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0E00E100D0E0010C540 /* QSFileTagsPlugIn.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = "File Tagging Module";
+		};
+		4DB4A1160E100D570010C540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = "Desktop Picture Action";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7F69A6E30D200F5700D5C99E /* QSAddressBookElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAddressBookElement.xcodeproj; path = com.apple.AddressBook/trunk/QSAddressBookElement.xcodeproj; sourceTree = SOURCE_ROOT; };
-		7F69A6EE0D200F7000D5C99E /* FindElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FindElement.xcodeproj; path = FindModule/trunk/FindElement.xcodeproj; sourceTree = SOURCE_ROOT; };
-		7F69A7000D200FA000D5C99E /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = Configuration/Common.xcconfig; sourceTree = QS_SOURCE_ROOT; };
-		7F69A7010D200FA000D5C99E /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = QS_SOURCE_ROOT; };
-		7F69A7070D200FA000D5C99E /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		4DB4A08A0E100BFD0010C540 /* ColloquyPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ColloquyPlugin.xcodeproj; path = ColloquyPlugin/trunk/ColloquyPlugin.xcodeproj; sourceTree = "<group>"; };
+		4DB4A0930E100C0A0010C540 /* QSAddressBookPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAddressBookPlugIn.xcodeproj; path = com.apple.AddressBook/trunk/QSAddressBookPlugIn.xcodeproj; sourceTree = "<group>"; };
+		4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CalculatorPlugin.xcodeproj; path = com.apple.calculator/trunk/CalculatorPlugin.xcodeproj; sourceTree = "<group>"; };
+		4DB4A0A50E100C1A0010C540 /* QSGmailPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSGmailPlugIn.xcodeproj; path = com.google.mail/QSGmailPlugIn.xcodeproj; sourceTree = "<group>"; };
+		4DB4A0AE0E100C2B0010C540 /* DiffModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DiffModule.xcodeproj; path = DiffModule/trunk/DiffModule.xcodeproj; sourceTree = "<group>"; };
+		4DB4A0B70E100CDB0010C540 /* TextManipulationElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TextManipulationElement.xcodeproj; path = elements.textmanipulation/TextManipulationElement.xcodeproj; sourceTree = "<group>"; };
+		4DB4A0C00E100CE70010C540 /* FindModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FindModule.xcodeproj; path = FindModule/trunk/FindModule.xcodeproj; sourceTree = "<group>"; };
+		4DB4A0CE0E100CF80010C540 /* GrowlNotifier.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GrowlNotifier.xcodeproj; path = GrowlNotifier/trunk/GrowlNotifier.xcodeproj; sourceTree = "<group>"; };
+		4DB4A0D70E100D030010C540 /* NotificationHub.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NotificationHub.xcodeproj; path = NotificationHub/trunk/NotificationHub.xcodeproj; sourceTree = "<group>"; };
+		4DB4A0E00E100D0E0010C540 /* QSFileTagsPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSFileTagsPlugIn.xcodeproj; path = public.file.tags/trunk/QSFileTagsPlugIn.xcodeproj; sourceTree = "<group>"; };
+		4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Desktop Picture Action.xcodeproj"; path = "QSDesktopPictureAction/trunk/Desktop Picture Action.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		4DB4A08B0E100BFD0010C540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4A0920E100BFD0010C540 /* Colloquy Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB4A0940E100C0A0010C540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4A09B0E100C0A0010C540 /* Address Book Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB4A09D0E100C130010C540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4A0A40E100C130010C540 /* Calculator Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB4A0A60E100C1A0010C540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4A0AD0E100C1A0010C540 /* Gmail Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB4A0AF0E100C2B0010C540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4A0B60E100C2B0010C540 /* Diffing Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB4A0B80E100CDB0010C540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4A0BF0E100CDB0010C540 /* Text Manipulation Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB4A0C10E100CE70010C540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4A0C80E100CE70010C540 /* Find Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB4A0CF0E100CF80010C540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4A0D60E100CF80010C540 /* Growl Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB4A0D80E100D030010C540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4A0DF0E100D030010C540 /* Notification Hub.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB4A0E10E100D0E0010C540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4A0E80E100D0E0010C540 /* File Tagging Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB4A0EA0E100D170010C540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4A0F10E100D170010C540 /* Desktop Picture Action.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7F69A6CF0D200F3600D5C99E = {
 			isa = PBXGroup;
 			children = (
-				7F69A6FF0D200FA000D5C99E /* Configuration */,
-				7F69A6E30D200F5700D5C99E /* QSAddressBookElement.xcodeproj */,
-				7F69A6EE0D200F7000D5C99E /* FindElement.xcodeproj */,
+				4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */,
+				4DB4A0E00E100D0E0010C540 /* QSFileTagsPlugIn.xcodeproj */,
+				4DB4A0D70E100D030010C540 /* NotificationHub.xcodeproj */,
+				4DB4A0CE0E100CF80010C540 /* GrowlNotifier.xcodeproj */,
+				4DB4A0C00E100CE70010C540 /* FindModule.xcodeproj */,
+				4DB4A0B70E100CDB0010C540 /* TextManipulationElement.xcodeproj */,
+				4DB4A0AE0E100C2B0010C540 /* DiffModule.xcodeproj */,
+				4DB4A0A50E100C1A0010C540 /* QSGmailPlugIn.xcodeproj */,
+				4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */,
+				4DB4A0930E100C0A0010C540 /* QSAddressBookPlugIn.xcodeproj */,
+				4DB4A08A0E100BFD0010C540 /* ColloquyPlugin.xcodeproj */,
 			);
 			sourceTree = "<group>";
-		};
-		7F69A6E90D200F5700D5C99E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7F69A6ED0D200F5700D5C99E /* Apple Address Book.element */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7F69A6F40D200F7000D5C99E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7F69A6F80D200F7000D5C99E /* Find.element */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7F69A6FF0D200FA000D5C99E /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				7F69A7000D200FA000D5C99E /* Common.xcconfig */,
-				7F69A7010D200FA000D5C99E /* Debug.xcconfig */,
-				7F69A7070D200FA000D5C99E /* Release.xcconfig */,
-			);
-			path = Configuration;
-			sourceTree = QS_SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -111,12 +322,48 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 7F69A6F40D200F7000D5C99E /* Products */;
-					ProjectRef = 7F69A6EE0D200F7000D5C99E /* FindElement.xcodeproj */;
+					ProductGroup = 4DB4A09D0E100C130010C540 /* Products */;
+					ProjectRef = 4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */;
 				},
 				{
-					ProductGroup = 7F69A6E90D200F5700D5C99E /* Products */;
-					ProjectRef = 7F69A6E30D200F5700D5C99E /* QSAddressBookElement.xcodeproj */;
+					ProductGroup = 4DB4A08B0E100BFD0010C540 /* Products */;
+					ProjectRef = 4DB4A08A0E100BFD0010C540 /* ColloquyPlugin.xcodeproj */;
+				},
+				{
+					ProductGroup = 4DB4A0EA0E100D170010C540 /* Products */;
+					ProjectRef = 4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */;
+				},
+				{
+					ProductGroup = 4DB4A0AF0E100C2B0010C540 /* Products */;
+					ProjectRef = 4DB4A0AE0E100C2B0010C540 /* DiffModule.xcodeproj */;
+				},
+				{
+					ProductGroup = 4DB4A0C10E100CE70010C540 /* Products */;
+					ProjectRef = 4DB4A0C00E100CE70010C540 /* FindModule.xcodeproj */;
+				},
+				{
+					ProductGroup = 4DB4A0CF0E100CF80010C540 /* Products */;
+					ProjectRef = 4DB4A0CE0E100CF80010C540 /* GrowlNotifier.xcodeproj */;
+				},
+				{
+					ProductGroup = 4DB4A0D80E100D030010C540 /* Products */;
+					ProjectRef = 4DB4A0D70E100D030010C540 /* NotificationHub.xcodeproj */;
+				},
+				{
+					ProductGroup = 4DB4A0940E100C0A0010C540 /* Products */;
+					ProjectRef = 4DB4A0930E100C0A0010C540 /* QSAddressBookPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 4DB4A0E10E100D0E0010C540 /* Products */;
+					ProjectRef = 4DB4A0E00E100D0E0010C540 /* QSFileTagsPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 4DB4A0A60E100C1A0010C540 /* Products */;
+					ProjectRef = 4DB4A0A50E100C1A0010C540 /* QSGmailPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 4DB4A0B80E100CDB0010C540 /* Products */;
+					ProjectRef = 4DB4A0B70E100CDB0010C540 /* TextManipulationElement.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -127,39 +374,146 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		7F69A6ED0D200F5700D5C99E /* Apple Address Book.element */ = {
+		4DB4A0920E100BFD0010C540 /* Colloquy Module.qsplugin */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "Apple Address Book.element";
-			remoteRef = 7F69A6EC0D200F5700D5C99E /* PBXContainerItemProxy */;
+			path = "Colloquy Module.qsplugin";
+			remoteRef = 4DB4A0910E100BFD0010C540 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		7F69A6F80D200F7000D5C99E /* Find.element */ = {
+		4DB4A09B0E100C0A0010C540 /* Address Book Module.qsplugin */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = Find.element;
-			remoteRef = 7F69A6F70D200F7000D5C99E /* PBXContainerItemProxy */;
+			path = "Address Book Module.qsplugin";
+			remoteRef = 4DB4A09A0E100C0A0010C540 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DB4A0A40E100C130010C540 /* Calculator Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Calculator Module.qsplugin";
+			remoteRef = 4DB4A0A30E100C130010C540 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DB4A0AD0E100C1A0010C540 /* Gmail Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Gmail Module.qsplugin";
+			remoteRef = 4DB4A0AC0E100C1A0010C540 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DB4A0B60E100C2B0010C540 /* Diffing Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Diffing Module.qsplugin";
+			remoteRef = 4DB4A0B50E100C2B0010C540 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DB4A0BF0E100CDB0010C540 /* Text Manipulation Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Text Manipulation Module.qsplugin";
+			remoteRef = 4DB4A0BE0E100CDB0010C540 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DB4A0C80E100CE70010C540 /* Find Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Find Module.qsplugin";
+			remoteRef = 4DB4A0C70E100CE70010C540 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DB4A0D60E100CF80010C540 /* Growl Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Growl Module.qsplugin";
+			remoteRef = 4DB4A0D50E100CF80010C540 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DB4A0DF0E100D030010C540 /* Notification Hub.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Notification Hub.qsplugin";
+			remoteRef = 4DB4A0DE0E100D030010C540 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DB4A0E80E100D0E0010C540 /* File Tagging Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "File Tagging Module.qsplugin";
+			remoteRef = 4DB4A0E70E100D0E0010C540 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DB4A0F10E100D170010C540 /* Desktop Picture Action.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Desktop Picture Action.qsplugin";
+			remoteRef = 4DB4A0F00E100D170010C540 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXTargetDependency section */
-		7F69A70D0D20106000D5C99E /* PBXTargetDependency */ = {
+		4DB4A1030E100D570010C540 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Find;
-			targetProxy = 7F69A70C0D20106000D5C99E /* PBXContainerItemProxy */;
+			name = "Gmail Module";
+			targetProxy = 4DB4A1020E100D570010C540 /* PBXContainerItemProxy */;
 		};
-		7F69A70F0D20106000D5C99E /* PBXTargetDependency */ = {
+		4DB4A1050E100D570010C540 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Apple Address Book";
-			targetProxy = 7F69A70E0D20106000D5C99E /* PBXContainerItemProxy */;
+			name = "Text Manipulation";
+			targetProxy = 4DB4A1040E100D570010C540 /* PBXContainerItemProxy */;
+		};
+		4DB4A1070E100D570010C540 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DiffModule;
+			targetProxy = 4DB4A1060E100D570010C540 /* PBXContainerItemProxy */;
+		};
+		4DB4A1090E100D570010C540 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Apple Address Book Module";
+			targetProxy = 4DB4A1080E100D570010C540 /* PBXContainerItemProxy */;
+		};
+		4DB4A10B0E100D570010C540 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Colloquy Module";
+			targetProxy = 4DB4A10A0E100D570010C540 /* PBXContainerItemProxy */;
+		};
+		4DB4A10D0E100D570010C540 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Calculator Module";
+			targetProxy = 4DB4A10C0E100D570010C540 /* PBXContainerItemProxy */;
+		};
+		4DB4A10F0E100D570010C540 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Find Module";
+			targetProxy = 4DB4A10E0E100D570010C540 /* PBXContainerItemProxy */;
+		};
+		4DB4A1110E100D570010C540 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Growl Module";
+			targetProxy = 4DB4A1100E100D570010C540 /* PBXContainerItemProxy */;
+		};
+		4DB4A1130E100D570010C540 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NotificationHub;
+			targetProxy = 4DB4A1120E100D570010C540 /* PBXContainerItemProxy */;
+		};
+		4DB4A1150E100D570010C540 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "File Tagging Module";
+			targetProxy = 4DB4A1140E100D570010C540 /* PBXContainerItemProxy */;
+		};
+		4DB4A1170E100D570010C540 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Desktop Picture Action";
+			targetProxy = 4DB4A1160E100D570010C540 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7F69A6D20D200F3600D5C99E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F69A7010D200FA000D5C99E /* Debug.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "Build All";
 			};
@@ -167,7 +521,6 @@
 		};
 		7F69A6D30D200F3600D5C99E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F69A7070D200FA000D5C99E /* Release.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "Build All";
 			};

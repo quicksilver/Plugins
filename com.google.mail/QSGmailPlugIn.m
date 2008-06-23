@@ -7,7 +7,7 @@
 //
 
 #import "QSGmailPlugIn.h"
-#define QSURLEncode(s) [(NSString*)CFURLCreateStringByAddingPercentEscapes(NULL, s, NULL, @":/=+&?", kCFStringEncodingUTF8) autorelease]
+#define QSURLEncode(s) [(NSString*)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)s, NULL, (CFStringRef)@":/=+&?", kCFStringEncodingUTF8) autorelease]
 @implementation QSGmailPlugIn
 
 

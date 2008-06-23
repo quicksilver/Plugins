@@ -10,7 +10,7 @@
 #import <QSCore/QSResourceManager.h>
 #import <QSCore/QSObject.h>
 #import <QSCore/QSObject_Pasteboard.h>
-#import <QSCore/NSPasteboard_BLTRExtensions.h>
+//#import <QSCore/NSPasteboard_BLTRExtensions.h>
 #import <QSCore/QSLibrarian.h>
 #import <QSCore/QSTextProxy.h>
 #import <QSCore/QSTypes.h>
@@ -262,8 +262,8 @@
 		NSArray *rooms = [servers objectForKey:[object identifier]];
 		return (rooms != nil && [rooms count] > 0);
 	} else if ([[object primaryType] isEqualToString:NSFilenamesPboardType]) {
-		NSDictionary *theEntry = [QSLib entryForID:@"QSPresetColloquyFavorites"];
-		NSArray *newChildren = [QSLib objectsForEntry:theEntry scanIfNeeded:YES];
+		QSCatalogEntry *theEntry = [QSLib entryForID:@"QSPresetColloquyFavorites"];
+		NSArray *newChildren = [self objectsForEntry:[theEntry dictionaryRepresentation]];// scanIfNeeded:YES];
 		return (newChildren != nil && [newChildren count] > 0);
 	} else
 		return NO;
@@ -281,8 +281,8 @@
 			return NO;
 		}
 	} else if ([[object primaryType] isEqualToString:NSFilenamesPboardType]) {
-		NSDictionary *theEntry = [QSLib entryForID:@"QSPresetColloquyFavorites"];
-		NSArray *newChildren = [QSLib objectsForEntry:theEntry scanIfNeeded:YES];
+		QSCatalogEntry *theEntry = [QSLib entryForID:@"QSPresetColloquyFavorites"];
+		NSArray *newChildren = [self objectsForEntry:[theEntry dictionaryRepresentation]];// scanIfNeeded:YES];
 		if (newChildren) {
 			[objectChildren setObject:newChildren forKey:[object identifier]];
 			[object setChildren:newChildren];
@@ -380,7 +380,7 @@
 	[action setIcon:roomImage];
 	[action setProvider:self];
 	[action setAction:@selector(tellServer:joinRoom:)];
-	[action setArgumentCount:2];
+//	[action setArgumentCount:2];
 	[action setDetails:@"Joins the specified room in this server"];
 	[actionArray addObject:action];
 	
@@ -388,7 +388,7 @@
 	[action setIcon:chatImage];
 	[action setProvider:self];
 	[action setAction:@selector(tellServer:msgUser:)];
-	[action setArgumentCount:2];
+//	[action setArgumentCount:2];
 	[action setDetails:@"Messages the selected user on this server"];
 	[actionArray addObject:action];
 	

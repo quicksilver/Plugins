@@ -6,6 +6,7 @@
 //  Copyright __MyCompanyName__ 2004. All rights reserved.
 //
 
+#import <Growl/GrowlApplicationBridge.h>
 @interface QSGrowlNotifier : NSObject <GrowlApplicationBridgeDelegate>
 {
 }

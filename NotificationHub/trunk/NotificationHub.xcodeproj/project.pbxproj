@@ -1,0 +1,267 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A55D8990713692B00D09C04 /* Info.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0A55D8980713692B00D09C04 /* Info.rtf */; };
+		0A6C0AA607F7D32C009D40FC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A6C0AA507F7D32C009D40FC /* Localizable.strings */; };
+		0A6C0AE007F889C2009D40FC /* NotificationHubPrefPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6C0ADE07F889C2009D40FC /* NotificationHubPrefPane.m */; };
+		4DB4A1B90E101A900010C540 /* NotificationHubPrefPane.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6C0AF507F88BC5009D40FC /* NotificationHubPrefPane.nib */; };
+		E1EAB046068128A200774DFF /* NotificationHub.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* NotificationHub.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A33309707F8EF6500A9B2FC /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		0A55D8980713692B00D09C04 /* Info.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Info.rtf; sourceTree = "<group>"; };
+		0A6C0A8F07F7D2EB009D40FC /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0A6C0ADD07F889C2009D40FC /* NotificationHubPrefPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationHubPrefPane.h; sourceTree = "<group>"; };
+		0A6C0ADE07F889C2009D40FC /* NotificationHubPrefPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationHubPrefPane.m; sourceTree = "<group>"; };
+		0A6C0AF507F88BC5009D40FC /* NotificationHubPrefPane.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = NotificationHubPrefPane.nib; sourceTree = "<group>"; };
+		32DBCF980370C29C00C91783 /* NotificationHub_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationHub_Prefix.pch; sourceTree = "<group>"; };
+		4D0C0E180E0FD0A50027D189 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		4D0C0E190E0FD0A50027D189 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		4D0C0E1A0E0FD0A50027D189 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = "/Volumes/myHD/Projects/Quicksilver/elements-trunk/Configuration/Developer.xcconfig"; sourceTree = "<absolute>"; };
+		4D0C0E1B0E0FD0A50027D189 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		4D0C0E1C0E0FD0A50027D189 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		4D0C0E1D0E0FD0A50027D189 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* Notification Hub.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Notification Hub.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1EAB045068128A200774DFF /* NotificationHub.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NotificationHub.m; sourceTree = "<group>"; };
+		E1EAB047068128A800774DFF /* NotificationHub.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NotificationHub.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* NotificationHub */ = {
+			isa = PBXGroup;
+			children = (
+				4D0C0E170E0FD0A50027D189 /* Configuration */,
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = NotificationHub;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A55D8980713692B00D09C04 /* Info.rtf */,
+				0A6C0AF507F88BC5009D40FC /* NotificationHubPrefPane.nib */,
+				0A6C0AA507F7D32C009D40FC /* Localizable.strings */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* Notification Hub.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1EAB047068128A800774DFF /* NotificationHub.h */,
+				E1EAB045068128A200774DFF /* NotificationHub.m */,
+				0A6C0ADD07F889C2009D40FC /* NotificationHubPrefPane.h */,
+				0A6C0ADE07F889C2009D40FC /* NotificationHubPrefPane.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0A33309707F8EF6500A9B2FC /* Preferences.h */,
+				32DBCF980370C29C00C91783 /* NotificationHub_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		4D0C0E170E0FD0A50027D189 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4D0C0E180E0FD0A50027D189 /* Common.xcconfig */,
+				4D0C0E190E0FD0A50027D189 /* Debug.xcconfig */,
+				4D0C0E1A0E0FD0A50027D189 /* Developer.xcconfig */,
+				4D0C0E1B0E0FD0A50027D189 /* QSPlugIn.xcconfig */,
+				4D0C0E1C0E0FD0A50027D189 /* QSPlugIn_Prefix.pch */,
+				4D0C0E1D0E0FD0A50027D189 /* Release.xcconfig */,
+			);
+			name = Configuration;
+			path = ../../Configuration;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* NotificationHub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DFE7E670E084743000B9AA3 /* Build configuration list for PBXNativeTarget "NotificationHub" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationHub;
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = NotificationHub;
+			productReference = 8D1AC9740486D14A00FE50C9 /* Notification Hub.qsplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4DFE7E660E084743000B9AA3 /* Build configuration list for PBXProject "NotificationHub" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* NotificationHub */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* NotificationHub */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A55D8990713692B00D09C04 /* Info.rtf in Resources */,
+				0A6C0AA607F7D32C009D40FC /* Localizable.strings in Resources */,
+				4DB4A1B90E101A900010C540 /* NotificationHubPrefPane.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF /* NotificationHub.m in Sources */,
+				0A6C0AE007F889C2009D40FC /* NotificationHubPrefPane.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0A6C0AA507F7D32C009D40FC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A6C0A8F07F7D2EB009D40FC /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DFE7E600E084743000B9AA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0E190E0FD0A50027D189 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		4DFE7E610E084743000B9AA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0E1D0E0FD0A50027D189 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		4DFE7E630E084743000B9AA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0E1B0E0FD0A50027D189 /* QSPlugIn.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = "Notification Hub";
+			};
+			name = Debug;
+		};
+		4DFE7E640E084743000B9AA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0E1B0E0FD0A50027D189 /* QSPlugIn.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = "Notification Hub";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DFE7E660E084743000B9AA3 /* Build configuration list for PBXProject "NotificationHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DFE7E600E084743000B9AA3 /* Debug */,
+				4DFE7E610E084743000B9AA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4DFE7E670E084743000B9AA3 /* Build configuration list for PBXNativeTarget "NotificationHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DFE7E630E084743000B9AA3 /* Debug */,
+				4DFE7E640E084743000B9AA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

@@ -16,6 +16,7 @@
 @implementation NotificationHubPrefPane
 - (id) init {
 	if (self = [super init]) {
+        NSLog(@"%s", _cmd );
 		notifications = [[NSArray alloc] initWithObjects:
 			@"QSiTunesTrackChangeNotification", @"QSCalculatorResultNotification",
 			@"QSPlugInInstalledNotification", nil];

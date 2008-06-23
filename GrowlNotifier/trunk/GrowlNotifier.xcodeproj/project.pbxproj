@@ -8,37 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0A0D652306D2DC5700FB3DAA /* Info.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0D652206D2DC5700FB3DAA /* Info.rtf */; };
-		0AC8F93107F7AEF80057FEA1 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC8F93007F7AEF80057FEA1 /* QSFoundation.framework */; };
 		0AD26E1207F79C2F00975F71 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0AD26CD707F7967100975F71 /* Growl.framework */; };
-		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
-		E1127EAC0695F160008AE6A3 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1127EAA0695F160008AE6A3 /* QSCore.framework */; };
 		E1C4EF9406B8597600FA8819 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1C4EF9206B8597600FA8819 /* Localizable.strings */; };
 		E1EAB046068128A200774DFF /* QSGrowlNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSGrowlNotifier.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXBuildStyle section */
-		2E58F360FFB2326E11CA0CBA /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = NO;
-			};
-			name = Development;
-		};
-		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-/* End PBXBuildStyle section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0AD26E1007F79C2300975F71 /* CopyFiles */ = {
@@ -55,13 +28,17 @@
 
 /* Begin PBXFileReference section */
 		0A0D652206D2DC5700FB3DAA /* Info.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Info.rtf; sourceTree = "<group>"; };
-		0AC8F93007F7AEF80057FEA1 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
 		0AD26CD707F7967100975F71 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSGrowlNotifier_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSGrowlNotifier_Prefix.pch; sourceTree = "<group>"; };
+		4D0C0DF60E0FCFCF0027D189 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		4D0C0DF70E0FCFCF0027D189 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		4D0C0DF80E0FCFCF0027D189 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = "/Volumes/myHD/Projects/Quicksilver/elements-trunk/Configuration/Developer.xcconfig"; sourceTree = "<absolute>"; };
+		4D0C0DF90E0FCFCF0027D189 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		4D0C0DFA0E0FCFCF0027D189 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		4D0C0DFB0E0FCFCF0027D189 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; languageSpecificationIdentifier = html; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* Growl Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Growl Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		E1127EAA0695F160008AE6A3 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
 		E1C4EF9306B8597600FA8819 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E1EAB045068128A200774DFF /* QSGrowlNotifier.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSGrowlNotifier.m; sourceTree = "<group>"; };
 		E1EAB047068128A800774DFF /* QSGrowlNotifier.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSGrowlNotifier.h; sourceTree = "<group>"; };
@@ -72,9 +49,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
-				E1127EAC0695F160008AE6A3 /* QSCore.framework in Frameworks */,
-				0AC8F93107F7AEF80057FEA1 /* QSFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +58,7 @@
 		0259C574FE90428111CA0C5A /* QSGrowlNotifier */ = {
 			isa = PBXGroup;
 			children = (
+				4D0C0DF50E0FCFCF0027D189 /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -115,8 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				0AD26CD707F7967100975F71 /* Growl.framework */,
-				E1127EAA0695F160008AE6A3 /* QSCore.framework */,
-				0AC8F93007F7AEF80057FEA1 /* QSFoundation.framework */,
 				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -139,6 +112,20 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		4D0C0DF50E0FCFCF0027D189 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4D0C0DF60E0FCFCF0027D189 /* Common.xcconfig */,
+				4D0C0DF70E0FCFCF0027D189 /* Debug.xcconfig */,
+				4D0C0DF80E0FCFCF0027D189 /* Developer.xcconfig */,
+				4D0C0DF90E0FCFCF0027D189 /* QSPlugIn.xcconfig */,
+				4D0C0DFA0E0FCFCF0027D189 /* QSPlugIn_Prefix.pch */,
+				4D0C0DFB0E0FCFCF0027D189 /* Release.xcconfig */,
+			);
+			name = Configuration;
+			path = ../../Configuration;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,19 +141,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					.,
-					"$(QSFrameworks)",
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSGrowlNotifier_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				LIBRARY_STYLE = BUNDLE;
-				PRODUCT_NAME = "Growl Module";
-				WRAPPER_EXTENSION = qsplugin;
-			};
 			dependencies = (
 			);
 			name = "Growl Module";
@@ -181,15 +155,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 0A4D265908A1ECE200C8DD94 /* Build configuration list for PBXProject "GrowlNotifier" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				2E58F360FFB2326E11CA0CBA /* Development */,
-				2E58F361FFB2326E11CA0CBA /* Deployment */,
-			);
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSGrowlNotifier */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Growl Module */,
 			);
@@ -247,47 +217,25 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0A4D265608A1ECE200C8DD94 /* Release */ = {
+		0A4D265608A1ECE200C8DD94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0DF90E0FCFCF0027D189 /* QSPlugIn.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					.,
-					"$(QSFrameworks)",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSGrowlNotifier_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				LIBRARY_STYLE = BUNDLE;
 				PRODUCT_NAME = "Growl Module";
-				WRAPPER_EXTENSION = qsplugin;
-				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		0A4D265808A1ECE200C8DD94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0DF90E0FCFCF0027D189 /* QSPlugIn.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = "Growl Module";
 			};
 			name = Release;
 		};
-		0A4D265808A1ECE200C8DD94 /* Default */ = {
+		0A4D265A08A1ECE200C8DD94 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					.,
-					"$(QSFrameworks)",
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSGrowlNotifier_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				LIBRARY_STYLE = BUNDLE;
-				PRODUCT_NAME = "Growl Module";
-				WRAPPER_EXTENSION = qsplugin;
-			};
-			name = Default;
-		};
-		0A4D265A08A1ECE200C8DD94 /* Release */ = {
-			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0DF70E0FCFCF0027D189 /* Debug.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					ppc,
@@ -295,18 +243,14 @@
 				);
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
-			name = Release;
+			name = Debug;
 		};
-		0A4D265C08A1ECE200C8DD94 /* Default */ = {
+		0A4D265C08A1ECE200C8DD94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0DFB0E0FCFCF0027D189 /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -314,20 +258,20 @@
 		0A4D265508A1ECE200C8DD94 /* Build configuration list for PBXNativeTarget "Growl Module" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0A4D265608A1ECE200C8DD94 /* Release */,
-				0A4D265808A1ECE200C8DD94 /* Default */,
+				0A4D265608A1ECE200C8DD94 /* Debug */,
+				0A4D265808A1ECE200C8DD94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Release;
 		};
 		0A4D265908A1ECE200C8DD94 /* Build configuration list for PBXProject "GrowlNotifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0A4D265A08A1ECE200C8DD94 /* Release */,
-				0A4D265C08A1ECE200C8DD94 /* Default */,
+				0A4D265A08A1ECE200C8DD94 /* Debug */,
+				0A4D265C08A1ECE200C8DD94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

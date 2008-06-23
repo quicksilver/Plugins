@@ -6,6 +6,8 @@
 //  Copyright 2004 TildeSoft. All rights reserved.
 //
 
+#import <QSInterface/QSPreferencePane.h>
+
 extern NSString *CalculatorDisplayPref;
 extern NSString *CalculatorEnginePref;
 

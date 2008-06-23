@@ -8,7 +8,7 @@
 
 #import "FindModule.h"
 #import "NSStringAdditions.h"
-
+#import <QSCore/QSNotifyMediator.h>
 
 
 #define kFindModuleFindAction @"FindModuleFindAction"

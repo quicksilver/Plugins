@@ -7,6 +7,7 @@
 //
 
 #import "FindModule.h"
+#import <QSInterface/QSPreferencePane.h>
 
 extern NSString *FindModuleComplexityPref;
 

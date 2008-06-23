@@ -224,7 +224,7 @@ double substring_score (UniChar* first1, UniChar* last1, UniChar* first2, UniCha
 	std::copy(nStr.begin(), nStr.end(), string);
 
 	originalIndex = new unsigned[length];
-	for(int i = 0; i != length; i++)
+	for(unsigned int i = 0; i != length; i++)
 		originalIndex[i] = map[orgIndex[i]];
 
 	CFRelease(tmpStr);

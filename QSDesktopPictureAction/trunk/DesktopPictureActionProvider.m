@@ -160,7 +160,7 @@
 	} else {
 		NSLog(@"DesktopPictureAction: Using default display");
 		//NSLog([NSString stringWithFormat:@"DesktopPictureAction: main screen is %i",[[NSScreen mainScreen]screenNumber]]);
-		displayNumber = [[NSScreen mainScreen]screenNumber];
+		displayNumber = [[NSScreen mainScreen] screenNumber];
 	}
 	NSString* displayName = [NSString stringWithFormat:@"%i", displayNumber];
 	

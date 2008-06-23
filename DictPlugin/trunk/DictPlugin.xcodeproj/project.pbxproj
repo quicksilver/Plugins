@@ -14,38 +14,9 @@
 		0AD38B7406BD148C00F45CFC /* dict.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AD38B0506BD0E3B00F45CFC /* dict.jpg */; };
 		7FB0A2E60935FD5E00F75926 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FB0A2E50935FD5E00F75926 /* Info.plist */; };
 		7FB0A2E90935FD6700F75926 /* QSDictionaryPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0A2E80935FD6700F75926 /* QSDictionaryPlugIn.m */; };
-		7FC616B40935643A00E1D535 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC616B00935643A00E1D535 /* QSCore.framework */; };
-		7FC616B50935643A00E1D535 /* QSEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC616B10935643A00E1D535 /* QSEffects.framework */; };
-		7FC616B60935643A00E1D535 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC616B20935643A00E1D535 /* QSFoundation.framework */; };
-		7FC616B70935643A00E1D535 /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC616B30935643A00E1D535 /* QSInterface.framework */; };
 		7FD0C5C00936064B00F5C459 /* QSDictionaryLookup in Resources */ = {isa = PBXBuildFile; fileRef = 7FD0C5BF0936064B00F5C459 /* QSDictionaryLookup */; };
-		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		E1EAB046068128A200774DFF /* DictPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* DictPlugin.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXBuildStyle section */
-		2E58F360FFB2326E11CA0CBA /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
-		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-/* End PBXBuildStyle section */
 
 /* Begin PBXFileReference section */
 		0A1D9C8D07377C390069C3C4 /* NSMutableStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableStringAdditions.h; sourceTree = "<group>"; };
@@ -54,16 +25,17 @@
 		0AD38B0506BD0E3B00F45CFC /* dict.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dict.jpg; sourceTree = "<group>"; };
 		0AD38B1506BD0F2900F45CFC /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ActionNames.strings; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* DictPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictPlugin_Prefix.pch; sourceTree = "<group>"; };
+		4D0C0D850E0FC0480027D189 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		4D0C0D860E0FC0480027D189 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		4D0C0D870E0FC0480027D189 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = "/Volumes/myHD/Projects/Quicksilver/elements-trunk/Configuration/Developer.xcconfig"; sourceTree = "<absolute>"; };
+		4D0C0D880E0FC0480027D189 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		4D0C0D890E0FC0480027D189 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		4D0C0D8A0E0FC0480027D189 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		7FB0A2E50935FD5E00F75926 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FB0A2E70935FD6700F75926 /* QSDictionaryPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSDictionaryPlugIn.h; sourceTree = "<group>"; };
 		7FB0A2E80935FD6700F75926 /* QSDictionaryPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSDictionaryPlugIn.m; sourceTree = "<group>"; };
-		7FC616B00935643A00E1D535 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = ../../../../Build/Release/QSCore.framework; sourceTree = SOURCE_ROOT; };
-		7FC616B10935643A00E1D535 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSEffects.framework; path = ../../../../Build/Release/QSEffects.framework; sourceTree = SOURCE_ROOT; };
-		7FC616B20935643A00E1D535 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSFoundation.framework; path = ../../../../Build/Release/QSFoundation.framework; sourceTree = SOURCE_ROOT; };
-		7FC616B30935643A00E1D535 /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSInterface.framework; path = ../../../../Build/Release/QSInterface.framework; sourceTree = SOURCE_ROOT; };
 		7FD0C5BF0936064B00F5C459 /* QSDictionaryLookup */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = QSDictionaryLookup; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* Dictionary Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dictionary Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E1EAB045068128A200774DFF /* DictPlugin.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DictPlugin.m; sourceTree = "<group>"; };
 		E1EAB047068128A800774DFF /* DictPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DictPlugin.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,11 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
-				7FC616B40935643A00E1D535 /* QSCore.framework in Frameworks */,
-				7FC616B50935643A00E1D535 /* QSEffects.framework in Frameworks */,
-				7FC616B60935643A00E1D535 /* QSFoundation.framework in Frameworks */,
-				7FC616B70935643A00E1D535 /* QSInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +54,7 @@
 		0259C574FE90428111CA0C5A /* DictPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				4D0C0D840E0FC0480027D189 /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -119,11 +87,6 @@
 		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7FC616B00935643A00E1D535 /* QSCore.framework */,
-				7FC616B10935643A00E1D535 /* QSEffects.framework */,
-				7FC616B20935643A00E1D535 /* QSFoundation.framework */,
-				7FC616B30935643A00E1D535 /* QSInterface.framework */,
-				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,6 +112,20 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		4D0C0D840E0FC0480027D189 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4D0C0D850E0FC0480027D189 /* Common.xcconfig */,
+				4D0C0D860E0FC0480027D189 /* Debug.xcconfig */,
+				4D0C0D870E0FC0480027D189 /* Developer.xcconfig */,
+				4D0C0D880E0FC0480027D189 /* QSPlugIn.xcconfig */,
+				4D0C0D890E0FC0480027D189 /* QSPlugIn_Prefix.pch */,
+				4D0C0D8A0E0FC0480027D189 /* Release.xcconfig */,
+			);
+			name = Configuration;
+			path = ../../Configuration;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,16 +140,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = /Users/kevin/Dev/Quicksilver;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = DictPlugin_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = DictPlugin;
-				WRAPPER_EXTENSION = qsplugin;
-			};
 			dependencies = (
 			);
 			name = "Dictionary Module";
@@ -187,15 +154,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7F07ADED085E432400E2AFC4 /* Build configuration list for PBXProject "DictPlugin" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				2E58F360FFB2326E11CA0CBA /* Development */,
-				2E58F361FFB2326E11CA0CBA /* Deployment */,
-			);
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* DictPlugin */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Dictionary Module */,
 			);
@@ -259,97 +222,35 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7F07ADEA085E432400E2AFC4 /* Development */ = {
+		7F07ADEA085E432400E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0D880E0FC0480027D189 /* QSPlugIn.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/kevin/Dev/Quicksilver,
-					"$(SRCROOT)/../../../../Build/Release",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = DictPlugin_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = DictPlugin;
-				WRAPPER_EXTENSION = qsplugin;
-				ZERO_LINK = YES;
+				PRODUCT_NAME = "Dictionary Module";
 			};
-			name = Development;
+			name = Debug;
 		};
 		7F07ADEB085E432400E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0D880E0FC0480027D189 /* QSPlugIn.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = DictPlugin_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Dictionary Module";
-				WRAPPER_EXTENSION = qsplugin;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
-		7F07ADEC085E432400E2AFC4 /* Default */ = {
+		7F07ADEE085E432400E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0D860E0FC0480027D189 /* Debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					/Users/kevin/Dev/Quicksilver,
-					"$(SRCROOT)/../../../../Build/Release",
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = DictPlugin_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = DictPlugin;
-				WRAPPER_EXTENSION = qsplugin;
 			};
-			name = Default;
-		};
-		7F07ADEE085E432400E2AFC4 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Development;
+			name = Debug;
 		};
 		7F07ADEF085E432400E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0D8A0E0FC0480027D189 /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;
-		};
-		7F07ADF0085E432400E2AFC4 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Default;
 		};
 /* End XCBuildConfiguration section */
 
@@ -357,22 +258,20 @@
 		7F07ADE9085E432400E2AFC4 /* Build configuration list for PBXNativeTarget "Dictionary Module" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F07ADEA085E432400E2AFC4 /* Development */,
+				7F07ADEA085E432400E2AFC4 /* Debug */,
 				7F07ADEB085E432400E2AFC4 /* Release */,
-				7F07ADEC085E432400E2AFC4 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		7F07ADED085E432400E2AFC4 /* Build configuration list for PBXProject "DictPlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F07ADEE085E432400E2AFC4 /* Development */,
+				7F07ADEE085E432400E2AFC4 /* Debug */,
 				7F07ADEF085E432400E2AFC4 /* Release */,
-				7F07ADF0085E432400E2AFC4 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

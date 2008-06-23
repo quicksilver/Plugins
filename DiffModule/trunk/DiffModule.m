@@ -70,7 +70,7 @@
 		return nil;
 	}
 	NSTask *diff=[NSTask launchedTaskWithLaunchPath:@"/usr/bin/opendiff" arguments:
-		[NSArray arrayWithObjects:dPath, iPath]];
+		[NSArray arrayWithObjects:dPath, iPath, nil]];
 	[diff waitUntilExit];
 	return nil;
 }

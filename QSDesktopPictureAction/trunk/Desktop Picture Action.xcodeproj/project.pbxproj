@@ -11,40 +11,23 @@
 		5840456106C11FFB00D22F17 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5840455F06C11FFB00D22F17 /* InfoPlist.strings */; };
 		587B4A260799875F008C5C04 /* SetDesktop.png in Resources */ = {isa = PBXBuildFile; fileRef = 587B4A250799875F008C5C04 /* SetDesktop.png */; };
 		58F08D67079C58610029C8DE /* Info.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 58F08D66079C58610029C8DE /* Info.rtf */; };
-		7F4AE057096F7A1200C9B950 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4AE055096F7A1200C9B950 /* QSCore.framework */; };
-		7F4AE058096F7A1200C9B950 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4AE056096F7A1200C9B950 /* QSFoundation.framework */; };
-		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		E1EAB046068128A200774DFF /* DesktopPictureActionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* DesktopPictureActionProvider.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		58DE8FB00AAF0D290094A9B9 /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Development;
-		};
-		58DE8FB10AAF0D290094A9B9 /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-			};
-			name = Deployment;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXFileReference section */
 		32DBCF980370C29C00C91783 /* DesktopPictureAction_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopPictureAction_Prefix.pch; sourceTree = "<group>"; };
+		4D0C0E7A0E0FD2B10027D189 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		4D0C0E7B0E0FD2B10027D189 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		4D0C0E7C0E0FD2B10027D189 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = "/Volumes/myHD/Projects/Quicksilver/elements-trunk/Configuration/Developer.xcconfig"; sourceTree = "<absolute>"; };
+		4D0C0E7D0E0FD2B10027D189 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		4D0C0E7E0E0FD2B10027D189 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		4D0C0E7F0E0FD2B10027D189 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		5840455C06C11FE400D22F17 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ActionNames.strings; sourceTree = "<group>"; };
 		5840456006C11FFB00D22F17 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		587B4A250799875F008C5C04 /* SetDesktop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SetDesktop.png; sourceTree = "<group>"; };
 		58F08D66079C58610029C8DE /* Info.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Info.rtf; sourceTree = "<group>"; };
-		7F4AE055096F7A1200C9B950 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
-		7F4AE056096F7A1200C9B950 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* Desktop Picture Action.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desktop Picture Action.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E1EAB045068128A200774DFF /* DesktopPictureActionProvider.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DesktopPictureActionProvider.m; sourceTree = "<group>"; };
 		E1EAB047068128A800774DFF /* DesktopPictureActionProvider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DesktopPictureActionProvider.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,9 +37,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
-				7F4AE057096F7A1200C9B950 /* QSCore.framework in Frameworks */,
-				7F4AE058096F7A1200C9B950 /* QSFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +46,7 @@
 		0259C574FE90428111CA0C5A /* TKDesktopModule */ = {
 			isa = PBXGroup;
 			children = (
+				4D0C0E790E0FD2B10027D189 /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				E1127F960695F44F008AE6A3 /* Templates */,
@@ -99,9 +80,6 @@
 		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7F4AE055096F7A1200C9B950 /* QSCore.framework */,
-				7F4AE056096F7A1200C9B950 /* QSFoundation.framework */,
-				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +100,20 @@
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
+		};
+		4D0C0E790E0FD2B10027D189 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4D0C0E7A0E0FD2B10027D189 /* Common.xcconfig */,
+				4D0C0E7B0E0FD2B10027D189 /* Debug.xcconfig */,
+				4D0C0E7C0E0FD2B10027D189 /* Developer.xcconfig */,
+				4D0C0E7D0E0FD2B10027D189 /* QSPlugIn.xcconfig */,
+				4D0C0E7E0E0FD2B10027D189 /* QSPlugIn_Prefix.pch */,
+				4D0C0E7F0E0FD2B10027D189 /* Release.xcconfig */,
+			);
+			name = Configuration;
+			path = ../../Configuration;
+			sourceTree = SOURCE_ROOT;
 		};
 		E1127F960695F44F008AE6A3 /* Templates */ = {
 			isa = PBXGroup;
@@ -158,15 +150,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7F07ADDD085E432400E2AFC4 /* Build configuration list for PBXProject "Desktop Picture Action" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				58DE8FB00AAF0D290094A9B9 /* Development */,
-				58DE8FB10AAF0D290094A9B9 /* Deployment */,
-			);
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* TKDesktopModule */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Desktop Picture Action */,
 			);
@@ -234,98 +222,35 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7F07ADDA085E432400E2AFC4 /* Development */ = {
+		7F07ADDA085E432400E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0E7D0E0FD2B10027D189 /* QSPlugIn.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Applications/Quicksilver.app/Contents/Frameworks,
-					"$(SRCROOT)/../../../../Build/Release",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = DesktopPictureAction_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Desktop Picture Action";
-				WRAPPER_EXTENSION = qsplugin;
-				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
 		7F07ADDB085E432400E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0E7D0E0FD2B10027D189 /* QSPlugIn.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Applications/Quicksilver.app/Contents/Frameworks,
-					"$(SRCROOT)/../../../../Build/Release",
-				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = DesktopPictureAction_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Desktop Picture Action";
-				WRAPPER_EXTENSION = qsplugin;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
-		7F07ADDC085E432400E2AFC4 /* Default */ = {
+		7F07ADDE085E432400E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0E7B0E0FD2B10027D189 /* Debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					/Applications/Quicksilver.app/Contents/Frameworks,
-					"$(SRCROOT)/../../../../Build/Release",
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = DesktopPictureAction_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "Desktop Picture Action";
-				WRAPPER_EXTENSION = qsplugin;
 			};
-			name = Default;
-		};
-		7F07ADDE085E432400E2AFC4 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Development;
+			name = Debug;
 		};
 		7F07ADDF085E432400E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C0E7F0E0FD2B10027D189 /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;
-		};
-		7F07ADE0085E432400E2AFC4 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Default;
 		};
 /* End XCBuildConfiguration section */
 
@@ -333,22 +258,20 @@
 		7F07ADD9085E432400E2AFC4 /* Build configuration list for PBXNativeTarget "Desktop Picture Action" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F07ADDA085E432400E2AFC4 /* Development */,
+				7F07ADDA085E432400E2AFC4 /* Debug */,
 				7F07ADDB085E432400E2AFC4 /* Release */,
-				7F07ADDC085E432400E2AFC4 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		7F07ADDD085E432400E2AFC4 /* Build configuration list for PBXProject "Desktop Picture Action" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F07ADDE085E432400E2AFC4 /* Development */,
+				7F07ADDE085E432400E2AFC4 /* Debug */,
 				7F07ADDF085E432400E2AFC4 /* Release */,
-				7F07ADE0085E432400E2AFC4 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

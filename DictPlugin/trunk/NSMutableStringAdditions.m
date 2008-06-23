@@ -9,11 +9,12 @@
 #import "NSMutableStringAdditions.h"
 
 @implementation NSMutableString (NSMutableStringAdditions)
-- escapeCharactersInSet:(NSCharacterSet *)characterSet {
+- (NSMutableString*)escapeCharactersInSet:(NSCharacterSet *)characterSet {
 	[self escapeCharactersInSet:characterSet withString:@"\\"];
+    return self;
 }
 
-- escapeCharactersInSet:(NSCharacterSet *)characterSet withString:(NSString *)escape {
+- (NSMutableString*)escapeCharactersInSet:(NSCharacterSet *)characterSet withString:(NSString *)escape {
 	NSScanner *scanner = [NSScanner scannerWithString:self];
 	[scanner setCharactersToBeSkipped:[NSCharacterSet characterSetWithCharactersInString:@""]];
 	[scanner setCaseSensitive:YES];
@@ -24,5 +25,6 @@
 		[scanner setScanLocation:[scanner scanLocation] + escapeLen + 1];
 		[scanner scanUpToCharactersFromSet:characterSet intoString:nil];
 	}
+    return self;
 }
 @end

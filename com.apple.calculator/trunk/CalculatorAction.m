@@ -3,6 +3,8 @@
 //  Quicksilver
 //
 
+#import <QSCore/QSLibrarian.h>
+#import <QSCore/QSNotifyMediator.h>
 #import "CalculatorAction.h"
 #import "CalculatorPrefPane.h"
 

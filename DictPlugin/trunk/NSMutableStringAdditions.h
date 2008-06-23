@@ -9,6 +9,6 @@
 #import <Cocoa/Cocoa.h>
 
 @interface NSMutableString (NSMutableStringAdditions)
-- escapeCharactersInSet:(NSCharacterSet *)characterSet;
-- escapeCharactersInSet:(NSCharacterSet *)characterSet withString:(NSString *)escape;
+- (NSMutableString*)escapeCharactersInSet:(NSCharacterSet *)characterSet;
+- (NSMutableString*)escapeCharactersInSet:(NSCharacterSet *)characterSet withString:(NSString *)escape;
 @end
