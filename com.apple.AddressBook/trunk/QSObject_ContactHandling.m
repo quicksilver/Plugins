@@ -1,4 +1,6 @@
 
+#import <AddressBook/AddressBook.h>
+
 #import "QSObject_ContactHandling.h"
 #import "ABPerson_Display.h"
 
@@ -59,7 +61,9 @@
 		NSString *address = [urls valueAtIndex:i];
 		NSString *name = [self contactlingNameForPerson:person label:ABLocalizedPropertyOrLabel([urls labelAtIndex:i]) type:ABLocalizedPropertyOrLabel(kABURLsProperty) asChild:asChild];
 
-		[contactlings addObject:[QSObject URLObjectWithURL:address title:name]];
+		QSObject *obj = [QSObject URLObjectWithURL:address title:name];
+        [obj setParentID:[person uniqueId]];
+        [contactlings addObject:obj];
 	}
 	
 	return contactlings;
@@ -74,8 +78,10 @@
 		NSString *address = [emailAddresses valueAtIndex:i];
 		NSString *name = [self contactlingNameForPerson:person label:ABLocalizedPropertyOrLabel([emailAddresses labelAtIndex:i]) type:[ABLocalizedPropertyOrLabel(kABEmailProperty) lowercaseString] asChild:asChild];
 
-		[contactlings addObject:[QSObject URLObjectWithURL:[NSString stringWithFormat:@"mailto:%@", address]
-													 title:name]];
+		QSObject *obj = [QSObject URLObjectWithURL:[NSString stringWithFormat:@"mailto:%@", address]
+                                             title:name];
+        [obj setParentID:[person uniqueId]];
+        [contactlings addObject:obj];
 	}
 	return contactlings;
 }
@@ -87,8 +93,10 @@
 	for (i = 0; i < [phoneNumbers count]; i++) {
 		NSString *address = [phoneNumbers valueAtIndex:i];
 		NSString *name = [self contactlingNameForPerson:person label:ABLocalizedPropertyOrLabel([phoneNumbers labelAtIndex:i]) type:[ABLocalizedPropertyOrLabel(kABPhoneProperty) lowercaseString] asChild:asChild];
-
-		[contactlings addObject:[QSObject objectWithString:address name:name type:QSContactPhoneType]];
+        QSObject * obj = [QSObject objectWithString:address name:name type:QSContactPhoneType];
+        [obj setParentID:[person uniqueId]];
+        
+		[contactlings addObject:obj];
 	}
 	return contactlings;
 }
@@ -100,13 +108,11 @@
 	int i;
 	for (i = 0; i < [addresses count]; i++) {
         ABMultiValue *address = [addresses valueAtIndex:i];
-        NSString *string = [[[ABAddressBook sharedAddressBook] formattedAddressFromDictionary:(NSDictionary *)address]string];
+        NSString *string = [[[ABAddressBook sharedAddressBook] formattedAddressFromDictionary:(NSDictionary *)address] string];
 		NSString *name = [self contactlingNameForPerson:person label:ABLocalizedPropertyOrLabel([addresses labelAtIndex:i]) type:[ABLocalizedPropertyOrLabel(kABAddressProperty) lowercaseString] asChild:asChild];
-	
-			[contactlings addObject:[QSObject objectWithString:string name:name type:QSContactAddressType]];
-		
-	
-		
+        QSObject * obj = [QSObject objectWithString:string name:name type:QSContactAddressType];
+        [obj setParentID:[person uniqueId]];
+        [contactlings addObject:obj];
     }
 	return contactlings;
 }
@@ -119,7 +125,9 @@
 		int i;
 		for (i = 0; i < [ims count]; i++) {
 			NSString *name = [self contactlingNameForPerson:person label:ABLocalizedPropertyOrLabel([ims labelAtIndex:i]) type:ABLocalizedPropertyOrLabel(type) asChild:asChild];
-			[contactlings addObject:[QSObject objectWithString:[ims valueAtIndex:i] name:name type:QSIMAccountType]];
+			QSObject *obj = [QSObject objectWithString:[ims valueAtIndex:i] name:name type:QSIMAccountType];
+            [obj setParentID:[person uniqueId]];
+            [contactlings addObject:obj];
 		}
 	}
 	return contactlings;
@@ -138,9 +146,10 @@
 	
 	NSString *note = [person valueForProperty:kABNoteProperty];
     if (note) {
-        [contactlings addObject:[QSObject objectWithString:note]];
+        QSObject *obj = [QSObject objectWithString:note];
+        [obj setParentID:[object identifier]];
+        [contactlings addObject:obj];
     }
-	
 	
     [contactlings makeObjectsPerformSelector:@selector(setParentID:) withObject:[object identifier]];
     

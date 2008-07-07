@@ -174,42 +174,35 @@
 
 - (NSArray *)objectsForEntry:(NSDictionary *)theEntry {
 	NSMutableArray *array = [NSMutableArray array];
-
-	//if (![contactDictionary count]) {
-		ABAddressBook *book = [ABAddressBook sharedAddressBook];
-
-		NSArray *people = nil;
-		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-		
-		BOOL includePhone = [defaults boolForKey:@"QSABIncludePhone"];
-		BOOL includeURL = [defaults boolForKey:@"QSABIncludeURL"];
-		BOOL includeIM = [defaults boolForKey:@"QSABIncludeIM"];
-		BOOL includeEmail = [defaults boolForKey:@"QSABIncludeEmail"];
-		BOOL includeContacts = [defaults boolForKey:@"QSABIncludeContacts"];
-		
-		
-		NSString *group = [defaults stringForKey:@"QSABGroupLimit"];
-		if (!group)group = @"Quicksilver";
-		ABSearchElement *groupSearch = [ABGroup searchElementForProperty:kABGroupNameProperty label:nil key:nil value:group comparison:kABPrefixMatchCaseInsensitive];
-		ABGroup *qsGroup = [[book recordsMatchingSearchElement:groupSearch]lastObject];
-		people = [qsGroup members];
     
-		if (![people count]) people = [book people];
-		NSEnumerator *personEnumerator = [people objectEnumerator];
-		id thePerson;
-		while ((thePerson = [personEnumerator nextObject])) {
-			if (includeContacts)	[array addObject:[QSObject objectWithPerson:thePerson]];
-			if (includePhone)		[array addObjectsFromArray:[QSContactObjectHandler phoneObjectsForPerson:thePerson asChild:NO]];
-			if (includeURL)			[array addObjectsFromArray:[QSContactObjectHandler URLObjectsForPerson:thePerson asChild:NO]];
-			if (includeIM)			[array addObjectsFromArray:[QSContactObjectHandler imObjectsForPerson:thePerson asChild:NO]];
-			if (includeEmail)		[array addObjectsFromArray:[QSContactObjectHandler emailObjectsForPerson:thePerson asChild:NO]];
-			
-			//[contactDictionary setObject:[QSObject objectWithPerson:thePerson] forKey:[thePerson uniqueId]];
-		}
+    ABAddressBook *book = [ABAddressBook sharedAddressBook];
     
-		//	}
-		return array;
-		//return [contactDictionary allValues];
+    NSArray *people = nil;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    BOOL includePhone = [defaults boolForKey:@"QSABIncludePhone"];
+    BOOL includeURL = [defaults boolForKey:@"QSABIncludeURL"];
+    BOOL includeIM = [defaults boolForKey:@"QSABIncludeIM"];
+    BOOL includeEmail = [defaults boolForKey:@"QSABIncludeEmail"];
+    BOOL includeContacts = [defaults boolForKey:@"QSABIncludeContacts"];
+    
+    NSString *group = [defaults stringForKey:@"QSABGroupLimit"];
+    if (!group) group = @"Quicksilver";
+    ABSearchElement *groupSearch = [ABGroup searchElementForProperty:kABGroupNameProperty label:nil key:nil value:group comparison:kABPrefixMatchCaseInsensitive];
+    ABGroup *qsGroup = [[book recordsMatchingSearchElement:groupSearch] lastObject];
+    people = [qsGroup members];
+    
+    if (![people count]) people = [book people];
+    NSEnumerator *personEnumerator = [people objectEnumerator];
+    id thePerson;
+    while ((thePerson = [personEnumerator nextObject])) {
+        if (includeContacts)	[array addObject:[QSObject objectWithPerson:thePerson]];
+        if (includePhone)		[array addObjectsFromArray:[QSContactObjectHandler phoneObjectsForPerson:thePerson asChild:NO]];
+        if (includeURL)			[array addObjectsFromArray:[QSContactObjectHandler URLObjectsForPerson:thePerson asChild:NO]];
+        if (includeIM)			[array addObjectsFromArray:[QSContactObjectHandler imObjectsForPerson:thePerson asChild:NO]];
+        if (includeEmail)		[array addObjectsFromArray:[QSContactObjectHandler emailObjectsForPerson:thePerson asChild:NO]];
+    }
+    return array;
 }
 
 @end
@@ -217,11 +210,11 @@
 
 
 @implementation QSABMailRecentsObjectSource
-- (NSImage *)iconForEntry:(NSDictionary *)theEntry {return [[NSWorkspace sharedWorkspace]iconForFile:@"/Applications/Mail.app"];}
+- (NSImage *)iconForEntry:(NSDictionary *)theEntry {return [[NSWorkspace sharedWorkspace] iconForFile:@"/Applications/Mail.app"];}
 
 - (NSArray *)objectsForEntry:(NSDictionary *)theEntry {
 	NSMutableArray *abArray = [NSMutableArray arrayWithCapacity:1];
-	NSEnumerator *personEnumerator = [[[ABAddressBook sharedAddressBook]performSelector:@selector(mailRecents)]objectEnumerator];
+	NSEnumerator *personEnumerator = [[[ABAddressBook sharedAddressBook] performSelector:@selector(mailRecents)] objectEnumerator];
 	ABPerson *thePerson;
 	while ((thePerson = [personEnumerator nextObject])) {
         
@@ -348,9 +341,9 @@
 
 - (QSObject *)showContact:(QSObject *)dObject {
 	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"addressbook://%@", [dObject objectForType:QSABPersonType]]]];
-  
 	return nil;
 }
+
 - (QSObject *)editContact:(QSObject *)dObject {
 	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"addressbook://%@?edit", [dObject objectForType:QSABPersonType]]]];
 	return nil;
