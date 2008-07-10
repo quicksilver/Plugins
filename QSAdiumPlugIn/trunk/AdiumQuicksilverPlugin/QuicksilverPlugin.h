@@ -8,12 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Foundation/NSConnection.h>
-#import <Adium/AIPlugin.h>
-#import <Adium/AIListContact.h>
+#import <Adium/Adium.h>
+/*#import <Adium/AIListContact.h>
 #import <Adium/AIContentMessage.h>
 #import <Adium/AIContactController.h>
 #import <Adium/AIMetaContact.h>
-#import <Adium/ESApplescriptabilityController.h>
+#import <Adium/ESApplescriptabilityController.h>*/
 
 #define foreach(x,y) id x;NSEnumerator *rwEnum=[y objectEnumerator];while(x=[rwEnum nextObject])
 

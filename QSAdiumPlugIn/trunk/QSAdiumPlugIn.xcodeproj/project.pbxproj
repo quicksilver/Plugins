@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1F1B710E13C8F70058FE2A /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1F1B520E13C8F00058FE2A /* Adium.framework */; };
+		4D1F1B7A0E13C90F0058FE2A /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1F1B790E13C90D0058FE2A /* AIUtilities.framework */; };
+		4D38C5660E13D73E0077F9CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D38C5650E13D73E0077F9CA /* Cocoa.framework */; };
 		D337C5E50839AD2800124593 /* Quicksilver.AdiumPlugin in Resources */ = {isa = PBXBuildFile; fileRef = E384106A07C3239B008110E3 /* Quicksilver.AdiumPlugin */; };
-		D36E1A6D0831352400FADC55 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36E1A690831352400FADC55 /* Adium.framework */; };
-		D36E1A6E0831352400FADC55 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36E1A6A0831352400FADC55 /* AIUtilities.framework */; };
 		E1EAB046068128A200774DFF /* QSAdiumPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSAdiumPlugIn.m */; };
 		E311E5E3079C3C6A00F668C8 /* AdiumyBase.png in Resources */ = {isa = PBXBuildFile; fileRef = E311E5E1079C3C6A00F668C8 /* AdiumyBase.png */; };
 		E311E5E4079C3C6A00F668C8 /* AdiumyOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = E311E5E2079C3C6A00F668C8 /* AdiumyOverlay.png */; };
@@ -39,6 +40,149 @@
 		E3F157EC071F8ED6000341E7 /* Adium.scpt in Resources */ = {isa = PBXBuildFile; fileRef = E3F157EB071F8ED6000341E7 /* Adium.scpt */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4D1F1B4F0E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34BD9DA9053146CC000AB133;
+			remoteInfo = Adium;
+		};
+		4D1F1B510E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34BD9DE105314751000AB133;
+			remoteInfo = Adium.Framework;
+		};
+		4D1F1B530E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3485D68009EB416300232CC4;
+			remoteInfo = AdiumLibpurple;
+		};
+		4D1F1B550E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4B7F278305440C0800CDFC90;
+			remoteInfo = Purple;
+		};
+		4D1F1B570E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 349ECD2007C1BE2A0014623E;
+			remoteInfo = "Latex Plugin";
+		};
+		4D1F1B590E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34BD9EF10531476E000AB133;
+			remoteInfo = "Stress Test";
+		};
+		4D1F1B5B0E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3499F45006309AC80035B468;
+			remoteInfo = "WebKit Message View";
+		};
+		4D1F1B5D0E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4947F5CB0655E85200B791E5;
+			remoteInfo = Bonjour;
+		};
+		4D1F1B5F0E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 349C2EFA0867AC97000BF883;
+			remoteInfo = AdiumApplescriptRunner;
+		};
+		4D1F1B610E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34B323C009B9FEAC00029361;
+			remoteInfo = "IRC Service Libpurple Plugin";
+		};
+		4D1F1B630E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3417D26109C332B900FC413E;
+			remoteInfo = Translator;
+		};
+		4D1F1B650E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 38D8FAE10A8A4F350078E442;
+			remoteInfo = "QuickTime Plugin";
+		};
+		4D1F1B670E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3495D92D0BBF627A000EE14C;
+			remoteInfo = "SQL Logger";
+		};
+		4D1F1B690E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 312ED3CA0C7E875B00A6BDA9;
+			remoteInfo = "Unit tests";
+		};
+		4D1F1B6B0E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34A6876D0DD38D03008F0430;
+			remoteInfo = Facebook;
+		};
+		4D1F1B6D0E13C8F00058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7EC2E1990DF4390A008C86B4;
+			remoteInfo = "Developer links";
+		};
+		4D1F1B780E13C90D0058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B740E13C90D0058FE2A /* AIUtilities.framework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = AIUtilities;
+		};
+		4D1F1B7D0E13C91C0058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B740E13C90D0058FE2A /* AIUtilities.framework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = AIUtilities;
+		};
+		4D1F1B7F0E13C91C0058FE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 34BD9DAF05314751000AB133;
+			remoteInfo = Adium.Framework;
+		};
+		4D38C5620E13D6370077F9CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 34BD9CD1053146CC000AB133 /* Adium */;
+			remoteInfo = Adium;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		32DBCF980370C29C00C91783 /* QSAdiumPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAdiumPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		4D0C0E630E0FD1FF0027D189 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
@@ -47,12 +191,13 @@
 		4D0C0E660E0FD1FF0027D189 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		4D0C0E670E0FD1FF0027D189 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		4D0C0E680E0FD1FF0027D189 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Adium.xcodeproj; path = "../../../../../Sources/adium-trunk/Adium.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		4D1F1B740E13C90D0058FE2A /* AIUtilities.framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AIUtilities.framework.xcodeproj; path = "../../../../../Sources/adium-trunk/Frameworks/AIUtilities Framework/AIUtilities.framework.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		4D38C5650E13D73E0077F9CA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* Adium Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Adium Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36E191808312D8E00FADC55 /* QSChatActions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = QSChatActions.h; path = "../PlugIns/Chat Support.qsplugin/Contents/Resources/QSChatActions.h"; sourceTree = "QS Plugins"; };
 		D36E191908312D8E00FADC55 /* QSChatMediator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = QSChatMediator.h; path = "../PlugIns/Chat Support.qsplugin/Contents/Resources/QSChatMediator.h"; sourceTree = "QS Plugins"; };
-		D36E1A690831352400FADC55 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D36E1A6A0831352400FADC55 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AIUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EAB045068128A200774DFF /* QSAdiumPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSAdiumPlugIn.m; sourceTree = "<group>"; };
 		E1EAB047068128A800774DFF /* QSAdiumPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSAdiumPlugIn.h; sourceTree = "<group>"; };
 		E311E5E1079C3C6A00F668C8 /* AdiumyBase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdiumyBase.png; sourceTree = "<group>"; };
@@ -98,8 +243,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D36E1A6D0831352400FADC55 /* Adium.framework in Frameworks */,
-				D36E1A6E0831352400FADC55 /* AIUtilities.framework in Frameworks */,
+				4D1F1B710E13C8F70058FE2A /* Adium.framework in Frameworks */,
+				4D1F1B7A0E13C90F0058FE2A /* AIUtilities.framework in Frameworks */,
+				4D38C5660E13D73E0077F9CA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,13 +255,15 @@
 		0259C574FE90428111CA0C5A /* QSAdiumPlugIn */ = {
 			isa = PBXGroup;
 			children = (
+				4D1F1B740E13C90D0058FE2A /* AIUtilities.framework.xcodeproj */,
+				4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */,
 				4D0C0E620E0FD1FF0027D189 /* Configuration */,
 				E384107907C324FD008110E3 /* AdiumQuicksilverPlugin */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
-				2E58F364FFB232C311CA0CBA /* Frameworks */,
+				4D1F1B920E13CAC40058FE2A /* Frameworks */,
 				E3A43B040729E49A00C14EB6 /* TODO */,
 			);
 			name = QSAdiumPlugIn;
@@ -147,15 +295,6 @@
 				8D1AC9740486D14A00FE50C9 /* Adium Module.qsplugin */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D36E1A690831352400FADC55 /* Adium.framework */,
-				D36E1A6A0831352400FADC55 /* AIUtilities.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		32DBCF9E0370C38000C91783 /* Classes */ = {
@@ -202,6 +341,45 @@
 			name = Configuration;
 			path = ../../Configuration;
 			sourceTree = SOURCE_ROOT;
+		};
+		4D1F1B390E13C8F00058FE2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D1F1B500E13C8F00058FE2A /* Adium.app */,
+				4D1F1B520E13C8F00058FE2A /* Adium.framework */,
+				4D1F1B540E13C8F00058FE2A /* AdiumLibpurple.framework */,
+				4D1F1B560E13C8F00058FE2A /* Purple.AdiumPlugin */,
+				4D1F1B580E13C8F00058FE2A /* Latex Plugin.AdiumPlugin */,
+				4D1F1B5A0E13C8F00058FE2A /* Stress Test.AdiumPlugin */,
+				4D1F1B5C0E13C8F00058FE2A /* WebKit Message View.AdiumPlugin */,
+				4D1F1B5E0E13C8F00058FE2A /* Bonjour.AdiumPlugin */,
+				4D1F1B600E13C8F00058FE2A /* AdiumApplescriptRunner */,
+				4D1F1B620E13C8F00058FE2A /* IRC Service.AdiumLibpurplePlugin */,
+				4D1F1B640E13C8F00058FE2A /* Translator.AdiumPlugin */,
+				4D1F1B660E13C8F00058FE2A /* QuickTime.AdiumPlugin */,
+				4D1F1B680E13C8F00058FE2A /* SQL Logger.AdiumPlugin */,
+				4D1F1B6A0E13C8F00058FE2A /* Unit tests.octest */,
+				4D1F1B6C0E13C8F00058FE2A /* Facebook.AdiumPlugin */,
+				4D1F1B6E0E13C8F00058FE2A /* Developer Links.AdiumPlugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D1F1B750E13C90D0058FE2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D1F1B790E13C90D0058FE2A /* AIUtilities.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D1F1B920E13CAC40058FE2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D38C5650E13D73E0077F9CA /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
 		};
 		E384107907C324FD008110E3 /* AdiumQuicksilverPlugin */ = {
 			isa = PBXGroup;
@@ -263,6 +441,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				4D1F1B7E0E13C91C0058FE2A /* PBXTargetDependency */,
+				4D1F1B800E13C91C0058FE2A /* PBXTargetDependency */,
+				4D38C5630E13D6370077F9CA /* PBXTargetDependency */,
 			);
 			name = "Quicksilver Plugin";
 			productName = "Quicksilver Plugin";
@@ -279,6 +460,16 @@
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSAdiumPlugIn */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4D1F1B390E13C8F00058FE2A /* Products */;
+					ProjectRef = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
+				},
+				{
+					ProductGroup = 4D1F1B750E13C90D0058FE2A /* Products */;
+					ProjectRef = 4D1F1B740E13C90D0058FE2A /* AIUtilities.framework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Adium Module */,
@@ -286,6 +477,128 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4D1F1B500E13C8F00058FE2A /* Adium.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Adium.app;
+			remoteRef = 4D1F1B4F0E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B520E13C8F00058FE2A /* Adium.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Adium.framework;
+			remoteRef = 4D1F1B510E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B540E13C8F00058FE2A /* AdiumLibpurple.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AdiumLibpurple.framework;
+			remoteRef = 4D1F1B530E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B560E13C8F00058FE2A /* Purple.AdiumPlugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Purple.AdiumPlugin;
+			remoteRef = 4D1F1B550E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B580E13C8F00058FE2A /* Latex Plugin.AdiumPlugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Latex Plugin.AdiumPlugin";
+			remoteRef = 4D1F1B570E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B5A0E13C8F00058FE2A /* Stress Test.AdiumPlugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Stress Test.AdiumPlugin";
+			remoteRef = 4D1F1B590E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B5C0E13C8F00058FE2A /* WebKit Message View.AdiumPlugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "WebKit Message View.AdiumPlugin";
+			remoteRef = 4D1F1B5B0E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B5E0E13C8F00058FE2A /* Bonjour.AdiumPlugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Bonjour.AdiumPlugin;
+			remoteRef = 4D1F1B5D0E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B600E13C8F00058FE2A /* AdiumApplescriptRunner */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = AdiumApplescriptRunner;
+			remoteRef = 4D1F1B5F0E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B620E13C8F00058FE2A /* IRC Service.AdiumLibpurplePlugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "IRC Service.AdiumLibpurplePlugin";
+			remoteRef = 4D1F1B610E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B640E13C8F00058FE2A /* Translator.AdiumPlugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Translator.AdiumPlugin;
+			remoteRef = 4D1F1B630E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B660E13C8F00058FE2A /* QuickTime.AdiumPlugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QuickTime.AdiumPlugin;
+			remoteRef = 4D1F1B650E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B680E13C8F00058FE2A /* SQL Logger.AdiumPlugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQL Logger.AdiumPlugin";
+			remoteRef = 4D1F1B670E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B6A0E13C8F00058FE2A /* Unit tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Unit tests.octest";
+			remoteRef = 4D1F1B690E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B6C0E13C8F00058FE2A /* Facebook.AdiumPlugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Facebook.AdiumPlugin;
+			remoteRef = 4D1F1B6B0E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B6E0E13C8F00058FE2A /* Developer Links.AdiumPlugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Developer Links.AdiumPlugin";
+			remoteRef = 4D1F1B6D0E13C8F00058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D1F1B790E13C90D0058FE2A /* AIUtilities.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AIUtilities.framework;
+			remoteRef = 4D1F1B780E13C90D0058FE2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1AC9660486D14A00FE50C9 /* Resources */ = {
@@ -365,11 +678,30 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4D1F1B7E0E13C91C0058FE2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AIUtilities;
+			targetProxy = 4D1F1B7D0E13C91C0058FE2A /* PBXContainerItemProxy */;
+		};
+		4D1F1B800E13C91C0058FE2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Adium.Framework;
+			targetProxy = 4D1F1B7F0E13C91C0058FE2A /* PBXContainerItemProxy */;
+		};
+		4D38C5630E13D6370077F9CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Adium;
+			targetProxy = 4D38C5620E13D6370077F9CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		4D0C0E4F0E0FD1C50027D189 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D0C0E640E0FD1FF0027D189 /* Debug.xcconfig */;
 			buildSettings = {
+				ADIUM_SOURCE_ROOT = "/Volumes/myHD/Sources/adium-trunk";
 			};
 			name = Debug;
 		};
@@ -377,6 +709,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D0C0E680E0FD1FF0027D189 /* Release.xcconfig */;
 			buildSettings = {
+				ADIUM_SOURCE_ROOT = "/Volumes/myHD/Sources/adium-trunk";
 			};
 			name = Release;
 		};
@@ -399,29 +732,18 @@
 		4D0C0E550E0FD1C50027D189 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
+				ARCHS = "$(NATIVE_ARCH)";
+				BUNDLE_LOADER = "$(ADIUM_SOURCE_ROOT)/build/Development/Adium.app/Contents/MacOS/Adium";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					/Users/brian/Development/build,
+					/System/Library/PrivateFrameworks,
+					"~/Library/Frameworks",
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(ADIUM_SOURCE_ROOT)/build/Development",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"/Users/donovan/Development/Adium/adium 0.76/build\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SYSTEM_APPS_DIR)/Adium.app/Contents/Frameworks\"";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AdiumQuicksilverPlugin/Quicksilver_prefix.pch;
-				HEADER_SEARCH_PATHS = "$(HEADER_SEARCH_PATHS_QUOTED_FOR_TARGET_1)";
-				HEADER_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"/Users/donovan/Development/Adium/adium 0.76/build/Adium.framework/Versions/A/Headers/\"";
 				INFOPLIST_FILE = AdiumQuicksilverPlugin/Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = Quicksilver;
-				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = AdiumPlugin;
 				ZERO_LINK = YES;
@@ -431,26 +753,18 @@
 		4D0C0E560E0FD1C50027D189 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
+				ARCHS = "$(NATIVE_ARCH)";
+				BUNDLE_LOADER = "$(ADIUM_SOURCE_ROOT)/build/Development/Adium.app/Contents/MacOS/Adium";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					/Users/brian/Development/build,
+					/System/Library/PrivateFrameworks,
+					"~/Library/Frameworks",
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(ADIUM_SOURCE_ROOT)/build/Development",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"/Users/donovan/Development/Adium/adium 0.76/build\"";
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SYSTEM_APPS_DIR)/Adium.app/Contents/Frameworks\"";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AdiumQuicksilverPlugin/Quicksilver_prefix.pch;
-				HEADER_SEARCH_PATHS = "$(HEADER_SEARCH_PATHS_QUOTED_FOR_TARGET_1)";
-				HEADER_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"/Users/donovan/Development/Adium/adium 0.76/build/Adium.framework/Versions/A/Headers/\"";
 				INFOPLIST_FILE = AdiumQuicksilverPlugin/Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = Quicksilver;
-				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = AdiumPlugin;
 				ZERO_LINK = NO;
