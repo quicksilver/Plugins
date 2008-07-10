@@ -189,27 +189,31 @@ struct OpaqueDCMObjectRef;
 #define WRAPPERSTRING @"<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" /><title></title><style type=\"text/css\">@import \"file://localhost/Library/Widgets/Dictionary.wdgt/DictionaryData.css\";</style></head><body>%@</body></html>"
 int main (int argc, const char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-	NSString *word=[NSString stringWithUTF8String:argv[1]];
+    if(argc < 1) {
+        NSLog(@"%s needs 1 or 2 arguments.", basename(argv[0]));
+        return EXIT_SUCCESS;
+    }
+	NSString *word = [NSString stringWithUTF8String:argv[1]];
 //	NSLog(@"word %@",word);
 	
-	NSString *menuExtraPath=@"/Library/Widgets/Dictionary.wdgt/Dictionary.widgetplugin";
-	NSBundle *menuExtra=[NSBundle bundleWithPath:menuExtraPath];
+	NSString *menuExtraPath = @"/Library/Widgets/Dictionary.wdgt/Dictionary.widgetplugin";
+	NSBundle *menuExtra = [NSBundle bundleWithPath:menuExtraPath];
 	[menuExtra load];
-	id dictScript=[[NSClassFromString(@"DictionaryScriptObject") alloc]init];
-	id wordScript=[[NSClassFromString(@"WordScriptObject") alloc]init];
-	DSDictionary *dictionary=nil;
-	NSString *dictionaryName=nil;
-	if (argc>2)
-		dictionaryName=[NSString stringWithUTF8String:argv[2]];
+	id dictScript = [[NSClassFromString(@"DictionaryScriptObject") alloc] init];
+	id wordScript = [[NSClassFromString(@"WordScriptObject") alloc] init];
+	DSDictionary *dictionary = nil;
+	NSString *dictionaryName = nil;
+	if (argc > 2)
+		dictionaryName = [NSString stringWithUTF8String:argv[2]];
 	
 	if (dictionaryName)
-		dictionary=[dictScript dictionaryForName:dictionaryName];
+		dictionary = [dictScript dictionaryForName:dictionaryName];
 	else
-		dictionary=[[dictScript availableDictionaries]objectAtIndex:0];
-	NSArray *array=(NSArray *)[dictScript dictionary:dictionary
-											 findKey:word 
-											byMethod:@"bgwt"];
-	if (![array count])return -1;
+		dictionary = [[dictScript availableDictionaries] objectAtIndex:0];
+	NSArray *array = (NSArray *)[dictScript dictionary:dictionary
+                                               findKey:word 
+                                              byMethod:@"bgwt"];
+	if (![array count]) return -1;
 
 	NSString *string=[wordScript processWithXSLT:[[array objectAtIndex:0] dataForFieldTag:@"dsbd" withCache:NO]];
 	string=[string substringFromIndex:NSMaxRange([string rangeOfString:@"?>"])];

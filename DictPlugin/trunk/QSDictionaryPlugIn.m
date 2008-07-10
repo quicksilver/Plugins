@@ -14,28 +14,25 @@
 #define DICTIONARY_NAME	@"New Oxford American Dictionary"
 
 @implementation QSDictionaryPlugIn
-- (QSObject *)lookupWordInDictionary:(QSObject *)dObject{
-	[self lookupWord:[dObject stringValue] inDictionary:DICTIONARY_NAME];
-	return nil;
-}
-- (QSObject *)lookupWordInThesaurus:(QSObject *)dObject{
-	[self lookupWord:[dObject stringValue] inDictionary:THESAURUS_NAME];
-	return nil;
-}
 - (void)lookupWord:(NSString *)word inDictionary:(NSString *)dictName{
 	word=[word lowercaseString];
-//	NSTask *task=[NSTask taskWithLaunchPath:
-//								  arguments:[NSArray arrayWithObjects:word,dictName,nil]];
-//	NSData *data=[task launchAndReturnOutput];
-	NSString *string=nil;//[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    CFRange range;
+    range.location = 0;
+    range.length = [word length];
+    NSString *definition;
+    definition = (NSString*)DCSCopyTextDefinition( NULL, (CFStringRef)word, range);
+    
+	if (![definition length])
+        definition = [NSString stringWithFormat:@"\"%@\" could not be found.", word];
 
-		id cont=[[NSClassFromString(@"QSSimpleWebWindowController") alloc]initWithWindow:nil];
-		[[cont window]center];
-		[[cont window]setLevel:NSFloatingWindowLevel];
-		[[cont window]setTitle:[NSString stringWithFormat:@"%@",word]];
-		[[cont window]makeKeyAndOrderFront:nil];	
+    id cont = [[NSClassFromString(@"QSSimpleWebWindowController") alloc] initWithWindow:nil];
+    [[cont window] center];
+    [[cont window] setLevel:NSFloatingWindowLevel];
+    [[cont window] setTitle:[NSString stringWithFormat:@"%@", word]];
+    [[cont window] makeKeyAndOrderFront:nil];	
 		
-	NSString *str=[NSString stringWithFormat:@"\"%@\" \"%@\" \"%@\"",[[NSBundle bundleForClass:[self class]]pathForResource:@"QSDictionaryLookup" ofType:@""],word,dictName];
+#if 0
+	NSString *str = [NSString stringWithFormat:@"\"%@\" \"%@\" \"%@\"",[[NSBundle bundleForClass:[self class]] pathForResource:@"QSDictionaryLookup" ofType:@""], word, dictName];
 	//NSLog(@"string %@",str);
 	FILE *file = popen( [str UTF8String], "r" );
 	NSMutableData *pipeData=[NSMutableData data];
@@ -46,12 +43,20 @@
 		while (length = fread( buffer, 1, sizeof( buffer ), file ))[pipeData appendBytes:buffer length:length];
 		string=[[[NSString alloc]initWithData:pipeData encoding:NSUTF8StringEncoding]autorelease];
 		pclose( file );
-	} 
-	if (![string length])string=[NSString stringWithFormat:@"\"%@\" could not be found.",word];
-	
+	}
+#endif
 
-	[cont loadHTMLString:string baseURL:nil];
+	[cont loadHTMLString:definition baseURL:nil];
 }
 
+- (QSObject *)lookupWordInDictionary:(QSObject *)dObject{
+    [self lookupWord:[dObject stringValue] inDictionary:DICTIONARY_NAME];
+    return nil;
+}
+
+- (QSObject *)lookupWordInThesaurus:(QSObject *)dObject{
+    [self lookupWord:[dObject stringValue] inDictionary:THESAURUS_NAME];
+    return nil;
+}
 
 @end

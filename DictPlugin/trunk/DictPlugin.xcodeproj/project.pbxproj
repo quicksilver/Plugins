@@ -18,6 +18,23 @@
 		E1EAB046068128A200774DFF /* DictPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* DictPlugin.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4DAD2F340E12633B00932F54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DAD2F2D0E12633B00932F54 /* QSDictionaryLookup.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E /* QSDictionaryLookup */;
+			remoteInfo = QSDictionaryLookup;
+		};
+		4DAD2F3C0E12634600932F54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DAD2F360E12634600932F54 /* DictProtocolTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1107320486CEB800E47090 /* DictProtocolTest.app */;
+			remoteInfo = DictProtocolTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0A1D9C8D07377C390069C3C4 /* NSMutableStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableStringAdditions.h; sourceTree = "<group>"; };
 		0A1D9C8E07377C390069C3C4 /* NSMutableStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableStringAdditions.m; sourceTree = "<group>"; };
@@ -31,6 +48,8 @@
 		4D0C0D880E0FC0480027D189 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		4D0C0D890E0FC0480027D189 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		4D0C0D8A0E0FC0480027D189 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		4DAD2F2D0E12633B00932F54 /* QSDictionaryLookup.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSDictionaryLookup.xcodeproj; path = QSDictionaryLookupProject/QSDictionaryLookup.xcodeproj; sourceTree = "<group>"; };
+		4DAD2F360E12634600932F54 /* DictProtocolTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = DictProtocolTest.xcodeproj; sourceTree = "<group>"; };
 		7FB0A2E50935FD5E00F75926 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FB0A2E70935FD6700F75926 /* QSDictionaryPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSDictionaryPlugIn.h; sourceTree = "<group>"; };
 		7FB0A2E80935FD6700F75926 /* QSDictionaryPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSDictionaryPlugIn.m; sourceTree = "<group>"; };
@@ -54,6 +73,8 @@
 		0259C574FE90428111CA0C5A /* DictPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				4DAD2F360E12634600932F54 /* DictProtocolTest.xcodeproj */,
+				4DAD2F2D0E12633B00932F54 /* QSDictionaryLookup.xcodeproj */,
 				4D0C0D840E0FC0480027D189 /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
@@ -126,6 +147,22 @@
 			path = ../../Configuration;
 			sourceTree = SOURCE_ROOT;
 		};
+		4DAD2F2E0E12633B00932F54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DAD2F350E12633B00932F54 /* QSDictionaryLookup */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DAD2F370E12634600932F54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DAD2F3D0E12634600932F54 /* DictProtocolTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,12 +195,39 @@
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* DictPlugin */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4DAD2F370E12634600932F54 /* Products */;
+					ProjectRef = 4DAD2F360E12634600932F54 /* DictProtocolTest.xcodeproj */;
+				},
+				{
+					ProductGroup = 4DAD2F2E0E12633B00932F54 /* Products */;
+					ProjectRef = 4DAD2F2D0E12633B00932F54 /* QSDictionaryLookup.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Dictionary Module */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4DAD2F350E12633B00932F54 /* QSDictionaryLookup */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = QSDictionaryLookup;
+			remoteRef = 4DAD2F340E12633B00932F54 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4DAD2F3D0E12634600932F54 /* DictProtocolTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = DictProtocolTest.app;
+			remoteRef = 4DAD2F3C0E12634600932F54 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1AC9660486D14A00FE50C9 /* Resources */ = {
