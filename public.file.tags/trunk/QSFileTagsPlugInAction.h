@@ -8,16 +8,11 @@
 
 #import <QSCore/QSObject.h>
 #import <QSCore/QSActionProvider.h>
-#import "QSFileTagsPlugInAction.h"
-
-
-#define QSFileTagType @"qs.tag.file"
 
 #define QSFileTagsPlugInType @"QSFileTagsPlugIn_Type"
 
 @interface QSFileTagsPlugInAction : QSActionProvider
 {
 }
-+ (NSString *)queryStringForTag:(NSString *)tag;
 @end
 

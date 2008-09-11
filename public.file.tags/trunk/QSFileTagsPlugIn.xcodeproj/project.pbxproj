@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DC29E4F0E793D2000B5055F /* QSMDTagsQueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC29E4E0E793D2000B5055F /* QSMDTagsQueryManager.m */; };
 		7FA1BE8F083BE47B003EE7CA /* QSFileTagsPlugInAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1BE8E083BE47B003EE7CA /* QSFileTagsPlugInAction.m */; };
 		7FA1BF75083BEB0F003EE7CA /* QSFileTagsPrefPane.nib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1BF74083BEB0F003EE7CA /* QSFileTagsPrefPane.nib */; };
 		7FA1C025083CFF09003EE7CA /* QSFileTagsPlugInSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1C024083CFF09003EE7CA /* QSFileTagsPlugInSource.m */; };
@@ -21,6 +22,8 @@
 		4D0C0E300E0FD1160027D189 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		4D0C0E310E0FD1160027D189 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		4D0C0E320E0FD1160027D189 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		4DC29E4D0E793D2000B5055F /* QSMDTagsQueryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSMDTagsQueryManager.h; sourceTree = "<group>"; };
+		4DC29E4E0E793D2000B5055F /* QSMDTagsQueryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSMDTagsQueryManager.m; sourceTree = "<group>"; };
 		7FA1BE8D083BE47B003EE7CA /* QSFileTagsPlugInAction.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSFileTagsPlugInAction.h; sourceTree = "<group>"; };
 		7FA1BE8E083BE47B003EE7CA /* QSFileTagsPlugInAction.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSFileTagsPlugInAction.m; sourceTree = "<group>"; };
 		7FA1BF74083BEB0F003EE7CA /* QSFileTagsPrefPane.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSFileTagsPrefPane.nib; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				7FA1BE8E083BE47B003EE7CA /* QSFileTagsPlugInAction.m */,
 				7FA1C023083CFF09003EE7CA /* QSFileTagsPlugInSource.h */,
 				7FA1C024083CFF09003EE7CA /* QSFileTagsPlugInSource.m */,
+				4DC29E4D0E793D2000B5055F /* QSMDTagsQueryManager.h */,
+				4DC29E4E0E793D2000B5055F /* QSMDTagsQueryManager.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			files = (
 				7FA1BE8F083BE47B003EE7CA /* QSFileTagsPlugInAction.m in Sources */,
 				7FA1C025083CFF09003EE7CA /* QSFileTagsPlugInSource.m in Sources */,
+				4DC29E4F0E793D2000B5055F /* QSMDTagsQueryManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

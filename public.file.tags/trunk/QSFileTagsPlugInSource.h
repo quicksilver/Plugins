@@ -6,12 +6,8 @@
 //  Copyright __MyCompanyName__ 2005. All rights reserved.
 //
 
-
-#import "QSFileTagsPlugInSource.h"
-
-@interface QSFileTagsPlugInSource : QSObjectSource{
-	NSMetadataQuery *tagQuery;
+@interface QSFileTagsPlugInSource : QSObjectSource {
+    
 }
-- (NSArray *) tagsFromQuery:(NSMetadataQuery *)aQuery;
 @end
 

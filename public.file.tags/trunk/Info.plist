@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>84</string>
+	<string>10D</string>
 	<key>NSPrincipalClass</key>
 	<string>QSFileTagsPlugIn</string>
 	<key>QSActions</key>
@@ -89,6 +89,7 @@
 			<key>directTypes</key>
 			<array>
 				<string>qs.tag.file</string>
+				<string>NSStringPboardType</string>
 			</array>
 			<key>icon</key>
 			<string>Tag</string>
@@ -101,7 +102,7 @@
 	<key>QSDefaults</key>
 	<dict>
 		<key>QSTagPrefix</key>
-		<string>@</string>
+		<string>&amp;</string>
 	</dict>
 	<key>QSPlugIn</key>
 	<dict>
