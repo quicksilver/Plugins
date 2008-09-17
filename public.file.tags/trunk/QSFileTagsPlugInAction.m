@@ -64,21 +64,21 @@
 
 - (QSObject *)addTagsForFile:(QSObject *)dObject tags:(QSObject *)iObject {
 	NSArray *newTags = [[iObject stringValue] componentsSeparatedByString:@" "];
-	newTags = [[self class] performSelector:@selector(stringByAddingTagPrefix:) onObjectsInArray:newTags returnValues:YES];
+	newTags = [[QSMDTagsQueryManager sharedInstance] performSelector:@selector(stringByAddingTagPrefix:) onObjectsInArray:newTags returnValues:YES];
 	[self tagFiles:[dObject validPaths] add:newTags remove:nil set:nil];
 	return nil;
 }
 
 - (QSObject *)removeTagsForFile:(QSObject *)dObject tags:(QSObject *)iObject {
 	NSArray *newTags = [[iObject stringValue] componentsSeparatedByString:@" "];
-	newTags = [[self class] performSelector:@selector(stringByAddingTagPrefix:) onObjectsInArray:newTags returnValues:YES];
+	newTags = [[QSMDTagsQueryManager sharedInstance] performSelector:@selector(stringByAddingTagPrefix:) onObjectsInArray:newTags returnValues:YES];
 	[self tagFiles:[dObject validPaths] add:nil remove:newTags set:nil];
 	return nil;
 }
 
 - (QSObject *)setTagsForFile:(QSObject *)dObject tags:(QSObject *)iObject {
 	NSArray *newTags = [[iObject stringValue] componentsSeparatedByString:@" "];
-	newTags = [[self class] performSelector:@selector(stringByAddingTagPrefix:) onObjectsInArray:newTags returnValues:YES];
+	newTags = [[QSMDTagsQueryManager sharedInstance] performSelector:@selector(stringByAddingTagPrefix:) onObjectsInArray:newTags returnValues:YES];
 	[self tagFiles:[dObject validPaths] add:nil remove:nil set:newTags];
 	return nil;
 }
@@ -93,7 +93,7 @@
 	NSWorkspace *ws = [NSWorkspace sharedWorkspace];
 	NSString *comment = [ws commentForFile:[dObject singleFilePath]];
 	NSArray *tags = [self tagsFromString:comment];
-	tags = [[self class] performSelector:@selector(stringByRemovingTagPrefix:) onObjectsInArray:tags returnValues:YES];
+	tags = [[QSMDTagsQueryManager sharedInstance] performSelector:@selector(stringByRemovingTagPrefix:) onObjectsInArray:tags returnValues:YES];
 	
 	QSObject *textObject = [QSObject textProxyObjectWithDefaultValue:[tags componentsJoinedByString:@" "]];
 	return [NSArray arrayWithObject:textObject]; //[QSLibarrayForType:NSFilenamesPboardType];
@@ -106,6 +106,10 @@
 	NSArray *tagObjects = [self performSelector:@selector(objectForTag:) onObjectsInArray:tags returnValues:YES];
 	[[QSReg preferredCommandInterface] showArray:tagObjects];
 	return nil;
+}
+
+- (QSObject *)objectForTag:(NSString *)tag {
+	return [QSObject objectWithType:QSFileTagType value:tag name:[[QSMDTagsQueryManager sharedInstance] stringByRemovingTagPrefix:tag]]; 	
 }
 
 - (void)runQuery:(NSString *)query withName:(NSString *)name slices:(NSArray *)slices {
