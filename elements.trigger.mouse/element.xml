@@ -1,0 +1,26 @@
+<element id="com.blacktree.Quicksilver.QSMouseTriggerPlugIn" name="Mouse Triggers" version="143">
+    <info>
+        <category>Quicksilver</category>
+        <image>Mouse</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSProxies">
+            <object-proxy id="QSMouseTriggerDraggedObjectProxy">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>Object</string>
+                        <key>name</key>
+                        <string>Mouse Trigger Dragged Object</string>
+                        <key>providerClass</key>
+                        <string>QSMouseTriggerManager</string>
+                    </dict>
+                </plist>
+            </object-proxy>
+        </extension>
+        <extension point="QSTriggerManagers">
+            <trigger-manager id="QSMouseTrigger" class="QSMouseTriggerManager"></trigger-manager>
+        </extension>
+    </extensions>
+</element>

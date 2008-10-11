@@ -1,0 +1,39 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = QSDesktopBackgroundView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {
+                setMouseTriggerAnchorMask = id; 
+                setMouseTriggerModifierFlag = id; 
+                setMouseTriggerType = id; 
+                setMouseTriggerValueForSender = id; 
+            }; 
+            CLASS = QSMouseTriggerManager; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                anchorView = NSView; 
+                anywhereButton = NSButton; 
+                desktopImageView = id; 
+                menuBarAnchorButton = NSButton; 
+                modifiersView = NSView; 
+                mouseTriggerClickCountField = NSTextField; 
+                mouseTriggerClickCountStepper = NSStepper; 
+                mouseTriggerDelayField = NSTextField; 
+                mouseTriggerDelaySwitch = NSButton; 
+                mouseTriggerObject = id; 
+                mouseTriggerScreenPopUp = NSPopUpButton; 
+                mouseTriggerTypePopUp = NSPopUpButton; 
+            }; 
+            SUPERCLASS = QSTriggerManager; 
+        }, 
+        {CLASS = QSMouseTriggerSettings; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = QSTriggerManager; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {settingsView = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
