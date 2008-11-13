@@ -1,0 +1,440 @@
+<html>
+<head>
+<title>MTCoreAudioStream</title>
+</head>
+
+<body>
+<h1>MTCoreAudioStream</h1>
+<p>
+An <strong>MTCoreAudioStream</strong> instance represents one audio stream
+of an audio device.  Audio streams have an implicit direction (either record
+or playback).  For more information about what exactly an audio
+stream is, see
+<a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/AudioHardware.h">AudioHardware.h</a>
+and Apple's
+<a href="http://developer.apple.com/audio/pdf/coreaudio.pdf">CoreAudio library documentation</a>.
+</p>
+
+<p>
+<strong>MTCoreAudioStream</strong>s control the audio data formats used to
+communicate between the the application and the driver
+(<a href="MTCoreAudioConstantsAndTypes.html#MTCoreAudioStreamSide">kMTCoreAudioStreamLogicalSide</a>)
+and between the driver and the audio hardware device
+(<a href="MTCoreAudioConstantsAndTypes.html#MTCoreAudioStreamSide">kMTCoreAudioStreamPhysicalSide</a>).
+</p>
+
+<h2>Method Types</h2>
+<hr>
+<ul plain>
+	<li>Creating instances
+	<ul plain>
+		<br>
+		<li> <a href="#initWithStreamID:withOwningDevice:">- initWithStreamID:withOwningDevice:</a>
+	</ul>
+
+	<br>
+	<li>Working with delegates
+	<ul plain>
+		<br>
+		<li> <a href="#setDelegate:">- setDelegate:</a>
+		<li> <a href="#delegate">- delegate</a>
+		<br><br>
+		<li> <a href="#delegate-methods">Methods implemented by the delegate</a>
+	</ul>
+
+	<br>
+	<li>A stream's identifying information
+	<ul plain>
+		<br>
+		<li> <a href="#streamName">- streamName</a>
+		<li> <a href="#direction">- direction</a>
+		<li> <a href="#owningDevice">- owningDevice</a>
+		<li> <a href="#streamID">- streamID</a>
+		<li> <a href="#deviceStartingChannel">- deviceStartingChannel</a>
+		<li> <a href="#numberChannels">- numberChannels</a>
+	</ul>
+
+	<br>
+	<li>Working with sources
+	<ul plain>
+		<br>
+		<li> <a href="#dataSource">- dataSource</a>
+		<li> <a href="#dataSources">- dataSources</a>
+		<li> <a href="#canSetDataSource">- canSetDataSource</a>
+		<li> <a href="#setDataSource:">- setDataSource:</a>
+		<li> <a href="#clockSource">- clockSource</a>
+		<li> <a href="#clockSources">- clockSources</a>
+		<li> <a href="#setClockSource:">- setClockSource:</a>
+	</ul>
+
+	<br>
+	<li>Working with stream formats
+	<ul plain>
+		<br>
+		<li> <a href="#streamDescriptionForSide:">- streamDescriptionForSide:</a>
+		<li> <a href="#streamDescriptionsForSide:">- streamDescriptionsForSide:</a>
+		<li> <a href="#setStreamDescription:forSide:">- setStreamDescription:forSide:</a>
+		<li> <a href="#matchStreamDescription:forSide:">- matchStreamDescription:forSide:</a>
+	</ul>
+
+	<br>
+	<li>Working with volume
+	<ul plain>
+		<br>
+		<li> <a href="#volumeInfoForChannel:">- volumeInfoForChannel:</a>
+		<li> <a href="#volumeForChannel:">- volumeForChannel:</a>
+		<li> <a href="#volumeInDecibelsForChannel:">- volumeInDecibelsForChannel:</a>
+		<li> <a href="#setVolume:forChannel:">- setVolume:forChannel:</a>
+		<li> <a href="#setVolumeDecibels:forChannel:">- setVolumeDecibels:forChannel:</a>
+		<li> <a href="#volumeInDecibelsForVolume:forChannel:">- volumeInDecibelsForVolume:forChannel:</a>
+		<li> <a href="#volumeForVolumeInDecibels:forChannel:">- volumeForVolumeInDecibels:forChannel:</a>
+		<li> <a href="#setMute:forChannel:">- setMute:forChannel:</a>
+		<li> <a href="#setPlayThru:forChannel:">- setPlayThru:forChannel:</a>
+	</ul>
+</ul>
+
+<h2>Instance Methods</h2>
+<hr>
+
+<h3><a name="canSetDataSource">canSetDataSource</a></h3>
+<code>- (Boolean) canSetDataSource</code>
+<br><br>
+Returns <code>YES</code> if the source for this stream can be
+changed by
+<a href="#setDataSource:">setDataSource:</a>
+to one of the values returned by
+<a href="#dataSources">dataSources</a>,
+and <code>NO</code> if that property can't be set under program control.
+If this method returns <code>NO</code> but <code>dataSources</code>
+returns multiple sources, then the value of
+<a href="#dataSource">dataSource</a>
+is informational, and reflects an externally-controlled choice, such
+as Headphones vs. Internal Speakers.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="clockSource">clockSource</a></h3>
+<code>- (NSString *) clockSource</code>
+<br><br>
+Returns the current clock source
+for this stream.
+Returns <code>nil</code> if this stream does not define a clock source.
+Typically, sources won't be defined if a device has only one clock source.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="clockSources">clockSources</a></h3>
+<code>- (NSArray *)  clockSources</code>
+<br><br>
+Returns an NSArray of NSStrings representing the available clock sources for this
+stream.  Returns <code>nil</code> if the stream
+doesn't feel like it defines any clock sources.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="dataSource">dataSource</a></h3>
+<code>- (NSString *) dataSource</code>
+<br><br>
+Returns the current data source (such as "Internal Microphone" or "Line in")
+for this stream.
+Returns <code>nil</code> if this stream does not define a source.
+Typically, sources won't be defined if a device has only one port.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="dataSources">dataSources</a></h3>
+<code>- (NSArray *)  dataSources</code>
+<br><br>
+Returns an NSArray of NSStrings representing the available sources for this
+stream.  Returns an empty NSArray if the device doesn't feel like it defines a master source.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="delegate">delegate</a></h3>
+<code>- (id) delegate</code>
+<br><br>
+Returns the delegate for the instance.  See
+<a href="#delegate-methods">methods implemented by the delegate</a>.  Does
+not retain the delegate, so make sure you change or remove the delegate
+before deallocating <i>theDelegate</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceStartingChannel">deviceStartingChannel</a></h3>
+<code>- (UInt32) deviceStartingChannel</code>
+<br><br>
+Returns the channel of the owning <a href="MTCoreAudioDevice.html">MTCoreAudioDevice</a> corresponding
+to the first channel of this stream.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="direction">direction</a></h3>
+<code>- (MTCoreAudioDirection) direction</code>
+<br><br>
+Returns the <a href="MTCoreAudioConstantsAndTypes.html#MTCoreAudioDirection">direction</a>
+of this stream.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="initWithStreamID:withOwningDevice:">initWithStreamID:withOwningDevice:</a></h3>
+<code>- (MTCoreAudioStream *) initWithStreamID:(AudioStreamID)theID withOwningDevice:(id)theOwningDevice</code>
+<br><br>
+Initializes a new instance.  You shouldn't call this method directly; use
+<a href="MTCoreAudioDevice.html#streamsForDirection:">streamsForDirection:</a>
+(<a href="MTCoreAudioDevice.html">MTCoreAudioDevice</a>) to obtain the streams for a device's
+<a href="MTCoreAudioConstantsAndTypes.html#MTCoreAudioDirection">direction</a>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="matchStreamDescription:forSide:">matchStreamDescription:forSide:</a></h3>
+<code>- (MTCoreAudioStreamDescription *) matchStreamDescription:(MTCoreAudioStreamDescription *)theDescription forSide:(MTCoreAudioStreamSide)theSide</code>
+<br><br>
+Returns a new <a href="MTCoreAudioStreamDescription.html">MTCoreAudioStreamDescription</a>
+that's the device's best match to an available stream format on
+<i>theSide</i>.  Matching is done at the discretion of the device driver; returned
+formats may be significantly different than that passed in.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="numberChannels">numberChannels</a></h3>
+<code>- (UInt32) numberChannels</code>
+<br><br>
+Returns the number of channels in this stream.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="owningDevice">owningDevice</a></h3>
+<code>- (id) owningDevice</code>
+<br><br>
+Returns the <a href="MTCoreAudioDevice.html">MTCoreAudioDevice</a> instance to which
+this stream belongs.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setClockSource:">setClockSource:</a></h3>
+<code>- (void)       setClockSource:(NSString *)theSource</code>
+<br><br>
+Sets the clock source for this stream.  <i>theSource</i> should
+be one of the values returned by <a href="#clockSources">clockSources</a>.
+This method has no effect if <i>theSource</i> is not an available clock source.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setDataSource:">setDataSource:</a></h3>
+<code>- (void)       setDataSource:(NSString *)theSource</code>
+<br><br>
+Sets the source for this stream.  <i>theSource</i> should
+be one of the values returned by <a href="#dataSources">dataSources</a>.
+This method has no effect if <i>theSource</i> is not an available source.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setDelegate:">setDelegate:</a></h3>
+<code>- (void) setDelegate:(id)theDelegate</code>
+<br><br>
+Sets the delegate of the instance to <i>theDelegate</i>.  Does
+not retain <i>theDelegate</i>, so make sure you change or remove the delegate
+before deallocating <i>theDelegate</i>.  If the instance does not have a
+delegate, then the <a href="#owningDevice">owning device</a>'s delegate is
+tried instead. 
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setMute:forChannel:">setMute:forChannel:</a></h3>
+<code>- (void)    setMute:(BOOL)isMuted forChannel:(UInt32)theChannel</code>
+<br><br>
+If <i>isMuted</i> is <code>true</code>, mute <i>theChannel</i>,
+otherwise, unmute it.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setPlayThru:forChannel:">setPlayThru:forChannel:</a></h3>
+<code>- (void)    setPlayThru:(BOOL)isPlayingThru forChannel:(UInt32)theChannel</code>
+<br><br>
+If <i>isPlayingThru</i> is <code>true</code>, enable Play-Thru mode on <i>theChannel</i>,
+otherwise, disable it.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setStreamDescription:forSide:">setStreamDescription:forSide:</a></h3>
+<code>- (Boolean) setStreamDescription:(MTCoreAudioStreamDescription *)theDescription forSide:(MTCoreAudioStreamSide)theSide</code>
+<br><br>
+Sets the format of <i>theSide</i> side of the stream to <i>theDescription</i>.  Typically,
+on the <a href="MTCoreAudioConstantsAndTypes.html#MTCoreAudioStreamSide">kMTCoreAudioStreamPhysicalSide</a>
+side, attributes of the stream format must exactly match an available format.
+Returns <code>true</code> if the stream format was changed successfully, and
+<code>false</code> if not.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setVolume:forChannel:">setVolume:forChannel:</a></h3>
+<code>- (void)    setVolume:(Float32)theVolume forChannel:(UInt32)theChannel</code>
+<br><br>
+Sets the volume of <i>theChannel</i> to <i>theVolume</i>, which should
+be between 0.0 and 1.0.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setVolumeDecibels:forChannel:">setVolumeDecibels:forChannel:</a></h3>
+<code>- (void)    setVolumeDecibels:(Float32)theVolumeDecibels forChannel:(UInt32)theChannel</code>
+<br><br>
+Sets the volume of <i>theChannel</i> to <i>theVolumeDecibels</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="streamDescriptionForSide:">streamDescriptionForSide:</a></h3>
+<code>- (MTCoreAudioStreamDescription *) streamDescriptionForSide:(MTCoreAudioStreamSide)theSide</code>
+<br><br>
+Returns the current <a href="MTCoreAudioStreamDescription.html">stream format</a> for
+side <i>theSide</i> of the stream.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="streamDescriptionsForSide:">streamDescriptionsForSide:</a></h3>
+<code>- (NSArray *) streamDescriptionsForSide:(MTCoreAudioStreamSide)theSide</code>
+<br><br>
+Returns an NSArray of <a href="MTCoreAudioStreamDescription.html">MTCoreAudioStreamDescription</a>s
+of all of the stream formats supported by <i>theSide</i> of the stream.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="streamID">streamID</a></h3>
+<code>- (AudioStreamID) streamID</code>
+<br><br>
+Returns the <strong>AudioStreamID</strong> (<strong>UInt32</strong>) of the current stream,
+in case you need to do anything the Hard Way.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="streamName">streamName</a></h3>
+<code>- (NSString *) streamName</code>
+<br><br>
+The human-readable name of this stream, if any.  Returns <code>nil</code> if this stream doesn't have a name.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="volumeForChannel:">volumeForChannel:</a></h3>
+<code>- (Float32) volumeForChannel:(UInt32)theChannel</code>
+<br><br>
+Returns the current volume of <i>theChannel</i> as a Float32 between 0.0 and 1.0.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="volumeForVolumeInDecibels:forChannel:">volumeForVolumeInDecibels:forChannel:</a></h3>
+<code>- (Float32) volumeForVolumeInDecibels:(Float32)theVolumeDecibels forChannel:(UInt32)theChannel</code>
+<br><br>
+Convert from decibels to linear volume, according to the device's channel's characteristics.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="volumeInDecibelsForChannel:">volumeInDecibelsForChannel:</a></h3>
+<code>- (Float32) volumeInDecibelsForChannel:(UInt32)theChannel</code>
+<br><br>
+Returns the volume of <i>theChannel</i> as a Float32, measured
+in decibels.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="volumeInDecibelsForVolume:forChannel:">volumeInDecibelsForVolume:forChannel:</a></h3>
+<code>- (Float32) volumeInDecibelsForVolume:(Float32)theVolume forChannel:(UInt32)theChannel</code>
+<br><br>
+Convert from linear volume to decibels, according to the device's channel's characteristics.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="volumeInfoForChannel:">volumeInfoForChannel:</a></h3>
+<code>- (MTCoreAudioVolumeInfo) volumeInfoForChannel:(UInt32)theChannel</code>
+<br><br>
+Returns an <a href="MTCoreAudioConstantsAndTypes.html#MTCoreAudioVolumeInfo">MTCoreAudioVolumeInfo</a> structure
+which collects all the interesting volume-related information about <i>theChannel</i>
+together, including whether the channel has a volume control, whether
+it can be muted, whether it is muted, the current volume setting, and more.
+<br><br>
+<hr width="25%" align=left>
+
+<hr>
+
+<h2><a name="delegate-methods">Methods implemented by the delegate</a></h2>
+<hr>
+
+
+<h3><a name="audioStreamClockSourceDidChange:">audioStreamClockSourceDidChange:</a></h3>
+<code>- (void) audioStreamClockSourceDidChange:(MTCoreAudioStream *)theStream</code>
+<br><br>
+Sent when the <a href="#clockSource">clock source</a> for <i>theStream</i> changes.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioStreamMuteDidChange:forChannel:">audioStreamMuteDidChange:forChannel:</a></h3>
+<code>- (void) audioStreamMuteDidChange:(MTCoreAudioStream *)theStream forChannel:(UInt32)theChannel</code>
+<br><br>
+Sent when the mute setting for <i>theChannel</i> changes.  If the delegate doesn't
+implement this method but <strong>does</strong> implement
+<a href="#audioStreamVolumeInfoDidChange:forChannel:">audioStreamVolumeInfoDidChange:forChannel:</a>,
+that method is called.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioStreamPlayThruDidChange:forChannel:">audioStreamPlayThruDidChange:forChannel:</a></h3>
+<code>- (void) audioStreamPlayThruDidChange:(MTCoreAudioStream *)theStream forChannel:(UInt32)theChannel</code>
+<br><br>
+Sent when the Play-Thru setting for <i>theChannel</i> changes.  If the delegate doesn't
+implement this method but <strong>does</strong> implement
+<a href="#audioStreamVolumeInfoDidChange:forChannel:">audioStreamVolumeInfoDidChange:forChannel:</a>,
+that method is called.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioStreamSourceDidChange:">audioStreamSourceDidChange:</a></h3>
+<code>- (void) audioStreamSourceDidChange:(MTCoreAudioStream *)theStream</code>
+<br><br>
+Sent when the <a href="#dataSource">data source</a> for <i>theStream</i> changes.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioStreamStreamDescriptionDidChange:forSide:">audioStreamStreamDescriptionDidChange:forSide:</a></h3>
+<code>- (void) audioStreamStreamDescriptionDidChange:(MTCoreAudioStream *)theStream forSide:(MTCoreAudioStreamSide)theSide</code>
+<br><br>
+Sent when the stream format of the stream changes.  Note that, in real life, this will
+probably never get sent, because CoreAudio resets the stream IDs when the format
+changes, at least on my audio hardware.  See
+<a href="MTCoreAudioDevice.html#audioDeviceStreamDescriptionDidChange:forChannel:forDirection:">audioDeviceStreamDescriptionDidChange:forChannel:forDirection:</a>
+and
+<a href="MTCoreAudioDevice.html#audioDeviceStreamsListDidChange:">audioDeviceStreamsListDidChange:</a>
+(<a href="MTCoreAudioDevice.html">MTCoreAudioDevice instance delegate methods</a>) for more reliable means
+of detecting stream format changes.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioStreamVolumeDidChange:forChannel:">audioStreamVolumeDidChange:forChannel:</a></h3>
+<code>- (void) audioStreamVolumeDidChange:(MTCoreAudioStream *)theStream forChannel:(UInt32)theChannel</code>
+<br><br>
+Sent when the volume for <i>theChannel</i> changes.  If the delegate doesn't
+implement this method but <strong>does</strong> implement
+<a href="#audioStreamVolumeInfoDidChange:forChannel:">audioStreamVolumeInfoDidChange:forChannel:</a>,
+that method is called.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioStreamVolumeInfoDidChange:forChannel:"></a>audioStreamVolumeInfoDidChange:forChannel:</h3>
+<code>- (void) audioStreamVolumeInfoDidChange:(MTCoreAudioStream *)theStream forChannel:(UInt32)theChannel</code>
+<br><br>
+Sent when any of the channel's volume, mute, or Play-Thru settings changes, if the more specific
+methods don't exist in the delegate.  See
+<a href="#audioStreamVolumeDidChange:forChannel:">audioStreamVolumeDidChange:forChannel:</a>,
+<a href="#audioStreamMuteDidChange:forChannel:">audioStreamMuteDidChange:forChannel:</a> and
+<a href="#audioStreamPlayThruDidChange:forChannel:">audioStreamPlayThruDidChange:forChannel:</a>.
+<br><br>
+<hr width="25%" align=left>
+
+
+
+<hr>    
+
+<a href="http://aldebaran.armory.com/~zenomt/">Mike</a> &gt;
+<a href="http://aldebaran.armory.com/~zenomt/macosx/">Mac OS X</a> &gt;
+<a href="./index.hmtl">MTCoreAudio.framework</a> &gt;
+MTCoreAudioStream
+
+</body>
+</html>

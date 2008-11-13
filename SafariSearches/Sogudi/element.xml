@@ -1,0 +1,38 @@
+<element id="com.blacktree.Quicksilver.QSSogudiPlugIn" name="Sogudi Queries" version="25">
+    <info>
+        <category>Web</category>
+        <category>Search</category>
+        <image>Sogudi</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetSogudiShortcuts">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetSogudiShortcuts</string>
+                        <key>icon</key>
+                        <string>Find</string>
+                        <key>requiresSettingsPath</key>
+                        <true></true>
+                        <key>settings</key>
+                        <dict>
+                            <key>parser</key>
+                            <string>QSSogudiLinkParser</string>
+                            <key>path</key>
+                            <string>~/Library/Application Support/SogudiShortcuts.plist</string>
+                            <key>skipItem</key>
+                            <integer>1</integer>
+                        </dict>
+                        <key>source</key>
+                        <string>QSFileSystemObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="QSFSParsers">
+            <file-parser id="QSSogudiLinkParser" class="QSSogudiLinkParser"></file-parser>
+        </extension>
+    </extensions>
+</element>

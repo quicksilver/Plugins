@@ -1,0 +1,4364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Share Skype</title>
+<meta name="description" content="Skype - Free Internet telephony that just works" />
+<meta name="keywords" content="Skype - Free Internet telephony that just works" />
+<meta name="Generator" content="Mambo - Copyright 2000 - 2005 Miro International Pty Ltd.  All rights reserved." />
+<meta name="robots" content="index, follow" />
+<base href="http://share.skype.com/" />
+	<link rel="shortcut icon" href="http://share.skype.com/images/favicon.ico" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="templates/skype_sdp/css/template_css.css" type="text/css" media="screen" />
+	<script type="text/javascript">
+	//<![CDATA[
+	function showlogin() {
+		var nologin = document.getElementById("nologin");
+		nologin.style.display = "none";
+		var showlogin = document.getElementById("showlogin");
+		showlogin.style.display = "block";
+		return false;
+	}
+	//]]>
+	</script>
+	<link href="http://share.skype.com/stats_rss.xml" rel="alternate" type="application/rss+xml" title="Skype Statistics Live Feed (RSS2.0)" />
+	<link href="http://share.skype.com/extras.xml" rel="alternate" type="application/rss+xml" title="Extras Gallery Feed (RSS2.0)" />
+	<link href="http://share.skype.com/sdpblog.xml" rel="alternate" type="application/rss+xml" title="Developer Blog Feed (RSS2.0)" />
+	<link href="http://share.skype.com/index2.php?option=com_rss&feed=RSS2.0&no_html=1" rel="alternate" type="application/rss+xml" title="Share Skype News Feed (RSS2.0)" />
+	<link href="http://share.skype.com/index2.php?option=com_rss&feed=ATOM0.3&no_html=1" rel="alternate" type="application/rss+xml" title="Share Skype News Feed (ATOM)" />
+</head>
+<body>
+
+<div id="logo"><a href="/"><img src="templates/skype_sdp/i/logos/skype.png" width="130" height="59" alt="Skype" title="Go to ShareSkype.com homepage" /></a></div>
+<div id="header"><img src="templates/skype_sdp/i/images/header.png" width="750" height="86" alt="Share Skype" /></div>
+
+<div id="container">
+	<div id="sidebar">
+
+		<div id="nologin">
+			<div id="hidden-login-box" class="not-signed">
+					<h3><a href="/login/" onclick="return showlogin();">Sign in to your account</a></h3>
+			</div>
+		</div>
+
+	
+		<div id="showlogin">
+			<div id="login-box" class="signed-in">
+				<h3>Sign in to your account</h3>
+			<form action="https://share.skype.com/index.php" method="post" id="login-form">
+					<label for="skypename">Skype Name</label>
+					<input type="text" id="skypename" name="username" tabindex="1" maxlength="32" />
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" tabindex="2" maxlength="20" />
+					<div class="buttons floatl"><input type="submit" class="submit" name="login" value="Sign me in" tabindex="4" /></div>
+					<div class="floatr"><label><input type="checkbox" tabindex="3" />Remember me</label></div>
+					<input type="hidden" name="option" value="com_skypelogin" />
+					<input type="hidden" name="task" value="login" />
+					<input type="hidden" name="return" value="/index.php?option=com_content&task=view&id=92&Itemid=110" />
+				</form>
+				<div class="clearer"></div>
+			</div>
+		</div>
+	
+		
+		
+<div class="moduleMainMenu">
+
+<ul>
+<li><a href="http://share.skype.com/share/developer_blog/">Developer Blog</a></li>
+<li><a href="http://share.skype.com/directory/">Extras Gallery</a></li>
+<li class="selected"><a href="http://share.skype.com/developer_zone/documentation/documentation/">Documentation</a>
+<ul>
+<li class="selected"><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/">API Documentation</a></li>
+<li><a href="http://share.skype.com/developer_zone/documentation/skype_api_for_linux/">API on Linux</a></li>
+<li><a href="http://share.skype.com/developer_zone/documentation/skype_api_for_osx/">API for Mac OS X</a></li>
+<li><a href="/directory/development/">Development Tools</a></li>
+</ul></li>
+<li><a href="http://share.skype.com/developer_zone/competition/skype_api_developer_competition/">Competition</a></li>
+<li><a href="http://share.skype.com/developer_zone/developer_zone/forums/">Forums</a></li>
+<li><a href="http://share.skype.com/developer_zone/licensing/api_use_guidelines/">Licensing</a></li>
+<li><a href="http://share.skype.com/developer_zone/certification/certification_program/">Certification</a></li>
+</ul>
+
+</div>
+
+<div class="module"><h3>Featured Extra</h3>
+
+<p><a href="http://share.skype.com/directory/cyber_phone_k/view/">Cyber phone K</a></p>
+<p>A wonderful way to Skype, just like using a regular telephone. The Cyberphone K is a two-piece hands...</p>
+<p><img src="templates/skype_sdp/i/images/star_3.gif" class="stars" border="0" align="absmiddle" /><small><span>|</span> 9010 views <span>|</span> pay first </small></p>
+
+
+</div>
+
+<div class="module"><h3>Search</h3>
+<div class="wrap">
+	<form action="index.php" method="get">
+	<input type="hidden" name="option" value="search" />	
+	<input type="hidden" name="Itemid" value="124" />	
+	<input alt="search" class="inputbox" type="text" name="searchword" size="15" value="search..."  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" /><input type="submit" value="Search" class="button"/>		
+		</form>
+</div>
+
+
+</div>
+		
+	</div>
+	
+	<div id="globalnavi">
+		<ul class="gnav">
+			<li><a href="http://www.skype.com/" title="Skype.com">Skype.com</a></li>
+			<li><a href="http://share.skype.com/" title="Share Skype">Share Skype</a></li>
+			<li class="selected"><a href="http://share.skype.com/sdp" title="Skype Developers Program">Developers</a></li>
+			<li><a href="http://www.skype.com/store" title="Store">Store</a></li>
+			<li ><a href="http://support.skype.com/" title="Help">Help</a></li>
+		</ul>
+	</div>
+	
+	<div id="content">
+					<table class="contentpaneopen">
+			<tr>
+								<td class="contentheading" width="100%">
+				API v1.3 Documentation								</td>
+							</tr>
+			</table>
+			
+		<table class="contentpaneopen">
+				<tr>
+			<td valign="top" colspan="2">
+			<p><a id="top"></a></p>
+
+<ol>
+  <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-d89cb1d78f9351e06110191c372248eba4cf56b3">Purpose of this document</a> </li>
+  <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-a63deb81101f835e161471a1e3ded9969fa0a0ee">Revision history</a>
+      <ol>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-343c0388333a98cb7e64f1ef5e25e96af3188e4c">API</a> </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-fcefba16eee0cfb89f04986ca5d110c0dbc1cdf4">Document</a> </li>
+      </ol>
+  </li>
+  <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-570ec0d59eda2950aefa9d22863766c9e50eb07e">Legal Status</a> </li>
+  <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-ad900fd51c9f3ceb1fbf93d1ea3176da60b2a987">Introduction</a> </li>
+  <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-b746aebdc415a9a91c342625313af1dac2a7cbde">General API overview</a> </li>
+  <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-779bb9e52cca838c61f9656dd7f018655ffdcd5d">Phone API</a>
+      <ol>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-f61be9b99ebdb2f748568c68eca0dcf319cbeea6">From Device to Skype</a> </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-501446c978d4d08a7b19743817023edb04a30628">From Skype to Device</a> </li>
+      </ol>
+  </li>
+  <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-bd3ea210e25f86cda1b6444f8f6af41ae9722a2d">Access API</a>
+      <ol>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-777525f3824037df3a5a357c92454a8aa50bdc5f">Usage introduction</a> </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-cf115490d57c9bb154e0bba9690287587df66664">Multiple Client Support</a> </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-2c8e993f1a0f1fde871f0d5ef1963e0efeb6c877">Connecting to Skype for Windows</a>
+            <ol>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-f89f50bbd499500bd9d6a251359f0808eca94050">API Access Control</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-ac7cc8b8d3543ad80bc0b113cb5a2ab6ec095ac5">Example code</a> </li>
+            </ol>
+        </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-ed83482a83939a0eaa9c869cbe2f3f58354b7308">Connecting to Skype for Linux</a>
+            <ol>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-a7b370af9ee3dd51f67c7ebb576356b5ab9d35cb">Installation</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-07435a2a8168ba3ddaa0a3b3745fbd08db295cdc">Initialization</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-ac7cc8b8d3543ad80bc0b113cb5a2ab6ec095ac5-2">Example code</a> </li>
+            </ol>
+        </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-b7f65cc71544b183f9149efcca008770c7e68433">How to detect Skype</a>
+            <ol>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-333c12ce873ec4d0908a2198d1ab70115a023e03">Skype for Windows</a> </li>
+            </ol>
+        </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-f6e9ef68a1e7ccce271bba40232eb1325cd3238c">Additional Resources</a> </li>
+      </ol>
+  </li>
+  <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-338550f3b8b2e424145ca4dbe2a0c560a135b2fe">Versioning info</a>
+      <ol>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-ac7c254dfb3a13cc72aa974c835d3498236b1966">Skype API protocol versions</a>
+            <ol>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-0d26c1b6bdff65c3f49a53a69c9747611c27aadf">New features in protocol 2</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-2b169b5a5685853d3a94b3753a5e7b87a223eda2">New features in protocol 3</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-357d8754e905699b2b2f369c88f1b5346fe45320">New features in protocol 4</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-f4347953dabbe12c3a89f256f47daffe253f2fd0">New features in protocol 5</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-ab7e5ad2e09556f7a6f2141bc6e36859e5af9977">Protocol 1, 2 compatibility</a> </li>
+            </ol>
+        </li>
+      </ol>
+  </li>
+  <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-6444939ae91ebb3a40d039b681970fa9f7181078">API Reference</a>
+      <ol>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-5256c49ae673bf7e7465da389327c94dd076b592">Definitions and notation</a> </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-9bef1110e7226e6c1537f2a2cc97aea7c23e9a41">Commands</a>
+            <ol>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-615d426805959439485f83d11cf63e409779647f">Command identifier</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-b86111c7c51165d6f5401ab3ae95c14edf648b2a">Making and handling calls</a>
+                  <ol>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-60ddad4fc543c4d6a8c6744383267bf5c5c52a5c">Make call</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-233dd2460f347acc2b43937561ec88e4667defe7">Retrieve call information</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-d12478c9b54e6bae3354c87a121e5cb6e7446bd8">Answer incoming call</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-1e68d32319064a76b3e8ec3fc058f7e232e2e16d">Hang up call</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-2127be402f2929f00f1acf6ed84de3e112c2782f">Hold and resume call</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-b42aaf2eda6c7e3fa3a8d94422432b45e690120a">Join call to conference</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-da34400e4358b79948d6b711ecdc9053bbf7954f">Send DTMF tones</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-6b4bcf62be59820cf99574e8719a7062aad47fb3">Mark missed call as seen</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-1429f54dfabbb6f7d306bf81e3ddfab3b9639274">Call failure reasons</a> </li>
+                  </ol>
+              </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-7abe6629d43a8fc740811dd681d1bbcc19a47bb5">Leaving and manipulating voicemails</a>
+                  <ol>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-3bcb4b16c423e66875bb00dc2254af0362722835">Leave voicemail</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-2d1195ef37786e1d94a86a374b76e65ce84ff4f5">Listen to voicemail</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-2f0e1f053794634fd538c60bfcc6dde1de4d4aef">Manipulate voicemail</a> </li>
+                  </ol>
+              </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-a99d97d95273eeb6c1d8173d8a2a26ff70067bfa">Creating chats and sending messages</a>
+                  <ol>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-0ba7fd72c1bb809f0cc44d039418f12099be78ef">Create new chat</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-401c7e588aa253f15ef523d2ace6f4acc933fcfe">Send chatmessage</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-d1a2dad755ea52b07ec20b0c7a2851b7ac4c3508">Set chat topic</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-72ad14b4ff6bd3f4569e8d43fe2652a76b4fb892">Add members to chat</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-b3942d7f6c27c17b0db6c358aacb780b1304bab0">Leave chat</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-ea4c6710e3006217f3e2ea74f2b5b9aedb5edb2f">Retrieve chat's messages</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-3e0a7a7451f12029afe5bda7d538fbeb11b40033">Retrieve chat's recent messages</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-7564c9d667c32bd1cb7a4153aeafd7546875709c">Mark chatmessage as seen</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-c93dd8875a41e6ab1c7039c37927a91dfc312825">Mark message as seen (obsolete)</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-07c2337fb83f5dffd3239f4d482101b7720b0cbb">Send message (obsolete)</a> </li>
+                  </ol>
+              </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-260374aaa550b71ccf35c16792bdb0df411ad354">Searching</a>
+                  <ol>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-1ba9ebc77adbedc8670b621bf8cfcd35936c2f84">Search friends</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-730ad62665e770155cdd501e1726cd93d152e7d2">Search users</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-09f12c62e03a425b3624d35c1d85a630070f1b42">Search calls</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-7098f44c64a099fd6299b7c750ba5b005d3c459f">Search active calls</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-d87d8edf02157c062c7372f980c13683e8657667">Search missed calls</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-01d6bd992a681f17b721c9ea01e529638f5d786c">Search voicemails</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-724e138a8c3ba37a5891f0be0ac7e90a1898b8ef">Search messages</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-beebed1f50a8da8fd15c43326ee7d78d8d0a15a0">Search missed messages</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-7530d3322eaaa3bc6ae53148ddce14bfde0e421d">Search chats</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-f1e199425e6aca816bbcfdd9c1e9bd62aa8508ea">Search active chats</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-457320b83f99d1a7dbf4ca876aafa1329ea1c275">Search missed chats</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-b6191a1399722d6f8eae1bd6684432ce37014cc5">Search recent chats</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-4e602ec6f64544f02c55c155b124fd8f2fae355b">Search bookmarked chats</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-134b566156363590348ddda00dda1cce9925b10d">Search chat messages</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-a497ddb0f9411edf233ddcf86a097eb11edec57a">Search missed chat messages</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-0dd4ce65700a42f3a251c0ba305d01ee542c5451">Search users waitng for authorization</a> </li>
+                  </ol>
+              </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-b3409e5ffb5b24785d31290fe61ac7ee1f64a43f">Clear history</a>
+                  <ol>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-b957d2184dd64dd80b895624cbf7d24dd39971ad">Clear chat history</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-713dd62cb7b4bbc82c07d80b6303eb8d6534422d">Clear voicemail history</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-7dee4031932cde47895a79953838dabe65fc6ecc">Clear call history</a> </li>
+                  </ol>
+              </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-0de92e426a51690337653e30002b7711896f79b3">Controlling Skype user interface</a>
+                  <ol>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-51848c9498067d58c68386e83636881a6a675f4a">Focus Skype window</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-b4ba3262316c976b6c00db2622a31e37fbbbab06">Minimize Skype window</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-c6bab8d949722f14b52d73c2b47e52851a23b01a">Open Add a Contact</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-2cb01e1fb1b1d09a40bac44ec1678bb412291a84">Open Instant Message</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-e78efbb81fc22681d107dc6de0d8eff1510ddcea">Open Chat window</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-e05d4e497a73920d268a8ffe2d0fdf4fbf30c024">Open Filetransfer dialog</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-4379423a5120dec67e42e7e04e64d71a2b48207b">Open voicemail</a> </li>
+                  </ol>
+              </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-08fd08ba08cdae327fcc9cd3d57b002d624f072e">Test connection</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-c09ecb916e7b43edb212c602d5e26aa8a65368e6">Retrieving object properties and parameters</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-9b38ab8c189b383a93ae30fa3360c0f5ff19bf64">Object properties</a>
+                  <ol>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-fcccee0c603f72798ffc788e1b3bfe2813c1fa27">Retrieve USER object information</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-7c2d32a3e321094d877e2f644ff36e1cbb8bfc83">Manage USER properties</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-f669f0097b8fb0734e1751be224d788a96d2e935">Retrieve CALL object information</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-62c2a40547984fbbc061d26965b714c87092fe7f">Retrieve CHAT object information</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-8e0785e20e9ea084e9ec70a9b41d9a83fc83653e">Retrieve CHATMESSAGE object information</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-28b9490f05f8cab468580f1f575bf42cc1ede636">Retrieve MESSAGE object information (obsolete)</a> </li>
+                  </ol>
+              </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-8aaafc54f3aeadd4ac3b4e33d546625c5419a964">Setting parameter value</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-3d1ab57afa416876be430de762edb1c1297b0f2e">General parameters</a>
+                  <ol>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-2c9156e548c8bd6c5bd6231e9ec4694e3f76fdca">Skype version</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-3ec229462b0015f543f2dcd6344b48d953828e1e">Current user</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-27574b8fbdf152fd4a1d43cbd1cec36aad80f83c">User status</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-7e7928a6da85140ff3ed83e504ec2844f4ed0f2e">User privilges (services)</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-06821d878c866a6e6d5d8fb4240e911e0933dd49">User profile</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-d93f864955f433ffc1f403fa0b2bb9b48fe06b50">Connection status</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-4d8b721373231bd7cf6bbce5806f09ff75812907">Audio input device</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-5743fdec67122ebd520a49ad3dcc8a1a59709776">Audio output device</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-829630ce0a81f41d20cf14a4e17551c37b957b5d">Ringing device</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-151f9c1070587da176fc23ca84b958c8cec43ac2">Mute status</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-e47f340111df05e9dc1e0ceda98cc236893df3ae">Avatar</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-6e48cc67b0423619a963102cf5180c4492d99316">Ringtone</a> </li>
+                  </ol>
+              </li>
+            </ol>
+        </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-bd09965aecf2b8e12a4164212a687d6199771d60">Notifications</a>
+            <ol>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-2e8a01ee3edf0687fa6cc498732bf63ce8133d18">Object notifications</a>
+                  <ol>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-6d06c1cb0fb12a6c3764acacb97f1012a02a2c90">Call notifications</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-0e6f3fbcd5840d42e455be5602a4dc8f137b023a">User notifications</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-279bfc7fe40c18bf0d7a0985672d2b4710015af0">Chat notifications</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-214fac210456f191947222451bc1f7255bc2b09f">Chatmessage notification</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-dc31561cfe9a28288d77ab86e33f6bdf54b0dffa">Voicemail notifications</a> </li>
+                  </ol>
+              </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-54f56559197ca4f9a46e1181c130fbaf1a69ae94">Status notifications</a>
+                  <ol>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-bfe5a638ad267f955524c3427ad165b6365a8b54">Callhistory change notification</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-808a70def3de47311552261859e6f6e8e62a65d3">Instant message history change HISTORY</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-a548944f72d46dc917bee0505b5c172fda2ae92f">Contactlist change notification</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-cba5fc5461632889fc28027a1567189f556adfa8">User status notification</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-d93f864955f433ffc1f403fa0b2bb9b48fe06b50-2">Connection status</a> </li>
+                    <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-acc716ec8993a8b1c80867135fe740f14a64c43f">Current user handle</a> </li>
+                  </ol>
+              </li>
+            </ol>
+        </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-c3b75f7a176831b6c9b70b8692da48d85228133c">Objects</a>
+            <ol>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-7c731e732f425e76b681fa8d87a8c3f163b6ac35">USER object</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-a4d5625547e09ecd8dc079536d199bb36545c245">CALL object</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-88dd34bd96db05e9866eba36aecc08d63aa87085">MESSAGE object</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-a8d0d05ade348dd4683e5d1ba3fc97c925b19b2b">CHAT object</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-7028c7bd417d62b60e60652cfca01f60b38353f0">CHATMESSAGE object</a> </li>
+              <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-36ca69642f630c1da6ecb646d21f2f5d115f8f6b">VOICEMAIL object</a> </li>
+            </ol>
+        </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-0c4c479205caf9796b1ca05b073629c9b54470a9">Error codes</a> </li>
+      </ol>
+  </li>
+  <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-1f1521337b95ef4f6bacf1c9a91f6414180f7717">API Transport Layers</a>
+      <ol>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-93c9c3da2ab48720fac6b76dc868507bfcd14851">API Transport on Windows messages</a> </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-1861a77736a7ef80d73ec69609464745425a72cd">API Transport on Windows messages: Frequently asked questions</a> </li>
+        <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-864e8186f20968e5a7ecd46c056783b03dc6606c">API Transport on Windows messages: deprecated</a> </li>
+      </ol>
+  </li>
+  <li> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#head-2944be6785e8ad9021079609f4b3f191d6375df5">Commands list</a> </li>
+</ol>
+
+<h2 id="head-d89cb1d78f9351e06110191c372248eba4cf56b3">1. Purpose of this document</h2>
+<p>Describe the Skype API and how to implement applications and devices communicating with Skype through the API. </p>
+<h2 id="head-a63deb81101f835e161471a1e3ded9969fa0a0ee">2. Revision history</h2>
+<h3 id="head-343c0388333a98cb7e64f1ef5e25e96af3188e4c">2.1. API</h3>
+<p>Skype for Windows 1.0.0.94<br />
+  Date: 2004-10-21<br />
+  Release notes: API public release </p>
+<p>Skype for Windows 1.1.0.61<br />
+  Date: 2005-01-12<br />
+  Release notes: </p>
+<ul>added: Protocol 3 </li>change: API - now allows one ongoing search per client only. Attempting to issue new search before receiving results of previous one will result in error 72. </li>change: API allows now one ongoing search per client only </li>change: CHAT and CHATMESSAGE properties </li>bugfix: API showed previous user's calls and messages </li>bugfix: Fixed confusing syntax if protocol 3 is used </li>bugfix: SEARCH MESSAGES does not return CHATMESSAGES value anymore if protocol 2 is used </li>bugfix: API displayed only first word of message or fullname </li>bugfix: In access control list only one program's permission was remembered </li>bugfix: Multichat message IDs were not returned </li>bugfix: Problems with connecting for older applications </li>bugfix: Fixed API exceptions if Skype is used on two Windows accounts simultaneously </li>bugfix: On Win98/Me lots of dll files were shown to use Skype instead of the respective application </li>bugfix: Sometimes API didn't return 'BUDDYSTATUS 1' messages </li>
+</ul>
+<p>Skype for Windows 1.2.0.11<br />
+  Date: 2005-03-04<br />
+  Release notes: </p>
+<ul>added: Protocol 4 </li>Support for conferencing: start a conference, add people to conference and being able to get list of conference call participants and notifications about these </li>Possibility to check SkypeOut balance </li>Possible to call speeddial numbers </li>Notifications about changing audiodevices </li>Notification about deleting IM history </li>Changed language and country to return ISO list instead of countrynames (new behaviour: starting from protocol 4 language and country values will be prefixed by ISO codes ('GET USER echo123 COUNTRY' =&gt; 'USER echo123 COUNTRY ee Estonia')) </li>Notification about shutting down Skype </li>Support for SkypeIn </li>Registry key to disable one second timeout for debugging </li>Possibility to add userhandle to OPEN ADDAFRIEND </li>Support for command-id (#1 SET xxx) </li>CALL FAILUREREASON 1 - documentation error, doc changed to say "Misc error" </li>change: if CHATMESSAGE property is missing, command 'SET CHATMESSAGE id' gives the same error for both existing and nonexisting id </li>change: PSTN_STATUS gives error string returned from gateway </li>change: HASCALLEQUIPMENT always returns TRUE </li>change: Up/down via phone api autoexpand contactlist groups </li>bugfix: "AUDIO IN" and "AUDIO OUT" commands don't read double byte driver names correctly </li>bugfix: BTN_PRESSED E fails with error 71 invalid key </li>bugfix: Muting microphone in UI not reflected in API </li>bugfix: Conference to more than 4 participants causes "Range check" errors </li>bugfix: IMHISTORYCHANGED doesn't work </li>bugfix: SET MUTE ON returns always MUTE OFF </li>bugfix: Cannot call SkypeOut contacts using speeddial </li>bugfix: No response to empty CALL (should return ERROR 34 invalid user handle)s </li>bugfix: Skype access control does not deny access to a device. </li>bugfix: No notification if the user changes audio device </li>
+</ul>
+<p>Skype for Windows 1.3.0.42<br />
+  Date: 2005-06-11<br />
+  Release notes: </p>
+<ul>
+  <li>added: Protocol 5 </p>
+    <ul>
+      <li>Support for voicemails: <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_VOICEMAIL">VOICEMAIL</a>, <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_OPEN_VOICEMAIL">OPEN VOICEMAIL</a>, <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_ALTER_VOICEMAIL">ALTER VOICEMAIL</a>, <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_VOICEMAILS">SEARCH VOICEMAILS</a> </li>
+      <li>Support for chat handling: <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_CHAT_CREATE">CHAT CREATE</a>, <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_OPEN_CHAT">OPEN CHAT</a>, <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_ALTER_CHAT">ALTER CHAT</a>, <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_ACTIVECHATS">SEARCH *CHATS</a> </li>
+      <li>Support for authorizations: <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_USERSWAITINGMYAUTHORIZATION">SEARCH USERSWAITINGMYAUTHORIZATION</a>, SET USER <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SET_USER_ISAUTHORIZED">ISAUTHORIZED</a> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SET_USER_ISBLOCKED">ISBLOCKED</a> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SET_USER_BUDDYSTATUS">BUDDYSTATUS</a> </li>
+      <li>Support for deleting history: <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_CLEAR_CHATHISTORY">CLEAR CHATHISTORY</a> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_CLEAR_VOICEMAILHISTORY">VOICEMAILHISTORY</a> <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_CLEAR_CALLHISTORY">CALLHISTORY</a> </li>
+      <li>Set ringing device: <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_RINGER">SET/GET RINGER</a> </li>
+      <li>Extended DTMF support: <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SET_CALL_DTMF">SET CALL DTMF</a> </li>
+      <li>Initiate filetransfer: <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_OPEN_FILETRANSFER">OPEN FILETRANSFER</a> </li>
+      <li>Assign speeddial: <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_GET_USER">USER SPEEDDIAL</a> </li>
+      <li>Change ringtones: <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_RINGTONE">GET/SET RINGTONE</a> </li>
+      <li>Change avatar: <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SET_AVATAR">SET AVATAR</a> </li>
+      <li>Minimize Skype window: <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_MINIMIZE">MINIMIZE</a> </li>
+    </ul>
+  </li>
+  <li>bugfix: conference call bugs resolved </li>
+</ul>
+<h3 id="head-fcefba16eee0cfb89f04986ca5d110c0dbc1cdf4">2.2. Document</h3>
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Rev</strong></td>
+        <td><strong>Date</strong></td>
+        <td><strong>Changed by</strong></td>
+        <td><strong>Comment/Change</strong></td>
+      </tr>
+      <tr>
+        <td> 1.0</td>
+        <td> 2004-10-22</td>
+        <td> Taavet Hinrikus</td>
+        <td> API public release</td>
+      </tr>
+      <tr>
+        <td> 1.1</td>
+        <td> 2005-01-12</td>
+        <td> Taavet Hinrikus</td>
+        <td> Release of Skype 1.1</td>
+      </tr>
+      <tr>
+        <td> 1.2</td>
+        <td> 2005-03-04</td>
+        <td> Taavet Hinrikus</td>
+        <td> Release of Skype 1.2, protocol 4, developer FAQ entries, etc</td>
+      </tr>
+      <tr>
+        <td> 1.3</td>
+        <td> IN WORK</td>
+        <td> Tanel Hiir, Kristo Aav</td>
+        <td> Release of Skype 1.3, protocol 5, reformated and restructured</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2 id="head-570ec0d59eda2950aefa9d22863766c9e50eb07e">3. Legal Status</h2>
+<p>This API documentation and the Skype API are copyrighted property of Skype Technologies S.A. or affiliated companies. For usage restrictions please read the EULA available on the Skype website <a href="http://www.skype.com/go/eula"> http://www.skype.com/go/eula</a> </p>
+<h2 id="head-ad900fd51c9f3ceb1fbf93d1ea3176da60b2a987">4. Introduction</h2>
+<p>The Skype API is divided into 2 separate parts. Skype Phone API and Skype Access API: </p>
+<ul>
+  <li><strong>Skype Phone API</strong> is an interface that Skype uses to access devices, including, but not limited to, USB phones. The device by itself does not have to be a hardware device, but generally it is. This API is controlled by Skype and the device-side of the API can be viewed as a driver. The controlling party is Skype. This API operates on abstract events level e.g. the green button is pressed, the handset is off-hook, the device should ring, etc. The Skype Phone API compatible drivers should install themselves during install so that Skype can know their presence. There can be a database of USB devices and related drivers making it possible for Skype to detect a new device and prompt for driver installation. </li>
+  <li class="gap">
+    <p><strong>Skype Access API</strong> is an interface Skype publishes to 3rd party applications to access Skype functionality, for example to place a call, to send a text message, to get Skype user profile, etc. In this API, the 3rd party application is the controlling side. Skype can optionally grant access to the Skype Access API on a per-application basis. </li>
+</ul>
+<h2 id="head-b746aebdc415a9a91c342625313af1dac2a7cbde">5. General API overview</h2>
+<p>The API is built up on simple text messages that are sent back and forth between Skype and a client application running on the host computer (referred to as the "API client"). The API client can be device driver for a specific hardware (e.g. USB phones), an application making use of Skype features or extending Skype functionality. </p>
+<h2 id="head-779bb9e52cca838c61f9656dd7f018655ffdcd5d">6. Phone API</h2>
+<p>Phone API commands that are implented as of now are listed below. </p>
+<h3 id="head-f61be9b99ebdb2f748568c68eca0dcf319cbeea6">6.1. From Device to Skype</h3>
+<ul>NAME deviceName </li>PROTOCOL version </li>AUDIO_IN deviceName </li>AUDIO_OUT deviceName </li>HOOK ON|OFF </li>MUTE ON|OFF </li>BTN_PRESSED (0-9,A-Z,#,*,+,UP,DOWN,YES,NO,SKYPE) </li>BTN_RELEASED ... </li>
+</ul>
+<h3 id="head-501446c978d4d08a7b19743817023edb04a30628">6.2. From Skype to Device</h3>
+<ul>MUTE ON|OFF </li>
+</ul>
+<h2 id="head-bd3ea210e25f86cda1b6444f8f6af41ae9722a2d">7. Access API</h2>
+<p>Currently there are some commands (PROTOCOL, AUDIO_*) which are used in both the Skype Access API and the Skype Phone API. </p>
+<h3 id="head-777525f3824037df3a5a357c92454a8aa50bdc5f">7.1. Usage introduction</h3>
+<p>When a API client application starts using Skype through the Skype API, then Skype will switch audio devices to the devices reported by the client through the API. When the transport layer connection dies or is dropped, then Skype will switch audio devices back to previously selected devices (Skype will regularly check that the transport layer is still alive). Possibly in the future a notification will be provided through the API when the user manually switched audio devices to something else (when compared to devices reported by active client). </p>
+<p>It is possible that end-user confirmation is required for allowing a 3rd party to use Skype using the API. All actions performed using the API will be mirrored on the Skype application running on the computer. </p>
+<p>All times and dates in API are in UTC (Coordinated Universal Time). </p>
+<p>Transmission over API goes in UTF-8 encoding. </p>
+<h3 id="head-cf115490d57c9bb154e0bba9690287587df66664">7.2. Multiple Client Support</h3>
+<p>It is possible for multiple applications to use the Skype API at the same time. </p>
+<h3 id="head-2c8e993f1a0f1fde871f0d5ef1963e0efeb6c877">7.3. Connecting to Skype for Windows</h3>
+<p>See chapter <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#TRANSPORT_LAYERS">API transport layers</a> for more detailed discussion. </p>
+<p>Skype for Windows utilizes WM_COPYDATA messages exchange to send and receive API commands. </p>
+<p>To initiate communication, Client should broadcast windows message 'SkypeControlAPIDiscover' to all windows in the system, specifying its own window handle in wParam parameter. In response, Skype responds with message 'SkypeControlAPIAttach' to the handle specified and indicates communication window handle in wParam. The 'SkypeControlAPIDiscover' and 'SkypeControlAPIAttach' messages must registered with RegisterWindowMessage method. </p>
+<dl>
+  <dt>Note</dt>
+  <dd>
+    <p>polling Skype with 'SkypeControlAPI' should not be done anymore. </p>
+  </dd>
+</dl>
+<h4 id="head-f89f50bbd499500bd9d6a251359f0808eca94050">7.3.1. API Access Control</h4>
+<p>Whenever an application tries to use the Skype API, a dialog will pop up, asking for user's confirmation - whether to allow the application to use the API or not. The main reason for this feature is to protect the privacy and security of the user. </p>
+<p>Some suggestions for developers to keep things simple for users: </p>
+<ul>
+  <li>Program executables (.exe file) should be named nicely e.g. "SkypeAnweringMachine.exe". This is important, as the user will see the executable file name. If the filename is unclear, then the user might decide not to allow this application to access Skype. </li>
+  <li>Signing - applications should be signed with VeriSign's CodesSigning certificate. </li>
+  <li>NAME command - application should support the "NAME" command and publish its name </li>
+</ul>
+<p>Whenever the API client executable is changed Skype will ask user's confirmation again. </p>
+<h4 id="head-ac7cc8b8d3543ad80bc0b113cb5a2ab6ec095ac5">7.3.2. Example code</h4>
+<ul>
+  <li>C++ sample code<br />
+  <a href="http://www.skype.com/community/devzone/samplecode.zip">http://www.skype.com/community/<br />
+  devzone/samplecode.zip</a> </li>
+</ul>
+<h3 id="head-ed83482a83939a0eaa9c869cbe2f3f58354b7308">7.4. Connecting to Skype for Linux</h3>
+<h4 id="head-a7b370af9ee3dd51f67c7ebb576356b5ab9d35cb">7.4.1. Installation</h4>
+<p>API is supported in Skype for Linux version 1.1.0.3 or greater. </p>
+<ul>
+  <li>Download and Install D-BUS libraries from <a href="http://www.freedesktop.org/wiki/Software_2fdbus"> http://www.freedesktop.org/wiki/Software_2fdbus</a> </li>
+  <li>Edit /etc/dbus-1/system.d/skype.conf to include the following (RPM-s install this automatically): </li>
+</ul>
+<pre>&lt;!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd"&gt;
+&lt;busconfig&gt;
+  &lt;!-- ../system.conf have denied everything, so we just punch some holes --&gt;
+  &lt;policy context="default"&gt;
+    &lt;allow own="com.Skype.API"/&gt;
+    &lt;allow send_destination="com.Skype.API"/&gt;
+    &lt;allow receive_sender="com.Skype.API"/&gt;
+    &lt;allow send_path="/com/Skype"/&gt;
+  &lt;/policy&gt;
+&lt;/busconfig&gt;
+</pre>
+<h4 id="head-07435a2a8168ba3ddaa0a3b3745fbd08db295cdc">7.4.2. Initialization</h4>
+<p>Client program access control relies on the client telling its name to Skype, since in D-BUS there is no way to correlate client to a PID or binary (at least with current public D-BUS API. Custom authentication code exists, but in private headers and undocumented). So the connection sequence goes: </p>
+<pre>// application-specific D-BUS protocol initialization
+&lt;- NAME SomeClientProgram
+// Skype pops up a dialog "SomeClientProgram wants to talk to Skype, allow?"
+// The commands below gets invoked only if user clicks "yes"
+-&gt; OK
+&lt;- PROTOCOL 1
+-&gt; PROTOCOL 1
+</pre>
+<p>After this, everything proceeds according to the protocol spec. </p>
+<p>There are two methods/paths implemented. In D-BUS terminology: </p>
+<ul>
+  <li>service is com.Skype.API </li>
+  <li>path is /com/Skype for client-to-Skype commands and /com/Skype/Client for Skype-to-Client commands </li>
+  <li>method <strong>Invoke</strong> is for client-to-Skype commands with one string parameter and <strong>Notify</strong> for Skype-to-client commands/callbacks </li>
+</ul>
+<h4 id="head-ac7cc8b8d3543ad80bc0b113cb5a2ab6ec095ac5-2">7.4.3. Example code</h4>
+<ul>
+  <li>Example client C source and binary: <a href="http://download.skype.com/share/devzone/skype-dbus-testclient-20050422.tar.bz2"> http://download.skype.com/share/<br />
+  devzone/skype-dbus-testclient-20050422.tar.bz2</a> </li>
+  <li>Example Python client: <a href="http://download.skype.com/share/devzone/example_linux.zip"> http://download.skype.com/share/<br />
+  devzone/example_linux.zip</a> </li>
+</ul>
+<h3 id="head-b7f65cc71544b183f9149efcca008770c7e68433">7.5. How to detect Skype</h3>
+<h4 id="head-333c12ce873ec4d0908a2198d1ab70115a023e03">7.5.1. Skype for Windows</h4>
+<p>To see if Skype is installed check the following registry key: <tt>HKCU\Software\Skype\Phone, SkypePath</tt>. The key will point to the location of skype.exe. In case that key is missing the application should also check for existance of <tt>HKLM\Software\Skype\Phone, SkypePath</tt>. If HKCU is missing, but HKLM is present, it indicates that Skype has been installed from an administrator account, but not yet used from the current account. </p>
+<h3 id="head-f6e9ef68a1e7ccce271bba40232eb1325cd3238c">7.6. Additional Resources</h3>
+<p>Addidional documents and examples are available at: </p>
+<ul>
+  <li>Share Skype website: <a href="http://share.skype.com/developer_zone/developer_zone/documents_and_examples/">http://share.skype.com/developer_zone/<br />developer_zone/documents_and_examples/</a> </li>
+  <li>Public API forum: <a href="http://forum.skype.com/viewforum.php?f=16"> http://forum.skype.com/viewforum.php?f=16</a> </li>
+</ul>
+<h2 id="head-338550f3b8b2e424145ca4dbe2a0c560a135b2fe">8. Versioning info</h2>
+<p>Whenever a new version of the API is released the protocol version number is increased. When a client starts using the API then the client must tell the Skype API the latest protocol version that it supports. Skype will reply with its latest version number and the number reported by Skype will be the protocol version used. Skype will never reply with a protocol version which is newer than the version the client application supports. Skype defaults to protocol version 1. Skype-supported version can be queried with PROTOCOL 99999. </p>
+<dl>
+  <dt>Example</dt>
+  <dd>
+    <p>Client speaks version 3 and tells Skype "PROTOCOL 3", Skype knows version 2 and replies with "PROTOCOL 2". Version 2 will be the used protocol in this case. </p>
+  </dd>
+  <dt>Notes</dt>
+  <dd>
+    
+  </dd>
+</dl>
+<ul>
+  <li>Skype will not discard messages from newer protocol versions, but will perform the action requested in the message </li>
+  <li>Client should ignore unknown commands and properties (which can be from a newer version of API, for example new status properties etc.) </li>
+</ul>
+<h3 id="head-ac7c254dfb3a13cc72aa974c835d3498236b1966">8.1. Skype API protocol versions</h3>
+<p>Protocol versions 1, 2, 3, 4 and 5 are available at the moment. </p>
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Protocol </strong></td>
+        <td><strong> Skype for Windows </strong></td>
+        <td><strong> Skype for Linux</strong></td>
+      </tr>
+      <tr>
+        <td> 2 </td>
+        <td> 1.0.0.94 </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 3 </td>
+        <td> 1.1.0.61 </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 4 </td>
+        <td> 1.2.0.11 </td>
+        <td> 1.1.0.3</td>
+      </tr>
+      <tr>
+        <td> 5 </td>
+        <td> 1.3.0.33 </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4 id="head-0d26c1b6bdff65c3f49a53a69c9747611c27aadf">8.1.1. New features in protocol 2</h4>
+<ul>
+  <li>New onlinestatus SKYPEME. </li>
+  <li>If call is set on hold, API notifies clients with "CALL xx STATUS LOCALHOLD / REMOTEHOLD" respectively. Protocol 1 simply returned ONHOLD. </li>
+  <li>New call status CANCELLED </li>
+</ul>
+<h4 id="head-2b169b5a5685853d3a94b3753a5e7b87a223eda2">8.1.2. New features in protocol 3</h4>
+<ul>
+  <li>Compatibility layer for previous IM </li>
+</ul>
+<h4 id="head-357d8754e905699b2b2f369c88f1b5346fe45320">8.1.3. New features in protocol 4</h4>
+<ul>
+  <li>Language and country values are prefixed by ISO code </li>
+</ul>
+<h4 id="head-f4347953dabbe12c3a89f256f47daffe253f2fd0">8.1.4. New features in protocol 5</h4>
+<ul>
+  <li>Multiperson chat commands </li>
+  <li>Voicemail commands </li>
+</ul>
+<h4 id="head-ab7e5ad2e09556f7a6f2141bc6e36859e5af9977">8.1.5. Protocol 1, 2 compatibility</h4>
+<p>If requested protocol is smaller than 3, then all incoming commands are converted as follows:<ul>
+  <li>SEARCH MESSAGES -&gt; SEARCH CHATMESSAGES </li>
+  <li>SEARCH MISSEDMESSAGES -&gt; SEARCH MISSEDCHATMESSAGES </li>
+  <li>GET MESSAGE -&gt; GET CHATMESSAGE </li>
+  <li>SET MESSAGE -&gt; SET CHATMESSAGE </li>
+</ul>
+<p>In addition are converted GET MESSAGE properties:<ul>
+  <li>PARTNER_HANDLE -&gt; FROM_HANDLE </li>
+  <li>PARTNER_DISPNAME -&gt; FROM_DISPNAME </li>
+</ul>
+<p>All API sent notifications (including GET/SET MESSAGE) replies are converted:<ul>
+  <li>CHATMESSAGE * FROM_HANDLE x -&gt; MESSAGE * PARTNER_HANDLE x </li>
+  <li>CHATMESSAGE * FROM_DISPNAME x -&gt; MESSAGE * FROM_DISPNAME x </li>
+  <li>CHATMESSAGE * property x -&gt; MESSAGE * property x </li>
+</ul>
+<p>In case of protocol being smaller than 3, SEARCH MESSAGES and SEARCH MISSEDMESSAGES commands return string MESSAGES 1, 2, 3. </p>
+<h2 id="head-6444939ae91ebb3a40d039b681970fa9f7181078">9. API Reference</h2>
+<h3 id="head-5256c49ae673bf7e7465da389327c94dd076b592">9.1. Definitions and notation</h3>
+<p>Following terms are used in API reference: </p>
+<ul>
+  <li><strong>command</strong> is issued by API client to control Skype (referred also as Skype Control API) </li>
+  <li><strong>response</strong> is synchronous answer from Skype to command; not all commands have response; reponses are documented under commands; </li>
+  <li><strong>objects</strong> represents user, call, chat, message or voicemail; </li>
+  <li><strong>notification</strong> is asynchronous message from Skype to client when something changes (users come online, new chatmessage is received etc) </li>
+  <li><strong>general parameters</strong> represent setup, current user or connection information. </li>
+</ul>
+<p>Syntax notation: </p>
+<ul>
+  <li><tt>CALL</tt> - uppercase text represents keyword (command, notification, object etc) </li>
+  <li><tt>property</tt> - lowercase text repsesents keyword category defined later </li>
+  <li><tt>&lt;username&gt;</tt> - angle brackets are used for identifier (username, call id, chat name etc) </li>
+  <li><tt>[&lt;target&gt;]</tt> - square brackets identify optional items </li>
+  <li><tt>*</tt>- the asterish show repetitve items </li>
+  <li><tt>|</tt> - vertical bar means "or" </li>
+  <li><tt>-&gt;</tt> - command issued by client (used in examples) </li>
+  <li><tt>&lt;-</tt> - response or notification from Skype (used in examples) </li>
+  <li><tt>//</tt> - comment line (used in examples) </li>
+</ul>
+<h3 id="head-9bef1110e7226e6c1537f2a2cc97aea7c23e9a41">9.2. Commands</h3>
+<a id="COMMANDS"></a>
+
+<h4 id="head-615d426805959439485f83d11cf63e409779647f">9.2.1. Command identifier</h4>
+<a id="COMMAND_IDENTIFIER"></a>
+
+<p>Command identifier is useful to identify response to specific command. Command identifier is supported by most commands and is included in response. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>#&lt;command_id&gt; command</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>#&lt;command_id&gt; response|error</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    <p><tt>command_id</tt> - client assigned alphanumeric identifier. </p>
+  </dd>
+  <dt>Notes</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>command identifier is not included in asynchronous notification events initiated by command; </li>
+  <li>asynchronous commands usually return synchronous response with command id;<br />
+      when the command is processed an asynchronous notification is also sent </li>
+  <li>response may come not straightforwardly after the command, there can be some other messages between command and response as well </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL: 4 </p>
+  </dd>
+  <dt>Examples</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>Simple response to command </li>
+</ul>
+<pre>-&gt; #AB GET USERSTATUS
+&lt;- #AB USERSTATUS ONLINE
+</pre>
+<ul>
+  <li>Invalid command with reported error </li>
+</ul>
+<pre>-&gt; #123 GET XZY
+&lt;- #123 ERROR 7 GET: invalid WHAT
+</pre>
+<ul>
+  <li>Command response and notification </li>
+</ul>
+<pre>-&gt; #cmd11 SET USERSTATUS ONLINE
+// this is response for command
+&lt;- #cmd11 USERSTATUS ONLINE
+// this is notification when command is actually processed
+&lt;- USERSTATUS ONLINE
+</pre>
+<ul>
+  <li>Command response and notification are asynchronous </li>
+</ul>
+<pre>-&gt; #50 CALL +18005551234
+// note that events can arrive before response
+&lt;- CALL 651 STATUS ROUTING
+&lt;- #50 CALL 651 STATUS ROUTING
+&lt;- CALL 651 PSTN_STATUS 10503 Service Unavailable
+// following events do not have command id
+&lt;- CALL 651 FAILUREREASON 1
+&lt;- CALL 651 STATUS FAILED
+</pre>
+<ul>
+  <li>Notifications can appear between command-response </li>
+</ul>
+<pre>-&gt; #50 PING
+// note that other events can arrive before command response
+&lt;- USER echo123 LASTONLINETIMESTAMP 1105764678
+&lt;- USER echo123 FULLNAME Echo Test Service
+&lt;- USER test LASTONLINETIMESTAMP 1105487965
+// Now comes Skype response to command
+&lt;- #50 PONG
+</pre>
+<h4 id="head-b86111c7c51165d6f5401ab3ae95c14edf648b2a">9.2.2. Making and handling calls</h4>
+<h5 id="head-60ddad4fc543c4d6a8c6744383267bf5c5c52a5c">9.2.2.1. Make call</h5>
+<a id="COMMAND_CALL"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>CALL &lt;target&gt;[, &lt;target&gt;]*</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    
+  </dd>
+</dl>
+<ul>
+  <li><em>&lt;target&gt;</em> - targets to be called. In case of multiple targets conference is created.<br />
+      Available target types:<ul>
+      <li><strong>USERNAME</strong> - Skype username, e.g. "pamela", "echo123" </li>
+      <li><strong>PSTN</strong> - PSTN phone number, e.g. "+18005551234", "003725555555" </li>
+      <li><strong>SPEED DIAL CODE</strong> - 1 or 2 character speed-dial code </li>
+    </ul>
+  </li>
+</ul>
+<dl>
+  <dt>Response</dt>
+  <dd>
+    <p>Returns call ID and status </p>
+  </dd>
+</dl>
+<ul>
+  <li style="list-style-type: none;">
+    <p>Example: </li>
+</ul>
+<pre>-&gt; CALL echo123
+&lt;- CALL 1402 STATUS ROUTING
+&lt;- CALL 1402 SUBJECT 
+&lt;- CALL 1402 STATUS ROUTING
+&lt;- CALL 1402 STATUS RINGING
+&lt;- CALL 1402 STATUS INPROGRESS
+&lt;- CALL 1402 DURATION 1
+&lt;- CALL 1402 STATUS FINISHED
+</pre>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 34 invalid user handle</tt><br />
+      Target username/number missing or contains invalid characters (e.g. "CALL ", "CALL %&curren;%)/)") </li>
+  <li><tt>ERROR 39 user blocked</tt><br />
+      Trying to call to a blocked user (unblock user in contactlist) </li>
+  <li><tt>ERROR 73 too many participants</tt><br />
+      Call is initiated to more than 4 people (e.g. "CALL test, test_2, test_3, test_4, test_5") </li>
+  <li><tt>ERROR 92 call error</tt><br />
+      Call is initiated to number that is neither PSTN-number nor speeddial number (e.g. "CALL 123456789") </li>
+</ul>
+<p>Skype call window is focused when call is initiated through API. It is possible to make speed dial via API. </p>
+<h5 id="head-233dd2460f347acc2b43937561ec88e4667defe7">9.2.2.2. Retrieve call information</h5>
+<a id="COMMAND_GET_CALL"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p>`GET CALL &lt;id&gt; property&acute; </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CALL &lt;id&gt; property &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Properties and response values</dt>
+  <dd>
+    <p>look <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_CALL">call object</a> description </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 7 GET: invalid WHAT</tt><br />
+      Object name missing or misspelled (e.g. "GET CAL") </li>
+  <li><tt>ERROR 11 Invalid call id</tt><br />
+      ID includes other than numeric characters (e.g. "GET CALL 15!") </li>
+  <li><tt>ERROR 12 Unknown call</tt><br />
+      Call with specified ID does not exist in current user's call history </li>
+  <li><tt>ERROR 13 Invalid PROP</tt><br />
+      Property name missing or misspelled (e.g. "GET CALL 15 TYP") </li>
+  <li><tt>ERROR 71 Invalid conference participant NO</tt><br />
+      Conference participant's number is not number or too big (e.g. "GET CALL 15 CONF_PARTICIPANT kala", "GET CALL 15 CONF_PARTICIPANT 5") </li>
+</ul>
+<h5 id="head-d12478c9b54e6bae3354c87a121e5cb6e7446bd8">9.2.2.3. Answer incoming call</h5>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SET CALL &lt;id&gt; STATUS INPROGRESS</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;id&gt;</tt> - call ID (numeric) Errors: </li>
+  <li><tt>ERROR 19 Invalid call id</tt><br />
+      ID includes other than numeric characters </li>
+  <li><tt>ERROR 20 Unknown call</tt><br />
+      Call with specified ID does not exist </li>
+  <li><tt>ERROR 23 Cannot resume this call at the moment</tt><br />
+      Given call is not ringing and therefore can not be answered. </li>
+</ul>
+<h5 id="head-1e68d32319064a76b3e8ec3fc058f7e232e2e16d">9.2.2.4. Hang up call</h5>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SET CALL &lt;id&gt; STATUS FINISHED</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;id&gt;</tt> - call ID (numeric) </li>
+</ul>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 19 Invalid call id</tt><br />
+      ID includes other than numeric characters </li>
+  <li><tt>ERROR 20 Unknown call</tt><br />
+      Call with specified ID does not exist in current user's call history nor is active. </li>
+  <li><tt>ERROR 24 Cannot hangup inactive call</tt><br />
+      Given call is not in progress and therefore can not be hung up. </li>
+</ul>
+<h5 id="head-2127be402f2929f00f1acf6ed84de3e112c2782f">9.2.2.5. Hold and resume call</h5>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SET CALL &lt;id&gt; STATUS value</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;id&gt;</tt> - call ID (numeric) </li>
+  <li><tt>value</tt> </p>
+    <ul>
+      <li>`ONHOLD&acute; - hold call </li>
+      <li><tt>INPROGRESS</tt> - resume call </li>
+    </ul>
+  </li>
+</ul>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 19 Invalid call id</tt><br />
+      ID includes other than numeric characters </li>
+  <li><tt>ERROR 20 Unknown call</tt><br />
+      Call with specified ID does not exist in current user's call history nor is active. </li>
+  <li><tt>ERROR 22 Cannot hold this call at the moment</tt><br />
+      Given call is not in progress and therefore can not be hold.</li>
+  <li><tt>ERROR 23 Cannot resume this call at the moment</tt><br />
+      Given call is not in hold and therefore can not be resumed. </li>
+</ul>
+<h5 id="head-b42aaf2eda6c7e3fa3a8d94422432b45e690120a">9.2.2.6. Join call to conference</h5>
+<a id="COMMAND_SET_CALL_JOIN_CONFERENCE"></a>
+
+<p>Join call with another call into conference. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SET CALL &lt;joining_id&gt; JOIN_CONFERENCE &lt;master_id&gt;</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p>`CALL &lt;id&gt; CONF_ID &lt;conference_id&gt; </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;joining_id&gt;</tt> - call ID (numeric) to join into; </li>
+  <li><tt>&lt;master_id&gt;</tt> - master call ID, where is another call's ID. </li>
+</ul>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 19 Invalid call id</tt><br />
+      ID includes other than numeric characters </li>
+  <li><tt>ERROR 20 Unknown call</tt><br />
+      Call with specified ID does not exist in current user's call history nor is active. </li>
+  <li><tt>ERROR 72 Cannot create conference</tt><br />
+      Creating conference, e.g. "SET CALL 65 JOIN_CONFERENCE 66" fails on some reason. </li>
+</ul>
+<p>Note:: </p>
+<ul>
+  <li>it is possible to initate conference with CALL target1, target2 command </li>
+</ul>
+<dl>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>// make first call
+-&gt; CALL test
+&lt;- CALL 1540 STATUS ROUTING
+&lt;- CALL 1540 SUBJECT 
+&lt;- CALL 1540 STATUS ROUTING
+&lt;- CALL 1540 STATUS RINGING
+&lt;- CALL 1540 STATUS INPROGRESS
+// set first call on hold ...
+-&gt; SET CALL 1540 STATUS ONHOLD
+&lt;- CALL 1540 STATUS INPROGRESS
+&lt;- CALL 1540 STATUS ONHOLD
+// .. and make another call
+-&gt; CALL echo123
+&lt;- CALL 1545 STATUS ROUTING
+&lt;- CALL 1545 SUBJECT 
+&lt;- CALL 1545 STATUS ROUTING
+&lt;- CALL 1545 STATUS RINGING
+&lt;- CALL 1545 STATUS INPROGRESS
+// join second call (1545) into confernce with first call (1540)
+-&gt; SET CALL 1545 JOIN_CONFERENCE 1540
+&lt;- CALL 1545 CONF_ID 17930
+&lt;- CALL 1545 CONF_ID 17930
+&lt;- CALL 1540 CONF_ID 17930
+// first call is automatically resumed and joined to conference
+&lt;- CALL 1540 STATUS INPROGRESS
+// ... 
+&lt;- CALL 1540 DURATION 53
+&lt;- CALL 1540 STATUS FINISHED
+&lt;- CALL 1545 DURATION 23
+&lt;- CALL 1545 STATUS FINISHED
+</pre>
+<h5 id="head-da34400e4358b79948d6b711ecdc9053bbf7954f">9.2.2.7. Send DTMF tones</h5>
+<a id="COMMAND_SET_CALL_DTMF"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SET CALL &lt;id&gt; DTMF &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;id&gt;</tt> - call ID (numeric) </li>
+  <li><tt>&lt;value&gt;</tt> - sends value as DTMF. Permitted symbols in VALUE are: {0..9,#,*}. </li>
+</ul>
+<dl>
+  <dt>* Notes</dt>
+  <dd>
+    <p>DTMF support and quality for PSTN calls depends on terminating partner. </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 19 Invalid call id</tt><br />
+      ID includes other than numeric characters </li>
+  <li><tt>ERROR 20 Unknown call</tt><br />
+      Call with specified ID does not exist in current user's call history nor is active. </li>
+  <li><tt>ERROR 21 Unknown/disallowed call prop</tt><br />
+      DTMF property value is incorrect or misspelled </li>
+</ul>
+<h5 id="head-6b4bcf62be59820cf99574e8719a7062aad47fb3">9.2.2.8. Mark missed call as seen</h5>
+<p>Sets call as seen, meaning that this missed call is seen and will be removed from missed events list. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SET CALL &lt;id&gt; SEEN</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CALL &lt;id&gt; SEEN TRUE</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;id&gt;</tt> - call ID (numeric) Errors: </li>
+  <li><tt>ERROR 19 Invalid call id</tt><br />
+      ID includes other than numeric characters </li>
+  <li><tt>ERROR 20 Unknown call</tt><br />
+      Call with specified ID does not exist in current user's call history nor is active. </li>
+</ul>
+<dl>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SET CALL 15 SEEN
+&lt;- CALL 15 SEEN TRUE
+</pre>
+<h5 id="head-1429f54dfabbb6f7d306bf81e3ddfab3b9639274">9.2.2.9. Call failure reasons</h5>
+<div>
+  <table width="480">
+    <tbody>
+      <tr>
+        <td><strong>Code</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Possible reason</strong></td>
+      </tr>
+      <tr>
+        <td> 1</td>
+        <td> CALL 181 FAILUREREASON 1</td>
+        <td> Misc error.</td>
+      </tr>
+      <tr>
+        <td> 2</td>
+        <td> CALL 181 FAILUREREASON 2</td>
+        <td> User/phone number does not exist. Check phone number prefix (e.g. correct "003725555555", "+3725555555"; incorrect "3725555555").</td>
+      </tr>
+      <tr>
+        <td> 3</td>
+        <td> CALL 181 FAILUREREASON 3</td>
+        <td> User is offline.</td>
+      </tr>
+      <tr>
+        <td> 4</td>
+        <td> CALL 181 FAILUREREASON 4</td>
+        <td> No proxy found.</td>
+      </tr>
+      <tr>
+        <td> 5</td>
+        <td> CALL 181 FAILUREREASON 5</td>
+        <td> Session terminated.</td>
+      </tr>
+      <tr>
+        <td> 6</td>
+        <td> CALL 181 FAILUREREASON 6</td>
+        <td> No common codec found.</td>
+      </tr>
+      <tr>
+        <td> 7</td>
+        <td> CALL 181 FAILUREREASON 7</td>
+        <td> Sound I/O error.</td>
+      </tr>
+      <tr>
+        <td> 8</td>
+        <td> CALL 181 FAILUREREASON 8</td>
+        <td> Problem with remote sound device.</td>
+      </tr>
+      <tr>
+        <td> 9</td>
+        <td> CALL 181 FAILUREREASON 9</td>
+        <td> Call blocked by recipient.</td>
+      </tr>
+      <tr>
+        <td> 10</td>
+        <td> CALL 181 FAILUREREASON 10</td>
+        <td> Recipient not a friend.</td>
+      </tr>
+      <tr>
+        <td> 11</td>
+        <td> CALL 181 FAILUREREASON 11</td>
+        <td> Current user not authorized by recipient.</td>
+      </tr>
+      <tr>
+        <td> 12</td>
+        <td> CALL 181 FAILUREREASON 12</td>
+        <td> Sound recording error.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h4 id="head-7abe6629d43a8fc740811dd681d1bbcc19a47bb5">9.2.3. Leaving and manipulating voicemails</h4>
+<h5 id="head-3bcb4b16c423e66875bb00dc2254af0362722835">9.2.3.1. Leave voicemail</h5>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>VOICEMAIL &lt;target&gt;</tt> </p>
+  </dd>
+  <dt>Returns</dt>
+  <dd>
+    <p><tt>VOICEMAIL &lt;id&gt; STATUS &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;target&gt;</tt> - Skype username to leave voicemail; </li>
+  <li><tt>&lt;value&gt;</tt> - see <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_VOICEMAIL">voicemail object</a> for available status values; </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Notes</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>when leaving voicemail to target user, there are actually <strong>two</strong> voicemail objects involved: </p>
+    <ol type="a"><li>voicemail greeting which is downloaded from server (TYPE is DEFAULT_GREETING of CUSTOM_GREETING) </li>
+    </ol>
+    <ul>
+      <li style="list-style-type: none;">
+        <p>b. voicemail you are actually leaving (TYPE of OUTGOING) </li>
+    </ul>
+  </li>
+</ul>
+<h5 id="head-2d1195ef37786e1d94a86a374b76e65ce84ff4f5">9.2.3.2. Listen to voicemail</h5>
+<a id="COMMAND_OPEN_VOICEMAIL"></a>
+
+<p>Open and start playing a voicemail. </p>
+<dl>
+  <dt> Syntax</dt>
+  <dd>
+    <p>OPEN VOICEMAIL &lt;id&gt; </p>
+  </dd>
+  <dt> Notes</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>voicemail is downloaded from server automatically; </li>
+  <li>the main UI brought to focus and switched to call list tab; use <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_ALTER_VOICEMAIL">ALTER VOICEMAIL</a> to play without UI response; </li>
+</ul>
+<p>See also <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_VOICEMAILS">SEARCH VOICEMAILS</a> command. </p>
+<h5 id="head-2f0e1f053794634fd538c60bfcc6dde1de4d4aef">9.2.3.3. Manipulate voicemail</h5>
+<a id="COMMAND_ALTER_VOICEMAIL"></a>
+
+<p>Alter voicemail allow finer control over VOICEMAIL object. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>ALTER VOICEMAIL &lt;id&gt; action</tt> </p>
+  </dd>
+  <dt>Returns</dt>
+  <dd>
+    <p>ALTER VOICEMAIL action </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    
+  </dd>
+</dl>
+<ul>
+  <li>action </p>
+    <ul>
+      <li><tt>STARTPLAYBACK</tt> - starts playing downloaded voicemail; </li>
+      <li><tt>STOPPLAYBACK</tt> - stops voicemail playback; </li>
+      <li><tt>UPLOAD</tt> - uploads recorded voicemail from local computer to server; </li>
+      <li><tt>DOWNLOAD</tt> - downloads voicemail object from server to local computer; </li>
+      <li><tt>STARTRECORDING</tt> - stops playing greeting and start recording; equivalent to user pressing green button; </li>
+      <li><tt>STOPRECORDING</tt> - ends recording; equivalent to user pressing red button; </li>
+      <li><tt>DELETE</tt> - delete voicemail object. </li>
+    </ul>
+  </li>
+</ul>
+<dl>
+  <dt>Notes</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>STARTPLAYBACK plays voicemail but UI does not change to call list as it does for OPEN VOICEMAIL; </li>
+  <li>STOPRECORDING will cause automatic message upload into server; this might change in the future to allow more granular control; </li>
+  <li>deleting voicemail will proceed on background and elapsed time depends on server response; during this time SEARCH VOICEMAILS still returns deleted voicemail id, but status has changed to DELETING. </li>
+</ul>
+<h4 id="head-a99d97d95273eeb6c1d8173d8a2a26ff70067bfa">9.2.4. Creating chats and sending messages</h4>
+<h5 id="head-0ba7fd72c1bb809f0cc44d039418f12099be78ef">9.2.4.1. Create new chat</h5>
+<a id="COMMAND_CHAT_CREATE"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>CHAT CREATE &lt;target&gt;[, &lt;target&gt;]*</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHAT &lt;chat_id&gt; STATUS &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;target&gt;</tt>- username(s) to create chat with; </li>
+  <li><tt>&lt;chat_id&gt;</tt> - chat identifier; string (usually looks like "#me/$target;012345679012345") </li>
+  <li><tt>&lt;value&gt;</tt> - depends of type of chat created: <tt>DIALOG</tt> - 1:1 chat; <tt>MULTI_SUBSCRIBED</tt> - for multichat </li>
+</ul>
+<dl>
+  <dt>Notes</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>chat create does not open chat window; use <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_OPEN_CHAT">OPEN CHAT</a> command for this; </li>
+</ul>
+<h5 id="head-401c7e588aa253f15ef523d2ace6f4acc933fcfe">9.2.4.2. Send chatmessage</h5>
+<a id="COMMAND_CHATMESSAGE"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>CHATMESSAGE &lt;chat_id&gt; &lt;message&gt;</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHATMESSAGE &lt;id&gt; STATUS SENDING</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;chat_id&gt;</tt> - chat identifier; </li>
+  <li><tt>&lt;message&gt;</tt> - message text body to send; </li>
+  <li><tt>&lt;id&gt;</tt> - chatmessage identifier. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 510 Invalid/uknown chat name given</tt><br />
+      Chat with &lt;chat_id&gt; does not exist </li>
+  <li><tt>ERROR 511 Sending a message to chat fails</tt><br />
+      Could not send message to chat (eg. not a member) </li>
+</ul>
+<h5 id="head-d1a2dad755ea52b07ec20b0c7a2851b7ac4c3508">9.2.4.3. Set chat topic</h5>
+<a id="COMMAND_ALTER_CHAT_SETTOPIC"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>ALTER CHAT &lt;chat_id&gt; SETTOPIC &lt;topic&gt;</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>ALTER CHAT SETTOPIC</tt> </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 501 CHAT: No chat found for given chat</tt><br />
+      Chat with &lt;id&gt; does not exist </li>
+</ul>
+<h5 id="head-72ad14b4ff6bd3f4569e8d43fe2652a76b4fb892">9.2.4.4. Add members to chat</h5>
+<a id="COMMAND_ALTER_CHAT_ADDMEMBERS"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>ALTER CHAT &lt;chat_id&gt; ADDMEMBERS &lt;target&gt;[, &lt;target&gt;]*</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>ALTER CHAT ADDMEMBERS</tt> </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 501 CHAT: No chat found for given chat</tt><br />
+      Chat with &lt;chat_id&gt; does not exist </li>
+  <li><tt>ERROR 504 CHAT: Action failed</tt><br />
+      Could not add members into chat (eg &lt;target&gt; is already a member; you have left chat) </li>
+</ul>
+<h5 id="head-b3942d7f6c27c17b0db6c358aacb780b1304bab0">9.2.4.5. Leave chat</h5>
+<a id="COMMAND_ALTER_CHAT_LEAVE"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>ALTER CHAT &lt;chat_id&gt; LEAVE</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>ALTER CHAT LEAVE</tt> </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 501 CHAT: No chat found for given chat</tt><br />
+      Chat with &lt;chat_id&gt; does not exist </li>
+  <li><tt>ERROR 504 CHAT: Action failed</tt><br />
+      Could not leave chat (eg you have already left this chat) </li>
+</ul>
+<h5 id="head-ea4c6710e3006217f3e2ea74f2b5b9aedb5edb2f">9.2.4.6. Retrieve chat's messages</h5>
+<a id="COMMAND_GET_CHAT_CHATMESSAGES"></a>
+
+<p>Returns list of chatmessages identifiers for given chat. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET CHAT &lt;chat_id&gt; CHATMESSAGES</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p> `CHAT &lt;chat_id&gt; CHATMESSAGES &lt;id&gt;[, &lt;id&gt;]* </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 501 CHAT: No chat found for given chat</tt><br />
+      Chat with &lt;chat_id&gt; does not exist </li>
+</ul>
+<h5 id="head-3e0a7a7451f12029afe5bda7d538fbeb11b40033">9.2.4.7. Retrieve chat's recent messages</h5>
+<a id="COMMAND_GET_CHAT_RECENTCHATMESSAGES"></a>
+
+<p>Returns list of chatmessages identifiers for recent chatmessages in given chat. Recent chatmessages are these which are shown when window of the existing chat is re-opened. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET CHAT &lt;chat_id&gt; RECENTCHATMESAGES</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p> `CHAT &lt;chat_id&gt; RECENTCHATMESSAGES &lt;id&gt;[, &lt;id&gt;]* </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 501 CHAT: No chat found for given chat</tt><br />
+      Chat with &lt;chat_id&gt; does not exist </li>
+</ul>
+<h5 id="head-7564c9d667c32bd1cb7a4153aeafd7546875709c">9.2.4.8. Mark chatmessage as seen</h5>
+<a id="COMMAND_SET_CHATMESSAGE_SEEN"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SET CHATMESSAGE &lt;id&gt; SEEN</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHATMESSAGE &lt;id&gt; STATUS &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;id&gt;</tt> - chat message ID. </li>
+  <li><tt>&lt;value&gt;</tt>- new value for chat message status; see <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_CHATMESSAGE">chatmessage object</a> for status values; </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 3 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SET CHATMESSAGE 61 SEEN
+&lt;- CHATMESSAGE 61 STATUS READ
+</pre>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 18 SET: invalid WHAT</tt><br />
+      CHATMESSAGE command missing or misspelled (e.g. "SET CHATMESAGE"). </li>
+  <li><tt>ERROR 31 Unknown message id</tt><br />
+      Unknown chat message ID </li>
+  <li><tt>ERROR 30 Invalid message id</tt><br />
+      Chat message ID is misspelled i.e. contains not permitted symbols (numeric are permitted) (e.g. "SET CHATMESSAGE a SEEN") </li>
+  <li><tt>ERROR 32 Invalid WHAT</tt><br />
+      Invalid status given to chat message (e.g. "SET CHATMESSAGE 60 SEENA") </li>
+</ul>
+<h5 id="head-c93dd8875a41e6ab1c7039c37927a91dfc312825">9.2.4.9. Mark message as seen (obsolete)</h5>
+<a id="COMMAND_SET_MESSAGE_SEEN"></a>
+
+<p>Mark message as seen meaning that this missed IM is seen by user and will be removed from missed messages list. UI will set this automatically if auto-popup is enabled for corresponding group of users. This command is obsolete, see <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SET_CHATMESSAGE_SEEN">SET CHATMESSAGE SEEN</a> command. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SET MESSAGE &lt;id&gt; SEEN</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>MESSAGE &lt;id&gt; STATUS value</tt> </p>
+  </dd>
+  <dt>Properties</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;id&gt;</tt>- message ID; </li>
+  <li><tt>value</tt> - (new) status value. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1, <strong>deprecated in PROTOCOL 3</strong> </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SET MESSAGE 1578 SEEN
+&lt;- MESSAGE 1578 STATUS READ
+</pre>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 18 SET: invalid WHAT</tt><br />
+      Object name missing or misspelled (e.g. "SET CAL"). </li>
+  <li><tt>ERROR 30 Invalid message id</tt><br />
+      ID includes other than numeric characters (e.g. "SET MESSAGE A"). </li>
+  <li><tt>ERROR 31 Unknown message id</tt><br />
+      Message with specified ID does not exist in current user's message history. </li>
+  <li><tt>ERROR 32 Invalid WHAT</tt><br />
+      Property name missing or misspelled (e.g. "SET MESSAGE 21 SEN"). </li>
+</ul>
+<h5 id="head-07c2337fb83f5dffd3239f4d482101b7720b0cbb">9.2.4.10. Send message (obsolete)</h5>
+<a id="COMMAND_MESSAGE"></a>
+
+<p>Send message command is obsolete. See <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_CHATMESSAGE">CHATMESSAGE</a> command. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>MESSAGE &lt;target&gt; &lt;text&gt;</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHATMESSAGE &lt;id&gt; STATUS SENDING</tt> (PROTOCOL 3 and up)<br />
+    </p>
+  </dd>
+</dl>
+<ul>
+  <li style="list-style-type: none;">
+    <p><tt>MESSAGE &lt;id&gt; STATUS SENDING</tt> (PROTOCOL 1 and 2) </li>
+</ul>
+<dl>
+  <dt>Parameters</dt>
+  <dd>
+    
+  </dd>
+</dl>
+<ul>
+  <li><tt>&lt;target&gt;</tt> - target username to whom to send message, e.g. "pamela" </li>
+  <li><tt>&lt;text&gt;</tt> - message body, e.g. "Please call me" Versions: PROTOCOL 1 </li>
+</ul>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 26 Invalid user handle</tt><br />
+      Target username missing or includes not permitted symbols (e.g. "MESSAGE $ test") </li>
+  <li><tt>ERROR 43 Cannot send empty message</tt><br />
+      Message has no body (e.g. "MESSAGE echo123") </li>
+</ul>
+<dl>
+  <dt>Notes</dt>
+  <dd>
+    <p>When message sending fails, a LEFT-type message is received. Message's LEAVEREASON shows why it failed. See <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_CHATMESSAGE">chatmessage object</a> for description. </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; MESSAGE echo123 Please call me
+&lt;- MESSAGE 982 STATUS SENDING
+&lt;- MESSAGE 982 STATUS SENT
+</pre>
+<h4 id="head-260374aaa550b71ccf35c16792bdb0df411ad354">9.2.5. Searching</h4>
+<a id="COMMAND_SEARCH"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li style="list-style-type: none;">
+    <p><tt>SEARCH USERS | FRIENDS</tt><br />
+        <tt>     | CALLS [&lt;target&gt;] | ACTIVECALLS | MISSEDCALLS</tt><br />
+        <tt>     | VOICEMAILS</tt><br />
+        <tt>     | CHATS | MISSEDCHATS | ACTIVECHATS | RECENTCHATS | BOOKMARKEDCHATS</tt><br />
+        <tt>     | CHATMESSAGES [&lt;target&gt;] | MISSEDCHATMESSAGES</tt><br />
+        <tt>     | MESSAGES [&lt;target&gt;] | MISSEDMESSAGES</tt><br />
+        <tt>     | USERSWAITINGMYAUTHORIZATION</tt></li>
+</ul>
+<p>Search requests a specific type of information about the objects. If no target is specified, then all results for specified objects are returned. </p>
+<dl>
+  <dt>Notes</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>In Skype for Windows 1.1 only one search at a time is allowed; since version 1.2 multiple searches can execute at the same time; </li>
+  <li>Number of search results will be limited to N (N can be set) in the future, not limited at the moment. Possibly support for paging or custom range queries will be added later. </li>
+  <li>SkypeOut contacts: since Skype for Windows 1.2 release it is possible to get the list of SkypeOut contacts which are part of the main contact list i.e. they will be returned with the contact list numbers, if "SEARCH FRIENDS" command is executed. To get more information about the number in current user's SkypeOut contacts - "GET USER &lt;number&gt; &lt;fullname&gt;". </li>
+</ul>
+<h5 id="head-1ba9ebc77adbedc8670b621bf8cfcd35936c2f84">9.2.5.1. Search friends</h5>
+<a id="COMMAND_SEARCH_FRIENDS"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH FRIENDS</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>USERS [user[, user]*]</tt><br />
+      returns a list of found usernames; list is empty if no match was found </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd>
+    
+  </dd>
+</dl>
+<ul>
+  <li><tt>ERROR 67 target not allowed with SEARCH FRIENDS</tt><br />
+      target was specified with SEARCH FRIENDS command (e.g. "SEARCH FRIENDS mike") </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH FRIENDS 
+&lt;- USERS tim, joe, mike</pre>
+<h5 id="head-730ad62665e770155cdd501e1726cd93d152e7d2">9.2.5.2. Search users</h5>
+<a id="COMMAND_SEARCH_USERS"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH USERS &lt;target&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    <p><tt>&lt;target&gt;</tt> - part of username or e-mail to match. If the search string contains "@", then search is performed by e-mail address (note that e-mail address has to match 100%). Otherwise, if the search string is a valid Skype username (username must have 6-22 characters, contains only the following symbols: <strong>a-Z0-9-_,.</strong> and it must start with a letter), the search is performed on the full name and username fields. In all other cases the search is made on full name field only. </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>SEARCH [&lt;username&gt;[, &lt;username&gt;]*]</tt><br />
+      returns a list of found usernames; list is empty if no match was found </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd>
+    
+  </dd>
+</dl>
+<ul>
+  <li>`ERROR 4 Empty target not allowed<em><br />
+      Target username is not specified </em></li>
+</ul>
+<dl>
+  <dt>Notes</dt>
+  <dd>
+    <p>During the SEARCH USERS the USER notifications are reported back to API client as the users are found from network. API client should opt to ignore these events and ask for each user property after the search. </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL: 1 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; #123 SEARCH USERS echo123
+&lt;- #123 USERS echo123, echo1232885
+</pre>
+<h5 id="head-09f12c62e03a425b3624d35c1d85a630070f1b42">9.2.5.3. Search calls</h5>
+<a id="COMMAND_SEARCH_CALLS"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH CALLS &lt;target&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    <p><tt>&lt;target&gt;</tt> - username. Target is optional. If target is specified then call history between current user and target user is searched. </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CALLS [id[, id]*]</tt><br />
+      Returns a list of call IDs. If target is specified, then returns IDs of all calls that have been made between current and target user. </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 5 Search CALLS: invalid target</tt><br />
+      Not permitted characters were used in the target username (e.g. "SEARCH CALLS !a"). Username must have 6-22 characters and can contain only the following symbols: <strong>a-Z0-9-_,.</strong>. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH CALLS abc
+&lt;- CALLS 15, 16, 39
+</pre>
+<h5 id="head-7098f44c64a099fd6299b7c750ba5b005d3c459f">9.2.5.4. Search active calls</h5>
+<a id="COMMAND_SEARCH_ACTIVECALLS"></a>
+
+<p>Lists all calls visible on calltabs, including members of conference calls if hosting a conference. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH ACTIVECALLS</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CALLS [&lt;id&gt;[, &lt;id&gt;]*]</tt><br />
+      Returns a list of active call IDs. </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 3 SEARCH: unknown WHAT</tt><br />
+      ACTIVECALLS was misspelled. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH ACTIVECALLS
+&lt;- CALLS 25, 56
+</pre>
+<h5 id="head-d87d8edf02157c062c7372f980c13683e8657667">9.2.5.5. Search missed calls</h5>
+<a id="COMMAND_SEARCH_MISSEDCALLS"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH MISSEDCALLS</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CALLS [&lt;id&gt;[, &lt;id&gt;]*]</tt><br />
+      Returns a list of missed call IDs, calls in MISSED status. </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 6 SEARCH MISSEDCALLS: target not allowed</tt><br />
+      No target is allowed with SEARCH MISSEDCALLS. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH MISSEDCALLS
+&lt;- CALLS 25, 56
+</pre>
+<h5 id="head-01d6bd992a681f17b721c9ea01e529638f5d786c">9.2.5.6. Search voicemails</h5>
+<a id="COMMAND_SEARCH_VOICEMAILS"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH VOICEMAILS</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>VOICEMAILS [&lt;id&gt;[, &lt;id&gt;]*]</tt><br />
+      Returns a list of voicemail IDs.|| </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 29 SEARCH VOICEMAILS: target not allowed</tt><br />
+      No target is allowed with SEARCH VOICEMAILS </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt;SEARCH VOICEMAILS
+&lt;- VOICEMAILS 65, 70, 71
+</pre>
+<h5 id="head-724e138a8c3ba37a5891f0be0ac7e90a1898b8ef">9.2.5.7. Search messages</h5>
+<a id="COMMAND_SEARCH_MESSAGES"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH MESSAGES [&lt;target&gt;]</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    
+  </dd>
+</dl>
+<ul>
+  <li><tt>&lt;target&gt;</tt> - username. Target is optional. If target is specified then messages history between current user and target user is searched. </li>
+</ul>
+<dl>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>MESSAGES [&lt;id&gt;[, &lt;id&gt;]*]</tt><br />
+      Returns a list of message IDs. If target is specified, then returns IDs of all messages that have been sent between current and target user. </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 5 SEARCH MESSAGES: invalid target</tt><br />
+      Not permitted character was used in the target username (e.g. "SEARCH MESSAGES !a"). Username must have 6-22 characters and can contain only the following symbols: <strong>a-Z0-9-_,.</strong> </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 <strong>deprecated in PROTOCOL 3</strong> </p>
+  </dd>
+  <dt>Notes</dt>
+  <dd>
+    <p>this search is deprecated in PROTOCOL 3, use SEARCH CHATMESSAGES instead </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH MESSAGES abc
+&lt;- MESSAGES 123, 124
+</pre>
+<h5 id="head-beebed1f50a8da8fd15c43326ee7d78d8d0a15a0">9.2.5.8. Search missed messages</h5>
+<a id="COMMAND_SEARCH_MISSEDMESSAGES"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH MISSEDMESSAGES</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>MESSAGES [&lt;id&gt;[, &lt;id&gt;]*]</tt><br />
+      Returns a list of message IDs. </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 29 SEARCH MISSEDMESSAGES: target not allowed</tt><br />
+      No target is allowed with SEARCH MISSEDMESSAGES. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 <strong>deprecated in PROTOCOL 3</strong> </p>
+  </dd>
+  <dt>Notes</dt>
+  <dd>
+    <p>this search is deprecated in PROTOCOL 3, use SEARCH MISSEDCHATMESSAGES instead </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH MISSEDMESSAGES
+&lt;- MESSAGES 123, 124
+</pre>
+<h5 id="head-7530d3322eaaa3bc6ae53148ddce14bfde0e421d">9.2.5.9. Search chats</h5>
+<a id="COMMAND_SEARCH_CHATS"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH CHATS</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHATS [&lt;chatname&gt;[, &lt;chatname&gt;]*]</tt><br />
+      Returns a list of chat IDs. </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 107 target not allowed with CHATS</tt><br />
+      No target is allowed with SEARCH CHATS. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 3 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH CHATS
+&lt;- CHATS #bitman/$jessy;eb06e65612353279, #bitman/$jdenton;9244e98f82d7d391
+</pre>
+<h5 id="head-f1e199425e6aca816bbcfdd9c1e9bd62aa8508ea">9.2.5.10. Search active chats</h5>
+<a id="COMMAND_SEARCH_ACTIVECHATS"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p>SEARCH ACTIVECHATS </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHATS [&lt;chatname&gt;[, &lt;chatname&gt;]*]</tt><br />
+      Returns a list of chat IDs that are open in UI. </p>
+  </dd>
+</dl>
+<ul>
+  <li style="list-style-type: none;">
+    <p>Errors: </li>
+  <li><tt>ERROR 29 No target allowed</tt><br />
+      No target is allowed with SEARCH ACTIVECHATS. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH ACTIVECHATS
+&lt;- CHATS #bitman/$jessy;eb06e65612353279, #bitman/$jdenton;9244e98f82d7d391
+</pre>
+<h5 id="head-457320b83f99d1a7dbf4ca876aafa1329ea1c275">9.2.5.11. Search missed chats</h5>
+<a id="COMMAND_SEARCH_MISSEDCHATS"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH MISSEDCHATS</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHATS [&lt;chatname&gt;[, &lt;chatname&gt;]*]</tt><br />
+      Returns a list of chat IDs that include unread messages. </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 29 SEARCH MISSEDCHATS: target no allowed</tt><br />
+      No target is allowed with SEARCH MISSEDCHATS. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH MISSEDCHATS
+&lt;- CHATS #bitman/$jessy;eb06e65612353279, #bitman/$jdenton;9244e98f82d7d391
+</pre>
+<h5 id="head-b6191a1399722d6f8eae1bd6684432ce37014cc5">9.2.5.12. Search recent chats</h5>
+<a id="COMMAND_SEARCH_RECENTCHATS"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH RECENTCHATS</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHATS [&lt;chatname&gt;[, &lt;chatname&gt;]*]</tt><br />
+      Returns a list of recent chat IDs. </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>ERROR 29 SEARCH RECENTCHATS: target no allowed<br />
+      No target is allowed with SEARCH RECENTCHATS.|| </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH RECENTCHATS
+&lt;- CHATS #bitman/$jessy;eb06e65612353279, #bitman/$jdenton;9244e98f82d7d391
+</pre>
+<h5 id="head-4e602ec6f64544f02c55c155b124fd8f2fae355b">9.2.5.13. Search bookmarked chats</h5>
+<a id="COMMAND_SEARCH_BOOKMARKEDCHATS"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH BOOKMARKEDCHATS</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHATS [&lt;chatname&gt;[, &lt;chatname&gt;]*]</tt><br />
+      Returns a list of bookmarked chat IDs. </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>ERROR 29 SEARCH BOOKMARKEDCHATS: target no allowed<em><br />
+      No target is allowed with SEARCH BOOKMARKEDCHATS. </em></li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+</dl>
+<p>Example:: </p>
+<pre>-&gt; SEARCH BOOKMARKEDCHATS
+&lt;- CHATS #bitman/$jessy;eb06e65612353279, #bitman/$jdenton;9244e98f82d7d391
+</pre>
+<h5 id="head-134b566156363590348ddda00dda1cce9925b10d">9.2.5.14. Search chat messages</h5>
+<a id="COMMAND_SEARCH_CHATMESSAGES"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH CHATMESSAGES [&lt;username&gt;]</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    <p><tt>&lt;username&gt;</tt> - target username, optional. If username is specified only chatmessages from/to target user is returned. </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHATMESSAGES [&lt;id&gt;[, &lt;id&gt;]*]</tt><br />
+      Returns a list of chat message IDs. </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 29 SEARCH CHATMESSAGES: invalid target</tt><br />
+      Not permitted character was used in the target username (e.g. "SEARCH MESSAGES !a"). Username must have 6-22 characters and can contain only the following symbols: <strong>a-Z0-9-_,.</strong> </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 3 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH CHATMESSAGES abc
+&lt;- CHATMESSAGES 60, 59
+</pre>
+<h5 id="head-a497ddb0f9411edf233ddcf86a097eb11edec57a">9.2.5.15. Search missed chat messages</h5>
+<a id="COMMAND_SEARCH_MISSEDCHATMESSAGES"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH MISSEDCHATMESSAGES</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHATMESSAGES [&lt;id&gt;[, &lt;id&gt;]*]</tt><br />
+      Returns a list of missed chat message IDs. </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 29 SEARCH MISSEDCHATMESSAGES: target not allowed</tt><br />
+      No target is allowed with SEARCH MISSEDCHATMESSAGES. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 3 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH MISSEDCHATMESSAGES
+&lt;- CHATMESSAGES 61, 62
+</pre>
+<h5 id="head-0dd4ce65700a42f3a251c0ba305d01ee542c5451">9.2.5.16. Search users waitng for authorization</h5>
+<a id="COMMAND_SEARCH_USERSWAITINGMYAUTHORIZATION"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SEARCH USERSWAITINGMYAUTHORIZATION</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>USERS [&lt;id&gt;[, &lt;id&gt;]*]</tt><br />
+      List of users who have waiting for authorization </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 29 SEARCH USERSWAITINGMYAUTHORIZATION: target no allowed</tt> </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SEARCH USERSWAITINGMYAUTHORIZATION
+&lt;- USERS tim, john, echo123
+</pre>
+<h4 id="head-b3409e5ffb5b24785d31290fe61ac7ee1f64a43f">9.2.6. Clear history</h4>
+<h5 id="head-b957d2184dd64dd80b895624cbf7d24dd39971ad">9.2.6.1. Clear chat history</h5>
+<a id="COMMAND_CLEAR_CHATHISTORY"></a>
+
+<ul>
+  <li style="list-style-type: none;">
+    <p>Syntax: <tt>CLEAR CHATHISTORY</tt> </li>
+</ul>
+<h5 id="head-713dd62cb7b4bbc82c07d80b6303eb8d6534422d">9.2.6.2. Clear voicemail history</h5>
+<a id="COMMAND_CLEAR_VOICEMAILHISTORY"></a>
+
+<ul>
+  <li style="list-style-type: none;">
+    <p>Syntax: <tt>CLEAR VOICEMAILHISTORY</tt> </li>
+</ul>
+<h5 id="head-7dee4031932cde47895a79953838dabe65fc6ecc">9.2.6.3. Clear call history</h5>
+<a id="COMMAND_CLEAR_CALLHISTORY"></a>
+
+<ul>
+  <li style="list-style-type: none;">
+    <p>Syntax: <tt>CLEAR CALLHISTORY</tt> </li>
+</ul>
+<h4 id="head-0de92e426a51690337653e30002b7711896f79b3">9.2.7. Controlling Skype user interface</h4>
+<h5 id="head-51848c9498067d58c68386e83636881a6a675f4a">9.2.7.1. Focus Skype window</h5>
+<a id="COMMAND_FOCUS"></a>
+
+<p>Brings Skype window on top. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>FOCUS</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p>if successful command is echoed back </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+</dl>
+<h5 id="head-b4ba3262316c976b6c00db2622a31e37fbbbab06">9.2.7.2. Minimize Skype window</h5>
+<a id="COMMAND_MINIMIZE"></a>
+
+<p>Minimizes Skype main window into system tray. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>MINIMIZE</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p>if successful command is echoed back </p>
+  </dd>
+  <dt>Version</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>Skype for Windows 1.3 </li>
+</ul>
+<dl>
+  <dt>Notes</dt>
+  <dd>
+    <p>This command does not minimize other Skype windows (chat, filetransfer etc). </p>
+  </dd>
+</dl>
+<h5 id="head-c6bab8d949722f14b52d73c2b47e52851a23b01a">9.2.7.3. Open Add a Contact</h5>
+<a id="COMMAND_OPEN_ADDAFRIEND"></a>
+
+<p>Opens "Add a Contact" dialog. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>OPEN ADDAFRIEND [&lt;username&gt;]</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    <p><tt>&lt;username&gt;</tt> - target username, optional. If username is specified, dialog window is prefilled with it. </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p>if successful command is echoed back </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd>
+    <p><tt>ERROR 69 OPEN: invalid WHAT</tt><br />
+      Open target is missing or misspelled (e.g. "OPEN ADDAFOE"). </p>
+  </dd>
+  <dt>Version</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>Skype for Windows 1.0 </li>
+</ul>
+<h5 id="head-2cb01e1fb1b1d09a40bac44ec1678bb412291a84">9.2.7.4. Open Instant Message</h5>
+<a id="COMMAND_OPEN_IM"></a>
+
+<p>Opens chat dialog with prefilled message. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>OPEN IM &lt;username&gt; [&lt;message&gt;]</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p>if successful command is echoed back </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    
+  </dd>
+</dl>
+<ul>
+  <li>&acute;&lt;username&gt;` - contact username to whom send the message (e.g. "pamela"</li>
+  <li><tt>&lt;message&gt;</tt> - optional, message body prefilled into the IM dialog window (but not sent away) </li>
+</ul>
+<dl>
+  <dt>Errors</dt>
+  <dd>
+    
+  </dd>
+</dl>
+<ul>
+  <li><tt>ERROR 69 OPEN: invalid WHAT</tt><br />
+      Open target is missing or misspelled (e.g. "OPEN MI"). </li>
+  <li><tt>ERROR 70 Invalid user handle</tt><br />
+      Username is missing or contains not permitted symbols </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>Skype for Windows 1.0 </li>
+</ul>
+<dl>
+  <dt>Notes</dt>
+  <dd>
+    <p>PROTOCOL 5 introduces chat management (CHAT CREATE, ALTER CHAT etc) commands and Skype for Windwos 1.3 "OPEN CHAT" command which are preferred over OPEN IM </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>// IM dialog with echo123 will pop up, with text "This is a test!" already filled in as message text
+-&gt; OPEN IM echo123 This is a test!
+&lt;- OPEN IM echo123 This is a test!
+</pre>
+<h5 id="head-e78efbb81fc22681d107dc6de0d8eff1510ddcea">9.2.7.5. Open Chat window</h5>
+<a id="COMMAND_OPEN_CHAT"></a>
+
+<p>Open chat windows for existing chat. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>OPEN CHAT &lt;chat_id&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    <p><tt>&lt;chat_id&gt;</tt> - existing chat identifier (see CHAT CREATE, SEARCH ...CHATS commands) </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p>if successful command is echoed back </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 69 invalid open what</tt><br />
+      Open target is missing or misspelled (e.g. "OPEN CHT #name/$843934") </li>
+  <li><tt>ERROR 105 Invalid chat name</tt><br />
+      Chat id is missing or chat with this id doesn't exist. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>Skype for Windows 1.3 </li>
+</ul>
+<dl>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; OPEN CHAT #test/$echo123;52c2750d8686c10c
+&lt;- OPEN CHAT #test/$echo123;52c2750d8686c10c
+</pre>
+<h5 id="head-e05d4e497a73920d268a8ffe2d0fdf4fbf30c024">9.2.7.6. Open Filetransfer dialog</h5>
+<a id="COMMAND_OPEN_FILETRANSFER"></a>
+
+<p>Open file transfer dialog to user/users in specified folder. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>OPEN FILETRANSFER &lt;username&gt;[, &lt;username&gt;]*[ IN &lt;folder&gt;]</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p>if successful command is echoed back </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;username&gt;</tt> - list of usernames to start filetransfer to; </li>
+  <li><tt>&lt;folder&gt;</tt> - optional, filesystem folder for file selection dialog. If not specified, file transfer dialog is opened in default directory. </li>
+</ul>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 69 invalid open what</tt><br />
+      Open target is missing or misspelled </li>
+  <li><tt>ERROR 108 user not contact</tt><br />
+      Command is allowed for authorized contacts only </li>
+  <li><tt>ERROR 109 directory doesn't exist</tt><br />
+      Given folder does not exist or user has no access to it </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>Skype for Windows 1.3 </li>
+</ul>
+<dl>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; OPEN FILETRANSFER echo123 IN C:\temp
+&lt;- ERROR 108 user not contact
+-&gt; OPEN FILETRANSFER myfriend IN C:\temp
+&lt;- OPEN FILETRANSFER myfriend IN C:\temp
+</pre>
+<h5 id="head-4379423a5120dec67e42e7e04e64d71a2b48207b">9.2.7.7. Open voicemail</h5>
+<a id="COMMAND_OPEN_VOICEMAIL"></a>
+
+<p>Brings the callhistory tab into focus and starts playing a voicemail. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>OPEN VOICEMAIL &lt;id&gt;</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p>if successful command is echoed back </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;id&gt;</tt> - voicemail identifier </li>
+</ul>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 69 invalid open what</tt><br />
+      Open target is missing or misspelled </li>
+  <li><tt>ERROR 512 invalid voicemail ID</tt><br />
+      Voicemail identifier is missing, is invalid or does not exist </li>
+</ul>
+<h4 id="head-08fd08ba08cdae327fcc9cd3d57b002d624f072e">9.2.8. Test connection</h4>
+<a id="COMMAND_PING"></a>
+
+<p>Query connection status. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>PING</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p>if successful <tt>PONG</tt> is echoed back </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+</dl>
+<h4 id="head-c09ecb916e7b43edb212c602d5e26aa8a65368e6">9.2.9. Retrieving object properties and parameters</h4>
+<p>Three commands are available for retrieving and modifing object properties and general parameters: </p>
+<ul>
+  <li><tt>GET</tt> - general request command to retrieve object properties and general parameters </li>
+  <li><tt>SET</tt> - to set object properties, modify general parameters </li>
+  <li><tt>ALTER</tt> - to alter or perform action with object </li>
+</ul>
+<dl>
+  <dt>Notes</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>in future releases SET and ALTER will be distinguished more clearly </li>
+</ul>
+<h4 id="head-9b38ab8c189b383a93ae30fa3360c0f5ff19bf64">9.2.10. Object properties</h4>
+<dl>
+  <dt>General syntax</dt>
+  <dd></dd>
+</dl>
+<p>`GET USER &lt;username&gt; property&acute;<br />
+  ` | CALL &lt;id&gt; property&acute;<br />
+  ` | MESSAGE &lt;id&gt; property&acute;<br />
+  ` | CHAT &lt;id&gt; property&acute;<br />
+  ` | CHATMESSAGE &lt;id&gt; property&acute;<br />
+  ` | VOICEMAIL &lt;id&gt; property&acute;<br />
+</p>
+<p>`SET USER &lt;username&gt; property &lt;value&gt;&acute;<br />
+  ` | CALL &lt;id&gt; property &lt;value&gt;&acute;<br />
+  ` | MESSAGE &lt;id&gt; property &lt;value&gt;&acute;<br />
+  ` | CHAT &lt;id&gt; property &lt;value&gt;&acute;<br />
+  ` | CHATMESSAGE &lt;id&gt; property &lt;value&gt;&acute;<br />
+  ` | VOICEMAIL &lt;id&gt; property &lt;value&gt;&acute;<br />
+</p>
+<p>See corresponding object reference for available properties and property values: </p>
+<ul>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_CALL">call object</a> </li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_USER">user object</a> </li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_CHAT">chat object</a> </li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_CHATMESSAGE">chatmessage object</a> </li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_VOICEMAIL">voicemail object</a> </li>
+</ul>
+<h5 id="head-fcccee0c603f72798ffc788e1b3bfe2813c1fa27">9.2.10.1. Retrieve USER object information</h5>
+<a id="COMMAND_GET_USER"></a>
+
+<p>Returns property value for specified user. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET USER &lt;username&gt; property</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>USER &lt;username&gt; property &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;username&gt;</tt> - Skype username to retrieve property </li>
+  <li><tt>property</tt>- property name. Available properties are: <tt>HANDLE, FULLNAME, BIRTHDAY, SEX, LANGUAGE, COUNTRY, PROVINCE, CITY, PHONE_HOME, PHONE_OFFICE, PHONE_MOBILE, HOMEPAGE, ABOUT, HASCALLEQUIPMENT, BUDDYSTATUS, ISAUTHORIZED, ISBLOCKED, DISPLAYNAME, ONLINESTATUS, LASTONLINETIMESTAMP, CAN_LEAVE_VM, SPEEDDIAL, RECEIVEDAUTHREQUEST (protocol 5)</tt>. See <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_USER">USER object</a> description for detailed info. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 7 GET: invalid WHAT</tt><br />
+      Object name missing or misspelled (e.g. "GET USE") </li>
+  <li><tt>ERROR 10 Invalid prop</tt><br />
+      ID and/or property missing or misspelled (e.g. "GET USER pamela FULLNAM"). </li>
+  <li><tt>ERROR 8 invalid handle</tt><br />
+      USERNAME missing or includes a not permitted character (e.g. "GET USER ! HANDLE"). Notes::<tt>GET USER &lt;target&gt; ONLINESTATUS</tt> will return <tt>OFFLINE</tt> unless current user is authorized by target user to see his/her online status. </li>
+</ul>
+<dl>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET USER pamela FULLNAME
+&lt;- USER pamela FULLNAME Jane Doe
+</pre>
+<h5 id="head-7c2d32a3e321094d877e2f644ff36e1cbb8bfc83">9.2.10.2. Manage USER properties</h5>
+<a id="COMMAND_SET_USER"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd></dd>
+</dl>
+<p><tt>SET USER &lt;target&gt; ISAUTHORIZED TRUE|FALSE</tt> - allow/disable target to see current user's userstatus<br />
+    <tt>SET USER &lt;target&gt; ISBLOCKED TRUE|FALSE</tt> - block/unblock target user<br />
+    <tt>SET USER &lt;target&gt; BUDDYSTATUS 1</tt> - remove target from contactlist <br />
+    <tt>SET USER &lt;target&gt; BUDDYSTATUS 2 &lt;message&gt;</tt> - add target into contactlist and ask authorization with message </p>
+<h5 id="head-f669f0097b8fb0734e1751be224d788a96d2e935">9.2.10.3. Retrieve CALL object information</h5>
+<a id="COMMAND_GET_CALL"></a>
+
+<p>Returns property value for specified call. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET CALL &lt;id&gt; property</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CALL &lt;id&gt; property &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;id&gt;</tt> - call ID (numeric); </li>
+  <li><tt>property</tt> - property name. Available properties are: <tt>TIMESTAMP (UNIX timestamp), PARTNER_HANDLE, PARTNER_DISPNAME, CONF_ID, TYPE, STATUS, FAILUREREASON (numeric), SUBJECT (not used), PSTN_NUMBER, DURATION, PSTN_STATUS, CONF_PARTICIPANT n (for non-host in conference only), CONF_PARTICIPANTS_COUNT</tt>. See <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_CALL">CALL object</a> description for detailed info. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 7 GET: invalid WHAT</tt><br />
+      Object name missing or misspelled (e.g. "GET CAL"). </li>
+  <li><tt>ERROR 11 Invalid call id</tt><br />
+      ID includes other than numeric characters (e.g. "GET CALL 15!"). </li>
+  <li><tt>ERROR 12 Unknown call</tt><br />
+      Call with specified ID does not exist in current user's call history. </li>
+  <li><tt>ERROR 13 Invalid prop</tt><br />
+      Property name missing or misspelled (e.g. "GET CALL 15 TYP"). </li>
+  <li><tt>ERROR 71 Invalid conference participant NO</tt><br />
+      Conference participant's number is not number or too big (e.g. "GET CALL 15 CONF_PARTICIPANT kala", "GET CALL 15 CONF_PARTICIPANT 5") </li>
+</ul>
+<dl>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET CALL 1594 TYPE
+&lt;- CALL 1594 TYPE OUTGOING_P2P
+</pre>
+<h5 id="head-62c2a40547984fbbc061d26965b714c87092fe7f">9.2.10.4. Retrieve CHAT object information</h5>
+<a id="COMMAND_GET_CHAT"></a>
+
+<p>Returns property value for specified chat. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET CHAT &lt;chat_id&gt; property</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHAT &lt;chat_id&gt; property &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>&acute;&lt;chat_id&gt;` - chat identifier; </li>
+  <li><tt>property</tt> - property name. Available properties are: <tt>NAME, TIMESTAMP, ADDER, STATUS, POSTERS, MEMBERS, TOPIC, CHATMESSAGES, ACTIVEMEMBERS, FRIENDLYNAME</tt>. See <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_CHAT">CHAT object</a> description for detailed info. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 3 </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 7 GET: invalid WHAT</tt><br />
+      Object name missing or misspelled (e.g. "GET CHTA "). </li>
+  <li><tt>ERROR 105 invalid chat name</tt><br />
+      Error in the CHATNAME parameter. </li>
+  <li><tt>ERROR 106 Invalid PROP</tt><br />
+      Property name missing or misspelled. </li>
+</ul>
+<dl>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET CHAT #bitman/$jessy;eb06e65635359671 NAME
+&lt;- CHAT #bitman/$jessy;eb06e65635359671 NAME #bitman/$jessy;eb06e65635359671
+</pre>
+<h5 id="head-8e0785e20e9ea084e9ec70a9b41d9a83fc83653e">9.2.10.5. Retrieve CHATMESSAGE object information</h5>
+<a id="COMMAND_GET_CHATMESSAGE"></a>
+
+<p>Returns property value for specified chat message. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET CHATMESSAGE &lt;id&gt; property</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CHATMESSAGE &lt;id&gt; property &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;id&gt;</tt> - chat message ID; </li>
+  <li><tt>property</tt> - property name. Available properties are: <tt>CHATNAME, TIMESTAMP, FROM_HANDLE, FROM_DISPNAME, TYPE, USERS, LEAVEREASON, BODY, STATUS</tt>. See <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_CHATMESSAGE">CHATMESSAGE object</a> description for detailed info. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 3 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET CHATMESSAGE 60 CHATNAME
+&lt;- CHATMESSAGE 60 CHATNAME #bitman/$jessy;eb06e65631239671
+</pre>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 7 GET: invalid WHAT</tt><br />
+      Object name missing or misspelled (e.g. "GET CHTAMESSAGE 60 CHATNAME"). </li>
+  <li><tt>ERROR 14 Invalid message id</tt><br />
+      Chat message ID contains not permitted symbols (only numeric are permitted) (e.g. "GET CHATMESSAGE a") </li>
+  <li><tt>ERROR 15 Unknown message</tt><br />
+      Unknown chat message ID </li>
+  <li><tt>ERROR 16 Invalid PROP</tt><br />
+      Property name missing or misspelled (e.g. "GET CHATMESSAGE 60")|| </li>
+</ul>
+<h5 id="head-28b9490f05f8cab468580f1f575bf42cc1ede636">9.2.10.6. Retrieve MESSAGE object information (obsolete)</h5>
+<a id="COMMAND_GET_MESSAGE"></a>
+
+<p>Returns property value for specified message. This command is deprecated since PROTOCOL 3, use <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_GET_CHATMESSAGE">GET CHATMESSAGE</a> insted. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET MESSAGE &lt;id&gt; property</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;id&gt;</tt> - chat message ID; </li>
+  <li><tt>property</tt> - property name. Available properties are: <tt>TIMESTAMP (UNIX timestamp), PARTNER_HANDLE, PARTNER_DISPNAME, CONF_ID (not used), TYPE, STATUS, FAILUREREASON (numeric), BODY</tt>. See <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_MESSAGE">MESSAGE object</a> description for detailed info. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1, <strong>deprecated in PROTOCOL 3</strong> </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 7 GET: invalid WHAT</tt><br />
+      Object name missing or misspelled (e.g. "GET MESAGE"). </li>
+  <li><tt>ERROR 14 Invalid message id</tt><br />
+      ID includes other than numeric characters (e.g. "GET MESSAGE 1a"). </li>
+  <li><tt>ERROR 15 Unknown message</tt><br />
+      Message with specified ID does not exist in current user's message history. </li>
+  <li><tt>ERROR 16 Invalid prop</tt><br />
+      Property name missing or misspelled (e.g. "GET MESSAGE 21 TYP"). </li>
+</ul>
+<dl>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET MESSAGE 159 TYPE
+&lt;- MESSAGE 159 TYPE TEXT
+</pre>
+<h4 id="head-8aaafc54f3aeadd4ac3b4e33d546625c5419a964">9.2.11. Setting parameter value</h4>
+<a id="COMMAND_SET"></a>
+
+<p>SET command is a general update command. Syntactically it can be applied to objects (<strong>CALL, USER, MESSAGE</strong>) and general variables (<strong>USERSTATUS, AUDIO_IN, AUDIO_OUT, RINGER, MUTE, AVATAR, RINGTONE</strong>). One can update one property at a time for any known object. Skype responds with appropriate notification command as a confirmation. </p>
+<dl>
+  <dt>Notes</dt>
+  <dd>
+    <p>Most properties are read-only. </p>
+  </dd>
+</dl>
+<h4 id="head-3d1ab57afa416876be430de762edb1c1297b0f2e">9.2.12. General parameters</h4>
+<h5 id="head-2c9156e548c8bd6c5bd6231e9ec4694e3f76fdca">9.2.12.1. Skype version</h5>
+<a id="COMMAND_GET_SKYPEVERSION"></a>
+
+<p>Returns Skype version. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET SKYPEVERSION</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>SKYPEVERSION &lt;version&gt;</tt> </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET SKYPEVERSION
+&lt;- SKYPEVERSION 1.3.0.28
+</pre>
+<h5 id="head-3ec229462b0015f543f2dcd6344b48d953828e1e">9.2.12.2. Current user</h5>
+<p>Get username for currently logged in user. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET CURRENTUSERHANDLE</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CURRENTUSERHANDLE &lt;username&gt;</tt> </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+</dl>
+<h5 id="head-27574b8fbdf152fd4a1d43cbd1cec36aad80f83c">9.2.12.3. User status</h5>
+<p>Query or modify user visiblity for current user. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET USERSTATUS</tt><br />
+        <tt>SET USERSTATUS &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>USERSTATUS &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;value&gt;</tt> - new userstatus value<br />
+      Possible values: </p>
+    <ul>
+      <li><tt>UNKNOWN</tt> </li>
+      <li><tt>ONLINE</tt> - current user is online </li>
+      <li><tt>OFFLINE</tt> - current user is offline </li>
+      <li><tt>SKYPEME</tt> - current user is in "Skype Me" mode (PROTOCOL 2). </li>
+      <li><tt>AWAY</tt> - current user is away. </li>
+      <li><tt>NA</tt> - current user is not available. </li>
+      <li><tt>DND</tt> - current user is in "Do not disturb" mode. </li>
+      <li><tt>INVISIBLE</tt> - current user is invisible to others. </li>
+      <li><tt>LOGGEDOUT</tt> - current user is logged out. Clients are detached. </li>
+    </ul>
+  </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 28 Unknown userstatus</tt><br />
+      Status value is incorrect or misspelled </li>
+</ul>
+<dl>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SET USERSTATUS OFFLINE
+&lt;- USERSTATUS OFFLINE
+&lt;- USERSTATUS OFFLINE
+-&gt; SET USERSTATUS xxx
+&lt;- ERROR 28 Unknown userstatus
+</pre>
+<h5 id="head-7e7928a6da85140ff3ed83e504ec2844f4ed0f2e">9.2.12.4. User privilges (services)</h5>
+<a id="COMMAND_GET_PRIVILEGE"></a>
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET PRIVILEGE user_privilege</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>PRIVILEGE user_privilege &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>user_privilege</tt> - possible values: </p>
+    <ul>
+      <li><tt>SKYPEOUT</tt> </li>
+      <li><tt>SKYPEIN</tt> </li>
+      <li><tt>VOICEMAIL</tt> </li>
+    </ul>
+  </li>
+  <li><tt>&lt;value&gt;</tt> - possible values: </p>
+    <ul>
+      <li><tt>TRUE</tt> - privilege/service is enabled </li>
+      <li><tt>FALSE</tt>- privilege/service is disabled </li>
+    </ul>
+  </li>
+</ul>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 40 Unknown privilege</tt><br />
+      Privilege name is missing or misspelled </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET PRIVILEGE SKYPEOUT
+&lt;- PRIVILEGE SKYPEOUT TRUE
+-&gt; GET PRIVILEGE SKYPEIN
+
+&lt;- PRIVILEGE SKYPEIN FALSE
+</pre>
+<h5 id="head-06821d878c866a6e6d5d8fb4240e911e0933dd49">9.2.12.5. User profile</h5>
+<a id="COMMAND_GET_PROFILE"></a>
+
+<p>Query user profile information. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET PROFILE profile_property</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>PROFILE profile_property &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>profile_property</tt> - possible values: </p>
+    <ul>
+      <li><tt>PSTN_BALANCE</tt> - SkypeOut balance value in (EUR) cents. </li>
+      <li><tt>PSTN_BALANCE_CURRENCY</tt> - SkypeOut currency value (at the moment only EUR is supported). </li>
+    </ul>
+  </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 3 </p>
+  </dd>
+</dl>
+<p>Example:: </p>
+<pre>-&gt; GET PROFILE PSTN_BALANCE
+&lt;- PROFILE PSTN_BALANCE 5000
+-&gt; GET PROFILE PSTN_BALANCE_CURRENCY
+&lt;- PROFILE PSTN_BALANCE_CURRENCY EUR
+</pre>
+<h5 id="head-d93f864955f433ffc1f403fa0b2bb9b48fe06b50">9.2.12.6. Connection status</h5>
+<p>Returns current network connection status. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET CONNSTATUS</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>CONNSTATUS &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>&lt;value&gt;</tt> - possible values: </p>
+    <ul>
+      <li><tt>OFFLINE</tt> </li>
+      <li><tt>CONNECTING</tt> </li>
+      <li><tt>PAUSING</tt> </li>
+      <li><tt>ONLINE</tt> </li>
+    </ul>
+  </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET CONNSTATUS
+&lt;- CONNSTATUS ONLINE
+</pre>
+<h5 id="head-4d8b721373231bd7cf6bbce5806f09ff75812907">9.2.12.7. Audio input device</h5>
+<a id="COMMAND_AUDIO_IN"></a>
+
+<p>Get returns current audio input device for Skype.<br />
+  Set assigns new audio output device for Skype. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET AUDIO_IN</tt><br />
+        <tt>SET AUDIO_IN &lt;device_name&gt;</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>AUDIO_IN &lt;device_name&gt;</tt> </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Note</dt>
+  <dd>
+    <p>Setting device with empty name selects Windows default device. </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET AUDIO_IN
+&lt;- AUDIO_IN SB Audigy 2 ZS Audio [DC00]
+</pre>
+<h5 id="head-5743fdec67122ebd520a49ad3dcc8a1a59709776">9.2.12.8. Audio output device</h5>
+<a id="COMMAND_AUDIO_OUT"></a>
+
+<p>Get returns current audio output device for Skype.<br />
+  Set assigns new audio output device for Skype. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET AUDIO_OUT</tt><br />
+        <tt>SET AUDIO_OUT &lt;device_name&gt;</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>AUDIO_OUT &lt;device_name&gt;</tt> </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Note</dt>
+  <dd>
+    <p>Setting device with empty name selects Windows default device. </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET AUDIO_OUT
+&lt;- AUDIO_OUT SB Audigy 2 ZS Audio [DC00]
+</pre>
+<h5 id="head-829630ce0a81f41d20cf14a4e17551c37b957b5d">9.2.12.9. Ringing device</h5>
+<a id="COMMAND_RINGER"></a>
+
+<p>Get returns current ringing device for Skype.<br />
+  Set assigns new ringing device for Skype. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET RINGER</tt><br />
+        <tt>SET RINGER &lt;device_name&gt;</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>RINGER &lt;device_name&gt;</tt> </p>
+  </dd>
+  <dt>Version</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>Skype for Windows 1.3 </li>
+</ul>
+<dl>
+  <dt>Note</dt>
+  <dd>
+    <p>Setting device with empty name selects Windows default device. </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET RINGER
+&lt;- RINGER SB Audigy 2 ZS Audio [DC00]
+</pre>
+<h5 id="head-151f9c1070587da176fc23ca84b958c8cec43ac2">9.2.12.10. Mute status</h5>
+<a id="COMMAND_MUTE"></a>
+
+<p>Get or set mute status. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET MUTE'[[BR]]</tt>SET MUTE ON|OFF` </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>MUTE ON|OFF</tt> </p>
+  </dd>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1 </p>
+  </dd>
+  <dt>Notes</dt>
+  <dd>
+    <p>If there is currently no active calls (call status INPROGRESS) then MUTE is always OFF and setting MUTE ON has no effect. </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET MUTE
+&lt;- MUTE OFF
+// set mute when no call is active - mute remains OFF
+-&gt; SET MUTE ON
+&lt;- MUTE OFF
+</pre>
+<h5 id="head-e47f340111df05e9dc1e0ceda98cc236893df3ae">9.2.12.11. Avatar</h5>
+<a id="COMMAND_SET_AVATAR"></a>
+
+<p>Change user profile avatar picture. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>SET AVATAR &lt;id&gt; &lt;filePath + fileName&gt;</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>AVATAR &lt;id&gt; &lt;filePath + fileName&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>id</tt> - avatar id. Currently &lt;id&gt; should always be set to '1' as only one default avatar is supported. </li>
+  <li><tt>filePath + fileName</tt> - avatar file directory. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>Skype for Windows 1.3 </li>
+</ul>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 114 Invalid avatar</tt><br />
+      Avatar id is missing or invalid </li>
+  <li><tt>ERROR 111 File not found</tt><br />
+      Avatar file specified does not exist </li>
+  <li><tt>ERROR 9901 internal error</tt><br />
+      Wrong type of file (audio file, document, application etc) is tried to set to avatar </li>
+</ul>
+<dl>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; SET AVATAR 1 C:\Documents and Settings\Administrator\My Documents\My Pictures\kitten.jpg
+&lt;- AVATAR 1 C:\Documents and Settings\Administrator\My Documents\My Pictures\kitten.jpg
+</pre>
+<h5 id="head-6e48cc67b0423619a963102cf5180c4492d99316">9.2.12.12. Ringtone</h5>
+<a id="COMMAND_RINGTONE"></a>
+
+<p>Get returns current ringtone file for Skype.<br />
+  Set assigns new ringtone for Skype. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>GET RINGTONE &lt;id&gt;</tt><br />
+        <tt>SET RINGTONE &lt;id&gt; &lt;filePath + fileName&gt;</tt> </p>
+  </dd>
+  <dt>Response</dt>
+  <dd>
+    <p><tt>RINGTONE &lt;id&gt; &lt;filePath + fileName&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>id</tt> - ringtone id. Currently &lt;id&gt; should always be set to '1' as only one default ringtone is supported. </li>
+  <li><tt>filePath + fileName</tt> - ringtone file directory. </li>
+</ul>
+<dl>
+  <dt>Version</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>Skype for Windows 1.3 </li>
+</ul>
+<dl>
+  <dt>Errors</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>ERROR 115 Invalid ringtone</tt><br />
+      Ringtone id is missing or invalid </li>
+  <li><tt>ERROR 111 File not found</tt><br />
+      Ringtone file specified does not exist </li>
+</ul>
+<dl>
+  <dt>Note</dt>
+  <dd>
+    <p>If Skype default ringtone is used, GET command returns its name with no filepath. </p>
+  </dd>
+  <dt>Example</dt>
+  <dd></dd>
+</dl>
+<pre>-&gt; GET RINGTONE 1
+&lt;- RINGTONE 1 call_in
+-&gt; SET RINGTONE 1 C:/WINDOWS/Media/tada.wav
+&lt;- RINGTONE 1 C:/WINDOWS/Media/tada.wav
+</pre>
+<h3 id="head-bd09965aecf2b8e12a4164212a687d6199771d60">9.3. Notifications</h3>
+<p>Notifications are sent by Skype either if the corresponding object changes, or if the value of the property is asked with GET command. Also, if the property value is changed by SET command, the change is confirmed with a notification. Notifications are sent about relevant objects - i.e. users in the buddylist, active calls, active chats etc. </p>
+<p>Notification </p>
+<ul>
+  <li>object notifications - when object is created (ie incoming call, chat), object changes or property is queried </li>
+  <li>status notifications - if some general parameters or status has changed; </li>
+</ul>
+<p>It does not matter whether change is initiated by API client, Skype UI or incoming event - notifications are propagated in similar way. </p>
+<h4 id="head-2e8a01ee3edf0687fa6cc498732bf63ce8133d18">9.3.1. Object notifications</h4>
+<p>Object notifications are broadcasted when new object is created or existing object status/property has changed. </p>
+<h5 id="head-6d06c1cb0fb12a6c3764acacb97f1012a02a2c90">9.3.1.1. Call notifications</h5>
+<p>Call notifications are sent on incoming call or when active calls changes. Client can monitor for CALL events to detect incoming calls and act on it (automatically answer etc). </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>CALL &lt;id&gt; property &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    <p>see <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_CALL">call object</a> reference for available properties and property values. </p>
+  </dd>
+</dl>
+<h5 id="head-0e6f3fbcd5840d42e455be5602a4dc8f137b023a">9.3.1.2. User notifications</h5>
+<p>User notifications are most frequent notifications, including last-seen timestamps, user property information (when new user information is retrieved from network by search or other event). </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>USER &lt;id&gt; property &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parametes</dt>
+  <dd>
+    <p>see <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_USER">user object</a> reference for available properties and property values. </p>
+  </dd>
+  <dt>Notes</dt>
+  <dd>
+    <p>user notifications are reported also for users who are not in contactlist. Client is free to ignore these events as these result from some other command or event. </p>
+  </dd>
+</dl>
+<h5 id="head-279bfc7fe40c18bf0d7a0985672d2b4710015af0">9.3.1.3. Chat notifications</h5>
+<p>Chat notification is typically sent when chat is created, chat properties or members are changed or new message is posted into chat. New message also triggers chatmessage notification. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>CHAT &lt;id&gt; property &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    <p>see <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_CHAT">chat object</a> reference for available properties and property values. </p>
+  </dd>
+</dl>
+<h5 id="head-214fac210456f191947222451bc1f7255bc2b09f">9.3.1.4. Chatmessage notification</h5>
+<p>Chatmessage notification is sent when new message arrives. Client can monitor these messages to display received messages. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p> <tt>CHATMESSAGE &lt;id&gt; property &lt;value&gt;</tt><br />
+        <tt>MESSAGE &lt;id&gt; property &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    <p>see <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_CHATMESSAGE">chatmessage object</a> reference for available properties and property values. </p>
+  </dd>
+  <dt>Notes</dt>
+  <dd>
+    <p>MESSAGE is deprecated in PROTOCOL 3 </p>
+  </dd>
+</dl>
+<h5 id="head-dc31561cfe9a28288d77ab86e33f6bdf54b0dffa">9.3.1.5. Voicemail notifications</h5>
+<p>Voicemail notification is sent when new voicemail is received or recorded. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>VOICEMAIL &lt;id&gt; property &lt;value&gt;</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    <p>see <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_VOICEMAIL">voicemail object</a> reference for available properties and property values. </p>
+  </dd>
+</dl>
+<h4 id="head-54f56559197ca4f9a46e1181c130fbaf1a69ae94">9.3.2. Status notifications</h4>
+<p>Status notifications are broadcasted by Skype after initial connection or if the parameter changes. They can be queried at any time with GET command. </p>
+<h5 id="head-bfe5a638ad267f955524c3427ad165b6365a8b54">9.3.2.1. Callhistory change notification</h5>
+<p>Notifies about call history being changed and that it needs to be reloaded. This happens when all of the call history or a selection of it has been deleted. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>CALLHISTORYCHANGED</tt> </p>
+  </dd>
+</dl>
+<h5 id="head-808a70def3de47311552261859e6f6e8e62a65d3">9.3.2.2. Instant message history change HISTORY</h5>
+<p>Notifies about instant message history being changed and that it needs to be reloaded. Right now it only happens, when all of the IM history is deleted. </p>
+<ul>
+  <li style="list-style-type: none;">
+    <p>Syntax: <tt>IMHISTORYCHANGED</tt> </li>
+</ul>
+<h5 id="head-a548944f72d46dc917bee0505b5c172fda2ae92f">9.3.2.3. Contactlist change notification</h5>
+<p>Notifies if some user is added to or deleted from contacts or has authorized current user. </p>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p>`USER &lt;username&gt; BUDDYSTATUS &lt;status&gt;&acute; </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd>
+    <p>see <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#OBJECT_USER">user object</a> reference for available status values. </p>
+  </dd>
+</dl>
+<ul>
+  <li style="list-style-type: none;">
+    <p>Example: </li>
+</ul>
+<pre>// User has been added to contacts, pending authorisation.
+&lt;- USER pamela BUDDYSTATUS 2
+// User has authorized current user
+&lt;- USER pamela BUDDYSTATUS 3
+// User has been deleted from contacts.
+&lt;- USER pamela BUDDYSTATUS 1
+</pre>
+<h5 id="head-cba5fc5461632889fc28027a1567189f556adfa8">9.3.2.4. User status notification</h5>
+<ul>
+  <li style="list-style-type: none;">
+    <p>Syntax: `USERSTATUS status&acute; </li>
+</ul>
+<dl>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>status</tt> - value for user status. Available values: </p>
+    <ul>
+      <li><tt>UNKNOWN</tt>. </li>
+      <li><tt>ONLINE</tt> - current user is online. </li>
+      <li><tt>OFFLINE</tt> - current user is offline. </li>
+      <li><tt>SKYPEME</tt> - current user is in "Skype Me" mode (Protocol 2). </li>
+      <li><tt>AWAY</tt> - current user is away. </li>
+      <li><tt>NA</tt> - current user is not available. </li>
+      <li><tt>DND</tt> - current user is in "Do not disturb" mode. </li>
+      <li><tt>INVISIBLE</tt> - current user is invisible to others. </li>
+      <li><tt>LOGGEDOUT</tt> - current user is logged out. Clients are detached. </li>
+    </ul>
+  </li>
+</ul>
+<h5 id="head-d93f864955f433ffc1f403fa0b2bb9b48fe06b50-2">9.3.2.5. Connection status</h5>
+<dl>
+  <dt>Syntax</dt>
+  <dd>
+    <p><tt>CONNSTATUS status</tt> </p>
+  </dd>
+  <dt>Parameters</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>status</tt> - value for connection status. Available values: </p>
+    <ul>
+      <li><tt>OFFLINE</tt> </li>
+      <li><tt>CONNECTING</tt> </li>
+      <li><tt>PAUSING</tt> </li>
+      <li><tt>ONLINE</tt> </li>
+      <li><tt>LOGGEDOUT</tt> - CURRENT USER IS LOGGED OUT. </li>
+    </ul>
+  </li>
+</ul>
+<h5 id="head-acc716ec8993a8b1c80867135fe740f14a64c43f">9.3.2.6. Current user handle</h5>
+<ul>
+  <li style="list-style-type: none;">
+    <p>Syntax: `CURRENTUSERHANDLE &lt;username&gt;&acute; Example: </li>
+</ul>
+<pre>CURRENTUSERHANDLE banana
+</pre>
+<h3 id="head-c3b75f7a176831b6c9b70b8692da48d85228133c">9.4. Objects</h3>
+<h4 id="head-7c731e732f425e76b681fa8d87a8c3f163b6ac35">9.4.1. USER object</h4>
+<a id="OBJECT_USER"></a>
+
+<p>User object properties:: </p>
+<ul>
+  <li><tt>HANDLE</tt> - username. Example: <tt>USER pamela HANDLE pamela</tt>. </li>
+  <li><tt>FULLNAME</tt> - user's full name. Example: <tt>USER pamela FULLNAME Jane Doe</tt>. </li>
+  <li><tt>BIRTHDAY</tt> - user's birth date YYYYMMDD. Example: <tt>USER bitman BIRTHDAY 19780329</tt>. </li>
+  <li><tt>SEX</tt> - example: <tt>USER pamela SEX UNKNOWN</tt>. Values: </p>
+    <ul>
+      <li><tt>UNKNOWN</tt> - user has not specified sex in personal profile. </li>
+      <li><tt>MALE</tt> </li>
+      <li><tt>FEMALE</tt> </li>
+    </ul>
+  </li>
+  <li><tt>LANGUAGE</tt> - language's name. Example: <tt>USER mike LANGUAGE English</tt>. In protocol 4 with ISO 639 prefix, example: <tt>USER mike LANGUAGE en English</tt>. </li>
+  <li><tt>COUNTRY</tt> - country's name. Example: <tt>USER mike COUNTRY Estonia</tt>. In protocol 4 with ISO 3166 prefix, example: <tt>USER mike COUNTRY ee Estonia</tt>. </li>
+  <li><tt>PROVINCE</tt> - example: <tt>USER mike PROVINCE Harjumaa</tt>. </li>
+  <li><tt>CITY</tt> - example: <tt>USER mike CITY Tallinn</tt>. </li>
+  <li><tt>PHONE_HOME</tt> - example: <tt>USER mike PHONE_HOME 3721111111</tt>. </li>
+  <li><tt>PHONE_OFFICE</tt> - example: <tt>USER mike PHONE_OFFICE 3721111111</tt>. </li>
+  <li><tt>PHONE_MOBILE</tt> - example: <tt>USER mike PHONE_MOBILE 3721111111</tt>. </li>
+  <li><tt>HOMEPAGE</tt> - example: <tt>USER mike HOMEPAGE http://www.joltid.com</tt>. </li>
+  <li><tt>ABOUT</tt> - example: <tt>USER mike ABOUT I am a nice person</tt>. </li>
+  <li><tt>HASCALLEQUIPMENT</tt> - returns always <tt>TRUE</tt>. Example: <tt>USER pamela HASCALLEQUIPMENT TRUE</tt>. </li>
+  <li><tt>BUDDYSTATUS</tt> - example: <tt>USER pamela BUDDYSTATUS 2</tt>. Possible BUDDYSTATUS values: </p>
+    <ul>
+      <li><tt>0</tt> - never been in contact list. </li>
+      <li><tt>1</tt> - deleted from contact list. (read-write) </li>
+      <li><tt>2</tt> - pending authorisation. (read-write) </li>
+      <li><tt>3</tt> - added to contact list. </li>
+    </ul>
+  </li>
+  <li><tt>ISAUTHORIZED</tt> - (read-write) is user authorized by current user. Example: <tt>USER pamela ISAUTHORIZED TRUE</tt>. Values: </p>
+    <ul>
+      <li><tt>TRUE</tt> </li>
+      <li><tt>FALSE</tt> </li>
+    </ul>
+  </li>
+  <li><tt>ISBLOCKED</tt> - (read-write) is user blocked by current user. Example: <tt>USER spammer ISBLOCKED TRUE</tt>. Values: </p>
+    <ul>
+      <li><tt>TRUE</tt> </li>
+      <li><tt>FALSE</tt> </li>
+    </ul>
+  </li>
+  <li><tt>DISPLAYNAME</tt> - example: <tt>USER pamela DISPLAYNAME pam</tt>. </li>
+  <li><tt>ONLINESTATUS</tt> user online status. Example: <tt>USER mike ONLINESTATUS ONLINE</tt>. Values: </p>
+    <ul>
+      <li><tt>UNKNOWN</tt> - unknown user. </li>
+      <li><tt>OFFLINE</tt> - user is offline (not connected). Will also be returned if current user is not authorized by other user to see his/her online status. </li>
+      <li><tt>ONLINE</tt> - user is online. </li>
+      <li><tt>AWAY</tt> - user is away (has been inactive for certain period). </li>
+      <li><tt>NA</tt> - user is not available. </li>
+      <li><tt>DND</tt> - user is in "Do not disturb" mode. </li>
+      <li><tt>SKYPEOUT</tt> - user is in the SkypeOut contact list. </li>
+      <li><tt>SKYPEME</tt> (Protocol 2) </li>
+    </ul>
+  </li>
+  <li><tt>LASTONLINETIMESTAMP</tt> - UNIX timestamp, available only for offline user. Example <tt>USER mike LASTONLINETIMESTAMP 1078959579</tt>. </li>
+  <li><tt>CAN_LEAVE_VM</tt> - is it possible to send voicemail to user. Example: <tt>USER test CAN_LEAVE_VM TRUE</tt>. Values: </p>
+    <ul>
+      <li><tt>TRUE</tt> </li>
+      <li><tt>FALSE</tt> </li>
+    </ul>
+  </li>
+  <li><tt>SPEEDDIAL</tt> - (read-write) speeddial code assigned to user. </li>
+  <li><tt>RECEIVEDAUTHREQUEST</tt>- text message for authorization request; available only when user asks for authorization. </li>
+</ul>
+<p>Most user properties are read-only. Following properties are read-write and can be modified with SET command: </p>
+<ul>
+  <li><tt>BUDDYSTATUS</tt> </p>
+    <ul>
+      <li>1 - delete from buddylist </li>
+      <li>2 - add user into contactlist and ask for authorization: <tt>SET USER echo123 BUDDYSTATUS 2 Please authorize me</tt> </li>
+    </ul>
+  </li>
+  <li><tt>ISBLOCKED</tt> </p>
+    <ul>
+      <li><tt>TRUE</tt> - block user </li>
+      <li><tt>FALSE</tt> - unblock user </li>
+    </ul>
+  </li>
+  <li><tt>ISAUTHORIZED</tt> </p>
+    <ul>
+      <li><tt>TRUE</tt> - authorize user </li>
+      <li><tt>FALSE</tt> - dismiss authorization for user </li>
+    </ul>
+  </li>
+  <li><tt>SPEEDDIAL</tt> - speeddial code assigned to user </li>
+</ul>
+<h4 id="head-a4d5625547e09ecd8dc079536d199bb36545c245">9.4.2. CALL object</h4>
+<a id="OBJECT_CALL"></a>
+
+<p>Call object properties: </p>
+<ul>
+  <li><tt>TIMESTAMP</tt> - time, when call was placed (UNIX timestamp). Example: <tt>CALL 17 TIMESTAMP 1078958218</tt> </li>
+  <li><tt>PARTNER_HANDLE</tt> - example: <tt>CALL 17 PARTNER_HANDLE mike</tt> </li>
+  <li><tt>PARTNER_DISPNAME</tt> - example: <tt>CALL 17 PARTNER_DISPNAME Mike Mann</tt> </li>
+  <li><tt>CONF_ID</tt> - if CONF_ID&gt;0 then it is conference call. Example: <tt>CALL 17 CONF_ID 0</tt> </li>
+  <li><tt>TYPE</tt> - call type. Example: <tt>CALL 17 TYPE OUTGOING_PSTN</tt>. Possible TYPE values: </p>
+    <ul>
+      <li><tt>INCOMING_PSTN</tt> - incoming call from PSTN. </li>
+      <li><tt>OUTGOING_PSTN</tt> - outgoing call to PSTN. </li>
+      <li><tt>INCOMING_P2P</tt> - incoming call from P2P. </li>
+      <li><tt>OUTGOING_P2P</tt> - outgoing call to P2P. </li>
+    </ul>
+  </li>
+  <li><tt>STATUS</tt> - call status. Example: <tt>CALL 17 STATUS FAILED</tt>. Possible STATUS values: </p>
+    <ul>
+      <li><tt>UNPLACED</tt> - call was never placed. </li>
+      <li><tt>ROUTING</tt> - call is currently being routed. </li>
+      <li><tt>EARLYMEDIA</tt> - with the pstn there is possibility that before the call is actually established, the early media is being played. For example it can be a calling tone or it can be some waiting message (all operators are busy, hold on for a sec) etc. </li>
+      <li><tt>FAILED</tt> - call failed. Try to get FAILUREREASON for more information. </li>
+      <li><tt>RINGING</tt> - currently ringing. </li>
+      <li><tt>INPROGRESS</tt> - call is in progress. </li>
+      <li><tt>ONHOLD</tt> - call is placed on hold. </li>
+      <li><tt>FINISHED</tt> - call is finished. </li>
+      <li><tt>MISSED</tt> - call was missed. </li>
+      <li><tt>REFUSED</tt> - call was refused. </li>
+      <li><tt>BUSY</tt> - destination was busy i.e. pressed hang up button. </li>
+      <li><tt>CANCELLED</tt> (Protocol 2) </li>
+      <li><tt>VM_BUFFERING_GREETING</tt> - voicemail greeting is being downloaded; </li>
+      <li><tt>VM_PLAYING_GREETING</tt> - voicemail greeting is being played; </li>
+      <li><tt>VM_RECORDING</tt> - voicemail is being recorded; </li>
+      <li><tt>VM_UPLOADING</tt> - voicemail recording is finished, voicemail is uploaded into server; </li>
+      <li><tt>VM_SENT</tt> - voicemail has successfully been sent; </li>
+      <li><tt>VM_CANCELLED</tt> - leaving voicemail has been cancelled; </li>
+      <li><tt>VM_FAILED</tt> - leaving voicemail failed; check FAILUREREASON; </li>
+    </ul>
+  </li>
+  <li><tt>FAILUREREASON</tt> - example: <tt>CALL 17 FAILUREREASON 1</tt> (numeric). </li>
+  <li><tt>SUBJECT</tt> - not used. </li>
+  <li><tt>PSTN_NUMBER</tt> - example: <tt>CALL 17 PSTN_NUMBER 372123123</tt>. </li>
+  <li><tt>DURATION</tt> - example: <tt>CALL 17 DURATION 0</tt>. </li>
+  <li><tt>PSTN_STATUS</tt> - error string from gateway, in case of PSTN-call. Example: <tt>CALL 26 PSTN_STATUS 6500 PSTN connection creation timeout</tt>. </li>
+  <li><tt>CONF_PARTICIPANTS_COUNT</tt> - number of non-hosts in case of conference call. Possible values: </p>
+    <ul>
+      <li><tt>0</tt> - call is not a conference. For host CONF_PARTICIPANTS_COUNT is always 0. </li>
+      <li><tt>1</tt> - call is former conference. </li>
+      <li><tt>2, 3, 4</tt> - call is conference. </li>
+    </ul>
+  </li>
+  <li><tt>CONF_PARTICIPANT n</tt> - conference's n-th participant's handle, call type and status and participant's displayname (for non-host only). Example: <tt>CALL 59 CONF_PARTICIPANT 1 echo123 INCOMING_P2P INPROGRESS Echo Test Service</tt>. </li>
+  <li><tt>VM_DURATION</tt> </li>
+  <li><tt>VM_ALLOWED_DURATION</tt> - maximum duration in seconds allowed to leave voicemail; </li>
+</ul>
+<dl>
+  <dt>Notes</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li>status values for voicemails (VM_xxx) and VM_DURATION/VM_ALLOWED_DURATION apply for calls which get forwarded into voicemail (eg target is offline); introduced in PROTOCOL 5; </li>
+</ul>
+<p>Most call properties are read-only. Following properties are read-write and can be modified with SET command: </p>
+<ul>
+  <li><tt>STATUS</tt> - for call control. Available values: </p>
+    <ul>
+      <li><tt>ONHOLD</tt> - hold call </li>
+      <li><tt>INPROGRESS</tt> - answer or resume call </li>
+      <li><tt>FINISHED</tt> - hang up call </li>
+    </ul>
+  </li>
+  <li><tt>SEEN</tt> - sets call seen, meaning that this missed call is seen and will be removed from missed calls list. </li>
+  <li><tt>DTMF</tt> - sends VALUE as DTMF. Permitted symbols in VALUE are: {0..9,#,*}. </li>
+  <li><tt>JOIN_CONFERENCE</tt> - joins call with another call into conference. VALUE is another call's ID. </li>
+</ul>
+<h4 id="head-88dd34bd96db05e9866eba36aecc08d63aa87085">9.4.3. MESSAGE object</h4>
+<a id="OBJECT_MESSAGE"></a>
+
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 1, <strong>deprecated in PROTOCOL 3</strong> replaced with CHATMESSAGE object. </p>
+  </dd>
+  <dt>Properties</dt>
+  <dd>
+    
+  </dd>
+</dl>
+<ul>
+  <li><tt>TIMESTAMP</tt> - time, when message was sent (UNIX timestamp). Example: <tt>MESSAGE 21 TIMESTAMP 1078958218</tt> </li>
+  <li><tt>PARTNER_HANDLE</tt> - example: <tt>MESSAGE 21 PARTNER_HANDLE mike</tt> </li>
+  <li><tt>PARTNER_DISPNAME</tt> - example: <tt>MESSAGE 21 PARTNER_DISPNAME Mike Mann</tt> </li>
+  <li><tt>CONF_ID</tt> - not used. </li>
+  <li><tt>TYPE</tt> - message type. Example: <tt>MESSAGE 21 TYPE TEXT</tt>. Possible TYPE values: </p>
+    <ul>
+      <li><tt>AUTHREQUEST</tt> - authorization request. </li>
+      <li><tt>TEXT</tt> - IM or topic set. </li>
+      <li><tt>CONTACTS</tt> - contacts data. </li>
+      <li><tt>UNKNOWN</tt> - other. </li>
+    </ul>
+  </li>
+  <li><tt>STATUS</tt> - message status. Example: <tt>MESSAGE 21 STATUS QUEUED</tt>. Possible STATUS values: </p>
+    <ul>
+      <li><tt>SENDING</tt> - message is being sent. </li>
+      <li><tt>SENT</tt> - message was sent. </li>
+      <li><tt>FAILED</tt> - message sending failed. Try to get FAILUREREASON for more information. </li>
+      <li><tt>RECEIVED</tt> - message has been received. </li>
+      <li><tt>READ</tt> - message has been read. </li>
+      <li><tt>IGNORED</tt> - message was ignored. </li>
+      <li><tt>QUEUED</tt> - message is queued. </li>
+    </ul>
+  </li>
+  <li><tt>FAILUREREASON</tt> - example: <tt>MESSAGE 21 FAILUREREASON 1</tt> (numeric). </li>
+  <li><tt>BODY</tt> - message body. Example: <tt>MESSAGE 21 BODY Hi, what's up?</tt> </li>
+</ul>
+<p>Most message properties are read-only. Following property is read-write and can be modified with SET command: </p>
+<ul>
+  <li><tt>SEEN</tt> - meaning that this missed IM is seen and will be removed from missed messages list. UI will set this automatically if auto-popup is enabled for corresponding group of users. </li>
+</ul>
+<h4 id="head-a8d0d05ade348dd4683e5d1ba3fc97c925b19b2b">9.4.4. CHAT object</h4>
+<a id="OBJECT_CHAT"></a>
+
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 3. </p>
+  </dd>
+  <dt>Properties</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>NAME</tt> - chat ID. Example: CHAT #test_l/$6a072ce5537c4044 NAME #test_l/$6a072ce5537c4044 </li>
+  <li><tt>TIMESTAMP</tt> - time, when chat was created. Example: CHAT #test_l/$6a072ce5537c4044 TIMESTAMP 1078958218. </li>
+  <li><tt>ADDER</tt> - user who added current user to chat. Example: CHAT 1078958218 ADDER k6rberebane. </li>
+  <li><tt>STATUS</tt> - chat status. Example: CHAT #test_l/$6a072ce5537c4044 STATUS MULTI_SUBSCRIBED. Possible STATUS values: </p>
+    <ul>
+      <li><tt>LEGACY_DIALOG</tt> - old style IM. </li>
+      <li><tt>DIALOG</tt> - 1:1 chat. </li>
+      <li><tt>MULTI_SUBSCRIBED</tt> - participant in chat. </li>
+      <li><tt>UNSUBSCRIBED</tt> - left from chat. </li>
+    </ul>
+  </li>
+  <li><tt>POSTERS</tt> - members who have posted messages. Example: CHAT #test_l/$6a072ce5537c4044 POSTERS k6rberebane test_3 </li>
+  <li><tt>MEMBERS</tt> - all users who have been there. Example: CHAT #test_l/$6a072ce5537c4044 MEMBERS k6rberebane test test_2 test_3 </li>
+  <li><tt>TOPIC</tt> - chat topic. Example: CHAT #test_l/$6a072ce5537c4044 TOPIC API testimine </li>
+  <li><tt>CHATMESSAGES</tt> - all messages IDs in this chat. Example: CHAT #test_l/$6a072ce5537c4044 CHATMESSAGES 34, 35, 36, 38, 39 </li>
+  <li><tt>ACTIVEMEMBERS</tt> - members who have stayed in chat. Example: CHAT #test_l/$6a072ce5537c4044 ACTIVEMEMBERS k6rberebane test_2 test_3 </li>
+  <li><tt>FRIENDLYNAME</tt> - name shown in chat window title. Example: CHAT #test_l/$6a072ce5537c4044 FRIENDLYNAME Test Test XX | tere ise ka </li>
+  <li><tt>CHATMESSAGES</tt> - list of chatmessage identifiers; </li>
+  <li><tt>RECENTCHATMESSAGES</tt> list of missed/recent chatmessage identifiers; </li>
+</ul>
+<h4 id="head-7028c7bd417d62b60e60652cfca01f60b38353f0">9.4.5. CHATMESSAGE object</h4>
+<a id="OBJECT_CHATMESSAGE"></a>
+
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 3. Supersedes MESSAGE object. </p>
+  </dd>
+  <dt>Properties</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>TIMESTAMP</tt> - time, when message was sent (UNIX timestamp). Example: <tt>MESSAGE 21 TIMESTAMP 1078958218</tt> </li>
+  <li><tt>PARTNER_HANDLE</tt> - example: <tt>CHATMESSAGE 21 PARTNER_HANDLE mike</tt> </li>
+  <li><tt>PARTNER_DISPNAME</tt> - example: <tt>CHATMESSAGE 21 PARTNER_DISPNAME Mike Mann</tt> </li>
+  <li><tt>TYPE</tt> - message type. Example: <tt>MESSAGE 21 TYPE TEXT</tt>. Possible TYPE values: </p>
+    <ul>
+      <li><tt>SETTOPIC</tt> - chat's topic change. </li>
+      <li><tt>SAID</tt> - IM. </li>
+      <li><tt>ADDEDMEMBERS</tt> - invited someone to chat. </li>
+      <li><tt>SAWMEMBERS</tt> - chat participant has seen the other members. </li>
+      <li><tt>CREATEDCHATWITH</tt> - chat to multiple people is created. </li>
+      <li><tt>LEFT</tt> - someone left chat; also notification if somebody cannot be added to chat. </li>
+      <li><tt>UNKNOWN</tt> - other. </li>
+    </ul>
+  </li>
+  <li><tt>STATUS</tt> - message status. Example: <tt>MESSAGE 21 STATUS QUEUED</tt>. Possible STATUS values: </p>
+    <ul>
+      <li><tt>SENDING</tt> - message is being sent. </li>
+      <li><tt>SENT</tt> - message was sent. </li>
+      <li><tt>RECEIVED</tt> - message has been received. </li>
+      <li><tt>READ</tt> - message has been read. </li>
+    </ul>
+  </li>
+  <li><tt>LEAVEREASON</tt> - used with LEFT-type message. Example: <tt>CHATMESSAGE 21 LEAVEREASON UNSUBSCRIBE</tt>. Possible LEAVEREASON values: </p>
+    <ul>
+      <li><tt>USER_NOT_FOUND</tt> - user was not found. </li>
+      <li><tt>USER_INCAPABLE</tt> - user has older Skype version and cannot join multichat. </li>
+      <li><tt>ADDER_MUST_BE_FRIEND</tt> - recipient accepts messages from contacts only and sender is not in his/her Contact list. </li>
+      <li><tt>ADDED_MUST_BE_AUTHORIZED</tt> - recipient accepts messages from authorized users only and sender is not authorized. </li>
+      <li><tt>UNSUBSCRIBE</tt> - participant left chat. </li>
+    </ul>
+  </li>
+  <li><tt>BODY</tt> - message body. Example: <tt>CHATMESSAGE 21 BODY Hi, what's up?</tt> </li>
+  <li><tt>CHATNAME</tt> - chat that includes the message, example: #test_3/$b17eb511457e9d20 </li>
+  <li><tt>USERS</tt> - people added to chat. </li>
+</ul>
+<p>Most chatmessage properties are read-only. Following property is read-write and can be modified with SET command: </p>
+<ul>
+  <li><tt>SEEN</tt> - mark missed chatmessage as seen. This also removes chat from missed events. </li>
+</ul>
+<h4 id="head-36ca69642f630c1da6ecb646d21f2f5d115f8f6b">9.4.6. VOICEMAIL object</h4>
+<a id="OBJECT_VOICEMAIL"></a>
+
+<dl>
+  <dt>Version</dt>
+  <dd>
+    <p>PROTOCOL 5 </p>
+  </dd>
+  <dt>Properties</dt>
+  <dd></dd>
+</dl>
+<ul>
+  <li><tt>TYPE</tt> - type of voicemail object </p>
+    <ul>
+      <li><tt>INCOMING</tt> - voicemail received from partner; </li>
+      <li><tt>OUTGOING</tt> - voicemail sent to partner; </li>
+      <li><tt>DEFAULT_GREETING</tt> - Skype default greeting from partner; </li>
+      <li><tt>CUSTOM_GREETING</tt> - partner's recorded custom greeting; </li>
+      <li><tt>UNKNOWN</tt> </li>
+    </ul>
+  </li>
+  <li><tt>PARTNER_HANDLE</tt> - username for voicemail sender (for incoming) or recipient (for outgoing); </li>
+  <li><tt>PARTNER_DISPNAME</tt> - user displayname for partner; </li>
+  <li><tt>STATUS</tt> - current status of voicemail object; </p>
+    <ul>
+      <li><tt>NOTDOWNLOADED</tt> - voicemail is stored in server (has not been downloaded yet); </li>
+      <li><tt>DOWNLOADING</tt> - downloading from server to local machine; </li>
+      <li><tt>UNPLAYED</tt> - voicemail has been downloaded but not played back yet; </li>
+      <li><tt>BUFFERING</tt> - buffering for playback; </li>
+      <li><tt>PLAYING</tt> - currently played back; </li>
+      <li><tt>PLAYED</tt> - voicemail has been plyed back; </li>
+      <li><tt>BLANK</tt> - intermediate status when new object is created but recording has not started yet (eg playing greeting); </li>
+      <li><tt>RECORDING</tt> - voicemail currently being recorded; </li>
+      <li><tt>RECORDED</tt> - voicemail recored but not yet uploaded to server; </li>
+      <li><tt>UPLOADING</tt> - voicemail object is currently being uploaded to server; </li>
+      <li><tt>UPLOADED</tt> - upload to server finished but not yet deleted; object is also locally stored </li>
+      <li><tt>DELETING</tt> - pending on delete; </li>
+      <li><tt>FAILED</tt> - downloading voicemail/greeting failed; </li>
+      <li><tt>UNKNOWN</tt> </li>
+    </ul>
+  </li>
+  <li><tt>FAILUREREASON</tt> - </p>
+    <ul>
+      <li><tt>MISC_ERROR</tt> </li>
+      <li><tt>CONNECT_ERROR</tt> </li>
+      <li><tt>NO_VOICEMAIL_PRIVILEGE</tt> </li>
+      <li><tt>NO_SUCH_VOICEMAIL</tt> </li>
+      <li><tt>FILE_READ_ERROR</tt> </li>
+      <li><tt>FILE_WRITE_ERROR</tt> </li>
+      <li><tt>RECORDING_ERROR</tt> </li>
+      <li><tt>PLAYBACK_ERROR</tt> </li>
+      <li><tt>UNKNOWN</tt> </li>
+    </ul>
+  </li>
+  <li><tt>SUBJECT</tt> - not used; </li>
+  <li><tt>TIMESTAMP</tt> </li>
+  <li><tt>DURATION</tt> - actual voicemail duration in seconds; </li>
+  <li><tt>ALLOWED_DURATION</tt> - maximum voicemail duration in seconds allowed to leave to partner; </li>
+</ul>
+<h3 id="head-0c4c479205caf9796b1ca05b073629c9b54470a9">9.5. Error codes</h3>
+<a id="ERROR_CODES"></a>
+
+<ul>ERROR CODE[ DESC] </li>
+</ul>
+<p>The error response is sent by Skype each time Skype senses an error condition, which includes syntactically incorrect commands, internal inconsistencies etc. CODE is a number that uniquely identifies error condition and the DESC is optional brief description of the situation, given in English. </p>
+<p>Currently the following error codes are defined: </p>
+<div>
+  <table width="480">
+    <tbody>
+      <tr>
+        <td><strong>Code</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Possible reasons</strong></td>
+      </tr>
+      <tr>
+        <td> 1</td>
+        <td> General syntax error</td>
+        <td> Command missing (e.g. " " sent as command)</td>
+      </tr>
+      <tr>
+        <td> 2</td>
+        <td> Unknown command</td>
+        <td> Command spelled incorrect (e.g. "GRT" send instead of "GET")</td>
+      </tr>
+      <tr>
+        <td> 3</td>
+        <td> Search: unknown WHAT</td>
+        <td> Search target is missing or misspelled</td>
+      </tr>
+      <tr>
+        <td> 4</td>
+        <td> Empty target not allowed</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 5</td>
+        <td> Search CALLS: invalid target</td>
+        <td> Not permitted character (e.g. "!", "#", "&curren;", "&amp;#8364;", " " (space) etc.) was used in the target username (e.g. "SEARCH CALLS !a")</td>
+      </tr>
+      <tr>
+        <td> 6</td>
+        <td> SEARCH MISSEDCALLS: target not allowed</td>
+        <td> e.g. "SEARCH MISSEDCALLS echo123"</td>
+      </tr>
+      <tr>
+        <td> 7</td>
+        <td> GET: invalid WHAT</td>
+        <td> Object/property name missing or misspelled</td>
+      </tr>
+      <tr>
+        <td> 8</td>
+        <td> Invalid user handle</td>
+        <td> USERNAME missing or includes a not permitted character (e.g. "GET USER ! HANDLE")</td>
+      </tr>
+      <tr>
+        <td> 9</td>
+        <td> Unknown user</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 10</td>
+        <td> Invalid PROP</td>
+        <td> Property name and/or ID missing or misspelled</td>
+      </tr>
+      <tr>
+        <td> 11</td>
+        <td> Invalid call id</td>
+        <td> Call ID missing or misspelled (must be a numeric value)</td>
+      </tr>
+      <tr>
+        <td> 12</td>
+        <td> Unknown call</td>
+        <td> Nonexistant call ID used</td>
+      </tr>
+      <tr>
+        <td> 13</td>
+        <td> Invalid PROP</td>
+        <td> Returned to command GET CALL id PARTNER_DISPLAYNAME. Property name missing or misspelled</td>
+      </tr>
+      <tr>
+        <td> 14</td>
+        <td> Invalid message id</td>
+        <td> GET - Message ID missing or misspelled (must be a numeric value)</td>
+      </tr>
+      <tr>
+        <td> 15</td>
+        <td> Unknown message</td>
+        <td> Nonexistant message ID used in GET command</td>
+      </tr>
+      <tr>
+        <td> 16</td>
+        <td> Invalid PROP</td>
+        <td> Returned to command GET MESSAGE id PARTNER_DISPLAYNAME. Property name missing or misspelled</td>
+      </tr>
+      <tr>
+        <td> 17</td>
+        <td> (Not in use)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 18</td>
+        <td> SET: invalid WHAT</td>
+        <td> Property name missing or misspelled</td>
+      </tr>
+      <tr>
+        <td> 19</td>
+        <td> Invalid call id</td>
+        <td> Call ID missing or misspelled (must be a numeric value)</td>
+      </tr>
+      <tr>
+        <td> 20</td>
+        <td> Unknown call</td>
+        <td> Nonexistant call ID used</td>
+      </tr>
+      <tr>
+        <td> 21</td>
+        <td> Unknown/disallowed call prop</td>
+        <td> SET CALL value incorrect or misspelled (e.g. "SET CALL 15 STATUS ONHOL")</td>
+      </tr>
+      <tr>
+        <td> 22</td>
+        <td> Cannot hold this call at the moment</td>
+        <td> Trying to hold a call that is not in progress.</td>
+      </tr>
+      <tr>
+        <td> 23</td>
+        <td> Cannot resume this call at the moment</td>
+        <td> Trying to resume/answer a call that is not in progress.</td>
+      </tr>
+      <tr>
+        <td> 24</td>
+        <td> Cannot hangup inactive call</td>
+        <td> Trying to hang up a call that is not in progress.</td>
+      </tr>
+      <tr>
+        <td> 25</td>
+        <td> Unknown WHAT</td>
+        <td> Property name missing or misspelled (e.g. "SET CALL 15 STATU ONHOLD")</td>
+      </tr>
+      <tr>
+        <td> 26</td>
+        <td> Invalid user handle</td>
+        <td> Target username missing or includes not permitted symbols (e.g. "MESSAGE ")</td>
+      </tr>
+      <tr>
+        <td> 27</td>
+        <td> Invalid version number</td>
+        <td> Invalid protocol number (e.g. "PROTOCOL -12,9")</td>
+      </tr>
+      <tr>
+        <td> 28</td>
+        <td> Unknown userstatus</td>
+        <td> Unknown or misspelled value for user status (e.g. "SET USERSTATUS RICH")</td>
+      </tr>
+      <tr>
+        <td> 29</td>
+        <td> SEARCH what: target not allowed</td>
+        <td> Target is not permitted; e.g. "SEARCH MISSEDMESSAGES echo123"</td>
+      </tr>
+      <tr>
+        <td> 30</td>
+        <td> Invalid message id</td>
+        <td> SET - Message ID missing or misspelled (must be a numeric value)</td>
+      </tr>
+      <tr>
+        <td> 31</td>
+        <td> Unknown message id</td>
+        <td> Nonexistant message ID used in SET command</td>
+      </tr>
+      <tr>
+        <td> 32</td>
+        <td> Invalid WHAT</td>
+        <td> Property missing or misspelled</td>
+      </tr>
+      <tr>
+        <td> 33</td>
+        <td> invalid parameter</td>
+        <td> Unknown or misspelled value for mute (e.g. "SET MUTE O")</td>
+      </tr>
+      <tr>
+        <td> 34</td>
+        <td> invalid user handle</td>
+        <td> Target username/number missing (e.g. "CALL ")</td>
+      </tr>
+      <tr>
+        <td> 35</td>
+        <td> Not connected</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 36</td>
+        <td> Not online</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 37</td>
+        <td> Not connected</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 38</td>
+        <td> Not online</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 39</td>
+        <td> user blocked</td>
+        <td> Destination user is blocked by caller. Also given, if trying to call to a blocked user</td>
+      </tr>
+      <tr>
+        <td> 40</td>
+        <td> Unknown privilege</td>
+        <td> Privilege is either misspelled or does not exist (e.g. "GET PRIVILEGE SKYPEOUT").</td>
+      </tr>
+      <tr>
+        <td> 41</td>
+        <td> Call not active</td>
+        <td> Trying to send DTMF, when call is not active.</td>
+      </tr>
+      <tr>
+        <td> 42</td>
+        <td> Invalid DTMF code</td>
+        <td> Invalid DTMF code is sent. Valid symbols for DTMF codes are {0..9,#,*}</td>
+      </tr>
+      <tr>
+        <td> 43</td>
+        <td> cannot send empty message</td>
+        <td> Empty message is tried to sent, e.g. "MESSAGE echo123".</td>
+      </tr>
+      <tr>
+        <td> 50</td>
+        <td> cannot set device</td>
+        <td> An error occurred when changing audio device</td>
+      </tr>
+      <tr>
+        <td> 51</td>
+        <td> invalid parameter</td>
+        <td> Parameter to READY command is not YES or NO</td>
+      </tr>
+      <tr>
+        <td> 52</td>
+        <td> invalid parameter</td>
+        <td> Parameter to HOOK command is not ON or OFF</td>
+      </tr>
+      <tr>
+        <td> 53</td>
+        <td> invalid value</td>
+        <td> Parameter to SET AUTOAWAY is not ON or OFF</td>
+      </tr>
+      <tr>
+        <td> 66</td>
+        <td> Not connected</td>
+        <td> Skype is not connected i.e. user status is "LOGGEDOUT"</td>
+      </tr>
+      <tr>
+        <td> 67</td>
+        <td> Target not allowed with SEARCH FRIENDS</td>
+        <td> SEARCH FRIENDS had a parameter</td>
+      </tr>
+      <tr>
+        <td> 68</td>
+        <td> Access denied</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 69</td>
+        <td> Invalid open what</td>
+        <td> OPEN command had missing or misspelled TARGET e.g. "OPEN IN"</td>
+      </tr>
+      <tr>
+        <td> 70</td>
+        <td> Invalid handle</td>
+        <td> OPEN IM parameter USERNAME is missing or contains not permitted symbols</td>
+      </tr>
+      <tr>
+        <td> 71</td>
+        <td> Invalid conference participant NO</td>
+        <td> Conference participant's number is either too large or invalid.</td>
+      </tr>
+      <tr>
+        <td> 72</td>
+        <td> Cannot create conference</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 73</td>
+        <td> too many participants</td>
+        <td> Conference is initiated to more than 4 people.</td>
+      </tr>
+      <tr>
+        <td> 74</td>
+        <td> Invalid key</td>
+        <td> Key name in BTN_PRESSED or BTN_RELEASED command is invalid</td>
+      </tr>
+      <tr>
+        <td> 91</td>
+        <td> call error</td>
+        <td> Cannot call an emergency number</td>
+      </tr>
+      <tr>
+        <td> 92</td>
+        <td> call error</td>
+        <td> The called number is not a valid PSTN number</td>
+      </tr>
+      <tr>
+        <td> 93</td>
+        <td> call error</td>
+        <td> Invalid Skype Name</td>
+      </tr>
+      <tr>
+        <td> 94</td>
+        <td> call error</td>
+        <td> Cannot call yourself</td>
+      </tr>
+      <tr>
+        <td> 95</td>
+        <td> Internal error</td>
+        <td> Destination user is blocked by caller right after call initialization</td>
+      </tr>
+      <tr>
+        <td> 96</td>
+        <td> Internal error</td>
+        <td> An outgoing call exists in ROUTING/RINGING/EARLYMEDIA state</td>
+      </tr>
+      <tr>
+        <td> 97</td>
+        <td> Internal error</td>
+        <td> Internal error</td>
+      </tr>
+      <tr>
+        <td> 98</td>
+        <td> Internal error</td>
+        <td> Internal error</td>
+      </tr>
+      <tr>
+        <td> 99</td>
+        <td> Internal error</td>
+        <td> Internal error</td>
+      </tr>
+      <tr>
+        <td> 100</td>
+        <td> Internal error</td>
+        <td> Internal error</td>
+      </tr>
+      <tr>
+        <td> 101</td>
+        <td> Internal error</td>
+        <td> A call to the destination user is already ongoing</td>
+      </tr>
+      <tr>
+        <td> 103</td>
+        <td> Cannot hold</td>
+        <td> Internal error</td>
+      </tr>
+      <tr>
+        <td> 104</td>
+        <td> Cannot resume</td>
+        <td> Internal error</td>
+      </tr>
+      <tr>
+        <td> 105</td>
+        <td> Invalid chat name</td>
+        <td> Chat name missing or misspelled</td>
+      </tr>
+      <tr>
+        <td> 106</td>
+        <td> Invalid PROP</td>
+        <td> Property name missing or misspelled for CHAT or CHATMESSAGE</td>
+      </tr>
+      <tr>
+        <td> 107</td>
+        <td> Target not allowed with CHATS</td>
+        <td> No parameters allowed to SEARCH CHATS</td>
+      </tr>
+      <tr>
+        <td> 108</td>
+        <td> User not contact</td>
+        <td> TRANSFER can only be initiated to contacts</td>
+      </tr>
+      <tr>
+        <td> 109</td>
+        <td> directory doesn't exist</td>
+        <td> Directory given as a parameter to TRANSFER command does not exist</td>
+      </tr>
+      <tr>
+        <td> 110</td>
+        <td> No voicemail capability</td>
+        <td> User given as a parameter to VOICEMAIL command doesn't have voicemail capability</td>
+      </tr>
+      <tr>
+        <td> 111</td>
+        <td> File not found</td>
+        <td> File given as argument to SET AVATAR or SET RINGTONE command doesn't exist</td>
+      </tr>
+      <tr>
+        <td> 112</td>
+        <td> Too many targets</td>
+        <td> Number of target users for OPEN FILETRANSFER command exceeds simultaneous filetransfer limit</td>
+      </tr>
+      <tr>
+        <td> 113</td>
+        <td> Close: invalid WHAT</td>
+        <td> Invalid argument to CLOSE command</td>
+      </tr>
+      <tr>
+        <td> 114</td>
+        <td> Invalid avatar</td>
+        <td> GET or SET AVATAR avatar index invalid</td>
+      </tr>
+      <tr>
+        <td> 115</td>
+        <td> Invalid ringtone</td>
+        <td> GET or SET RINGTONE ringtone index invalid</td>
+      </tr>
+      <tr>
+        <td> 500</td>
+        <td> CHAT: Invalid chat name given</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 501</td>
+        <td> CHAT: No chat found for given chat</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 502</td>
+        <td> CHAT: No action name given</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 503</td>
+        <td> CHAT: Invalid or unknown action</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 504</td>
+        <td> CHAT: action failed</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 505</td>
+        <td> CHAT: LEAVE does not take arguments</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 506</td>
+        <td> CHAT: ADDMEMBERS: invalid/missing user handle(s) as arguments</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 507</td>
+        <td> CHAT: CREATE: invalid/missing user handle(s) as argument</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 508</td>
+        <td> CHAT: CREATE: opening a dialog to the given user failed</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 509</td>
+        <td> No chat name given</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 510</td>
+        <td> Invalid/uknown chat name given</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 511</td>
+        <td> Sending a message to chat failes</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 512</td>
+        <td> Invalid voicemail id</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 513</td>
+        <td> Invalid voicemail object</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 514</td>
+        <td> No voicemail property given</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 515</td>
+        <td> Assigning speeddial property failed</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 516</td>
+        <td> Invalid value given to ISAUTHORIZED/ISBLOCKED</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 517</td>
+        <td> Changing ISAUTHORIZED/ISBLOCKED failed</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 518</td>
+        <td> Invalid status given for BUDDYSTATUS</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 519</td>
+        <td> Updating BUDDYSTATUS failed</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 520</td>
+        <td> CLEAR needs a target</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 521</td>
+        <td> Invalid/unknown CLEAR target</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 522</td>
+        <td> CLEAR CHATHISTORY takes no arguments</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 523</td>
+        <td> CLEAR VOICEMAILHISTORY takes no arguments</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 524</td>
+        <td> CLEAR CALLHISTORY: missing target argument</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 525</td>
+        <td> CLEAR CALLHISTORY: invalid handle argument</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 526</td>
+        <td> ALTER: no object type given</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 527</td>
+        <td> ALTER: unknown object type given</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 528</td>
+        <td> VOICEMAIL: No proper voicemail ID given</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 529</td>
+        <td> VOICEMAIL: Invalid voicemail ID given</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 530</td>
+        <td> VOICEMAIL: No action given</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 531</td>
+        <td> VOICEMAIL: Action failed</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 532</td>
+        <td> VOICEMAIL: Unknown action</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td> 9901</td>
+        <td> Internal error</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2 id="head-1f1521337b95ef4f6bacf1c9a91f6414180f7717">10. API Transport Layers</h2>
+<a id="TRANSPORT_LAYERS"></a>
+
+<p>Both APIs are not bound to any specific transport-layer. </p>
+<h3 id="head-93c9c3da2ab48720fac6b76dc868507bfcd14851">10.1. API Transport on Windows messages</h3>
+<p>Currently the only API transport implementation is done on windows messages. In the current implementation the external party is active and is responsible for initiating the communication. The communication should be considered broken when either party could not send any of the messages. </p>
+<p>To initiate communication, Client should broadcast windows message ('SkypeControlAPIDiscover') to all windows in the system, specifying its own window handle in wParam parameter. In response, Skype responds with message 'SkypeControlAPIAttach' to the handle specified, and indicates connection status with one of the following values in lParam: </p>
+<ul>
+  <li>SKYPECONTROLAPI_ATTACH_SUCCESS = 0: Client is successfully attached and API window handle can be found in wParam parameter; </li>
+  <li>SKYPECONTROLAPI_ATTACH_PENDING_AUTHORIZATION = 1: Skype has acknowledged connection request and is waiting for confirmation from the user. The client is not yet attached and should wait for SKYPECONTROLAPI_ATTACH_SUCCESS message; </li>
+  <li>SKYPECONTROLAPI_ATTACH_REFUSED = 2: User has explicitly denied access to client; </li>
+  <li>SKYPECONTROLAPI_ATTACH_NOT_AVAILABLE = 3: API is not available at the moment. For example, this happens when no user is currently logged in. Client should wait for SKYPECONTROLAPI_ATTACH_API_AVAILABLE broadcast before making any further connection attempts. </li>
+</ul>
+<p>When API becomes available, Skype broadcasts SkypeControlAPIAttach message with value SKYPECONTROLAPI_ATTACH_API_AVAILABLE = 0x8001 to all application windows in the system. </p>
+<p>The actual data exchange uses standard WM_COPYDATA message. The data being transferred is the command (or response), given as an null-terminated utf-8 string. Note that the terminating 0 must be transferred as well. Combining several messages to one packet is not allowed. Length of the transferred string is not limited by this protocol. </p>
+<p>Skype will not block after having received a message. If sending a message using SendMessage() fails this indicates that the communication channel is broken. </p>
+<p><strong>Note:</strong> Result of processing the message (both SkypeControlApiMessage and copydata) must be different from zero, otherwise Skype will consider the connection broken! </p>
+<p>API client cannot spend more than 1 second processing the API messages, if a client spends more than 1 second for processing the connection will be disconnected. Use the PING command to test connection status. In order to easen debugging while development one can enter the key A<strong></strong>PI<strong></strong>Timeout<strong></strong>Disabled (DWORD value, 0 = timeout enabled 1 = timeout disabled) into HKCU\Software\Skype\Phone\UI - this makes Skype not force the 1 second timeout.<em> </em></p>
+<h3 id="head-1861a77736a7ef80d73ec69609464745425a72cd">10.2. API Transport on Windows messages: Frequently asked questions</h3>
+<p><strong>How long can Skype hold my SendMessage() call?</strong> </p>
+<p>Skype does not hold the SendMessage() call at all (under normal circumstances). </p>
+<p><strong>How long should an application wait before resending a command?</strong> </p>
+<p>Most commands should return within milliseconds, searches can take longer. Use PING every few seconds to make sure the communication channel is still alive. </p>
+<p><strong>Can I have multiple threads doing SendMessage()? </strong> </p>
+<p>You can, but there is no real difference as Windows itself forces these to go into one thread. </p>
+<p><strong>Skype window does not focus</strong> </p>
+<p>With OPEN or FOCUS command the Skype window does not gain focus and remains under active window. </p>
+<p>This happens when active window has gained foreground lock. If it is an API client application then use the AllowSetForegroundWindow Windows API function to release foreground lock (use GetWindowThreadProcessID to find out the Skype process handle). </p>
+<h3 id="head-864e8186f20968e5a7ecd46c056783b03dc6606c">10.3. API Transport on Windows messages: deprecated</h3>
+<p>To initiate communication, the Client should broadcast window message ('SkypeControlAPI') to all windows in the system, specifying its own window handle in wParam parameter. In response, Skype responds to the same message on the handle specified and indicates its communication window handle in wParam. Now both parties know the window handle to use to send messages. </p>
+<p>Client may continue polling Skype with 'SkypeControlAPI' message to check if it is still available. </p>
+<h2 id="head-2944be6785e8ad9021079609f4b3f191d6375df5">11. Commands list</h2>
+<ul>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_CALL">CALL</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_OPEN_VOICEMAIL">OPEN VOICEMAIL</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_ALTER_VOICEMAIL">ALTER VOICEMAIL</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_CHAT_CREATE">CHAT CREATE</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_CHATMESSAGE">CHATMESSAGE</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_ALTER_CHAT_SETTOPIC">ALTER CHAT &lt;id&gt; SETTOPIC</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_ALTER_CHAT_ADDMEMBERS">ALTER CHAT &lt;id&gt; ADDMEMBERS</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_ALTER_CHAT_LEAVE">ALTER CHAT &lt;id&gt; LEAVE</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_GET_CHAT_CHATMESSAGES">GET CHAT &lt;id&gt; CHATMESSAGES</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_GET_CHAT_RECENTCHATMESSAGES">GET CHAT &lt;id&gt; CHATMESSAGES</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SET_CHATMESSAGE_SEEN">SET CHATMESSAGE &lt;id&gt; SEEN</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SET_MESSAGE_SEEN">SET MESSAGE &lt;id&gt; SEEN</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_MESSAGE">MESSAGE</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH">SEARCH</a><ul>
+      <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_FRIENDS">SEARCH FRIENDS</a></li>
+      <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_USERS">SEARCH USERS</a></li>
+      <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_CALLS">SEARCH CALLS</a><ul>
+          <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_ACTIVECALLS">SEARCH ACTIVECALLS</a></li>
+          <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_MISSEDCALLS">SEARCH MISSEDCALLS</a></li>
+        </ul>
+      </li>
+      <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_VOICEMAILS">SEARCH VOICEMAILS</a></li>
+      <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_MESSAGES">SEARCH MESSAGES</a><ul>
+          <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_MISSEDMESSAGES">SEARCH MISSEDMESSAGES</a></li>
+        </ul>
+      </li>
+      <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_CHATS">SEARCH CHATS</a><ul>
+          <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_ACTIVECHATS">SEARCH ACTIVECHATS</a></li>
+          <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_MISSEDCHATS">SEARCH MISSEDCHATS</a></li>
+          <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_RECENTCHATS">SEARCH RECENTCHATS</a></li>
+          <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_BOOKMARKEDCHATS">SEARCH BOOKMARKEDCHATS</a></li>
+        </ul>
+      </li>
+      <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_CHATMESSAGES">SEARCH CHATMESSAGES</a><ul>
+          <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_MISSEDCHATMESSAGES">SEARCH MISSEDCHATMESSAGES</a></li>
+        </ul>
+      </li>
+      <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SEARCH_USERSWAITINGMYAUTHORIZATION">SEARCH USERSWAITINGMYAUTHORIZATION</a></li>
+    </ul>
+  </li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_CLEAR_CHATHISTORY">CLEAR CHATHISTORY</a> </li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_CLEAR_VOICEMAILHISTORY">CLEAR VOICEMAILHISTORY</a> </li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_CLEAR_CALLHISTORY">CLEAR CALLHISTORY</a> </li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_FOCUS">FOCUS</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_MINIMIZE">MINIMIZE</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_OPEN_ADDAFRIEND">OPEN ADDAFRIEND</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_OPEN_IM">OPEN IM</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_OPEN_CHAT">OPEN CHAT &lt;id&gt;</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_OPEN_FILETRANSFER">OPEN FILETRANSFER</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_OPEN_VOICEMAIL">OPEN VOICEMAIL</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_PING">PING</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_GET_USER">GET USER &lt;username&gt; property</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SET_USER">SET USER &lt;username&gt; property value</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_GET_CALL">GET CALL &lt;id&gt; property</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_GET_CHAT">GET CHAT &lt;id&gt; property</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_GET_CHATMESSAGE">GET CHATMESSAGE &lt;id&gt; property</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_GET_MESSAGE">GET MESSAGE &lt;id&gt; property</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SET">SET</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_GET_SKYPEVERSION">GET SKYPEVERSION</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_GET_PRIVILEGE">GET PRIVILEGE user_privilege</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_GET_PROFILE">GET PROFILE profile_property</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_AUDIO_IN">GET/SET AUDIO_IN</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_AUDIO_OUT">GET/SET AUDIO_OUT</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_RINGER">GET/SET RINGER</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_MUTE">GET/SET MUTE</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_SET_AVATAR">SET AVATAR</a></li>
+  <li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#COMMAND_RINGTONE">GET/SET RINGTONE</a></li>
+</ul>
+<a id="bottom"></a><a name="readmore"></a>
+<div id="comments">
+	<h2>7 comments <small>Please <a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/#commenting">let us hear</a> yours as well</small></h2>
+	
+	<div class="post-comment">
+		<span class="head"><a href="/profiles/view/6206,chbwien">chbwien</a> Posted Monday, 20 June 2005</span>
+		<span class="post">Where has the pdf-version gone? It's pretty annoing to use the html version...</span>
+	</div>
+	
+	<div class="post-comment">
+		<span class="head"><a href="/profiles/view/13977,gmaruzz">gmaruzz</a> Posted Tuesday, 28 June 2005</span>
+		<span class="post">The code samples are not downloadable.<br /><br />And generally speaking, the redirection to the new sites invalidates almost all links.<br /><br />Bye</span>
+	</div>
+	
+	<div class="post-comment">
+		<span class="head"><a href="/profiles/view/23174,alf75015">alf75015</a> Posted Wednesday, 29 June 2005</span>
+		<span class="post">when receiving COPYDATA events in the client application, how can I define results of a command ? <br />ie : <br /> if i issue a <br />   SEARCH USERS xxx <br /> there may be a lot of COPYDATA answering this command.<br /> how can't I mix command results ?<br /> how can I know that it is the last event that was received ?</span>
+	</div>
+	
+	<div class="post-comment">
+		<span class="head"><a href="/profiles/view/19734,raosky335">raosky335</a> Posted Tuesday, 26 July 2005</span>
+		<span class="post">hi , recording devices are not available for skype . every time the computer reminds me about it .  so i request you to download and install recording devices for skype now</span>
+	</div>
+	
+	<div class="post-comment">
+		<span class="head"><a href="/profiles/view/67280,anothersphere">anothersphere</a> Posted Wednesday, 27 July 2005</span>
+		<span class="post">Is there an API for MacOS X?</span>
+	</div>
+	
+	<div class="post-comment">
+		<span class="head"><a href="/profiles/view/77834,marvin_tsai">marvin_tsai</a> Posted Thursday, 04 August 2005</span>
+		<span class="post">I think v1.3 is much better than previous version.</span>
+	</div>
+	
+	<div class="post-comment">
+		<span class="head"><a href="/profiles/view/12039,liviolies">liviolies</a> Posted Saturday, 13 August 2005</span>
+		<span class="post">This API manual (v1.3) is not updated for the OSX API i guess.</span>
+	</div>
+	
+</div>
+
+<div id="trackbacks">
+	<h2>No trackbacks yet. <small>Please <a href="http://share.skype.com/trackback/?id=92">trackback</a> now to be the first</small></h2>
+</div>
+
+<div class="commenting">
+			<p><strong>Your comment</strong><br />
+			You need to sign in before you can post comments. If you do not have a Skype Name, please <a href="http://www.skype.com/go/download">download Skype</a> to create one.</p>
+			<form name="form1" method="post" action="https://share.skype.com/index.php">
+			<table class="form">
+			<col width="237" />
+			<col width="20" />
+			<col width="237" />
+			<tr>
+				<td>
+				<label for="fullname">Skype Name</label>
+				<input type="text" style="width: 100%;" name="username" id="skypename" tabindex="100" maxlength="32">
+				</td>
+				<td></td>
+				<td>
+				<label for="email">Password</label>
+				<input type="password" style="width: 100%;" name="password" id="password" tabindex="101" maxlength="20">
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<div class="buttons"><input type="submit" class="submit" name="login" value="Sign me in" tabindex="102" /></div>
+				</td>
+				<td></td>
+				<td align="right">
+				<label><input type="checkbox" tabindex="103" />Remember me</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+				<label for="contents" class="gray">Your comments <small>HTML not allowed</small></label>
+				<textarea name="contents" id="contents" style="width: 100%; height: 170px;" disabled="disabled"></textarea>
+				</td>
+			</tr>
+			</table>
+			<input type="submit" name="submit" value="Preview" class="submit" disabled="disabled" />
+			<input type="hidden" name="option" value="com_skypelogin" />
+			<input type="hidden" name="task" value="login" />
+			<input type="hidden" name="return" value="http://share.skype.com/index.php?option=com_content&task=view&id=92&Itemid=110#comments" />
+			</form>
+</div>
+			</td>
+		</tr>
+					<tr>
+				<td colspan="2" align="left" class="modifydate">
+				Last Updated ( Friday, 22 July 2005 )
+				</td>
+			</tr>
+					</table>
+			</div>
+	
+	<div class="clearer"></div>
+
+	<div id="sidebar-footer">&copy; 2002-2005 by Skype Technologies S.A.<br /><a href="http://skype.com/company/legal/terms/tos_web.html#hdr-website">Legal information</a></div>
+	<div id="footer">
+	</div>
+</div>
+
+</body>
+
+</html><!-- 1124886826 -->

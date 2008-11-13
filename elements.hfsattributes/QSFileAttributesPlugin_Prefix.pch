@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'QSFileAttributesPlugin' target in the 'QSFileAttributesPlugin' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSFileAttributesPluginType @"QSFileAttributesPluginType"

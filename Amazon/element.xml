@@ -1,0 +1,73 @@
+<element id="com.blacktree.Quicksilver.QSAmazonPlugIn" name="Amazon Artwork" version="45">
+    <info>
+        <category>Music</category>
+        <image>Amazon</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="Amazon">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.blacktree.Quicksilver.QSAmazonPlugIn</string>
+                        <key>resource</key>
+                        <string>Amazon.icns</string>
+                    </dict>
+                </plist>
+            </image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSAmazonItemRecommendAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAmazonPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>recommendItem:to:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>com.amazon.asin</string>
+                        </array>
+                        <key>icon</key>
+                        <string>Amazon</string>
+                        <key>name</key>
+                        <string>Recommend to...</string>
+                        <key>rankModification</key>
+                        <real>0.10000000000000001</real>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSAmazonItemShowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAmazonPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>showItem:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>com.amazon.asin</string>
+                        </array>
+                        <key>icon</key>
+                        <string>Amazon</string>
+                        <key>name</key>
+                        <string>Show on Amazon</string>
+                        <key>rankModification</key>
+                        <real>0.20000000000000001</real>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSOnlineMusicArtworkSources">
+            <extension id="com.amazon.www" class="QSAmazonPlugIn"></extension>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSAmazonPlugIn_Action" class="QSAmazonPlugIn_Action"></action-provider>
+        </extension>
+    </extensions>
+</element>

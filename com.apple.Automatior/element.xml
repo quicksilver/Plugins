@@ -1,0 +1,41 @@
+<element id="com.blacktree.Quicksilver.QSAutomatorPlugIn" name="Automator Module" version="2C">
+    <info>
+        <category>System</category>
+        <category>Applications</category>
+        <image>com.apple.Automator</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSAutomatorWorkflowExecuteAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAutomatorPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>runWorkflow:</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>workflow</string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.Automator</string>
+                        <key>name</key>
+                        <string>Execute Workflow</string>
+                        <key>rankModification</key>
+                        <integer>4</integer>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSAutomatorPlugIn_Action" class="QSAutomatorPlugIn_Action"></action-provider>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>MTCoreAudio Constants and Types</title>
+</head>
+
+<body>
+<h1>MTCoreAudio Constants and Types Reference</h1>
+<p>
+These types and constants are used in MTCoreAudio.framework.
+</p>
+
+<h2><a name="MTCoreAudioDirection">MTCoreAudioDirection</a></h2>
+<p>
+An <strong>MTCoreAudioDirection</strong> is used to specify the
+section of an audio device, either input or output.
+</p>
+<p>
+<pre>
+typedef enum MTCoreAudioDirection {
+	kMTCoreAudioDevicePlaybackDirection,
+	kMTCoreAudioDeviceRecordDirection
+} MTCoreAudioDirection;
+
+</pre>
+</p>
+
+<p>
+<dl>
+	<dt><code>kMTCoreAudioDevicePlaybackDirection</code></dt>
+	<dd>
+		Specifies the playback (output) section of an audio device.
+	</dd><br>
+
+	<dt><code>kMTCoreAudioDeviceRecordDirection</code></dt>
+	<dd>
+		Specifies the record (input) section of an audio device.
+	</dd><br>
+</dl>
+</p>
+
+
+<h2><a name="MTCoreAudioStreamSide">MTCoreAudioStreamSide</a></h2>
+<p>
+An <strong>MTCoreAudioStreamSide</strong> is used to specify the
+logical or physical side of a stream when querying or setting stream formats.
+</p>
+
+<p>
+<pre>
+typedef enum MTCoreAudioStreamSide {
+	kMTCoreAudioStreamLogicalSide,
+	kMTCoreAudioStreamPhysicalSide
+} MTCoreAudioStreamSide;
+
+</pre>
+</p>
+
+<p>
+<dl>
+	<dt><code>kMTCoreAudioStreamLogicalSide</code></dt>
+	<dd>
+		Specifies the logical side of a stream; that is, the side
+		that interfaces with the application program.  Note that
+		for 'lpcm'-format, samples in the logical side are always
+		32-bit floating point.
+	</dd><br>
+
+	<dt><code>kMTCoreAudioStreamPhysicalSide</code></dt>
+	<dd>
+		Specifies the physical side of a stream; that is, the
+		side that interfaces directly with the audio hardware.
+		The physical and logical stream formats may differ
+		significantly, at the discretion of the device driver.
+	</dd><br>
+</dl>
+</p>
+
+<h2><a name="MTCoreAudioVolumeInfo">MTCoreAudioVolumeInfo</a></h2>
+<p>
+An <strong>MTCoreAudioVolumeInfo</strong> conveys all the useful
+information about a channel's volume-related settings all at once.
+It is only returned as the result of a query.
+</p>
+
+<p>
+<pre>
+typedef struct _MTCoreAudioVolumeInfo {
+	Boolean hasVolume;
+	Boolean canSetVolume;
+	Float32 theVolume;
+	Boolean canMute;
+	Boolean isMuted;
+	Boolean canPlayThru;
+	Boolean playThruIsSet;
+} MTCoreAudioVolumeInfo;
+
+</pre>
+</p>
+
+<p>
+<dl>
+	<dt><code>hasVolume</code></dt>
+	<dd>
+		<code>true</code> if this channel has a volume associated
+		with it, and <code>false</code> if it does not.
+	</dd><br>
+
+	<dt><code>canSetVolume</code></dt>
+	<dd>
+		<code>true</code> if this channel's volume can be changed,
+		and <code>false</code> if it is static.
+	</dd><br>
+
+	<dt><code>theVolume</code></dt>
+	<dd>
+		The volume of this channel, between <code>0.0</code> and <code>1.0</code>.
+		Valid only if <code>hasVolume</code> is <code>true</code>.
+	</dd><br>
+
+	<dt><code>canMute</code></dt>
+	<dd>
+		<code>true</code> if this channel can be muted.
+	</dd><br>
+
+	<dt><code>isMuted</code></dt>
+	<dd>
+		<code>true</code> if this channel is currently muted.
+	</dd><br>
+
+	<dt><code>canPlayThru</code></dt>
+	<dd>
+		<code>true</code> if this channel supports Play-Thru mode, in which
+		the record section is routed directly by the hardware to the playback
+		section.
+	</dd><br>
+
+	<dt><code>playThruIsSet</code></dt>
+	<dd>
+		<code>true</code> if this channel is currently in Play-Thru mode.
+	</dd><br>
+
+</dl>
+</p>
+
+<hr>
+
+<a href="http://aldebaran.armory.com/~zenomt/">Mike</a> &gt;
+<a href="http://aldebaran.armory.com/~zenomt/macosx/">Mac OS X</a> &gt;
+<a href="./index.html">MTCoreAudio.framework</a> &gt;
+MTCoreAudio Constants and Types
+

@@ -1,0 +1,37 @@
+<element id="com.blacktree.Quicksilver.QSTextMatePlugIn" name="TextMate Module" version="22">
+    <info>
+        <category>Text Handling</category>
+        <category>Development</category>
+        <image>com.macromates.textmate</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSTextMateShowLineAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSTextMatePlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>openLineReference:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSLineReferenceType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.macromates.textmate</string>
+                        <key>name</key>
+                        <string>Select in TextMate</string>
+                        <key>rankModification</key>
+                        <integer>3</integer>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSTextMatePlugIn_Action" class="QSTextMatePlugIn_Action"></action-provider>
+        </extension>
+    </extensions>
+</element>

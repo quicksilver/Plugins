@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Clutter Artwork</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSClutterPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Clutter Artwork</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>29</string>
+	<key>NSPrincipalClass</key>
+	<string>QSClutterPlugIn</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Music</string>
+		</array>
+		<key>description</key>
+		<string>Loads artwork from Clutter</string>
+		<key>extendedDescription</key>
+		<string>Loads artwork from &lt;a href="http://sofa.ambitiouslemon.com/"&gt;Clutter&lt;/a&gt;</string>
+		<key>icon</key>
+		<string>com.sprote.clutter</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>com.sprote.clutter</string>
+		</array>
+		<key>requiresFeature</key>
+		<string>0</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSMusicArtworkSources</key>
+		<dict>
+			<key>com.sprote.clutter</key>
+			<string>QSClutterPlugIn</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

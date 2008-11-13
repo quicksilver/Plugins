@@ -1,0 +1,8 @@
+<element id="com.blacktree.Quicksilver.QSServicesMenuPlugIn" name="Services Menu Module" version="B9">
+    <info>
+        <category>System</category>
+        <image>Menu</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree"></extensions>
+</element>

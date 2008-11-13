@@ -1,0 +1,78 @@
+<element id="com.blacktree.Quicksilver.QSPhoneActionsPlugIn" name="Phone Actions" version="F5">
+    <info>
+        <category>Contacts</category>
+        <image>ContactPhone</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="Speaker" class="/System/Library/PreferencePanes/Sound.prefPane/Contents/Resources/Sound.tiff"></image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSDialNumberAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSPhoneDialerActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>dialNumber:withDialer:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.contact.phone</string>
+                        </array>
+                        <key>icon</key>
+                        <string>ContactPhone</string>
+                        <key>name</key>
+                        <string>Dial with...</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSPreferencePanes">
+            <preference-pane id="QSPhonePrefPane" class="QSPhonePrefPane">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSPhonePrefPane</string>
+                        <key>description</key>
+                        <string>Dialing Options</string>
+                        <key>icon</key>
+                        <string>ContactPhone</string>
+                        <key>name</key>
+                        <string>Phone</string>
+                    </dict>
+                </plist>
+            </preference-pane>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSSMSActions" class="QSSMSActions"></action-provider>
+            <action-provider id="QSPhoneDialerActionProvider" class="QSPhoneDialerActionProvider"></action-provider>
+        </extension>
+        <extension point="QSPhoneDialers">
+            <extension id="modem" class="QSModemPhoneDialer">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSModemPhoneDialer</string>
+                        <key>icon</key>
+                        <string>com.apple.internetconnect</string>
+                        <key>name</key>
+                        <string>Modem</string>
+                    </dict>
+                </plist>
+            </extension>
+            <extension id="speaker" class="QSSpeakerPhoneDialer">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSSpeakerPhoneDialer</string>
+                        <key>icon</key>
+                        <string>Speaker</string>
+                        <key>name</key>
+                        <string>Speaker</string>
+                    </dict>
+                </plist>
+            </extension>
+        </extension>
+    </extensions>
+</element>

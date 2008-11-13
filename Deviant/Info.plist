@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Deviant Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSDeviantModule</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Deviant Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.5.1</string>
+	<key>CFBundleSignature</key>
+	<string>daed</string>
+	<key>CFBundleVersion</key>
+	<string>85</string>
+	<key>NSPrincipalClass</key>
+	<string>QSDeviantModule</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSDeviantSwitchDesktopAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSDeviantActionProvider</string>
+			<key>actionSelector</key>
+			<string>linkToDesktop:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Deviant</string>
+			<key>name</key>
+			<string>Select Window</string>
+			<key>precedence</key>
+			<string>0</string>
+			<key>validatesObjects</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Miscellaneous</string>
+		</array>
+		<key>description</key>
+		<string>Allows you to link the current desktop to any folder, effectively swapping the items on your desktop.</string>
+		<key>extendedDescription</key>
+		<string>Allows you to link the current desktop to any folder, effectively swapping the items on your desktop. To restore the original desktop, use the action on the "Desktop (disabled)" folder in your home folder.</string>
+		<key>icon</key>
+		<string>Deviant</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSDeviantActionProvider</key>
+			<string>QSDeviantActionProvider</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>feature</key>
+		<integer>1</integer>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>Deviant</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.blacktree.Quicksilver.QSDeviantModule</string>
+			<key>resource</key>
+			<string>deviant.png</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

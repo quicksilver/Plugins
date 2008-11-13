@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Path Finder Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSPathFinderPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Path Finder Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>AE</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Files</string>
+		</array>
+		<key>description</key>
+		<string>Handles open, reveal, info, and selection actions in Path Finder</string>
+		<key>icon</key>
+		<string>com.cocoatech.PathFinder</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>com.cocoatech.PathFinder</string>
+		</array>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetPathFinderGroup</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>ID</key>
+					<string>QSPresetPathFinderRecentFiles</string>
+					<key>name</key>
+					<string>Path Finder Recent Files</string>
+					<key>settings</key>
+					<dict>
+						<key>bundle</key>
+						<string>com.cocoatech.PathFinder</string>
+						<key>keypath</key>
+						<array>
+							<string>kRecentFileMenuItems</string>
+							<string>*</string>
+						</array>
+						<key>type</key>
+						<integer>1</integer>
+					</dict>
+					<key>source</key>
+					<string>QSDefaultsObjectSource</string>
+				</dict>
+				<dict>
+					<key>ID</key>
+					<string>QSPresetPathFinderRecentFolders</string>
+					<key>name</key>
+					<string>Path Finder Recent Folders</string>
+					<key>settings</key>
+					<dict>
+						<key>bundle</key>
+						<string>com.cocoatech.PathFinder</string>
+						<key>keypath</key>
+						<array>
+							<string>kRecentFolderMenuItems</string>
+							<string>*</string>
+						</array>
+						<key>type</key>
+						<integer>1</integer>
+					</dict>
+					<key>source</key>
+					<string>QSDefaultsObjectSource</string>
+				</dict>
+			</array>
+			<key>icon</key>
+			<string>com.cocoatech.PathFinder</string>
+			<key>name</key>
+			<string>Path Finder</string>
+			<key>requiresBundle</key>
+			<string>com.cocoatech.PathFinder</string>
+			<key>source</key>
+			<string>QSGroupObjectSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>com.cocoatech.PathFinder</key>
+			<string>QSPathFinderProxy</string>
+		</dict>
+		<key>QSFSBrowserMediators</key>
+		<dict>
+			<key>com.cocoatech.PathFinder</key>
+			<string>QSPathFinderProxy</string>
+		</dict>
+		<key>QSProxies</key>
+		<dict>
+			<key>com.cocoatech.PathFinder</key>
+			<dict>
+				<key>icon</key>
+				<string>com.cocoatech.PathFinder</string>
+				<key>name</key>
+				<string>Path Finder Selection</string>
+				<key>providerClass</key>
+				<string>QSPathFinderProxy</string>
+				<key>types</key>
+				<array>
+					<string>NSFilenamesPboardType</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

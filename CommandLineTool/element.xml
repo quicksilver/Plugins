@@ -1,0 +1,25 @@
+<element id="com.blacktree.Quicksilver.QSCommandLineTool" name="Command Line Tool (qs)" version="43">
+    <info>
+        <category>Development</category>
+        <image>ExecutableBinaryIcon</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSPreferencePanes">
+            <preference-pane id="QSCommandLineToolPrefPane" class="QSCommandLineToolPrefPane">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSCommandLineToolPrefPane</string>
+                        <key>description</key>
+                        <string>Installation and Configuration</string>
+                        <key>icon</key>
+                        <string>ExecutableBinaryIcon</string>
+                        <key>name</key>
+                        <string>Command Line Tool</string>
+                    </dict>
+                </plist>
+            </preference-pane>
+        </extension>
+    </extensions>
+</element>

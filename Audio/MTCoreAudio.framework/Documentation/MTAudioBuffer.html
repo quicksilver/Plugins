@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>MTAudioBuffer</title>
+</head>
+
+<body>
+<h1>MTAudioBuffer</h1>
+<p>
+<strong>Inherits from: <a href="MTBuffer.html">MTBuffer</a></strong>
+
+<p>
+An <strong>MTAudioBuffer</strong> is a thread-safe, flow-controlled, fixed-size audio sample buffer.  It is a
+concrete subclass of <a href="MTBuffer.html">MTBuffer</a> where each abstract frame is one audio frame, consisting of
+one or more channels of Float32 samples.  It is intended to be used as a
+producer/consumer conduit for Core Audio's audio samples where each of
+producer and consumer may be batch-oriented or time-constrained.  It can copy
+frames to and from <strong>AudioBufferList</strong>s that have any number of
+streams and any number of interleaved channels per stream, including one channel per
+stream, which is the canonical de-interleaved format.
+
+
+<h2>Method Types</h2>
+<hr>
+<ul plain>
+	<li>Creating instances
+	<ul plain>
+		<br>
+		<li> <a href="#init">- init</a>
+		<li> <a href="#initWithCapacityFrames:channels:">- initWithCapacityFrames:channels:</a>
+	</ul>
+
+	<br>
+	<li>Working with attributes
+	<ul plain>
+		<br>
+		<li> <a href="#capacity">- capacity</a>
+		<li> <a href="#channels">- channels</a>
+		<li> <a href="#count">- count</a>
+		<li> <a href="#rateScalar">- rateScalar</a>
+		<li> <a href="#scaledCount">- scaledCount</a>
+	</ul>
+	
+	<br>
+	<li>Working with data
+	<ul plain>
+		<br>
+		<li> <a href="#flush">- flush</a>
+		<li> <a href="#readToAudioBufferList:maxFrames:waitForData:">- readToAudioBufferList:maxFrames:waitForData:</a>
+		<li> <a href="#writeFromAudioBufferList:maxFrames:rateScalar:waitForRoom:">- writeFromAudioBufferList:maxFrames:rateScalar:waitForRoom:</a>
+	</ul>
+	
+	<br>
+</ul>
+
+
+<h2>Instance Methods</h2>
+<hr>
+
+<h3><a name="capacity">capacity</a></h3>
+<code>- (unsigned) capacity</code>
+<br><br>
+Returns the number of <a href="#channels">channels</a>-wide frames of audio the receiver can hold.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="channels">channels</a></h3>
+<code>- (unsigned) channels</code>
+<br><br>
+Returns the number of channels in each frame of the receiver's audio.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="count">count</a></h3>
+<code>- (unsigned) count</code>
+<br><br>
+Returns the number of <a href="#channels">channels</a>-wide frames of audio currently stored in the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="flush">flush</a></h3>
+<code>- (void) flush</code>
+<br><br>
+Empties the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="init">init</a></h3>
+<code>- (id) init</code>
+<br><br>
+Initializes a newly allocated buffer with space for 44100 stereo (2-channel) frames.  This is
+equivalent to
+<a href="#initWithCapacityFrames:channels:">initWithCapacityFrames:44100 channels:2</a>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="initWithCapacityFrames:channels:">initWithCapacityFrames:channels:</a></h3>
+<code>- (id) initWithCapacityFrames:(unsigned)frames channels:(unsigned)channels</code>
+<br><br>
+Initializes a newly allocated buffer with space for <i>frames</i> of <i>channels</i>-wide frames of audio.  This is the designated initializer.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="rateScalar">rateScalar</a></h3>
+<code>- (Float64) rateScalar</code>
+<br><br>
+Returns the cumulative rate scalar for the frames currently stored in the receiver; that is, the ratio of
+<a href="#scaledCount">scaledCount</a> to <a href="#count">count</a>.  This value is informational and does not
+affect the number of real frames read from or written to the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="readToAudioBufferList:maxFrames:waitForData:">readToAudioBufferList:maxFrames:waitForData:</a></h3>
+<code>- (unsigned) readToAudioBufferList:(AudioBufferList *)theABL maxFrames:(unsigned)count waitForData:(Boolean)wait</code>
+<br><br>
+Attempts to fill <i>theABL</i> with audio frames from the receiver.  If <i>count</i> is less than the capacity of
+<i>theABL</i>, then no more than <i>count</i> frames will be copied.  If <i>wait</i> is <code>NO</code>,
+then that number is further limited to the number of frames currently on hand in the buffer.
+If <i>wait</i> is <code>YES</code>, then this method will pause if necessary until enough data
+has been written into the receiver by
+<a href="#writeFromAudioBufferList:maxFrames:rateScalar:waitForRoom:">writeFromAudioBufferList:maxFrames:rateScalar:waitForRoom:</a>
+to supply the request.
+If <i>theABL</i> has fewer channels than the receiver, then excess channels in the copied frames are discarded.  If <i>theABL</i>
+has more channels than the receiver, then the excess channels are cleared to silence.
+<a href="#scaledCount">scaledCount</a> is decreased by the number of frames copied, scaled by <a href="#rateScalar">rateScalar</a>.
+<br><br>
+Returns the number of frames copied from the receiver into <i>theABL</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="scaledCount">scaledCount</a></h3>
+<code>- (Float64) scaledCount</code>
+<br><br>
+Returns the number of frames currently stored in the receiver, as though they had been scaled according to the
+rateScalar: parameter of
+<a href="#writeFromAudioBufferList:maxFrames:rateScalar:waitForRoom:">writeFromAudioBufferList:maxFrames:rateScalar:waitForRoom:</a>
+when written into the receiver.  This value is informational and does not affect the number of real frames read from or
+written to the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="writeFromAudioBufferList:maxFrames:rateScalar:waitForRoom:">writeFromAudioBufferList:maxFrames:rateScalar:waitForRoom:</a></h3>
+<code>- (unsigned) writeFromAudioBufferList:(const AudioBufferList *)theABL maxFrames:(unsigned)count rateScalar:(Float64)rateScalar waitForRoom:(Boolean)wait</code>
+<br><br>
+Attempts to copy all of the frames from <i>theABL</i> into the receiver.  If <i>count</i> is less than the capacity of
+<i>theABL</i>, then no more than <i>count</i> frames will be copied.  If <i>wait</i> is <code>NO</code>,
+then that number is further restricted to the amount of currently unused space in the receiver, and that many frames
+are copied immediately.  If <i>wait</i> is <code>YES</code>, then this method will pause if necessary until enough
+room has been made by
+<a href="#readToAudioBufferList:maxFrames:waitForData:">readToAudioBufferList:maxFrames:waitForData:</a>
+to accommodate the request.  If <i>theABL</i> has fewer channels than the receiver, then the excess channels of the receiver
+are filled with silence.  If <i>theABL</i> has more channels than the receiver, then excess channels of <i>theABL</i> are
+discarded.
+<a href="#scaledCount">scaledCount</a> is increased by the product of <i>rateScalar</i> and the number of frames copied.
+<br><br>
+Returns the number of frames copied from <i>theABL</i> into the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+
+<hr>
+
+<a href="http://aldebaran.armory.com/~zenomt/">Mike</a> &gt;
+<a href="http://aldebaran.armory.com/~zenomt/macosx/">Mac OS X</a> &gt;
+<a href="./index.html">MTCoreAudio.framework</a> &gt;
+MTAudioBuffer
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<element id="com.blacktree.Quicksilver.QSShelfPlugIn" name="Shelf Module" version="5F">
+    <info>
+        <category>Quicksilver</category>
+        <image>Catalog</image>
+    </info>
+    <requirements/>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset name="" id="QSPresetShelves">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetShelves</string>
+                        <key>catalogPath</key>
+                        <string>QSPresetQSGroup</string>
+                        <key>source</key>
+                        <string>QSShelfSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action name="Show" id="QSShelfShowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSShelfSource</string>
+                        <key>actionSelector</key>
+                        <string>show:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.shelf</string>
+                        </array>
+                        <key>name</key>
+                        <string>Show</string>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Put on Shelf" id="QSPutOnShelfAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSShelfSource</string>
+                        <key>actionSelector</key>
+                        <string>putObjectOnShelf:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>*</string>
+                        </array>
+                        <key>enabled</key>
+                        <false/>
+                        <key>icon</key>
+                        <string>Catalog</string>
+                        <key>name</key>
+                        <string>Put on Shelf</string>
+                        <key>rankModification</key>
+                        <integer>0</integer>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSShelfSource" class="QSShelfSource"/>
+        </extension>
+        <extension point="QSShelfControllers">
+            <extension id="General" class="QSShelfController"/>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="qs.shelf" class="QSShelfSource"/>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSShelfSource" class="QSShelfSource"/>
+        </extension>
+    </extensions>
+</element>

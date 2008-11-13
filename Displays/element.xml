@@ -1,0 +1,137 @@
+<element id="com.blacktree.Quicksilver.QSDisplaysPlugIn" name="Displays Module" version="82">
+    <info>
+        <category>System</category>
+        <image>Display</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetDisplays">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetDisplays</string>
+                        <key>catalogPath</key>
+                        <string>QSPresetSystemGroup/QSPresetDevices</string>
+                        <key>name</key>
+                        <string>Displays</string>
+                        <key>source</key>
+                        <string>QSDisplaysObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="Display" class="[com.blacktree.Quicksilver.QSDisplaysPlugIn]:Display.png"></image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSDisplaySetRefreshRateAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSDisplaysActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>applyParameters:toDisplay:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSDisplayIDType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>DisplayResolution</string>
+                        <key>name</key>
+                        <string>Set Refresh Rate...</string>
+                        <key>rankModification</key>
+                        <integer>3</integer>
+                        <key>reverseArguments</key>
+                        <true></true>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSDisplaySetDepthAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSDisplaysActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>applyParameters:toDisplay:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSDisplayIDType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>DisplayDepth</string>
+                        <key>name</key>
+                        <string>Set Color Depth...</string>
+                        <key>rankModification</key>
+                        <integer>3</integer>
+                        <key>reverseArguments</key>
+                        <true></true>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSDisplayParametersApplyAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSDisplaysActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>applyParameters:toDisplay:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSDisplayParametersType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>Display</string>
+                        <key>name</key>
+                        <string>Find With...</string>
+                        <key>reverseArguments</key>
+                        <false></false>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSDisplaySetResolutionAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSDisplaysActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>applyParameters:toDisplay:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSDisplayIDType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>DisplayResolution</string>
+                        <key>name</key>
+                        <string>Set Resolution...</string>
+                        <key>rankModification</key>
+                        <integer>3</integer>
+                        <key>reverseArguments</key>
+                        <true></true>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSDisplaysObjectSource" class="QSDisplaysObjectSource"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="QSDisplayParametersType" class="QSDisplaysObjectSource"></object-handler>
+            <object-handler id="QSDisplayIDType" class="QSDisplaysObjectSource"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSDisplaysActionProvider" class="QSDisplaysActionProvider"></action-provider>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.apple.preference.displays" class="QSDisplaysObjectSource"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

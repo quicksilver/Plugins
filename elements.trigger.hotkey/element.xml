@@ -1,0 +1,12 @@
+<element id="com.blacktree.Quicksilver.QSHotKeyTriggerPlugIn" name="HotKey Triggers" version="1262">
+    <info>
+        <category>Quicksilver</category>
+        <image>CommandKey</image>
+    </info>
+    <requirements/>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSTriggerManagers">
+            <trigger-manager id="QSHotKeyTrigger" class="QSHotKeyTriggerManager"/>
+        </extension>
+    </extensions>
+</element>

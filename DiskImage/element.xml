@@ -1,0 +1,119 @@
+<element id="com.blacktree.Quicksilver.QSDiskImagePlugIn" name="Disk Image Support" version="26">
+    <info>
+        <category>System</category>
+        <category>Files</category>
+        <image>com.apple.DiskUtility</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetDiskUtilityImages">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetDiskUtilityImages</string>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>icon</key>
+                        <string>com.apple.DiskUtility</string>
+                        <key>name</key>
+                        <string>Disk Utility Images</string>
+                        <key>settings</key>
+                        <dict>
+                            <key>bundle</key>
+                            <string>com.apple.DiskUtility</string>
+                            <key>keypath</key>
+                            <array>
+                                <string>DUSavedDiskImageList</string>
+                                <string>*</string>
+                            </array>
+                            <key>type</key>
+                            <integer>1</integer>
+                        </dict>
+                        <key>source</key>
+                        <string>QSDefaultsObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSDiskImageCreateFromFolderAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSDiskImagePlugIn</string>
+                        <key>actionSelector</key>
+                        <string>createDiskImageFromFolder:</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>'fold'</string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>name</key>
+                        <string>Create Disk Image</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSDiskImageCompressAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSDiskImagePlugIn</string>
+                        <key>actionSelector</key>
+                        <string>compressDiskImageObject:</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>dmg</string>
+                            <string>sparseimage</string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>name</key>
+                        <string>Compress Disk Image</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSDiskImageCompactAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSDiskImagePlugIn</string>
+                        <key>actionSelector</key>
+                        <string>internetEnableDiskImageObject:</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>dmg</string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>name</key>
+                        <string>Internet-Enable Image</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSFSFileTypeParsers">
+            <file-type-parser id="dmg" class="QSDiskImagePlugIn"></file-type-parser>
+            <file-type-parser id="sparseimage" class="QSDiskImagePlugIn"></file-type-parser>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSDiskImagePlugIn" class="QSDiskImagePlugIn"></action-provider>
+        </extension>
+        <extension point="QSBundleChildPresets">
+            <bundle-child-preset id="com.apple.DiskUtility" class="QSPresetDiskUtilityImages"></bundle-child-preset>
+        </extension>
+    </extensions>
+</element>

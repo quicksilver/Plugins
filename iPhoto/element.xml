@@ -1,0 +1,173 @@
+<element id="com.blacktree.Quicksilver.QSiPhotoPlugIn" name="iPhoto Module" version="B1">
+    <info>
+        <category>Applications</category>
+        <category>Images</category>
+        <image>com.apple.iPhoto</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetiPhotoAlbums">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetiPhotoAlbums</string>
+                        <key>name</key>
+                        <string>iPhoto Albums</string>
+                        <key>requiresBundle</key>
+                        <string>com.apple.iPhoto</string>
+                        <key>source</key>
+                        <string>QSiPhotoObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="iPhotoSpecialMonthIcon">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.blacktree.Quicksilver.QSiPhotoPlugIn</string>
+                        <key>resource</key>
+                        <string>iPhotoCalendarIcon.png</string>
+                    </dict>
+                </plist>
+            </image-resource>
+            <image-resource id="iPhotoSpecialRollIcon">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.blacktree.Quicksilver.QSiPhotoPlugIn</string>
+                        <key>resource</key>
+                        <string>iPhotoSpecialRollIcon.png</string>
+                    </dict>
+                </plist>
+            </image-resource>
+            <image-resource id="iPhotoIcon">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.apple.iPhoto</string>
+                    </dict>
+                </plist>
+            </image-resource>
+            <image-resource id="iPhotoLibraryIcon">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.blacktree.Quicksilver.QSiPhotoPlugIn</string>
+                        <key>resource</key>
+                        <string>iPhotoLibraryIcon.png</string>
+                    </dict>
+                </plist>
+            </image-resource>
+            <image-resource id="iPhotoSmartAlbumIcon">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.apple.iPhoto</string>
+                        <key>resource</key>
+                        <string>sl-icon_smartAlbum.tiff</string>
+                    </dict>
+                </plist>
+            </image-resource>
+            <image-resource id="iPhotoAlbumIcon">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.blacktree.Quicksilver.QSiPhotoPlugIn</string>
+                        <key>resource</key>
+                        <string>iPhotoAlbumIcon.png</string>
+                    </dict>
+                </plist>
+            </image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSiPhotoAlbumShowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSiPhotoActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>slideshow:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.apple.iPhoto.album</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.iPhoto</string>
+                        <key>name</key>
+                        <string>iPhoto Slideshow</string>
+                        <key>precedence</key>
+                        <integer>3</integer>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSiPhotoAlbumSlideShowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSiPhotoActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>show:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.apple.iPhoto.album</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.iPhoto</string>
+                        <key>name</key>
+                        <string>Show Album</string>
+                        <key>precedence</key>
+                        <integer>3</integer>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSProxies">
+            <object-proxy id="QSiPhotoSelectedAlbumProxy">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>com.apple.iPhoto</string>
+                        <key>name</key>
+                        <string>Selected iPhoto Album</string>
+                        <key>providerClass</key>
+                        <string>QSiPhotoActionProvider</string>
+                        <key>types</key>
+                        <array>
+                            <string>com.apple.itunes.playlist</string>
+                        </array>
+                    </dict>
+                </plist>
+            </object-proxy>
+            <object-proxy id="com.apple.iPhoto">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>com.apple.iPhoto</string>
+                        <key>name</key>
+                        <string>Current iPhoto Selection</string>
+                        <key>providerClass</key>
+                        <string>QSiPhotoActionProvider</string>
+                        <key>types</key>
+                        <array>
+                            <string>qs.apple.iPhoto.photo</string>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                    </dict>
+                </plist>
+            </object-proxy>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSiPhotoObjectSource" class="QSiPhotoObjectSource"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="qs.apple.iPhoto.photo" class="QSiPhotoObjectSource"></object-handler>
+            <object-handler id="qs.apple.iPhoto.album" class="QSiPhotoObjectSource"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSiPhotoActionProvider" class="QSiPhotoActionProvider"></action-provider>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F24E5B207ED169300943D5A /* QSSpotlightSavedSearchSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F24E5B107ED169300943D5A /* QSSpotlightSavedSearchSource.m */; };
+		7F4894AB07F5F4EF007CB98F /* QSSpotlightObjectSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4894AA07F5F4EF007CB98F /* QSSpotlightObjectSource.m */; };
+		7F4894B807F5F724007CB98F /* QSSpotlightObjectSource.nib in Resources */ = {isa = PBXBuildFile; fileRef = 7F4894B707F5F724007CB98F /* QSSpotlightObjectSource.nib */; };
+		7F4C3E4D082C16FC000B4D53 /* QSNSMDQueryWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C3E4C082C16FC000B4D53 /* QSNSMDQueryWrapper.m */; };
+		7F66750007FE661D00A2CEF7 /* QSMDQueryWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6674FF07FE661D00A2CEF7 /* QSMDQueryWrapper.m */; };
+		7F73010E07EF87280047141E /* QSMDFindWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F73010D07EF87280047141E /* QSMDFindWrapper.m */; };
+		7F9441AE0803AA6D007EDC31 /* SourceNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F9441AD0803AA6D007EDC31 /* SourceNames.strings */; };
+		7FA983D0096F0E3D00321006 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA983CC096F0E3D00321006 /* QSCore.framework */; };
+		7FA983D1096F0E3D00321006 /* QSEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA983CD096F0E3D00321006 /* QSEffects.framework */; };
+		7FA983D2096F0E3D00321006 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA983CE096F0E3D00321006 /* QSFoundation.framework */; };
+		7FA983D3096F0E3D00321006 /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA983CF096F0E3D00321006 /* QSInterface.framework */; };
+		7FD8EF3307EB574C00F57CB7 /* QSSpotlightPlugIn_Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD8EF3207EB574C00F57CB7 /* QSSpotlightPlugIn_Action.m */; };
+		7FD8EF4407EB586A00F57CB7 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD8EF4307EB586A00F57CB7 /* Carbon.framework */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1EAB046068128A200774DFF /* QSSpotlightPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSSpotlightPlugIn.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32DBCF980370C29C00C91783 /* QSSpotlightPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSSpotlightPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		7F24E5B007ED169300943D5A /* QSSpotlightSavedSearchSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSSpotlightSavedSearchSource.h; sourceTree = "<group>"; };
+		7F24E5B107ED169300943D5A /* QSSpotlightSavedSearchSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSSpotlightSavedSearchSource.m; sourceTree = "<group>"; };
+		7F4894A907F5F4EF007CB98F /* QSSpotlightObjectSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSSpotlightObjectSource.h; sourceTree = "<group>"; };
+		7F4894AA07F5F4EF007CB98F /* QSSpotlightObjectSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSSpotlightObjectSource.m; sourceTree = "<group>"; };
+		7F4894B707F5F724007CB98F /* QSSpotlightObjectSource.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSSpotlightObjectSource.nib; sourceTree = "<group>"; };
+		7F4C3E4B082C16FC000B4D53 /* QSNSMDQueryWrapper.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSNSMDQueryWrapper.h; sourceTree = "<group>"; };
+		7F4C3E4C082C16FC000B4D53 /* QSNSMDQueryWrapper.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSNSMDQueryWrapper.m; sourceTree = "<group>"; };
+		7F6674FE07FE661D00A2CEF7 /* QSMDQueryWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSMDQueryWrapper.h; sourceTree = "<group>"; };
+		7F6674FF07FE661D00A2CEF7 /* QSMDQueryWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSMDQueryWrapper.m; sourceTree = "<group>"; };
+		7F73010C07EF87280047141E /* QSMDFindWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSMDFindWrapper.h; sourceTree = "<group>"; };
+		7F73010D07EF87280047141E /* QSMDFindWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSMDFindWrapper.m; sourceTree = "<group>"; };
+		7F9441AD0803AA6D007EDC31 /* SourceNames.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SourceNames.strings; sourceTree = "<group>"; };
+		7FA983CC096F0E3D00321006 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
+		7FA983CD096F0E3D00321006 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
+		7FA983CE096F0E3D00321006 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
+		7FA983CF096F0E3D00321006 /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
+		7FD8EF3107EB574C00F57CB7 /* QSSpotlightPlugIn_Action.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSSpotlightPlugIn_Action.h; sourceTree = "<group>"; };
+		7FD8EF3207EB574C00F57CB7 /* QSSpotlightPlugIn_Action.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSSpotlightPlugIn_Action.m; sourceTree = "<group>"; };
+		7FD8EF4307EB586A00F57CB7 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* Spotlight Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spotlight Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E1EAB045068128A200774DFF /* QSSpotlightPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSSpotlightPlugIn.m; sourceTree = "<group>"; };
+		E1EAB047068128A800774DFF /* QSSpotlightPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSSpotlightPlugIn.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				7FD8EF4407EB586A00F57CB7 /* Carbon.framework in Frameworks */,
+				7FA983D0096F0E3D00321006 /* QSCore.framework in Frameworks */,
+				7FA983D1096F0E3D00321006 /* QSEffects.framework in Frameworks */,
+				7FA983D2096F0E3D00321006 /* QSFoundation.framework in Frameworks */,
+				7FA983D3096F0E3D00321006 /* QSInterface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSSpotlightPlugIn */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+				7F4894B707F5F724007CB98F /* QSSpotlightObjectSource.nib */,
+			);
+			name = QSSpotlightPlugIn;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+				7F9441AD0803AA6D007EDC31 /* SourceNames.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* Spotlight Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FA983CC096F0E3D00321006 /* QSCore.framework */,
+				7FA983CD096F0E3D00321006 /* QSEffects.framework */,
+				7FA983CE096F0E3D00321006 /* QSFoundation.framework */,
+				7FA983CF096F0E3D00321006 /* QSInterface.framework */,
+				7FD8EF4307EB586A00F57CB7 /* Carbon.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1EAB045068128A200774DFF /* QSSpotlightPlugIn.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7F4C3E4B082C16FC000B4D53 /* QSNSMDQueryWrapper.h */,
+				7F4C3E4C082C16FC000B4D53 /* QSNSMDQueryWrapper.m */,
+				7FD8EF3107EB574C00F57CB7 /* QSSpotlightPlugIn_Action.h */,
+				7FD8EF3207EB574C00F57CB7 /* QSSpotlightPlugIn_Action.m */,
+				32DBCF980370C29C00C91783 /* QSSpotlightPlugIn_Prefix.pch */,
+				E1EAB047068128A800774DFF /* QSSpotlightPlugIn.h */,
+				7F24E5B007ED169300943D5A /* QSSpotlightSavedSearchSource.h */,
+				7F24E5B107ED169300943D5A /* QSSpotlightSavedSearchSource.m */,
+				7F73010C07EF87280047141E /* QSMDFindWrapper.h */,
+				7F73010D07EF87280047141E /* QSMDFindWrapper.m */,
+				7F6674FE07FE661D00A2CEF7 /* QSMDQueryWrapper.h */,
+				7F6674FF07FE661D00A2CEF7 /* QSMDQueryWrapper.m */,
+				7F4894A907F5F4EF007CB98F /* QSSpotlightObjectSource.h */,
+				7F4894AA07F5F4EF007CB98F /* QSSpotlightObjectSource.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* Spotlight Module */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FFF2555085E488700266176 /* Build configuration list for PBXNativeTarget "Spotlight Module" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spotlight Module";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSSpotlightPlugIn;
+			productReference = 8D1AC9740486D14A00FE50C9 /* Spotlight Module.qsplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7FFF2559085E488700266176 /* Build configuration list for PBXProject "QSSpotlightPlugIn" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* QSSpotlightPlugIn */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* Spotlight Module */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F4894B807F5F724007CB98F /* QSSpotlightObjectSource.nib in Resources */,
+				7F9441AE0803AA6D007EDC31 /* SourceNames.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF /* QSSpotlightPlugIn.m in Sources */,
+				7FD8EF3307EB574C00F57CB7 /* QSSpotlightPlugIn_Action.m in Sources */,
+				7F24E5B207ED169300943D5A /* QSSpotlightSavedSearchSource.m in Sources */,
+				7F73010E07EF87280047141E /* QSMDFindWrapper.m in Sources */,
+				7F4894AB07F5F4EF007CB98F /* QSSpotlightObjectSource.m in Sources */,
+				7F66750007FE661D00A2CEF7 /* QSMDQueryWrapper.m in Sources */,
+				7F4C3E4D082C16FC000B4D53 /* QSNSMDQueryWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7FFF2556085E488700266176 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SRCROOT)/../../../Build/Release",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSSpotlightPlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Spotlight Module";
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7FFF2557085E488700266176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SRCROOT)/../../../Build/Release",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSSpotlightPlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Spotlight Module";
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7FFF2558085E488700266176 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SRCROOT)/../../../Build/Release",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSSpotlightPlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Spotlight Module";
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			name = Default;
+		};
+		7FFF255A085E488700266176 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+		7FFF255B085E488700266176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		7FFF255C085E488700266176 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FFF2555085E488700266176 /* Build configuration list for PBXNativeTarget "Spotlight Module" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FFF2556085E488700266176 /* Development */,
+				7FFF2557085E488700266176 /* Release */,
+				7FFF2558085E488700266176 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7FFF2559085E488700266176 /* Build configuration list for PBXProject "QSSpotlightPlugIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FFF255A085E488700266176 /* Development */,
+				7FFF255B085E488700266176 /* Release */,
+				7FFF255C085E488700266176 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Transmit Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSTransmitModule</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Transmit 3 Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleSignature</key>
+	<string>daed</string>
+	<key>CFBundleVersion</key>
+	<string>DD</string>
+	<key>NSPrincipalClass</key>
+	<string>QSTransmitModule</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSTransmitUploadAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSTransmitSource</string>
+			<key>actionSelector</key>
+			<string>uploadFiles:toSite:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>com.panic.Transmit3</string>
+			<key>name</key>
+			<string>Upload to Site...</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Files</string>
+			<string>Applications</string>
+		</array>
+		<key>description</key>
+		<string>Favorites Access &amp; Uploading</string>
+		<key>extendedDescription</key>
+		<string>Favorites Access &amp; Uploading&lt;h3&gt;Enhancements&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Adds Transmit favorites to catalog&lt;li&gt;Favorites contain links to all the remote sidebar locations&lt;li&gt;An upload action allows sending files to favorites or their sidebar links&lt;/ul&gt;&lt;h3&gt;Version Changes&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Sidebar links are now accessible&lt;/ul&gt;</string>
+		<key>icon</key>
+		<string>com.panic.Transmit3</string>
+		<key>qsversion</key>
+		<string>2000</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>com.panic.Transmit3</string>
+		</array>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetTransmitFavorites</string>
+			<key>name</key>
+			<string>Transmit Favorites</string>
+			<key>source</key>
+			<string>QSTransmitSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>com.panic.Transmit3</key>
+			<string>QSTransmitSource</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>QSTransmitSiteType</key>
+			<string>QSTransmitSource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSTransmitSource</key>
+			<string>QSTransmitSource</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

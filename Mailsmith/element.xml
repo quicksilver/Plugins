@@ -1,0 +1,13 @@
+<element id="com.blacktree.Quicksilver.QSMailsmithPlugIn" name="Mailsmith Module" version="9A">
+    <info>
+        <category>Mail &amp; Chat</category>
+        <category>Applications</category>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSMailMediators">
+            <extension id="com.barebones.mailsmith" class="QSMailsmithMailMediator"></extension>
+        </extension>
+    </extensions>
+</element>

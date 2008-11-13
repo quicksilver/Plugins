@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSAutomatorPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Automator Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>5B</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSAutomatorWorkflowExecuteAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAutomatorPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>runWorkflow:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>workflow</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.Automator</string>
+			<key>name</key>
+			<string>Execute Workflow</string>
+			<key>rankModification</key>
+			<integer>4</integer>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>System</string>
+			<string>Applications</string>
+		</array>
+		<key>description</key>
+		<string>Support For Workflows and Automator Actions</string>
+		<key>icon</key>
+		<string>com.apple.Automator</string>
+		<key>relatedBundles </key>
+		<array>
+			<string>com.apple.Automator</string>
+		</array>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSAutomatorPlugIn_Action</key>
+			<string>QSAutomatorPlugIn_Action</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>feature</key>
+		<integer>1</integer>
+	</dict>
+</dict>
+</plist>

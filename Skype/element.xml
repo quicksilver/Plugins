@@ -1,0 +1,55 @@
+<element id="com.blacktree.Quicksilver.QSSkypePlugIn" name="Skype Module" version="3B">
+    <info>
+        <category>Internet</category>
+        <category>Communication</category>
+        <image>com.skype.skype</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetSkypeContacts">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetSkypeContacts</string>
+                        <key>name</key>
+                        <string>Skype Contacts</string>
+                        <key>source</key>
+                        <string>QSSkypePlugIn_Source</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSSkypeDialAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSSkypePlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>connectWithSkype:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>com.skype.skypeuser</string>
+                            <string>qs.contact.phone</string>
+                        </array>
+                        <key>name</key>
+                        <string>Call with Skype</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSSkypePlugIn_Source" class="QSSkypePlugIn_Source"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="qs.com.skype.skypeuser" class="QSSkypePlugIn_Source"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSSkypePlugIn_Action" class="QSSkypePlugIn_Action"></action-provider>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.skype.skype" class="QSSkypePlugIn_Source"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

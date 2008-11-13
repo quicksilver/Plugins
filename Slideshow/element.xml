@@ -1,0 +1,81 @@
+<element id="com.blacktree.Quicksilver.QSSlideshowPlugIn" name="Slideshow Action" version="6E">
+    <info>
+        <category>Images</category>
+        <image>Slideshow</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="Slideshow" class="[com.blacktree.Quicksilver.QSSlideshowPlugIn]:Slideshow.png"></image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSRunSlideshowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSSlideshowPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>runSlideshowForFilesObject:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>Slideshow</string>
+                        <key>name</key>
+                        <string>Slideshow</string>
+                        <key>runInMainThread</key>
+                        <true></true>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSRunSlideshowOnIPhotoAlbumAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSSlideshowPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>runSlideshowForIPhotoAlbum:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.apple.iPhoto.album</string>
+                        </array>
+                        <key>icon</key>
+                        <string>Slideshow</string>
+                        <key>name</key>
+                        <string>Slideshow</string>
+                        <key>runInMainThread</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSPreferencePanes">
+            <preference-pane id="QSSlideshowPrefPane" class="QSPreferencePane">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSPreferencePane</string>
+                        <key>description</key>
+                        <string>Slideshow Options</string>
+                        <key>feature</key>
+                        <integer>4</integer>
+                        <key>icon</key>
+                        <string>Slideshow</string>
+                        <key>name</key>
+                        <string>Slideshow</string>
+                        <key>nibBundle</key>
+                        <string>com.blacktree.Quicksilver.QSSlideshowPlugIn</string>
+                        <key>nibName</key>
+                        <string>QSSlideshowPrefPane</string>
+                    </dict>
+                </plist>
+            </preference-pane>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSSlideshowPlugInAction" class="QSSlideshowPlugInAction"></action-provider>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,83 @@
+<element id="com.blacktree.Quicksilver.QSAlarmPlugIn" name="Alarm Module" version="47">
+    <info>
+        <image>Recent</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSAlarmAfterDelayAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAlarmPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>alarm:afterDelay:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>*</string>
+                        </array>
+                        <key>icon</key>
+                        <string>Recent</string>
+                        <key>name</key>
+                        <string>Alarm after Delay...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSAlarmNowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAlarmPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>alarmNow:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>*</string>
+                        </array>
+                        <key>icon</key>
+                        <string>Recent</string>
+                        <key>name</key>
+                        <string>Alarm</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSAlarmAtTimeAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAlarmPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>alarm:atTime:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>*</string>
+                        </array>
+                        <key>icon</key>
+                        <string>Recent</string>
+                        <key>name</key>
+                        <string>Alarm at Time...</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSPreferencePanes">
+            <preference-pane id="QSAlarmPlugIn_PrefPane" class="QSPreferencePane">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSPreferencePane</string>
+                        <key>description</key>
+                        <string>Preferences</string>
+                        <key>icon</key>
+                        <string>Recent</string>
+                        <key>name</key>
+                        <string>Alarm</string>
+                    </dict>
+                </plist>
+            </preference-pane>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSAlarmPlugIn" class="QSAlarmPlugIn"></action-provider>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Cl1p Upload</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSCl1pPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Cl1p Upload</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>45</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSCl1pPostAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSCl1pPlugInAction</string>
+			<key>actionSelector</key>
+			<string>uploadToClip:usingName:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>displaysResult</key>
+			<false/>
+			<key>indirectOptional</key>
+			<true/>
+			<key>name</key>
+			<string>Post to Cl1p...</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>New item</key>
+		<string></string>
+		<key>author</key>
+		<string>Blacktree</string>
+		<key>categories</key>
+		<array>
+			<string>Web</string>
+			<string>Text</string>
+		</array>
+		<key>description</key>
+		<string>Upload text or files to cl1p.com</string>
+		<key>qsversion</key>
+		<string>29CC</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSCl1pPlugInAction</key>
+			<string>QSCl1pPlugInAction</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Screen Capture Actions</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSScreenCapturePlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Screen Capture Actions</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>1C</string>
+	<key>NSPrincipalClass</key>
+	<string>QSScreenCapturePlugIn</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Images</string>
+			<string>System</string>
+		</array>
+		<key>description</key>
+		<string>A set of actions that allow capturing the screen</string>
+		<key>icon</key>
+		<string>com.apple.Grab</string>
+		<key>qsversion</key>
+		<string>3525</string>
+		<key>relatedBundles </key>
+		<array/>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSClasses</key>
+		<dict>
+			<key>QSScreenCapturePlugIn</key>
+			<string>QSScreenCapturePlugIn</string>
+		</dict>
+		<key>QSInternalMessages</key>
+		<dict>
+			<key>QSCaptureRegionAction</key>
+			<dict>
+				<key>actionClass</key>
+				<string>QSScreenCapturePlugIn</string>
+				<key>actionSelector</key>
+				<string>captureRegion:</string>
+				<key>icon</key>
+				<string>com.apple.Grab</string>
+				<key>name</key>
+				<string>Capture Region</string>
+				<key>runInMainThread</key>
+				<true/>
+			</dict>
+			<key>QSCaptureScreenAction</key>
+			<dict>
+				<key>actionClass</key>
+				<string>QSScreenCapturePlugIn</string>
+				<key>actionSelector</key>
+				<string>captureScreen:</string>
+				<key>icon</key>
+				<string>com.apple.Grab</string>
+				<key>name</key>
+				<string>Capture Screen</string>
+				<key>runInMainThread</key>
+				<true/>
+			</dict>
+			<key>QSCaptureWindowAction</key>
+			<dict>
+				<key>actionClass</key>
+				<string>QSScreenCapturePlugIn</string>
+				<key>actionSelector</key>
+				<string>captureWindow:</string>
+				<key>icon</key>
+				<string>com.apple.Grab</string>
+				<key>name</key>
+				<string>Capture Window</string>
+				<key>runInMainThread</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>feature</key>
+		<integer>2</integer>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Skype Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSSkypePlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Skype Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>3B</string>
+	<key>NSPrincipalClass</key>
+	<string>QSSkypePlugIn</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSSkypeDialAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSSkypePlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>connectWithSkype:</string>
+			<key>directTypes</key>
+			<array>
+				<string>com.skype.skypeuser</string>
+				<string>qs.contact.phone</string>
+			</array>
+			<key>name</key>
+			<string>Call with Skype</string>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Internet</string>
+			<string>Communication</string>
+		</array>
+		<key>description</key>
+		<string>Access contacts and dial with Skype</string>
+		<key>icon</key>
+		<string>com.skype.skype</string>
+		<key>relatedBundles </key>
+		<array>
+			<string>com.skype.skype</string>
+		</array>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetSkypeContacts</string>
+			<key>name</key>
+			<string>Skype Contacts</string>
+			<key>source</key>
+			<string>QSSkypePlugIn_Source</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSSkypePlugIn_Action</key>
+			<string>QSSkypePlugIn_Action</string>
+		</dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>com.skype.skype</key>
+			<string>QSSkypePlugIn_Source</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>qs.com.skype.skypeuser</key>
+			<string>QSSkypePlugIn_Source</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSSkypePlugIn_Source</key>
+			<string>QSSkypePlugIn_Source</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>frameworks</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>com.skype.skypeframework</string>
+				<key>name</key>
+				<string>Skype Framework</string>
+				<key>resource</key>
+				<dict>
+					<key>bundle</key>
+					<string>com.skype.skype</string>
+					<key>path</key>
+					<string>/Contents/Frameworks/Skype.framework</string>
+				</dict>
+				<key>version</key>
+				<string>0.1</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,237 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7FDF314007F766DE00594789 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDF313C07F766DE00594789 /* QSCore.framework */; };
+		7FDF314107F766DE00594789 /* QSEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDF313D07F766DE00594789 /* QSEffects.framework */; };
+		7FDF314207F766DE00594789 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDF313E07F766DE00594789 /* QSFoundation.framework */; };
+		7FDF314307F766DE00594789 /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDF313F07F766DE00594789 /* QSInterface.framework */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E11E3A9807A3841700F55E58 /* QSBasicEventTriggers.h in Resources */ = {isa = PBXBuildFile; fileRef = E11E3A9607A3841700F55E58 /* QSBasicEventTriggers.h */; };
+		E11E3A9907A3841700F55E58 /* QSBasicEventTriggers.m in Sources */ = {isa = PBXBuildFile; fileRef = E11E3A9707A3841700F55E58 /* QSBasicEventTriggers.m */; };
+		E17CD96007A33F2B006BAEA7 /* QSEventTriggerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E17CD95E07A33F2B006BAEA7 /* QSEventTriggerManager.m */; };
+		E17CDCF807A36941006BAEA7 /* QSEventTriggerManager.h in Resources */ = {isa = PBXBuildFile; fileRef = E17CD95D07A33F2B006BAEA7 /* QSEventTriggerManager.h */; };
+		E1C9C509075631E200E5DD44 /* QSEventTrigger.nib in Resources */ = {isa = PBXBuildFile; fileRef = E1C9C508075631E200E5DD44 /* QSEventTrigger.nib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32DBCF980370C29C00C91783 /* QSEventTriggersPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSEventTriggersPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		7FDF313C07F766DE00594789 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
+		7FDF313D07F766DE00594789 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
+		7FDF313E07F766DE00594789 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
+		7FDF313F07F766DE00594789 /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* Event Triggers.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Event Triggers.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E11E3A9607A3841700F55E58 /* QSBasicEventTriggers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSBasicEventTriggers.h; sourceTree = "<group>"; };
+		E11E3A9707A3841700F55E58 /* QSBasicEventTriggers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSBasicEventTriggers.m; sourceTree = "<group>"; };
+		E17CD95D07A33F2B006BAEA7 /* QSEventTriggerManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSEventTriggerManager.h; sourceTree = "<group>"; };
+		E17CD95E07A33F2B006BAEA7 /* QSEventTriggerManager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSEventTriggerManager.m; sourceTree = "<group>"; };
+		E1C9C508075631E200E5DD44 /* QSEventTrigger.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSEventTrigger.nib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				7FDF314007F766DE00594789 /* QSCore.framework in Frameworks */,
+				7FDF314107F766DE00594789 /* QSEffects.framework in Frameworks */,
+				7FDF314207F766DE00594789 /* QSFoundation.framework in Frameworks */,
+				7FDF314307F766DE00594789 /* QSInterface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSEventTriggersPlugIn */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = QSEventTriggersPlugIn;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E1C9C508075631E200E5DD44 /* QSEventTrigger.nib */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* Event Triggers.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FDF313C07F766DE00594789 /* QSCore.framework */,
+				7FDF313D07F766DE00594789 /* QSEffects.framework */,
+				7FDF313E07F766DE00594789 /* QSFoundation.framework */,
+				7FDF313F07F766DE00594789 /* QSInterface.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E11E3A9607A3841700F55E58 /* QSBasicEventTriggers.h */,
+				E11E3A9707A3841700F55E58 /* QSBasicEventTriggers.m */,
+				E17CD95D07A33F2B006BAEA7 /* QSEventTriggerManager.h */,
+				E17CD95E07A33F2B006BAEA7 /* QSEventTriggerManager.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF980370C29C00C91783 /* QSEventTriggersPlugIn_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* Event Triggers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F07AFDA085E433000E2AFC4 /* Build configuration list for PBXNativeTarget "Event Triggers" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Event Triggers";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSEventTriggersPlugIn;
+			productReference = 8D1AC9740486D14A00FE50C9 /* Event Triggers.qsplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7F07AFDE085E433000E2AFC4 /* Build configuration list for PBXProject "QSEventTriggersElement" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* QSEventTriggersPlugIn */;
+			projectDirPath = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* Event Triggers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1C9C509075631E200E5DD44 /* QSEventTrigger.nib in Resources */,
+				E17CDCF807A36941006BAEA7 /* QSEventTriggerManager.h in Resources */,
+				E11E3A9807A3841700F55E58 /* QSBasicEventTriggers.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E17CD96007A33F2B006BAEA7 /* QSEventTriggerManager.m in Sources */,
+				E11E3A9907A3841700F55E58 /* QSBasicEventTriggers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7F07AFDC085E433000E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSEventTriggersPlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Event Triggers";
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7F07AFE0085E433000E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F07AFDA085E433000E2AFC4 /* Build configuration list for PBXNativeTarget "Event Triggers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AFDC085E433000E2AFC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F07AFDE085E433000E2AFC4 /* Build configuration list for PBXProject "QSEventTriggersElement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AFE0085E433000E2AFC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

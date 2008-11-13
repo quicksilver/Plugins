@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSRemoteDesktopPlugIn' target in the 'QSRemoteDesktopPlugIn' project
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import <QSFoundation/QSFoundation.h>
+#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSRemoteDesktopPlugInType @"com.apple.RemoteDesktop.uuid"

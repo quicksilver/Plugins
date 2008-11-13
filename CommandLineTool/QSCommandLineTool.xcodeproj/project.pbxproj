@@ -1,0 +1,382 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7FDB7FD10AA8C77900CCE360 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDB7FCD0AA8C77900CCE360 /* QSCore.framework */; };
+		7FDB7FD20AA8C77900CCE360 /* QSEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDB7FCE0AA8C77900CCE360 /* QSEffects.framework */; };
+		7FDB7FD30AA8C77900CCE360 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDB7FCF0AA8C77900CCE360 /* QSFoundation.framework */; };
+		7FDB7FD40AA8C77900CCE360 /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDB7FD00AA8C77900CCE360 /* QSInterface.framework */; };
+		7FEF1FFC07D4EE74005BC984 /* qs-usage.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7FEF1FFB07D4EE74005BC984 /* qs-usage.txt */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1C4F01006B865C600FA8819 /* qs.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C4F00006B8655D00FA8819 /* qs.m */; };
+		E1C4F01106B865D700FA8819 /* qs in Resources */ = {isa = PBXBuildFile; fileRef = E1C4F00A06B8659500FA8819 /* qs */; };
+		E1C4F01E06B867F100FA8819 /* QSCommandLineToolPrefPane.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C4F01C06B867F100FA8819 /* QSCommandLineToolPrefPane.m */; };
+		E1C4F07106B86DBB00FA8819 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C4F07006B86DBB00FA8819 /* Security.framework */; };
+		E1C4F0B306B86E5F00FA8819 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C4F0B206B86E5F00FA8819 /* PreferencePanes.framework */; };
+		E1C4F0B406B86E8200FA8819 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1C4F0D106B86EF000FA8819 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1C4F0CF06B86EF000FA8819 /* Localizable.strings */; };
+		E1C4F29D06B8B75200FA8819 /* QSCommandLineToolPrefPane.nib in Resources */ = {isa = PBXBuildFile; fileRef = E1C4F29C06B8B75200FA8819 /* QSCommandLineToolPrefPane.nib */; };
+		E1EAB046068128A200774DFF /* QSCommandLineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSCommandLineTool.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7FEF1EB707D4C725005BC984 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1C4F00906B8659500FA8819;
+			remoteInfo = qs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32DBCF980370C29C00C91783 /* QSCommandLineTool_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSCommandLineTool_Prefix.pch; sourceTree = "<group>"; };
+		7FDB7FCD0AA8C77900CCE360 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
+		7FDB7FCE0AA8C77900CCE360 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
+		7FDB7FCF0AA8C77900CCE360 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
+		7FDB7FD00AA8C77900CCE360 /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
+		7FEF1FFB07D4EE74005BC984 /* qs-usage.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "qs-usage.txt"; sourceTree = "<group>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* Command Line Tool.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Command Line Tool.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E1C4F00006B8655D00FA8819 /* qs.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = qs.m; sourceTree = "<group>"; };
+		E1C4F00A06B8659500FA8819 /* qs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = qs; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1C4F01B06B867F100FA8819 /* QSCommandLineToolPrefPane.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSCommandLineToolPrefPane.h; sourceTree = "<group>"; };
+		E1C4F01C06B867F100FA8819 /* QSCommandLineToolPrefPane.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSCommandLineToolPrefPane.m; sourceTree = "<group>"; };
+		E1C4F07006B86DBB00FA8819 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		E1C4F0B206B86E5F00FA8819 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
+		E1C4F0D006B86EF000FA8819 /* en */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E1C4F29C06B8B75200FA8819 /* QSCommandLineToolPrefPane.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSCommandLineToolPrefPane.nib; sourceTree = "<group>"; };
+		E1EAB045068128A200774DFF /* QSCommandLineTool.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSCommandLineTool.m; sourceTree = "<group>"; };
+		E1EAB047068128A800774DFF /* QSCommandLineTool.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSCommandLineTool.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				E1C4F07106B86DBB00FA8819 /* Security.framework in Frameworks */,
+				E1C4F0B306B86E5F00FA8819 /* PreferencePanes.framework in Frameworks */,
+				7FDB7FD10AA8C77900CCE360 /* QSCore.framework in Frameworks */,
+				7FDB7FD20AA8C77900CCE360 /* QSEffects.framework in Frameworks */,
+				7FDB7FD30AA8C77900CCE360 /* QSFoundation.framework in Frameworks */,
+				7FDB7FD40AA8C77900CCE360 /* QSInterface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1C4F00806B8659500FA8819 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1C4F0B406B86E8200FA8819 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSCommandLineTool */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				E1127F960695F44F008AE6A3 /* Templates */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = QSCommandLineTool;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7FEF1FFB07D4EE74005BC984 /* qs-usage.txt */,
+				E1C4F29C06B8B75200FA8819 /* QSCommandLineToolPrefPane.nib */,
+				E1C4F0CF06B86EF000FA8819 /* Localizable.strings */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* Command Line Tool.qsplugin */,
+				E1C4F00A06B8659500FA8819 /* qs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FDB7FCD0AA8C77900CCE360 /* QSCore.framework */,
+				7FDB7FCE0AA8C77900CCE360 /* QSEffects.framework */,
+				7FDB7FCF0AA8C77900CCE360 /* QSFoundation.framework */,
+				7FDB7FD00AA8C77900CCE360 /* QSInterface.framework */,
+				E1C4F07006B86DBB00FA8819 /* Security.framework */,
+				E1C4F0B206B86E5F00FA8819 /* PreferencePanes.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1EAB047068128A800774DFF /* QSCommandLineTool.h */,
+				E1EAB045068128A200774DFF /* QSCommandLineTool.m */,
+				E1C4F00006B8655D00FA8819 /* qs.m */,
+				E1C4F01B06B867F100FA8819 /* QSCommandLineToolPrefPane.h */,
+				E1C4F01C06B867F100FA8819 /* QSCommandLineToolPrefPane.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF980370C29C00C91783 /* QSCommandLineTool_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		E1127F960695F44F008AE6A3 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Templates;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* Command Line Tool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F07AF8A085E432D00E2AFC4 /* Build configuration list for PBXNativeTarget "Command Line Tool" */;
+			buildPhases = (
+				7F4ADEE9096F38B600C9B950 /* ShellScript */,
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7FEF1EB807D4C725005BC984 /* PBXTargetDependency */,
+			);
+			name = "Command Line Tool";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSCommandLineTool;
+			productReference = 8D1AC9740486D14A00FE50C9 /* Command Line Tool.qsplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		E1C4F00906B8659500FA8819 /* qs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F07AF86085E432D00E2AFC4 /* Build configuration list for PBXNativeTarget "qs" */;
+			buildPhases = (
+				E1C4F00706B8659500FA8819 /* Sources */,
+				E1C4F00806B8659500FA8819 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = qs;
+			productName = qs;
+			productReference = E1C4F00A06B8659500FA8819 /* qs */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7F07AF8E085E432D00E2AFC4 /* Build configuration list for PBXProject "QSCommandLineTool" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 0259C574FE90428111CA0C5A /* QSCommandLineTool */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* Command Line Tool */,
+				E1C4F00906B8659500FA8819 /* qs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1C4F01106B865D700FA8819 /* qs in Resources */,
+				E1C4F29D06B8B75200FA8819 /* QSCommandLineToolPrefPane.nib in Resources */,
+				E1C4F0D106B86EF000FA8819 /* Localizable.strings in Resources */,
+				7FEF1FFC07D4EE74005BC984 /* qs-usage.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F4ADEE9096F38B600C9B950 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF /* QSCommandLineTool.m in Sources */,
+				E1C4F01E06B867F100FA8819 /* QSCommandLineToolPrefPane.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1C4F00706B8659500FA8819 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1C4F01006B865C600FA8819 /* qs.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7FEF1EB807D4C725005BC984 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1C4F00906B8659500FA8819 /* qs */;
+			targetProxy = 7FEF1EB707D4C725005BC984 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E1C4F0CF06B86EF000FA8819 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1C4F0D006B86EF000FA8819 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F07AF88085E432D00E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = qs;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7F07AF8C085E432D00E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(QSFrameworks)",
+					"$(SRCROOT)/../../../Build/Release",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSCommandLineTool_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Command Line Tool";
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7F07AF90085E432D00E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F07AF86085E432D00E2AFC4 /* Build configuration list for PBXNativeTarget "qs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AF88085E432D00E2AFC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F07AF8A085E432D00E2AFC4 /* Build configuration list for PBXNativeTarget "Command Line Tool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AF8C085E432D00E2AFC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F07AF8E085E432D00E2AFC4 /* Build configuration list for PBXProject "QSCommandLineTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AF90085E432D00E2AFC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

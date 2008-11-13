@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'QSWindowModule' target in the 'QSWindowModule' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define QSWindowIDType @"qs.windowid"

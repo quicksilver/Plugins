@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Google Calendar Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSGoogleCalendarPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Google Calendar Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>A5</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSGoogleCalendarCreateEventAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSGoogleCalendarPlugInAction</string>
+			<key>actionSelector</key>
+			<string>createEvent:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>com.google.calendar</string>
+			<key>indirectOptional</key>
+			<true/>
+			<key>name</key>
+			<string>Google Calendar Event </string>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>New item</key>
+		<string></string>
+		<key>categories</key>
+		<array>
+			<string>Calendar</string>
+			<string>Web</string>
+		</array>
+		<key>description</key>
+		<string>Create Events on Google Calendar</string>
+		<key>icon</key>
+		<string>com.apple.iCal</string>
+	</dict>
+	<key>QSPresetAdditionsTemplate</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetQSGoogleCalendarPlugIn</string>
+			<key>name</key>
+			<string>QSGoogleCalendarPlugIn</string>
+			<key>source</key>
+			<string>QSGoogleCalendarPlugInSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSGoogleCalendarPlugInAction</key>
+			<string>QSGoogleCalendarPlugInAction</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

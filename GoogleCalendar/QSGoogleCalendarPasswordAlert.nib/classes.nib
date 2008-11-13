@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = QSBackgroundView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {endPanel = id; }; 
+            CLASS = QSGoogleCalendarPlugInAction; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                indicator = NSProgressIndicator; 
+                loginField = NSTextField; 
+                loginPanel = NSPanel; 
+                passField = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {hideThreaded = id; reallyOrderFront = id; showThreaded = id; }; 
+            CLASS = QSWindow; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSPanel; 
+        }
+    ); 
+    IBVersion = 1; 
+}

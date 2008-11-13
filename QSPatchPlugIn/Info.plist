@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>B51Patch</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.B51Patch</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>B51Patch</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>28</string>
+	<key>QSLoadImmediately</key>
+	<true/>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>hidden</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

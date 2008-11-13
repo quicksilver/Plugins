@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>System HotKey Commands</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSSymbolicHotKeyPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>System HotKey Commands</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>5B</string>
+	<key>NSPrincipalClass</key>
+	<string>QSSymbolicHotKeyPlugIn</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>System</string>
+		</array>
+		<key>description</key>
+		<string>Allows triggering of Exposé and other System Hotkeys</string>
+		<key>extendedDescription</key>
+		<string>Adds a catalog entry for Exposé and Dashboard commands. For these to work, keyboard activation in Exposé system preferences must be set to F1-F13 (with or without modifiers).</string>
+		<key>qsversion</key>
+		<string>29E0</string>
+		<key>relatedBundles </key>
+		<array>
+			<string>com.apple.preference.expose</string>
+		</array>
+		<key>webIcon</key>
+		<string>com.apple.preference.expose</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetSymbolicHotKeys</string>
+			<key>name</key>
+			<string>Exposé Commands</string>
+			<key>source</key>
+			<string>QSSymbolicHotKeyPlugIn</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>com.apple.preference.expose</key>
+			<string>QSSymbolicHotKeyPlugIn</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSSymbolicHotKeyPlugIn</key>
+			<string>QSSymbolicHotKeyPlugIn</string>
+		</dict>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>ExposéIcon</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.blacktree.Quicksilver.QSSymbolicHotKeyPlugIn</string>
+			<key>resource</key>
+			<string>Expose.icns</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

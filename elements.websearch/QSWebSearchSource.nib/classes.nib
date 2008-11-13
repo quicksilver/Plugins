@@ -1,0 +1,67 @@
+{
+    IBClasses = (
+        {
+            CLASS = DNDArrayController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {tableView = NSTableView; }; 
+            SUPERCLASS = NSArrayController; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = QSAddressBookObjectSource; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = QSObjectSource; 
+        }, 
+        {CLASS = QSBackgroundView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            CLASS = QSEncapsulatedTextCell; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTextFieldCell; 
+        }, 
+        {
+            ACTIONS = {
+                addSet = id; 
+                chooseFile = id; 
+                editSets = id; 
+                endContainingSheet = id; 
+                removeSet = id; 
+                setValueForSender = id; 
+                showFile = id; 
+            }; 
+            CLASS = QSFileSystemObjectSource; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                addSetButton = NSButton; 
+                itemFolderDepthSlider = NSSlider; 
+                itemFolderOptions = NSView; 
+                itemLocationChooseButton = NSButton; 
+                itemLocationField = NSTextField; 
+                itemLocationShowButton = NSButton; 
+                itemOptionsView = NSBox; 
+                itemParserPopUp = NSPopUpButton; 
+                itemSkipItemSwitch = NSButton; 
+                removeSetButton = NSButton; 
+                typeSetsPanel = NSPanel; 
+                typeSetsPopUp = NSPopUpButton; 
+                typeSetsTable = NSTableView; 
+                typesTextField = NSTextField; 
+                typesTextView = NSTextView; 
+            }; 
+            SUPERCLASS = QSObjectSource; 
+        }, 
+        {
+            CLASS = QSObjectSource; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {settingsView = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {addQuery = id; removeQuery = id; }; 
+            CLASS = QSWebSearchSource; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {encodingCell = NSPopUpButtonCell; searchTable = NSTableView; }; 
+            SUPERCLASS = QSObjectSource; 
+        }
+    ); 
+    IBVersion = 1; 
+}

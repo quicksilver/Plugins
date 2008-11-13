@@ -1,0 +1,35 @@
+<element id="com.blacktree.Quicksilver.QSExtendedAttributesPlugIn" name="Extended Attributes Module" version="49">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSShowExtendedAttributesAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSExtendedAttributesPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>showExtendedAttributesForFile:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>name</key>
+                        <string>Show Extended Attributes</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSExtendedAttributesPlugInSource" class="QSExtendedAttributesPlugInSource"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="QSExtendedAttributesPlugInType" class="QSExtendedAttributesPlugInSource"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSExtendedAttributesPlugInAction" class="QSExtendedAttributesPlugInAction"></action-provider>
+        </extension>
+    </extensions>
+</element>

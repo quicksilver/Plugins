@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Spotlight Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSSpotlightPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Spotlight Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>E5</string>
+	<key>NSPrincipalClass</key>
+	<string>QSSpotlightPlugIn</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSSpotlightRunSavedQuery</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSSpotlightSavedSearchSource</string>
+			<key>actionSelector</key>
+			<string>spotlightRunSavedQuery:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>savedSearch</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Spotlight</string>
+			<key>name</key>
+			<string>Run Search with Spotlight</string>
+			<key>precedence</key>
+			<integer>5</integer>
+		</dict>
+		<key>QSSpotlightSearchFilenamesInFolder</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSSpotlightPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>spotlightSearchFilenamesInFolder:forString:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>'fold'</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Spotlight</string>
+			<key>name</key>
+			<string>Spotlight Filenames of Contents...</string>
+			<key>xalternateAction</key>
+			<string></string>
+		</dict>
+		<key>QSSpotlightSearchInFolder</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSSpotlightPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>spotlightSearchInFolder:forString:</string>
+			<key>alternateAction</key>
+			<string>QSSpotlightSearchInFolderWithFinder</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>'fold'</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Spotlight</string>
+			<key>name</key>
+			<string>Spotlight Contents...</string>
+		</dict>
+		<key>QSSpotlightSearchInFolderWithFinder</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSSpotlightPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>spotlightSearchFinderInFolder:forString:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>'fold'</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Spotlight</string>
+			<key>name</key>
+			<string>Spotlight Contents in Finder...</string>
+		</dict>
+		<key>QSSpotlightStringSearch</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSSpotlightPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>spotlightSearchForString:</string>
+			<key>directTypes</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>icon</key>
+			<string>Spotlight</string>
+			<key>name</key>
+			<string>Spotlight in Window</string>
+		</dict>
+		<key>QSSpotlightStringSearchInternal</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSSpotlightPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>internalSpotlightSearchForString:</string>
+			<key>directTypes</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>icon</key>
+			<string>Spotlight</string>
+			<key>name</key>
+			<string>Spotlight in Command</string>
+		</dict>
+		<key>QSSpotlightStringSearchWithFinder</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSSpotlightPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>finderSpotlightSearchForString:</string>
+			<key>directTypes</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>icon</key>
+			<string>Spotlight</string>
+			<key>name</key>
+			<string>Spotlight in Finder</string>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Search</string>
+		</array>
+		<key>description</key>
+		<string>Spotlight actions and integration</string>
+		<key>extendedDescription</key>
+		<string>Spotlight actions and integration
+
+&lt;p&gt;
+&lt;h3&gt;Enhancements&lt;/h3&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;Spotlight Query Catalog Entry, currently pretty rough.
+&lt;li&gt;Search in Spotlight Window Action
+&lt;li&gt;Spotlight Search in Folder Action (internally or through Finder)
+&lt;li&gt;Spotlight Search for Filenames Action
+
+&lt;/ul&gt;</string>
+		<key>icon</key>
+		<string>Spotlight</string>
+		<key>qsversion</key>
+		<string>2A5F</string>
+		<key>relatedBundles </key>
+		<array/>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetSpotlightSavedSearches</string>
+			<key>enabled</key>
+			<true/>
+			<key>icon</key>
+			<string>Spotlight</string>
+			<key>name</key>
+			<string>Spotlight Saved Searches</string>
+			<key>settings</key>
+			<dict>
+				<key>folderDepth</key>
+				<integer>1</integer>
+				<key>folderTypes</key>
+				<array>
+					<string>savedSearch</string>
+				</array>
+				<key>parser</key>
+				<string>QSDirectoryParser</string>
+				<key>path</key>
+				<string>~/Library/Saved Searches</string>
+				<key>skipItem</key>
+				<true/>
+			</dict>
+			<key>source</key>
+			<string>QSFileSystemObjectSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSSpotlightPlugIn_Action</key>
+			<string>QSSpotlightPlugIn_Action</string>
+			<key>QSSpotlightSavedSearchSource</key>
+			<string>QSSpotlightSavedSearchSource</string>
+		</dict>
+		<key>QSFSFileTypeChildHandlers</key>
+		<dict>
+			<key>com.apple.finder.smart-folder</key>
+			<string>QSSpotlightSavedSearchSource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSSpotlightObjectSource</key>
+			<string>QSSpotlightObjectSource</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>launchLoad</key>
+		<true/>
+		<key>osVersion</key>
+		<string>8A414</string>
+		<key>qsversion</key>
+		<string>2B9E</string>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>Spotlight</key>
+		<array>
+			<string>/System/Library/CoreServices/Search.bundle/Contents/Resources/Spotlight.icns</string>
+			<string>/System/Library/PreferencePanes/Spotlight.prefPane/Contents/Resources/SpotlightPref_big.tiff</string>
+		</array>
+	</dict>
+</dict>
+</plist>

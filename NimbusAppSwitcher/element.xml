@@ -1,0 +1,11 @@
+<element id="com.blacktree.Quicksilver.QSNimbusSwitcherPlugIn" name="Nimbus Switcher" version="1FE">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSProcessSwitchers">
+            <extension id="QSNimbusProcessSwitcher" class="QSNimbusProcessSwitcher"></extension>
+        </extension>
+    </extensions>
+</element>

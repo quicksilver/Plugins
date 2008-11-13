@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>AirPort Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSAirPortPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>AirPort Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>A5</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Blacktree, Inc.</string>
+	<key>NSPrincipalClass</key>
+	<string>QSAirPortNetworkObjectSource</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSAirPortNetworkSelectAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAirPortNetworkActionProvider</string>
+			<key>actionSelector</key>
+			<string>selectNetwork:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSAirPortNetworkSSIDType</string>
+			</array>
+			<key>icon</key>
+			<string>AirPortIcon</string>
+			<key>name</key>
+			<string>Select Network</string>
+			<key>precedence</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>System</string>
+		</array>
+		<key>description</key>
+		<string>Adds AirPort networks to the catalog.</string>
+		<key>extendedDescription</key>
+		<string>Adds a catalog source for AirPort networks as well as actions for selecting them and internal commands disabling Airport (Beta)</string>
+		<key>icon</key>
+		<string>com.apple.airport.adminutility</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetWirelessNetworks</string>
+			<key>catalogPath</key>
+			<string>QSPresetSystemGroup/QSPresetDevices</string>
+			<key>feature</key>
+			<integer>1</integer>
+			<key>name</key>
+			<string>AirPort Networks</string>
+			<key>source</key>
+			<string>QSAirPortNetworkObjectSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSAirPortNetworkActionProvider</key>
+			<string>QSAirPortNetworkActionProvider</string>
+		</dict>
+		<key>QSInternalMessages</key>
+		<dict>
+			<key>QSAirPortTurnOff</key>
+			<dict>
+				<key>action</key>
+				<string>turnAirPortOff</string>
+				<key>icon</key>
+				<string>AirPortIcon</string>
+				<key>name</key>
+				<string>Turn AirPort Off</string>
+				<key>target</key>
+				<string>QSAirPortNetworkActionProvider</string>
+			</dict>
+			<key>QSAirPortTurnOn</key>
+			<dict>
+				<key>action</key>
+				<string>turnAirPortOn</string>
+				<key>icon</key>
+				<string>AirPortIcon</string>
+				<key>name</key>
+				<string>Turn AirPort On</string>
+				<key>target</key>
+				<string>QSAirPortNetworkActionProvider</string>
+			</dict>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>QSAirPortNetworkSSIDType</key>
+			<string>QSAirPortNetworkObjectSource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSAirPortNetworkObjectSource</key>
+			<string>QSAirPortNetworkObjectSource</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>feature</key>
+		<integer>2</integer>
+	</dict>
+</dict>
+</plist>

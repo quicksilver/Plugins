@@ -1,0 +1,1105 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F010CAE08D9FC1500054659 /* InstantMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F010CAD08D9FC1500054659 /* InstantMessage.framework */; };
+		7F4084BD0D16CBDE00E15BB0 /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7F4084B70D16CBDE00E15BB0 /* Common.xcconfig */; };
+		7F4084BE0D16CBDE00E15BB0 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7F4084B80D16CBDE00E15BB0 /* Debug.xcconfig */; };
+		7F4084BF0D16CBDE00E15BB0 /* Developer.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7F4084B90D16CBDE00E15BB0 /* Developer.xcconfig */; };
+		7F4084C00D16CBDE00E15BB0 /* QSElement.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7F4084BA0D16CBDE00E15BB0 /* QSElement.xcconfig */; };
+		7F4084C10D16CBDE00E15BB0 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7F4084BC0D16CBDE00E15BB0 /* Release.xcconfig */; };
+		7F4086930D16CE9000E15BB0 /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7F4086920D16CE9000E15BB0 /* element.xml */; };
+		7F5D1FC50D25AF280077ED43 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5D1FC40D25AF280077ED43 /* ScriptingBridge.framework */; };
+		7F8FC6220D25E52800BD8C1C /* iChatPresenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8FC6210D25E52800BD8C1C /* iChatPresenceController.m */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E104367606F8AC6300CF1415 /* QSiChatMediator.h in Resources */ = {isa = PBXBuildFile; fileRef = E104367406F8AC6300CF1415 /* QSiChatMediator.h */; };
+		E104367706F8AC6300CF1415 /* QSiChatMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = E104367506F8AC6300CF1415 /* QSiChatMediator.m */; };
+		E104386306F8B7AD00CF1415 /* iChat.scpt in Resources */ = {isa = PBXBuildFile; fileRef = E104386206F8B7AD00CF1415 /* iChat.scpt */; };
+		E112968006F8B9F7005E3B5A /* ABAddressBook-Fez.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295B506F8B9F6005E3B5A /* ABAddressBook-Fez.h */; };
+		E112968106F8B9F7005E3B5A /* ABPerson-Fez.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295B606F8B9F6005E3B5A /* ABPerson-Fez.h */; };
+		E112968206F8B9F7005E3B5A /* AccountVerifier.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295B706F8B9F6005E3B5A /* AccountVerifier.h */; };
+		E112968306F8B9F7005E3B5A /* ActionsController.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295B806F8B9F6005E3B5A /* ActionsController.h */; };
+		E112968406F8B9F7005E3B5A /* ActiveChat.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295B906F8B9F6005E3B5A /* ActiveChat.h */; };
+		E112968506F8B9F7005E3B5A /* AddressBookPeople.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295BA06F8B9F6005E3B5A /* AddressBookPeople.h */; };
+		E112968606F8B9F7005E3B5A /* AddressCard-AddressBook.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295BB06F8B9F6005E3B5A /* AddressCard-AddressBook.h */; };
+		E112968706F8B9F7005E3B5A /* AddressCard.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295BC06F8B9F6005E3B5A /* AddressCard.h */; };
+		E112968806F8B9F7005E3B5A /* AnimatingTableView.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295BD06F8B9F6005E3B5A /* AnimatingTableView.h */; };
+		E112968906F8B9F7005E3B5A /* AnimatingTabView.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295BE06F8B9F6005E3B5A /* AnimatingTabView.h */; };
+		E112968A06F8B9F7005E3B5A /* AudioChatController.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295BF06F8B9F6005E3B5A /* AudioChatController.h */; };
+		E112968B06F8B9F7005E3B5A /* AudioInputSampler.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295C006F8B9F6005E3B5A /* AudioInputSampler.h */; };
+		E112968C06F8B9F7005E3B5A /* AudioOutputSampler.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295C106F8B9F6005E3B5A /* AudioOutputSampler.h */; };
+		E112968D06F8B9F7005E3B5A /* AutoAway.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295C206F8B9F6005E3B5A /* AutoAway.h */; };
+		E112968E06F8B9F7005E3B5A /* AutoManualSlider.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295C306F8B9F6005E3B5A /* AutoManualSlider.h */; };
+		E112968F06F8B9F7005E3B5A /* AutoSendTextField.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295C406F8B9F6005E3B5A /* AutoSendTextField.h */; };
+		E112969006F8B9F7005E3B5A /* AVChat.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295C506F8B9F6005E3B5A /* AVChat.h */; };
+		E112969106F8B9F7005E3B5A /* AVChatController.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295C606F8B9F6005E3B5A /* AVChatController.h */; };
+		E112969206F8B9F7005E3B5A /* BacktracingException.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295C706F8B9F6005E3B5A /* BacktracingException.h */; };
+		E112969306F8B9F7005E3B5A /* BalloonRenderer.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295C806F8B9F6005E3B5A /* BalloonRenderer.h */; };
+		E112969406F8B9F7005E3B5A /* BlockListController.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295C906F8B9F6005E3B5A /* BlockListController.h */; };
+		E112969506F8B9F7005E3B5A /* BorderView.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295CA06F8B9F6005E3B5A /* BorderView.h */; };
+		E112969606F8B9F7005E3B5A /* BoxMessageRenderer.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295CB06F8B9F6005E3B5A /* BoxMessageRenderer.h */; };
+		E112969706F8B9F7005E3B5A /* BuddyIconCell.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295CC06F8B9F6005E3B5A /* BuddyIconCell.h */; };
+		E112969806F8B9F7005E3B5A /* BuddyPicture.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295CD06F8B9F6005E3B5A /* BuddyPicture.h */; };
+		E112969906F8B9F7005E3B5A /* CameraPreferencesView.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295CE06F8B9F6005E3B5A /* CameraPreferencesView.h */; };
+		E112969A06F8B9F7005E3B5A /* CameraSettingsController.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295CF06F8B9F6005E3B5A /* CameraSettingsController.h */; };
+		E112969B06F8B9F7005E3B5A /* CDStructures.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295D006F8B9F6005E3B5A /* CDStructures.h */; };
+		E112969C06F8B9F7005E3B5A /* CenteredView.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295D106F8B9F6005E3B5A /* CenteredView.h */; };
+		E112969D06F8B9F7005E3B5A /* Chat.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295D206F8B9F6005E3B5A /* Chat.h */; };
+		E112969E06F8B9F7005E3B5A /* ChatController.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295D306F8B9F6005E3B5A /* ChatController.h */; };
+		E112969F06F8B9F7005E3B5A /* ChatFieldEditor.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295D406F8B9F6005E3B5A /* ChatFieldEditor.h */; };
+		E11296A006F8B9F7005E3B5A /* ChatInputLine.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295D506F8B9F6005E3B5A /* ChatInputLine.h */; };
+		E11296A106F8B9F7005E3B5A /* ChatInputLineCell.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295D606F8B9F6005E3B5A /* ChatInputLineCell.h */; };
+		E11296A206F8B9F7005E3B5A /* ChatLayoutManager.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295D706F8B9F6005E3B5A /* ChatLayoutManager.h */; };
+		E11296A306F8B9F7005E3B5A /* ChatTextView.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295D806F8B9F6005E3B5A /* ChatTextView.h */; };
+		E11296A406F8B9F7005E3B5A /* ChatTypesetter.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295D906F8B9F6005E3B5A /* ChatTypesetter.h */; };
+		E11296A506F8B9F7005E3B5A /* ChooseBuddyButton.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295DA06F8B9F6005E3B5A /* ChooseBuddyButton.h */; };
+		E11296A606F8B9F7005E3B5A /* CollapseView.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295DB06F8B9F6005E3B5A /* CollapseView.h */; };
+		E11296A706F8B9F7005E3B5A /* CoreGraphicsUtilities.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295DC06F8B9F6005E3B5A /* CoreGraphicsUtilities.h */; };
+		E11296A806F8B9F7005E3B5A /* CustomBannerView.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295DD06F8B9F6005E3B5A /* CustomBannerView.h */; };
+		E11296A906F8B9F7005E3B5A /* CustomFontHTMLDocument.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295DE06F8B9F6005E3B5A /* CustomFontHTMLDocument.h */; };
+		E11296AA06F8B9F7005E3B5A /* CustomImageView.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295DF06F8B9F6005E3B5A /* CustomImageView.h */; };
+		E11296AB06F8B9F7005E3B5A /* CustomWindow.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295E006F8B9F6005E3B5A /* CustomWindow.h */; };
+		E11296AC06F8B9F7005E3B5A /* DaemonicIncomingFile.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295E106F8B9F6005E3B5A /* DaemonicIncomingFile.h */; };
+		E11296AD06F8B9F7005E3B5A /* DaemonicOutgoingFile.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295E206F8B9F6005E3B5A /* DaemonicOutgoingFile.h */; };
+		E11296AE06F8B9F7005E3B5A /* DaemonicService.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295E306F8B9F6005E3B5A /* DaemonicService.h */; };
+		E11296AF06F8B9F7005E3B5A /* DaemonListenerStub.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295E406F8B9F6005E3B5A /* DaemonListenerStub.h */; };
+		E11296B006F8B9F7005E3B5A /* DisclosureButton.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295E506F8B9F6005E3B5A /* DisclosureButton.h */; };
+		E11296B106F8B9F7005E3B5A /* DVDPopUpItemMatrix.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295E606F8B9F6005E3B5A /* DVDPopUpItemMatrix.h */; };
+		E11296B206F8B9F7005E3B5A /* DVDPopUpMatrixButton.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295E706F8B9F6005E3B5A /* DVDPopUpMatrixButton.h */; };
+		E11296B306F8B9F7005E3B5A /* DVDPopUpMatrixItemCell.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295E806F8B9F6005E3B5A /* DVDPopUpMatrixItemCell.h */; };
+		E11296B406F8B9F7005E3B5A /* EffectView.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295E906F8B9F6005E3B5A /* EffectView.h */; };
+		E11296B506F8B9F7005E3B5A /* ExtendedTextField.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295EA06F8B9F6005E3B5A /* ExtendedTextField.h */; };
+		E11296B606F8B9F7005E3B5A /* FezExtendedTableView.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295EB06F8B9F6005E3B5A /* FezExtendedTableView.h */; };
+		E11296B706F8B9F7005E3B5A /* FezNSTextAttachment.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295EC06F8B9F6005E3B5A /* FezNSTextAttachment.h */; };
+		E11296B806F8B9F7005E3B5A /* FezStartupController.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295ED06F8B9F6005E3B5A /* FezStartupController.h */; };
+		E11296B906F8B9F7005E3B5A /* FileBrowser.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295EE06F8B9F6005E3B5A /* FileBrowser.h */; };
+		E11296BA06F8B9F7005E3B5A /* FileDragOutView.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295EF06F8B9F6005E3B5A /* FileDragOutView.h */; };
+		E11296BB06F8B9F7005E3B5A /* FileNode.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295F006F8B9F6005E3B5A /* FileNode.h */; };
+		E11296BC06F8B9F7005E3B5A /* FileProgress.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295F106F8B9F6005E3B5A /* FileProgress.h */; };
+		E11296BD06F8B9F7005E3B5A /* FileSender.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295F206F8B9F6005E3B5A /* FileSender.h */; };
+		E11296BE06F8B9F7005E3B5A /* FolderNode.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295F306F8B9F6005E3B5A /* FolderNode.h */; };
+		E11296BF06F8B9F7005E3B5A /* FolderNodeParser.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295F406F8B9F6005E3B5A /* FolderNodeParser.h */; };
+		E11296C006F8B9F7005E3B5A /* FolderViewerDoc.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295F506F8B9F6005E3B5A /* FolderViewerDoc.h */; };
+		E11296C106F8B9F7005E3B5A /* FontAndColor.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295F606F8B9F6005E3B5A /* FontAndColor.h */; };
+		E11296C206F8B9F7005E3B5A /* FZMessage.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295F706F8B9F6005E3B5A /* FZMessage.h */; };
+		E11296C306F8B9F7005E3B5A /* FZVideoConferenceController.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295F806F8B9F6005E3B5A /* FZVideoConferenceController.h */; };
+		E11296C406F8B9F7005E3B5A /* GenericNode.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295F906F8B9F6005E3B5A /* GenericNode.h */; };
+		E11296C506F8B9F7005E3B5A /* HFSFileManager.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295FA06F8B9F6005E3B5A /* HFSFileManager.h */; };
+		E11296C606F8B9F7005E3B5A /* IconPopUp.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295FB06F8B9F6005E3B5A /* IconPopUp.h */; };
+		E11296C706F8B9F7005E3B5A /* ImageAndTextCell.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295FC06F8B9F6005E3B5A /* ImageAndTextCell.h */; };
+		E11296C806F8B9F7005E3B5A /* ImageViewerDoc.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295FD06F8B9F6005E3B5A /* ImageViewerDoc.h */; };
+		E11296C906F8B9F7005E3B5A /* IMService-IMService_GetService.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295FE06F8B9F6005E3B5A /* IMService-IMService_GetService.h */; };
+		E11296CA06F8B9F7005E3B5A /* IMService.h in Resources */ = {isa = PBXBuildFile; fileRef = E11295FF06F8B9F6005E3B5A /* IMService.h */; };
+		E11296CB06F8B9F7005E3B5A /* IncomingFile.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960006F8B9F6005E3B5A /* IncomingFile.h */; };
+		E11296CC06F8B9F7005E3B5A /* IncomingFileStream.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960106F8B9F6005E3B5A /* IncomingFileStream.h */; };
+		E11296CD06F8B9F7005E3B5A /* IncomingFileURL.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960206F8B9F6005E3B5A /* IncomingFileURL.h */; };
+		E11296CE06F8B9F7005E3B5A /* IncomingFolderURL.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960306F8B9F6005E3B5A /* IncomingFolderURL.h */; };
+		E11296CF06F8B9F7005E3B5A /* InputArea.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960406F8B9F6005E3B5A /* InputArea.h */; };
+		E11296D006F8B9F7005E3B5A /* InstantMessage.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960506F8B9F6005E3B5A /* InstantMessage.h */; };
+		E11296D106F8B9F7005E3B5A /* KeyWindow.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960606F8B9F6005E3B5A /* KeyWindow.h */; };
+		E11296D206F8B9F7005E3B5A /* LinkSheetController.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960706F8B9F6005E3B5A /* LinkSheetController.h */; };
+		E11296D306F8B9F7005E3B5A /* MeCard.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960806F8B9F6005E3B5A /* MeCard.h */; };
+		E11296D406F8B9F7005E3B5A /* MenuButton.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960906F8B9F6005E3B5A /* MenuButton.h */; };
+		E11296D506F8B9F7005E3B5A /* MenuComboBox.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960A06F8B9F6005E3B5A /* MenuComboBox.h */; };
+		E11296D606F8B9F7005E3B5A /* MessageRenderer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960B06F8B9F6005E3B5A /* MessageRenderer.h */; };
+		E11296D706F8B9F7005E3B5A /* MetalDivider.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960C06F8B9F6005E3B5A /* MetalDivider.h */; };
+		E11296D806F8B9F7005E3B5A /* MetalPopUpButton.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960D06F8B9F6005E3B5A /* MetalPopUpButton.h */; };
+		E11296D906F8B9F7005E3B5A /* MetalPopUpButtonCell.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960E06F8B9F6005E3B5A /* MetalPopUpButtonCell.h */; };
+		E11296DA06F8B9F7005E3B5A /* MovieViewerDoc.h in Resources */ = {isa = PBXBuildFile; fileRef = E112960F06F8B9F6005E3B5A /* MovieViewerDoc.h */; };
+		E11296DB06F8B9F7005E3B5A /* MsgComposePrefsBox.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961006F8B9F6005E3B5A /* MsgComposePrefsBox.h */; };
+		E11296DC06F8B9F7005E3B5A /* MuteButton.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961106F8B9F6005E3B5A /* MuteButton.h */; };
+		E11296DD06F8B9F7005E3B5A /* NameTableCell.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961206F8B9F6005E3B5A /* NameTableCell.h */; };
+		E11296DE06F8B9F7005E3B5A /* NetworkChangeNotifier.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961306F8B9F6005E3B5A /* NetworkChangeNotifier.h */; };
+		E11296DF06F8B9F7005E3B5A /* NicelyScaledImageView.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961406F8B9F6005E3B5A /* NicelyScaledImageView.h */; };
+		E11296E006F8B9F7005E3B5A /* NodeHeader.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961506F8B9F6005E3B5A /* NodeHeader.h */; };
+		E11296E106F8B9F7005E3B5A /* NSArray-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961606F8B9F6005E3B5A /* NSArray-FezAdditions.h */; };
+		E11296E206F8B9F7005E3B5A /* NSAttributedString-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961706F8B9F6005E3B5A /* NSAttributedString-FezAdditions.h */; };
+		E11296E306F8B9F7005E3B5A /* NSAttributedString-TruncationExtensions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961806F8B9F6005E3B5A /* NSAttributedString-TruncationExtensions.h */; };
+		E11296E406F8B9F7005E3B5A /* NSBezierPath-TreyAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961906F8B9F6005E3B5A /* NSBezierPath-TreyAdditions.h */; };
+		E11296E506F8B9F7005E3B5A /* NSButton-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961A06F8B9F6005E3B5A /* NSButton-FezAdditions.h */; };
+		E11296E606F8B9F7005E3B5A /* NSCalendarDate-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961B06F8B9F6005E3B5A /* NSCalendarDate-FezAdditions.h */; };
+		E11296E706F8B9F7005E3B5A /* NSColor-FezUtilAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961C06F8B9F6005E3B5A /* NSColor-FezUtilAdditions.h */; };
+		E11296E806F8B9F7005E3B5A /* NSData-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961D06F8B9F6005E3B5A /* NSData-FezAdditions.h */; };
+		E11296E906F8B9F7005E3B5A /* NSDate-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961E06F8B9F6005E3B5A /* NSDate-FezAdditions.h */; };
+		E11296EA06F8B9F7005E3B5A /* NSDictionary-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112961F06F8B9F6005E3B5A /* NSDictionary-FezAdditions.h */; };
+		E11296EB06F8B9F7005E3B5A /* NSDictionary-HFSFileAttributes.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962006F8B9F6005E3B5A /* NSDictionary-HFSFileAttributes.h */; };
+		E11296EC06F8B9F7005E3B5A /* NSFileManager-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962106F8B9F6005E3B5A /* NSFileManager-FezAdditions.h */; };
+		E11296ED06F8B9F7005E3B5A /* NSImage-JensAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962206F8B9F6005E3B5A /* NSImage-JensAdditions.h */; };
+		E11296EE06F8B9F7005E3B5A /* NSMutableArray-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962306F8B9F6005E3B5A /* NSMutableArray-FezAdditions.h */; };
+		E11296EF06F8B9F7005E3B5A /* NSMutableAttributedString-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962406F8B9F6005E3B5A /* NSMutableAttributedString-FezAdditions.h */; };
+		E11296F006F8B9F7005E3B5A /* NSMutableAttributedString-FezExtensions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962506F8B9F6005E3B5A /* NSMutableAttributedString-FezExtensions.h */; };
+		E11296F106F8B9F7005E3B5A /* NSMutableAttributedString-TruncationExtensions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962606F8B9F6005E3B5A /* NSMutableAttributedString-TruncationExtensions.h */; };
+		E11296F206F8B9F7005E3B5A /* NSMutableDictionary-PrivateConvenienceMethods.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962706F8B9F6005E3B5A /* NSMutableDictionary-PrivateConvenienceMethods.h */; };
+		E11296F306F8B9F7005E3B5A /* NSMutableString-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962806F8B9F6005E3B5A /* NSMutableString-FezAdditions.h */; };
+		E11296F406F8B9F7005E3B5A /* NSObject-ChooseBuddyButtonDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962906F8B9F6005E3B5A /* NSObject-ChooseBuddyButtonDelegate.h */; };
+		E11296F506F8B9F7005E3B5A /* NSObject-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962A06F8B9F6005E3B5A /* NSObject-FezAdditions.h */; };
+		E11296F606F8B9F7005E3B5A /* NSObject-FezExtendedTableViewDataSource.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962B06F8B9F6005E3B5A /* NSObject-FezExtendedTableViewDataSource.h */; };
+		E11296F706F8B9F7005E3B5A /* NSPopUpButton-NSPopUpButton_LightingProfileAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962C06F8B9F6005E3B5A /* NSPopUpButton-NSPopUpButton_LightingProfileAdditions.h */; };
+		E11296F806F8B9F7005E3B5A /* NSPreferencesModule-PrivateImpls.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962D06F8B9F6005E3B5A /* NSPreferencesModule-PrivateImpls.h */; };
+		E11296F906F8B9F7005E3B5A /* NSSet-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962E06F8B9F6005E3B5A /* NSSet-FezAdditions.h */; };
+		E11296FA06F8B9F7005E3B5A /* NSSound-FezExtention.h in Resources */ = {isa = PBXBuildFile; fileRef = E112962F06F8B9F6005E3B5A /* NSSound-FezExtention.h */; };
+		E11296FB06F8B9F7005E3B5A /* NSString-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963006F8B9F6005E3B5A /* NSString-FezAdditions.h */; };
+		E11296FC06F8B9F7005E3B5A /* NSTableView-ContextualMenus.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963106F8B9F6005E3B5A /* NSTableView-ContextualMenus.h */; };
+		E11296FD06F8B9F7005E3B5A /* NSTextField-JensAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963206F8B9F6005E3B5A /* NSTextField-JensAdditions.h */; };
+		E11296FE06F8B9F7005E3B5A /* NSTextView-FezUtilAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963306F8B9F6005E3B5A /* NSTextView-FezUtilAdditions.h */; };
+		E11296FF06F8B9F7005E3B5A /* NSURL-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963406F8B9F6005E3B5A /* NSURL-FezAdditions.h */; };
+		E112970006F8B9F7005E3B5A /* NSUserDefaults-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963506F8B9F6005E3B5A /* NSUserDefaults-FezAdditions.h */; };
+		E112970106F8B9F7005E3B5A /* NSView-CollapseView_Additions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963606F8B9F6005E3B5A /* NSView-CollapseView_Additions.h */; };
+		E112970206F8B9F7005E3B5A /* NSView-FezUtilAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963706F8B9F6005E3B5A /* NSView-FezUtilAdditions.h */; };
+		E112970306F8B9F7005E3B5A /* NSView-NSViewShouldHaveAVisibleBitLikeEveryOtherFrameworkInExistance.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963806F8B9F6005E3B5A /* NSView-NSViewShouldHaveAVisibleBitLikeEveryOtherFrameworkInExistance.h */; };
+		E112970406F8B9F7005E3B5A /* NSWindow-FezAdditions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963906F8B9F6005E3B5A /* NSWindow-FezAdditions.h */; };
+		E112970506F8B9F7005E3B5A /* NSWindow-iChatWindowLocation.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963A06F8B9F6005E3B5A /* NSWindow-iChatWindowLocation.h */; };
+		E112970606F8B9F7005E3B5A /* NSWindowGraphicsContext-CGLayerContext.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963B06F8B9F6005E3B5A /* NSWindowGraphicsContext-CGLayerContext.h */; };
+		E112970706F8B9F7005E3B5A /* NullNode.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963C06F8B9F6005E3B5A /* NullNode.h */; };
+		E112970806F8B9F7005E3B5A /* OpenGLAttributedStringLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963D06F8B9F6005E3B5A /* OpenGLAttributedStringLayer.h */; };
+		E112970906F8B9F7005E3B5A /* OpenGLBannerLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963E06F8B9F6005E3B5A /* OpenGLBannerLayer.h */; };
+		E112970A06F8B9F7005E3B5A /* OpenGLCameraPreferencesLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112963F06F8B9F6005E3B5A /* OpenGLCameraPreferencesLayer.h */; };
+		E112970B06F8B9F7005E3B5A /* OpenGLCapabilities.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964006F8B9F6005E3B5A /* OpenGLCapabilities.h */; };
+		E112970C06F8B9F7005E3B5A /* OpenGLCGBitmapContextLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964106F8B9F6005E3B5A /* OpenGLCGBitmapContextLayer.h */; };
+		E112970D06F8B9F7005E3B5A /* OpenGLColorLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964206F8B9F6005E3B5A /* OpenGLColorLayer.h */; };
+		E112970E06F8B9F7005E3B5A /* OpenGLFullScreenController.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964306F8B9F6005E3B5A /* OpenGLFullScreenController.h */; };
+		E112970F06F8B9F7005E3B5A /* OpenGLFullScreenWindow.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964406F8B9F6005E3B5A /* OpenGLFullScreenWindow.h */; };
+		E112971006F8B9F7005E3B5A /* OpenGLLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964506F8B9F6005E3B5A /* OpenGLLayer.h */; };
+		E112971106F8B9F7005E3B5A /* OpenGLLayerModel.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964606F8B9F6005E3B5A /* OpenGLLayerModel.h */; };
+		E112971206F8B9F7005E3B5A /* OpenGLLayerView.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964706F8B9F6005E3B5A /* OpenGLLayerView.h */; };
+		E112971306F8B9F7005E3B5A /* OpenGLMetalLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964806F8B9F6005E3B5A /* OpenGLMetalLayer.h */; };
+		E112971406F8B9F7005E3B5A /* OpenGLMinibarLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964906F8B9F6005E3B5A /* OpenGLMinibarLayer.h */; };
+		E112971506F8B9F7005E3B5A /* OpenGLPNGLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964A06F8B9F6005E3B5A /* OpenGLPNGLayer.h */; };
+		E112971606F8B9F7005E3B5A /* OpenGLProgressLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964B06F8B9F6005E3B5A /* OpenGLProgressLayer.h */; };
+		E112971706F8B9F7005E3B5A /* OpenGLTextureController.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964C06F8B9F6005E3B5A /* OpenGLTextureController.h */; };
+		E112971806F8B9F7005E3B5A /* OpenGLTextureDataProvider.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964D06F8B9F6005E3B5A /* OpenGLTextureDataProvider.h */; };
+		E112971906F8B9F7005E3B5A /* OpenGLTextureLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964E06F8B9F6005E3B5A /* OpenGLTextureLayer.h */; };
+		E112971A06F8B9F7005E3B5A /* OpenGLVideoConferenceLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112964F06F8B9F6005E3B5A /* OpenGLVideoConferenceLayer.h */; };
+		E112971B06F8B9F7005E3B5A /* OptionalScrollView.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965006F8B9F6005E3B5A /* OptionalScrollView.h */; };
+		E112971C06F8B9F7005E3B5A /* OutgoingFile.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965106F8B9F6005E3B5A /* OutgoingFile.h */; };
+		E112971D06F8B9F7005E3B5A /* People-Actions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965206F8B9F6005E3B5A /* People-Actions.h */; };
+		E112971E06F8B9F7005E3B5A /* People.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965306F8B9F6005E3B5A /* People.h */; };
+		E112971F06F8B9F7005E3B5A /* PeopleController.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965406F8B9F7005E3B5A /* PeopleController.h */; };
+		E112972006F8B9F7005E3B5A /* PeoplePicker.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965506F8B9F7005E3B5A /* PeoplePicker.h */; };
+		E112972106F8B9F7005E3B5A /* Person.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965606F8B9F7005E3B5A /* Person.h */; };
+		E112972206F8B9F7005E3B5A /* PIWLayer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965706F8B9F7005E3B5A /* PIWLayer.h */; };
+		E112972306F8B9F7005E3B5A /* PlainTextNode.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965806F8B9F7005E3B5A /* PlainTextNode.h */; };
+		E112972406F8B9F7005E3B5A /* Prefs.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965906F8B9F7005E3B5A /* Prefs.h */; };
+		E112972506F8B9F7005E3B5A /* Prefs_Accounts.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965A06F8B9F7005E3B5A /* Prefs_Accounts.h */; };
+		E112972606F8B9F7005E3B5A /* Prefs_Actions.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965B06F8B9F7005E3B5A /* Prefs_Actions.h */; };
+		E112972706F8B9F7005E3B5A /* Prefs_Blocking.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965C06F8B9F7005E3B5A /* Prefs_Blocking.h */; };
+		E112972806F8B9F7005E3B5A /* Prefs_BuddyList.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965D06F8B9F7005E3B5A /* Prefs_BuddyList.h */; };
+		E112972906F8B9F7005E3B5A /* Prefs_Camera.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965E06F8B9F7005E3B5A /* Prefs_Camera.h */; };
+		E112972A06F8B9F7005E3B5A /* Prefs_FileXfer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112965F06F8B9F7005E3B5A /* Prefs_FileXfer.h */; };
+		E112972B06F8B9F7005E3B5A /* Prefs_General.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966006F8B9F7005E3B5A /* Prefs_General.h */; };
+		E112972C06F8B9F7005E3B5A /* Prefs_MsgCompose.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966106F8B9F7005E3B5A /* Prefs_MsgCompose.h */; };
+		E112972D06F8B9F7005E3B5A /* Prefs_MsgDisplay.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966206F8B9F7005E3B5A /* Prefs_MsgDisplay.h */; };
+		E112972E06F8B9F7005E3B5A /* PrefsBlockingTableView.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966306F8B9F7005E3B5A /* PrefsBlockingTableView.h */; };
+		E112972F06F8B9F7005E3B5A /* Presentity.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966406F8B9F7005E3B5A /* Presentity.h */; };
+		E112973006F8B9F7005E3B5A /* RawXMLNode.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966506F8B9F7005E3B5A /* RawXMLNode.h */; };
+		E112973106F8B9F7005E3B5A /* RecentPicture.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966606F8B9F7005E3B5A /* RecentPicture.h */; };
+		E112973206F8B9F7005E3B5A /* RecessedButton.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966706F8B9F7005E3B5A /* RecessedButton.h */; };
+		E112973306F8B9F7005E3B5A /* RecessedTextField.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966806F8B9F7005E3B5A /* RecessedTextField.h */; };
+		E112973406F8B9F7005E3B5A /* SavedChat.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966906F8B9F7005E3B5A /* SavedChat.h */; };
+		E112973506F8B9F7005E3B5A /* SelfPreviewController.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966A06F8B9F7005E3B5A /* SelfPreviewController.h */; };
+		E112973606F8B9F7005E3B5A /* ServicePopUp.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966B06F8B9F7005E3B5A /* ServicePopUp.h */; };
+		E112973706F8B9F7005E3B5A /* SmileyButton.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966C06F8B9F7005E3B5A /* SmileyButton.h */; };
+		E112973806F8B9F7005E3B5A /* SmileyCell.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966D06F8B9F7005E3B5A /* SmileyCell.h */; };
+		E112973906F8B9F7005E3B5A /* SmileyGrid.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966E06F8B9F7005E3B5A /* SmileyGrid.h */; };
+		E112973A06F8B9F7005E3B5A /* SmileyPicker.h in Resources */ = {isa = PBXBuildFile; fileRef = E112966F06F8B9F7005E3B5A /* SmileyPicker.h */; };
+		E112973B06F8B9F7005E3B5A /* SmileyToolbarItem.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967006F8B9F7005E3B5A /* SmileyToolbarItem.h */; };
+		E112973C06F8B9F7005E3B5A /* SocketStream.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967106F8B9F7005E3B5A /* SocketStream.h */; };
+		E112973D06F8B9F7005E3B5A /* StagedChatNotifier.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967206F8B9F7005E3B5A /* StagedChatNotifier.h */; };
+		E112973E06F8B9F7005E3B5A /* StagedFileNotifier.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967306F8B9F7005E3B5A /* StagedFileNotifier.h */; };
+		E112973F06F8B9F7005E3B5A /* StretchyImage.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967406F8B9F7005E3B5A /* StretchyImage.h */; };
+		E112974006F8B9F7005E3B5A /* TextViewerDoc.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967506F8B9F7005E3B5A /* TextViewerDoc.h */; };
+		E112974106F8B9F7005E3B5A /* TiledBalloonRenderer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967606F8B9F7005E3B5A /* TiledBalloonRenderer.h */; };
+		E112974206F8B9F7005E3B5A /* VCInfoController.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967706F8B9F7005E3B5A /* VCInfoController.h */; };
+		E112974306F8B9F7005E3B5A /* VCLayoutController.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967806F8B9F7005E3B5A /* VCLayoutController.h */; };
+		E112974406F8B9F7005E3B5A /* VideoChatController.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967906F8B9F7005E3B5A /* VideoChatController.h */; };
+		E112974506F8B9F7005E3B5A /* VideoConferenceLayerView.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967A06F8B9F7005E3B5A /* VideoConferenceLayerView.h */; };
+		E112974606F8B9F7005E3B5A /* ViewerDoc.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967B06F8B9F7005E3B5A /* ViewerDoc.h */; };
+		E112974706F8B9F7005E3B5A /* VolumeIndicator.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967C06F8B9F7005E3B5A /* VolumeIndicator.h */; };
+		E112974806F8B9F7005E3B5A /* XHTMLEncoder.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967D06F8B9F7005E3B5A /* XHTMLEncoder.h */; };
+		E112974906F8B9F7005E3B5A /* XHTMLGenerator.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967E06F8B9F7005E3B5A /* XHTMLGenerator.h */; };
+		E112974A06F8B9F7005E3B5A /* XMLStreamer.h in Resources */ = {isa = PBXBuildFile; fileRef = E112967F06F8B9F7005E3B5A /* XMLStreamer.h */; };
+		E112975506F8BA20005E3B5A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E112975406F8BA20005E3B5A /* AddressBook.framework */; };
+		E1EAB046068128A200774DFF /* QSiChatPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSiChatPlugIn.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32DBCF980370C29C00C91783 /* QSiChatPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSiChatPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		7F010CAD08D9FC1500054659 /* InstantMessage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstantMessage.framework; path = /System/Library/Frameworks/InstantMessage.framework; sourceTree = "<absolute>"; };
+		7F010D0808D9FCE900054659 /* QSChatMediator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = QSChatMediator.h; path = ../elements.support.chat/QSChatMediator.h; sourceTree = SOURCE_ROOT; };
+		7F4084B70D16CBDE00E15BB0 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = Configuration/Common.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7F4084B80D16CBDE00E15BB0 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7F4084B90D16CBDE00E15BB0 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = Configuration/Developer.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7F4084BA0D16CBDE00E15BB0 /* QSElement.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSElement.xcconfig; path = Configuration/QSElement.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7F4084BB0D16CBDE00E15BB0 /* QSElement_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSElement_Prefix.pch; path = Configuration/QSElement_Prefix.pch; sourceTree = QS_SOURCE_ROOT; };
+		7F4084BC0D16CBDE00E15BB0 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7F4086920D16CE9000E15BB0 /* element.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
+		7F5D1FC40D25AF280077ED43 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = /System/Library/Frameworks/ScriptingBridge.framework; sourceTree = "<absolute>"; };
+		7F5D1FD10D25AFF60077ED43 /* iChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iChat.h; sourceTree = "<group>"; };
+		7F8FC6200D25E52800BD8C1C /* iChatPresenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iChatPresenceController.h; sourceTree = "<group>"; };
+		7F8FC6210D25E52800BD8C1C /* iChatPresenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iChatPresenceController.m; sourceTree = "<group>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* iChat.element */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iChat.element; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E104367406F8AC6300CF1415 /* QSiChatMediator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSiChatMediator.h; sourceTree = "<group>"; };
+		E104367506F8AC6300CF1415 /* QSiChatMediator.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSiChatMediator.m; sourceTree = "<group>"; };
+		E104386206F8B7AD00CF1415 /* iChat.scpt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.scpt; path = iChat.scpt; sourceTree = "<group>"; };
+		E11295B506F8B9F6005E3B5A /* ABAddressBook-Fez.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "ABAddressBook-Fez.h"; sourceTree = "<group>"; };
+		E11295B606F8B9F6005E3B5A /* ABPerson-Fez.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "ABPerson-Fez.h"; sourceTree = "<group>"; };
+		E11295B706F8B9F6005E3B5A /* AccountVerifier.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AccountVerifier.h; sourceTree = "<group>"; };
+		E11295B806F8B9F6005E3B5A /* ActionsController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ActionsController.h; sourceTree = "<group>"; };
+		E11295B906F8B9F6005E3B5A /* ActiveChat.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ActiveChat.h; sourceTree = "<group>"; };
+		E11295BA06F8B9F6005E3B5A /* AddressBookPeople.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AddressBookPeople.h; sourceTree = "<group>"; };
+		E11295BB06F8B9F6005E3B5A /* AddressCard-AddressBook.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "AddressCard-AddressBook.h"; sourceTree = "<group>"; };
+		E11295BC06F8B9F6005E3B5A /* AddressCard.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AddressCard.h; sourceTree = "<group>"; };
+		E11295BD06F8B9F6005E3B5A /* AnimatingTableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AnimatingTableView.h; sourceTree = "<group>"; };
+		E11295BE06F8B9F6005E3B5A /* AnimatingTabView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AnimatingTabView.h; sourceTree = "<group>"; };
+		E11295BF06F8B9F6005E3B5A /* AudioChatController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AudioChatController.h; sourceTree = "<group>"; };
+		E11295C006F8B9F6005E3B5A /* AudioInputSampler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AudioInputSampler.h; sourceTree = "<group>"; };
+		E11295C106F8B9F6005E3B5A /* AudioOutputSampler.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AudioOutputSampler.h; sourceTree = "<group>"; };
+		E11295C206F8B9F6005E3B5A /* AutoAway.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AutoAway.h; sourceTree = "<group>"; };
+		E11295C306F8B9F6005E3B5A /* AutoManualSlider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AutoManualSlider.h; sourceTree = "<group>"; };
+		E11295C406F8B9F6005E3B5A /* AutoSendTextField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AutoSendTextField.h; sourceTree = "<group>"; };
+		E11295C506F8B9F6005E3B5A /* AVChat.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AVChat.h; sourceTree = "<group>"; };
+		E11295C606F8B9F6005E3B5A /* AVChatController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AVChatController.h; sourceTree = "<group>"; };
+		E11295C706F8B9F6005E3B5A /* BacktracingException.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BacktracingException.h; sourceTree = "<group>"; };
+		E11295C806F8B9F6005E3B5A /* BalloonRenderer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BalloonRenderer.h; sourceTree = "<group>"; };
+		E11295C906F8B9F6005E3B5A /* BlockListController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BlockListController.h; sourceTree = "<group>"; };
+		E11295CA06F8B9F6005E3B5A /* BorderView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BorderView.h; sourceTree = "<group>"; };
+		E11295CB06F8B9F6005E3B5A /* BoxMessageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BoxMessageRenderer.h; sourceTree = "<group>"; };
+		E11295CC06F8B9F6005E3B5A /* BuddyIconCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BuddyIconCell.h; sourceTree = "<group>"; };
+		E11295CD06F8B9F6005E3B5A /* BuddyPicture.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BuddyPicture.h; sourceTree = "<group>"; };
+		E11295CE06F8B9F6005E3B5A /* CameraPreferencesView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CameraPreferencesView.h; sourceTree = "<group>"; };
+		E11295CF06F8B9F6005E3B5A /* CameraSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CameraSettingsController.h; sourceTree = "<group>"; };
+		E11295D006F8B9F6005E3B5A /* CDStructures.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CDStructures.h; sourceTree = "<group>"; };
+		E11295D106F8B9F6005E3B5A /* CenteredView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CenteredView.h; sourceTree = "<group>"; };
+		E11295D206F8B9F6005E3B5A /* Chat.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Chat.h; sourceTree = "<group>"; };
+		E11295D306F8B9F6005E3B5A /* ChatController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ChatController.h; sourceTree = "<group>"; };
+		E11295D406F8B9F6005E3B5A /* ChatFieldEditor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ChatFieldEditor.h; sourceTree = "<group>"; };
+		E11295D506F8B9F6005E3B5A /* ChatInputLine.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ChatInputLine.h; sourceTree = "<group>"; };
+		E11295D606F8B9F6005E3B5A /* ChatInputLineCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ChatInputLineCell.h; sourceTree = "<group>"; };
+		E11295D706F8B9F6005E3B5A /* ChatLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ChatLayoutManager.h; sourceTree = "<group>"; };
+		E11295D806F8B9F6005E3B5A /* ChatTextView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ChatTextView.h; sourceTree = "<group>"; };
+		E11295D906F8B9F6005E3B5A /* ChatTypesetter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ChatTypesetter.h; sourceTree = "<group>"; };
+		E11295DA06F8B9F6005E3B5A /* ChooseBuddyButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ChooseBuddyButton.h; sourceTree = "<group>"; };
+		E11295DB06F8B9F6005E3B5A /* CollapseView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CollapseView.h; sourceTree = "<group>"; };
+		E11295DC06F8B9F6005E3B5A /* CoreGraphicsUtilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsUtilities.h; sourceTree = "<group>"; };
+		E11295DD06F8B9F6005E3B5A /* CustomBannerView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CustomBannerView.h; sourceTree = "<group>"; };
+		E11295DE06F8B9F6005E3B5A /* CustomFontHTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CustomFontHTMLDocument.h; sourceTree = "<group>"; };
+		E11295DF06F8B9F6005E3B5A /* CustomImageView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CustomImageView.h; sourceTree = "<group>"; };
+		E11295E006F8B9F6005E3B5A /* CustomWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CustomWindow.h; sourceTree = "<group>"; };
+		E11295E106F8B9F6005E3B5A /* DaemonicIncomingFile.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DaemonicIncomingFile.h; sourceTree = "<group>"; };
+		E11295E206F8B9F6005E3B5A /* DaemonicOutgoingFile.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DaemonicOutgoingFile.h; sourceTree = "<group>"; };
+		E11295E306F8B9F6005E3B5A /* DaemonicService.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DaemonicService.h; sourceTree = "<group>"; };
+		E11295E406F8B9F6005E3B5A /* DaemonListenerStub.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DaemonListenerStub.h; sourceTree = "<group>"; };
+		E11295E506F8B9F6005E3B5A /* DisclosureButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DisclosureButton.h; sourceTree = "<group>"; };
+		E11295E606F8B9F6005E3B5A /* DVDPopUpItemMatrix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DVDPopUpItemMatrix.h; sourceTree = "<group>"; };
+		E11295E706F8B9F6005E3B5A /* DVDPopUpMatrixButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DVDPopUpMatrixButton.h; sourceTree = "<group>"; };
+		E11295E806F8B9F6005E3B5A /* DVDPopUpMatrixItemCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DVDPopUpMatrixItemCell.h; sourceTree = "<group>"; };
+		E11295E906F8B9F6005E3B5A /* EffectView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EffectView.h; sourceTree = "<group>"; };
+		E11295EA06F8B9F6005E3B5A /* ExtendedTextField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ExtendedTextField.h; sourceTree = "<group>"; };
+		E11295EB06F8B9F6005E3B5A /* FezExtendedTableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FezExtendedTableView.h; sourceTree = "<group>"; };
+		E11295EC06F8B9F6005E3B5A /* FezNSTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FezNSTextAttachment.h; sourceTree = "<group>"; };
+		E11295ED06F8B9F6005E3B5A /* FezStartupController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FezStartupController.h; sourceTree = "<group>"; };
+		E11295EE06F8B9F6005E3B5A /* FileBrowser.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FileBrowser.h; sourceTree = "<group>"; };
+		E11295EF06F8B9F6005E3B5A /* FileDragOutView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FileDragOutView.h; sourceTree = "<group>"; };
+		E11295F006F8B9F6005E3B5A /* FileNode.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FileNode.h; sourceTree = "<group>"; };
+		E11295F106F8B9F6005E3B5A /* FileProgress.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FileProgress.h; sourceTree = "<group>"; };
+		E11295F206F8B9F6005E3B5A /* FileSender.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FileSender.h; sourceTree = "<group>"; };
+		E11295F306F8B9F6005E3B5A /* FolderNode.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FolderNode.h; sourceTree = "<group>"; };
+		E11295F406F8B9F6005E3B5A /* FolderNodeParser.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FolderNodeParser.h; sourceTree = "<group>"; };
+		E11295F506F8B9F6005E3B5A /* FolderViewerDoc.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FolderViewerDoc.h; sourceTree = "<group>"; };
+		E11295F606F8B9F6005E3B5A /* FontAndColor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FontAndColor.h; sourceTree = "<group>"; };
+		E11295F706F8B9F6005E3B5A /* FZMessage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FZMessage.h; sourceTree = "<group>"; };
+		E11295F806F8B9F6005E3B5A /* FZVideoConferenceController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FZVideoConferenceController.h; sourceTree = "<group>"; };
+		E11295F906F8B9F6005E3B5A /* GenericNode.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GenericNode.h; sourceTree = "<group>"; };
+		E11295FA06F8B9F6005E3B5A /* HFSFileManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HFSFileManager.h; sourceTree = "<group>"; };
+		E11295FB06F8B9F6005E3B5A /* IconPopUp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = IconPopUp.h; sourceTree = "<group>"; };
+		E11295FC06F8B9F6005E3B5A /* ImageAndTextCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ImageAndTextCell.h; sourceTree = "<group>"; };
+		E11295FD06F8B9F6005E3B5A /* ImageViewerDoc.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ImageViewerDoc.h; sourceTree = "<group>"; };
+		E11295FE06F8B9F6005E3B5A /* IMService-IMService_GetService.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "IMService-IMService_GetService.h"; sourceTree = "<group>"; };
+		E11295FF06F8B9F6005E3B5A /* IMService.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = IMService.h; sourceTree = "<group>"; };
+		E112960006F8B9F6005E3B5A /* IncomingFile.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = IncomingFile.h; sourceTree = "<group>"; };
+		E112960106F8B9F6005E3B5A /* IncomingFileStream.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = IncomingFileStream.h; sourceTree = "<group>"; };
+		E112960206F8B9F6005E3B5A /* IncomingFileURL.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = IncomingFileURL.h; sourceTree = "<group>"; };
+		E112960306F8B9F6005E3B5A /* IncomingFolderURL.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = IncomingFolderURL.h; sourceTree = "<group>"; };
+		E112960406F8B9F6005E3B5A /* InputArea.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = InputArea.h; sourceTree = "<group>"; };
+		E112960506F8B9F6005E3B5A /* InstantMessage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = InstantMessage.h; sourceTree = "<group>"; };
+		E112960606F8B9F6005E3B5A /* KeyWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KeyWindow.h; sourceTree = "<group>"; };
+		E112960706F8B9F6005E3B5A /* LinkSheetController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = LinkSheetController.h; sourceTree = "<group>"; };
+		E112960806F8B9F6005E3B5A /* MeCard.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MeCard.h; sourceTree = "<group>"; };
+		E112960906F8B9F6005E3B5A /* MenuButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MenuButton.h; sourceTree = "<group>"; };
+		E112960A06F8B9F6005E3B5A /* MenuComboBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MenuComboBox.h; sourceTree = "<group>"; };
+		E112960B06F8B9F6005E3B5A /* MessageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MessageRenderer.h; sourceTree = "<group>"; };
+		E112960C06F8B9F6005E3B5A /* MetalDivider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MetalDivider.h; sourceTree = "<group>"; };
+		E112960D06F8B9F6005E3B5A /* MetalPopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MetalPopUpButton.h; sourceTree = "<group>"; };
+		E112960E06F8B9F6005E3B5A /* MetalPopUpButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MetalPopUpButtonCell.h; sourceTree = "<group>"; };
+		E112960F06F8B9F6005E3B5A /* MovieViewerDoc.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MovieViewerDoc.h; sourceTree = "<group>"; };
+		E112961006F8B9F6005E3B5A /* MsgComposePrefsBox.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MsgComposePrefsBox.h; sourceTree = "<group>"; };
+		E112961106F8B9F6005E3B5A /* MuteButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MuteButton.h; sourceTree = "<group>"; };
+		E112961206F8B9F6005E3B5A /* NameTableCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NameTableCell.h; sourceTree = "<group>"; };
+		E112961306F8B9F6005E3B5A /* NetworkChangeNotifier.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NetworkChangeNotifier.h; sourceTree = "<group>"; };
+		E112961406F8B9F6005E3B5A /* NicelyScaledImageView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NicelyScaledImageView.h; sourceTree = "<group>"; };
+		E112961506F8B9F6005E3B5A /* NodeHeader.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NodeHeader.h; sourceTree = "<group>"; };
+		E112961606F8B9F6005E3B5A /* NSArray-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSArray-FezAdditions.h"; sourceTree = "<group>"; };
+		E112961706F8B9F6005E3B5A /* NSAttributedString-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString-FezAdditions.h"; sourceTree = "<group>"; };
+		E112961806F8B9F6005E3B5A /* NSAttributedString-TruncationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString-TruncationExtensions.h"; sourceTree = "<group>"; };
+		E112961906F8B9F6005E3B5A /* NSBezierPath-TreyAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath-TreyAdditions.h"; sourceTree = "<group>"; };
+		E112961A06F8B9F6005E3B5A /* NSButton-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSButton-FezAdditions.h"; sourceTree = "<group>"; };
+		E112961B06F8B9F6005E3B5A /* NSCalendarDate-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSCalendarDate-FezAdditions.h"; sourceTree = "<group>"; };
+		E112961C06F8B9F6005E3B5A /* NSColor-FezUtilAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSColor-FezUtilAdditions.h"; sourceTree = "<group>"; };
+		E112961D06F8B9F6005E3B5A /* NSData-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSData-FezAdditions.h"; sourceTree = "<group>"; };
+		E112961E06F8B9F6005E3B5A /* NSDate-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSDate-FezAdditions.h"; sourceTree = "<group>"; };
+		E112961F06F8B9F6005E3B5A /* NSDictionary-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-FezAdditions.h"; sourceTree = "<group>"; };
+		E112962006F8B9F6005E3B5A /* NSDictionary-HFSFileAttributes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSDictionary-HFSFileAttributes.h"; sourceTree = "<group>"; };
+		E112962106F8B9F6005E3B5A /* NSFileManager-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSFileManager-FezAdditions.h"; sourceTree = "<group>"; };
+		E112962206F8B9F6005E3B5A /* NSImage-JensAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSImage-JensAdditions.h"; sourceTree = "<group>"; };
+		E112962306F8B9F6005E3B5A /* NSMutableArray-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray-FezAdditions.h"; sourceTree = "<group>"; };
+		E112962406F8B9F6005E3B5A /* NSMutableAttributedString-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString-FezAdditions.h"; sourceTree = "<group>"; };
+		E112962506F8B9F6005E3B5A /* NSMutableAttributedString-FezExtensions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString-FezExtensions.h"; sourceTree = "<group>"; };
+		E112962606F8B9F6005E3B5A /* NSMutableAttributedString-TruncationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString-TruncationExtensions.h"; sourceTree = "<group>"; };
+		E112962706F8B9F6005E3B5A /* NSMutableDictionary-PrivateConvenienceMethods.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary-PrivateConvenienceMethods.h"; sourceTree = "<group>"; };
+		E112962806F8B9F6005E3B5A /* NSMutableString-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSMutableString-FezAdditions.h"; sourceTree = "<group>"; };
+		E112962906F8B9F6005E3B5A /* NSObject-ChooseBuddyButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSObject-ChooseBuddyButtonDelegate.h"; sourceTree = "<group>"; };
+		E112962A06F8B9F6005E3B5A /* NSObject-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSObject-FezAdditions.h"; sourceTree = "<group>"; };
+		E112962B06F8B9F6005E3B5A /* NSObject-FezExtendedTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSObject-FezExtendedTableViewDataSource.h"; sourceTree = "<group>"; };
+		E112962C06F8B9F6005E3B5A /* NSPopUpButton-NSPopUpButton_LightingProfileAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSPopUpButton-NSPopUpButton_LightingProfileAdditions.h"; sourceTree = "<group>"; };
+		E112962D06F8B9F6005E3B5A /* NSPreferencesModule-PrivateImpls.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSPreferencesModule-PrivateImpls.h"; sourceTree = "<group>"; };
+		E112962E06F8B9F6005E3B5A /* NSSet-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSSet-FezAdditions.h"; sourceTree = "<group>"; };
+		E112962F06F8B9F6005E3B5A /* NSSound-FezExtention.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSSound-FezExtention.h"; sourceTree = "<group>"; };
+		E112963006F8B9F6005E3B5A /* NSString-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSString-FezAdditions.h"; sourceTree = "<group>"; };
+		E112963106F8B9F6005E3B5A /* NSTableView-ContextualMenus.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSTableView-ContextualMenus.h"; sourceTree = "<group>"; };
+		E112963206F8B9F6005E3B5A /* NSTextField-JensAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSTextField-JensAdditions.h"; sourceTree = "<group>"; };
+		E112963306F8B9F6005E3B5A /* NSTextView-FezUtilAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSTextView-FezUtilAdditions.h"; sourceTree = "<group>"; };
+		E112963406F8B9F6005E3B5A /* NSURL-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSURL-FezAdditions.h"; sourceTree = "<group>"; };
+		E112963506F8B9F6005E3B5A /* NSUserDefaults-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults-FezAdditions.h"; sourceTree = "<group>"; };
+		E112963606F8B9F6005E3B5A /* NSView-CollapseView_Additions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSView-CollapseView_Additions.h"; sourceTree = "<group>"; };
+		E112963706F8B9F6005E3B5A /* NSView-FezUtilAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSView-FezUtilAdditions.h"; sourceTree = "<group>"; };
+		E112963806F8B9F6005E3B5A /* NSView-NSViewShouldHaveAVisibleBitLikeEveryOtherFrameworkInExistance.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSView-NSViewShouldHaveAVisibleBitLikeEveryOtherFrameworkInExistance.h"; sourceTree = "<group>"; };
+		E112963906F8B9F6005E3B5A /* NSWindow-FezAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSWindow-FezAdditions.h"; sourceTree = "<group>"; };
+		E112963A06F8B9F6005E3B5A /* NSWindow-iChatWindowLocation.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSWindow-iChatWindowLocation.h"; sourceTree = "<group>"; };
+		E112963B06F8B9F6005E3B5A /* NSWindowGraphicsContext-CGLayerContext.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSWindowGraphicsContext-CGLayerContext.h"; sourceTree = "<group>"; };
+		E112963C06F8B9F6005E3B5A /* NullNode.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NullNode.h; sourceTree = "<group>"; };
+		E112963D06F8B9F6005E3B5A /* OpenGLAttributedStringLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLAttributedStringLayer.h; sourceTree = "<group>"; };
+		E112963E06F8B9F6005E3B5A /* OpenGLBannerLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLBannerLayer.h; sourceTree = "<group>"; };
+		E112963F06F8B9F6005E3B5A /* OpenGLCameraPreferencesLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLCameraPreferencesLayer.h; sourceTree = "<group>"; };
+		E112964006F8B9F6005E3B5A /* OpenGLCapabilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLCapabilities.h; sourceTree = "<group>"; };
+		E112964106F8B9F6005E3B5A /* OpenGLCGBitmapContextLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLCGBitmapContextLayer.h; sourceTree = "<group>"; };
+		E112964206F8B9F6005E3B5A /* OpenGLColorLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLColorLayer.h; sourceTree = "<group>"; };
+		E112964306F8B9F6005E3B5A /* OpenGLFullScreenController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLFullScreenController.h; sourceTree = "<group>"; };
+		E112964406F8B9F6005E3B5A /* OpenGLFullScreenWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLFullScreenWindow.h; sourceTree = "<group>"; };
+		E112964506F8B9F6005E3B5A /* OpenGLLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLLayer.h; sourceTree = "<group>"; };
+		E112964606F8B9F6005E3B5A /* OpenGLLayerModel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLLayerModel.h; sourceTree = "<group>"; };
+		E112964706F8B9F6005E3B5A /* OpenGLLayerView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLLayerView.h; sourceTree = "<group>"; };
+		E112964806F8B9F6005E3B5A /* OpenGLMetalLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLMetalLayer.h; sourceTree = "<group>"; };
+		E112964906F8B9F6005E3B5A /* OpenGLMinibarLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLMinibarLayer.h; sourceTree = "<group>"; };
+		E112964A06F8B9F6005E3B5A /* OpenGLPNGLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLPNGLayer.h; sourceTree = "<group>"; };
+		E112964B06F8B9F6005E3B5A /* OpenGLProgressLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLProgressLayer.h; sourceTree = "<group>"; };
+		E112964C06F8B9F6005E3B5A /* OpenGLTextureController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLTextureController.h; sourceTree = "<group>"; };
+		E112964D06F8B9F6005E3B5A /* OpenGLTextureDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLTextureDataProvider.h; sourceTree = "<group>"; };
+		E112964E06F8B9F6005E3B5A /* OpenGLTextureLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLTextureLayer.h; sourceTree = "<group>"; };
+		E112964F06F8B9F6005E3B5A /* OpenGLVideoConferenceLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OpenGLVideoConferenceLayer.h; sourceTree = "<group>"; };
+		E112965006F8B9F6005E3B5A /* OptionalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OptionalScrollView.h; sourceTree = "<group>"; };
+		E112965106F8B9F6005E3B5A /* OutgoingFile.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OutgoingFile.h; sourceTree = "<group>"; };
+		E112965206F8B9F6005E3B5A /* People-Actions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "People-Actions.h"; sourceTree = "<group>"; };
+		E112965306F8B9F6005E3B5A /* People.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		E112965406F8B9F7005E3B5A /* PeopleController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PeopleController.h; sourceTree = "<group>"; };
+		E112965506F8B9F7005E3B5A /* PeoplePicker.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PeoplePicker.h; sourceTree = "<group>"; };
+		E112965606F8B9F7005E3B5A /* Person.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E112965706F8B9F7005E3B5A /* PIWLayer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PIWLayer.h; sourceTree = "<group>"; };
+		E112965806F8B9F7005E3B5A /* PlainTextNode.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PlainTextNode.h; sourceTree = "<group>"; };
+		E112965906F8B9F7005E3B5A /* Prefs.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefs.h; sourceTree = "<group>"; };
+		E112965A06F8B9F7005E3B5A /* Prefs_Accounts.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefs_Accounts.h; sourceTree = "<group>"; };
+		E112965B06F8B9F7005E3B5A /* Prefs_Actions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefs_Actions.h; sourceTree = "<group>"; };
+		E112965C06F8B9F7005E3B5A /* Prefs_Blocking.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefs_Blocking.h; sourceTree = "<group>"; };
+		E112965D06F8B9F7005E3B5A /* Prefs_BuddyList.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefs_BuddyList.h; sourceTree = "<group>"; };
+		E112965E06F8B9F7005E3B5A /* Prefs_Camera.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefs_Camera.h; sourceTree = "<group>"; };
+		E112965F06F8B9F7005E3B5A /* Prefs_FileXfer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefs_FileXfer.h; sourceTree = "<group>"; };
+		E112966006F8B9F7005E3B5A /* Prefs_General.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefs_General.h; sourceTree = "<group>"; };
+		E112966106F8B9F7005E3B5A /* Prefs_MsgCompose.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefs_MsgCompose.h; sourceTree = "<group>"; };
+		E112966206F8B9F7005E3B5A /* Prefs_MsgDisplay.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Prefs_MsgDisplay.h; sourceTree = "<group>"; };
+		E112966306F8B9F7005E3B5A /* PrefsBlockingTableView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PrefsBlockingTableView.h; sourceTree = "<group>"; };
+		E112966406F8B9F7005E3B5A /* Presentity.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Presentity.h; sourceTree = "<group>"; };
+		E112966506F8B9F7005E3B5A /* RawXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RawXMLNode.h; sourceTree = "<group>"; };
+		E112966606F8B9F7005E3B5A /* RecentPicture.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RecentPicture.h; sourceTree = "<group>"; };
+		E112966706F8B9F7005E3B5A /* RecessedButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RecessedButton.h; sourceTree = "<group>"; };
+		E112966806F8B9F7005E3B5A /* RecessedTextField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = RecessedTextField.h; sourceTree = "<group>"; };
+		E112966906F8B9F7005E3B5A /* SavedChat.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SavedChat.h; sourceTree = "<group>"; };
+		E112966A06F8B9F7005E3B5A /* SelfPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SelfPreviewController.h; sourceTree = "<group>"; };
+		E112966B06F8B9F7005E3B5A /* ServicePopUp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ServicePopUp.h; sourceTree = "<group>"; };
+		E112966C06F8B9F7005E3B5A /* SmileyButton.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SmileyButton.h; sourceTree = "<group>"; };
+		E112966D06F8B9F7005E3B5A /* SmileyCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SmileyCell.h; sourceTree = "<group>"; };
+		E112966E06F8B9F7005E3B5A /* SmileyGrid.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SmileyGrid.h; sourceTree = "<group>"; };
+		E112966F06F8B9F7005E3B5A /* SmileyPicker.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SmileyPicker.h; sourceTree = "<group>"; };
+		E112967006F8B9F7005E3B5A /* SmileyToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SmileyToolbarItem.h; sourceTree = "<group>"; };
+		E112967106F8B9F7005E3B5A /* SocketStream.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SocketStream.h; sourceTree = "<group>"; };
+		E112967206F8B9F7005E3B5A /* StagedChatNotifier.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = StagedChatNotifier.h; sourceTree = "<group>"; };
+		E112967306F8B9F7005E3B5A /* StagedFileNotifier.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = StagedFileNotifier.h; sourceTree = "<group>"; };
+		E112967406F8B9F7005E3B5A /* StretchyImage.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = StretchyImage.h; sourceTree = "<group>"; };
+		E112967506F8B9F7005E3B5A /* TextViewerDoc.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TextViewerDoc.h; sourceTree = "<group>"; };
+		E112967606F8B9F7005E3B5A /* TiledBalloonRenderer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TiledBalloonRenderer.h; sourceTree = "<group>"; };
+		E112967706F8B9F7005E3B5A /* VCInfoController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VCInfoController.h; sourceTree = "<group>"; };
+		E112967806F8B9F7005E3B5A /* VCLayoutController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VCLayoutController.h; sourceTree = "<group>"; };
+		E112967906F8B9F7005E3B5A /* VideoChatController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VideoChatController.h; sourceTree = "<group>"; };
+		E112967A06F8B9F7005E3B5A /* VideoConferenceLayerView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VideoConferenceLayerView.h; sourceTree = "<group>"; };
+		E112967B06F8B9F7005E3B5A /* ViewerDoc.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ViewerDoc.h; sourceTree = "<group>"; };
+		E112967C06F8B9F7005E3B5A /* VolumeIndicator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = VolumeIndicator.h; sourceTree = "<group>"; };
+		E112967D06F8B9F7005E3B5A /* XHTMLEncoder.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = XHTMLEncoder.h; sourceTree = "<group>"; };
+		E112967E06F8B9F7005E3B5A /* XHTMLGenerator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = XHTMLGenerator.h; sourceTree = "<group>"; };
+		E112967F06F8B9F7005E3B5A /* XMLStreamer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = XMLStreamer.h; sourceTree = "<group>"; };
+		E112975406F8BA20005E3B5A /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
+		E1EAB045068128A200774DFF /* QSiChatPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSiChatPlugIn.m; sourceTree = "<group>"; };
+		E1EAB047068128A800774DFF /* QSiChatPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSiChatPlugIn.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				E112975506F8BA20005E3B5A /* AddressBook.framework in Frameworks */,
+				7F010CAE08D9FC1500054659 /* InstantMessage.framework in Frameworks */,
+				7F5D1FC50D25AF280077ED43 /* ScriptingBridge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSiChatPlugIn */ = {
+			isa = PBXGroup;
+			children = (
+				7F4084B60D16CBDE00E15BB0 /* Configuration */,
+				32DBCF9E0370C38000C91783 /* Classes */,
+				E11295B406F8B9F6005E3B5A /* InstantMessage */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = QSiChatPlugIn;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F4086920D16CE9000E15BB0 /* element.xml */,
+				E104386206F8B7AD00CF1415 /* iChat.scpt */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* iChat.element */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D1FC40D25AF280077ED43 /* ScriptingBridge.framework */,
+				7F010CAD08D9FC1500054659 /* InstantMessage.framework */,
+				E112975406F8BA20005E3B5A /* AddressBook.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1EAB045068128A200774DFF /* QSiChatPlugIn.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D1FD10D25AFF60077ED43 /* iChat.h */,
+				7F010D0808D9FCE900054659 /* QSChatMediator.h */,
+				E104367406F8AC6300CF1415 /* QSiChatMediator.h */,
+				E104367506F8AC6300CF1415 /* QSiChatMediator.m */,
+				7F8FC6200D25E52800BD8C1C /* iChatPresenceController.h */,
+				7F8FC6210D25E52800BD8C1C /* iChatPresenceController.m */,
+				32DBCF980370C29C00C91783 /* QSiChatPlugIn_Prefix.pch */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				E1EAB047068128A800774DFF /* QSiChatPlugIn.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		7F4084B60D16CBDE00E15BB0 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				7F4084B70D16CBDE00E15BB0 /* Common.xcconfig */,
+				7F4084B80D16CBDE00E15BB0 /* Debug.xcconfig */,
+				7F4084B90D16CBDE00E15BB0 /* Developer.xcconfig */,
+				7F4084BA0D16CBDE00E15BB0 /* QSElement.xcconfig */,
+				7F4084BB0D16CBDE00E15BB0 /* QSElement_Prefix.pch */,
+				7F4084BC0D16CBDE00E15BB0 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
+		};
+		E11295B406F8B9F6005E3B5A /* InstantMessage */ = {
+			isa = PBXGroup;
+			children = (
+				E11295B506F8B9F6005E3B5A /* ABAddressBook-Fez.h */,
+				E11295B606F8B9F6005E3B5A /* ABPerson-Fez.h */,
+				E11295B706F8B9F6005E3B5A /* AccountVerifier.h */,
+				E11295B806F8B9F6005E3B5A /* ActionsController.h */,
+				E11295B906F8B9F6005E3B5A /* ActiveChat.h */,
+				E11295BA06F8B9F6005E3B5A /* AddressBookPeople.h */,
+				E11295BB06F8B9F6005E3B5A /* AddressCard-AddressBook.h */,
+				E11295BC06F8B9F6005E3B5A /* AddressCard.h */,
+				E11295BD06F8B9F6005E3B5A /* AnimatingTableView.h */,
+				E11295BE06F8B9F6005E3B5A /* AnimatingTabView.h */,
+				E11295BF06F8B9F6005E3B5A /* AudioChatController.h */,
+				E11295C006F8B9F6005E3B5A /* AudioInputSampler.h */,
+				E11295C106F8B9F6005E3B5A /* AudioOutputSampler.h */,
+				E11295C206F8B9F6005E3B5A /* AutoAway.h */,
+				E11295C306F8B9F6005E3B5A /* AutoManualSlider.h */,
+				E11295C406F8B9F6005E3B5A /* AutoSendTextField.h */,
+				E11295C506F8B9F6005E3B5A /* AVChat.h */,
+				E11295C606F8B9F6005E3B5A /* AVChatController.h */,
+				E11295C706F8B9F6005E3B5A /* BacktracingException.h */,
+				E11295C806F8B9F6005E3B5A /* BalloonRenderer.h */,
+				E11295C906F8B9F6005E3B5A /* BlockListController.h */,
+				E11295CA06F8B9F6005E3B5A /* BorderView.h */,
+				E11295CB06F8B9F6005E3B5A /* BoxMessageRenderer.h */,
+				E11295CC06F8B9F6005E3B5A /* BuddyIconCell.h */,
+				E11295CD06F8B9F6005E3B5A /* BuddyPicture.h */,
+				E11295CE06F8B9F6005E3B5A /* CameraPreferencesView.h */,
+				E11295CF06F8B9F6005E3B5A /* CameraSettingsController.h */,
+				E11295D006F8B9F6005E3B5A /* CDStructures.h */,
+				E11295D106F8B9F6005E3B5A /* CenteredView.h */,
+				E11295D206F8B9F6005E3B5A /* Chat.h */,
+				E11295D306F8B9F6005E3B5A /* ChatController.h */,
+				E11295D406F8B9F6005E3B5A /* ChatFieldEditor.h */,
+				E11295D506F8B9F6005E3B5A /* ChatInputLine.h */,
+				E11295D606F8B9F6005E3B5A /* ChatInputLineCell.h */,
+				E11295D706F8B9F6005E3B5A /* ChatLayoutManager.h */,
+				E11295D806F8B9F6005E3B5A /* ChatTextView.h */,
+				E11295D906F8B9F6005E3B5A /* ChatTypesetter.h */,
+				E11295DA06F8B9F6005E3B5A /* ChooseBuddyButton.h */,
+				E11295DB06F8B9F6005E3B5A /* CollapseView.h */,
+				E11295DC06F8B9F6005E3B5A /* CoreGraphicsUtilities.h */,
+				E11295DD06F8B9F6005E3B5A /* CustomBannerView.h */,
+				E11295DE06F8B9F6005E3B5A /* CustomFontHTMLDocument.h */,
+				E11295DF06F8B9F6005E3B5A /* CustomImageView.h */,
+				E11295E006F8B9F6005E3B5A /* CustomWindow.h */,
+				E11295E106F8B9F6005E3B5A /* DaemonicIncomingFile.h */,
+				E11295E206F8B9F6005E3B5A /* DaemonicOutgoingFile.h */,
+				E11295E306F8B9F6005E3B5A /* DaemonicService.h */,
+				E11295E406F8B9F6005E3B5A /* DaemonListenerStub.h */,
+				E11295E506F8B9F6005E3B5A /* DisclosureButton.h */,
+				E11295E606F8B9F6005E3B5A /* DVDPopUpItemMatrix.h */,
+				E11295E706F8B9F6005E3B5A /* DVDPopUpMatrixButton.h */,
+				E11295E806F8B9F6005E3B5A /* DVDPopUpMatrixItemCell.h */,
+				E11295E906F8B9F6005E3B5A /* EffectView.h */,
+				E11295EA06F8B9F6005E3B5A /* ExtendedTextField.h */,
+				E11295EB06F8B9F6005E3B5A /* FezExtendedTableView.h */,
+				E11295EC06F8B9F6005E3B5A /* FezNSTextAttachment.h */,
+				E11295ED06F8B9F6005E3B5A /* FezStartupController.h */,
+				E11295EE06F8B9F6005E3B5A /* FileBrowser.h */,
+				E11295EF06F8B9F6005E3B5A /* FileDragOutView.h */,
+				E11295F006F8B9F6005E3B5A /* FileNode.h */,
+				E11295F106F8B9F6005E3B5A /* FileProgress.h */,
+				E11295F206F8B9F6005E3B5A /* FileSender.h */,
+				E11295F306F8B9F6005E3B5A /* FolderNode.h */,
+				E11295F406F8B9F6005E3B5A /* FolderNodeParser.h */,
+				E11295F506F8B9F6005E3B5A /* FolderViewerDoc.h */,
+				E11295F606F8B9F6005E3B5A /* FontAndColor.h */,
+				E11295F706F8B9F6005E3B5A /* FZMessage.h */,
+				E11295F806F8B9F6005E3B5A /* FZVideoConferenceController.h */,
+				E11295F906F8B9F6005E3B5A /* GenericNode.h */,
+				E11295FA06F8B9F6005E3B5A /* HFSFileManager.h */,
+				E11295FB06F8B9F6005E3B5A /* IconPopUp.h */,
+				E11295FC06F8B9F6005E3B5A /* ImageAndTextCell.h */,
+				E11295FD06F8B9F6005E3B5A /* ImageViewerDoc.h */,
+				E11295FE06F8B9F6005E3B5A /* IMService-IMService_GetService.h */,
+				E11295FF06F8B9F6005E3B5A /* IMService.h */,
+				E112960006F8B9F6005E3B5A /* IncomingFile.h */,
+				E112960106F8B9F6005E3B5A /* IncomingFileStream.h */,
+				E112960206F8B9F6005E3B5A /* IncomingFileURL.h */,
+				E112960306F8B9F6005E3B5A /* IncomingFolderURL.h */,
+				E112960406F8B9F6005E3B5A /* InputArea.h */,
+				E112960506F8B9F6005E3B5A /* InstantMessage.h */,
+				E112960606F8B9F6005E3B5A /* KeyWindow.h */,
+				E112960706F8B9F6005E3B5A /* LinkSheetController.h */,
+				E112960806F8B9F6005E3B5A /* MeCard.h */,
+				E112960906F8B9F6005E3B5A /* MenuButton.h */,
+				E112960A06F8B9F6005E3B5A /* MenuComboBox.h */,
+				E112960B06F8B9F6005E3B5A /* MessageRenderer.h */,
+				E112960C06F8B9F6005E3B5A /* MetalDivider.h */,
+				E112960D06F8B9F6005E3B5A /* MetalPopUpButton.h */,
+				E112960E06F8B9F6005E3B5A /* MetalPopUpButtonCell.h */,
+				E112960F06F8B9F6005E3B5A /* MovieViewerDoc.h */,
+				E112961006F8B9F6005E3B5A /* MsgComposePrefsBox.h */,
+				E112961106F8B9F6005E3B5A /* MuteButton.h */,
+				E112961206F8B9F6005E3B5A /* NameTableCell.h */,
+				E112961306F8B9F6005E3B5A /* NetworkChangeNotifier.h */,
+				E112961406F8B9F6005E3B5A /* NicelyScaledImageView.h */,
+				E112961506F8B9F6005E3B5A /* NodeHeader.h */,
+				E112961606F8B9F6005E3B5A /* NSArray-FezAdditions.h */,
+				E112961706F8B9F6005E3B5A /* NSAttributedString-FezAdditions.h */,
+				E112961806F8B9F6005E3B5A /* NSAttributedString-TruncationExtensions.h */,
+				E112961906F8B9F6005E3B5A /* NSBezierPath-TreyAdditions.h */,
+				E112961A06F8B9F6005E3B5A /* NSButton-FezAdditions.h */,
+				E112961B06F8B9F6005E3B5A /* NSCalendarDate-FezAdditions.h */,
+				E112961C06F8B9F6005E3B5A /* NSColor-FezUtilAdditions.h */,
+				E112961D06F8B9F6005E3B5A /* NSData-FezAdditions.h */,
+				E112961E06F8B9F6005E3B5A /* NSDate-FezAdditions.h */,
+				E112961F06F8B9F6005E3B5A /* NSDictionary-FezAdditions.h */,
+				E112962006F8B9F6005E3B5A /* NSDictionary-HFSFileAttributes.h */,
+				E112962106F8B9F6005E3B5A /* NSFileManager-FezAdditions.h */,
+				E112962206F8B9F6005E3B5A /* NSImage-JensAdditions.h */,
+				E112962306F8B9F6005E3B5A /* NSMutableArray-FezAdditions.h */,
+				E112962406F8B9F6005E3B5A /* NSMutableAttributedString-FezAdditions.h */,
+				E112962506F8B9F6005E3B5A /* NSMutableAttributedString-FezExtensions.h */,
+				E112962606F8B9F6005E3B5A /* NSMutableAttributedString-TruncationExtensions.h */,
+				E112962706F8B9F6005E3B5A /* NSMutableDictionary-PrivateConvenienceMethods.h */,
+				E112962806F8B9F6005E3B5A /* NSMutableString-FezAdditions.h */,
+				E112962906F8B9F6005E3B5A /* NSObject-ChooseBuddyButtonDelegate.h */,
+				E112962A06F8B9F6005E3B5A /* NSObject-FezAdditions.h */,
+				E112962B06F8B9F6005E3B5A /* NSObject-FezExtendedTableViewDataSource.h */,
+				E112962C06F8B9F6005E3B5A /* NSPopUpButton-NSPopUpButton_LightingProfileAdditions.h */,
+				E112962D06F8B9F6005E3B5A /* NSPreferencesModule-PrivateImpls.h */,
+				E112962E06F8B9F6005E3B5A /* NSSet-FezAdditions.h */,
+				E112962F06F8B9F6005E3B5A /* NSSound-FezExtention.h */,
+				E112963006F8B9F6005E3B5A /* NSString-FezAdditions.h */,
+				E112963106F8B9F6005E3B5A /* NSTableView-ContextualMenus.h */,
+				E112963206F8B9F6005E3B5A /* NSTextField-JensAdditions.h */,
+				E112963306F8B9F6005E3B5A /* NSTextView-FezUtilAdditions.h */,
+				E112963406F8B9F6005E3B5A /* NSURL-FezAdditions.h */,
+				E112963506F8B9F6005E3B5A /* NSUserDefaults-FezAdditions.h */,
+				E112963606F8B9F6005E3B5A /* NSView-CollapseView_Additions.h */,
+				E112963706F8B9F6005E3B5A /* NSView-FezUtilAdditions.h */,
+				E112963806F8B9F6005E3B5A /* NSView-NSViewShouldHaveAVisibleBitLikeEveryOtherFrameworkInExistance.h */,
+				E112963906F8B9F6005E3B5A /* NSWindow-FezAdditions.h */,
+				E112963A06F8B9F6005E3B5A /* NSWindow-iChatWindowLocation.h */,
+				E112963B06F8B9F6005E3B5A /* NSWindowGraphicsContext-CGLayerContext.h */,
+				E112963C06F8B9F6005E3B5A /* NullNode.h */,
+				E112963D06F8B9F6005E3B5A /* OpenGLAttributedStringLayer.h */,
+				E112963E06F8B9F6005E3B5A /* OpenGLBannerLayer.h */,
+				E112963F06F8B9F6005E3B5A /* OpenGLCameraPreferencesLayer.h */,
+				E112964006F8B9F6005E3B5A /* OpenGLCapabilities.h */,
+				E112964106F8B9F6005E3B5A /* OpenGLCGBitmapContextLayer.h */,
+				E112964206F8B9F6005E3B5A /* OpenGLColorLayer.h */,
+				E112964306F8B9F6005E3B5A /* OpenGLFullScreenController.h */,
+				E112964406F8B9F6005E3B5A /* OpenGLFullScreenWindow.h */,
+				E112964506F8B9F6005E3B5A /* OpenGLLayer.h */,
+				E112964606F8B9F6005E3B5A /* OpenGLLayerModel.h */,
+				E112964706F8B9F6005E3B5A /* OpenGLLayerView.h */,
+				E112964806F8B9F6005E3B5A /* OpenGLMetalLayer.h */,
+				E112964906F8B9F6005E3B5A /* OpenGLMinibarLayer.h */,
+				E112964A06F8B9F6005E3B5A /* OpenGLPNGLayer.h */,
+				E112964B06F8B9F6005E3B5A /* OpenGLProgressLayer.h */,
+				E112964C06F8B9F6005E3B5A /* OpenGLTextureController.h */,
+				E112964D06F8B9F6005E3B5A /* OpenGLTextureDataProvider.h */,
+				E112964E06F8B9F6005E3B5A /* OpenGLTextureLayer.h */,
+				E112965006F8B9F6005E3B5A /* OptionalScrollView.h */,
+				E112965106F8B9F6005E3B5A /* OutgoingFile.h */,
+				E112964F06F8B9F6005E3B5A /* OpenGLVideoConferenceLayer.h */,
+				E112965206F8B9F6005E3B5A /* People-Actions.h */,
+				E112965306F8B9F6005E3B5A /* People.h */,
+				E112965406F8B9F7005E3B5A /* PeopleController.h */,
+				E112965506F8B9F7005E3B5A /* PeoplePicker.h */,
+				E112965606F8B9F7005E3B5A /* Person.h */,
+				E112965706F8B9F7005E3B5A /* PIWLayer.h */,
+				E112965806F8B9F7005E3B5A /* PlainTextNode.h */,
+				E112965906F8B9F7005E3B5A /* Prefs.h */,
+				E112965A06F8B9F7005E3B5A /* Prefs_Accounts.h */,
+				E112965B06F8B9F7005E3B5A /* Prefs_Actions.h */,
+				E112965C06F8B9F7005E3B5A /* Prefs_Blocking.h */,
+				E112965D06F8B9F7005E3B5A /* Prefs_BuddyList.h */,
+				E112965E06F8B9F7005E3B5A /* Prefs_Camera.h */,
+				E112965F06F8B9F7005E3B5A /* Prefs_FileXfer.h */,
+				E112966006F8B9F7005E3B5A /* Prefs_General.h */,
+				E112966106F8B9F7005E3B5A /* Prefs_MsgCompose.h */,
+				E112966206F8B9F7005E3B5A /* Prefs_MsgDisplay.h */,
+				E112966306F8B9F7005E3B5A /* PrefsBlockingTableView.h */,
+				E112966406F8B9F7005E3B5A /* Presentity.h */,
+				E112966506F8B9F7005E3B5A /* RawXMLNode.h */,
+				E112966606F8B9F7005E3B5A /* RecentPicture.h */,
+				E112966706F8B9F7005E3B5A /* RecessedButton.h */,
+				E112966806F8B9F7005E3B5A /* RecessedTextField.h */,
+				E112966906F8B9F7005E3B5A /* SavedChat.h */,
+				E112966A06F8B9F7005E3B5A /* SelfPreviewController.h */,
+				E112966B06F8B9F7005E3B5A /* ServicePopUp.h */,
+				E112966C06F8B9F7005E3B5A /* SmileyButton.h */,
+				E112966D06F8B9F7005E3B5A /* SmileyCell.h */,
+				E112966E06F8B9F7005E3B5A /* SmileyGrid.h */,
+				E112966F06F8B9F7005E3B5A /* SmileyPicker.h */,
+				E112967006F8B9F7005E3B5A /* SmileyToolbarItem.h */,
+				E112967106F8B9F7005E3B5A /* SocketStream.h */,
+				E112967206F8B9F7005E3B5A /* StagedChatNotifier.h */,
+				E112967306F8B9F7005E3B5A /* StagedFileNotifier.h */,
+				E112967406F8B9F7005E3B5A /* StretchyImage.h */,
+				E112967506F8B9F7005E3B5A /* TextViewerDoc.h */,
+				E112967606F8B9F7005E3B5A /* TiledBalloonRenderer.h */,
+				E112967706F8B9F7005E3B5A /* VCInfoController.h */,
+				E112967806F8B9F7005E3B5A /* VCLayoutController.h */,
+				E112967906F8B9F7005E3B5A /* VideoChatController.h */,
+				E112967A06F8B9F7005E3B5A /* VideoConferenceLayerView.h */,
+				E112967B06F8B9F7005E3B5A /* ViewerDoc.h */,
+				E112967C06F8B9F7005E3B5A /* VolumeIndicator.h */,
+				E112967D06F8B9F7005E3B5A /* XHTMLEncoder.h */,
+				E112967E06F8B9F7005E3B5A /* XHTMLGenerator.h */,
+				E112967F06F8B9F7005E3B5A /* XMLStreamer.h */,
+			);
+			path = InstantMessage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* iChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F07B02A085E433300E2AFC4 /* Build configuration list for PBXNativeTarget "iChat" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iChat;
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSiChatPlugIn;
+			productReference = 8D1AC9740486D14A00FE50C9 /* iChat.element */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7F07B02E085E433300E2AFC4 /* Build configuration list for PBXProject "iChatElement" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* QSiChatPlugIn */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* iChat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E104367606F8AC6300CF1415 /* QSiChatMediator.h in Resources */,
+				E104386306F8B7AD00CF1415 /* iChat.scpt in Resources */,
+				E112968006F8B9F7005E3B5A /* ABAddressBook-Fez.h in Resources */,
+				E112968106F8B9F7005E3B5A /* ABPerson-Fez.h in Resources */,
+				E112968206F8B9F7005E3B5A /* AccountVerifier.h in Resources */,
+				E112968306F8B9F7005E3B5A /* ActionsController.h in Resources */,
+				E112968406F8B9F7005E3B5A /* ActiveChat.h in Resources */,
+				E112968506F8B9F7005E3B5A /* AddressBookPeople.h in Resources */,
+				E112968606F8B9F7005E3B5A /* AddressCard-AddressBook.h in Resources */,
+				E112968706F8B9F7005E3B5A /* AddressCard.h in Resources */,
+				E112968806F8B9F7005E3B5A /* AnimatingTableView.h in Resources */,
+				E112968906F8B9F7005E3B5A /* AnimatingTabView.h in Resources */,
+				E112968A06F8B9F7005E3B5A /* AudioChatController.h in Resources */,
+				E112968B06F8B9F7005E3B5A /* AudioInputSampler.h in Resources */,
+				E112968C06F8B9F7005E3B5A /* AudioOutputSampler.h in Resources */,
+				E112968D06F8B9F7005E3B5A /* AutoAway.h in Resources */,
+				E112968E06F8B9F7005E3B5A /* AutoManualSlider.h in Resources */,
+				E112968F06F8B9F7005E3B5A /* AutoSendTextField.h in Resources */,
+				E112969006F8B9F7005E3B5A /* AVChat.h in Resources */,
+				E112969106F8B9F7005E3B5A /* AVChatController.h in Resources */,
+				E112969206F8B9F7005E3B5A /* BacktracingException.h in Resources */,
+				E112969306F8B9F7005E3B5A /* BalloonRenderer.h in Resources */,
+				E112969406F8B9F7005E3B5A /* BlockListController.h in Resources */,
+				E112969506F8B9F7005E3B5A /* BorderView.h in Resources */,
+				E112969606F8B9F7005E3B5A /* BoxMessageRenderer.h in Resources */,
+				E112969706F8B9F7005E3B5A /* BuddyIconCell.h in Resources */,
+				E112969806F8B9F7005E3B5A /* BuddyPicture.h in Resources */,
+				E112969906F8B9F7005E3B5A /* CameraPreferencesView.h in Resources */,
+				E112969A06F8B9F7005E3B5A /* CameraSettingsController.h in Resources */,
+				E112969B06F8B9F7005E3B5A /* CDStructures.h in Resources */,
+				E112969C06F8B9F7005E3B5A /* CenteredView.h in Resources */,
+				E112969D06F8B9F7005E3B5A /* Chat.h in Resources */,
+				E112969E06F8B9F7005E3B5A /* ChatController.h in Resources */,
+				E112969F06F8B9F7005E3B5A /* ChatFieldEditor.h in Resources */,
+				E11296A006F8B9F7005E3B5A /* ChatInputLine.h in Resources */,
+				E11296A106F8B9F7005E3B5A /* ChatInputLineCell.h in Resources */,
+				E11296A206F8B9F7005E3B5A /* ChatLayoutManager.h in Resources */,
+				E11296A306F8B9F7005E3B5A /* ChatTextView.h in Resources */,
+				E11296A406F8B9F7005E3B5A /* ChatTypesetter.h in Resources */,
+				E11296A506F8B9F7005E3B5A /* ChooseBuddyButton.h in Resources */,
+				E11296A606F8B9F7005E3B5A /* CollapseView.h in Resources */,
+				E11296A706F8B9F7005E3B5A /* CoreGraphicsUtilities.h in Resources */,
+				E11296A806F8B9F7005E3B5A /* CustomBannerView.h in Resources */,
+				E11296A906F8B9F7005E3B5A /* CustomFontHTMLDocument.h in Resources */,
+				E11296AA06F8B9F7005E3B5A /* CustomImageView.h in Resources */,
+				E11296AB06F8B9F7005E3B5A /* CustomWindow.h in Resources */,
+				E11296AC06F8B9F7005E3B5A /* DaemonicIncomingFile.h in Resources */,
+				E11296AD06F8B9F7005E3B5A /* DaemonicOutgoingFile.h in Resources */,
+				E11296AE06F8B9F7005E3B5A /* DaemonicService.h in Resources */,
+				E11296AF06F8B9F7005E3B5A /* DaemonListenerStub.h in Resources */,
+				E11296B006F8B9F7005E3B5A /* DisclosureButton.h in Resources */,
+				E11296B106F8B9F7005E3B5A /* DVDPopUpItemMatrix.h in Resources */,
+				E11296B206F8B9F7005E3B5A /* DVDPopUpMatrixButton.h in Resources */,
+				E11296B306F8B9F7005E3B5A /* DVDPopUpMatrixItemCell.h in Resources */,
+				E11296B406F8B9F7005E3B5A /* EffectView.h in Resources */,
+				E11296B506F8B9F7005E3B5A /* ExtendedTextField.h in Resources */,
+				E11296B606F8B9F7005E3B5A /* FezExtendedTableView.h in Resources */,
+				E11296B706F8B9F7005E3B5A /* FezNSTextAttachment.h in Resources */,
+				E11296B806F8B9F7005E3B5A /* FezStartupController.h in Resources */,
+				E11296B906F8B9F7005E3B5A /* FileBrowser.h in Resources */,
+				E11296BA06F8B9F7005E3B5A /* FileDragOutView.h in Resources */,
+				E11296BB06F8B9F7005E3B5A /* FileNode.h in Resources */,
+				E11296BC06F8B9F7005E3B5A /* FileProgress.h in Resources */,
+				E11296BD06F8B9F7005E3B5A /* FileSender.h in Resources */,
+				E11296BE06F8B9F7005E3B5A /* FolderNode.h in Resources */,
+				E11296BF06F8B9F7005E3B5A /* FolderNodeParser.h in Resources */,
+				E11296C006F8B9F7005E3B5A /* FolderViewerDoc.h in Resources */,
+				E11296C106F8B9F7005E3B5A /* FontAndColor.h in Resources */,
+				E11296C206F8B9F7005E3B5A /* FZMessage.h in Resources */,
+				E11296C306F8B9F7005E3B5A /* FZVideoConferenceController.h in Resources */,
+				E11296C406F8B9F7005E3B5A /* GenericNode.h in Resources */,
+				E11296C506F8B9F7005E3B5A /* HFSFileManager.h in Resources */,
+				E11296C606F8B9F7005E3B5A /* IconPopUp.h in Resources */,
+				E11296C706F8B9F7005E3B5A /* ImageAndTextCell.h in Resources */,
+				E11296C806F8B9F7005E3B5A /* ImageViewerDoc.h in Resources */,
+				E11296C906F8B9F7005E3B5A /* IMService-IMService_GetService.h in Resources */,
+				E11296CA06F8B9F7005E3B5A /* IMService.h in Resources */,
+				E11296CB06F8B9F7005E3B5A /* IncomingFile.h in Resources */,
+				E11296CC06F8B9F7005E3B5A /* IncomingFileStream.h in Resources */,
+				E11296CD06F8B9F7005E3B5A /* IncomingFileURL.h in Resources */,
+				E11296CE06F8B9F7005E3B5A /* IncomingFolderURL.h in Resources */,
+				E11296CF06F8B9F7005E3B5A /* InputArea.h in Resources */,
+				E11296D006F8B9F7005E3B5A /* InstantMessage.h in Resources */,
+				E11296D106F8B9F7005E3B5A /* KeyWindow.h in Resources */,
+				E11296D206F8B9F7005E3B5A /* LinkSheetController.h in Resources */,
+				E11296D306F8B9F7005E3B5A /* MeCard.h in Resources */,
+				E11296D406F8B9F7005E3B5A /* MenuButton.h in Resources */,
+				E11296D506F8B9F7005E3B5A /* MenuComboBox.h in Resources */,
+				E11296D606F8B9F7005E3B5A /* MessageRenderer.h in Resources */,
+				E11296D706F8B9F7005E3B5A /* MetalDivider.h in Resources */,
+				E11296D806F8B9F7005E3B5A /* MetalPopUpButton.h in Resources */,
+				E11296D906F8B9F7005E3B5A /* MetalPopUpButtonCell.h in Resources */,
+				E11296DA06F8B9F7005E3B5A /* MovieViewerDoc.h in Resources */,
+				E11296DB06F8B9F7005E3B5A /* MsgComposePrefsBox.h in Resources */,
+				E11296DC06F8B9F7005E3B5A /* MuteButton.h in Resources */,
+				E11296DD06F8B9F7005E3B5A /* NameTableCell.h in Resources */,
+				E11296DE06F8B9F7005E3B5A /* NetworkChangeNotifier.h in Resources */,
+				E11296DF06F8B9F7005E3B5A /* NicelyScaledImageView.h in Resources */,
+				E11296E006F8B9F7005E3B5A /* NodeHeader.h in Resources */,
+				E11296E106F8B9F7005E3B5A /* NSArray-FezAdditions.h in Resources */,
+				E11296E206F8B9F7005E3B5A /* NSAttributedString-FezAdditions.h in Resources */,
+				E11296E306F8B9F7005E3B5A /* NSAttributedString-TruncationExtensions.h in Resources */,
+				E11296E406F8B9F7005E3B5A /* NSBezierPath-TreyAdditions.h in Resources */,
+				E11296E506F8B9F7005E3B5A /* NSButton-FezAdditions.h in Resources */,
+				E11296E606F8B9F7005E3B5A /* NSCalendarDate-FezAdditions.h in Resources */,
+				E11296E706F8B9F7005E3B5A /* NSColor-FezUtilAdditions.h in Resources */,
+				E11296E806F8B9F7005E3B5A /* NSData-FezAdditions.h in Resources */,
+				E11296E906F8B9F7005E3B5A /* NSDate-FezAdditions.h in Resources */,
+				E11296EA06F8B9F7005E3B5A /* NSDictionary-FezAdditions.h in Resources */,
+				E11296EB06F8B9F7005E3B5A /* NSDictionary-HFSFileAttributes.h in Resources */,
+				E11296EC06F8B9F7005E3B5A /* NSFileManager-FezAdditions.h in Resources */,
+				E11296ED06F8B9F7005E3B5A /* NSImage-JensAdditions.h in Resources */,
+				E11296EE06F8B9F7005E3B5A /* NSMutableArray-FezAdditions.h in Resources */,
+				E11296EF06F8B9F7005E3B5A /* NSMutableAttributedString-FezAdditions.h in Resources */,
+				E11296F006F8B9F7005E3B5A /* NSMutableAttributedString-FezExtensions.h in Resources */,
+				E11296F106F8B9F7005E3B5A /* NSMutableAttributedString-TruncationExtensions.h in Resources */,
+				E11296F206F8B9F7005E3B5A /* NSMutableDictionary-PrivateConvenienceMethods.h in Resources */,
+				E11296F306F8B9F7005E3B5A /* NSMutableString-FezAdditions.h in Resources */,
+				E11296F406F8B9F7005E3B5A /* NSObject-ChooseBuddyButtonDelegate.h in Resources */,
+				E11296F506F8B9F7005E3B5A /* NSObject-FezAdditions.h in Resources */,
+				E11296F606F8B9F7005E3B5A /* NSObject-FezExtendedTableViewDataSource.h in Resources */,
+				E11296F706F8B9F7005E3B5A /* NSPopUpButton-NSPopUpButton_LightingProfileAdditions.h in Resources */,
+				E11296F806F8B9F7005E3B5A /* NSPreferencesModule-PrivateImpls.h in Resources */,
+				E11296F906F8B9F7005E3B5A /* NSSet-FezAdditions.h in Resources */,
+				E11296FA06F8B9F7005E3B5A /* NSSound-FezExtention.h in Resources */,
+				E11296FB06F8B9F7005E3B5A /* NSString-FezAdditions.h in Resources */,
+				E11296FC06F8B9F7005E3B5A /* NSTableView-ContextualMenus.h in Resources */,
+				E11296FD06F8B9F7005E3B5A /* NSTextField-JensAdditions.h in Resources */,
+				E11296FE06F8B9F7005E3B5A /* NSTextView-FezUtilAdditions.h in Resources */,
+				E11296FF06F8B9F7005E3B5A /* NSURL-FezAdditions.h in Resources */,
+				E112970006F8B9F7005E3B5A /* NSUserDefaults-FezAdditions.h in Resources */,
+				E112970106F8B9F7005E3B5A /* NSView-CollapseView_Additions.h in Resources */,
+				E112970206F8B9F7005E3B5A /* NSView-FezUtilAdditions.h in Resources */,
+				E112970306F8B9F7005E3B5A /* NSView-NSViewShouldHaveAVisibleBitLikeEveryOtherFrameworkInExistance.h in Resources */,
+				E112970406F8B9F7005E3B5A /* NSWindow-FezAdditions.h in Resources */,
+				E112970506F8B9F7005E3B5A /* NSWindow-iChatWindowLocation.h in Resources */,
+				E112970606F8B9F7005E3B5A /* NSWindowGraphicsContext-CGLayerContext.h in Resources */,
+				E112970706F8B9F7005E3B5A /* NullNode.h in Resources */,
+				E112970806F8B9F7005E3B5A /* OpenGLAttributedStringLayer.h in Resources */,
+				E112970906F8B9F7005E3B5A /* OpenGLBannerLayer.h in Resources */,
+				E112970A06F8B9F7005E3B5A /* OpenGLCameraPreferencesLayer.h in Resources */,
+				E112970B06F8B9F7005E3B5A /* OpenGLCapabilities.h in Resources */,
+				E112970C06F8B9F7005E3B5A /* OpenGLCGBitmapContextLayer.h in Resources */,
+				E112970D06F8B9F7005E3B5A /* OpenGLColorLayer.h in Resources */,
+				E112970E06F8B9F7005E3B5A /* OpenGLFullScreenController.h in Resources */,
+				E112970F06F8B9F7005E3B5A /* OpenGLFullScreenWindow.h in Resources */,
+				E112971006F8B9F7005E3B5A /* OpenGLLayer.h in Resources */,
+				E112971106F8B9F7005E3B5A /* OpenGLLayerModel.h in Resources */,
+				E112971206F8B9F7005E3B5A /* OpenGLLayerView.h in Resources */,
+				E112971306F8B9F7005E3B5A /* OpenGLMetalLayer.h in Resources */,
+				E112971406F8B9F7005E3B5A /* OpenGLMinibarLayer.h in Resources */,
+				E112971506F8B9F7005E3B5A /* OpenGLPNGLayer.h in Resources */,
+				E112971606F8B9F7005E3B5A /* OpenGLProgressLayer.h in Resources */,
+				E112971706F8B9F7005E3B5A /* OpenGLTextureController.h in Resources */,
+				E112971806F8B9F7005E3B5A /* OpenGLTextureDataProvider.h in Resources */,
+				E112971906F8B9F7005E3B5A /* OpenGLTextureLayer.h in Resources */,
+				E112971A06F8B9F7005E3B5A /* OpenGLVideoConferenceLayer.h in Resources */,
+				E112971B06F8B9F7005E3B5A /* OptionalScrollView.h in Resources */,
+				E112971C06F8B9F7005E3B5A /* OutgoingFile.h in Resources */,
+				E112971D06F8B9F7005E3B5A /* People-Actions.h in Resources */,
+				E112971E06F8B9F7005E3B5A /* People.h in Resources */,
+				E112971F06F8B9F7005E3B5A /* PeopleController.h in Resources */,
+				E112972006F8B9F7005E3B5A /* PeoplePicker.h in Resources */,
+				E112972106F8B9F7005E3B5A /* Person.h in Resources */,
+				E112972206F8B9F7005E3B5A /* PIWLayer.h in Resources */,
+				E112972306F8B9F7005E3B5A /* PlainTextNode.h in Resources */,
+				E112972406F8B9F7005E3B5A /* Prefs.h in Resources */,
+				E112972506F8B9F7005E3B5A /* Prefs_Accounts.h in Resources */,
+				E112972606F8B9F7005E3B5A /* Prefs_Actions.h in Resources */,
+				E112972706F8B9F7005E3B5A /* Prefs_Blocking.h in Resources */,
+				E112972806F8B9F7005E3B5A /* Prefs_BuddyList.h in Resources */,
+				E112972906F8B9F7005E3B5A /* Prefs_Camera.h in Resources */,
+				E112972A06F8B9F7005E3B5A /* Prefs_FileXfer.h in Resources */,
+				E112972B06F8B9F7005E3B5A /* Prefs_General.h in Resources */,
+				E112972C06F8B9F7005E3B5A /* Prefs_MsgCompose.h in Resources */,
+				E112972D06F8B9F7005E3B5A /* Prefs_MsgDisplay.h in Resources */,
+				E112972E06F8B9F7005E3B5A /* PrefsBlockingTableView.h in Resources */,
+				E112972F06F8B9F7005E3B5A /* Presentity.h in Resources */,
+				E112973006F8B9F7005E3B5A /* RawXMLNode.h in Resources */,
+				E112973106F8B9F7005E3B5A /* RecentPicture.h in Resources */,
+				E112973206F8B9F7005E3B5A /* RecessedButton.h in Resources */,
+				E112973306F8B9F7005E3B5A /* RecessedTextField.h in Resources */,
+				E112973406F8B9F7005E3B5A /* SavedChat.h in Resources */,
+				E112973506F8B9F7005E3B5A /* SelfPreviewController.h in Resources */,
+				E112973606F8B9F7005E3B5A /* ServicePopUp.h in Resources */,
+				E112973706F8B9F7005E3B5A /* SmileyButton.h in Resources */,
+				E112973806F8B9F7005E3B5A /* SmileyCell.h in Resources */,
+				E112973906F8B9F7005E3B5A /* SmileyGrid.h in Resources */,
+				E112973A06F8B9F7005E3B5A /* SmileyPicker.h in Resources */,
+				E112973B06F8B9F7005E3B5A /* SmileyToolbarItem.h in Resources */,
+				E112973C06F8B9F7005E3B5A /* SocketStream.h in Resources */,
+				E112973D06F8B9F7005E3B5A /* StagedChatNotifier.h in Resources */,
+				E112973E06F8B9F7005E3B5A /* StagedFileNotifier.h in Resources */,
+				E112973F06F8B9F7005E3B5A /* StretchyImage.h in Resources */,
+				E112974006F8B9F7005E3B5A /* TextViewerDoc.h in Resources */,
+				E112974106F8B9F7005E3B5A /* TiledBalloonRenderer.h in Resources */,
+				E112974206F8B9F7005E3B5A /* VCInfoController.h in Resources */,
+				E112974306F8B9F7005E3B5A /* VCLayoutController.h in Resources */,
+				E112974406F8B9F7005E3B5A /* VideoChatController.h in Resources */,
+				E112974506F8B9F7005E3B5A /* VideoConferenceLayerView.h in Resources */,
+				E112974606F8B9F7005E3B5A /* ViewerDoc.h in Resources */,
+				E112974706F8B9F7005E3B5A /* VolumeIndicator.h in Resources */,
+				E112974806F8B9F7005E3B5A /* XHTMLEncoder.h in Resources */,
+				E112974906F8B9F7005E3B5A /* XHTMLGenerator.h in Resources */,
+				E112974A06F8B9F7005E3B5A /* XMLStreamer.h in Resources */,
+				7F4084BD0D16CBDE00E15BB0 /* Common.xcconfig in Resources */,
+				7F4084BE0D16CBDE00E15BB0 /* Debug.xcconfig in Resources */,
+				7F4084BF0D16CBDE00E15BB0 /* Developer.xcconfig in Resources */,
+				7F4084C00D16CBDE00E15BB0 /* QSElement.xcconfig in Resources */,
+				7F4084C10D16CBDE00E15BB0 /* Release.xcconfig in Resources */,
+				7F4086930D16CE9000E15BB0 /* element.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF /* QSiChatPlugIn.m in Sources */,
+				E104367706F8AC6300CF1415 /* QSiChatMediator.m in Sources */,
+				7F8FC6220D25E52800BD8C1C /* iChatPresenceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7F07B02C085E433300E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F4084BA0D16CBDE00E15BB0 /* QSElement.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		7F07B030085E433300E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F4084BC0D16CBDE00E15BB0 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		7F40856E0D16CC7800E15BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F4084B80D16CBDE00E15BB0 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		7F40856F0D16CC7800E15BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F4084BA0D16CBDE00E15BB0 /* QSElement.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F07B02A085E433300E2AFC4 /* Build configuration list for PBXNativeTarget "iChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07B02C085E433300E2AFC4 /* Release */,
+				7F40856F0D16CC7800E15BB0 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7F07B02E085E433300E2AFC4 /* Build configuration list for PBXProject "iChatElement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07B030085E433300E2AFC4 /* Release */,
+				7F40856E0D16CC7800E15BB0 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

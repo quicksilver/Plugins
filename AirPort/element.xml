@@ -1,0 +1,88 @@
+<element id="com.blacktree.Quicksilver.QSAirPortPlugIn" name="AirPort Module" version="A5">
+    <info>
+        <category>System</category>
+        <image>com.apple.airport.adminutility</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetWirelessNetworks">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetWirelessNetworks</string>
+                        <key>catalogPath</key>
+                        <string>QSPresetSystemGroup/QSPresetDevices</string>
+                        <key>feature</key>
+                        <integer>1</integer>
+                        <key>name</key>
+                        <string>AirPort Networks</string>
+                        <key>source</key>
+                        <string>QSAirPortNetworkObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSAirPortNetworkSelectAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAirPortNetworkActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>selectNetwork:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSAirPortNetworkSSIDType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>AirPortIcon</string>
+                        <key>name</key>
+                        <string>Select Network</string>
+                        <key>precedence</key>
+                        <integer>3</integer>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSAirPortNetworkObjectSource" class="QSAirPortNetworkObjectSource"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="QSAirPortNetworkSSIDType" class="QSAirPortNetworkObjectSource"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSAirPortNetworkActionProvider" class="QSAirPortNetworkActionProvider"></action-provider>
+        </extension>
+        <extension point="QSInternalMessages">
+            <internal-message id="QSAirPortTurnOn">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>turnAirPortOn</string>
+                        <key>icon</key>
+                        <string>AirPortIcon</string>
+                        <key>name</key>
+                        <string>Turn AirPort On</string>
+                        <key>target</key>
+                        <string>QSAirPortNetworkActionProvider</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message id="QSAirPortTurnOff">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>turnAirPortOff</string>
+                        <key>icon</key>
+                        <string>AirPortIcon</string>
+                        <key>name</key>
+                        <string>Turn AirPort Off</string>
+                        <key>target</key>
+                        <string>QSAirPortNetworkActionProvider</string>
+                    </dict>
+                </plist>
+            </internal-message>
+        </extension>
+    </extensions>
+</element>

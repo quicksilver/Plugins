@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3305D4A00BC947FC0096E476 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F70E2950B7D562D004B794D /* QSCore.framework */; };
+		7F3D925A0B7E9652008323A5 /* QSEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3D92590B7E9652008323A5 /* QSEffects.framework */; };
+		7F70E25D0B7D52E6004B794D /* QSStikkitPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F70E25C0B7D52E6004B794D /* QSStikkitPlugIn.m */; };
+		7F70E2980B7D562D004B794D /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F70E2960B7D562D004B794D /* QSFoundation.framework */; };
+		7F8AD05107F2503600011548 /* QSStikkitPlugInSource.nib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8AD05007F2503600011548 /* QSStikkitPlugInSource.nib */; };
+		7F9441A10803A9D9007EDC31 /* QSObjectSource.name.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F9441A00803A9D9007EDC31 /* QSObjectSource.name.strings */; };
+		7FED7C620B7DA74A006F7635 /* stikkit.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FED7C610B7DA74A006F7635 /* stikkit.png */; };
+		7FED7C820B7E1D45006F7635 /* QSStikkitPlugIn_Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FED7C810B7E1D45006F7635 /* QSStikkitPlugIn_Action.m */; };
+		7FFEFCFC0C924AFB001354FA /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFEFCFB0C924AFB001354FA /* libcrypto.dylib */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E182BE3C06FC9B13007BF2C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E182BE3A06FC9B13007BF2C2 /* Localizable.strings */; };
+		E182BE5B06FC9C46007BF2C2 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E182BE5A06FC9C46007BF2C2 /* PreferencePanes.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32DBCF980370C29C00C91783 /* QSStikkitPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSStikkitPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		7F3D92590B7E9652008323A5 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
+		7F70E25B0B7D52E6004B794D /* QSStikkitPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSStikkitPlugIn.h; sourceTree = "<group>"; };
+		7F70E25C0B7D52E6004B794D /* QSStikkitPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSStikkitPlugIn.m; sourceTree = "<group>"; };
+		7F70E2950B7D562D004B794D /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
+		7F70E2960B7D562D004B794D /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
+		7F8AD05007F2503600011548 /* QSStikkitPlugInSource.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSStikkitPlugInSource.nib; sourceTree = "<group>"; };
+		7F9441A00803A9D9007EDC31 /* QSObjectSource.name.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = QSObjectSource.name.strings; sourceTree = "<group>"; };
+		7FED7C610B7DA74A006F7635 /* stikkit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stikkit.png; sourceTree = "<group>"; };
+		7FED7C800B7E1D45006F7635 /* QSStikkitPlugIn_Action.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSStikkitPlugIn_Action.h; sourceTree = "<group>"; };
+		7FED7C810B7E1D45006F7635 /* QSStikkitPlugIn_Action.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSStikkitPlugIn_Action.m; sourceTree = "<group>"; };
+		7FFEFCFB0C924AFB001354FA /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = /usr/lib/libcrypto.dylib; sourceTree = "<absolute>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* Stikkit Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stikkit Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E182BE3B06FC9B13007BF2C2 /* en */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E182BE5A06FC9C46007BF2C2 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				E182BE5B06FC9C46007BF2C2 /* PreferencePanes.framework in Frameworks */,
+				7F70E2980B7D562D004B794D /* QSFoundation.framework in Frameworks */,
+				7F3D925A0B7E9652008323A5 /* QSEffects.framework in Frameworks */,
+				3305D4A00BC947FC0096E476 /* QSCore.framework in Frameworks */,
+				7FFEFCFC0C924AFB001354FA /* libcrypto.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSDeliciousPlugIn */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = QSDeliciousPlugIn;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7FED7C610B7DA74A006F7635 /* stikkit.png */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+				7F9441A00803A9D9007EDC31 /* QSObjectSource.name.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* Stikkit Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FFEFCFB0C924AFB001354FA /* libcrypto.dylib */,
+				7F3D92590B7E9652008323A5 /* QSEffects.framework */,
+				7F70E2950B7D562D004B794D /* QSCore.framework */,
+				7F70E2960B7D562D004B794D /* QSFoundation.framework */,
+				E182BE5A06FC9C46007BF2C2 /* PreferencePanes.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E182BE3A06FC9B13007BF2C2 /* Localizable.strings */,
+				7F70E25B0B7D52E6004B794D /* QSStikkitPlugIn.h */,
+				7F70E25C0B7D52E6004B794D /* QSStikkitPlugIn.m */,
+				32DBCF980370C29C00C91783 /* QSStikkitPlugIn_Prefix.pch */,
+				7FED7C800B7E1D45006F7635 /* QSStikkitPlugIn_Action.h */,
+				7FED7C810B7E1D45006F7635 /* QSStikkitPlugIn_Action.m */,
+				7F8AD05007F2503600011548 /* QSStikkitPlugInSource.nib */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* Stikkit Module */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F07AFAA085E432E00E2AFC4 /* Build configuration list for PBXNativeTarget "Stikkit Module" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Stikkit Module";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSDeliciousPlugIn;
+			productReference = 8D1AC9740486D14A00FE50C9 /* Stikkit Module.qsplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7F07AFAE085E432E00E2AFC4 /* Build configuration list for PBXProject "Stikkit" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 0259C574FE90428111CA0C5A /* QSDeliciousPlugIn */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* Stikkit Module */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E182BE3C06FC9B13007BF2C2 /* Localizable.strings in Resources */,
+				7F8AD05107F2503600011548 /* QSStikkitPlugInSource.nib in Resources */,
+				7F9441A10803A9D9007EDC31 /* QSObjectSource.name.strings in Resources */,
+				7FED7C620B7DA74A006F7635 /* stikkit.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F70E25D0B7D52E6004B794D /* QSStikkitPlugIn.m in Sources */,
+				7FED7C820B7E1D45006F7635 /* QSStikkitPlugIn_Action.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E182BE3A06FC9B13007BF2C2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E182BE3B06FC9B13007BF2C2 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F07AFAB085E432E00E2AFC4 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_DIR = "$(SYMROOT)/PlugIns/";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
+					/Volumes/Lore/Forge/Build,
+					"$(SRCROOT)",
+					"$(SRCROOT)/../../../Build/Release",
+					"$(SYSTEM_APPS_DIR)/Quicksilver.app/Contents/Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSDeliciousPlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "del.icio.us Bookmarks";
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F07AFAC085E432E00E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = /Applications/Quicksilver.app/Contents/Frameworks;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSStikkitPlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Stikkit Module";
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7F07AFAD085E432E00E2AFC4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_DIR = "$(SYMROOT)/PlugIns/";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
+					/Volumes/Lore/Forge/Build,
+					"$(SRCROOT)",
+					"$(SRCROOT)/../../../Build/Release",
+					"$(SYSTEM_APPS_DIR)/Quicksilver.app/Contents/Frameworks",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSDeliciousPlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "del.icio.us Bookmarks";
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			name = Default;
+		};
+		7F07AFAF085E432E00E2AFC4 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+		7F07AFB0085E432E00E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		7F07AFB1085E432E00E2AFC4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F07AFAA085E432E00E2AFC4 /* Build configuration list for PBXNativeTarget "Stikkit Module" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AFAB085E432E00E2AFC4 /* Development */,
+				7F07AFAC085E432E00E2AFC4 /* Release */,
+				7F07AFAD085E432E00E2AFC4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F07AFAE085E432E00E2AFC4 /* Build configuration list for PBXProject "Stikkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AFAF085E432E00E2AFC4 /* Development */,
+				7F07AFB0085E432E00E2AFC4 /* Release */,
+				7F07AFB1085E432E00E2AFC4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

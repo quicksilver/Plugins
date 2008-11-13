@@ -1,0 +1,135 @@
+<element id="com.blacktree.Quicksilver.QSIndigoPlugIn" name="Indigo X10 Module" version="6B">
+    <info>
+        <category>Applications</category>
+        <image>com.perceptiveautomation.indigo</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSIndigoBrightenAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSIndigoPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>brightenDevice:by:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSX10AddressType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.perceptiveautomation.indigo</string>
+                        <key>inactive</key>
+                        <string>1</string>
+                        <key>name</key>
+                        <string>Brighten...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSIndigoDimAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSIndigoPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>dimDevice:by:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSX10AddressType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.perceptiveautomation.indigo</string>
+                        <key>inactive</key>
+                        <string>1</string>
+                        <key>name</key>
+                        <string>Dim...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSIndigoOffAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSIndigoPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>turnOffDevice:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSX10AddressType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.perceptiveautomation.indigo</string>
+                        <key>name</key>
+                        <string>Turn Off</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSIndigoOnAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSIndigoPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>turnOnDevice:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSX10AddressType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.perceptiveautomation.indigo</string>
+                        <key>name</key>
+                        <string>Turn On</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSIndigoPresetAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSIndigoPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>presetDevice:by:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSX10AddressType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.perceptiveautomation.indigo</string>
+                        <key>inactive</key>
+                        <string>1</string>
+                        <key>name</key>
+                        <string>Set Level...</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSPreferencePanes">
+            <preference-pane id="QSIndigoPrefPane" class="QSIndigoPrefPane">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSIndigoPrefPane</string>
+                        <key>description</key>
+                        <string>Preferences</string>
+                        <key>icon</key>
+                        <string>com.perceptiveautomation.indigo</string>
+                        <key>name</key>
+                        <string>Indigo</string>
+                    </dict>
+                </plist>
+            </preference-pane>
+        </extension>
+        <extension point="QSFSParsers">
+            <file-parser id="QSIndigoDBParser" class="QSIndigoDBParser"></file-parser>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="QSX10AddressType" class="QSIndigoPlugIn_Source"></object-handler>
+        </extension>
+        <extension point="QSFSFileTypeParsers">
+            <file-type-parser id="indiDb" class="QSIndigoDBParser"></file-type-parser>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.perceptiveautomation.indigo" class="QSIndigoPlugIn_Source"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

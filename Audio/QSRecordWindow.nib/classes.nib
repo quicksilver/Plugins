@@ -1,0 +1,32 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                changeInputVolume = id; 
+                changeOutputVolume = id; 
+                done = id; 
+                startPlaying = id; 
+                startRecording = id; 
+                stopPlaying = id; 
+                stopRecording = id; 
+            }; 
+            CLASS = QSAudioPlugIn; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                inputVolumeSlider = NSSlider; 
+                outputVolumeSlider = NSSlider; 
+                playStopButton = NSButton; 
+                recordStopButton = NSButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            CLASS = SoundInputGrabber; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {nonretainedDelegate = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

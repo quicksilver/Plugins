@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>iCal Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSiCalModule</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>iCal Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.1</string>
+	<key>CFBundleVersion</key>
+	<string>C0</string>
+	<key>NSPrincipalClass</key>
+	<string>QSiCalModule</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSiCalCreateEventAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSiCalModule</string>
+			<key>actionSelector</key>
+			<string>createEvent:inCalendar:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.iCal</string>
+			<key>indirectOptional</key>
+			<true/>
+			<key>name</key>
+			<string>Create iCal Event</string>
+		</dict>
+		<key>QSiCalCreateToDoAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSiCalModule</string>
+			<key>actionSelector</key>
+			<string>createToDo:inCalendar:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.iCal</string>
+			<key>indirectOptional</key>
+			<true/>
+			<key>name</key>
+			<string>Create iCal To-Do</string>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Calendar</string>
+		</array>
+		<key>description</key>
+		<string>iCal Integration</string>
+		<key>extendedDescription</key>
+		<string>Adds actions for creating events and to-dos from text.</string>
+		<key>icon</key>
+		<string>com.apple.iCal</string>
+		<key>qsversion</key>
+		<string>31DE</string>
+	</dict>
+	<key>QSPresetAdditionsTemplate</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetQSiCalModule</string>
+			<key>name</key>
+			<string>QSiCalModule</string>
+			<key>source</key>
+			<string>QSiCalModule_Source</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSBundleDrawingHandlers</key>
+		<dict>
+			<key>com.apple.iCal</key>
+			<string>QSiCalModule</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>feature</key>
+		<integer>1</integer>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>iCal-Empty</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.apple.iCal</string>
+			<key>resource</key>
+			<string>App-empty.icns</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

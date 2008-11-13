@@ -1,0 +1,21 @@
+<element id="com.blacktree.Quicksilver.QSDeliciousPlugIn" name="Social Bookmarks" version="90">
+    <info>
+        <category>Web</category>
+        <image>del.icio.us</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="del.icio.us" class="[com.blacktree.Quicksilver.QSDeliciousPlugIn]:del.icio.us.png"></image-resource>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSDeliciousPlugIn_Source" class="QSDeliciousPlugIn_Source"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="us.icio.del.tag" class="QSDeliciousPlugIn_Source"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSDeliciousPlugIn_Action" class="QSDeliciousPlugIn_Action"></action-provider>
+        </extension>
+    </extensions>
+</element>

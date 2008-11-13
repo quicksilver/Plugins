@@ -1,0 +1,41 @@
+<element id="com.blacktree.Quicksilver.QSSymbolicHotKeyPlugIn" name="System HotKey Commands" version="5B">
+    <info>
+        <category>System</category>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetSymbolicHotKeys">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetSymbolicHotKeys</string>
+                        <key>name</key>
+                        <string>Exposé Commands</string>
+                        <key>source</key>
+                        <string>QSSymbolicHotKeyPlugIn</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="ExposéIcon">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.blacktree.Quicksilver.QSSymbolicHotKeyPlugIn</string>
+                        <key>resource</key>
+                        <string>Expose.icns</string>
+                    </dict>
+                </plist>
+            </image-resource>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSSymbolicHotKeyPlugIn" class="QSSymbolicHotKeyPlugIn"></object-source>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.apple.preference.expose" class="QSSymbolicHotKeyPlugIn"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

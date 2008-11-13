@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Nimbus Switcher</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSNimbusSwitcherPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Nimbus Switcher</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>83</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Blacktree, Inc.</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>description</key>
+		<string>Application Switcher</string>
+		<key>requiresFeature</key>
+		<string>3</string>
+		<key>webIcon</key>
+		<string></string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSApplicationSwitchers</key>
+		<dict>
+			<key>QSNimbusProcessSwitcher</key>
+			<string>QSNimbusProcessSwitcher</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

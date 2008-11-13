@@ -1,0 +1,66 @@
+{
+    IBClasses = (
+        {CLASS = APRomanWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                forceReloadCancel = id; 
+                forceReloadOK = id; 
+                genericConfirmCancel = id; 
+                genericConfirmHelp = id; 
+                genericConfirmOK = id; 
+                otherCancel = id; 
+                otherOK = id; 
+                pwCancel = id; 
+                pwOK = id; 
+                softResetCancel = id; 
+                softResetOK = id; 
+                softResetUseWEP = id; 
+            }; 
+            CLASS = SCPanelsController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                forceReloadBasePassword = id; 
+                forceReloadBaseVerify = id; 
+                forceReloadIPAddress = id; 
+                forceReloadOKButton = id; 
+                forceReloadPanel = id; 
+                genericConfirmBaseStationImage = id; 
+                genericConfirmCancel = id; 
+                genericConfirmHelpButton = id; 
+                genericConfirmMessage = id; 
+                genericConfirmOK = id; 
+                genericConfirmPanel = id; 
+                genericConfirmTitle = id; 
+                genericConfirmWarnSwitch = id; 
+                otherIPAddress = id; 
+                otherOKButton = id; 
+                otherPassword = id; 
+                otherPrompt = id; 
+                progressBar = id; 
+                progressBaseImage = id; 
+                progressPanel = id; 
+                progressText = id; 
+                pwAddKeychain = id; 
+                pwDescription = id; 
+                pwOKButton = id; 
+                pwPassword = id; 
+                pwPrompt = id; 
+                softResetBasePassword = id; 
+                softResetBaseVerify = id; 
+                softResetDisableRADIUSAuthentication = id; 
+                softResetIPAddress = id; 
+                softResetIPAddressLabel = id; 
+                softResetNetworkPassword = id; 
+                softResetNetworkPasswordLabel = id; 
+                softResetNetworkVerify = id; 
+                softResetNetworkVerifyLabel = id; 
+                softResetOKButton = id; 
+                softResetPanel = id; 
+                softResetUseWEP = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

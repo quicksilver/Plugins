@@ -1,0 +1,146 @@
+<element id="com.blacktree.Quicksilver.QSUIAccessPlugIn" name="User Interface Access" version="88">
+    <info>
+        <category>System</category>
+        <image>menu</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSUIElementPressAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSUIAccessPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>pressUIElement:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.ui.element</string>
+                        </array>
+                        <key>name</key>
+                        <string>Press</string>
+                        <key>precedence</key>
+                        <integer>3</integer>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSUIElementDoActionAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSUIAccessPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>uiElement:performAction:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.ui.element</string>
+                        </array>
+                        <key>feature</key>
+                        <integer>2</integer>
+                        <key>name</key>
+                        <string>Perform Action...</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSGetUIElementsAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSUIAccessPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>getUIElementForApplication:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <true></true>
+                        <key>feature</key>
+                        <integer>3</integer>
+                        <key>name</key>
+                        <string>Get UI Element</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSUIElementPickAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSUIAccessPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>pickUIElement:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.ui.element</string>
+                        </array>
+                        <key>name</key>
+                        <string>Select</string>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSPickMenusAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSUIAccessPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>appMenus:pickItem:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>name</key>
+                        <string>Menu Bar...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSPickMenuItemsAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSUIAccessPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>appMenus:pickItem:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>name</key>
+                        <string>Menu Bar Items...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSSearchMenuItemsAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSUIAccessPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>searchAppMenus:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>name</key>
+                        <string>Show Menu Items</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="qs.ui.element" class="QSUIAccessPlugIn_Source"></object-handler>
+            <object-handler id="qs.ui.action" class="QSUIAccessPlugIn_Source"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSUIAccessPlugIn_Action" class="QSUIAccessPlugIn_Action"></action-provider>
+        </extension>
+    </extensions>
+</element>

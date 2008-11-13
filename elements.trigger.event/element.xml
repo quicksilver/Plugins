@@ -1,0 +1,241 @@
+<element id="com.blacktree.Quicksilver.QSEventTriggersPlugIn" name="Event Triggers" version="6D">
+    <info>
+        <image>Event</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSProxies">
+            <object-proxy id="QSEventTriggerObjectProxy">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>Object</string>
+                        <key>name</key>
+                        <string>Event Trigger Object</string>
+                        <key>providerClass</key>
+                        <string>QSEventTriggerManager</string>
+                    </dict>
+                </plist>
+            </object-proxy>
+        </extension>
+        <extension point="QSTriggerManagers">
+            <trigger-manager id="QSEventTrigger" class="QSEventTriggerManager"></trigger-manager>
+        </extension>
+        <extension point="QSTriggerEvents">
+            <trigger-event id="QSApplicationQuitEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>allowMatching</key>
+                        <true></true>
+                        <key>icon</key>
+                        <string>GenericApplicationIcon</string>
+                        <key>name</key>
+                        <string>Application Quit</string>
+                        <key>provider</key>
+                        <string>QSProcessMonitor</string>
+                        <key>type</key>
+                        <string>Application</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSWorkspaceWillPowerOffEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>Computer</string>
+                        <key>name</key>
+                        <string>Computer Will Shut Down</string>
+                        <key>provider</key>
+                        <string>QSBasicEventTriggers</string>
+                        <key>type</key>
+                        <string>Computer</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSQuicksilverLaunchedAtLoginEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>Quicksilver</string>
+                        <key>name</key>
+                        <string>Quicksilver Launched (at Login)</string>
+                        <key>provider</key>
+                        <string>QSController</string>
+                        <key>type</key>
+                        <string>Application</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSWorkspaceDidMountEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>DriveIcon</string>
+                        <key>name</key>
+                        <string>Disk Inserted</string>
+                        <key>provider</key>
+                        <string>QSBasicEventTriggers</string>
+                        <key>type</key>
+                        <string>Disk</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSWorkspaceWillSleepEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>Computer</string>
+                        <key>name</key>
+                        <string>Computer Will Sleep</string>
+                        <key>provider</key>
+                        <string>QSBasicEventTriggers</string>
+                        <key>type</key>
+                        <string>Computer</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSQuicksilverWillQuitEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>Quicksilver</string>
+                        <key>name</key>
+                        <string>Quicksilver Will Quit</string>
+                        <key>provider</key>
+                        <string>QSController</string>
+                        <key>type</key>
+                        <string>Application</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSScreensaverStoppedEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>com.apple.ScreenSaver.Engine</string>
+                        <key>name</key>
+                        <string>Screen Saver Stopped</string>
+                        <key>provider</key>
+                        <string>QSBasicEventTriggers</string>
+                        <key>type</key>
+                        <string>Screen Saver</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSScreensaverStartedEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>com.apple.ScreenSaver.Engine</string>
+                        <key>name</key>
+                        <string>Screen Saver Started</string>
+                        <key>provider</key>
+                        <string>QSBasicEventTriggers</string>
+                        <key>type</key>
+                        <string>Screen Saver</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSQuicksilverLaunchedEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>Quicksilver</string>
+                        <key>name</key>
+                        <string>Quicksilver Launched</string>
+                        <key>provider</key>
+                        <string>QSController</string>
+                        <key>type</key>
+                        <string>Application</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSWorkspaceSessionDidResignActiveEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>Computer</string>
+                        <key>name</key>
+                        <string>Fast Logout</string>
+                        <key>provider</key>
+                        <string>QSBasicEventTriggers</string>
+                        <key>type</key>
+                        <string>Computer</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSWorkspaceSessionDidBecomeActiveEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>Computer</string>
+                        <key>name</key>
+                        <string>Fast Login</string>
+                        <key>provider</key>
+                        <string>QSBasicEventTriggers</string>
+                        <key>type</key>
+                        <string>Computer</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSWorkspaceDidWakeEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>Computer</string>
+                        <key>name</key>
+                        <string>Computer Woke Up</string>
+                        <key>provider</key>
+                        <string>QSBasicEventTriggers</string>
+                        <key>type</key>
+                        <string>Computer</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSWorkspaceDidUnmountEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>DriveIcon</string>
+                        <key>name</key>
+                        <string>Disk Was Ejected</string>
+                        <key>provider</key>
+                        <string>QSBasicEventTriggers</string>
+                        <key>type</key>
+                        <string>Disk</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSWorkspaceWillUnmountEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>DriveIcon</string>
+                        <key>name</key>
+                        <string>Disk Will Eject</string>
+                        <key>provider</key>
+                        <string>QSBasicEventTriggers</string>
+                        <key>type</key>
+                        <string>Disk</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+            <trigger-event id="QSApplicationLaunchEvent">
+                <plist version="1.0">
+                    <dict>
+                        <key>allowMatching</key>
+                        <true></true>
+                        <key>icon</key>
+                        <string>GenericApplicationIcon</string>
+                        <key>name</key>
+                        <string>Application Launched</string>
+                        <key>provider</key>
+                        <string>QSProcessMonitor</string>
+                        <key>type</key>
+                        <string>Application</string>
+                    </dict>
+                </plist>
+            </trigger-event>
+        </extension>
+    </extensions>
+</element>

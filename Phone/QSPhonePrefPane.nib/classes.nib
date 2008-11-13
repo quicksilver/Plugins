@@ -1,0 +1,32 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = NSPreferencePane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_firstKeyView" = NSView; 
+                "_initialKeyView" = NSView; 
+                "_lastKeyView" = NSView; 
+                "_window" = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {selectCountry = id; setValueForSender = id; testStringChanged = id; }; 
+            CLASS = QSPhonePrefPane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                callTypePopUp = NSPopUpButton; 
+                countryPopUp = NSPopUpButton; 
+                prefixField = NSTextField; 
+                suffixField = NSTextField; 
+                testInput = NSTextField; 
+                testOutput = NSTextField; 
+                useDefaultSwitch = NSButton; 
+            }; 
+            SUPERCLASS = NSPreferencePane; 
+        }
+    ); 
+    IBVersion = 1; 
+}

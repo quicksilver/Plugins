@@ -1,0 +1,23 @@
+//
+// Prefix header for all source files of the 'QSMusicSupport' target in the 'QSMusicSupport' project
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+
+#if 1
+
+#import <QSElements/QSElements.h>
+#import <QSBase/QSBase.h>
+#else
+
+#warning blahde
+#import <QSFoundation/QSFoundation.h>
+#import <QSCore/QSCore.h>
+#endif
+
+
+#endif
+
+
+#define kQSMusicSupportType @"QSMusicSupportType"

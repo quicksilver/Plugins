@@ -1,0 +1,221 @@
+<html>
+<head>
+<title>MTBuffer</title>
+</head>
+
+<body>
+<h1>MTBuffer</h1>
+<p>
+<strong>MTBuffer</strong> is an abstract class that implements a <a href="#disc-generalized">generalized</a>,
+<a href="#disc-thread-safe">thread-safe</a>,
+<a href="#disc-flow-controlled">flow-controlled, fixed-size buffer</a>.
+
+<h2>Discussion</h2>
+<p>
+<a name="disc-generalized"></a>
+MTBuffer is intended to be subclassed to store and retrieve actual data.  MTBuffer is based on the notion of an <i>abstract frame</i>,
+which may be a byte, or an arbitrary number of simultaneous, de-interleaved audio samples, or in fact anything that can be sequential.
+An MTBuffer is structured as a finite ring of abstract frames.  The nature of the ring is hidden from the outside; it is
+an implementation detail.  Wrap-around at the end of the ring is handled by MTBuffer; most subclasses will be able to
+ignore this.
+
+<p>
+<a name="disc-thread-safe"></a>
+Multiple threads may read and write on an MTBuffer simultaneously.  Their operations will be coordinated and consistent.
+
+<p>
+<a name="disc-flow-controlled"></a>
+An MTBuffer can hold up to a fixed number of abstract frames simultaneously.  However, when using waiting operations,
+an arbitrary number of abstract frames may flow from a writer thread to a reader thread in a single method invocation.
+When writing frames, if the buffer fills to capacity, it can either wait for room to become available by another thread
+reading, or just do as much as it can immediately.  Unread data in the buffer will not be overwritten.  Likewise,
+when reading frames, if the buffer becomes empty, it can either wait for more data to be written, or just
+do as much as it can immediately with data on hand.  Reading and writing operations signal each other to
+convey the availability, or lack thereof, of data and free space.
+
+<h4>Subclassing Guidelines</h4>
+<p>
+A subclass should provide its designated initializer to initialize its actual buffer and any other data
+needed.  It should invoke <code>[super <a href="#initWithCapacity:">initWithCapacity:</a>]</code>.  A subclass
+must provide concrete methods specific to its nature for reading and writing.  These methods will create
+a context block, specific to the subclass and opaque to MTBuffer, that will be passed by way of MTBuffer's
+<a href="#readToContext:count:waitForData:">readToContext:count:waitForData:</a>
+and
+<a href="#writeFromContext:count:waitForRoom:">writeFromContext:count:waitForRoom:</a>
+to the subclass's
+<a href="#performReadToContext:offset:count:">performReadToContext:offset:count:</a>
+and
+<a href="#performWriteFromContext:offset:count:">performWriteFromContext:offset:count:</a>
+methods.  These methods implement the
+actual data copying between user data and the concrete buffer.
+
+<p>
+See the implementation of <a href="MTByteBuffer.html">MTByteBuffer</a> for an example of a concrete
+subclass of MTBuffer.
+
+<h2>Method Types</h2>
+<hr>
+<ul plain>
+	<li>Creating instances
+	<ul plain>
+		<br>
+		<li> <a href="#initWithCapacity:">- initWithCapacity:</a>
+	</ul>
+
+	<br>
+	<li>Working with attributes
+	<ul plain>
+		<br>
+		<li> <a href="#capacity">- capacity</a>
+		<li> <a href="#count">- count</a>
+	</ul>
+	
+	<br>
+	<li>Working with data
+	<ul plain>
+		<br>
+		<li> <a href="#flush">- flush</a>
+		<li> <a href="#readToContext:count:waitForData:">- readToContext:count:waitForData:</a>
+		<li> <a href="#writeFromContext:count:waitForRoom:">- writeFromContext:count:waitForRoom:</a>
+	</ul>
+	
+	<br>
+	<li>Methods to be implemented by subclasses
+	<ul plain>
+		<br>
+		<li> <a href="#bufferDidEmpty">- bufferDidEmpty</a>
+		<li> <a href="#performReadToContext:offset:count:">- performReadToContext:offset:count:</a>
+		<li> <a href="#performWriteFromContext:offset:count:">- performWriteFromContext:offset:count:</a>
+	</ul>
+
+	<br>
+</ul>
+
+
+<h2>Instance Methods</h2>
+<hr>
+
+<h3><a name="bufferDidEmpty">bufferDidEmpty</a></h3>
+<code>- (void) bufferDidEmpty</code>
+<br><br>
+You should never send this message directly.
+Method to be implemented by subclasses, to perform any needed housekeeping or any other function.
+This message is sent when a read operation leaves the buffer empty.
+This message is sent while the buffer is is locked, so care should be taken
+not to perform non-real-time-safe operations if the buffer may be used
+with real-time constraints.  The default implementation does nothing.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="capacity">capacity</a></h3>
+<code>- (unsigned) capacity</code>
+<br><br>
+Returns the capacity of the receiver in abstract frames.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="count">count</a></h3>
+<code>- (unsigned) count</code>
+<br><br>
+Returns the number of abstract frames currently stored in the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="flush">flush</a></h3>
+<code>- (void) flush</code>
+<br><br>
+Empties the receiver.  Sends <a href="#bufferDidEmpty">bufferDidEmpty</a> to the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="initWithCapacity:">initWithCapacity:</a></h3>
+<code>- (id) initWithCapacity:(unsigned)capacity</code>
+<br><br>
+Initializes a newly allocated buffer with space for <i>capacity</i> abstract frames.  This is the designated initializer.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="performReadToContext:offset:count:">performReadToContext:offset:count:</a></h3>
+<code>- (void) performReadToContext:(void *)theContext offset:(unsigned)theOffset count:(unsigned)count</code>
+<br><br>
+You should never send this message directly.  Subclasses <strong>must</strong> override
+this method to implement the actual data copying appropriate for that class.
+This message is sent to the receiver by
+<a href="#readToContext:count:waitForData:">readToContext:count:waitForData:</a>
+one or more times to copy <i>count</i> sequential abstract frames from the
+receiver's buffer, starting at abstract frame <i>theOffset</i>,
+to the current position in <i>theContext</i>.
+The implementation is responsible for advancing the current position in <i>theContext</i>
+by <i>count</i> abstract frames in the appropriate manner.
+<i>theOffset</i> plus <i>count</i> will not exceed the
+<a href="#capacity">capacity</a> of the buffer, nor
+<a href="#count">count</a>.
+The default implementation of this method does nothing.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="performWriteFromContext:offset:count:">performWriteFromContext:offset:count:</a></h3>
+<code>- (void) performWriteFromContext:(void *)theContext offset:(unsigned)theOffset count:(unsigned)count</code>
+<br><br>
+You should never send this message directly.  Subclasses <strong>must</strong> override
+this method to implement the actual data copying appropriate for that class.
+This message is sent to the receiver by
+<a href="#writeFromContext:count:waitForRoom:">writeFromContext:count:waitForRoom:</a>
+one or more times to copy <i>count</i> sequential abstract frames from the
+current position in <i>theContext</i>
+into the receiver's buffer, starting at abstract frame <i>theOffset</i> of the receiver's
+buffer.
+The implementation is responsible for advancing the current position in <i>theContext</i>
+by <i>count</i> abstract frames in the appropriate manner.
+<i>theOffset</i> plus <i>count</i> will not exceed the
+<a href="#capacity">capacity</a> of the buffer, nor the amount of room remaining.
+The default implementation of this method does nothing.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="readToContext:count:waitForData:">readToContext:count:waitForData:</a></h3>
+<code>- (unsigned) readToContext:(void *)theContext count:(unsigned)count waitForData:(Boolean)wait</code>
+<br><br>
+You should never send this message directly.  Subclasses will send this message to <i>self</i>
+to cause <i>count</i> abstract frames to be copied from the receiver's buffer into
+<i>theContext</i> by sending
+<a href="#performReadToContext:offset:count:">performReadToContext:offset:count:</a>
+to the receiver as many times as necessary.  If <i>wait</i> is <code>NO</code>, then
+a maximum of <a href="#count">[receiver count]</a> frames will be copied into <i>theContext</i>.
+If <i>wait</i> is <code>YES</code>, then all of the requested frames will be copied, pausing
+as necessary for frames from
+<a href="#writeFromContext:count:waitForRoom:">writeFromContext:count:waitForRoom:</a>s
+to be added to the buffer.  May cause
+<a href="#bufferDidEmpty">bufferDidEmpty</a>
+to be sent to the receiver one or more times, if the buffer becomes empty,
+is refilled, empties again, etc. while this method is processed.
+Returns the number of frames copied.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="writeFromContext:count:waitForRoom:">writeFromContext:count:waitForRoom:</a></h3>
+<code>- (unsigned) writeFromContext:(void *)theContext count:(unsigned)count waitForRoom:(Boolean)wait</code>
+<br><br>
+You should never send this message directly.  Subclasses will send this message to <i>self</i>
+to cause <i>count</i> abstract frames to be copied from <i>theContext</i>
+into the receiver's buffer by sending
+<a href="#performWriteFromContext:offset:count:">performWriteFromContext:offset:count:</a>
+to the receiver as many times as necessary.  If <i>wait</i> is <code>NO</code>, then
+a maximum of the currently available space in the buffer will be copied from <i>theContext</i>.
+If <i>wait</i> is <code>YES</code>, then all of the requested frames will be copied, pausing
+as necessary for space to become available by
+<a href="#readToContext:count:waitForData:">readToContext:count:waitForData:</a>s
+removing frames from the buffer.  Returns the number of frames copied.
+<br><br>
+<hr width="25%" align=left>
+
+
+<hr>
+
+<a href="http://aldebaran.armory.com/~zenomt/">Mike</a> &gt;
+<a href="http://aldebaran.armory.com/~zenomt/macosx/">Mac OS X</a> &gt;
+<a href="./index.html">MTCoreAudio.framework</a> &gt;
+MTBuffer
+
+</body>
+</html>

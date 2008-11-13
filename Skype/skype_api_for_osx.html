@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Share Skype - Skype API for OSX</title>
+<meta name="title" content="Skype API for OSX" />
+<meta name="author" content="mat.taylor" />
+<meta name="description" content="Skype - Free Internet telephony that just works" />
+<meta name="keywords" content="Skype - Free Internet telephony that just works" />
+<meta name="Generator" content="Mambo - Copyright 2000 - 2005 Miro International Pty Ltd.  All rights reserved." />
+<meta name="robots" content="index, follow" />
+<base href="http://share.skype.com/" />
+	<link rel="shortcut icon" href="http://share.skype.com/images/favicon.ico" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="templates/skype_sdp/css/template_css.css" type="text/css" media="screen" />
+	<script type="text/javascript">
+	//<![CDATA[
+	function showlogin() {
+		var nologin = document.getElementById("nologin");
+		nologin.style.display = "none";
+		var showlogin = document.getElementById("showlogin");
+		showlogin.style.display = "block";
+		return false;
+	}
+	//]]>
+	</script>
+	<link href="http://share.skype.com/stats_rss.xml" rel="alternate" type="application/rss+xml" title="Skype Statistics Live Feed (RSS2.0)" />
+	<link href="http://share.skype.com/extras.xml" rel="alternate" type="application/rss+xml" title="Extras Gallery Feed (RSS2.0)" />
+	<link href="http://share.skype.com/sdpblog.xml" rel="alternate" type="application/rss+xml" title="Developer Blog Feed (RSS2.0)" />
+	<link href="http://share.skype.com/index2.php?option=com_rss&feed=RSS2.0&no_html=1" rel="alternate" type="application/rss+xml" title="Share Skype News Feed (RSS2.0)" />
+	<link href="http://share.skype.com/index2.php?option=com_rss&feed=ATOM0.3&no_html=1" rel="alternate" type="application/rss+xml" title="Share Skype News Feed (ATOM)" />
+</head>
+<body>
+
+<div id="logo"><a href="/"><img src="templates/skype_sdp/i/logos/skype.png" width="130" height="59" alt="Skype" title="Go to ShareSkype.com homepage" /></a></div>
+<div id="header"><img src="templates/skype_sdp/i/images/header.png" width="750" height="86" alt="Share Skype" /></div>
+
+<div id="container">
+	<div id="sidebar">
+
+		<div id="nologin">
+			<div id="hidden-login-box" class="not-signed">
+					<h3><a href="/login/" onclick="return showlogin();">Sign in to your account</a></h3>
+			</div>
+		</div>
+
+	
+		<div id="showlogin">
+			<div id="login-box" class="signed-in">
+				<h3>Sign in to your account</h3>
+			<form action="https://share.skype.com/index.php" method="post" id="login-form">
+					<label for="skypename">Skype Name</label>
+					<input type="text" id="skypename" name="username" tabindex="1" maxlength="32" />
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" tabindex="2" maxlength="20" />
+					<div class="buttons floatl"><input type="submit" class="submit" name="login" value="Sign me in" tabindex="4" /></div>
+					<div class="floatr"><label><input type="checkbox" tabindex="3" />Remember me</label></div>
+					<input type="hidden" name="option" value="com_skypelogin" />
+					<input type="hidden" name="task" value="login" />
+					<input type="hidden" name="return" value="/index.php?option=com_content&task=view&id=157&Itemid=129" />
+				</form>
+				<div class="clearer"></div>
+			</div>
+		</div>
+	
+		
+		
+<div class="moduleMainMenu">
+
+<ul>
+<li><a href="http://share.skype.com/share/developer_blog/">Developer Blog</a></li>
+<li><a href="http://share.skype.com/directory/">Extras Gallery</a></li>
+<li class="selected"><a href="http://share.skype.com/developer_zone/documentation/documentation/">Documentation</a>
+<ul>
+<li><a href="http://share.skype.com/developer_zone/documentation/api_v1.3_documentation/">API Documentation</a></li>
+<li><a href="http://share.skype.com/developer_zone/documentation/skype_api_for_linux/">API on Linux</a></li>
+<li class="selected"><a href="http://share.skype.com/developer_zone/documentation/skype_api_for_osx/">API for Mac OS X</a></li>
+<li><a href="/directory/development/">Development Tools</a></li>
+</ul></li>
+<li><a href="http://share.skype.com/developer_zone/competition/skype_api_developer_competition/">Competition</a></li>
+<li><a href="http://share.skype.com/developer_zone/developer_zone/forums/">Forums</a></li>
+<li><a href="http://share.skype.com/developer_zone/licensing/api_use_guidelines/">Licensing</a></li>
+<li><a href="http://share.skype.com/developer_zone/certification/certification_program/">Certification</a></li>
+</ul>
+
+</div>
+
+<div class="module"><h3>Featured Extra</h3>
+
+<p><a href="http://share.skype.com/directory/jyve%3a_%e2%80%9cskype_interactive%e2%80%9d_web_community/view/">Jyve: “Skype Interactive” Web Community</a></p>
+<p>Jyve.com is the first fully “Skype Interactive” community on the web leveraging the Skype API. I...</p>
+<p><img src="templates/skype_sdp/i/images/star_4.gif" class="stars" border="0" align="absmiddle" /><small><span>|</span> 3377 views <span>|</span> NA </small></p>
+
+
+</div>
+
+<div class="module"><h3>Search</h3>
+<div class="wrap">
+	<form action="index.php" method="get">
+	<input type="hidden" name="option" value="search" />	
+	<input type="hidden" name="Itemid" value="124" />	
+	<input alt="search" class="inputbox" type="text" name="searchword" size="15" value="search..."  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" /><input type="submit" value="Search" class="button"/>		
+		</form>
+</div>
+
+
+</div>
+		
+	</div>
+	
+	<div id="globalnavi">
+		<ul class="gnav">
+			<li><a href="http://www.skype.com/" title="Skype.com">Skype.com</a></li>
+			<li><a href="http://share.skype.com/" title="Share Skype">Share Skype</a></li>
+			<li class="selected"><a href="http://share.skype.com/sdp" title="Skype Developers Program">Developers</a></li>
+			<li><a href="http://www.skype.com/store" title="Store">Store</a></li>
+			<li ><a href="http://support.skype.com/" title="Help">Help</a></li>
+		</ul>
+	</div>
+	
+	<div id="content">
+					<table class="contentpaneopen">
+			<tr>
+								<td class="contentheading" width="100%">
+				Skype API for OSX								</td>
+							</tr>
+			</table>
+			
+		<table class="contentpaneopen">
+					<tr>
+				<td width="70%" align="left" valign="top" colspan="2">
+				<span class="post-info">
+				By <a href="/profiles/view/17,mat.taylor">
+				mat.taylor</a>. <span title="Thursday, 11 August 2005">Posted 1 week, 6 days ago</span>
+				 in 
+				<a href="http://share.skype.com/share/documentation/">Documentation</a>.
+								</span>
+				</td>
+			</tr>
+					<tr>
+			<td valign="top" colspan="2">
+			<p><strong>Introduction</strong></p>
+
+<ul>
+<li> <a href="http://www.skype.com/go/getskype-macosx-beta.dmg">Download the latest Skype for Mac beta.</a> API is supported in version 1.0.0.46 or greater - so the current non beta version is not supported at the moment.</li>
+<li> <a href="http://download.skype.com/share/devzone/example_macosx.dmg">Download Skype.framework.</a></li>
+<li> <a href="/developer_zone/documentation/api_v1.3_documentation/">Review the Skype API protocol documentation.</a></li>
+</ul>
+
+<p>
+Skype API for Mac has currently <a href="http://share.skype.com/developer_zone/documentation/skype_api_for_osx/#cocoa">Cocoa</a>, <a href="http://share.skype.com/developer_zone/documentation/skype_api_for_osx/#carbon">Carbon</a> and <a href="http://share.skype.com/developer_zone/documentation/skype_api_for_osx/#ascript">AppleScript</a> interfaces. Cocoa and Carbon interfaces are implemented in Skype.framework. The recommended way to use the Skype framework is to include it in your application as an embedded framework. Copy it into your application bundle and link it to your application.
+</p>
+
+<p>
+Client applications can control Skype by sending string commands. The format of these strings commands is described in Skype API protocol documentation. If you are using Cocoa or Carbon interface, then Skype will send information back to your application by calling asynchronous delegate functions/methods (see below).
+</p>
+
+<h2><a name="cocoa"> Cocoa </a></h2>
+
+<h3>Skype Delegate Object</h3>
+
+<h4>Required Method</h4>
+
+<p>
+Design an object in your application to be a Skype delegate. This object must implement the following method:
+</p>
+
+<pre>   @protocol</font> SkypeAPIDelegate
+      (NSString*)clientApplicationName;
+   @end</pre>
+<p>
+This method should return the name of your application. This name will be shown to the user, when your application uses Skype. The name should not include any version information.
+</p>
+<h4>Optional methods</h4>
+<p>
+In order to receive information from Skype, it is recommended that you implement the following methods in your application:
+</p>
+<pre>   <span class="code"> ( void ) skypeNotificationReceived:(NSString*)aNotificationString;</pre>
+<p>
+This is the main delegate method Skype uses to send information to your application. <i> aNotificationString </i> is a Skype API string as described in Skype API protocol documentation.
+</p>
+<pre>   (void) skypeAttachResponse:(unsigned)aAttachResponseCode;
+</pre>
+
+<p>
+This method is called after Skype API client application has called <i>
+<span class="code"> [SkypeAPI connect];. aAttachResponseCode </span>
+</i>
+is 0 on failure and 1 on success.
+</p>
+
+<pre>   (void) skypeBecameAvailable:(NSNotification*)aNotification;</pre>
+<p>This method is called after Skype has been launched.</p>
+<pre>
+   (void) skypeBecameUnavailable:(NSNotification*)aNotification;
+</pre>
+
+<p>
+This method is called after Skype has quit.
+</p>
+
+<h4>Guidelines</h4>
+
+<p>
+The first method your application should call is 
+</p>
+
+<pre>   (void) setSkypeDelegate:(NSObject<SkypeAPIDelegate>*)aDelegate,</pre>
+
+<p>
+where <i>aDelegate</i> is your Skype delegate object. In most implementations, that will probably be: 
+</p>
+
+<pre>   [SkypeAPI setSkypeDelegate:self];</pre>
+
+<p>
+Next, you should call 
+</p>
+
+<pre>   [SkypeAPI connect];</pre>
+
+<p>
+After you have received positive response with 
+</p>
+
+<pre>   (void) skypeAttachResponse:(unsigned)aAttachResponseCode,</pre>
+
+<p>
+you can start sending commands to Skype by using + 
+</p>
+
+<pre>   (void) sendSkypeCommand:(NSString*)aCommandString,</pre>
+
+<p>
+where <i> aCommandString </i> is command string as described in Skype API protocol documentation. For example:
+</p>
+
+<pre>   [SkypeAPI sendSkypeCommand:@"CALL echo123"];</pre>
+
+<p>
+When your application quits or wants to disconnect from Skype, you should call 
+</p>
+
+<pre>   [SkypeAPI disconnect];</pre>
+
+<h2> <a name="carbon"> Carbon </a></h2>
+
+<h3>Skype Delegate Struct</h3>
+
+<p>
+In order to use Skype API, you must create a single instance of struct <i> SkypeDelegate </i>. If you set callback functions for the members of this struct, then Skype will call these functions to send information to your application. The only required member of this struct is a string <i>clientApplicationName </i>. This name will be shown to the user, when your application uses Skype.  The name should not include version information. 
+</p>
+
+<p>
+Here is the definition of <i> SkypeDelegate </i>:
+</p>
+
+<pre>   struct SkypeDelegate {
+      // Required member
+      CFStringRef clientApplicationName;
+      // Optional members, can be NULL
+      void (*SkypeNotificationReceived) (CFStringRef aNotificationString);
+      void (*SkypeAttachResponse)(unsigned int aAttachResponseCode);
+      void (*SkypeBecameAvailable)(CFPropertyListRef aNotification);
+      void (*SkypeBecameUnavailable)(CFPropertyListRef aNotification);
+   };</pre>
+
+<p>
+In order to receive information from Skype, it is recommended that you implement the following callback functions and set them in the <i> SkypeDelegate  </i>struct:
+</p>
+
+<pre>   void (*SkypeNotificationReceived)(CFStringRef aNotificationString);</pre>   
+
+<p>
+This is the main delegate method Skype uses to send information to your application. aNotificationString is a Skype API string as described in Skype API protocol documentation.
+</p>
+
+<pre>   void (*SkypeAttachResponse)(unsigned int aAttachResponseCode);</pre>
+
+<p>
+This method is called after Skype API client application has called     
+</p>
+
+<pre>   ConnectToSkype()</pre>
+
+<p> <i> aAttachResponseCode </i> is 0 on failure and 1 on success.
+</p>
+
+<pre>   void (*SkypeBecameAvailable)(CFPropertyListRef aNotification);</pre>    
+
+<p>
+This method is called after Skype has been launched.
+</p>
+
+<pre>   void (*SkypeBecameUnavailable)(CFPropertyListRef aNotification);</pre>
+
+<p>
+This method is called after Skype has quit.
+</p>
+
+<p>
+You should define the functions like this:
+</p>
+
+<pre>   void SkypeNotificationReceived(CFStringRef aNotificationString){}
+   void SkypeAttachResponse(unsigned int aAttachResponseCode){}
+   void SkypeBecameAvailable(CFPropertyListRef aNotification){}
+   void SkypeBecameUnavailable(CFPropertyListRef aNotification){}</pre>
+
+<p>
+and you can set them as members of your <i> SkypeDelegate </i> struct like so:
+</p>
+
+<pre>   SkypeDelegate mySkypeDelegate;
+   mySkypeDelegate.SkypeNotificationReceived = SkypeNotificationReceived;
+   mySkypeDelegate.SkypeAttachResponse = SkypeAttachResponse;
+   mySkypeDelegate.SkypeBecameAvailable = SkypeBecameAvailable;
+   mySkypeDelegate.SkypeBecameUnavailable = SkypeBecameUnavailable;
+   mySkypeDelegate.clientApplicationName = CFSTR("My Carbon App");</pre>
+
+<h4>Guidelines</h4>
+
+<p>
+The first method your application should call is
+</p>
+
+<pre>   void SetSkypeDelegate(struct SkypeDelegate* aDelegate),</pre>
+
+<p>
+where <i> aDelegate </i> is your <i> SkypeDelegate </i> struct. In most implementations, that will probably be:
+</p>
+
+<pre>   SetSkypeDelegate(&myCarbonDelegate);</pre>
+
+<p>
+Next, you should call 
+</p>
+
+<pre>   ConnectToSkype();</pre>
+
+<p>
+After you have received positive response with 
+</p>
+
+<pre>   void (*SkypeAttachResponse)(unsigned int aAttachResponseCode),</pre>
+
+<p>
+you can start sending commands to Skype by using 
+</p>
+
+<pre>   void SendSkypeCommand(CFStringRef aCommandString),</pre>
+
+<p>
+where <i> aCommandString </i> is command string as described in Skype API protocol documentation. For example: 
+</p>
+
+<pre>   SendSkypeCommand(CFSTR("CALL echo123"));</pre>
+
+<p>
+When your application quits or wants to disconnect from Skype, you should 
+</p>
+
+<pre>   call DisconnectFromSkype();</pre>
+
+<p>
+<h2><a name="ascript"> AppleScript </a> </h2>
+<p>
+There is just one command for Skype API, but it is a very powerful command, because you can send most of the command strings as specified in Skype API protocol documentation.
+</p>
+
+<p>
+Examples:
+</p>
+
+<pre>   tell application "Skype"
+      send command "MESSAGE echo123 check" script name "My Script"
+   end tell
+
+   tell application "Skype"
+      send command "CALL echo123" script name "My Other Script"
+   end tell</pre>
+
+<p><a name="readmore"></a></p>
+
+<div id="comments">
+	<h2>2 comments <small>Please <a href="http://share.skype.com/developer_zone/documentation/skype_api_for_osx/#commenting">let us hear</a> yours as well</small></h2>
+	
+	<div class="post-comment">
+		<span class="head"><a href="/profiles/view/91540,jsena_paris">jsena_paris</a> Posted Tuesday, 16 August 2005</span>
+		<span class="post">Malgré que je ne sais pas parler l'allemand... mais j'ai fais la traduction et bien... ce que je peux vous dire c'est q "Skype" c'est merveilleux, parce que nous permis, en temps réel communiquer avec d'autres personnes au mond entier.<br />Moi, je l'utilise à parler avec mes amis du Brézil.<br />À bientôt.<br />João</span>
+	</div>
+	
+	<div class="post-comment">
+		<span class="head"><a href="/profiles/view/91559,cargamax">cargamax</a> Posted Tuesday, 16 August 2005</span>
+		<span class="post">The Carbon API produces warnings about missing autoreleased pools. Are the C-wrapper functions properly implemented? Do they initialize and then release a pool, as indicated here: <a href="http://developer.apple.com/documentation/Cocoa/Conceptual/" rel="nofollow">http://developer.apple.com/documentation/Cocoa/Conceptual/</a>
+CarbonCocoaDoc/Articles/CocoaInCarbon.html</span>
+	</div>
+	
+</div>
+
+<div id="trackbacks">
+	<h2>1 trackback <small>Please <a href="http://share.skype.com/trackback/?id=157">trackback</a> yours as well</small></h2>
+	
+	<div class="post-comment">
+		<span class="head"><a href="http://www.cmittendorf.de/?p=35">Skype programmieren unter Mac OS X</a> Posted 1 week, 5 days ago</span>
+		<span class="post"><p align="left"><small>Received from: Schreibtischnotizen</small></p>
+		<blockquote>Heute hat Skype die Macintosh Version seines Programmier Schnittstelle (API) ver&ouml;ffentlicht. Sie ist f&uuml;r Cocoa, Carbon und AppleScript verf&uuml;gbar und erlaubt Entwicklern den Zugriff auf die Skype Software und seine Funktionen, um diese i...</blockquote>
+		</span>
+	</div>
+	
+</div>
+
+<div class="commenting">
+			<p><strong>Your comment</strong><br />
+			You need to sign in before you can post comments. If you do not have a Skype Name, please <a href="http://www.skype.com/go/download">download Skype</a> to create one.</p>
+			<form name="form1" method="post" action="https://share.skype.com/index.php">
+			<table class="form">
+			<col width="237" />
+			<col width="20" />
+			<col width="237" />
+			<tr>
+				<td>
+				<label for="fullname">Skype Name</label>
+				<input type="text" style="width: 100%;" name="username" id="skypename" tabindex="100" maxlength="32">
+				</td>
+				<td></td>
+				<td>
+				<label for="email">Password</label>
+				<input type="password" style="width: 100%;" name="password" id="password" tabindex="101" maxlength="20">
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<div class="buttons"><input type="submit" class="submit" name="login" value="Sign me in" tabindex="102" /></div>
+				</td>
+				<td></td>
+				<td align="right">
+				<label><input type="checkbox" tabindex="103" />Remember me</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+				<label for="contents" class="gray">Your comments <small>HTML not allowed</small></label>
+				<textarea name="contents" id="contents" style="width: 100%; height: 170px;" disabled="disabled"></textarea>
+				</td>
+			</tr>
+			</table>
+			<input type="submit" name="submit" value="Preview" class="submit" disabled="disabled" />
+			<input type="hidden" name="option" value="com_skypelogin" />
+			<input type="hidden" name="task" value="login" />
+			<input type="hidden" name="return" value="http://share.skype.com/index.php?option=com_content&task=view&id=157&Itemid=129#comments" />
+			</form>
+</div>
+			</td>
+		</tr>
+				</table>
+			</div>
+	
+	<div class="clearer"></div>
+
+	<div id="sidebar-footer">&copy; 2002-2005 by Skype Technologies S.A.<br /><a href="http://skype.com/company/legal/terms/tos_web.html#hdr-website">Legal information</a></div>
+	<div id="footer">
+	</div>
+</div>
+
+</body>
+
+</html><!-- 1124886831 -->

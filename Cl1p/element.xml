@@ -1,0 +1,38 @@
+<element id="com.blacktree.Quicksilver.QSCl1pPlugIn" name="Cl1p Upload" version="3A">
+    <info>
+        <category>Web</category>
+        <category>Text</category>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSCl1pPostAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSCl1pPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>uploadToClip:usingName:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <false></false>
+                        <key>indirectOptional</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Post to Cl1p...</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSCl1pPlugInAction" class="QSCl1pPlugInAction"></action-provider>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'QS Displays Module' target in the 'QS Displays Module' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+    #import <AddressBook/AddressBook.h>
+#endif

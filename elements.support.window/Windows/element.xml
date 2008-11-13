@@ -1,0 +1,133 @@
+<element id="com.blacktree.Quicksilver.QSWindowManipulationPlugIn" name="Window Management Module" version="A9">
+    <info>
+        <image>Window</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetOpenWindows">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetOpenWindows</string>
+                        <key>name</key>
+                        <string>Open Windows</string>
+                        <key>source</key>
+                        <string>QSWindowObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSWindowSetLevelAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSWindowModule_Action</string>
+                        <key>actionSelector</key>
+                        <string>setWindow:level:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSWindowSetIgnoresMouseAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSWindowModule_Action</string>
+                        <key>actionSelector</key>
+                        <string>setWindow:ignoresMouse:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSWindowSelectAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSWindowModule_Action</string>
+                        <key>actionSelector</key>
+                        <string>selectWindow:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>Apple URL pasteboard type</string>
+                        </array>
+                        <key>rankModification</key>
+                        <real>2</real>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSWindowSetHasShadowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSWindowModule_Action</string>
+                        <key>actionSelector</key>
+                        <string>setWindow:hasShadow:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSWindowSetAlphaAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSWindowModule_Action</string>
+                        <key>actionSelector</key>
+                        <string>setWindow:alpha:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSWindowSetScaleAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSWindowModule_Action</string>
+                        <key>actionSelector</key>
+                        <string>setWindow:scale:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSTypeDefinitions">
+            <object-type id="qs.windowid">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>Window</string>
+                        <key>name</key>
+                        <string>Windows</string>
+                    </dict>
+                </plist>
+            </object-type>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSWindowObjectSource" class="QSWindowObjectSource"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="qs.windowid" class="QSWindowObjectSource"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSWindowModule_Action" class="QSWindowModule_Action"></action-provider>
+        </extension>
+    </extensions>
+</element>

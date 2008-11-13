@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Teleflip Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSTeleflipPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Teleflip Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>28</string>
+	<key>NSPrincipalClass</key>
+	<string>QSTeleflipPlugIn</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSTeleflipSMSAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSTeleflipPlugIn</string>
+			<key>actionSelector</key>
+			<string>sendSMS:toPhone:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>ContactPhone</string>
+			<key>name</key>
+			<string>SMS via Teleflip...</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>QSTeleflipSMSReverseAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSTeleflipPlugIn</string>
+			<key>actionSelector</key>
+			<string>sendSMS:toPhone:</string>
+			<key>directTypes</key>
+			<array>
+				<string>qs.contact.phone</string>
+			</array>
+			<key>icon</key>
+			<string>ContactPhone</string>
+			<key>name</key>
+			<string>SMS Text via Teleflip...</string>
+			<key>precedence</key>
+			<integer>1</integer>
+			<key>reverseArguments</key>
+			<true/>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Mail &amp; Chat</string>
+		</array>
+		<key>description</key>
+		<string>Send SMS messages via Teleflip</string>
+		<key>icon</key>
+		<string></string>
+		<key>qsversion</key>
+		<string>29CC</string>
+		<key>relatedBundles </key>
+		<array/>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSTeleflipPlugIn</key>
+			<string>QSTeleflipPlugIn</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>feature</key>
+		<integer>2</integer>
+		<key>plugins</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>com.blacktree.Quicksilver.QSEmailSupport</string>
+				<key>name</key>
+				<string>Mail Support</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

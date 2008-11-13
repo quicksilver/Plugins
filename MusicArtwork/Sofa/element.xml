@@ -1,0 +1,12 @@
+<element id="com.blacktree.Quicksilver.QSSofaPlugIn" name="Sofa Artwork" version="2D">
+    <info>
+        <category>Music</category>
+        <image>com.ambitiouslemon.sofa</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSMusicArtworkSources">
+            <extension id="com.ambitiouslemon.sofa" class="QSSofaPlugIn"></extension>
+        </extension>
+    </extensions>
+</element>

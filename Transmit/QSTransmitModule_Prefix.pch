@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSTransmitModule' target in the 'QSTransmitModule' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+    #import <AddressBook/AddressBook.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSTransmitModuleType @"QSTransmitModuleType"

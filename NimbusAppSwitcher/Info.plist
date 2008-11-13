@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Nimbus Switcher</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSNimbusSwitcherPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Nimbus Switcher</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>1FE</string>
+	<key>NSPrincipalClass</key>
+	<string>QSNimbusSwitcherPlugIn</string>
+	<key>QSActionsTemplate</key>
+	<dict>
+		<key>QSNimbusSwitcherPlugInAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSNimbusSwitcherPlugInAction</string>
+			<key>actionSelector</key>
+			<string>performActionOnObject:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSNimbusSwitcherPlugInType</string>
+			</array>
+			<key>name</key>
+			<string>Action: QSNimbusSwitcherPlugIn</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array/>
+		<key>description</key>
+		<string>Circular application switcher</string>
+		<key>icon</key>
+		<string></string>
+		<key>qsversion</key>
+		<string>29CC</string>
+		<key>secret</key>
+		<true/>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSProcessSwitchers</key>
+		<dict>
+			<key>QSNimbusProcessSwitcher</key>
+			<string>QSNimbusProcessSwitcher</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>pluginsTemplate</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>com.blacktree.Quicksilver.QSProcessSwitcherSupportPlugIn</string>
+				<key>name</key>
+				<string>Process Switcher Support</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

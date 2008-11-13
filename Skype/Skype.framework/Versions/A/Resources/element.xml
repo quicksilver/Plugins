@@ -1,0 +1,7 @@
+<element id="com.skype.skypeframework" name="Skype Framework" version="1.4.0.27">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree"></extensions>
+</element>

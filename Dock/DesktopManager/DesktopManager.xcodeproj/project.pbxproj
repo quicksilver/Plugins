@@ -1,0 +1,3244 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D1107280486CEB800E47090 /* DesktopManagerTNG_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* DesktopManagerTNG_Prefix.pch */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A410B25505B5967C008A8E74 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A410B25405B5967C008A8E74 /* PreferencePanes.framework */; };
+		A410B27705B59BF9008A8E74 /* ActiveEdgesPrefPane.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A410B27405B59BDC008A8E74 /* ActiveEdgesPrefPane.bundle */; };
+		A410B27D05B59C5A008A8E74 /* ActiveEdgesPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = A410B25205B595D2008A8E74 /* ActiveEdgesPrefs.nib */; };
+		A410B28005B59C85008A8E74 /* ActiveEdgesPrefrerences.h in Headers */ = {isa = PBXBuildFile; fileRef = A410B27E05B59C85008A8E74 /* ActiveEdgesPrefrerences.h */; };
+		A410B28105B59C85008A8E74 /* ActiveEdgesPrefrerences.m in Sources */ = {isa = PBXBuildFile; fileRef = A410B27F05B59C85008A8E74 /* ActiveEdgesPrefrerences.m */; };
+		A410B28E05B59DC5008A8E74 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A410B25405B5967C008A8E74 /* PreferencePanes.framework */; };
+		A410B29605B5A37C008A8E74 /* activeedges.png in Resources */ = {isa = PBXBuildFile; fileRef = A410B29505B5A37C008A8E74 /* activeedges.png */; };
+		A4134FE605B8213100A28993 /* PagerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A4134FDE05B8213100A28993 /* PagerCell.h */; };
+		A4134FE705B8213100A28993 /* PagerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4134FDF05B8213100A28993 /* PagerCell.m */; };
+		A4134FE805B8213100A28993 /* PagerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A4134FE005B8213100A28993 /* PagerView.h */; };
+		A4134FE905B8213100A28993 /* PagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4134FE105B8213100A28993 /* PagerView.m */; };
+		A4134FEA05B8213100A28993 /* StatusBarMenuController.h in Headers */ = {isa = PBXBuildFile; fileRef = A4134FE205B8213100A28993 /* StatusBarMenuController.h */; };
+		A4134FEB05B8213100A28993 /* StatusBarMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4134FE305B8213100A28993 /* StatusBarMenuController.m */; };
+		A4134FEC05B8213100A28993 /* StatusBarPagerController.h in Headers */ = {isa = PBXBuildFile; fileRef = A4134FE405B8213100A28993 /* StatusBarPagerController.h */; };
+		A4134FED05B8213100A28993 /* StatusBarPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4134FE505B8213100A28993 /* StatusBarPagerController.m */; };
+		A4134FEF05B8214800A28993 /* StatusbarPagerPlugin.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = A4134FDC05B8210E00A28993 /* StatusbarPagerPlugin.bundle */; };
+		A4134FF205B8219300A28993 /* StatusbarController.h in Headers */ = {isa = PBXBuildFile; fileRef = A4134FF005B8219300A28993 /* StatusbarController.h */; };
+		A4134FF305B8219300A28993 /* StatusbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4134FF105B8219300A28993 /* StatusbarController.m */; };
+		A413505A05B8274F00A28993 /* Statusbar.nib in Resources */ = {isa = PBXBuildFile; fileRef = A413505905B8274F00A28993 /* Statusbar.nib */; };
+		A413506C05B82E3500A28993 /* StatusbarPrefPane.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A413506905B82E1D00A28993 /* StatusbarPrefPane.bundle */; };
+		A413507105B82EB800A28993 /* StatusbarPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = A413506F05B82EB800A28993 /* StatusbarPreferences.h */; };
+		A413507205B82EB800A28993 /* StatusbarPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = A413507005B82EB800A28993 /* StatusbarPreferences.m */; };
+		A413507305B82EC600A28993 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A410B25405B5967C008A8E74 /* PreferencePanes.framework */; };
+		A413507505B82F1000A28993 /* statusbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A413507405B82F1000A28993 /* statusbar.png */; };
+		A413507705B82F7800A28993 /* StatusbarPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = A413507605B82F7800A28993 /* StatusbarPrefs.nib */; };
+		A414D80E0574076000C99A0B /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = A414D80C0574076000C99A0B /* minus.png */; };
+		A414D80F0574076000C99A0B /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = A414D80D0574076000C99A0B /* plus.png */; };
+		A416BF79064A69F200040579 /* WorkspaceController.h in Headers */ = {isa = PBXBuildFile; fileRef = A455A96E056E401600795DBA /* WorkspaceController.h */; };
+		A416BF7D064A69F200040579 /* Workspace.h in Headers */ = {isa = PBXBuildFile; fileRef = A455A90C056E2D1D00795DBA /* Workspace.h */; };
+		A416BF82064A69F300040579 /* WindowControllerEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CA4DD4059CA218007AF396 /* WindowControllerEvents.h */; };
+		A416BF87064A69F400040579 /* Notifications.h in Headers */ = {isa = PBXBuildFile; fileRef = A4EF6FBE056E579100FD44FF /* Notifications.h */; };
+		A416BF8C064A69F500040579 /* ForeignWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = A414D8480574116100C99A0B /* ForeignWindow.h */; };
+		A416BF96064A69F600040579 /* CGSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A455A924056E31F700795DBA /* CGSPrivate.h */; };
+		A416BF9D064A69FC00040579 /* MouseWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AAC2C50647240800D4FB25 /* MouseWatcher.m */; };
+		A416BFA1064A69FD00040579 /* MouseWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A4AAC2C40647240800D4FB25 /* MouseWatcher.h */; };
+		A416BFA8064A6A0200040579 /* WorkspaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = A455A96F056E401600795DBA /* WorkspaceController.m */; };
+		A416BFAD064A6A0300040579 /* Workspace.m in Sources */ = {isa = PBXBuildFile; fileRef = A455A90D056E2D1E00795DBA /* Workspace.m */; };
+		A416BFB2064A6A0400040579 /* ForeignWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A414D8490574116100C99A0B /* ForeignWindow.m */; };
+		A416BFC7064A6A1F00040579 /* HotKeyController.m in Sources */ = {isa = PBXBuildFile; fileRef = A46A1EF80575036F00560C7F /* HotKeyController.m */; };
+		A416BFCB064A6A2000040579 /* HotKeyController.h in Headers */ = {isa = PBXBuildFile; fileRef = A46A1EF70575036F00560C7F /* HotKeyController.h */; };
+		A416BFD0064A6A2100040579 /* HotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EF6F4F056E48A100FD44FF /* HotKey.m */; };
+		A416BFD5064A6A2200040579 /* HotKey.h in Headers */ = {isa = PBXBuildFile; fileRef = A4EF6F4E056E48A100FD44FF /* HotKey.h */; };
+		A416BFDB064A6A2A00040579 /* NotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DD8455056E5C1C0091EB38 /* NotificationView.m */; };
+		A416BFDF064A6A2B00040579 /* NotificationView.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DD8454056E5C1C0091EB38 /* NotificationView.h */; };
+		A416BFE5064A6A3200040579 /* screenicon.png in Resources */ = {isa = PBXBuildFile; fileRef = A4DD846F056E5FBF0091EB38 /* screenicon.png */; };
+		A416BFF1064A6A3B00040579 /* DesktopStatusIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A4DD84E0056E70960091EB38 /* DesktopStatusIcon.png */; };
+		A416BFF6064A6A3D00040579 /* DesktopStatusIconHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = A435B921057232A50026099D /* DesktopStatusIconHighlight.png */; };
+		A416BFFC064A6A4700040579 /* DesktopManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A444297905B32601000336DD /* DesktopManager.h */; };
+		A416C015064A6A7900040579 /* DesktopManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A444297905B32601000336DD /* DesktopManager.h */; };
+		A416C038064A6A9300040579 /* DMController.m in Sources */ = {isa = PBXBuildFile; fileRef = A455A92D056E373C00795DBA /* DMController.m */; };
+		A416C060064A6ABC00040579 /* DesktopManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A416BF72064A69DE00040579 /* DesktopManager.framework */; };
+		A416C06A064A6AEA00040579 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
+		A416C06C064A6AEB00040579 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A416C06E064A6AEC00040579 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A466EAF805983C890040F851 /* Carbon.framework */; };
+		A416C070064A6AED00040579 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A436E9F9059DA73000B1707D /* ApplicationServices.framework */; };
+		A416C072064A6AEE00040579 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CA4D18059C9A4B007AF396 /* AppleScriptKit.framework */; };
+		A416C074064A6AEF00040579 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97324FDCFA39411CA2CEA /* AppKit.framework */; };
+		A435B922057232A50026099D /* DesktopStatusIconHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = A435B921057232A50026099D /* DesktopStatusIconHighlight.png */; };
+		A436E9FA059DA73000B1707D /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A436E9F9059DA73000B1707D /* ApplicationServices.framework */; };
+		A444276F05B2F657000336DD /* DesktopPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A40F6CD205A51DB9009867CD /* DesktopPagerView.m */; };
+		A444277005B2F657000336DD /* DesktopPagerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A40F6CD105A51DB9009867CD /* DesktopPagerView.h */; };
+		A444277105B2F658000336DD /* DesktopPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40F6CC105A51775009867CD /* DesktopPagerController.m */; };
+		A444277205B2F659000336DD /* DesktopPagerController.h in Headers */ = {isa = PBXBuildFile; fileRef = A40F6CC005A51775009867CD /* DesktopPagerController.h */; };
+		A444277305B2F659000336DD /* DesktopPagerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A41A9D3005A61C780053DF10 /* DesktopPagerCell.m */; };
+		A444277405B2F65A000336DD /* DesktopPagerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A41A9D2F05A61C780053DF10 /* DesktopPagerCell.h */; };
+		A44427F305B2F9E8000336DD /* DockExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4CA4CBF059C9569007AF396 /* DockExtension.bundle */; };
+		A444287005B2FDAE000336DD /* DesktopPagerPlugin.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = A444276E05B2F5CE000336DD /* DesktopPagerPlugin.bundle */; };
+		A444294F05B30C72000336DD /* DMPlugins.h in Headers */ = {isa = PBXBuildFile; fileRef = A444294E05B30C72000336DD /* DMPlugins.h */; };
+		A444297005B32519000336DD /* WindowControllerEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CA4DD4059CA218007AF396 /* WindowControllerEvents.h */; };
+		A444297105B3251A000336DD /* Notifications.h in Headers */ = {isa = PBXBuildFile; fileRef = A4EF6FBE056E579100FD44FF /* Notifications.h */; };
+		A444297205B3251B000336DD /* CGSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A455A924056E31F700795DBA /* CGSPrivate.h */; };
+		A444297305B3256A000336DD /* ForeignWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = A414D8480574116100C99A0B /* ForeignWindow.h */; };
+		A444297405B3256B000336DD /* DMController.h in Headers */ = {isa = PBXBuildFile; fileRef = A455A92C056E373C00795DBA /* DMController.h */; };
+		A444297505B3256C000336DD /* WorkspaceController.h in Headers */ = {isa = PBXBuildFile; fileRef = A455A96E056E401600795DBA /* WorkspaceController.h */; };
+		A444297605B3256D000336DD /* Workspace.h in Headers */ = {isa = PBXBuildFile; fileRef = A455A90C056E2D1D00795DBA /* Workspace.h */; };
+		A4442A5505B328AE000336DD /* DesktopManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A444297905B32601000336DD /* DesktopManager.h */; };
+		A44849D4064BB531004601A6 /* hotKeyMinus.png in Resources */ = {isa = PBXBuildFile; fileRef = A44849CC064BB467004601A6 /* hotKeyMinus.png */; };
+		A454B496064B1ED100C9A058 /* DesktopManager.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A416BF72064A69DE00040579 /* DesktopManager.framework */; };
+		A454B4D9064B24EC00C9A058 /* DesktopManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A416BF72064A69DE00040579 /* DesktopManager.framework */; };
+		A455A92E056E373C00795DBA /* DMController.h in Headers */ = {isa = PBXBuildFile; fileRef = A455A92C056E373C00795DBA /* DMController.h */; };
+		A45A0BEF069EC88600887005 /* DesktopManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A416BF72064A69DE00040579 /* DesktopManager.framework */; };
+		A465D5C305B33E7E00A6023D /* OperationsMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A436EAE3059DD51C00B1707D /* OperationsMenuView.m */; };
+		A465D5C405B33E7F00A6023D /* OperationsMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = A436EAE2059DD51C00B1707D /* OperationsMenuView.h */; };
+		A465D5C505B33E8000A6023D /* OperationsMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A436E9ED059DA0C100B1707D /* OperationsMenuController.m */; };
+		A465D5C605B33E8000A6023D /* OperationsMenuController.h in Headers */ = {isa = PBXBuildFile; fileRef = A436E9EC059DA0C100B1707D /* OperationsMenuController.h */; };
+		A465D5CC05B33EAA00A6023D /* OperationsMenu.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = A465D5B305B33E3800A6023D /* OperationsMenu.bundle */; };
+		A466EAF905983C890040F851 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A466EAF805983C890040F851 /* Carbon.framework */; };
+		A474EDDE05BF1EB6008C3BE0 /* DesktopWorkspaceNames.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = A474EDD205BF1E98008C3BE0 /* DesktopWorkspaceNames.bundle */; };
+		A474EDF505BF1F57008C3BE0 /* DesktopWorkspaceNamesController.m in Sources */ = {isa = PBXBuildFile; fileRef = A474EDF205BF1EE0008C3BE0 /* DesktopWorkspaceNamesController.m */; };
+		A474EDF605BF1F58008C3BE0 /* DesktopWorkspaceNamesController.h in Headers */ = {isa = PBXBuildFile; fileRef = A474EDF105BF1EE0008C3BE0 /* DesktopWorkspaceNamesController.h */; };
+		A474EE0605BF23BA008C3BE0 /* WorkspaceNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = A474EE0305BF2325008C3BE0 /* WorkspaceNameView.m */; };
+		A474EE0705BF23BA008C3BE0 /* WorkspaceNameView.h in Headers */ = {isa = PBXBuildFile; fileRef = A474EE0205BF2325008C3BE0 /* WorkspaceNameView.h */; };
+		A474EE7805BF3681008C3BE0 /* WorkspaceNameDisplayPrefs.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A474EE7505BF365E008C3BE0 /* WorkspaceNameDisplayPrefs.bundle */; };
+		A474EE7B05BF3706008C3BE0 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A410B25405B5967C008A8E74 /* PreferencePanes.framework */; };
+		A474EE7D05BF37D3008C3BE0 /* desktopname.png in Resources */ = {isa = PBXBuildFile; fileRef = A474EE7C05BF37D3008C3BE0 /* desktopname.png */; };
+		A474EE8205BF3821008C3BE0 /* NameDisplayPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = A474EE8105BF3821008C3BE0 /* NameDisplayPrefs.nib */; };
+		A474EE8805BF3A09008C3BE0 /* WorkspaceNameDisplayPrefs.h in Headers */ = {isa = PBXBuildFile; fileRef = A474EE8605BF3A09008C3BE0 /* WorkspaceNameDisplayPrefs.h */; };
+		A474EE8905BF3A09008C3BE0 /* WorkspaceNameDisplayPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = A474EE8705BF3A09008C3BE0 /* WorkspaceNameDisplayPrefs.m */; };
+		A4766753065433FC008E45BE /* DesktopManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A416BF72064A69DE00040579 /* DesktopManager.framework */; };
+		A477D8BA05B6D5DD0089ADA4 /* DesktopNamesPrefs.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = A477D8B205B6D59E0089ADA4 /* DesktopNamesPrefs.bundle */; };
+		A477D8C805B6DFE90089ADA4 /* desktopnames.png in Resources */ = {isa = PBXBuildFile; fileRef = A477D8C705B6DFE90089ADA4 /* desktopnames.png */; };
+		A477D8C905B6E0310089ADA4 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A410B25405B5967C008A8E74 /* PreferencePanes.framework */; };
+		A477D8CB05B6E0620089ADA4 /* DesktopNamesPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = A477D8CA05B6E0620089ADA4 /* DesktopNamesPrefs.nib */; };
+		A477D90605B6E1800089ADA4 /* DesktopNamesPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = A477D90405B6E1800089ADA4 /* DesktopNamesPreferences.h */; };
+		A477D90705B6E1800089ADA4 /* DesktopNamesPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = A477D90505B6E1800089ADA4 /* DesktopNamesPreferences.m */; };
+		A477D95205B703A60089ADA4 /* HotKeysPreferences.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = A477D94F05B7039A0089ADA4 /* HotKeysPreferences.bundle */; };
+		A477D95405B704300089ADA4 /* hotkeys.png in Resources */ = {isa = PBXBuildFile; fileRef = A477D95305B704300089ADA4 /* hotkeys.png */; };
+		A477D95705B7044A0089ADA4 /* HotKeysPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = A477D95505B7044A0089ADA4 /* HotKeysPreferences.h */; };
+		A477D95805B7044A0089ADA4 /* HotKeysPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = A477D95605B7044A0089ADA4 /* HotKeysPreferences.m */; };
+		A477D95905B7046F0089ADA4 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A410B25405B5967C008A8E74 /* PreferencePanes.framework */; };
+		A477D95B05B704B20089ADA4 /* HotKeysPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = A477D95A05B704B20089ADA4 /* HotKeysPrefs.nib */; };
+		A477D97105B70D260089ADA4 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A466EAF805983C890040F851 /* Carbon.framework */; };
+		A47DF6F405B5E50B00D83839 /* DesktopPagerPrefPane.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A47DF6F105B5E4F900D83839 /* DesktopPagerPrefPane.bundle */; };
+		A47DF6F705B5E55900D83839 /* DesktopPagerPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = A47DF6F505B5E54C00D83839 /* DesktopPagerPrefs.nib */; };
+		A47DF6FA05B5E5DB00D83839 /* DesktopPagerPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = A47DF6F805B5E5DB00D83839 /* DesktopPagerPreferences.h */; };
+		A47DF6FB05B5E5DB00D83839 /* DesktopPagerPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = A47DF6F905B5E5DB00D83839 /* DesktopPagerPreferences.m */; };
+		A47DF6FD05B5E64600D83839 /* desktoppager.png in Resources */ = {isa = PBXBuildFile; fileRef = A47DF6FC05B5E64600D83839 /* desktoppager.png */; };
+		A47DF70605B5E6FF00D83839 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A410B25405B5967C008A8E74 /* PreferencePanes.framework */; };
+		A47DF77B05B5F69700D83839 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A47DF77C05B5F6F000D83839 /* default_skin.plist in Resources */ = {isa = PBXBuildFile; fileRef = A40F6D3405A5329D009867CD /* default_skin.plist */; };
+		A4B040BC05E4E8AA00B0A875 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A4B040BD05E4E8AC00B0A875 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A436E9F9059DA73000B1707D /* ApplicationServices.framework */; };
+		A4B040CA05E4F3EF00B0A875 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97324FDCFA39411CA2CEA /* AppKit.framework */; };
+		A4B040CB05E4F3F000B0A875 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
+		A4B040D005E4F70C00B0A875 /* couvert.h in Headers */ = {isa = PBXBuildFile; fileRef = A4B040CE05E4F70C00B0A875 /* couvert.h */; };
+		A4B040D105E4F70C00B0A875 /* couvert.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B040CF05E4F70C00B0A875 /* couvert.m */; };
+		A4B0507105B45D4E0060F89F /* ActiveEdgesController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B0505205B45C490060F89F /* ActiveEdgesController.m */; };
+		A4B0507205B45D4F0060F89F /* ActiveEdgesController.h in Headers */ = {isa = PBXBuildFile; fileRef = A4B0505105B45C490060F89F /* ActiveEdgesController.h */; };
+		A4B0507305B45D590060F89F /* ActiveEdges.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = A4B0506205B45D190060F89F /* ActiveEdges.bundle */; };
+		A4CA4787059C5F90007AF396 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4CA4786059C5F90007AF396 /* Localizable.strings */; };
+		A4CA4D17059C9A33007AF396 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A466EAF805983C890040F851 /* Carbon.framework */; };
+		A4CA4D19059C9A4B007AF396 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CA4D18059C9A4B007AF396 /* AppleScriptKit.framework */; };
+		A4CA4D1A059C9A4B007AF396 /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CA4D18059C9A4B007AF396 /* AppleScriptKit.framework */; };
+		A4CA4D74059C9F50007AF396 /* CGSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A455A924056E31F700795DBA /* CGSPrivate.h */; };
+		A4CA4DC2059CA1F6007AF396 /* CodeInjector.c in Sources */ = {isa = PBXBuildFile; fileRef = A4CA4DB9059CA1F6007AF396 /* CodeInjector.c */; };
+		A4CA4DC3059CA1F6007AF396 /* CodeInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CA4DBA059CA1F6007AF396 /* CodeInjector.h */; };
+		A4CA4DC6059CA1F6007AF396 /* mach_inject.c in Sources */ = {isa = PBXBuildFile; fileRef = A4CA4DBD059CA1F6007AF396 /* mach_inject.c */; };
+		A4CA4DC7059CA1F6007AF396 /* mach_inject.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CA4DBE059CA1F6007AF396 /* mach_inject.h */; };
+		A4CA4DCD059CA1F6007AF396 /* ControllerEventHandlers.c in Sources */ = {isa = PBXBuildFile; fileRef = A4CA4DBB059CA1F6007AF396 /* ControllerEventHandlers.c */; };
+		A4CA4DCE059CA1F6007AF396 /* ControllerEventHandlers.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CA4DBC059CA1F6007AF396 /* ControllerEventHandlers.h */; };
+		A4CA4DD2059CA1F6007AF396 /* WindowController.c in Sources */ = {isa = PBXBuildFile; fileRef = A4CA4DC0059CA1F6007AF396 /* WindowController.c */; };
+		A4CA4DD3059CA1F6007AF396 /* WindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CA4DC1059CA1F6007AF396 /* WindowController.h */; };
+		A4CA4DD6059CA218007AF396 /* WindowControllerEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CA4DD4059CA218007AF396 /* WindowControllerEvents.h */; };
+		A4CA4DD8059CA23E007AF396 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A4CA4DBF059CA1F6007AF396 /* main.c */; };
+		A4DD8456056E5C1C0091EB38 /* NotificationView.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DD8454056E5C1C0091EB38 /* NotificationView.h */; };
+		A4DD8457056E5C1C0091EB38 /* NotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DD8455056E5C1C0091EB38 /* NotificationView.m */; };
+		A4DD8470056E5FBF0091EB38 /* screenicon.png in Resources */ = {isa = PBXBuildFile; fileRef = A4DD846F056E5FBF0091EB38 /* screenicon.png */; };
+		A4DD849A056E61010091EB38 /* WorkspaceManagerIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A4DD8499056E61010091EB38 /* WorkspaceManagerIcon.icns */; };
+		A4DD84E1056E70960091EB38 /* DesktopStatusIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A4DD84E0056E70960091EB38 /* DesktopStatusIcon.png */; };
+		A4DD8598056E7F6F0091EB38 /* Preferences.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DD8594056E7F6F0091EB38 /* Preferences.h */; };
+		A4DD8599056E7F6F0091EB38 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DD8595056E7F6F0091EB38 /* Preferences.m */; };
+		A4DD8678056E86F90091EB38 /* PreferencesController.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DD8676056E86F90091EB38 /* PreferencesController.h */; };
+		A4DD8679056E86F90091EB38 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DD8677056E86F90091EB38 /* PreferencesController.m */; };
+		A4E68DA805C2E0B10062EEC5 /* NSHidableWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = A4E68DA605C2E0B10062EEC5 /* NSHidableWindow.h */; };
+		A4E68DA905C2E0B10062EEC5 /* NSHidableWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E68DA705C2E0B10062EEC5 /* NSHidableWindow.m */; };
+		A4EF6F6A056E4B2400FD44FF /* DMApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = A4EF6F68056E4B2400FD44FF /* DMApplication.h */; };
+		A4EF6F6B056E4B2400FD44FF /* DMApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EF6F69056E4B2400FD44FF /* DMApplication.m */; };
+		A4FC870006A2C99C00DC54B0 /* StickyWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = A4FC86FE06A2C99C00DC54B0 /* StickyWindowController.h */; };
+		A4FC870106A2C99D00DC54B0 /* StickyWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FC86FF06A2C99C00DC54B0 /* StickyWindowController.m */; };
+		A4FC87E706A2D4CA00DC54B0 /* DesktopManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A416BF72064A69DE00040579 /* DesktopManager.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A410B28905B59D3E008A8E74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A410B27305B59BDC008A8E74;
+			remoteInfo = ActiveEdges.prefPane;
+		};
+		A413505B05B8286600A28993 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4134FDB05B8210E00A28993;
+			remoteInfo = StatusbarPagerPlugin;
+		};
+		A413506D05B82E5300A28993 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A413506805B82E1D00A28993;
+			remoteInfo = StatusbarPrefPane;
+		};
+		A416C0BB064A6E6900040579 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A416BF71064A69DE00040579;
+			remoteInfo = DesktopManager;
+		};
+		A416C0BE064A6E7400040579 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A416BF71064A69DE00040579;
+			remoteInfo = DesktopManager;
+		};
+		A444279505B2F80D000336DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A444276D05B2F5CE000336DD;
+			remoteInfo = DesktopPagerPlugin;
+		};
+		A45A0CA7069ED23E00887005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A416BF71064A69DE00040579;
+			remoteInfo = DesktopManager;
+		};
+		A465D5C105B33E7000A6023D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A465D5B205B33E3800A6023D;
+			remoteInfo = OperationsMenu;
+		};
+		A474EDF905BF1F6B008C3BE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A474EDD105BF1E98008C3BE0;
+			remoteInfo = DesktopWorkspaceNames;
+		};
+		A474EE8405BF399B008C3BE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A474EE7405BF365E008C3BE0;
+			remoteInfo = WorkspaceNameDisplayPrefs;
+		};
+		A477D8B405B6D5AD0089ADA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A477D8B105B6D59E0089ADA4;
+			remoteInfo = DesktopNamesPrefs;
+		};
+		A477D96105B705D40089ADA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A477D94E05B7039A0089ADA4;
+			remoteInfo = HotKeysPreferences;
+		};
+		A47DF70405B5E6E900D83839 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A47DF6F005B5E4F900D83839;
+			remoteInfo = DesktopPagerPrefPane;
+		};
+		A4B0506F05B45D410060F89F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4B0506105B45D190060F89F;
+			remoteInfo = ActiveEdges;
+		};
+		A4CA4D12059C975E007AF396 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4CA4CBE059C9569007AF396;
+			remoteInfo = DockExtension;
+		};
+		A4FC87EE06A2D4DF00DC54B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A416BF71064A69DE00040579;
+			remoteInfo = DesktopManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A444286505B2FD60000336DD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A474EDDE05BF1EB6008C3BE0 /* DesktopWorkspaceNames.bundle in CopyFiles */,
+				A4B0507305B45D590060F89F /* ActiveEdges.bundle in CopyFiles */,
+				A465D5CC05B33EAA00A6023D /* OperationsMenu.bundle in CopyFiles */,
+				A444287005B2FDAE000336DD /* DesktopPagerPlugin.bundle in CopyFiles */,
+				A4134FEF05B8214800A28993 /* StatusbarPagerPlugin.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A454B49F064B1F7600C9A058 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A454B496064B1ED100C9A058 /* DesktopManager.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A477D8B805B6D5B70089ADA4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = PreferencePanes;
+			dstSubfolderSpec = 7;
+			files = (
+				A477D95205B703A60089ADA4 /* HotKeysPreferences.bundle in CopyFiles */,
+				A477D8BA05B6D5DD0089ADA4 /* DesktopNamesPrefs.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* DesktopManagerTNG_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopManagerTNG_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Desktop Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desktop Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A40F6CC005A51775009867CD /* DesktopPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopPagerController.h; sourceTree = "<group>"; };
+		A40F6CC105A51775009867CD /* DesktopPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopPagerController.m; sourceTree = "<group>"; };
+		A40F6CD105A51DB9009867CD /* DesktopPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopPagerView.h; sourceTree = "<group>"; };
+		A40F6CD205A51DB9009867CD /* DesktopPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopPagerView.m; sourceTree = "<group>"; };
+		A40F6D3405A5329D009867CD /* default_skin.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = default_skin.plist; sourceTree = "<group>"; };
+		A410B25205B595D2008A8E74 /* ActiveEdgesPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = ActiveEdgesPrefs.nib; sourceTree = "<group>"; };
+		A410B25405B5967C008A8E74 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
+		A410B27405B59BDC008A8E74 /* ActiveEdgesPrefPane.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveEdgesPrefPane.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A410B27505B59BDC008A8E74 /* ActiveEdgesPrefPane-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ActiveEdgesPrefPane-Info.plist"; path = "/Users/rjw57/SourceForgeProjects/DesktopManager/ActiveEdgesPrefPane-Info.plist"; sourceTree = "<absolute>"; };
+		A410B27E05B59C85008A8E74 /* ActiveEdgesPrefrerences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveEdgesPrefrerences.h; sourceTree = "<group>"; };
+		A410B27F05B59C85008A8E74 /* ActiveEdgesPrefrerences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveEdgesPrefrerences.m; sourceTree = "<group>"; };
+		A410B29505B5A37C008A8E74 /* activeedges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = activeedges.png; sourceTree = "<group>"; };
+		A4134FDC05B8210E00A28993 /* StatusbarPagerPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusbarPagerPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4134FDD05B8210E00A28993 /* StatusbarPagerPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file; name = "StatusbarPagerPlugin-Info.plist"; path = "/Users/rjw57/SourceForgeProjects/DesktopManager/StatusbarPagerPlugin-Info.plist"; sourceTree = "<absolute>"; };
+		A4134FDE05B8213100A28993 /* PagerCell.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PagerCell.h; sourceTree = "<group>"; };
+		A4134FDF05B8213100A28993 /* PagerCell.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PagerCell.m; sourceTree = "<group>"; };
+		A4134FE005B8213100A28993 /* PagerView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PagerView.h; sourceTree = "<group>"; };
+		A4134FE105B8213100A28993 /* PagerView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PagerView.m; sourceTree = "<group>"; };
+		A4134FE205B8213100A28993 /* StatusBarMenuController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = StatusBarMenuController.h; sourceTree = "<group>"; };
+		A4134FE305B8213100A28993 /* StatusBarMenuController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = StatusBarMenuController.m; sourceTree = "<group>"; };
+		A4134FE405B8213100A28993 /* StatusBarPagerController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = StatusBarPagerController.h; sourceTree = "<group>"; };
+		A4134FE505B8213100A28993 /* StatusBarPagerController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = StatusBarPagerController.m; sourceTree = "<group>"; };
+		A4134FF005B8219300A28993 /* StatusbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusbarController.h; sourceTree = "<group>"; };
+		A4134FF105B8219300A28993 /* StatusbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusbarController.m; sourceTree = "<group>"; };
+		A413505905B8274F00A28993 /* Statusbar.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = Statusbar.nib; sourceTree = "<group>"; };
+		A413506905B82E1D00A28993 /* StatusbarPrefPane.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusbarPrefPane.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A413506A05B82E1D00A28993 /* StatusbarPrefPane-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file; name = "StatusbarPrefPane-Info.plist"; path = "/Users/rjw57/SourceForgeProjects/DesktopManager/StatusbarPrefPane-Info.plist"; sourceTree = "<absolute>"; };
+		A413506F05B82EB800A28993 /* StatusbarPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusbarPreferences.h; sourceTree = "<group>"; };
+		A413507005B82EB800A28993 /* StatusbarPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusbarPreferences.m; sourceTree = "<group>"; };
+		A413507405B82F1000A28993 /* statusbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusbar.png; sourceTree = "<group>"; };
+		A413507605B82F7800A28993 /* StatusbarPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = StatusbarPrefs.nib; sourceTree = "<group>"; };
+		A414D80C0574076000C99A0B /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
+		A414D80D0574076000C99A0B /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		A414D8480574116100C99A0B /* ForeignWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForeignWindow.h; sourceTree = "<group>"; };
+		A414D8490574116100C99A0B /* ForeignWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForeignWindow.m; sourceTree = "<group>"; };
+		A416BF72064A69DE00040579 /* DesktopManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesktopManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A416BF73064A69DE00040579 /* DesktopManager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "DesktopManager-Info.plist"; path = "/Users/rjw57/Developer/olddm/DesktopManager/DesktopManager-Info.plist"; sourceTree = "<absolute>"; };
+		A41A9D2F05A61C780053DF10 /* DesktopPagerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopPagerCell.h; sourceTree = "<group>"; };
+		A41A9D3005A61C780053DF10 /* DesktopPagerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopPagerCell.m; sourceTree = "<group>"; };
+		A435B921057232A50026099D /* DesktopStatusIconHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DesktopStatusIconHighlight.png; sourceTree = "<group>"; };
+		A436E9EC059DA0C100B1707D /* OperationsMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationsMenuController.h; sourceTree = "<group>"; };
+		A436E9ED059DA0C100B1707D /* OperationsMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationsMenuController.m; sourceTree = "<group>"; };
+		A436E9F9059DA73000B1707D /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		A436EAE2059DD51C00B1707D /* OperationsMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationsMenuView.h; sourceTree = "<group>"; };
+		A436EAE3059DD51C00B1707D /* OperationsMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationsMenuView.m; sourceTree = "<group>"; };
+		A444276E05B2F5CE000336DD /* DesktopPagerPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesktopPagerPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A444294E05B30C72000336DD /* DMPlugins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPlugins.h; sourceTree = "<group>"; };
+		A444297905B32601000336DD /* DesktopManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopManager.h; sourceTree = "<group>"; };
+		A44849CC064BB467004601A6 /* hotKeyMinus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotKeyMinus.png; sourceTree = "<group>"; };
+		A455A90C056E2D1D00795DBA /* Workspace.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Workspace.h; sourceTree = "<group>"; };
+		A455A90D056E2D1E00795DBA /* Workspace.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Workspace.m; sourceTree = "<group>"; };
+		A455A924056E31F700795DBA /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGSPrivate.h; sourceTree = "<group>"; };
+		A455A92C056E373C00795DBA /* DMController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMController.h; sourceTree = "<group>"; };
+		A455A92D056E373C00795DBA /* DMController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMController.m; sourceTree = "<group>"; };
+		A455A96E056E401600795DBA /* WorkspaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkspaceController.h; sourceTree = "<group>"; };
+		A455A96F056E401600795DBA /* WorkspaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkspaceController.m; sourceTree = "<group>"; };
+		A465D5B305B33E3800A6023D /* OperationsMenu.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OperationsMenu.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A465D5B405B33E3800A6023D /* OperationsMenu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "OperationsMenu-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A466EAF805983C890040F851 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		A46A1ED20574FCE600560C7F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A46A1EF70575036F00560C7F /* HotKeyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotKeyController.h; sourceTree = "<group>"; };
+		A46A1EF80575036F00560C7F /* HotKeyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotKeyController.m; sourceTree = "<group>"; };
+		A474EDD205BF1E98008C3BE0 /* DesktopWorkspaceNames.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesktopWorkspaceNames.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A474EDD305BF1E98008C3BE0 /* DesktopWorkspaceNames-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DesktopWorkspaceNames-Info.plist"; path = "/Users/rjw57/SourceForgeProjects/DesktopManager/DesktopWorkspaceNames-Info.plist"; sourceTree = "<absolute>"; };
+		A474EDF105BF1EE0008C3BE0 /* DesktopWorkspaceNamesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopWorkspaceNamesController.h; sourceTree = "<group>"; };
+		A474EDF205BF1EE0008C3BE0 /* DesktopWorkspaceNamesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopWorkspaceNamesController.m; sourceTree = "<group>"; };
+		A474EE0205BF2325008C3BE0 /* WorkspaceNameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkspaceNameView.h; sourceTree = "<group>"; };
+		A474EE0305BF2325008C3BE0 /* WorkspaceNameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkspaceNameView.m; sourceTree = "<group>"; };
+		A474EE7505BF365E008C3BE0 /* WorkspaceNameDisplayPrefs.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkspaceNameDisplayPrefs.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A474EE7605BF365E008C3BE0 /* WorkspaceNameDisplayPrefs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file; name = "WorkspaceNameDisplayPrefs-Info.plist"; path = "/Users/rjw57/SourceForgeProjects/DesktopManager/WorkspaceNameDisplayPrefs-Info.plist"; sourceTree = "<absolute>"; };
+		A474EE7C05BF37D3008C3BE0 /* desktopname.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desktopname.png; sourceTree = "<group>"; };
+		A474EE8105BF3821008C3BE0 /* NameDisplayPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = NameDisplayPrefs.nib; sourceTree = "<group>"; };
+		A474EE8605BF3A09008C3BE0 /* WorkspaceNameDisplayPrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkspaceNameDisplayPrefs.h; sourceTree = "<group>"; };
+		A474EE8705BF3A09008C3BE0 /* WorkspaceNameDisplayPrefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkspaceNameDisplayPrefs.m; sourceTree = "<group>"; };
+		A477D8B205B6D59E0089ADA4 /* DesktopNamesPrefs.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesktopNamesPrefs.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A477D8B305B6D59E0089ADA4 /* DesktopNamesPrefs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DesktopNamesPrefs-Info.plist"; path = "/Users/rjw57/SourceForgeProjects/DesktopManager/DesktopNamesPrefs-Info.plist"; sourceTree = "<absolute>"; };
+		A477D8C705B6DFE90089ADA4 /* desktopnames.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desktopnames.png; sourceTree = "<group>"; };
+		A477D8CA05B6E0620089ADA4 /* DesktopNamesPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = DesktopNamesPrefs.nib; sourceTree = "<group>"; };
+		A477D90405B6E1800089ADA4 /* DesktopNamesPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopNamesPreferences.h; sourceTree = "<group>"; };
+		A477D90505B6E1800089ADA4 /* DesktopNamesPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopNamesPreferences.m; sourceTree = "<group>"; };
+		A477D94F05B7039A0089ADA4 /* HotKeysPreferences.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotKeysPreferences.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A477D95005B7039B0089ADA4 /* HotKeysPreferences-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HotKeysPreferences-Info.plist"; path = "/Users/rjw57/SourceForgeProjects/DesktopManager/HotKeysPreferences-Info.plist"; sourceTree = "<absolute>"; };
+		A477D95305B704300089ADA4 /* hotkeys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotkeys.png; sourceTree = "<group>"; };
+		A477D95505B7044A0089ADA4 /* HotKeysPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotKeysPreferences.h; sourceTree = "<group>"; };
+		A477D95605B7044A0089ADA4 /* HotKeysPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotKeysPreferences.m; sourceTree = "<group>"; };
+		A477D95A05B704B20089ADA4 /* HotKeysPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = HotKeysPrefs.nib; sourceTree = "<group>"; };
+		A47DF6F105B5E4F900D83839 /* DesktopPagerPrefPane.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesktopPagerPrefPane.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A47DF6F205B5E4F900D83839 /* DesktopPagerPrefPane-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DesktopPagerPrefPane-Info.plist"; path = "/Users/rjw57/SourceForgeProjects/DesktopManager/DesktopPagerPrefPane-Info.plist"; sourceTree = "<absolute>"; };
+		A47DF6F505B5E54C00D83839 /* DesktopPagerPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = DesktopPagerPrefs.nib; sourceTree = "<group>"; };
+		A47DF6F805B5E5DB00D83839 /* DesktopPagerPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopPagerPreferences.h; sourceTree = "<group>"; };
+		A47DF6F905B5E5DB00D83839 /* DesktopPagerPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopPagerPreferences.m; sourceTree = "<group>"; };
+		A47DF6FC05B5E64600D83839 /* desktoppager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desktoppager.png; sourceTree = "<group>"; };
+		A4AAC2C40647240800D4FB25 /* MouseWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseWatcher.h; sourceTree = "<group>"; };
+		A4AAC2C50647240800D4FB25 /* MouseWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MouseWatcher.m; sourceTree = "<group>"; };
+		A4B040CE05E4F70C00B0A875 /* couvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = couvert.h; sourceTree = "<group>"; };
+		A4B040CF05E4F70C00B0A875 /* couvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = couvert.m; sourceTree = "<group>"; };
+		A4B0505105B45C490060F89F /* ActiveEdgesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveEdgesController.h; sourceTree = "<group>"; };
+		A4B0505205B45C490060F89F /* ActiveEdgesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveEdgesController.m; sourceTree = "<group>"; };
+		A4B0506205B45D190060F89F /* ActiveEdges.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveEdges.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4B0506305B45D190060F89F /* ActiveEdges-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ActiveEdges-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A4BA6E7305B0A28900392F7B /* DesktopPagerPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "DesktopPagerPlugin-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A4CA4CBF059C9569007AF396 /* DockExtension.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DockExtension.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4CA4CC0059C9569007AF396 /* DockExtension-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "DockExtension-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A4CA4D18059C9A4B007AF396 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
+		A4CA4DB9059CA1F6007AF396 /* CodeInjector.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = CodeInjector.c; sourceTree = "<group>"; };
+		A4CA4DBA059CA1F6007AF396 /* CodeInjector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CodeInjector.h; sourceTree = "<group>"; };
+		A4CA4DBB059CA1F6007AF396 /* ControllerEventHandlers.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = ControllerEventHandlers.c; sourceTree = "<group>"; };
+		A4CA4DBC059CA1F6007AF396 /* ControllerEventHandlers.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ControllerEventHandlers.h; sourceTree = "<group>"; };
+		A4CA4DBD059CA1F6007AF396 /* mach_inject.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = mach_inject.c; sourceTree = "<group>"; };
+		A4CA4DBE059CA1F6007AF396 /* mach_inject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = mach_inject.h; sourceTree = "<group>"; };
+		A4CA4DBF059CA1F6007AF396 /* main.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		A4CA4DC0059CA1F6007AF396 /* WindowController.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = WindowController.c; sourceTree = "<group>"; };
+		A4CA4DC1059CA1F6007AF396 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
+		A4CA4DD4059CA218007AF396 /* WindowControllerEvents.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = WindowControllerEvents.h; sourceTree = "<group>"; };
+		A4DD8454056E5C1C0091EB38 /* NotificationView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NotificationView.h; sourceTree = "<group>"; };
+		A4DD8455056E5C1C0091EB38 /* NotificationView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NotificationView.m; sourceTree = "<group>"; };
+		A4DD846F056E5FBF0091EB38 /* screenicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenicon.png; sourceTree = "<group>"; };
+		A4DD8499056E61010091EB38 /* WorkspaceManagerIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = WorkspaceManagerIcon.icns; sourceTree = "<group>"; };
+		A4DD84E0056E70960091EB38 /* DesktopStatusIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DesktopStatusIcon.png; sourceTree = "<group>"; };
+		A4DD8594056E7F6F0091EB38 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		A4DD8595056E7F6F0091EB38 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		A4DD8676056E86F90091EB38 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		A4DD8677056E86F90091EB38 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		A4E68DA605C2E0B10062EEC5 /* NSHidableWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHidableWindow.h; sourceTree = "<group>"; };
+		A4E68DA705C2E0B10062EEC5 /* NSHidableWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHidableWindow.m; sourceTree = "<group>"; };
+		A4EF6F4E056E48A100FD44FF /* HotKey.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HotKey.h; sourceTree = "<group>"; };
+		A4EF6F4F056E48A100FD44FF /* HotKey.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = HotKey.m; sourceTree = "<group>"; };
+		A4EF6F68056E4B2400FD44FF /* DMApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMApplication.h; sourceTree = "<group>"; };
+		A4EF6F69056E4B2400FD44FF /* DMApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMApplication.m; sourceTree = "<group>"; };
+		A4EF6FBE056E579100FD44FF /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
+		A4FC86FE06A2C99C00DC54B0 /* StickyWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickyWindowController.h; sourceTree = "<group>"; };
+		A4FC86FF06A2C99C00DC54B0 /* StickyWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickyWindowController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				A466EAF905983C890040F851 /* Carbon.framework in Frameworks */,
+				A4CA4D19059C9A4B007AF396 /* AppleScriptKit.framework in Frameworks */,
+				A436E9FA059DA73000B1707D /* ApplicationServices.framework in Frameworks */,
+				A410B25505B5967C008A8E74 /* PreferencePanes.framework in Frameworks */,
+				A454B4D9064B24EC00C9A058 /* DesktopManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A410B27205B59BDC008A8E74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A410B28E05B59DC5008A8E74 /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4134FDA05B8210E00A28993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4766753065433FC008E45BE /* DesktopManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A413506705B82E1D00A28993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A413507305B82EC600A28993 /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A416BF70064A69DE00040579 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A416C06A064A6AEA00040579 /* Foundation.framework in Frameworks */,
+				A416C06C064A6AEB00040579 /* Cocoa.framework in Frameworks */,
+				A416C06E064A6AEC00040579 /* Carbon.framework in Frameworks */,
+				A416C070064A6AED00040579 /* ApplicationServices.framework in Frameworks */,
+				A416C072064A6AEE00040579 /* AppleScriptKit.framework in Frameworks */,
+				A416C074064A6AEF00040579 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A444276C05B2F5CE000336DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A45A0BEF069EC88600887005 /* DesktopManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A465D5B105B33E3800A6023D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4FC87E706A2D4CA00DC54B0 /* DesktopManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A474EDD005BF1E98008C3BE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A474EE7305BF365E008C3BE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A474EE7B05BF3706008C3BE0 /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A477D8B005B6D59E0089ADA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A477D8C905B6E0310089ADA4 /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A477D94D05B7039A0089ADA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A477D95905B7046F0089ADA4 /* PreferencePanes.framework in Frameworks */,
+				A477D97105B70D260089ADA4 /* Carbon.framework in Frameworks */,
+				A416C060064A6ABC00040579 /* DesktopManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A47DF6EF05B5E4F900D83839 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A47DF70605B5E6FF00D83839 /* PreferencePanes.framework in Frameworks */,
+				A47DF77B05B5F69700D83839 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B0506005B45D190060F89F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CA4CBD059C9569007AF396 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4CA4D17059C9A33007AF396 /* Carbon.framework in Frameworks */,
+				A4CA4D1A059C9A4B007AF396 /* AppleScriptKit.framework in Frameworks */,
+				A4B040BC05E4E8AA00B0A875 /* Cocoa.framework in Frameworks */,
+				A4B040BD05E4E8AC00B0A875 /* ApplicationServices.framework in Frameworks */,
+				A4B040CA05E4F3EF00B0A875 /* AppKit.framework in Frameworks */,
+				A4B040CB05E4F3F000B0A875 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Application Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A4EF6F68056E4B2400FD44FF /* DMApplication.h */,
+				A4EF6F69056E4B2400FD44FF /* DMApplication.m */,
+			);
+			name = "Application Classes";
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A410B25405B5967C008A8E74 /* PreferencePanes.framework */,
+				A436E9F9059DA73000B1707D /* ApplicationServices.framework */,
+				A4CA4D18059C9A4B007AF396 /* AppleScriptKit.framework */,
+				A466EAF805983C890040F851 /* Carbon.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Desktop Manager.app */,
+				A444276E05B2F5CE000336DD /* DesktopPagerPlugin.bundle */,
+				A4CA4CBF059C9569007AF396 /* DockExtension.bundle */,
+				A465D5B305B33E3800A6023D /* OperationsMenu.bundle */,
+				A4B0506205B45D190060F89F /* ActiveEdges.bundle */,
+				A410B27405B59BDC008A8E74 /* ActiveEdgesPrefPane.bundle */,
+				A47DF6F105B5E4F900D83839 /* DesktopPagerPrefPane.bundle */,
+				A477D8B205B6D59E0089ADA4 /* DesktopNamesPrefs.bundle */,
+				A477D94F05B7039A0089ADA4 /* HotKeysPreferences.bundle */,
+				A4134FDC05B8210E00A28993 /* StatusbarPagerPlugin.bundle */,
+				A413506905B82E1D00A28993 /* StatusbarPrefPane.bundle */,
+				A474EDD205BF1E98008C3BE0 /* DesktopWorkspaceNames.bundle */,
+				A474EE7505BF365E008C3BE0 /* WorkspaceNameDisplayPrefs.bundle */,
+				A416BF72064A69DE00040579 /* DesktopManager.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Desktop Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A455A921056E31D500795DBA /* Headers */,
+				A4AAC2BD064723C300D4FB25 /* Utility Classes */,
+				A44428E705B302DC000336DD /* Core Code */,
+				A4DD8451056E5BF60091EB38 /* UI Elements */,
+				A444279405B2F7E4000336DD /* Plugins */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				A416BF73064A69DE00040579 /* DesktopManager-Info.plist */,
+			);
+			name = "Desktop Manager";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* DesktopManagerTNG_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				A444297905B32601000336DD /* DesktopManager.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				A44427F905B2FA5C000336DD /* Images */,
+				A4CA4786059C5F90007AF396 /* Localizable.strings */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A40F6CBC05A51713009867CD /* Desktop Pager */ = {
+			isa = PBXGroup;
+			children = (
+				A44427FA05B2FA78000336DD /* Skins */,
+				A47DF6E605B5E4D000D83839 /* Preferences */,
+				A4BA6E7305B0A28900392F7B /* DesktopPagerPlugin-Info.plist */,
+				A40F6CC005A51775009867CD /* DesktopPagerController.h */,
+				A40F6CC105A51775009867CD /* DesktopPagerController.m */,
+				A40F6CD105A51DB9009867CD /* DesktopPagerView.h */,
+				A40F6CD205A51DB9009867CD /* DesktopPagerView.m */,
+				A41A9D2F05A61C780053DF10 /* DesktopPagerCell.h */,
+				A41A9D3005A61C780053DF10 /* DesktopPagerCell.m */,
+				A4E68DA605C2E0B10062EEC5 /* NSHidableWindow.h */,
+				A4E68DA705C2E0B10062EEC5 /* NSHidableWindow.m */,
+			);
+			name = "Desktop Pager";
+			path = DesktopPager;
+			sourceTree = "<group>";
+		};
+		A40F6CBD05A5171C009867CD /* Switch Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				A4DD8454056E5C1C0091EB38 /* NotificationView.h */,
+				A4DD8455056E5C1C0091EB38 /* NotificationView.m */,
+			);
+			name = "Switch Notifications";
+			sourceTree = "<group>";
+		};
+		A40F6CBE05A51739009867CD /* Status Bar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Status Bar";
+			sourceTree = "<group>";
+		};
+		A40F6CBF05A51754009867CD /* Operations Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Operations Menu";
+			sourceTree = "<group>";
+		};
+		A410B24B05B593E8008A8E74 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				A410B29505B5A37C008A8E74 /* activeedges.png */,
+				A410B27505B59BDC008A8E74 /* ActiveEdgesPrefPane-Info.plist */,
+				A410B25205B595D2008A8E74 /* ActiveEdgesPrefs.nib */,
+				A410B27E05B59C85008A8E74 /* ActiveEdgesPrefrerences.h */,
+				A410B27F05B59C85008A8E74 /* ActiveEdgesPrefrerences.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		A4134FD405B81FF600A28993 /* Statusbar */ = {
+			isa = PBXGroup;
+			children = (
+				A413506105B82DFB00A28993 /* Preferences */,
+				A4134FDD05B8210E00A28993 /* StatusbarPagerPlugin-Info.plist */,
+				A413505905B8274F00A28993 /* Statusbar.nib */,
+				A4134FDE05B8213100A28993 /* PagerCell.h */,
+				A4134FDF05B8213100A28993 /* PagerCell.m */,
+				A4134FE005B8213100A28993 /* PagerView.h */,
+				A4134FE105B8213100A28993 /* PagerView.m */,
+				A4134FE205B8213100A28993 /* StatusBarMenuController.h */,
+				A4134FE305B8213100A28993 /* StatusBarMenuController.m */,
+				A4134FE405B8213100A28993 /* StatusBarPagerController.h */,
+				A4134FE505B8213100A28993 /* StatusBarPagerController.m */,
+				A4134FF005B8219300A28993 /* StatusbarController.h */,
+				A4134FF105B8219300A28993 /* StatusbarController.m */,
+				A413507605B82F7800A28993 /* StatusbarPrefs.nib */,
+			);
+			name = Statusbar;
+			path = StatusbarPager;
+			sourceTree = "<group>";
+		};
+		A413506105B82DFB00A28993 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				A413506A05B82E1D00A28993 /* StatusbarPrefPane-Info.plist */,
+				A413507405B82F1000A28993 /* statusbar.png */,
+				A413506F05B82EB800A28993 /* StatusbarPreferences.h */,
+				A413507005B82EB800A28993 /* StatusbarPreferences.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		A444279405B2F7E4000336DD /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				A444294D05B30BF7000336DD /* Common */,
+				A4B0505005B45C130060F89F /* Active Edges */,
+				A4CA4C96059C9363007AF396 /* Dock Extension */,
+				A4134FD405B81FF600A28993 /* Statusbar */,
+				A40F6CBC05A51713009867CD /* Desktop Pager */,
+				A474EDC905BF1E41008C3BE0 /* DesktopWorkspaceName */,
+				A4442B1205B33AF3000336DD /* OperationsMenu */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		A44427F905B2FA5C000336DD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A4DD846F056E5FBF0091EB38 /* screenicon.png */,
+				A4DD8499056E61010091EB38 /* WorkspaceManagerIcon.icns */,
+				A4DD84E0056E70960091EB38 /* DesktopStatusIcon.png */,
+				A435B921057232A50026099D /* DesktopStatusIconHighlight.png */,
+				A414D80C0574076000C99A0B /* minus.png */,
+				A414D80D0574076000C99A0B /* plus.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		A44427FA05B2FA78000336DD /* Skins */ = {
+			isa = PBXGroup;
+			children = (
+				A40F6D3405A5329D009867CD /* default_skin.plist */,
+			);
+			path = Skins;
+			sourceTree = SOURCE_ROOT;
+		};
+		A44428CA05B30203000336DD /* Code Injection */ = {
+			isa = PBXGroup;
+			children = (
+				A4CA4DBE059CA1F6007AF396 /* mach_inject.h */,
+				A4CA4DBD059CA1F6007AF396 /* mach_inject.c */,
+				A4CA4DB9059CA1F6007AF396 /* CodeInjector.c */,
+				A4CA4DBA059CA1F6007AF396 /* CodeInjector.h */,
+			);
+			name = "Code Injection";
+			path = CodeInjection;
+			sourceTree = "<group>";
+		};
+		A44428E705B302DC000336DD /* Core Code */ = {
+			isa = PBXGroup;
+			children = (
+				A455A907056E2CE100795DBA /* Core Classes */,
+				080E96DDFE201D6D7F000001 /* Application Classes */,
+				A4DD8591056E7F3F0091EB38 /* Preferences */,
+				A4EF6F4B056E487D00FD44FF /* Hot Keys */,
+				A44428CA05B30203000336DD /* Code Injection */,
+			);
+			name = "Core Code";
+			sourceTree = "<group>";
+		};
+		A444294D05B30BF7000336DD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A444294E05B30C72000336DD /* DMPlugins.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		A4442B1205B33AF3000336DD /* OperationsMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A465D5B405B33E3800A6023D /* OperationsMenu-Info.plist */,
+				A436EAE3059DD51C00B1707D /* OperationsMenuView.m */,
+				A436EAE2059DD51C00B1707D /* OperationsMenuView.h */,
+				A436E9ED059DA0C100B1707D /* OperationsMenuController.m */,
+				A436E9EC059DA0C100B1707D /* OperationsMenuController.h */,
+			);
+			path = OperationsMenu;
+			sourceTree = "<group>";
+		};
+		A455A907056E2CE100795DBA /* Core Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A455A90D056E2D1E00795DBA /* Workspace.m */,
+				A455A92D056E373C00795DBA /* DMController.m */,
+				A455A96F056E401600795DBA /* WorkspaceController.m */,
+				A414D8490574116100C99A0B /* ForeignWindow.m */,
+				A4FC86FF06A2C99C00DC54B0 /* StickyWindowController.m */,
+			);
+			name = "Core Classes";
+			path = Core;
+			sourceTree = SOURCE_ROOT;
+		};
+		A455A921056E31D500795DBA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				A455A96E056E401600795DBA /* WorkspaceController.h */,
+				A455A90C056E2D1D00795DBA /* Workspace.h */,
+				A414D8480574116100C99A0B /* ForeignWindow.h */,
+				A455A92C056E373C00795DBA /* DMController.h */,
+				A455A924056E31F700795DBA /* CGSPrivate.h */,
+				A4EF6FBE056E579100FD44FF /* Notifications.h */,
+				A4CA4DD4059CA218007AF396 /* WindowControllerEvents.h */,
+				A4FC86FE06A2C99C00DC54B0 /* StickyWindowController.h */,
+			);
+			name = Headers;
+			path = Include;
+			sourceTree = "<group>";
+		};
+		A474EDC905BF1E41008C3BE0 /* DesktopWorkspaceName */ = {
+			isa = PBXGroup;
+			children = (
+				A474EE6D05BF3632008C3BE0 /* Preferences */,
+				A474EDD305BF1E98008C3BE0 /* DesktopWorkspaceNames-Info.plist */,
+				A474EDF105BF1EE0008C3BE0 /* DesktopWorkspaceNamesController.h */,
+				A474EDF205BF1EE0008C3BE0 /* DesktopWorkspaceNamesController.m */,
+				A474EE0205BF2325008C3BE0 /* WorkspaceNameView.h */,
+				A474EE0305BF2325008C3BE0 /* WorkspaceNameView.m */,
+			);
+			path = DesktopWorkspaceName;
+			sourceTree = "<group>";
+		};
+		A474EE6D05BF3632008C3BE0 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				A474EE8105BF3821008C3BE0 /* NameDisplayPrefs.nib */,
+				A474EE7C05BF37D3008C3BE0 /* desktopname.png */,
+				A474EE7605BF365E008C3BE0 /* WorkspaceNameDisplayPrefs-Info.plist */,
+				A474EE8605BF3A09008C3BE0 /* WorkspaceNameDisplayPrefs.h */,
+				A474EE8705BF3A09008C3BE0 /* WorkspaceNameDisplayPrefs.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		A477D8A905B6D5390089ADA4 /* PreferencePanes */ = {
+			isa = PBXGroup;
+			children = (
+				A477D94705B703660089ADA4 /* HotKeys */,
+				A477D8AA05B6D5780089ADA4 /* DesktopNames */,
+			);
+			name = PreferencePanes;
+			sourceTree = "<group>";
+		};
+		A477D8AA05B6D5780089ADA4 /* DesktopNames */ = {
+			isa = PBXGroup;
+			children = (
+				A477D8CA05B6E0620089ADA4 /* DesktopNamesPrefs.nib */,
+				A477D8C705B6DFE90089ADA4 /* desktopnames.png */,
+				A477D8B305B6D59E0089ADA4 /* DesktopNamesPrefs-Info.plist */,
+				A477D90405B6E1800089ADA4 /* DesktopNamesPreferences.h */,
+				A477D90505B6E1800089ADA4 /* DesktopNamesPreferences.m */,
+			);
+			path = DesktopNames;
+			sourceTree = "<group>";
+		};
+		A477D94705B703660089ADA4 /* HotKeys */ = {
+			isa = PBXGroup;
+			children = (
+				A44849CC064BB467004601A6 /* hotKeyMinus.png */,
+				A477D95A05B704B20089ADA4 /* HotKeysPrefs.nib */,
+				A477D95305B704300089ADA4 /* hotkeys.png */,
+				A477D95005B7039B0089ADA4 /* HotKeysPreferences-Info.plist */,
+				A477D95505B7044A0089ADA4 /* HotKeysPreferences.h */,
+				A477D95605B7044A0089ADA4 /* HotKeysPreferences.m */,
+			);
+			path = HotKeys;
+			sourceTree = "<group>";
+		};
+		A47DF6E605B5E4D000D83839 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				A47DF6FC05B5E64600D83839 /* desktoppager.png */,
+				A47DF6F205B5E4F900D83839 /* DesktopPagerPrefPane-Info.plist */,
+				A47DF6F505B5E54C00D83839 /* DesktopPagerPrefs.nib */,
+				A47DF6F805B5E5DB00D83839 /* DesktopPagerPreferences.h */,
+				A47DF6F905B5E5DB00D83839 /* DesktopPagerPreferences.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		A4AAC2BD064723C300D4FB25 /* Utility Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A4AAC2C40647240800D4FB25 /* MouseWatcher.h */,
+				A4AAC2C50647240800D4FB25 /* MouseWatcher.m */,
+			);
+			name = "Utility Classes";
+			path = Utility;
+			sourceTree = SOURCE_ROOT;
+		};
+		A4B0505005B45C130060F89F /* Active Edges */ = {
+			isa = PBXGroup;
+			children = (
+				A410B24B05B593E8008A8E74 /* Preferences */,
+				A4B0506305B45D190060F89F /* ActiveEdges-Info.plist */,
+				A4B0505105B45C490060F89F /* ActiveEdgesController.h */,
+				A4B0505205B45C490060F89F /* ActiveEdgesController.m */,
+			);
+			name = "Active Edges";
+			path = ActiveEdges;
+			sourceTree = "<group>";
+		};
+		A4CA4C96059C9363007AF396 /* Dock Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A4CA4CC0059C9569007AF396 /* DockExtension-Info.plist */,
+				A4CA4DBC059CA1F6007AF396 /* ControllerEventHandlers.h */,
+				A4CA4DBB059CA1F6007AF396 /* ControllerEventHandlers.c */,
+				A4CA4DC0059CA1F6007AF396 /* WindowController.c */,
+				A4CA4DC1059CA1F6007AF396 /* WindowController.h */,
+				A4CA4DBF059CA1F6007AF396 /* main.c */,
+				A4B040CE05E4F70C00B0A875 /* couvert.h */,
+				A4B040CF05E4F70C00B0A875 /* couvert.m */,
+			);
+			name = "Dock Extension";
+			path = DockExtension;
+			sourceTree = "<group>";
+		};
+		A4DD8451056E5BF60091EB38 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				A40F6CBF05A51754009867CD /* Operations Menu */,
+				A40F6CBE05A51739009867CD /* Status Bar */,
+				A40F6CBD05A5171C009867CD /* Switch Notifications */,
+			);
+			name = "UI Elements";
+			sourceTree = "<group>";
+		};
+		A4DD8591056E7F3F0091EB38 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				A477D8A905B6D5390089ADA4 /* PreferencePanes */,
+				A4DD8594056E7F6F0091EB38 /* Preferences.h */,
+				A4DD8595056E7F6F0091EB38 /* Preferences.m */,
+				A4DD8676056E86F90091EB38 /* PreferencesController.h */,
+				A4DD8677056E86F90091EB38 /* PreferencesController.m */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		A4EF6F4B056E487D00FD44FF /* Hot Keys */ = {
+			isa = PBXGroup;
+			children = (
+				A4EF6F4E056E48A100FD44FF /* HotKey.h */,
+				A4EF6F4F056E48A100FD44FF /* HotKey.m */,
+				A46A1EF70575036F00560C7F /* HotKeyController.h */,
+				A46A1EF80575036F00560C7F /* HotKeyController.m */,
+			);
+			name = "Hot Keys";
+			path = HotKeys;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D1107270486CEB800E47090 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1107280486CEB800E47090 /* DesktopManagerTNG_Prefix.pch in Headers */,
+				A455A92E056E373C00795DBA /* DMController.h in Headers */,
+				A4EF6F6A056E4B2400FD44FF /* DMApplication.h in Headers */,
+				A4DD8456056E5C1C0091EB38 /* NotificationView.h in Headers */,
+				A4DD8598056E7F6F0091EB38 /* Preferences.h in Headers */,
+				A4DD8678056E86F90091EB38 /* PreferencesController.h in Headers */,
+				A4CA4DC3059CA1F6007AF396 /* CodeInjector.h in Headers */,
+				A4CA4DC7059CA1F6007AF396 /* mach_inject.h in Headers */,
+				A444294F05B30C72000336DD /* DMPlugins.h in Headers */,
+				A416C015064A6A7900040579 /* DesktopManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A410B26F05B59BDC008A8E74 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A410B28005B59C85008A8E74 /* ActiveEdgesPrefrerences.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4134FD705B8210E00A28993 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4134FE605B8213100A28993 /* PagerCell.h in Headers */,
+				A4134FE805B8213100A28993 /* PagerView.h in Headers */,
+				A4134FEA05B8213100A28993 /* StatusBarMenuController.h in Headers */,
+				A4134FEC05B8213100A28993 /* StatusBarPagerController.h in Headers */,
+				A4134FF205B8219300A28993 /* StatusbarController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A413506405B82E1D00A28993 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A413507105B82EB800A28993 /* StatusbarPreferences.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A416BF6D064A69DE00040579 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A416BF79064A69F200040579 /* WorkspaceController.h in Headers */,
+				A416BF7D064A69F200040579 /* Workspace.h in Headers */,
+				A416BF82064A69F300040579 /* WindowControllerEvents.h in Headers */,
+				A416BF87064A69F400040579 /* Notifications.h in Headers */,
+				A416BF8C064A69F500040579 /* ForeignWindow.h in Headers */,
+				A416BF96064A69F600040579 /* CGSPrivate.h in Headers */,
+				A416BFA1064A69FD00040579 /* MouseWatcher.h in Headers */,
+				A416BFCB064A6A2000040579 /* HotKeyController.h in Headers */,
+				A416BFD5064A6A2200040579 /* HotKey.h in Headers */,
+				A416BFDF064A6A2B00040579 /* NotificationView.h in Headers */,
+				A416BFFC064A6A4700040579 /* DesktopManager.h in Headers */,
+				A4FC870006A2C99C00DC54B0 /* StickyWindowController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A444276905B2F5CE000336DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A444277005B2F657000336DD /* DesktopPagerView.h in Headers */,
+				A444277205B2F659000336DD /* DesktopPagerController.h in Headers */,
+				A444277405B2F65A000336DD /* DesktopPagerCell.h in Headers */,
+				A444297005B32519000336DD /* WindowControllerEvents.h in Headers */,
+				A444297105B3251A000336DD /* Notifications.h in Headers */,
+				A444297205B3251B000336DD /* CGSPrivate.h in Headers */,
+				A444297305B3256A000336DD /* ForeignWindow.h in Headers */,
+				A444297405B3256B000336DD /* DMController.h in Headers */,
+				A444297505B3256C000336DD /* WorkspaceController.h in Headers */,
+				A444297605B3256D000336DD /* Workspace.h in Headers */,
+				A4442A5505B328AE000336DD /* DesktopManager.h in Headers */,
+				A4E68DA805C2E0B10062EEC5 /* NSHidableWindow.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A465D5AE05B33E3800A6023D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A465D5C405B33E7F00A6023D /* OperationsMenuView.h in Headers */,
+				A465D5C605B33E8000A6023D /* OperationsMenuController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A474EDCD05BF1E98008C3BE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A474EDF605BF1F58008C3BE0 /* DesktopWorkspaceNamesController.h in Headers */,
+				A474EE0705BF23BA008C3BE0 /* WorkspaceNameView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A474EE7005BF365E008C3BE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A474EE8805BF3A09008C3BE0 /* WorkspaceNameDisplayPrefs.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A477D8AD05B6D59E0089ADA4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A477D90605B6E1800089ADA4 /* DesktopNamesPreferences.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A477D94A05B7039A0089ADA4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A477D95705B7044A0089ADA4 /* HotKeysPreferences.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A47DF6EB05B5E4F900D83839 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A47DF6FA05B5E5DB00D83839 /* DesktopPagerPreferences.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B0505D05B45D190060F89F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B0507205B45D4F0060F89F /* ActiveEdgesController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CA4CB9059C9569007AF396 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4CA4D74059C9F50007AF396 /* CGSPrivate.h in Headers */,
+				A4CA4DCE059CA1F6007AF396 /* ControllerEventHandlers.h in Headers */,
+				A4CA4DD3059CA1F6007AF396 /* WindowController.h in Headers */,
+				A4CA4DD6059CA218007AF396 /* WindowControllerEvents.h in Headers */,
+				A4B040D005E4F70C00B0A875 /* couvert.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Desktop Manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5F40D3A4225007F4643 /* Build configuration list for PBXNativeTarget "Desktop Manager" */;
+			buildPhases = (
+				8D1107270486CEB800E47090 /* Headers */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				A4CA4D08059C9686007AF396 /* Rez */,
+				A444286505B2FD60000336DD /* CopyFiles */,
+				A477D8B805B6D5B70089ADA4 /* CopyFiles */,
+				A454B49F064B1F7600C9A058 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4CA4D13059C975E007AF396 /* PBXTargetDependency */,
+				A444279605B2F80D000336DD /* PBXTargetDependency */,
+				A465D5C205B33E7000A6023D /* PBXTargetDependency */,
+				A4B0507005B45D410060F89F /* PBXTargetDependency */,
+				A477D8B505B6D5AD0089ADA4 /* PBXTargetDependency */,
+				A477D96205B705D40089ADA4 /* PBXTargetDependency */,
+				A413505C05B8286600A28993 /* PBXTargetDependency */,
+				A474EDFA05BF1F6B008C3BE0 /* PBXTargetDependency */,
+				A416C0BF064A6E7400040579 /* PBXTargetDependency */,
+			);
+			name = "Desktop Manager";
+			productInstallPath = "$(HOME)/Applications";
+			productName = DesktopManagerTNG;
+			productReference = 8D1107320486CEB800E47090 /* Desktop Manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A410B27305B59BDC008A8E74 /* ActiveEdgesPrefPane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5EC0D3A4225007F4643 /* Build configuration list for PBXNativeTarget "ActiveEdgesPrefPane" */;
+			buildPhases = (
+				A410B26F05B59BDC008A8E74 /* Headers */,
+				A410B27005B59BDC008A8E74 /* Resources */,
+				A410B27105B59BDC008A8E74 /* Sources */,
+				A410B27205B59BDC008A8E74 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActiveEdgesPrefPane;
+			productName = ActiveEdges.prefPane;
+			productReference = A410B27405B59BDC008A8E74 /* ActiveEdgesPrefPane.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A4134FDB05B8210E00A28993 /* StatusbarPagerPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5F10D3A4225007F4643 /* Build configuration list for PBXNativeTarget "StatusbarPagerPlugin" */;
+			buildPhases = (
+				A4134FD705B8210E00A28993 /* Headers */,
+				A4134FD805B8210E00A28993 /* Resources */,
+				A4134FD905B8210E00A28993 /* Sources */,
+				A4134FDA05B8210E00A28993 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A413506E05B82E5300A28993 /* PBXTargetDependency */,
+			);
+			name = StatusbarPagerPlugin;
+			productName = StatusbarPagerPlugin;
+			productReference = A4134FDC05B8210E00A28993 /* StatusbarPagerPlugin.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A413506805B82E1D00A28993 /* StatusbarPrefPane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5F00D3A4225007F4643 /* Build configuration list for PBXNativeTarget "StatusbarPrefPane" */;
+			buildPhases = (
+				A413506405B82E1D00A28993 /* Headers */,
+				A413506505B82E1D00A28993 /* Resources */,
+				A413506605B82E1D00A28993 /* Sources */,
+				A413506705B82E1D00A28993 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StatusbarPrefPane;
+			productName = StatusbarPrefPane;
+			productReference = A413506905B82E1D00A28993 /* StatusbarPrefPane.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A416BF71064A69DE00040579 /* DesktopManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5E90D3A4225007F4643 /* Build configuration list for PBXNativeTarget "DesktopManager" */;
+			buildPhases = (
+				A416BF6D064A69DE00040579 /* Headers */,
+				A416BF6E064A69DE00040579 /* Resources */,
+				A416BF6F064A69DE00040579 /* Sources */,
+				A416BF70064A69DE00040579 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DesktopManager;
+			productName = DesktopManager;
+			productReference = A416BF72064A69DE00040579 /* DesktopManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A444276D05B2F5CE000336DD /* DesktopPagerPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5EA0D3A4225007F4643 /* Build configuration list for PBXNativeTarget "DesktopPagerPlugin" */;
+			buildPhases = (
+				A444276905B2F5CE000336DD /* Headers */,
+				A444276A05B2F5CE000336DD /* Resources */,
+				A444276B05B2F5CE000336DD /* Sources */,
+				A444276C05B2F5CE000336DD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A47DF70505B5E6E900D83839 /* PBXTargetDependency */,
+				A45A0CA8069ED23E00887005 /* PBXTargetDependency */,
+			);
+			name = DesktopPagerPlugin;
+			productName = DesktopPagerPlugin;
+			productReference = A444276E05B2F5CE000336DD /* DesktopPagerPlugin.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A465D5B205B33E3800A6023D /* OperationsMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5EB0D3A4225007F4643 /* Build configuration list for PBXNativeTarget "OperationsMenu" */;
+			buildPhases = (
+				A465D5AE05B33E3800A6023D /* Headers */,
+				A465D5AF05B33E3800A6023D /* Resources */,
+				A465D5B005B33E3800A6023D /* Sources */,
+				A465D5B105B33E3800A6023D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4FC87EF06A2D4DF00DC54B0 /* PBXTargetDependency */,
+			);
+			name = OperationsMenu;
+			productName = OperationsMenu;
+			productReference = A465D5B305B33E3800A6023D /* OperationsMenu.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A474EDD105BF1E98008C3BE0 /* DesktopWorkspaceNames */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5F30D3A4225007F4643 /* Build configuration list for PBXNativeTarget "DesktopWorkspaceNames" */;
+			buildPhases = (
+				A474EDCD05BF1E98008C3BE0 /* Headers */,
+				A474EDCE05BF1E98008C3BE0 /* Resources */,
+				A474EDCF05BF1E98008C3BE0 /* Sources */,
+				A474EDD005BF1E98008C3BE0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A474EE8505BF399B008C3BE0 /* PBXTargetDependency */,
+			);
+			name = DesktopWorkspaceNames;
+			productName = DesktopWorkspaceNames;
+			productReference = A474EDD205BF1E98008C3BE0 /* DesktopWorkspaceNames.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A474EE7405BF365E008C3BE0 /* WorkspaceNameDisplayPrefs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5F20D3A4225007F4643 /* Build configuration list for PBXNativeTarget "WorkspaceNameDisplayPrefs" */;
+			buildPhases = (
+				A474EE7005BF365E008C3BE0 /* Headers */,
+				A474EE7105BF365E008C3BE0 /* Resources */,
+				A474EE7205BF365E008C3BE0 /* Sources */,
+				A474EE7305BF365E008C3BE0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorkspaceNameDisplayPrefs;
+			productName = WorkspaceNameDisplayPrefs;
+			productReference = A474EE7505BF365E008C3BE0 /* WorkspaceNameDisplayPrefs.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A477D8B105B6D59E0089ADA4 /* DesktopNamesPrefs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5EE0D3A4225007F4643 /* Build configuration list for PBXNativeTarget "DesktopNamesPrefs" */;
+			buildPhases = (
+				A477D8AD05B6D59E0089ADA4 /* Headers */,
+				A477D8AE05B6D59E0089ADA4 /* Resources */,
+				A477D8AF05B6D59E0089ADA4 /* Sources */,
+				A477D8B005B6D59E0089ADA4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DesktopNamesPrefs;
+			productName = DesktopNamesPrefs;
+			productReference = A477D8B205B6D59E0089ADA4 /* DesktopNamesPrefs.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A477D94E05B7039A0089ADA4 /* HotKeysPreferences */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5EF0D3A4225007F4643 /* Build configuration list for PBXNativeTarget "HotKeysPreferences" */;
+			buildPhases = (
+				A477D94A05B7039A0089ADA4 /* Headers */,
+				A477D94B05B7039A0089ADA4 /* Resources */,
+				A477D94C05B7039A0089ADA4 /* Sources */,
+				A477D94D05B7039A0089ADA4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A416C0BC064A6E6900040579 /* PBXTargetDependency */,
+			);
+			name = HotKeysPreferences;
+			productName = HotKeysPreferences;
+			productReference = A477D94F05B7039A0089ADA4 /* HotKeysPreferences.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A47DF6F005B5E4F900D83839 /* DesktopPagerPrefPane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5E80D3A4225007F4643 /* Build configuration list for PBXNativeTarget "DesktopPagerPrefPane" */;
+			buildPhases = (
+				A47DF6EB05B5E4F900D83839 /* Headers */,
+				A47DF6EC05B5E4F900D83839 /* Resources */,
+				A47DF6ED05B5E4F900D83839 /* Sources */,
+				A47DF6EE05B5E4F900D83839 /* Rez */,
+				A47DF6EF05B5E4F900D83839 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DesktopPagerPrefPane;
+			productName = DesktopPagerPrefPane;
+			productReference = A47DF6F105B5E4F900D83839 /* DesktopPagerPrefPane.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A4B0506105B45D190060F89F /* ActiveEdges */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5ED0D3A4225007F4643 /* Build configuration list for PBXNativeTarget "ActiveEdges" */;
+			buildPhases = (
+				A4B0505D05B45D190060F89F /* Headers */,
+				A4B0505E05B45D190060F89F /* Resources */,
+				A4B0505F05B45D190060F89F /* Sources */,
+				A4B0506005B45D190060F89F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A410B28A05B59D3E008A8E74 /* PBXTargetDependency */,
+			);
+			name = ActiveEdges;
+			productName = ActiveEdges;
+			productReference = A4B0506205B45D190060F89F /* ActiveEdges.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A4CA4CBE059C9569007AF396 /* DockExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6BE5E70D3A4225007F4643 /* Build configuration list for PBXNativeTarget "DockExtension" */;
+			buildPhases = (
+				A4CA4CB9059C9569007AF396 /* Headers */,
+				A4CA4CBA059C9569007AF396 /* Resources */,
+				A4CA4CBB059C9569007AF396 /* Sources */,
+				A4CA4CBC059C9569007AF396 /* Rez */,
+				A4CA4CBD059C9569007AF396 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DockExtension;
+			productName = DockExtension;
+			productReference = A4CA4CBF059C9569007AF396 /* DockExtension.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7F6BE5E60D3A4225007F4643 /* Build configuration list for PBXProject "DesktopManager" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				Spanish,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Desktop Manager */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Desktop Manager */,
+				A4CA4CBE059C9569007AF396 /* DockExtension */,
+				A444276D05B2F5CE000336DD /* DesktopPagerPlugin */,
+				A465D5B205B33E3800A6023D /* OperationsMenu */,
+				A4B0506105B45D190060F89F /* ActiveEdges */,
+				A410B27305B59BDC008A8E74 /* ActiveEdgesPrefPane */,
+				A47DF6F005B5E4F900D83839 /* DesktopPagerPrefPane */,
+				A477D8B105B6D59E0089ADA4 /* DesktopNamesPrefs */,
+				A477D94E05B7039A0089ADA4 /* HotKeysPreferences */,
+				A4134FDB05B8210E00A28993 /* StatusbarPagerPlugin */,
+				A413506805B82E1D00A28993 /* StatusbarPrefPane */,
+				A474EDD105BF1E98008C3BE0 /* DesktopWorkspaceNames */,
+				A474EE7405BF365E008C3BE0 /* WorkspaceNameDisplayPrefs */,
+				A416BF71064A69DE00040579 /* DesktopManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44427F305B2F9E8000336DD /* DockExtension.bundle in Resources */,
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				A4DD8470056E5FBF0091EB38 /* screenicon.png in Resources */,
+				A4DD849A056E61010091EB38 /* WorkspaceManagerIcon.icns in Resources */,
+				A4DD84E1056E70960091EB38 /* DesktopStatusIcon.png in Resources */,
+				A435B922057232A50026099D /* DesktopStatusIconHighlight.png in Resources */,
+				A414D80E0574076000C99A0B /* minus.png in Resources */,
+				A414D80F0574076000C99A0B /* plus.png in Resources */,
+				A4CA4787059C5F90007AF396 /* Localizable.strings in Resources */,
+				A44849D4064BB531004601A6 /* hotKeyMinus.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A410B27005B59BDC008A8E74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A410B27D05B59C5A008A8E74 /* ActiveEdgesPrefs.nib in Resources */,
+				A410B29605B5A37C008A8E74 /* activeedges.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4134FD805B8210E00A28993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A413506C05B82E3500A28993 /* StatusbarPrefPane.bundle in Resources */,
+				A413505A05B8274F00A28993 /* Statusbar.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A413506505B82E1D00A28993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A413507505B82F1000A28993 /* statusbar.png in Resources */,
+				A413507705B82F7800A28993 /* StatusbarPrefs.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A416BF6E064A69DE00040579 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A416BFE5064A6A3200040579 /* screenicon.png in Resources */,
+				A416BFF1064A6A3B00040579 /* DesktopStatusIcon.png in Resources */,
+				A416BFF6064A6A3D00040579 /* DesktopStatusIconHighlight.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A444276A05B2F5CE000336DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A47DF6F405B5E50B00D83839 /* DesktopPagerPrefPane.bundle in Resources */,
+				A47DF77C05B5F6F000D83839 /* default_skin.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A465D5AF05B33E3800A6023D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A474EDCE05BF1E98008C3BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A474EE7805BF3681008C3BE0 /* WorkspaceNameDisplayPrefs.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A474EE7105BF365E008C3BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A474EE7D05BF37D3008C3BE0 /* desktopname.png in Resources */,
+				A474EE8205BF3821008C3BE0 /* NameDisplayPrefs.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A477D8AE05B6D59E0089ADA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A477D8C805B6DFE90089ADA4 /* desktopnames.png in Resources */,
+				A477D8CB05B6E0620089ADA4 /* DesktopNamesPrefs.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A477D94B05B7039A0089ADA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A477D95405B704300089ADA4 /* hotkeys.png in Resources */,
+				A477D95B05B704B20089ADA4 /* HotKeysPrefs.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A47DF6EC05B5E4F900D83839 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A47DF6F705B5E55900D83839 /* DesktopPagerPrefs.nib in Resources */,
+				A47DF6FD05B5E64600D83839 /* desktoppager.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B0505E05B45D190060F89F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A410B27705B59BF9008A8E74 /* ActiveEdgesPrefPane.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CA4CBA059C9569007AF396 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		A47DF6EE05B5E4F900D83839 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CA4CBC059C9569007AF396 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CA4D08059C9686007AF396 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				A4EF6F6B056E4B2400FD44FF /* DMApplication.m in Sources */,
+				A4DD8457056E5C1C0091EB38 /* NotificationView.m in Sources */,
+				A4DD8599056E7F6F0091EB38 /* Preferences.m in Sources */,
+				A4DD8679056E86F90091EB38 /* PreferencesController.m in Sources */,
+				A4CA4DC2059CA1F6007AF396 /* CodeInjector.c in Sources */,
+				A4CA4DC6059CA1F6007AF396 /* mach_inject.c in Sources */,
+				A416C038064A6A9300040579 /* DMController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A410B27105B59BDC008A8E74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A410B28105B59C85008A8E74 /* ActiveEdgesPrefrerences.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4134FD905B8210E00A28993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4134FE705B8213100A28993 /* PagerCell.m in Sources */,
+				A4134FE905B8213100A28993 /* PagerView.m in Sources */,
+				A4134FEB05B8213100A28993 /* StatusBarMenuController.m in Sources */,
+				A4134FED05B8213100A28993 /* StatusBarPagerController.m in Sources */,
+				A4134FF305B8219300A28993 /* StatusbarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A413506605B82E1D00A28993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A413507205B82EB800A28993 /* StatusbarPreferences.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A416BF6F064A69DE00040579 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A416BF9D064A69FC00040579 /* MouseWatcher.m in Sources */,
+				A416BFA8064A6A0200040579 /* WorkspaceController.m in Sources */,
+				A416BFAD064A6A0300040579 /* Workspace.m in Sources */,
+				A416BFB2064A6A0400040579 /* ForeignWindow.m in Sources */,
+				A416BFC7064A6A1F00040579 /* HotKeyController.m in Sources */,
+				A416BFD0064A6A2100040579 /* HotKey.m in Sources */,
+				A416BFDB064A6A2A00040579 /* NotificationView.m in Sources */,
+				A4FC870106A2C99D00DC54B0 /* StickyWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A444276B05B2F5CE000336DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A444276F05B2F657000336DD /* DesktopPagerView.m in Sources */,
+				A444277105B2F658000336DD /* DesktopPagerController.m in Sources */,
+				A444277305B2F659000336DD /* DesktopPagerCell.m in Sources */,
+				A4E68DA905C2E0B10062EEC5 /* NSHidableWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A465D5B005B33E3800A6023D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A465D5C305B33E7E00A6023D /* OperationsMenuView.m in Sources */,
+				A465D5C505B33E8000A6023D /* OperationsMenuController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A474EDCF05BF1E98008C3BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A474EDF505BF1F57008C3BE0 /* DesktopWorkspaceNamesController.m in Sources */,
+				A474EE0605BF23BA008C3BE0 /* WorkspaceNameView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A474EE7205BF365E008C3BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A474EE8905BF3A09008C3BE0 /* WorkspaceNameDisplayPrefs.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A477D8AF05B6D59E0089ADA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A477D90705B6E1800089ADA4 /* DesktopNamesPreferences.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A477D94C05B7039A0089ADA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A477D95805B7044A0089ADA4 /* HotKeysPreferences.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A47DF6ED05B5E4F900D83839 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A47DF6FB05B5E5DB00D83839 /* DesktopPagerPreferences.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B0505F05B45D190060F89F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B0507105B45D4E0060F89F /* ActiveEdgesController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CA4CBB059C9569007AF396 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4CA4DCD059CA1F6007AF396 /* ControllerEventHandlers.c in Sources */,
+				A4CA4DD2059CA1F6007AF396 /* WindowController.c in Sources */,
+				A4CA4DD8059CA23E007AF396 /* main.c in Sources */,
+				A4B040D105E4F70C00B0A875 /* couvert.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A410B28A05B59D3E008A8E74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A410B27305B59BDC008A8E74 /* ActiveEdgesPrefPane */;
+			targetProxy = A410B28905B59D3E008A8E74 /* PBXContainerItemProxy */;
+		};
+		A413505C05B8286600A28993 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4134FDB05B8210E00A28993 /* StatusbarPagerPlugin */;
+			targetProxy = A413505B05B8286600A28993 /* PBXContainerItemProxy */;
+		};
+		A413506E05B82E5300A28993 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A413506805B82E1D00A28993 /* StatusbarPrefPane */;
+			targetProxy = A413506D05B82E5300A28993 /* PBXContainerItemProxy */;
+		};
+		A416C0BC064A6E6900040579 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A416BF71064A69DE00040579 /* DesktopManager */;
+			targetProxy = A416C0BB064A6E6900040579 /* PBXContainerItemProxy */;
+		};
+		A416C0BF064A6E7400040579 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A416BF71064A69DE00040579 /* DesktopManager */;
+			targetProxy = A416C0BE064A6E7400040579 /* PBXContainerItemProxy */;
+		};
+		A444279605B2F80D000336DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A444276D05B2F5CE000336DD /* DesktopPagerPlugin */;
+			targetProxy = A444279505B2F80D000336DD /* PBXContainerItemProxy */;
+		};
+		A45A0CA8069ED23E00887005 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A416BF71064A69DE00040579 /* DesktopManager */;
+			targetProxy = A45A0CA7069ED23E00887005 /* PBXContainerItemProxy */;
+		};
+		A465D5C205B33E7000A6023D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A465D5B205B33E3800A6023D /* OperationsMenu */;
+			targetProxy = A465D5C105B33E7000A6023D /* PBXContainerItemProxy */;
+		};
+		A474EDFA05BF1F6B008C3BE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A474EDD105BF1E98008C3BE0 /* DesktopWorkspaceNames */;
+			targetProxy = A474EDF905BF1F6B008C3BE0 /* PBXContainerItemProxy */;
+		};
+		A474EE8505BF399B008C3BE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A474EE7405BF365E008C3BE0 /* WorkspaceNameDisplayPrefs */;
+			targetProxy = A474EE8405BF399B008C3BE0 /* PBXContainerItemProxy */;
+		};
+		A477D8B505B6D5AD0089ADA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A477D8B105B6D59E0089ADA4 /* DesktopNamesPrefs */;
+			targetProxy = A477D8B405B6D5AD0089ADA4 /* PBXContainerItemProxy */;
+		};
+		A477D96205B705D40089ADA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A477D94E05B7039A0089ADA4 /* HotKeysPreferences */;
+			targetProxy = A477D96105B705D40089ADA4 /* PBXContainerItemProxy */;
+		};
+		A47DF70505B5E6E900D83839 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A47DF6F005B5E4F900D83839 /* DesktopPagerPrefPane */;
+			targetProxy = A47DF70405B5E6E900D83839 /* PBXContainerItemProxy */;
+		};
+		A4B0507005B45D410060F89F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4B0506105B45D190060F89F /* ActiveEdges */;
+			targetProxy = A4B0506F05B45D410060F89F /* PBXContainerItemProxy */;
+		};
+		A4CA4D13059C975E007AF396 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4CA4CBE059C9569007AF396 /* DockExtension */;
+			targetProxy = A4CA4D12059C975E007AF396 /* PBXContainerItemProxy */;
+		};
+		A4FC87EF06A2D4DF00DC54B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A416BF71064A69DE00040579 /* DesktopManager */;
+			targetProxy = A4FC87EE06A2D4DF00DC54B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		A4CA4786059C5F90007AF396 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A46A1ED20574FCE600560C7F /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F6BE5B90D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		7F6BE5BA0D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		7F6BE5BB0D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+		7F6BE5BC0D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DesktopManagerTNG_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Desktop Manager";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5BD0D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DesktopManagerTNG_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Desktop Manager";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5BE0D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DesktopManagerTNG_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Desktop Manager";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		7F6BE5BF0D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DockExtension-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_STYLE = STATIC;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DockExtension;
+				REZ_EXECUTABLE = NO;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5C00D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DockExtension-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DockExtension;
+				REZ_EXECUTABLE = NO;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5C10D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DockExtension-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DockExtension;
+				REZ_EXECUTABLE = NO;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Default;
+		};
+		7F6BE5C20D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				DEPLOYMENT_LOCATION = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopPagerPlugin-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopPagerPlugin;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5C30D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEPLOYMENT_LOCATION = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopPagerPlugin-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopPagerPlugin;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5C40D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEPLOYMENT_LOCATION = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopPagerPlugin-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopPagerPlugin;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+		7F6BE5C50D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "OperationsMenu-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = OperationsMenu;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5C60D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "OperationsMenu-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = OperationsMenu;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5C70D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "OperationsMenu-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = OperationsMenu;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+		7F6BE5C80D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "ActiveEdges-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ActiveEdges;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5C90D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "ActiveEdges-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ActiveEdges;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5CA0D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "ActiveEdges-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ActiveEdges;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+		7F6BE5CB0D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "ActiveEdgesPrefPane-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ActiveEdgesPrefPane;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5CC0D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "ActiveEdgesPrefPane-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ActiveEdgesPrefPane;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5CD0D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "ActiveEdgesPrefPane-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ActiveEdgesPrefPane;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+		7F6BE5CE0D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopPagerPrefPane-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopPagerPrefPane;
+				REZ_EXECUTABLE = NO;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5CF0D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopPagerPrefPane-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopPagerPrefPane;
+				REZ_EXECUTABLE = NO;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5D00D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopPagerPrefPane-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopPagerPrefPane;
+				REZ_EXECUTABLE = NO;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+		7F6BE5D10D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopNamesPrefs-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopNamesPrefs;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5D20D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopNamesPrefs-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopNamesPrefs;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5D30D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopNamesPrefs-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopNamesPrefs;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+		7F6BE5D40D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "HotKeysPreferences-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = HotKeysPreferences;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5D50D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "HotKeysPreferences-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = HotKeysPreferences;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5D60D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "HotKeysPreferences-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = HotKeysPreferences;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+		7F6BE5D70D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "StatusbarPagerPlugin-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = StatusbarPagerPlugin;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5D80D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "StatusbarPagerPlugin-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = StatusbarPagerPlugin;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5D90D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "StatusbarPagerPlugin-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = StatusbarPagerPlugin;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+		7F6BE5DA0D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "StatusbarPrefPane-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = StatusbarPrefPane;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5DB0D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "StatusbarPrefPane-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = StatusbarPrefPane;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5DC0D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "StatusbarPrefPane-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = StatusbarPrefPane;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+		7F6BE5DD0D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopWorkspaceNames-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopWorkspaceNames;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5DE0D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopWorkspaceNames-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopWorkspaceNames;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5DF0D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopWorkspaceNames-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopWorkspaceNames;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+		7F6BE5E00D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "WorkspaceNameDisplayPrefs-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = WorkspaceNameDisplayPrefs;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5E10D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "WorkspaceNameDisplayPrefs-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = WorkspaceNameDisplayPrefs;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5E20D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "WorkspaceNameDisplayPrefs-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = WorkspaceNameDisplayPrefs;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+		7F6BE5E30D3A4225007F4643 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopManager-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopManager;
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F6BE5E40D3A4225007F4643 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopManager-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopManager;
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = "-Wmost";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F6BE5E50D3A4225007F4643 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "DesktopManager-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DesktopManager;
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = "-Wmost";
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F6BE5E60D3A4225007F4643 /* Build configuration list for PBXProject "DesktopManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5B90D3A4225007F4643 /* Development */,
+				7F6BE5BA0D3A4225007F4643 /* Deployment */,
+				7F6BE5BB0D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5E70D3A4225007F4643 /* Build configuration list for PBXNativeTarget "DockExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5BF0D3A4225007F4643 /* Development */,
+				7F6BE5C00D3A4225007F4643 /* Deployment */,
+				7F6BE5C10D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5E80D3A4225007F4643 /* Build configuration list for PBXNativeTarget "DesktopPagerPrefPane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5CE0D3A4225007F4643 /* Development */,
+				7F6BE5CF0D3A4225007F4643 /* Deployment */,
+				7F6BE5D00D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5E90D3A4225007F4643 /* Build configuration list for PBXNativeTarget "DesktopManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5E30D3A4225007F4643 /* Development */,
+				7F6BE5E40D3A4225007F4643 /* Deployment */,
+				7F6BE5E50D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5EA0D3A4225007F4643 /* Build configuration list for PBXNativeTarget "DesktopPagerPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5C20D3A4225007F4643 /* Development */,
+				7F6BE5C30D3A4225007F4643 /* Deployment */,
+				7F6BE5C40D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5EB0D3A4225007F4643 /* Build configuration list for PBXNativeTarget "OperationsMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5C50D3A4225007F4643 /* Development */,
+				7F6BE5C60D3A4225007F4643 /* Deployment */,
+				7F6BE5C70D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5EC0D3A4225007F4643 /* Build configuration list for PBXNativeTarget "ActiveEdgesPrefPane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5CB0D3A4225007F4643 /* Development */,
+				7F6BE5CC0D3A4225007F4643 /* Deployment */,
+				7F6BE5CD0D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5ED0D3A4225007F4643 /* Build configuration list for PBXNativeTarget "ActiveEdges" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5C80D3A4225007F4643 /* Development */,
+				7F6BE5C90D3A4225007F4643 /* Deployment */,
+				7F6BE5CA0D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5EE0D3A4225007F4643 /* Build configuration list for PBXNativeTarget "DesktopNamesPrefs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5D10D3A4225007F4643 /* Development */,
+				7F6BE5D20D3A4225007F4643 /* Deployment */,
+				7F6BE5D30D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5EF0D3A4225007F4643 /* Build configuration list for PBXNativeTarget "HotKeysPreferences" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5D40D3A4225007F4643 /* Development */,
+				7F6BE5D50D3A4225007F4643 /* Deployment */,
+				7F6BE5D60D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5F00D3A4225007F4643 /* Build configuration list for PBXNativeTarget "StatusbarPrefPane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5DA0D3A4225007F4643 /* Development */,
+				7F6BE5DB0D3A4225007F4643 /* Deployment */,
+				7F6BE5DC0D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5F10D3A4225007F4643 /* Build configuration list for PBXNativeTarget "StatusbarPagerPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5D70D3A4225007F4643 /* Development */,
+				7F6BE5D80D3A4225007F4643 /* Deployment */,
+				7F6BE5D90D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5F20D3A4225007F4643 /* Build configuration list for PBXNativeTarget "WorkspaceNameDisplayPrefs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5E00D3A4225007F4643 /* Development */,
+				7F6BE5E10D3A4225007F4643 /* Deployment */,
+				7F6BE5E20D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5F30D3A4225007F4643 /* Build configuration list for PBXNativeTarget "DesktopWorkspaceNames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5DD0D3A4225007F4643 /* Development */,
+				7F6BE5DE0D3A4225007F4643 /* Deployment */,
+				7F6BE5DF0D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F6BE5F40D3A4225007F4643 /* Build configuration list for PBXNativeTarget "Desktop Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6BE5BC0D3A4225007F4643 /* Development */,
+				7F6BE5BD0D3A4225007F4643 /* Deployment */,
+				7F6BE5BE0D3A4225007F4643 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

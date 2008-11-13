@@ -1,0 +1,39 @@
+Since 6-21-02
+-------------
+New stuff:
+- FW macro for framework includes in Mach-O builds
+- AAutoSizer, for auto-sizing controls
+- AKeyboardHandler and ATextInputHandler for text input events
+- AToolboxClass for custom controls using RegisterToolboxClass
+- More control wrappers in AControls and AUserPane
+- AUserMLTE for having an MLTE object in a user pane
+- ACFXMLParser, including wrappers for all the CF XML calls
+- More file classes
+- XSystem::OSVersion reduces dependence on PowerPlant
+- HIObject wrappers (untested)
+- WASTE wrappers
+- Font panel calls for CFM builds
+- Added StSetPort and StSetClip to AGrafPort.h
+- Added AControl::Iterator for iterating sub-controls
+
+Changes:
+- BSD license instead of LGPL
+- Various fixes to compile in ProjectBuilder
+- Added XPropertyHolder::HasProperty
+- Added ACarbonEvent::Post and HasParameter
+- Added drag message handling to AControlHandler
+- ADataBrowser is more complete
+- Added ACFType::operator==
+- More constructors for ACFMutableString, and some operator<<
+- More constructors for ACFString
+- Added ACFString::GetBytes, GetBytesLen, MakeBytesBuffer, HasPrefix, HasSuffix
+- More functions for AFileRef
+- Fixed AColorTable::Count, added ClosestColor
+- AGWorld::PixMap return APixMap instead of PixMapHandle
+- Added APixMap::operator Handle
+- Updated ADrag::SetImage for SetDragImageWithAlpha, which now calls SetDragImageWithCGImage
+- Added AControl::Bounds, ViewSize, and SetViewSize
+- Fixed names for AControl getter functions
+- Added AWindow validation and focus calls
+- Fixed CThrownResult's constructor
+- Various other things

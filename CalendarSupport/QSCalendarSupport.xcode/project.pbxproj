@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		0259C573FE90428111CA0C5A = {
+			buildSettings = {
+			};
+			buildStyles = (
+				2E58F360FFB2326E11CA0CBA,
+				2E58F361FFB2326E11CA0CBA,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 0259C574FE90428111CA0C5A;
+			projectDirPath = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9,
+			);
+		};
+		0259C574FE90428111CA0C5A = {
+			children = (
+				32DBCF9E0370C38000C91783,
+				32DBCF9F0370C38200C91783,
+				0259C582FE90428111CA0C5A,
+				1ED78706FE9D4A0611CA0C5A,
+				2E58F364FFB232C311CA0CBA,
+			);
+			isa = PBXGroup;
+			name = QSCalendarSupport;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A = {
+			children = (
+				8D1AC9730486D14A00FE50C9,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//020
+//021
+//022
+//023
+//024
+//1E0
+//1E1
+//1E2
+//1E3
+//1E4
+		1ED78706FE9D4A0611CA0C5A = {
+			children = (
+				8D1AC9740486D14A00FE50C9,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//1E0
+//1E1
+//1E2
+//1E3
+//1E4
+//2E0
+//2E1
+//2E2
+//2E3
+//2E4
+		2E58F360FFB2326E11CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		2E58F361FFB2326E11CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+		2E58F364FFB232C311CA0CBA = {
+			children = (
+				DD92D38A0106425D02CA0E72,
+				E131F8AE07B447EF00D0E4AC,
+				E1022AE706B3469300299BEC,
+				E131F8AD07B447EF00D0E4AC,
+				E1022AE806B3469300299BEC,
+			);
+			isa = PBXGroup;
+			name = Frameworks;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//2E0
+//2E1
+//2E2
+//2E3
+//2E4
+//320
+//321
+//322
+//323
+//324
+		32DBCF980370C29C00C91783 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = QSCalendarSupport_Prefix.pch;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 = {
+			children = (
+				E304EE0207FC8C8F003B943E,
+				E304EE0307FC8C8F003B943E,
+				E304EDEA07FC7D6A003B943E,
+				E1EAB047068128A800774DFF,
+				E1EAB045068128A200774DFF,
+				E304EDEB07FC7D81003B943E,
+				E304EDEC07FC7D81003B943E,
+				E304EDFA07FC8885003B943E,
+				E304EDFB07FC8885003B943E,
+			);
+			isa = PBXGroup;
+			name = Classes;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 = {
+			children = (
+				32DBCF980370C29C00C91783,
+			);
+			isa = PBXGroup;
+			name = "Other Sources";
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//320
+//321
+//322
+//323
+//324
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+		8D1AC9600486D14A00FE50C9 = {
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9,
+				8D1AC96A0486D14A00FE50C9,
+				8D1AC96E0486D14A00FE50C9,
+				E1022B2806B3475D00299BEC,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSCalendarSupport_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = QSCalendarSupport;
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = QSCalendarSupport;
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSCalendarSupport;
+			productReference = 8D1AC9740486D14A00FE50C9;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1AC9660486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				E304EDE307FC7D5E003B943E,
+				E304EDE507FC7D5E003B943E,
+				E304EDE607FC7D5E003B943E,
+				E304EDE807FC7D5E003B943E,
+				E304EDED07FC7D81003B943E,
+				E304EDFC07FC8885003B943E,
+				E304EE0407FC8C8F003B943E,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96A0486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF,
+				E304EDE407FC7D5E003B943E,
+				E304EDE707FC7D5E003B943E,
+				E304EDE907FC7D5E003B943E,
+				E304EDEE07FC7D81003B943E,
+				E304EDFD07FC8885003B943E,
+				E304EE0507FC8C8F003B943E,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96E0486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9,
+				E1022AE906B3469300299BEC,
+				E131F8B007B447EF00D0E4AC,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC9700486D14A00FE50C9 = {
+			fileRef = DD92D38A0106425D02CA0E72;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D1AC9730486D14A00FE50C9 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist;
+			path = Info.plist;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8D1AC9740486D14A00FE50C9 = {
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = QSCalendarSupport.qsplugin;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+//DD0
+//DD1
+//DD2
+//DD3
+//DD4
+		DD92D38A0106425D02CA0E72 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//DD0
+//DD1
+//DD2
+//DD3
+//DD4
+//E10
+//E11
+//E12
+//E13
+//E14
+		E1022AE706B3469300299BEC = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QSCore.framework;
+			path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E1022AE806B3469300299BEC = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QSInterface.framework;
+			path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E1022AE906B3469300299BEC = {
+			fileRef = E1022AE706B3469300299BEC;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1022B2806B3475D00299BEC = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+		E131F8AD07B447EF00D0E4AC = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QSEffects.framework;
+			path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E131F8AE07B447EF00D0E4AC = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QSFoundation.framework;
+			path = /Applications/Quicksilver.app/Contents/Frameworks/QSFoundation.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E131F8B007B447EF00D0E4AC = {
+			fileRef = E131F8AE07B447EF00D0E4AC;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1EAB045068128A200774DFF = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = QSCalendarSupport.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E1EAB046068128A200774DFF = {
+			fileRef = E1EAB045068128A200774DFF;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E1EAB047068128A800774DFF = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = QSCalendarSupport.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//E10
+//E11
+//E12
+//E13
+//E14
+//E30
+//E31
+//E32
+//E33
+//E34
+		E304EDDC07FC7D5E003B943E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = "NSData+Base64.h";
+			path = "/Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/NSData+Base64.h";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E304EDDD07FC7D5E003B943E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			name = "NSData+Base64.m";
+			path = "/Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/NSData+Base64.m";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E304EDDE07FC7D5E003B943E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = VFileGlobals.h;
+			path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileGlobals.h;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E304EDDF07FC7D5E003B943E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = VFileObject.h;
+			path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileObject.h;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E304EDE007FC7D5E003B943E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			name = VFileObject.m;
+			path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileObject.m;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E304EDE107FC7D5E003B943E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = VFileProperty.h;
+			path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileProperty.h;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E304EDE207FC7D5E003B943E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			name = VFileProperty.m;
+			path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileProperty.m;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E304EDE307FC7D5E003B943E = {
+			fileRef = E304EDDC07FC7D5E003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E304EDE407FC7D5E003B943E = {
+			fileRef = E304EDDD07FC7D5E003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E304EDE507FC7D5E003B943E = {
+			fileRef = E304EDDE07FC7D5E003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E304EDE607FC7D5E003B943E = {
+			fileRef = E304EDDF07FC7D5E003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E304EDE707FC7D5E003B943E = {
+			fileRef = E304EDE007FC7D5E003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E304EDE807FC7D5E003B943E = {
+			fileRef = E304EDE107FC7D5E003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E304EDE907FC7D5E003B943E = {
+			fileRef = E304EDE207FC7D5E003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E304EDEA07FC7D6A003B943E = {
+			children = (
+				E304EDDC07FC7D5E003B943E,
+				E304EDDD07FC7D5E003B943E,
+				E304EDDE07FC7D5E003B943E,
+				E304EDDF07FC7D5E003B943E,
+				E304EDE007FC7D5E003B943E,
+				E304EDE107FC7D5E003B943E,
+				E304EDE207FC7D5E003B943E,
+			);
+			isa = PBXGroup;
+			name = VFile;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E304EDEB07FC7D81003B943E = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = VCalendar.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E304EDEC07FC7D81003B943E = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = VCalendar.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E304EDED07FC7D81003B943E = {
+			fileRef = E304EDEB07FC7D81003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E304EDEE07FC7D81003B943E = {
+			fileRef = E304EDEC07FC7D81003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E304EDFA07FC8885003B943E = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = VEvent.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E304EDFB07FC8885003B943E = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = VEvent.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E304EDFC07FC8885003B943E = {
+			fileRef = E304EDFA07FC8885003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E304EDFD07FC8885003B943E = {
+			fileRef = E304EDFB07FC8885003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E304EE0207FC8C8F003B943E = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = "NSDate+Calendaring.h";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E304EE0307FC8C8F003B943E = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = "NSDate+Calendaring.m";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		E304EE0407FC8C8F003B943E = {
+			fileRef = E304EE0207FC8C8F003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E304EE0507FC8C8F003B943E = {
+			fileRef = E304EE0307FC8C8F003B943E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+	};
+	rootObject = 0259C573FE90428111CA0C5A;
+}

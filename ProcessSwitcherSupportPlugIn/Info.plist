@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Process Switcher Support</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSProcessSwitcherSupportPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Process Switcher Support</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>36</string>
+	<key>NSPrincipalClass</key>
+	<string>QSProcessSwitcherSupportPlugIn</string>
+	<key>QSLoadImmediately</key>
+	<true/>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>hidden</key>
+		<true/>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSCommands</key>
+		<dict>
+			<key>QSShowMouseProcessSwitcherCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directArchive</key>
+					<dict>
+						<key>data</key>
+						<dict>
+							<key>qs.action</key>
+							<dict>
+								<key>actionClass</key>
+								<string>QSProcessSwitcherSupportPlugIn</string>
+								<key>actionSelector</key>
+								<string>showSwitcherUnderMouse</string>
+								<key>icon</key>
+								<string>ProcessSwitcher</string>
+								<key>name</key>
+								<string>Show Playing Track</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>directID</key>
+					<string></string>
+				</dict>
+			</dict>
+			<key>QSShowProcessSwitcherCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directArchive</key>
+					<dict>
+						<key>data</key>
+						<dict>
+							<key>qs.action</key>
+							<dict>
+								<key>actionClass</key>
+								<string>QSProcessSwitcherSupportPlugIn</string>
+								<key>actionSelector</key>
+								<string>showSwitcher</string>
+								<key>icon</key>
+								<string>ProcessSwitcher</string>
+								<key>name</key>
+								<string>Show Playing Track</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>directID</key>
+					<string></string>
+				</dict>
+			</dict>
+			<key>QSSwitchToNextAppCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directArchive</key>
+					<dict>
+						<key>data</key>
+						<dict>
+							<key>qs.action</key>
+							<dict>
+								<key>actionClass</key>
+								<string>QSProcessSwitcherSupportPlugIn</string>
+								<key>actionSelector</key>
+								<string>switchToNextApp</string>
+								<key>icon</key>
+								<string>ProcessSwitcher</string>
+								<key>name</key>
+								<string>Show Playing Track</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>directID</key>
+					<string></string>
+				</dict>
+			</dict>
+			<key>QSSwitchToPreviousAppCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directArchive</key>
+					<dict>
+						<key>data</key>
+						<dict>
+							<key>qs.action</key>
+							<dict>
+								<key>actionClass</key>
+								<string>QSProcessSwitcherSupportPlugIn</string>
+								<key>actionSelector</key>
+								<string>switchToPrevApp</string>
+								<key>icon</key>
+								<string>ProcessSwitcher</string>
+								<key>name</key>
+								<string>Show Playing Track</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>directID</key>
+					<string></string>
+				</dict>
+			</dict>
+		</dict>
+		<key>QSPreferencePanes</key>
+		<dict>
+			<key>QSProcessSwitcherSupportPlugIn_PrefPane</key>
+			<dict>
+				<key>class</key>
+				<string>QSPreferencePane</string>
+				<key>description</key>
+				<string>Switching Options</string>
+				<key>icon</key>
+				<string></string>
+				<key>name</key>
+				<string>Process Switcher</string>
+			</dict>
+		</dict>
+		<key>QSRegistryHeaders</key>
+		<dict>
+			<key>QSProcessSwitchers</key>
+			<dict>
+				<key>classTable</key>
+				<true/>
+				<key>name</key>
+				<string>Process Switcher</string>
+				<key>registryPreferredSelector</key>
+				<string>preferredProcessSwitcherID</string>
+				<key>selector</key>
+				<string>preferredProcessSwitcher</string>
+				<key>type</key>
+				<string>mediator</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>QSTriggerAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSSwitchToNextAppCommand</string>
+			<key>command</key>
+			<string>QSSwitchToNextAppCommand</string>
+			<key>name</key>
+			<string>Swich to Next Application</string>
+			<key>set</key>
+			<string>Process Switcher</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>QSSwitchToPreviousAppCommand</string>
+			<key>command</key>
+			<string>QSSwitchToPreviousAppCommand</string>
+			<key>name</key>
+			<string>Swich to Previous Application</string>
+			<key>set</key>
+			<string>Process Switcher</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>QSShowProcessSwitcherCommand</string>
+			<key>command</key>
+			<string>QSShowProcessSwitcherCommand</string>
+			<key>name</key>
+			<string>Show Process Switcher</string>
+			<key>set</key>
+			<string>Process Switcher</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>QSShowMouseProcessSwitcherCommand</string>
+			<key>command</key>
+			<string>QSShowMouseProcessSwitcherCommand</string>
+			<key>name</key>
+			<string>Show Process Switcher Under Mouse</string>
+			<key>set</key>
+			<string>Process Switcher</string>
+		</dict>
+	</array>
+</dict>
+</plist>

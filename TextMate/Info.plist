@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>TextMate Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSTextMatePlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>TextMate Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>22</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSTextMateShowLineAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSTextMatePlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>openLineReference:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSLineReferenceType</string>
+			</array>
+			<key>icon</key>
+			<string>com.macromates.textmate</string>
+			<key>name</key>
+			<string>Select in TextMate</string>
+			<key>rankModification</key>
+			<integer>3</integer>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string></string>
+		<key>categories</key>
+		<array>
+			<string>Text Handling</string>
+			<string>Development</string>
+		</array>
+		<key>description</key>
+		<string>Allows TextMate to open line references</string>
+		<key>icon</key>
+		<string>com.macromates.textmate</string>
+		<key>relatedBundles </key>
+		<array>
+			<string>com.macromates.textmate</string>
+		</array>
+	</dict>
+	<key>QSPresetAdditionsTemplate</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetQSTextMatePlugIn</string>
+			<key>name</key>
+			<string>QSTextMatePlugIn</string>
+			<key>source</key>
+			<string>QSTextMatePlugIn_Source</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSTextMatePlugIn_Action</key>
+			<string>QSTextMatePlugIn_Action</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

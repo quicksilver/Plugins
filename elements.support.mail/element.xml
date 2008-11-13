@@ -1,0 +1,231 @@
+<element id="com.blacktree.Quicksilver.QSEmailSupport" name="E-mail Support" version="6F">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSComposeEmailItemAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSEmailActions</string>
+                        <key>actionSelector</key>
+                        <string>composeEmailTo:withItem:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.contact.email</string>
+                        </array>
+                        <key>icon</key>
+                        <string>defaultMailClient</string>
+                        <key>indirectTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>name</key>
+                        <string>Email Item... (Compose)</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSEmailAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSEmailActions</string>
+                        <key>actionSelector</key>
+                        <string>sendEmailTo:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.contact.email</string>
+                        </array>
+                        <key>icon</key>
+                        <string>defaultMailClient</string>
+                        <key>name</key>
+                        <string>Compose Email</string>
+                        <key>rankModification</key>
+                        <real>0.10000000000000001</real>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSComposeEmailItemReverseAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSEmailActions</string>
+                        <key>actionSelector</key>
+                        <string>composeEmailTo:withItem:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>defaultMailClient</string>
+                        <key>indirectTypes</key>
+                        <array>
+                            <string>qs.contact.email</string>
+                        </array>
+                        <key>name</key>
+                        <string>Email To... (Compose)</string>
+                        <key>reverseArguments</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSDirectEmailItemAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSEmailActions</string>
+                        <key>actionSelector</key>
+                        <string>sendDirectEmailTo:withItem:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.contact.email</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>icon</key>
+                        <string>Quicksilver</string>
+                        <key>indirectTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>name</key>
+                        <string>Email Item... (Send Directly)</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSEmailItemReverseAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSEmailActions</string>
+                        <key>actionSelector</key>
+                        <string>sendEmailTo:withItem:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>icon</key>
+                        <string>defaultMailClient</string>
+                        <key>indirectTypes</key>
+                        <array>
+                            <string>qs.contact.email</string>
+                        </array>
+                        <key>name</key>
+                        <string>Email To... (Send)</string>
+                        <key>reverseArguments</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSDirectEmailItemReverseAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSEmailActions</string>
+                        <key>actionSelector</key>
+                        <string>sendDirectEmailTo:withItem:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>icon</key>
+                        <string>Quicksilver</string>
+                        <key>indirectTypes</key>
+                        <array>
+                            <string>qs.contact.email</string>
+                        </array>
+                        <key>name</key>
+                        <string>Email To... (Send Directly)</string>
+                        <key>reverseArguments</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSEmailItemAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSEmailActions</string>
+                        <key>actionSelector</key>
+                        <string>sendEmailTo:withItem:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.contact.email</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>icon</key>
+                        <string>defaultMailClient</string>
+                        <key>identifier</key>
+                        <string>QSArchiveFolderAction</string>
+                        <key>indirectTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>name</key>
+                        <string>Email Item... (Send)</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSPreferencePanes">
+            <preference-pane id="QSMailActionsPrefPane" class="QSPreferencePane">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSPreferencePane</string>
+                        <key>description</key>
+                        <string>Mail Composition Preferences</string>
+                        <key>icon</key>
+                        <string>com.apple.Mail</string>
+                        <key>name</key>
+                        <string>Email Options</string>
+                        <key>nibBundle</key>
+                        <string>com.blacktree.Quicksilver.QSEmailSupport</string>
+                        <key>nibName</key>
+                        <string>QSMailSupportPrefPane</string>
+                    </dict>
+                </plist>
+            </preference-pane>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSEmailActions" class="QSEmailActions"></action-provider>
+        </extension>
+        <extension point="QSRegistryHeaders">
+            <extension-point id="QSMailMediators">
+                <plist version="1.0">
+                    <dict>
+                        <key>allowDefault</key>
+                        <true></true>
+                        <key>bundle</key>
+                        <string>com.blacktree.Quicksilver.QSEmailSupport</string>
+                        <key>classTable</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Email</string>
+                        <key>registryPreferredSelector</key>
+                        <string>QSMailMediatorID</string>
+                        <key>selector</key>
+                        <string>QSMailMediator</string>
+                        <key>type</key>
+                        <string>mediator</string>
+                    </dict>
+                </plist>
+            </extension-point>
+        </extension>
+    </extensions>
+</element>

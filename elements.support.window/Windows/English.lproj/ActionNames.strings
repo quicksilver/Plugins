@@ -1,0 +1,6 @@
+"QSWindowSetAlphaAction" = "Set Alpha...";
+"QSWindowSetScaleAction" = "Set Scale...";
+"QSWindowSetLevelAction" = "Set Level...";
+"QSWindowSetIgnoresMouseAction" = "Set Ignores Mouse...";
+"QSWindowSetHasShadowAction" = "Set Has Shadow...";
+"QSWindowSelectAction" = "Select";

@@ -1,0 +1,20 @@
+SHORT TERM
+
+Better icons.
+Nag box. (i.e. once per version summarise changes)
+Muti-screen support.
+Check location of notification window.
+Status bar pager rows.
+Check preferences on initial launch.
+Jump to window getting focus in app.
+Drag windows from desktop to desktop via active edges
+Jump to last desktop hotkey
+Background images per desktop
+Proper sticky window support (currently hard-coded make panels sticky).
+Move panel windows -- i.e. add to pager?
+
+LONG TERM
+
+AppleScript interface
+lanch applescript via hotkey
+iTunes integration

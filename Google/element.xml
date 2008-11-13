@@ -1,0 +1,47 @@
+<element id="com.blacktree.Quicksilver.QSGooglePlugIn" name="Google Support" version="33">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSGoogleTextSearchAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSGooglePlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>searchForTextOnGoogle:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>name</key>
+                        <string>Search Google</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSPreferencePanes">
+            <preference-pane id="QSGooglePrefPane" class="QSGooglePrefPane">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSGooglePrefPane</string>
+                        <key>description</key>
+                        <string>Preferences</string>
+                        <key>icon</key>
+                        <string>Google</string>
+                        <key>name</key>
+                        <string>Google</string>
+                    </dict>
+                </plist>
+            </preference-pane>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSGooglePlugIn_Action" class="QSGooglePlugIn_Action"></action-provider>
+        </extension>
+    </extensions>
+</element>

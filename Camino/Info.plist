@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Camino Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSCaminoPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Camino Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>97</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Blacktree, Inc.</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Applications</string>
+			<string>Web</string>
+		</array>
+		<key>description</key>
+		<string>Adds Camino Bookmarks</string>
+		<key>icon</key>
+		<string>org.mozilla.navigator</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>org.mozilla.navigator</string>
+		</array>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetCaminoBookmarks</string>
+			<key>icon</key>
+			<string>org.mozilla.navigator</string>
+			<key>name</key>
+			<string>Camino Bookmarks</string>
+			<key>requiresSettingsPath</key>
+			<true/>
+			<key>settings</key>
+			<dict>
+				<key>parser</key>
+				<string>QSCaminoBookmarksParser</string>
+				<key>path</key>
+				<string>~/Library/Application Support/Camino/bookmarks.plist</string>
+				<key>skipItem</key>
+				<integer>1</integer>
+			</dict>
+			<key>source</key>
+			<string>QSFileSystemObjectSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSFSParsers</key>
+		<dict>
+			<key>QSCaminoBookmarksParser</key>
+			<string>QSCaminoBookmarksParser</string>
+			<key>QSOldCaminoBookmarksParser</key>
+			<string>QSOldCaminoBookmarksParser</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

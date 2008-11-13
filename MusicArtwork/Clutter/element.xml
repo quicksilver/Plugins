@@ -1,0 +1,12 @@
+<element id="com.blacktree.Quicksilver.QSClutterPlugIn" name="Clutter Artwork" version="29">
+    <info>
+        <category>Music</category>
+        <image>com.sprote.clutter</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSMusicArtworkSources">
+            <extension id="com.sprote.clutter" class="QSClutterPlugIn"></extension>
+        </extension>
+    </extensions>
+</element>

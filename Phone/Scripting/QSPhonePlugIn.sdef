@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="QSPhonePlugIn">
+	<suite name="Phone Plug-in" code="DAEp" description="additional commands provided by the Phone Plug-in.">
+		<cocoa name="QSPhonePlugIn"/>
+		<command name="dial number" code="DAEDDial" description="Dial a phone number">
+			<cocoa class="QSPhoneDialerScriptCommand"/>
+			<direct-parameter type="string" description="the number to dial"/>
+			<parameter name="method" code="meth" description="dial method" type="string" optional="optional"/>				
+		</command>
+	</suite>
+</dictionary>

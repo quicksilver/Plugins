@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Audio Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSAudioPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Audio Support</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>48</string>
+	<key>NSPrincipalClass</key>
+	<string>QSAudioPlugIn</string>
+	<key>QSActionsTemplate</key>
+	<dict>
+		<key>QSAudioPlugInAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAudioPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>performActionOnObject:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSAudioPlugIn_Type</string>
+			</array>
+			<key>name</key>
+			<string>Action: QSAudioPlugIn</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSLoadImmediately</key>
+	<true/>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array/>
+		<key>description</key>
+		<string>Record Audio Clips</string>
+		<key>relatedBundles </key>
+		<array/>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSClasses</key>
+		<dict>
+			<key>QSAudioPlugIn</key>
+			<string>QSAudioPlugIn</string>
+		</dict>
+		<key>QSInternalMessages</key>
+		<dict>
+			<key>QSAudioRecord</key>
+			<dict>
+				<key>actionClass</key>
+				<string>QSAudioPlugIn</string>
+				<key>actionSelector</key>
+				<string>record</string>
+				<key>icon</key>
+				<string>com.apple.garageband</string>
+				<key>name</key>
+				<string>Record Sound</string>
+				<key>runInMainThread</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,30 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {chooseSkin = id; resetSkin = id; }; 
+            CLASS = DesktopPagerPreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                pagerRowsField = NSTextField; 
+                pagerRowsStepper = NSStepper; 
+                skinAuthorField = NSTextField; 
+                skinImage = NSImageView; 
+                skinNameField = NSTextField; 
+            }; 
+            SUPERCLASS = NSPreferencePane; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = NSPreferencePane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_firstKeyView" = NSView; 
+                "_initialKeyView" = NSView; 
+                "_lastKeyView" = NSView; 
+                "_window" = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

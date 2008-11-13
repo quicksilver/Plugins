@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Desktop Manager Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSDesktopManagerPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Desktop Manager Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>23</string>
+	<key>NSPrincipalClass</key>
+	<string>QSDesktopManagerPlugIn</string>
+	<key>QSActionsTemplate</key>
+	<dict>
+		<key>QSDesktopManagerPlugInAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSDesktopManagerPlugInAction</string>
+			<key>actionSelector</key>
+			<string>performActionOnObject:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSDesktopManagerPlugInType</string>
+			</array>
+			<key>name</key>
+			<string>Action: QSDesktopManagerPlugIn</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Utility</string>
+		</array>
+		<key>description</key>
+		<string>Allows access to Desktop Manager's virtual desktops</string>
+		<key>icon</key>
+		<string>net.sf.wsmanager.desktopmanager</string>
+		<key>qsversion</key>
+		<string>29CC</string>
+		<key>relatedBundles </key>
+		<array>
+			<string>net.sf.wsmanager.desktopmanager</string>
+		</array>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetQSDesktopManagerModule</string>
+			<key>name</key>
+			<string>Desktop Manager Desktops</string>
+			<key>source</key>
+			<string>QSDesktopManagerPlugInSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>net.sf.wsmanager.desktopmanager</key>
+			<string>QSDesktopManagerPlugInSource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSDesktopManagerPlugInSource</key>
+			<string>QSDesktopManagerPlugInSource</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>feature</key>
+		<integer>0</integer>
+		<key>plugins</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>com.blacktree.Quicksilver.QSVirtualDesktopPlugIn</string>
+				<key>name</key>
+				<string>Virtual Desktop Support</string>
+				<key>version</key>
+				<string>20</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

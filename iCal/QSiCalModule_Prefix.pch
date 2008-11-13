@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSiCalModule' target in the 'QSiCalModule' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSiCalToDoType @"com.apple.iCal.todo"
+#define kQSiCalEventType @"com.apple.iCal.event"

@@ -1,0 +1,39 @@
+{
+    IBClasses = (
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {flare = id; fold = id; pulse = id; shrink = id; }; 
+            CLASS = NSWindow; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSResponder; 
+        }, 
+        {CLASS = QSBackgroundView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = QSBorderlessWindow; LANGUAGE = ObjC; SUPERCLASS = QSWindow; }, 
+        {
+            ACTIONS = {accept = id; decline = id; }; 
+            CLASS = QSSurveyPlugIn; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                doneButton = NSButton; 
+                progessWindow = id; 
+                progressIndicator = NSProgressIndicator; 
+                progressLabel = NSTextField; 
+                surveyRequestWindow = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                finishHide = id; 
+                hideThreaded = id; 
+                reallyOrderFront = id; 
+                reallyOrderOut = id; 
+                showThreaded = id; 
+            }; 
+            CLASS = QSWindow; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSPanel; 
+        }
+    ); 
+    IBVersion = 1; 
+}

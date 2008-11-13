@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Phone Actions</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSPhoneActionsPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Phone Actions</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>F5</string>
+	<key>NSAppleScriptEnabled</key>
+	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Blacktree, Inc.</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSDialNumberAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSPhoneDialerActionProvider</string>
+			<key>actionSelector</key>
+			<string>dialNumber:withDialer:</string>
+			<key>directTypes</key>
+			<array>
+				<string>qs.contact.phone</string>
+			</array>
+			<key>icon</key>
+			<string>ContactPhone</string>
+			<key>name</key>
+			<string>Dial with...</string>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Contacts</string>
+		</array>
+		<key>description</key>
+		<string>Phone number dialing actions.</string>
+		<key>icon</key>
+		<string>ContactPhone</string>
+		<key>requiresFeature</key>
+		<string>1</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array/>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSPhoneDialerActionProvider</key>
+			<string>QSPhoneDialerActionProvider</string>
+			<key>QSSMSActions</key>
+			<string>QSSMSActions</string>
+		</dict>
+		<key>QSPhoneDialers</key>
+		<dict>
+			<key>modem</key>
+			<dict>
+				<key>class</key>
+				<string>QSModemPhoneDialer</string>
+				<key>icon</key>
+				<string>com.apple.internetconnect</string>
+				<key>name</key>
+				<string>Modem</string>
+			</dict>
+			<key>speaker</key>
+			<dict>
+				<key>class</key>
+				<string>QSSpeakerPhoneDialer</string>
+				<key>icon</key>
+				<string>Speaker</string>
+				<key>name</key>
+				<string>Speaker</string>
+			</dict>
+		</dict>
+		<key>QSPreferencePanes</key>
+		<dict>
+			<key>QSPhonePrefPane</key>
+			<dict>
+				<key>class</key>
+				<string>QSPhonePrefPane</string>
+				<key>description</key>
+				<string>Dialing Options</string>
+				<key>icon</key>
+				<string>ContactPhone</string>
+				<key>name</key>
+				<string>Phone</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>feature</key>
+		<integer>2</integer>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>Speaker</key>
+		<string>/System/Library/PreferencePanes/Sound.prefPane/Contents/Resources/Sound.tiff</string>
+	</dict>
+</dict>
+</plist>

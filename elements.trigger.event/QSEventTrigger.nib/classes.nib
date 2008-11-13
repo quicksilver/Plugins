@@ -1,0 +1,31 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {CLASS = NSTableView; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {
+            ACTIONS = {setEventType = id; updateTrigger = id; }; 
+            CLASS = QSEventTriggerManager; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                eventPopUp = NSPopUpButton; 
+                eventTriggerObject = id; 
+                triggerObjectsTable = NSTableView; 
+            }; 
+            SUPERCLASS = QSTriggerManager; 
+        }, 
+        {
+            CLASS = QSTableView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {draggingDelegate = id; }; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = QSTriggerManager; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {settingsView = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

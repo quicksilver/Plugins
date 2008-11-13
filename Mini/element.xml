@@ -1,0 +1,12 @@
+<element id="com.blacktree.Quicksilver.QSMiniInterfacePlugin" name="Mini Interface" version="A5">
+    <info>
+        <category>Interfaces</category>
+        <image>Interface</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSCommandInterfaceControllers">
+            <command-interface id="QSMiniInterfaceController" class="QSMiniInterfaceController"></command-interface>
+        </extension>
+    </extensions>
+</element>

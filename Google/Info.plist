@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Google Support</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSGooglePlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Google Support</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>33</string>
+	<key>NSPrincipalClass</key>
+	<string>QSGooglePlugIn</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSGoogleTextSearchAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSGooglePlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>searchForTextOnGoogle:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Search Google</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string></string>
+		<key>categories</key>
+		<array/>
+		<key>description</key>
+		<string></string>
+		<key>relatedBundles </key>
+		<array/>
+		<key>webIcon</key>
+		<string></string>
+	</dict>
+	<key>QSPresetAdditionsTemplate</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetQSGooglePlugIn</string>
+			<key>name</key>
+			<string>QSGooglePlugIn</string>
+			<key>source</key>
+			<string>QSGooglePlugIn_Source</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSGooglePlugIn_Action</key>
+			<string>QSGooglePlugIn_Action</string>
+		</dict>
+		<key>QSPreferencePanes</key>
+		<dict>
+			<key>QSGooglePrefPane</key>
+			<dict>
+				<key>class</key>
+				<string>QSGooglePrefPane</string>
+				<key>description</key>
+				<string>Preferences</string>
+				<key>icon</key>
+				<string>Google</string>
+				<key>name</key>
+				<string>Google</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

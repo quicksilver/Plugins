@@ -1,0 +1,24 @@
+<element id="com.blacktree.Quicksilver.QSBluetoothPlugIn" name="Bluetooth Module" version="29">
+    <info>
+        <category>Contacts</category>
+        <category>System</category>
+        <image>BluetoothLogo</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSPhoneDialers">
+            <extension id="bluetooth" class="QSBluetoothPhoneDialer">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSBluetoothPhoneDialer</string>
+                        <key>icon</key>
+                        <string>BluetoothLogo</string>
+                        <key>name</key>
+                        <string>Bluetooth</string>
+                    </dict>
+                </plist>
+            </extension>
+        </extension>
+    </extensions>
+</element>

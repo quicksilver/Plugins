@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSClipboardPlugIn' target in the 'QSClipboardPlugIn' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+#import <QSFoundation/QSFoundation.h>
+#endif
+
+
+#define kQSClipboardPlugInType @"QSClipboardPlugInType"

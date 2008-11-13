@@ -1,0 +1,60 @@
+<element id="com.blacktree.Quicksilver.QSTeleflipPlugIn" name="Teleflip Module" version="28">
+    <info>
+        <category>Mail &amp; Chat</category>
+        <image></image>
+    </info>
+    <requirements>
+        <requirement bundle="com.blacktree.Quicksilver.QSEmailSupport" name="Mail Support"></requirement>
+    </requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSTeleflipSMSAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSTeleflipPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>sendSMS:toPhone:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>ContactPhone</string>
+                        <key>name</key>
+                        <string>SMS via Teleflip...</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSTeleflipSMSReverseAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSTeleflipPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>sendSMS:toPhone:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.contact.phone</string>
+                        </array>
+                        <key>icon</key>
+                        <string>ContactPhone</string>
+                        <key>name</key>
+                        <string>SMS Text via Teleflip...</string>
+                        <key>precedence</key>
+                        <integer>1</integer>
+                        <key>reverseArguments</key>
+                        <true></true>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSTeleflipPlugIn" class="QSTeleflipPlugIn"></action-provider>
+        </extension>
+    </extensions>
+</element>

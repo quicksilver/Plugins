@@ -1,0 +1,11 @@
+<element id="com.blacktree.Quicksilver.QSDiscInterfacePlugIn" name="Platter Interface" version="1F9">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSCommandInterfaceControllers">
+            <command-interface id="QSPlatterInterface" class="QSPlatterInterface"></command-interface>
+        </extension>
+    </extensions>
+</element>

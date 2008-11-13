@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppleEventCode</key>
+	<string>DAEp</string>
+	<key>Commands</key>
+	<dict>
+		<key>DialNumber</key>
+		<dict>
+			<key>AppleEventClassCode</key>
+			<string>DAED</string>
+			<key>AppleEventCode</key>
+			<string>Dial</string>
+			<key>Arguments</key>
+			<dict>
+				<key>method</key>
+				<dict>
+					<key>AppleEventCode</key>
+					<string>meth</string>
+					<key>Optional</key>
+					<string>YES</string>
+					<key>Type</key>
+					<string>NSString</string>
+				</dict>
+			</dict>
+			<key>CommandClass</key>
+			<string>QSPhoneDialerScriptCommand</string>
+			<key>UnnamedArgument</key>
+			<dict>
+				<key>Type</key>
+				<string>NSString</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>Name</key>
+	<string>QSPhonePlugIn</string>
+	<key>UsedFeatures</key>
+	<array>
+		<string>UnnamedArguments</string>
+	</array>
+</dict>
+</plist>

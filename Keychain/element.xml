@@ -1,0 +1,190 @@
+<element id="com.blacktree.Quicksilver.QSKeychainPlugIn" name="Keychain Module" version="13C">
+    <info>
+        <category>System</category>
+        <image>com.apple.keychainaccess</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetKeychains">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetKeychains</string>
+                        <key>name</key>
+                        <string>Keychains</string>
+                        <key>requiresBundle</key>
+                        <string>com.apple.keychainaccess</string>
+                        <key>source</key>
+                        <string>QSKeychainSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="KeychainKeyIcon">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.apple.keychainaccess</string>
+                        <key>resource</key>
+                        <string>Key_Large.tif</string>
+                    </dict>
+                </plist>
+            </image-resource>
+            <image-resource id="KeychainURLIcon">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.apple.keychainaccess</string>
+                        <key>resource</key>
+                        <string>Internet_Large.tif</string>
+                    </dict>
+                </plist>
+            </image-resource>
+            <image-resource id="KeychainSecureNoteIcon">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.apple.keychainaccess</string>
+                        <key>resource</key>
+                        <string>Secure Note Large.tif</string>
+                    </dict>
+                </plist>
+            </image-resource>
+            <image-resource id="KeychainNetVolIcon">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.apple.keychainaccess</string>
+                        <key>resource</key>
+                        <string>AppleShare Large.tif</string>
+                    </dict>
+                </plist>
+            </image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSKeychainItemCopyPasswordAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSKeychainActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>copyPassword:</string>
+                        <key>description</key>
+                        <string>Copy password to the clipboard</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSKeychainGenericPasswordType</string>
+                            <string>QSKeychainInternetPasswordType</string>
+                            <string>QSKeychainAppleSharePasswordType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.keychainaccess</string>
+                        <key>name</key>
+                        <string>Copy Password</string>
+                        <key>rankModification</key>
+                        <real>0.10000000000000001</real>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSKeychainItemPastePasswordAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSKeychainActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>pastePassword:</string>
+                        <key>description</key>
+                        <string>Paste password to the current application</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSKeychainGenericPasswordType</string>
+                            <string>QSKeychainInternetPasswordType</string>
+                            <string>QSKeychainAppleSharePasswordType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.keychainaccess</string>
+                        <key>name</key>
+                        <string>Paste Password</string>
+                        <key>rankModification</key>
+                        <real>0.10000000000000001</real>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSKeychainShowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSKeychainActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>showKeychainItem:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSKeychainGenericPasswordType</string>
+                            <string>QSKeychainInternetPasswordType</string>
+                            <string>QSKeychainAppleSharePasswordType</string>
+                        </array>
+                        <key>disabled</key>
+                        <true></true>
+                        <key>feature</key>
+                        <integer>4</integer>
+                        <key>icon</key>
+                        <string>com.apple.keychainaccess</string>
+                        <key>rankModification</key>
+                        <real>0.10000000000000001</real>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSKeychainItemGetPasswordAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSKeychainActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>getPassword:</string>
+                        <key>description</key>
+                        <string>Return password to command</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSKeychainGenericPasswordType</string>
+                            <string>QSKeychainInternetPasswordType</string>
+                            <string>QSKeychainAppleSharePasswordType</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <true></true>
+                        <key>icon</key>
+                        <string>com.apple.keychainaccess</string>
+                        <key>name</key>
+                        <string>Get Password</string>
+                        <key>rankModification</key>
+                        <real>0.10000000000000001</real>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSKeychainSource" class="QSKeychainSource"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="QSKeychainGenericPasswordType" class="QSKeychainSource"></object-handler>
+            <object-handler id="QSKeychainAppleSharePasswordType" class="QSKeychainSource"></object-handler>
+            <object-handler id="QSKeychainInternetPasswordType" class="QSKeychainSource"></object-handler>
+            <object-handler id="QSKeychainType" class="QSKeychainSource"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSKeychainActionProvider" class="QSKeychainActionProvider"></action-provider>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.apple.keychainaccess" class="QSKeychainSource"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

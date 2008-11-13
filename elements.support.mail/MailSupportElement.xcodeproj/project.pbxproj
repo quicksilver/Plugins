@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F6E34020C10F58F00303BFE /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7F6E34010C10F58F00303BFE /* element.xml */; };
+		7F839CD407CCD6CF003F2874 /* QSEmailActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F839CCE07CCD6CF003F2874 /* QSEmailActions.m */; };
+		7F839CD607CCD6CF003F2874 /* QSDirectMailMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F839CD007CCD6CF003F2874 /* QSDirectMailMediator.m */; };
+		7F839CD807CCD6CF003F2874 /* QSMailMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F839CD207CCD6CF003F2874 /* QSMailMediator.m */; };
+		7F839CD907CCD6E5003F2874 /* QSMailMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F839CCD07CCD6CF003F2874 /* QSMailMediator.h */; };
+		7F839D0807CCD7CB003F2874 /* Message.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F839D0707CCD7CB003F2874 /* Message.framework */; };
+		7FB39972083FDEA60053AB86 /* QSMailSupportPrefPane.nib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB39971083FDEA60053AB86 /* QSMailSupportPrefPane.nib */; };
+		7FE7D3430D1EFF990043A815 /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D33B0D1EFF990043A815 /* Common.xcconfig */; };
+		7FE7D3440D1EFF990043A815 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D33C0D1EFF990043A815 /* Debug.xcconfig */; };
+		7FE7D3450D1EFF990043A815 /* Developer.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D33D0D1EFF990043A815 /* Developer.xcconfig */; };
+		7FE7D3460D1EFF990043A815 /* QSElement.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D33E0D1EFF990043A815 /* QSElement.xcconfig */; };
+		7FE7D3470D1EFF990043A815 /* QSElement_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 7FE7D33F0D1EFF990043A815 /* QSElement_Prefix.pch */; };
+		7FE7D3480D1EFF990043A815 /* QSPlugIn.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D3400D1EFF990043A815 /* QSPlugIn.xcconfig */; };
+		7FE7D3490D1EFF990043A815 /* QSPlugIn_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 7FE7D3410D1EFF990043A815 /* QSPlugIn_Prefix.pch */; };
+		7FE7D34A0D1EFF990043A815 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D3420D1EFF990043A815 /* Release.xcconfig */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7F6E34010C10F58F00303BFE /* element.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
+		7F839CCD07CCD6CF003F2874 /* QSMailMediator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSMailMediator.h; sourceTree = "<group>"; };
+		7F839CCE07CCD6CF003F2874 /* QSEmailActions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSEmailActions.m; sourceTree = "<group>"; };
+		7F839CCF07CCD6CF003F2874 /* QSDirectMailMediator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSDirectMailMediator.h; sourceTree = "<group>"; };
+		7F839CD007CCD6CF003F2874 /* QSDirectMailMediator.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSDirectMailMediator.m; sourceTree = "<group>"; };
+		7F839CD107CCD6CF003F2874 /* QSEmailActions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSEmailActions.h; sourceTree = "<group>"; };
+		7F839CD207CCD6CF003F2874 /* QSMailMediator.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSMailMediator.m; sourceTree = "<group>"; };
+		7F839D0707CCD7CB003F2874 /* Message.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Message.framework; path = /System/Library/Frameworks/Message.framework; sourceTree = "<absolute>"; };
+		7FB39971083FDEA60053AB86 /* QSMailSupportPrefPane.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSMailSupportPrefPane.nib; sourceTree = "<group>"; };
+		7FE7D33B0D1EFF990043A815 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = Configuration/Common.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D33C0D1EFF990043A815 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D33D0D1EFF990043A815 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = Configuration/Developer.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D33E0D1EFF990043A815 /* QSElement.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSElement.xcconfig; path = Configuration/QSElement.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D33F0D1EFF990043A815 /* QSElement_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSElement_Prefix.pch; path = Configuration/QSElement_Prefix.pch; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D3400D1EFF990043A815 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn.xcconfig; path = Configuration/QSPlugIn.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D3410D1EFF990043A815 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSPlugIn_Prefix.pch; path = Configuration/QSPlugIn_Prefix.pch; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D3420D1EFF990043A815 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* Email Support.element */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Email Support.element"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				7F839D0807CCD7CB003F2874 /* Message.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSMailSupport */ = {
+			isa = PBXGroup;
+			children = (
+				7FE7D33A0D1EFF990043A815 /* Configuration */,
+				32DBCF9E0370C38000C91783 /* Classes */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = QSMailSupport;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7FB39971083FDEA60053AB86 /* QSMailSupportPrefPane.nib */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+				7F6E34010C10F58F00303BFE /* element.xml */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* Email Support.element */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F839D0707CCD7CB003F2874 /* Message.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7F839CD107CCD6CF003F2874 /* QSEmailActions.h */,
+				7F839CCE07CCD6CF003F2874 /* QSEmailActions.m */,
+				7F839CCF07CCD6CF003F2874 /* QSDirectMailMediator.h */,
+				7F839CD007CCD6CF003F2874 /* QSDirectMailMediator.m */,
+				7F839CCD07CCD6CF003F2874 /* QSMailMediator.h */,
+				7F839CD207CCD6CF003F2874 /* QSMailMediator.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		7FE7D33A0D1EFF990043A815 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				7FE7D33B0D1EFF990043A815 /* Common.xcconfig */,
+				7FE7D33C0D1EFF990043A815 /* Debug.xcconfig */,
+				7FE7D33D0D1EFF990043A815 /* Developer.xcconfig */,
+				7FE7D33E0D1EFF990043A815 /* QSElement.xcconfig */,
+				7FE7D33F0D1EFF990043A815 /* QSElement_Prefix.pch */,
+				7FE7D3400D1EFF990043A815 /* QSPlugIn.xcconfig */,
+				7FE7D3410D1EFF990043A815 /* QSPlugIn_Prefix.pch */,
+				7FE7D3420D1EFF990043A815 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7F839CDC07CCD70A003F2874 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F839CD907CCD6E5003F2874 /* QSMailMediator.h in Headers */,
+				7FE7D3470D1EFF990043A815 /* QSElement_Prefix.pch in Headers */,
+				7FE7D3490D1EFF990043A815 /* QSPlugIn_Prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* Email Support */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FFF245E085E488500266176 /* Build configuration list for PBXNativeTarget "Email Support" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
+				7F839CDC07CCD70A003F2874 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Email Support";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSMailSupport;
+			productReference = 8D1AC9740486D14A00FE50C9 /* Email Support.element */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7FFF2462085E488500266176 /* Build configuration list for PBXProject "MailSupportElement" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* QSMailSupport */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* Email Support */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FB39972083FDEA60053AB86 /* QSMailSupportPrefPane.nib in Resources */,
+				7F6E34020C10F58F00303BFE /* element.xml in Resources */,
+				7FE7D3430D1EFF990043A815 /* Common.xcconfig in Resources */,
+				7FE7D3440D1EFF990043A815 /* Debug.xcconfig in Resources */,
+				7FE7D3450D1EFF990043A815 /* Developer.xcconfig in Resources */,
+				7FE7D3460D1EFF990043A815 /* QSElement.xcconfig in Resources */,
+				7FE7D3480D1EFF990043A815 /* QSPlugIn.xcconfig in Resources */,
+				7FE7D34A0D1EFF990043A815 /* Release.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F839CD407CCD6CF003F2874 /* QSEmailActions.m in Sources */,
+				7F839CD607CCD6CF003F2874 /* QSDirectMailMediator.m in Sources */,
+				7F839CD807CCD6CF003F2874 /* QSMailMediator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7FE7D34E0D1F00220043A815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D33C0D1EFF990043A815 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		7FE7D34F0D1F00220043A815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D33E0D1EFF990043A815 /* QSElement.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		7FFF2460085E488500266176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D33E0D1EFF990043A815 /* QSElement.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		7FFF2464085E488500266176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D3420D1EFF990043A815 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FFF245E085E488500266176 /* Build configuration list for PBXNativeTarget "Email Support" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FFF2460085E488500266176 /* Release */,
+				7FE7D34F0D1F00220043A815 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7FFF2462085E488500266176 /* Build configuration list for PBXProject "MailSupportElement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FFF2464085E488500266176 /* Release */,
+				7FE7D34E0D1F00220043A815 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

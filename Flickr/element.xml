@@ -1,0 +1,40 @@
+<element id="com.blacktree.Quicksilver.QSFlickrPlugIn" name="Flickr Upload" version="A9">
+    <info>
+        <category>Images</category>
+        <category>Web</category>
+        <image>flickr</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="flickr" class="[com.blacktree.Quicksilver.QSFlickrPlugIn]:flickr.png"></image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSFlickrUploadAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSFlickrPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>uploadPhotos:withTags:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>flickr</string>
+                        <key>indirectOptional</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Upload to flickr [with Tags]...</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSFlickrPlugInAction" class="QSFlickrPlugInAction"></action-provider>
+        </extension>
+    </extensions>
+</element>

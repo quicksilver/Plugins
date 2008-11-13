@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Disk Image Support</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSDiskImagePlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Disk Image Support</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>26</string>
+	<key>NSPrincipalClass</key>
+	<string>QSDiskImagePlugIn</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSDiskImageCompactAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSDiskImagePlugIn</string>
+			<key>actionSelector</key>
+			<string>internetEnableDiskImageObject:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>dmg</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Internet-Enable Image</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>QSDiskImageCompressAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSDiskImagePlugIn</string>
+			<key>actionSelector</key>
+			<string>compressDiskImageObject:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>dmg</string>
+				<string>sparseimage</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Compress Disk Image</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>QSDiskImageCreateFromFolderAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSDiskImagePlugIn</string>
+			<key>actionSelector</key>
+			<string>createDiskImageFromFolder:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>'fold'</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Create Disk Image</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>System</string>
+			<string>Files</string>
+		</array>
+		<key>description</key>
+		<string>Disk Image handling and actions</string>
+		<key>icon</key>
+		<string>com.apple.DiskUtility</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetDiskUtilityImages</string>
+			<key>enabled</key>
+			<false/>
+			<key>icon</key>
+			<string>com.apple.DiskUtility</string>
+			<key>name</key>
+			<string>Disk Utility Images</string>
+			<key>settings</key>
+			<dict>
+				<key>bundle</key>
+				<string>com.apple.DiskUtility</string>
+				<key>keypath</key>
+				<array>
+					<string>DUSavedDiskImageList</string>
+					<string>*</string>
+				</array>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>source</key>
+			<string>QSDefaultsObjectSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSDiskImagePlugIn</key>
+			<string>QSDiskImagePlugIn</string>
+		</dict>
+		<key>QSBundleChildPresets</key>
+		<dict>
+			<key>com.apple.DiskUtility</key>
+			<string>QSPresetDiskUtilityImages</string>
+		</dict>
+		<key>QSFSFileTypeParsers</key>
+		<dict>
+			<key>dmg</key>
+			<string>QSDiskImagePlugIn</string>
+			<key>sparseimage</key>
+			<string>QSDiskImagePlugIn</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

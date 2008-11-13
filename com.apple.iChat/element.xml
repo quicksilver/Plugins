@@ -1,0 +1,44 @@
+<element id="com.blacktree.Quicksilver.QSiChatPlugIn" name="iChat Module" version="9B">
+    <info>
+        <category>Mail &amp; Chat</category>
+        <image>com.apple.iChat</image>
+    </info>
+    <requirements>
+        <requirement bundle="com.blacktree.Quicksilver.QSChatSupport" name="Chat Support"></requirement>
+    </requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSiChatSetStatusAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAppleScriptActions</string>
+                        <key>actionHandler</key>
+                        <string>set_status</string>
+                        <key>actionScript</key>
+                        <string>iChat.scpt</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>icon</key>
+                        <string>com.apple.iChat</string>
+                        <key>name</key>
+                        <string>Set iChat Status</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSBundleDrawingHandlers">
+            <bundle-draw-handler id="com.apple.iChat" class="QSiChatMediator"></bundle-draw-handler>
+        </extension>
+        <extension point="QSChatMediators">
+            <extension id="com.apple.iChat" class="QSiChatMediator"></extension>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.apple.iChat" class="QSiChatMediator"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

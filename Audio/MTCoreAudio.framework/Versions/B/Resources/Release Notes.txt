@@ -1,0 +1,72 @@
+New for 1.3.0
+
+   (class MTCoreAudioDevice)
+   o new method +devicesWithName:havingStreamsForDirection:.
+   o -description gives useful information.
+   o new methods +allDevicesByRelation and -relatedDevices.
+   o new delegate method -audioDeviceSomethingDidChange:.
+   o new method -deviceSafetyOffsetFramesForDirection:.
+   o new method -setDevicePaused:.
+   
+   (class MTCoreAudioStream)
+   o -description gives useful information.
+   
+   (class MTCoreAudioStreamDescription)
+   o support for localized stream description strings (see StreamDescription.strings
+     and -bundleForDescriptionStrings) (only English so far, please feel free to
+     submit localizations for other languages)
+   o new methods -isLinearPCMFormat, -isCanonicalFormat, -isInterleaved, -setIsInterleaved:.
+   o -setChannelsPerFrame: and -setIsInterleaved: will update bytesPerPacket and bytesPerFrame
+     if the format is canonical (native, interleaved or de-interleaved).
+     
+   (class MTCircularQueue/MTByteBuffer)
+   o class MTCircularQueue has been renamed to MTByteBuffer
+   o initializer renamed to -initWithCapacity:
+   o method -bytesInQueue renamed to -count
+   o method -size renamed to -capacity
+   o methods -writeBytesFrom:length: and -writeBytesWithoutBlockingFrom:length: combined
+     to -writeFromBytes:count:waitForRoom:
+   o methods -readBytesTo:length: and -readBytesWithoutBlockingTo:length: combined
+     to -readToBytes:count:waitForData:
+   o reimplemented as a subclass of MTBuffer
+   o finally documented!
+   
+   (new class MTAudioBuffer)
+   o similar in operation to MTByteBuffer, only storing N-channel Float32 frames
+     instead of bytes
+   o reads from and writes to AudioBufferLists
+   
+   (new class MTBuffer)
+   o abstract class intended to be subclassed to create thread-safe, flow-controlled
+     buffers, such as MTByteBuffer and MTAudioBuffer
+
+   (sample app AudioMonitor)
+   o changed MTConversionBuffer class to use an MTAudioBuffer instead of MTByteBuffer
+   
+   (misc)
+   o fixed a bug where NULL CFStringRefs obtained from a successful
+     HAL query would be used as if they were valid, causing an exception.
+   o enabled prebinding for framework (with -seg1addr 0xB0000000).
+   o removed internal class MTObjectProxy after i noticed that +[NSValue valueWithNonretainedObject:]
+     does the same thing.  :)
+   o new utility functions for AudioBufferLists
+
+
+New for 1.2.0
+
+   (class MTCoreAudioDevice)
+   o -deviceStart now lets you know if the device started or not.
+   o new delegate method -audioDeviceStartDidFail:forReason:
+   o new method -deviceMaxVariableBufferSizeInFrames.
+   o new method -supportsNominalSampleRate:.
+   
+   (class MTCoreAudioStreamDescription)
+   o -set... methods return the receiver, so sets can be chained.
+   o new methods +nativeStreamDescription, -setNativeFormat and -isNativeFormat.
+   o -setChannelsPerFrame: now also updates bytesPerFrame and
+     bytesPerPacket if the stream description is in native format.
+   o conforms to <NSCopying>
+   
+   (sample app AudioMonitor)
+   o totally changed input->output copying to deal with
+     different sample rates, numbers of streams, etc.

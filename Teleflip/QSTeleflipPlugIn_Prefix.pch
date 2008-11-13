@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSTeleflipPlugIn' target in the 'QSTeleflipPlugIn' project
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import <QSFoundation/QSFoundation.h>
+#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSTeleflipPlugInType @"QSTeleflipPlugInType"

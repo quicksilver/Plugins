@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>MTCoreAudio.framework</title>
+</head>
+<body>
+<h1>MTCoreAudio.framework</h1>
+<p>
+The <strong>MTCoreAudio</strong> framework is a
+<a href="http://developer.apple.com/techpubs/macosx/Cocoa/CocoaTopics.html">Cocoa-flavored</a>
+Objective-C wrapping around the
+<a href="http://developer.apple.com/audio/pdf/coreaudio.pdf">
+Hardware Abstraction Layer (HAL) of Apple's CoreAudio library</a>.
+</p>
+
+<p>
+Download MTCoreAudio.framework, its source code, and
+two example programs with source as either a
+<a href="http://aldebaran.armory.com/~zenomt/macosx/MTCoreAudio/MTCoreAudio.dmg">disk image</a>
+(and its <a href="http://aldebaran.armory.com/~zenomt/macosx/MTCoreAudio/MTCoreAudio.dmg-sig.txt">PGP signature</a>)
+or a
+<a href="http://aldebaran.armory.com/~zenomt/macosx/MTCoreAudio/MTCoreAudio.tgz">compressed tar file</a>
+(and its <a href="http://aldebaran.armory.com/~zenomt/macosx/MTCoreAudio/MTCoreAudio.tgz-sig.txt">PGP signature</a>).
+</p>
+
+<h2>Overview</h2>
+<p>
+MTCoreAudio provides one main class, <strong>MTCoreAudioDevice</strong>,
+which abstracts the global audio hardware environment and the individual
+audio devices attached to the system.  The class includes methods for
+finding the system's default input and output devices, all of the devices
+attached to the system, or a particular device based on its unique
+identifier (a persistent address which can identify an audio device
+across reboots and reconfiguration).  The class can accomodate a delegate
+for global hardware events.  Device instances accomodate a delegate for
+device-specific events.
+</p>
+
+<p>
+A device instance may have a single
+AudioDeviceIOProc (a C function, the same as
+with CoreAudio HAL), or a target/selector for the IO cycle.
+Multiple device instances may refer to the same
+physical device, and each instance may have its own AudioDeviceIOProc (or target/selector),
+which may be different from, or the same as, other instances' AudioDeviceIOProcs (or targets/selectors).
+Note that the earlier limitation
+that the AudioDeviceIOProcs not be the same for instances referring
+to the same physical device has been removed.
+For example:
+<pre>
+	...
+	MTCoreAudioDevice * theInputDevice = [MTCoreAudioDevice defaultInputDevice];
+	MTCoreAudioDevice * theOutputDevice = [MTCoreAudioDevice defaultOutputDevice];
+	MTCoreAudioDevice * theSysOutputDevice = [MTCoreAudioDevice defaultSystemOutputDevice];
+
+	[theInputDevice setIOProc:myInputIOProc withClientData:self];
+	[theOutputDevice setIOProc:myOutputIOProc withClientData:self];
+	[theSysOutputDevice setIOProc:myOutputIOProc withClientData:other];
+	...
+</pre>
+will work, even if the default input, output, and system output devices are the same
+physical device.
+</p>
+
+<p>
+An MTCoreAudioDevice instance lets you query and control most of
+a device's properties, such as a channel's volume, mute, or play-through
+settings, input or output sources (such as internal microphone, line in,
+et cetera), buffer size, sample rate, channel configuration, and clock
+sources.
+
+<p>
+In the CoreAudio HAL, devices consist of one or more audio <i>streams</i>,
+which have an implicit direction (either record or playback).
+<strong>MTCoreAudioStream</strong> encapsulates a stream.  An instance
+of this class is always associated with an MTCoreAudioDevice instance.
+Using MTCoreAudioStreams gives you most of the same controls over a
+device's channels, and is convenient for dealing with audio devices in
+your code in a manner more analogous to how the device is laid out.
+MTCoreAudioStreams also provide the only means to modify the hardware
+data format of the device (such as sample bit depth).  This is because,
+in the HAL, a stream is the only way to modify those parameters.
+MTCoreAudioStreams can accomodate a delegate for stream-related notification
+events; however, if an instance does not have a delegate, the delegate
+of the associated MTCoreAudioDevice instance will be used.
+</p>
+
+</p>
+The <strong>MTCoreAudioStreamDescription</strong> class is just a simple
+wrapper around the HAL's <i>AudioStreamBasicDescription</i>, which is
+used for describing both the logical and physical data formats of
+audio data in a device and its streams.  This structure is encapsulated
+in an Objective-C class to simplify memory management
+(especially when working with arrays of supported formats), and to
+provide a simple text description of a format.
+</p>
+
+<h2>Framework Reference</h2>
+<p>
+Many types are defined in CoreAudio's header files.  Please see
+<code>/System/Library/Frameworks/CoreAudio.framework/Headers/</code>
+for their definitions.
+<ul>
+	<li><a href="MTCoreAudioConstantsAndTypes.html">Constants and Types</a>
+	<li><a href="MTCoreAudioStreamDescription.html">MTCoreAudioStreamDescription</a> class
+	<li><a href="MTCoreAudioDevice.html">MTCoreAudioDevice</a> class
+	<li><a href="MTCoreAudioStream.html">MTCoreAudioStream</a> class
+	<br><br>
+	<li><a href="MTBuffer.html">MTBuffer</a> class
+	<li><a href="MTByteBuffer.html">MTByteBuffer</a> class
+	<li><a href="MTAudioBuffer.html">MTAudioBuffer</a> class
+	<li><a href="MTAudioBufferListUtils.html">AudioBufferList Utility Functions</a>
+</ul>
+</p>
+<hr>
+<a href="http://aldebaran.armory.com/~zenomt/">Mike</a> &gt;
+<a href="http://aldebaran.armory.com/~zenomt/macosx/">Mac OS X</a> &gt;
+MTCoreAudio.framework
+
+</body>
+</html>

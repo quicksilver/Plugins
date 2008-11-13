@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>NUDC Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSNUDCPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Now Contact Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.5.2</string>
+	<key>CFBundleVersion</key>
+	<string>3E</string>
+	<key>NSPrincipalClass</key>
+	<string>QSNowContactPlugIn</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>description</key>
+		<string>Contacts from Now Contact </string>
+		<key>requiresFeature</key>
+		<string>0</string>
+		<key>webIcon</key>
+		<string>http://blacktree.com/apps/quicksilver/images/appicons/Now-Contact.gif</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetNUDCContacts</string>
+			<key>requiresBundle</key>
+			<string>com.poweronsoftware.nowcontact</string>
+			<key>source</key>
+			<string>QSNUDCSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSNUDCSource</key>
+			<string>QSNUDCSource</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>QSNUDCContactType</key>
+			<string>QSNUDCSource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSNUDCSource</key>
+			<string>QSNUDCSource</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

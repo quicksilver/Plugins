@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		089C1668FE841158C02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		08FB77ABFE841565C02AAC07 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB77AAFE841565C02AAC07 /* Carbon.framework */; };
+		115F48980249359E0CCB177F /* MoreAppleEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 115F48880249359E0CCB177F /* MoreAppleEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		115F48990249359E0CCB177F /* MoreAEObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = 115F48890249359E0CCB177F /* MoreAEObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		115F489A0249359E0CCB177F /* MoreAppleEventsPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = 115F488B0249359E0CCB177F /* MoreAppleEventsPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		115F489B0249359E0CCB177F /* MoreOSA.h in Headers */ = {isa = PBXBuildFile; fileRef = 115F488D0249359E0CCB177F /* MoreOSA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		115F489C0249359E0CCB177F /* MoreFinderEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 115F488F0249359E0CCB177F /* MoreFinderEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		115F489D0249359E0CCB177F /* MoreSetup.h in Headers */ = {isa = PBXBuildFile; fileRef = 115F48920249359E0CCB177F /* MoreSetup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		115F489E0249359E0CCB177F /* MoreProcesses.h in Headers */ = {isa = PBXBuildFile; fileRef = 115F48930249359E0CCB177F /* MoreProcesses.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		115F489F0249359E0CCB177F /* MIB_Carbon.h in Headers */ = {isa = PBXBuildFile; fileRef = 115F48960249359E0CCB177F /* MIB_Carbon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		115F48A00249359E0CCB177F /* MoreMemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 115F48970249359E0CCB177F /* MoreMemory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		115F48A10249359E0CCB177F /* MoreFinderEvents.c in Sources */ = {isa = PBXBuildFile; fileRef = 115F488A0249359E0CCB177F /* MoreFinderEvents.c */; };
+		115F48A20249359E0CCB177F /* MoreAppleEventsPlus.c in Sources */ = {isa = PBXBuildFile; fileRef = 115F488C0249359E0CCB177F /* MoreAppleEventsPlus.c */; };
+		115F48A30249359E0CCB177F /* MoreOSA.c in Sources */ = {isa = PBXBuildFile; fileRef = 115F488E0249359E0CCB177F /* MoreOSA.c */; };
+		115F48A40249359E0CCB177F /* MoreAEObjects.c in Sources */ = {isa = PBXBuildFile; fileRef = 115F48900249359E0CCB177F /* MoreAEObjects.c */; };
+		115F48A50249359E0CCB177F /* MoreAppleEvents.cp in Sources */ = {isa = PBXBuildFile; fileRef = 115F48910249359E0CCB177F /* MoreAppleEvents.cp */; };
+		115F48A60249359E0CCB177F /* MoreProcesses.cp in Sources */ = {isa = PBXBuildFile; fileRef = 115F48940249359E0CCB177F /* MoreProcesses.cp */; };
+		115F48A70249359E0CCB177F /* MoreMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 115F48950249359E0CCB177F /* MoreMemory.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4F0BB7EC011F40E904CA0E50 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		4F0BB7ED011F40E904CA0E50 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		034768DEFF38A45A11DB9C8B /* MoreAppleEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MoreAppleEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		08FB77AAFE841565C02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		115F48880249359E0CCB177F /* MoreAppleEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreAppleEvents.h; sourceTree = "<group>"; };
+		115F48890249359E0CCB177F /* MoreAEObjects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreAEObjects.h; sourceTree = "<group>"; };
+		115F488A0249359E0CCB177F /* MoreFinderEvents.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MoreFinderEvents.c; sourceTree = "<group>"; };
+		115F488B0249359E0CCB177F /* MoreAppleEventsPlus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreAppleEventsPlus.h; sourceTree = "<group>"; };
+		115F488C0249359E0CCB177F /* MoreAppleEventsPlus.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MoreAppleEventsPlus.c; sourceTree = "<group>"; };
+		115F488D0249359E0CCB177F /* MoreOSA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreOSA.h; sourceTree = "<group>"; };
+		115F488E0249359E0CCB177F /* MoreOSA.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MoreOSA.c; sourceTree = "<group>"; };
+		115F488F0249359E0CCB177F /* MoreFinderEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreFinderEvents.h; sourceTree = "<group>"; };
+		115F48900249359E0CCB177F /* MoreAEObjects.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MoreAEObjects.c; sourceTree = "<group>"; };
+		115F48910249359E0CCB177F /* MoreAppleEvents.cp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MoreAppleEvents.cp; sourceTree = "<group>"; };
+		115F48920249359E0CCB177F /* MoreSetup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MoreSetup.h; path = "MoreIsBetter parts/MoreSetup.h"; sourceTree = "<group>"; };
+		115F48930249359E0CCB177F /* MoreProcesses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MoreProcesses.h; path = "MoreIsBetter parts/MoreProcesses.h"; sourceTree = "<group>"; };
+		115F48940249359E0CCB177F /* MoreProcesses.cp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MoreProcesses.cp; path = "MoreIsBetter parts/MoreProcesses.cp"; sourceTree = "<group>"; };
+		115F48950249359E0CCB177F /* MoreMemory.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = MoreMemory.c; path = "MoreIsBetter parts/MoreMemory.c"; sourceTree = "<group>"; };
+		115F48960249359E0CCB177F /* MIB_Carbon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MIB_Carbon.h; path = "MoreIsBetter parts/MIB_Carbon.h"; sourceTree = "<group>"; };
+		115F48970249359E0CCB177F /* MoreMemory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MoreMemory.h; path = "MoreIsBetter parts/MoreMemory.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworkTarget section */
+		0867D69CFE84028FC02AAC07 /* MoreAppleEvents */ = {
+			isa = PBXFrameworkTarget;
+			buildConfigurationList = 7F07AE15085E432600E2AFC4 /* Build configuration list for PBXFrameworkTarget "MoreAppleEvents" */;
+			buildPhases = (
+				0867D69DFE84028FC02AAC07 /* Headers */,
+				0867D69EFE84028FC02AAC07 /* Resources */,
+				0867D69FFE84028FC02AAC07 /* Sources */,
+				0867D6A0FE84028FC02AAC07 /* Frameworks */,
+				0867D6A2FE84028FC02AAC07 /* Rez */,
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = MoreAppleEvents;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+			};
+			dependencies = (
+			);
+			name = MoreAppleEvents;
+			productInstallPath = "@executable_path/../Frameworks";
+			productName = MoreAppleEvents;
+			productReference = 034768DEFF38A45A11DB9C8B /* MoreAppleEvents.framework */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>MoreAppleEvents</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple. MoreAppleEvents</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>FMWK</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.1d1</string>
+	<key>CSResourcesFileMapped</key>
+	<true/>
+</dict>
+</plist>
+";
+		};
+/* End PBXFrameworkTarget section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0867D6A0FE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08FB77ABFE841565C02AAC07 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DDFF38A45A11DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				034768DEFF38A45A11DB9C8B /* MoreAppleEvents.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* MoreAppleEvents */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77ACFE841707C02AAC07 /* Source */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DDFF38A45A11DB9C8B /* Products */,
+			);
+			name = MoreAppleEvents;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AAFE841565C02AAC07 /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77ACFE841707C02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				115F48910249359E0CCB177F /* MoreAppleEvents.cp */,
+				115F48880249359E0CCB177F /* MoreAppleEvents.h */,
+				115F488C0249359E0CCB177F /* MoreAppleEventsPlus.c */,
+				115F488B0249359E0CCB177F /* MoreAppleEventsPlus.h */,
+				115F48900249359E0CCB177F /* MoreAEObjects.c */,
+				115F48890249359E0CCB177F /* MoreAEObjects.h */,
+				115F488A0249359E0CCB177F /* MoreFinderEvents.c */,
+				115F488F0249359E0CCB177F /* MoreFinderEvents.h */,
+				115F48950249359E0CCB177F /* MoreMemory.c */,
+				115F48970249359E0CCB177F /* MoreMemory.h */,
+				115F488D0249359E0CCB177F /* MoreOSA.h */,
+				115F488E0249359E0CCB177F /* MoreOSA.c */,
+				115F48940249359E0CCB177F /* MoreProcesses.cp */,
+				115F48930249359E0CCB177F /* MoreProcesses.h */,
+				115F48920249359E0CCB177F /* MoreSetup.h */,
+				115F48960249359E0CCB177F /* MIB_Carbon.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0867D69DFE84028FC02AAC07 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				115F48980249359E0CCB177F /* MoreAppleEvents.h in Headers */,
+				115F48990249359E0CCB177F /* MoreAEObjects.h in Headers */,
+				115F489A0249359E0CCB177F /* MoreAppleEventsPlus.h in Headers */,
+				115F489B0249359E0CCB177F /* MoreOSA.h in Headers */,
+				115F489C0249359E0CCB177F /* MoreFinderEvents.h in Headers */,
+				115F489D0249359E0CCB177F /* MoreSetup.h in Headers */,
+				115F489E0249359E0CCB177F /* MoreProcesses.h in Headers */,
+				115F489F0249359E0CCB177F /* MIB_Carbon.h in Headers */,
+				115F48A00249359E0CCB177F /* MoreMemory.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7F07AE19085E432600E2AFC4 /* Build configuration list for PBXProject "MoreAppleEvents" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4F0BB7EC011F40E904CA0E50 /* Development */,
+				4F0BB7ED011F40E904CA0E50 /* Deployment */,
+			);
+			hasScannedForEncodings = 0;
+			mainGroup = 0867D691FE84028FC02AAC07 /* MoreAppleEvents */;
+			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
+			projectDirPath = "";
+			targets = (
+				0867D69CFE84028FC02AAC07 /* MoreAppleEvents */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0867D69EFE84028FC02AAC07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				089C1668FE841158C02AAC07 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		0867D6A2FE84028FC02AAC07 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0867D69FFE84028FC02AAC07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				115F48A10249359E0CCB177F /* MoreFinderEvents.c in Sources */,
+				115F48A20249359E0CCB177F /* MoreAppleEventsPlus.c in Sources */,
+				115F48A30249359E0CCB177F /* MoreOSA.c in Sources */,
+				115F48A40249359E0CCB177F /* MoreAEObjects.c in Sources */,
+				115F48A50249359E0CCB177F /* MoreAppleEvents.cp in Sources */,
+				115F48A60249359E0CCB177F /* MoreProcesses.cp in Sources */,
+				115F48A70249359E0CCB177F /* MoreMemory.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F07AE16085E432600E2AFC4 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = MoreAppleEvents;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F07AE17085E432600E2AFC4 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = MoreAppleEvents;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7F07AE18085E432600E2AFC4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = MoreAppleEvents;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Default;
+		};
+		7F07AE1A085E432600E2AFC4 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		7F07AE1B085E432600E2AFC4 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		7F07AE1C085E432600E2AFC4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F07AE15085E432600E2AFC4 /* Build configuration list for PBXFrameworkTarget "MoreAppleEvents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AE16085E432600E2AFC4 /* Development */,
+				7F07AE17085E432600E2AFC4 /* Deployment */,
+				7F07AE18085E432600E2AFC4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F07AE19085E432600E2AFC4 /* Build configuration list for PBXProject "MoreAppleEvents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AE1A085E432600E2AFC4 /* Development */,
+				7F07AE1B085E432600E2AFC4 /* Deployment */,
+				7F07AE1C085E432600E2AFC4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

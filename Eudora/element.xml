@@ -1,0 +1,11 @@
+<element id="com.blacktree.Quicksilver.QSEudoraPlugIn" name="Eudora Module" version="8E">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSMailMediators">
+            <extension id="com.qualcomm.eudora" class="QSEudoraMailMediator"></extension>
+        </extension>
+    </extensions>
+</element>

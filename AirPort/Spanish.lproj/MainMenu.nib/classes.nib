@@ -1,0 +1,125 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                WDSCancel = id; 
+                WDSChannel = id; 
+                WDSEncrypted = id; 
+                WDSKeyLength = id; 
+                WDSOK = id; 
+                multiCancel = id; 
+                multiOK = id; 
+                passwordCancel = id; 
+                passwordCancelAll = id; 
+                passwordOK = id; 
+            }; 
+            CLASS = APMultiConfig; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                vMultiChoices = id; 
+                vMultiPanel = id; 
+                vPasswordOK = id; 
+                vPasswordPanel = id; 
+                vPasswordPrompt = id; 
+                vPasswordText = id; 
+                vWDSChannel = id; 
+                vWDSConfirm = id; 
+                vWDSEncrypted = id; 
+                vWDSKeyLength = id; 
+                vWDSList = id; 
+                vWDSNetwork = id; 
+                vWDSOKButton = id; 
+                vWDSPanel = id; 
+                vWDSPassword = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = APRomanWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {
+            CLASS = AdminUtilAppleEventHandler; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_airPortConfiguration" = id; "_scanController" = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = AirPortAEConfiguration; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                forceReloadCancel = id; 
+                forceReloadOK = id; 
+                otherCancel = id; 
+                otherOK = id; 
+                pwCancel = id; 
+                pwOK = id; 
+                softResetCancel = id; 
+                softResetOK = id; 
+                softResetUseWEP = id; 
+            }; 
+            CLASS = SCPanelsController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                forceReloadBasePassword = id; 
+                forceReloadBaseVerify = id; 
+                forceReloadIPAddress = id; 
+                forceReloadOKButton = id; 
+                forceReloadPanel = id; 
+                otherIPAddress = id; 
+                otherOKButton = id; 
+                otherPassword = id; 
+                otherPrompt = id; 
+                progressBar = id; 
+                progressPanel = id; 
+                progressText = id; 
+                pwAddKeychain = id; 
+                pwOKButton = id; 
+                pwPassword = id; 
+                pwPrompt = id; 
+                softResetBasePassword = id; 
+                softResetBaseVerify = id; 
+                softResetIPAddress = id; 
+                softResetIPAddressLabel = id; 
+                softResetNetworkPassword = id; 
+                softResetNetworkPasswordLabel = id; 
+                softResetNetworkVerify = id; 
+                softResetNetworkVerifyLabel = id; 
+                softResetOKButton = id; 
+                softResetPanel = id; 
+                softResetUseWEP = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                baseConfigMultiple = id; 
+                baseConfigWDS = id; 
+                baseEquivalentPW = id; 
+                baseImport = id; 
+                baseRestart = id; 
+                baseUpload = id; 
+                baseUploadDefault = id; 
+                configureBaseStations = id; 
+                editProfiles = id; 
+                scanAgain = id; 
+                scanConfigure = id; 
+                scanOther = id; 
+                showAboutBox = id; 
+                showAirportHelp = id; 
+                toolbarCustomize = id; 
+                toolbarToggle = id; 
+                viewDetails = id; 
+                viewSummary = id; 
+            }; 
+            CLASS = ScanController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_scPanelsController" = id; 
+                apMultiConfigClass = id; 
+                infoTable = id; 
+                scanTable = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = infoView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

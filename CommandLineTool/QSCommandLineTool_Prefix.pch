@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSCommandLineTool' target in the 'QSCommandLineTool' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+    #import <AddressBook/AddressBook.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kToolIsInstalled @"QSCommandLineToolInstalled"

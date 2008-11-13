@@ -1,0 +1,12 @@
+<element id="com.blacktree.Quicksilver.QSPrimerInterfacePlugIn" name="Primer Interface" version="12F6">
+    <info>
+        <category>Interfaces</category>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSCommandInterfaceControllers">
+            <command-interface id="QSPrimerInterfaceController" class="QSPrimerInterfaceController"></command-interface>
+        </extension>
+    </extensions>
+</element>

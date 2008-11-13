@@ -1,0 +1,7 @@
+<element id="com.armory.zenomt.MTCoreAudio" name="MTCoreAudio" version="1.3.0">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree"></extensions>
+</element>

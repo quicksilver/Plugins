@@ -1,0 +1,74 @@
+<element id="com.blacktree.Quicksilver.QSImageManipulationPlugIn" name="Image Manipulation Actions" version="5E">
+    <info>
+        <category>Images</category>
+        <image>com.apple.Preview</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSImageAsFormatAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSImageManipulationPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>saveImage:asFormat:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Save Image in Format...</string>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSImageCropAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSImageManipulationPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>cropImage:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Crop Image</string>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSImageScaleAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSImageManipulationPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>scaleImage:toSize:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Scale Image...</string>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSImageManipulationPlugInAction" class="QSImageManipulationPlugInAction"></action-provider>
+        </extension>
+    </extensions>
+</element>

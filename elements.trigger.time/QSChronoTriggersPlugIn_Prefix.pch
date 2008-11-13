@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'QSChronoTriggersPlugIn' target in the 'QSChronoTriggersPlugIn' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSChronoTriggersPlugInType @"QSChronoTriggersPlugInType"

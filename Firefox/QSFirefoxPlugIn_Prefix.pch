@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSFirefoxPlugIn' target in the 'QSFirefoxPlugIn' project
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import <QSFoundation/QSFoundation.h>
+#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSFirefoxPlugInType @"QSFirefoxPlugInType"

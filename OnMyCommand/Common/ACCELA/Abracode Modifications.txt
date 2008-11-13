@@ -1,0 +1,7 @@
+CAUTION. Modified distribution.
+
+This distribution of ACCELA is not complete. Most of the code has been taken out to trim the distribution size.
+The "Memory" classes were added by Abracode.
+
+To get the original ACCELA package, go to:
+http://accela.sourceforge.net/

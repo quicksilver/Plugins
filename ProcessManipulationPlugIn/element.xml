@@ -1,0 +1,247 @@
+<element id="com.blacktree.Quicksilver.QSProcessManipulationPlugIn" name="Process Manipulation Actions" version="42">
+    <info>
+        <category>System</category>
+        <image>ExecutableBinaryIcon</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="ProcessLowerPriorityAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAdvancedProcessActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>lowerPriority:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>feature</key>
+                        <integer>1</integer>
+                        <key>name</key>
+                        <string>Lower Priority</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="ProcessResumeAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAdvancedProcessActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>resumeProcess:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>feature</key>
+                        <integer>1</integer>
+                        <key>name</key>
+                        <string>Resume Application (SIGCONT)</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="ProcessSetPriorityAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAdvancedProcessActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>setPriorityOf:to:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>feature</key>
+                        <integer>1</integer>
+                        <key>name</key>
+                        <string>Set Priority...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="ProcessKillAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAdvancedProcessActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>killProcess:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>feature</key>
+                        <integer>1</integer>
+                        <key>name</key>
+                        <string>Kill Process</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="ProcessRaisePriorityAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAdvancedProcessActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>raisePriority:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>feature</key>
+                        <integer>1</integer>
+                        <key>name</key>
+                        <string>Raise Priority</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="ProcessShowOpenFilesAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAdvancedProcessActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>showFilesOfProcess:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>feature</key>
+                        <integer>1</integer>
+                        <key>name</key>
+                        <string>List Open Files</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="ProcessSignalAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAdvancedProcessActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>signalProcess:withValue:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>feature</key>
+                        <integer>1</integer>
+                        <key>name</key>
+                        <string>Send Signal...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="ProcessSuspendAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAdvancedProcessActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>suspendProcess:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>feature</key>
+                        <integer>1</integer>
+                        <key>name</key>
+                        <string>Pause Application (SIGTSTP)</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="ProcessSampleAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAdvancedProcessActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>sampleProcess:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>feature</key>
+                        <integer>1</integer>
+                        <key>icon</key>
+                        <string>com.apple.Sampler</string>
+                        <key>name</key>
+                        <string>Sample Process</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="AppLaunchAsRootAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAdvancedProcessActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>launchAsRoot:</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>'APPL'</string>
+                            <string>app</string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>feature</key>
+                        <integer>1</integer>
+                        <key>features</key>
+                        <array>
+                            <string>Advanced</string>
+                        </array>
+                        <key>icon</key>
+                        <string>Rocket</string>
+                        <key>name</key>
+                        <string>Launch as Root</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="AppLaunchAgainAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAdvancedProcessActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>launchACopyOfApplication:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.process</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>icon</key>
+                        <string>Rocket</string>
+                        <key>name</key>
+                        <string>Launch a Copy</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSAdvancedProcessActionProvider" class="QSAdvancedProcessActionProvider"></action-provider>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Shelf Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSShelfPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Shelf Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>65</string>
+	<key>NSPrincipalClass</key>
+	<string>QSShelfController</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSPutOnShelfAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSShelfSource</string>
+			<key>actionSelector</key>
+			<string>putObjectOnShelf:</string>
+			<key>directTypes</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>enabled</key>
+			<false/>
+			<key>icon</key>
+			<string>Catalog</string>
+			<key>name</key>
+			<string>Put on Shelf</string>
+			<key>rankModification</key>
+			<integer>0</integer>
+		</dict>
+		<key>QSShelfShowAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSShelfSource</string>
+			<key>actionSelector</key>
+			<string>show:</string>
+			<key>directTypes</key>
+			<array>
+				<string>qs.shelf</string>
+			</array>
+			<key>name</key>
+			<string>Show</string>
+		</dict>
+	</dict>
+	<key>QSLoadImmediately</key>
+	<true/>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Quicksilver</string>
+		</array>
+		<key>description</key>
+		<string>Provides a shelf for temporary storage</string>
+		<key>icon</key>
+		<string>Catalog</string>
+		<key>qsversion</key>
+		<string>2A5F</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetShelves</string>
+			<key>catalogPath</key>
+			<string>QSPresetQSGroup</string>
+			<key>source</key>
+			<string>QSShelfSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSShelfSource</key>
+			<string>QSShelfSource</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>qs.shelf</key>
+			<string>QSShelfSource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSShelfSource</key>
+			<string>QSShelfSource</string>
+		</dict>
+		<key>QSShelfControllers</key>
+		<dict>
+			<key>General</key>
+			<string>QSShelfController</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

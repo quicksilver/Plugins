@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Slideshow Action</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSSlideshowPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Slideshow Action</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>6E</string>
+	<key>NSPrincipalClass</key>
+	<string>QSSlideshowPlugIn</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSRunSlideshowAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSSlideshowPlugInAction</string>
+			<key>actionSelector</key>
+			<string>runSlideshowForFilesObject:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Slideshow</string>
+			<key>name</key>
+			<string>Slideshow</string>
+			<key>runInMainThread</key>
+			<true/>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>QSRunSlideshowOnIPhotoAlbumAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSSlideshowPlugInAction</string>
+			<key>actionSelector</key>
+			<string>runSlideshowForIPhotoAlbum:</string>
+			<key>directTypes</key>
+			<array>
+				<string>qs.apple.iPhoto.album</string>
+			</array>
+			<key>icon</key>
+			<string>Slideshow</string>
+			<key>name</key>
+			<string>Slideshow</string>
+			<key>runInMainThread</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Images</string>
+		</array>
+		<key>description</key>
+		<string>Provides an action to show images in a slideshow</string>
+		<key>extendedDescription</key>
+		<string>Provides a slideshow action&lt;h3&gt;Enhancements&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Adds a "Slideshow" action that works on images, a pdf, or a folder&lt;/ul&gt;</string>
+		<key>icon</key>
+		<string>Slideshow</string>
+		<key>versionchanges</key>
+		<array>
+			<string>Index view is now working</string>
+		</array>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSSlideshowPlugInAction</key>
+			<string>QSSlideshowPlugInAction</string>
+		</dict>
+		<key>QSPreferencePanes</key>
+		<dict>
+			<key>QSSlideshowPrefPane</key>
+			<dict>
+				<key>class</key>
+				<string>QSPreferencePane</string>
+				<key>description</key>
+				<string>Slideshow Options</string>
+				<key>feature</key>
+				<integer>4</integer>
+				<key>icon</key>
+				<string>Slideshow</string>
+				<key>name</key>
+				<string>Slideshow</string>
+				<key>nibBundle</key>
+				<string>com.blacktree.Quicksilver.QSSlideshowPlugIn</string>
+				<key>nibName</key>
+				<string>QSSlideshowPrefPane</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>Slideshow</key>
+		<string>[com.blacktree.Quicksilver.QSSlideshowPlugIn]:Slideshow.png</string>
+	</dict>
+	<key>xQSDefaults</key>
+	<dict>
+		<key>QSSlideshowOptions</key>
+		<dict>
+			<key>ImageTransition</key>
+			<dict>
+				<key>autoPlayDelay</key>
+				<integer>4</integer>
+				<key>autoPlayTime</key>
+				<integer>1</integer>
+				<key>manualTime</key>
+				<real>0.0</real>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

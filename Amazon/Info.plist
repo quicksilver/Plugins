@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Amazon Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSAmazonPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Amazon Artwork</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>45</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSAmazonItemRecommendAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAmazonPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>recommendItem:to:</string>
+			<key>directTypes</key>
+			<array>
+				<string>com.amazon.asin</string>
+			</array>
+			<key>icon</key>
+			<string>Amazon</string>
+			<key>name</key>
+			<string>Recommend to...</string>
+			<key>rankModification</key>
+			<real>0.10000000000000001</real>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>QSAmazonItemShowAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAmazonPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>showItem:</string>
+			<key>directTypes</key>
+			<array>
+				<string>com.amazon.asin</string>
+			</array>
+			<key>icon</key>
+			<string>Amazon</string>
+			<key>name</key>
+			<string>Show on Amazon</string>
+			<key>rankModification</key>
+			<real>0.20000000000000001</real>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Music</string>
+		</array>
+		<key>description</key>
+		<string>Loads artwork and links from Amazon</string>
+		<key>descriptionHTML</key>
+		<string>Loads artwork and links from &lt;a href="http://www.amazon.com/"&gt;Amazon&lt;/a&gt;</string>
+		<key>icon</key>
+		<string>Amazon</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>com.apple.iTunes</string>
+		</array>
+		<key>requiresFeature</key>
+		<string>0</string>
+		<key>secret</key>
+		<true/>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSAmazonPlugIn_Action</key>
+			<string>QSAmazonPlugIn_Action</string>
+		</dict>
+		<key>QSOnlineMusicArtworkSources</key>
+		<dict>
+			<key>com.amazon.www</key>
+			<string>QSAmazonPlugIn</string>
+		</dict>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>Amazon</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.blacktree.Quicksilver.QSAmazonPlugIn</string>
+			<key>resource</key>
+			<string>Amazon.icns</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

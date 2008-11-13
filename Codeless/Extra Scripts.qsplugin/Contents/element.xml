@@ -1,0 +1,49 @@
+<element id="com.blacktree.Quicksilver.QSExtraScriptsPlugIn" name="Extra Scripts" version="84">
+    <info>
+        <category>Quicksilver</category>
+        <image>AppleScript</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetQSExtraScripts">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetQSExtraScripts</string>
+                        <key>catalogPath</key>
+                        <string>QSPresetModules/QSPresetScriptsGroup</string>
+                        <key>modificationDate</key>
+                        <real>103923344</real>
+                        <key>name</key>
+                        <string>Scripts (QS Extras)</string>
+                        <key>settings</key>
+                        <dict>
+                            <key>baseBundle</key>
+                            <string>com.blacktree.Quicksilver.QSExtraScriptsPlugIn</string>
+                            <key>folderDepth</key>
+                            <integer>4</integer>
+                            <key>folderTypes</key>
+                            <array>
+                                <string>public.script</string>
+                                <string>public.plain-text</string>
+                                <string>com.apple.applescript.script</string>
+                                <string>public.executable</string>
+                            </array>
+                            <key>parser</key>
+                            <string>QSDirectoryParser</string>
+                            <key>path</key>
+                            <string>Contents/Resources/ExtraScripts/</string>
+                            <key>scanContents</key>
+                            <integer>1</integer>
+                            <key>skipItem</key>
+                            <integer>1</integer>
+                        </dict>
+                        <key>source</key>
+                        <string>QSFileSystemObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+    </extensions>
+</element>

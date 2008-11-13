@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Image Manipulation Actions</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSImageManipulationPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Image Manipulation Actions</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>5E</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSImageAsFormatAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSImageManipulationPlugInAction</string>
+			<key>actionSelector</key>
+			<string>saveImage:asFormat:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>displaysResult</key>
+			<true/>
+			<key>name</key>
+			<string>Save Image in Format...</string>
+			<key>validatesObjects</key>
+			<true/>
+		</dict>
+		<key>QSImageCropAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSImageManipulationPlugInAction</string>
+			<key>actionSelector</key>
+			<string>cropImage:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>displaysResult</key>
+			<true/>
+			<key>name</key>
+			<string>Crop Image</string>
+			<key>validatesObjects</key>
+			<true/>
+		</dict>
+		<key>QSImageScaleAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSImageManipulationPlugInAction</string>
+			<key>actionSelector</key>
+			<string>scaleImage:toSize:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>displaysResult</key>
+			<true/>
+			<key>name</key>
+			<string>Scale Image...</string>
+			<key>validatesObjects</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree</string>
+		<key>categories</key>
+		<array>
+			<string>Images</string>
+		</array>
+		<key>description</key>
+		<string>Actions to scale and change format of images</string>
+		<key>extendedDescription</key>
+		<string>Actions to scale and change format of images&lt;p&gt;use the "scale image" action and give it text in the form:&lt;br&gt;"SCALE_INFO [as FORMAT_INFO]"&lt;br&gt;SCALE_INFO: "[fit] WIDTH [x HEIGHT]"&lt;br&gt;FORMAT_INFO: "JPG/PNG/GIF/TIFF [low/med*/hi*] [prog(ressive)] [inter(laced)]"&lt;p&gt;Examples:&lt;br&gt;"fit 640x480 as jpg high progressive" - creates an image that will fit within a 640x480 rectangle&lt;br&gt;"50% as interlaced png" - creates a png with dimensions half of the original"&lt;br&gt;"x72 as gif" - makes a gif 72 pixels tall, with width to maintain the proportions</string>
+		<key>icon</key>
+		<string>com.apple.Preview</string>
+		<key>qsversion</key>
+		<string>3400</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSImageManipulationPlugInAction</key>
+			<string>QSImageManipulationPlugInAction</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>feature</key>
+		<integer>1</integer>
+	</dict>
+</dict>
+</plist>

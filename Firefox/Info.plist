@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Firefox Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSFirefoxPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Firefox/Mozilla Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.5.0</string>
+	<key>CFBundleVersion</key>
+	<string>A7</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Blacktree, Inc.</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Web</string>
+			<string>Applications</string>
+		</array>
+		<key>description</key>
+		<string>Bookmarks for Firefox &amp; Mozilla</string>
+		<key>extendedDescription</key>
+		<string>Bookmarks for Firefox &amp; Mozilla&lt;P&gt;&lt;h3&gt;Enhancements&lt;/h3&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Adds a new preset to the Catalog that imports bookmarks from Firefox, Mozilla, and Netscape&lt;li&gt;Allows Firefox to handle javascript bookmarklets&lt;/ul&gt;</string>
+		<key>icon</key>
+		<string>org.mozilla.firefox</string>
+		<key>qsversion</key>
+		<string>29E0</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>org.mozilla.firefox</string>
+		</array>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetNetscapeBookmarks</string>
+			<key>icon</key>
+			<string>com.netscape.mozilla</string>
+			<key>name</key>
+			<string>Netscape Bookmarks</string>
+			<key>requiresBundle</key>
+			<string>com.netscape.mozilla</string>
+			<key>requiresSettingsPath</key>
+			<true/>
+			<key>settings</key>
+			<dict>
+				<key>parser</key>
+				<string>QSHTMLLinkParser</string>
+				<key>path</key>
+				<string>~/Library/Mozilla/Profiles/default/*/bookmarks.html</string>
+				<key>skipItem</key>
+				<true/>
+			</dict>
+			<key>source</key>
+			<string>QSFileSystemObjectSource</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetMozillaBookmarks</string>
+			<key>icon</key>
+			<string>org.mozilla.mozilla</string>
+			<key>name</key>
+			<string>Mozilla Bookmarks</string>
+			<key>requiresBundle</key>
+			<string>org.mozilla.mozilla</string>
+			<key>requiresSettingsPath</key>
+			<true/>
+			<key>settings</key>
+			<dict>
+				<key>parser</key>
+				<string>QSHTMLLinkParser</string>
+				<key>path</key>
+				<string>~/Library/Mozilla/Profiles/default/*/bookmarks.html</string>
+				<key>skipItem</key>
+				<true/>
+			</dict>
+			<key>source</key>
+			<string>QSFileSystemObjectSource</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetFirefoxGroup</string>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>ID</key>
+					<string>QSPresetFirefoxBookmarks</string>
+					<key>icon</key>
+					<string>org.mozilla.firefox</string>
+					<key>modificationDate</key>
+					<real>103311904</real>
+					<key>name</key>
+					<string>Firefox Bookmarks</string>
+					<key>requiresBundle</key>
+					<string>org.mozilla.firefox</string>
+					<key>requiresSettingsPath</key>
+					<true/>
+					<key>settings</key>
+					<dict>
+						<key>parser</key>
+						<string>QSHTMLLinkParser</string>
+						<key>path</key>
+						<string>~/Library/Application Support/Firefox/Profiles/*/bookmarks.html</string>
+						<key>skipItem</key>
+						<true/>
+					</dict>
+					<key>source</key>
+					<string>QSFileSystemObjectSource</string>
+				</dict>
+				<dict>
+					<key>ID</key>
+					<string>QSPresetFirefoxHistory</string>
+					<key>enabled</key>
+					<false/>
+					<key>icon</key>
+					<string>org.mozilla.firefox</string>
+					<key>name</key>
+					<string>Firefox History</string>
+					<key>settings</key>
+					<dict>
+						<key>parser</key>
+						<string>QSMorkMozillaHistoryParser</string>
+						<key>path</key>
+						<string>~/Library/Application Support/Firefox/Profiles/*/history.dat</string>
+						<key>skipItem</key>
+						<true/>
+					</dict>
+					<key>source</key>
+					<string>QSFileSystemObjectSource</string>
+				</dict>
+			</array>
+			<key>enabled</key>
+			<true/>
+			<key>icon</key>
+			<string>org.mozilla.firefox</string>
+			<key>name</key>
+			<string>Firefox</string>
+			<key>source</key>
+			<string>QSGroupObjectSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSFSParsers</key>
+		<dict>
+			<key>QSMorkMozillaHistoryParser</key>
+			<string>QSMorkMozillaHistoryParser</string>
+		</dict>
+		<key>QSWebBrowserMediators</key>
+		<dict>
+			<key>org.mozilla.firefox</key>
+			<string>QSFirefoxPlugIn</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,13 @@
+//
+// Prefix header for all source files of the 'QSKeychainPlugIn' target in the 'QSKeychainPlugIn' project
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import <QSFoundation/QSFoundation.h>
+#import <QSCore/QSCore.h>
+
+#endif
+
+
+#define kQSKeychainPlugInType @"QSKeychainPlugInType"

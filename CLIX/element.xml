@@ -1,0 +1,15 @@
+<element id="com.blacktree.Quicksilver.QSCLIXPlugIn" name="CLIX Module" version="38">
+    <info>
+        <category>Development</category>
+        <image>com.rixstep.CLIX</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSFSParsers">
+            <file-parser id="QSCLIXPlugIn" class="QSCLIXPlugIn"></file-parser>
+        </extension>
+        <extension point="QSFSFileTypeParsers">
+            <file-type-parser id="dyn.ah62d4rv4ge80g5dmta" class="QSCLIXPlugIn"></file-type-parser>
+        </extension>
+    </extensions>
+</element>

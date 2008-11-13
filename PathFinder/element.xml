@@ -1,0 +1,94 @@
+<element id="com.blacktree.Quicksilver.QSPathFinderPlugIn" name="Path Finder Module" version="AE">
+    <info>
+        <category>Files</category>
+        <image>com.cocoatech.PathFinder</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetPathFinderGroup">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetPathFinderGroup</string>
+                        <key>children</key>
+                        <array>
+                            <dict>
+                                <key>ID</key>
+                                <string>QSPresetPathFinderRecentFiles</string>
+                                <key>name</key>
+                                <string>Path Finder Recent Files</string>
+                                <key>settings</key>
+                                <dict>
+                                    <key>bundle</key>
+                                    <string>com.cocoatech.PathFinder</string>
+                                    <key>keypath</key>
+                                    <array>
+                                        <string>kRecentFileMenuItems</string>
+                                        <string>*</string>
+                                    </array>
+                                    <key>type</key>
+                                    <integer>1</integer>
+                                </dict>
+                                <key>source</key>
+                                <string>QSDefaultsObjectSource</string>
+                            </dict>
+                            <dict>
+                                <key>ID</key>
+                                <string>QSPresetPathFinderRecentFolders</string>
+                                <key>name</key>
+                                <string>Path Finder Recent Folders</string>
+                                <key>settings</key>
+                                <dict>
+                                    <key>bundle</key>
+                                    <string>com.cocoatech.PathFinder</string>
+                                    <key>keypath</key>
+                                    <array>
+                                        <string>kRecentFolderMenuItems</string>
+                                        <string>*</string>
+                                    </array>
+                                    <key>type</key>
+                                    <integer>1</integer>
+                                </dict>
+                                <key>source</key>
+                                <string>QSDefaultsObjectSource</string>
+                            </dict>
+                        </array>
+                        <key>icon</key>
+                        <string>com.cocoatech.PathFinder</string>
+                        <key>name</key>
+                        <string>Path Finder</string>
+                        <key>requiresBundle</key>
+                        <string>com.cocoatech.PathFinder</string>
+                        <key>source</key>
+                        <string>QSGroupObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="QSProxies">
+            <object-proxy id="com.cocoatech.PathFinder">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>com.cocoatech.PathFinder</string>
+                        <key>name</key>
+                        <string>Path Finder Selection</string>
+                        <key>providerClass</key>
+                        <string>QSPathFinderProxy</string>
+                        <key>types</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                    </dict>
+                </plist>
+            </object-proxy>
+        </extension>
+        <extension point="QSFSBrowserMediators">
+            <extension id="com.cocoatech.PathFinder" class="QSPathFinderProxy"></extension>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.cocoatech.PathFinder" class="QSPathFinderProxy"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F699756096ED79900420E96 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F699754096ED79800420E96 /* QSCore.framework */; };
+		7F699757096ED79900420E96 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F699755096ED79800420E96 /* QSFoundation.framework */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1578B29067F506200DDC7C9 /* QSDisplaysSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E1578B27067F506200DDC7C9 /* QSDisplaysSource.m */; };
+		E1578C8A067F8EAD00DDC7C9 /* Display.png in Resources */ = {isa = PBXBuildFile; fileRef = E1578C87067F8EAD00DDC7C9 /* Display.png */; };
+		E1578C8B067F8EAD00DDC7C9 /* DisplayDepth.png in Resources */ = {isa = PBXBuildFile; fileRef = E1578C88067F8EAD00DDC7C9 /* DisplayDepth.png */; };
+		E1578C8C067F8EAD00DDC7C9 /* DisplayResolution.png in Resources */ = {isa = PBXBuildFile; fileRef = E1578C89067F8EAD00DDC7C9 /* DisplayResolution.png */; };
+		E1578CE8067F945A00DDC7C9 /* ActionNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1578CE2067F945A00DDC7C9 /* ActionNames.strings */; };
+		E1578CEA067F945A00DDC7C9 /* SourcePresetNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1578CE6067F945A00DDC7C9 /* SourcePresetNames.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32DBCF980370C29C00C91783 /* QS Displays Module_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QS Displays Module_Prefix.pch"; sourceTree = "<group>"; };
+		7F699754096ED79800420E96 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
+		7F699755096ED79800420E96 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* Displays Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Displays Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E1578B26067F506200DDC7C9 /* QSDisplaysSource.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSDisplaysSource.h; sourceTree = "<group>"; };
+		E1578B27067F506200DDC7C9 /* QSDisplaysSource.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSDisplaysSource.m; sourceTree = "<group>"; };
+		E1578C87067F8EAD00DDC7C9 /* Display.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Display.png; sourceTree = "<group>"; };
+		E1578C88067F8EAD00DDC7C9 /* DisplayDepth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DisplayDepth.png; sourceTree = "<group>"; };
+		E1578C89067F8EAD00DDC7C9 /* DisplayResolution.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DisplayResolution.png; sourceTree = "<group>"; };
+		E1578CE3067F945A00DDC7C9 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ActionNames.strings; sourceTree = "<group>"; };
+		E1578CE5067F945A00DDC7C9 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E1578CE7067F945A00DDC7C9 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/SourcePresetNames.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				7F699756096ED79900420E96 /* QSCore.framework in Frameworks */,
+				7F699757096ED79900420E96 /* QSFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QS_Displays_Module */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = QS_Displays_Module;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E1578C87067F8EAD00DDC7C9 /* Display.png */,
+				E1578C88067F8EAD00DDC7C9 /* DisplayDepth.png */,
+				E1578C89067F8EAD00DDC7C9 /* DisplayResolution.png */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+				E1578CE2067F945A00DDC7C9 /* ActionNames.strings */,
+				E1578CE4067F945A00DDC7C9 /* InfoPlist.strings */,
+				E1578CE6067F945A00DDC7C9 /* SourcePresetNames.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* Displays Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F699754096ED79800420E96 /* QSCore.framework */,
+				7F699755096ED79800420E96 /* QSFoundation.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1578B26067F506200DDC7C9 /* QSDisplaysSource.h */,
+				E1578B27067F506200DDC7C9 /* QSDisplaysSource.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF980370C29C00C91783 /* QS Displays Module_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* Displays Module */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F07AEE2085E432800E2AFC4 /* Build configuration list for PBXNativeTarget "Displays Module" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Displays Module";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = "QS Displays Module";
+			productReference = 8D1AC9740486D14A00FE50C9 /* Displays Module.qsplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7F07AEE6085E432800E2AFC4 /* Build configuration list for PBXProject "QS Displays Module" */;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 0259C574FE90428111CA0C5A /* QS_Displays_Module */;
+			projectDirPath = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* Displays Module */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1578C8A067F8EAD00DDC7C9 /* Display.png in Resources */,
+				E1578C8B067F8EAD00DDC7C9 /* DisplayDepth.png in Resources */,
+				E1578C8C067F8EAD00DDC7C9 /* DisplayResolution.png in Resources */,
+				E1578CE8067F945A00DDC7C9 /* ActionNames.strings in Resources */,
+				E1578CEA067F945A00DDC7C9 /* SourcePresetNames.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1578B29067F506200DDC7C9 /* QSDisplaysSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E1578CE2067F945A00DDC7C9 /* ActionNames.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1578CE3067F945A00DDC7C9 /* English */,
+			);
+			name = ActionNames.strings;
+			sourceTree = "<group>";
+		};
+		E1578CE4067F945A00DDC7C9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1578CE5067F945A00DDC7C9 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E1578CE6067F945A00DDC7C9 /* SourcePresetNames.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1578CE7067F945A00DDC7C9 /* English */,
+			);
+			name = SourcePresetNames.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F07AEE3085E432800E2AFC4 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPYING_PRESERVES_HFS_DATA = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
+					/Users/nicholas/Forge/Development/Quicksilver/build,
+					/Volumes/Lore/Forge/Development/Quicksilver/build,
+					"$(SRCROOT)/../../../Build/Release",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QS Displays Module_Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Displays Module";
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7F07AEE4085E432800E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
+					/Users/nicholas/Forge/Development/Quicksilver/build,
+					/Volumes/Lore/Forge/Development/Quicksilver/build,
+					"$(SRCROOT)/../../../Build/Release",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QS Displays Module_Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Displays Module";
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7F07AEE5085E432800E2AFC4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
+					/Users/nicholas/Forge/Development/Quicksilver/build,
+					/Volumes/Lore/Forge/Development/Quicksilver/build,
+					"$(SRCROOT)/../../../Build/Release",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QS Displays Module_Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Displays Module";
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			name = Default;
+		};
+		7F07AEE7085E432800E2AFC4 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+		7F07AEE8085E432800E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		7F07AEE9085E432800E2AFC4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F07AEE2085E432800E2AFC4 /* Build configuration list for PBXNativeTarget "Displays Module" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AEE3085E432800E2AFC4 /* Development */,
+				7F07AEE4085E432800E2AFC4 /* Release */,
+				7F07AEE5085E432800E2AFC4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F07AEE6085E432800E2AFC4 /* Build configuration list for PBXProject "QS Displays Module" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AEE7085E432800E2AFC4 /* Development */,
+				7F07AEE8085E432800E2AFC4 /* Release */,
+				7F07AEE9085E432800E2AFC4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

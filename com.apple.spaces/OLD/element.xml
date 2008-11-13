@@ -1,0 +1,34 @@
+<element id="com.blacktree.Quicksilver.QSDesktopManagerModule" name="Desktop Manager Module" version="83">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetQSDesktopManagerModule">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetQSDesktopManagerModule</string>
+                        <key>name</key>
+                        <string>Desktops (Workspaces)</string>
+                        <key>source</key>
+                        <string>QSDesktopManagerModule_Source</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSDesktopManagerModule_Source" class="QSDesktopManagerModule_Source"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="qs.workspaceid" class="QSDesktopManagerModule_Source"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSDesktopManagerModule_Action" class="QSDesktopManagerModule_Action"></action-provider>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="net.sf.wsmanager.desktopmanager" class="QSDesktopManagerModule_Source"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

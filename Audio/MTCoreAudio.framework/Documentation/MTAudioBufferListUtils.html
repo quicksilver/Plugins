@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>MTCoreAudio AudioBufferList Utility Functions</title>
+</head>
+
+<body>
+<h1>AudioBufferList Utility Functions</h1>
+<p>
+These functions make working with <strong>AudioBufferList</strong>s easier.
+
+<h2>Function Types</h2>
+<hr>
+<ul plain>
+	<li>Creating and Disposing
+	<ul plain>
+		<br>
+		<li> <a href="#MTAudioBufferListNew">MTAudioBufferListNew ( )</a>
+		<li> <a href="#MTAudioBufferListDispose">MTAudioBufferListDispose ( )</a>
+	</ul>
+
+	<br>
+	<li>Working with attributes
+	<ul plain>
+		<br>
+		<li> <a href="#MTAudioBufferListChannelCount">MTAudioBufferListChannelCount ( )</a>
+		<li> <a href="#MTAudioBufferListFrameCount">MTAudioBufferListFrameCount ( )</a>
+	</ul>
+	
+	<br>
+	<li>Working with data
+	<ul plain>
+		<br>
+		<li> <a href="#MTAudioBufferListClear">MTAudioBufferListClear ( )</a>
+		<li> <a href="#MTAudioBufferListCopy">MTAudioBufferListCopy ( )</a>
+	</ul>
+
+	<br>
+</ul>
+
+
+<h2>Function Reference</h2>
+<hr>
+
+<h3><a name="MTAudioBufferListChannelCount">MTAudioBufferListChannelCount ( )</a></h3>
+<code>unsigned MTAudioBufferListChannelCount ( const AudioBufferList * buf )</code>
+<br><br>
+Returns the sum of the number of channels in each buffer/stream in <i>buf</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="MTAudioBufferListClear">MTAudioBufferListClear ( )</a></h3>
+<code>unsigned MTAudioBufferListClear ( AudioBufferList * aList, unsigned offset, unsigned count )</code>
+<br><br>
+Sets audio frames in <i>theList</i>, starting at <i>offset</i> frames from the beginning, to silence.  The number of frames cleared
+is the smallest of:
+<ul>
+	<li> The frame count of <i>aList</i> minus <i>offset</i>
+	<li> Parameter <i>count</i>
+</ul>
+Returns the number of frames cleared.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="MTAudioBufferListCopy">MTAudioBufferListCopy ( )</a></h3>
+<code>unsigned MTAudioBufferListCopy ( const AudioBufferList * src, unsigned srcOffset, AudioBufferList * dst, unsigned dstOffset, unsigned count )</code>
+<br><br>
+Copies audio frames from <i>src</i>, starting at <i>srcOffset</i> frames from the beginning, to <i>dst</i>, starting at <i>dstOffset</i> frames from the beginning.
+The number frames copied is the smallest of:
+<ul>
+	<li> The frame count of <i>src</i> minus <i>srcOffset</i>
+	<li> The frame count of <i>dst</i> minus <i>dstOffset</i>
+	<li> Parameter <i>count</i>
+</ul>
+If <i>src</i> has more channels than <i>dst</i>, then the excess channels of <i>src</i> are discarded.  If <i>src</i> has fewer
+channels than <i>dst</i>, then the excess channels of <i>dst</i> are filled with silence.
+<br><br>
+This function can work with source and destination AudioBufferLists having different numbers of streams and different numbers of channels per stream.
+However, it is most efficient when all of the corresponding streams in <i>src</i> and <i>dst</i> have the same number of channels.
+<br><br>
+Returns the number of frames copied.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="MTAudioBufferListDispose">MTAudioBufferListDispose ( )</a></h3>
+<code>void MTAudioBufferListDispose ( AudioBufferList * aList )</code>
+<br><br>
+Frees all of the resources of AudioBufferList <i>aList</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="MTAudioBufferListFrameCount">MTAudioBufferListFrameCount ( )</a></h3>
+<code>unsigned MTAudioBufferListFrameCount ( const AudioBufferList * buf )</code>
+<br><br>
+Returns the number of audio frames that <i>buf</i> can hold.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="MTAudioBufferListNew">MTAudioBufferListNew ( )</a></h3>
+<code>AudioBufferList * MTAudioBufferListNew ( unsigned channels, unsigned frames, Boolean interleaved )</code>
+<br><br>
+Returns a new AudioBufferList large enough to hold <i>frames</i> frames of <i>channels</i>-channel Float32 audio samples.
+If <i>interleaved</i> is <code>YES</code>, then the AudioBufferList will have one AudioBuffer with <i>channels</i>
+interleaved channels.  If <i>interleaved</i> is <code>NO</code>, then the AudioBufferList will have
+<i>channels</i> AudioBuffers each one channel wide.
+<br><br>
+<hr width="25%" align=left>
+
+
+
+<hr>
+
+<a href="http://aldebaran.armory.com/~zenomt/">Mike</a> &gt;
+<a href="http://aldebaran.armory.com/~zenomt/macosx/">Mac OS X</a> &gt;
+<a href="./index.html">MTCoreAudio.framework</a> &gt;
+MTCoreAudio AudioBufferList Utility Functions
+
+</body>
+</html>

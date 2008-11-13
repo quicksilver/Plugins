@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Commands</key>
+	<dict>
+		<key>DialNumber</key>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>method</key>
+				<dict>
+					<key>Description</key>
+					<string>dial method</string>
+					<key>Name</key>
+					<string>method</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Dial a phone number</string>
+			<key>Name</key>
+			<string>dial number</string>
+			<key>UnnamedArgument</key>
+			<dict>
+				<key>Description</key>
+				<string>the number to dial</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>additional commands provided by the Phone Plug-in.</string>
+	<key>Name</key>
+	<string>Phone Plug-in</string>
+</dict>
+</plist>

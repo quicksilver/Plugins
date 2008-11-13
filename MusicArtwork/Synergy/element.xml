@@ -1,0 +1,12 @@
+<element id="com.blacktree.Quicksilver.QSSynergyPlugIn" name="Synergy Artwork" version="28">
+    <info>
+        <category>Music</category>
+        <image>org.wincent.Synergy</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSMusicArtworkSources">
+            <extension id="org.wincent.Synergy" class="QSSynergyPlugIn"></extension>
+        </extension>
+    </extensions>
+</element>

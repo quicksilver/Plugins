@@ -1,0 +1,31 @@
+<element id="com.blacktree.Quicksilver.QSDesktopManagerPlugIn" name="Desktop Manager Module" version="23">
+    <info>
+        <category>Utility</category>
+        <image>net.sf.wsmanager.desktopmanager</image>
+    </info>
+    <requirements>
+        <requirement bundle="com.blacktree.Quicksilver.QSVirtualDesktopPlugIn" name="Virtual Desktop Support"></requirement>
+    </requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetQSDesktopManagerModule">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetQSDesktopManagerModule</string>
+                        <key>name</key>
+                        <string>Desktop Manager Desktops</string>
+                        <key>source</key>
+                        <string>QSDesktopManagerPlugInSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSDesktopManagerPlugInSource" class="QSDesktopManagerPlugInSource"></object-source>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="net.sf.wsmanager.desktopmanager" class="QSDesktopManagerPlugInSource"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

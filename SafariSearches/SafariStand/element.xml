@@ -1,0 +1,40 @@
+<element id="com.blacktree.Quicksilver.QSSafariStandPlugIn" name="SafariStand Queries" version="25">
+    <info>
+        <category>Web</category>
+        <category>Search</category>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetSafariStandQueries">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetSafariStandQueries</string>
+                        <key>icon</key>
+                        <string>Find</string>
+                        <key>name</key>
+                        <string>SafariStand Quick Searches</string>
+                        <key>requiresSettingsPath</key>
+                        <true></true>
+                        <key>settings</key>
+                        <dict>
+                            <key>parser</key>
+                            <string>QSSafariStandQueryParser</string>
+                            <key>path</key>
+                            <string>~/Library/Preferences/jp.hetima.SafariStand.plist</string>
+                            <key>skipItem</key>
+                            <integer>1</integer>
+                        </dict>
+                        <key>source</key>
+                        <string>QSFileSystemObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="QSFSParsers">
+            <file-parser id="QSSafariStandQueryParser" class="QSSafariStandQueryParser"></file-parser>
+        </extension>
+    </extensions>
+</element>

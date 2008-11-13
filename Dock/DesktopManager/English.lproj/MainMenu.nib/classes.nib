@@ -1,0 +1,61 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                nextDesktop = id; 
+                previousDesktop = id; 
+                runApplication = id; 
+                runApplicationButtonClicked = id; 
+                showPreferences = id; 
+            }; 
+            CLASS = DMController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                prefController = PreferencesController; 
+                runApplicationBox = NSComboBox; 
+                runApplicationWindow = NSWindow; 
+                sbMenuController = StatusBarMenuController; 
+                sbPagerController = StatusBarPagerController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = DesktopPagerController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dmController = DMController; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = MouseWatcher; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = OperationsMenuController; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {synchronize = id; }; 
+            CLASS = Preferences; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = PreferencesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {prefsWindow = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = StatusBarMenuController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                currentDesktopMenu = NSMenu; 
+                desktopsMenuItem = NSMenuItem; 
+                statusMenu = NSMenu; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = StatusBarPagerController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {wsController = WorkspaceController; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

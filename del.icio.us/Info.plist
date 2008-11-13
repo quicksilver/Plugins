@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Social Bookmarks</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSDeliciousPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Social Bookmarks</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>94</string>
+	<key>NSPrincipalClass</key>
+	<string>QSDeliciousPlugIn</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Web</string>
+		</array>
+		<key>description</key>
+		<string>Provides access to del.icio.us and ma.gnolia bookmarks</string>
+		<key>extendedDescription</key>
+		<string>Provides access to del.icio.us and ma.gnolia bookmarks</string>
+		<key>icon</key>
+		<string>del.icio.us</string>
+		<key>requiresFeature</key>
+		<string>0</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSDeliciousPlugIn_Action</key>
+			<string>QSDeliciousPlugIn_Action</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>us.icio.del.tag</key>
+			<string>QSDeliciousPlugIn_Source</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSDeliciousPlugIn_Source</key>
+			<string>QSDeliciousPlugIn_Source</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>version</key>
+		<string>1328</string>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>del.icio.us</key>
+		<string>[com.blacktree.Quicksilver.QSDeliciousPlugIn]:del.icio.us.png</string>
+	</dict>
+</dict>
+</plist>

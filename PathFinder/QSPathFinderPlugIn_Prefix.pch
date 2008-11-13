@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSPathFinderPlugIn' target in the 'QSPathFinderPlugIn' project
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import <QSFoundation/QSFoundation.h>
+#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSPathFinderPlugInType @"QSPathFinderPlugInType"

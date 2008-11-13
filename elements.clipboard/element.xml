@@ -1,0 +1,507 @@
+<element name="Clipboard Module" id="com.blacktree.Quicksilver.QSClipboardPlugIn" version="CD">
+    <info>
+        <category>Text</category>
+        <category>System</category>
+        <image>Clipboard</image>
+    </info>
+    <requirements/>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSLoadAtLaunch">
+            <QSPasteboardController class="QSPasteboardController"/>
+        </extension>
+        <extension point="com.blacktree.resources.images">
+            <image-resource name="" id="Clipboard">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.blacktree.Quicksilver.QSClipboardPlugIn</string>
+                        <key>resource</key>
+                        <string>Clipboard.icns</string>
+                    </dict>
+                </plist>
+            </image-resource>
+        </extension>
+        <extension point="QSInternalMessages">
+            <internal-message name="Show Clipboard Cache (pOld)" id="QSClipboardQueueShowMessage">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>showQueue:</string>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Show Clipboard Cache (pOld)</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Copy 1" id="QSClipboardStorageCopy1">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storeCopy:</string>
+                        <key>argument</key>
+                        <integer>1</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Copy 1</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Show Clipboard" id="QSClipboardShowMessage">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>showClipboard:</string>
+                        <key>classMethod</key>
+                        <true/>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Show Clipboard</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Paste 9" id="QSClipboardStoragePaste9">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storePaste:</string>
+                        <key>argument</key>
+                        <integer>9</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Paste 9</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Paste 8" id="QSClipboardStoragePaste8">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storePaste:</string>
+                        <key>argument</key>
+                        <integer>8</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Paste 8</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Paste 3" id="QSClipboardStoragePaste3">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storePaste:</string>
+                        <key>argument</key>
+                        <integer>3</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Paste 3</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Paste 0" id="QSClipboardStoragePaste0">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storePaste:</string>
+                        <key>argument</key>
+                        <integer>0</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Paste 0</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Copy 6" id="QSClipboardStorageCopy6">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storeCopy:</string>
+                        <key>argument</key>
+                        <integer>6</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Copy 6</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Copy 0" id="QSClipboardStorageCopy0">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storeCopy:</string>
+                        <key>argument</key>
+                        <integer>0</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Copy 0</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Copy 4" id="QSClipboardStorageCopy4">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storeCopy:</string>
+                        <key>argument</key>
+                        <integer>4</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Copy 4</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Paste 6" id="QSClipboardStoragePaste6">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storePaste:</string>
+                        <key>argument</key>
+                        <integer>6</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Paste 6</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Show Clipboard Cache (pNew)" id="QSClipboardStackShowMessage">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>showStack:</string>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Show Clipboard Cache (pNew)</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Copy 2" id="QSClipboardStorageCopy2">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storeCopy:</string>
+                        <key>argument</key>
+                        <integer>2</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Copy 2</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Paste 2" id="QSClipboardStoragePaste2">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storePaste:</string>
+                        <key>argument</key>
+                        <integer>2</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Paste 2</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Copy 7" id="QSClipboardStorageCopy7">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storeCopy:</string>
+                        <key>argument</key>
+                        <integer>7</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Copy 7</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Copy 8" id="QSClipboardStorageCopy8">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storeCopy:</string>
+                        <key>argument</key>
+                        <integer>8</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Copy 8</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Copy 3" id="QSClipboardStorageCopy3">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storeCopy:</string>
+                        <key>argument</key>
+                        <integer>3</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Copy 3</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Paste 7" id="QSClipboardStoragePaste7">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storePaste:</string>
+                        <key>argument</key>
+                        <integer>7</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Paste 7</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Paste 5" id="QSClipboardStoragePaste5">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storePaste:</string>
+                        <key>argument</key>
+                        <integer>5</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Paste 5</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Show Clipboard Storage" id="QSClipboardStorageShowMessage">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>showStore:</string>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Show Clipboard Storage</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Paste Selection from Clipboard" id="QSClipboardPaste">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>qsPaste:</string>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Paste Selection from Clipboard</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Copy 5" id="QSClipboardStorageCopy5">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storeCopy:</string>
+                        <key>argument</key>
+                        <integer>5</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Copy 5</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Copy 9" id="QSClipboardStorageCopy9">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storeCopy:</string>
+                        <key>argument</key>
+                        <integer>9</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Copy 9</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Paste 1" id="QSClipboardStoragePaste1">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storePaste:</string>
+                        <key>argument</key>
+                        <integer>1</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Paste 1</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+            <internal-message name="Clip Store Paste 4" id="QSClipboardStoragePaste4">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string>storePaste:</string>
+                        <key>argument</key>
+                        <integer>4</integer>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clip Store Paste 4</string>
+                        <key>target</key>
+                        <string>QSPasteboardController</string>
+                    </dict>
+                </plist>
+            </internal-message>
+        </extension>
+        <extension point="QSInternalObjects">
+            <extension name="Clipboard" id="QSClipboardObject">
+                <plist version="1.0">
+                    <dict>
+                        <key>handler</key>
+                        <string>QSPasteboardController</string>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clipboard</string>
+                    </dict>
+                </plist>
+            </extension>
+        </extension>
+        <extension point="QSModules">
+            <extension name="Clipboard Tool" id="QSClipboardModule">
+                <plist version="1.0">
+                    <dict>
+                        <key>action</key>
+                        <string/>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clipboard Tool</string>
+                        <key>target</key>
+                        <string/>
+                    </dict>
+                </plist>
+            </extension>
+        </extension>
+        <extension point="QSShelfControllers">
+            <extension id="QSPasteboardHistory" class="QSPasteboardController"/>
+        </extension>
+        <extension point="QSPreferencePanes">
+            <preference-pane name="Clipboard" id="QSPasteboardPrefPane" class="QSPreferencePane">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSPreferencePane</string>
+                        <key>description</key>
+                        <string>Clipboard History Options</string>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clipboard</string>
+                        <key>nibBundle</key>
+                        <string>com.blacktree.Quicksilver.QSClipboardPlugIn</string>
+                        <key>nibName</key>
+                        <string>QSPasteboardPrefPane</string>
+                    </dict>
+                </plist>
+            </preference-pane>
+        </extension>
+        <extension point="QSProxies">
+            <object-proxy name="Clipboard Contents" id="QSGeneralPasteboardProxy" class="QSPasteboardController">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>Clipboard</string>
+                        <key>name</key>
+                        <string>Clipboard Contents</string>
+                        <key>providerClass</key>
+                        <string>QSPasteboardController</string>
+                        <key>types</key>
+                        <array>
+                            <string>NSColorPboardType</string>
+                            <string>Apple URL pasteboard type</string>
+                            <string>NSFileContentsPboardType</string>
+                            <string>NSFilenamesPboardType</string>
+                            <string>NSFontPboardType</string>
+                            <string>NSHTMLPboardType</string>
+                            <string>NSPDFPboardType</string>
+                            <string>NSPICTPboardType</string>
+                            <string>NSPostScriptPboardType</string>
+                            <string>NSRulerPboardType</string>
+                            <string>NSRTFPboardType</string>
+                            <string>NSRTFDPboardType</string>
+                            <string>NSStringPboardType</string>
+                            <string>NSTabularTextPboardType</string>
+                            <string>NSTIFFPboardType</string>
+                            <string>NSURLPboardType</string>
+                            <string>NSVCardPboardType</string>
+                            <string>NSFilesPromisePboardType</string>
+                        </array>
+                    </dict>
+                </plist>
+            </object-proxy>
+        </extension>
+    </extensions>
+</element>

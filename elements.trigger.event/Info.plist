@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Event Triggers</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSEventTriggersPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Event Triggers</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>6D</string>
+	<key>NSPrincipalClass</key>
+	<string>QSEventTriggersPlugIn</string>
+	<key>QSActionsTemplate</key>
+	<dict>
+		<key>QSEventTriggersPlugInAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSEventTriggersPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>performActionOnObject:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSEventTriggersPlugIn_Type</string>
+			</array>
+			<key>name</key>
+			<string>Action: QSEventTriggersPlugIn</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc</string>
+		<key>categories</key>
+		<array/>
+		<key>description</key>
+		<string>Trigger based on system events</string>
+		<key>icon</key>
+		<string>Event</string>
+		<key>relatedBundles </key>
+		<array/>
+		<key>secret</key>
+		<true/>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSProxies</key>
+		<dict>
+			<key>QSEventTriggerObjectProxy</key>
+			<dict>
+				<key>icon</key>
+				<string>Object</string>
+				<key>name</key>
+				<string>Event Trigger Object</string>
+				<key>providerClass</key>
+				<string>QSEventTriggerManager</string>
+			</dict>
+		</dict>
+		<key>QSTriggerEvents</key>
+		<dict>
+			<key>QSApplicationLaunchEvent</key>
+			<dict>
+				<key>allowMatching</key>
+				<true/>
+				<key>icon</key>
+				<string>GenericApplicationIcon</string>
+				<key>name</key>
+				<string>Application Launched</string>
+				<key>provider</key>
+				<string>QSProcessMonitor</string>
+				<key>type</key>
+				<string>Application</string>
+			</dict>
+			<key>QSApplicationQuitEvent</key>
+			<dict>
+				<key>allowMatching</key>
+				<true/>
+				<key>icon</key>
+				<string>GenericApplicationIcon</string>
+				<key>name</key>
+				<string>Application Quit</string>
+				<key>provider</key>
+				<string>QSProcessMonitor</string>
+				<key>type</key>
+				<string>Application</string>
+			</dict>
+			<key>QSQuicksilverLaunchedAtLoginEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>Quicksilver</string>
+				<key>name</key>
+				<string>Quicksilver Launched (at Login)</string>
+				<key>provider</key>
+				<string>QSController</string>
+				<key>type</key>
+				<string>Application</string>
+			</dict>
+			<key>QSQuicksilverLaunchedEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>Quicksilver</string>
+				<key>name</key>
+				<string>Quicksilver Launched</string>
+				<key>provider</key>
+				<string>QSController</string>
+				<key>type</key>
+				<string>Application</string>
+			</dict>
+			<key>QSQuicksilverWillQuitEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>Quicksilver</string>
+				<key>name</key>
+				<string>Quicksilver Will Quit</string>
+				<key>provider</key>
+				<string>QSController</string>
+				<key>type</key>
+				<string>Application</string>
+			</dict>
+			<key>QSScreensaverStartedEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>com.apple.ScreenSaver.Engine</string>
+				<key>name</key>
+				<string>Screen Saver Started</string>
+				<key>provider</key>
+				<string>QSBasicEventTriggers</string>
+				<key>type</key>
+				<string>Screen Saver</string>
+			</dict>
+			<key>QSScreensaverStoppedEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>com.apple.ScreenSaver.Engine</string>
+				<key>name</key>
+				<string>Screen Saver Stopped</string>
+				<key>provider</key>
+				<string>QSBasicEventTriggers</string>
+				<key>type</key>
+				<string>Screen Saver</string>
+			</dict>
+			<key>QSWorkspaceDidMountEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>DriveIcon</string>
+				<key>name</key>
+				<string>Disk Inserted</string>
+				<key>provider</key>
+				<string>QSBasicEventTriggers</string>
+				<key>type</key>
+				<string>Disk</string>
+			</dict>
+			<key>QSWorkspaceDidUnmountEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>DriveIcon</string>
+				<key>name</key>
+				<string>Disk Was Ejected</string>
+				<key>provider</key>
+				<string>QSBasicEventTriggers</string>
+				<key>type</key>
+				<string>Disk</string>
+			</dict>
+			<key>QSWorkspaceDidWakeEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>Computer</string>
+				<key>name</key>
+				<string>Computer Woke Up</string>
+				<key>provider</key>
+				<string>QSBasicEventTriggers</string>
+				<key>type</key>
+				<string>Computer</string>
+			</dict>
+			<key>QSWorkspaceSessionDidBecomeActiveEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>Computer</string>
+				<key>name</key>
+				<string>Fast Login</string>
+				<key>provider</key>
+				<string>QSBasicEventTriggers</string>
+				<key>type</key>
+				<string>Computer</string>
+			</dict>
+			<key>QSWorkspaceSessionDidResignActiveEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>Computer</string>
+				<key>name</key>
+				<string>Fast Logout</string>
+				<key>provider</key>
+				<string>QSBasicEventTriggers</string>
+				<key>type</key>
+				<string>Computer</string>
+			</dict>
+			<key>QSWorkspaceWillPowerOffEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>Computer</string>
+				<key>name</key>
+				<string>Computer Will Shut Down</string>
+				<key>provider</key>
+				<string>QSBasicEventTriggers</string>
+				<key>type</key>
+				<string>Computer</string>
+			</dict>
+			<key>QSWorkspaceWillSleepEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>Computer</string>
+				<key>name</key>
+				<string>Computer Will Sleep</string>
+				<key>provider</key>
+				<string>QSBasicEventTriggers</string>
+				<key>type</key>
+				<string>Computer</string>
+			</dict>
+			<key>QSWorkspaceWillUnmountEvent</key>
+			<dict>
+				<key>icon</key>
+				<string>DriveIcon</string>
+				<key>name</key>
+				<string>Disk Will Eject</string>
+				<key>provider</key>
+				<string>QSBasicEventTriggers</string>
+				<key>type</key>
+				<string>Disk</string>
+			</dict>
+		</dict>
+		<key>QSTriggerManagers</key>
+		<dict>
+			<key>QSEventTrigger</key>
+			<string>QSEventTriggerManager</string>
+		</dict>
+	</dict>
+	<key>QSRequirementsTemplate</key>
+	<dict>
+		<key>bundlesTemplate</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string></string>
+				<key>name</key>
+				<string></string>
+				<key>version</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>feature</key>
+		<integer>0</integer>
+		<key>launchLoad</key>
+		<false/>
+		<key>pathsTemplate</key>
+		<array>
+			<string>/path/to/something</string>
+		</array>
+		<key>pluginsTemplate</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string></string>
+				<key>name</key>
+				<string></string>
+				<key>version</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>version</key>
+		<string>1337</string>
+	</dict>
+</dict>
+</plist>

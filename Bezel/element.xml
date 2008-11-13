@@ -1,0 +1,12 @@
+<element id="com.blacktree.Quicksilver.BezelInterfacePlugIn" name="Bezel Interface" version="11EA">
+    <info>
+        <category>Interfaces</category>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSCommandInterfaceControllers">
+            <command-interface id="QSBezelInterfaceController" class="QSBezelInterfaceController"></command-interface>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSTextMatePlugIn' target in the 'QSTextMatePlugIn' project
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import <QSFoundation/QSFoundation.h>
+#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSTextMatePlugInType @"QSTextMatePlugInType"

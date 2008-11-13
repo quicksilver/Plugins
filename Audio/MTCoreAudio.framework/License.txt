@@ -1,0 +1,42 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+
+
+MTCoreAudio.framework is Copyright (c) 2004 by
+Michael C. Thornburgh <zenomt@armory.com>.
+All rights reserved.
+
+MTCoreAudio.framework and its source code may be
+used, modified, incorporated, et ceterated for free
+by anyone for any purpose. I request, but do not
+require, that credit for any use of the code is
+given.  I request, but do not require, to be notified
+of the incorporation of this code into other works.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT OWNER BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
+OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.3 (Darwin)
+Comment: Public-key: http://aldebaran.armory.com/~zenomt/pgpkey.txt
+
+iD8DBQFAcHTSRRrAod03huIRAsmKAKCLvcDB+Ec7zppbYVV9W7QCV7lyPACfZSQw
+LRLWpV3Up0quqrTk5dH36vQ=
+=qI+n
+-----END PGP SIGNATURE-----

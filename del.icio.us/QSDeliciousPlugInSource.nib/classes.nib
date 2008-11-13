@@ -1,0 +1,45 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            CLASS = NSPreferencePane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_firstKeyView" = NSView; 
+                "_initialKeyView" = NSView; 
+                "_lastKeyView" = NSView; 
+                "_window" = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = QSAllApplicationsObjectSource; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = QSObjectSource; 
+        }, 
+        {
+            ACTIONS = {savePassword = id; }; 
+            CLASS = "QSDeliciousPlugIn_Source"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {passField = NSTextField; userField = NSTextField; }; 
+            SUPERCLASS = QSObjectSource; 
+        }, 
+        {
+            ACTIONS = {savePassword = id; }; 
+            CLASS = QSDeliciousPrefPane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {passField = NSTextField; userField = NSTextField; }; 
+            SUPERCLASS = NSPreferencePane; 
+        }, 
+        {CLASS = QSGroupObjectSource; LANGUAGE = ObjC; SUPERCLASS = QSObjectSource; }, 
+        {
+            CLASS = QSObjectSource; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {settingsView = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = QSVolumesObjectSource; LANGUAGE = ObjC; SUPERCLASS = QSObjectSource; }
+    ); 
+    IBVersion = 1; 
+}

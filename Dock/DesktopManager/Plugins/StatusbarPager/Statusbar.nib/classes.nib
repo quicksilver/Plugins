@@ -1,0 +1,34 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = StatusBarMenuController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                currentDesktopMenu = NSMenu; 
+                desktopsMenuItem = NSMenuItem; 
+                statusMenu = NSMenu; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = StatusBarPagerController; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                nextDesktop = id; 
+                previousDesktop = id; 
+                quit = id; 
+                runApplication = id; 
+                showAboutBox = id; 
+                showPreferences = id; 
+            }; 
+            CLASS = StatusbarController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                sbMenuController = StatusBarMenuController; 
+                sbPagerController = StatusBarPagerController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

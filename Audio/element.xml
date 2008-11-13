@@ -1,0 +1,29 @@
+<element id="com.blacktree.Quicksilver.QSAudioPlugIn" name="Audio Support" version="48">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSClasses">
+            <extension id="QSAudioPlugIn" class="QSAudioPlugIn"></extension>
+        </extension>
+        <extension point="QSInternalMessages">
+            <internal-message id="QSAudioRecord">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAudioPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>record</string>
+                        <key>icon</key>
+                        <string>com.apple.garageband</string>
+                        <key>name</key>
+                        <string>Record Sound</string>
+                        <key>runInMainThread</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </internal-message>
+        </extension>
+    </extensions>
+</element>

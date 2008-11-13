@@ -1,0 +1,123 @@
+// ACCELA Mac toolbox C++ wrapper library
+// Copyright (C) 2002  David Catmull
+
+#pragma once
+
+#include "XWrapper.h"
+#include "FW.h"
+
+#include FW(CoreServices,MacMemory.h)
+
+typedef enum {
+	param_HandleSize
+} EHandleParam;
+
+template <class T = char>
+class AHandle :
+		XWrapper<T**>
+{
+public:
+		// Empty
+		AHandle()
+		: XWrapper<T**>(::NewHandle(sizeof(T)),true) {}
+		// Size
+		AHandle(
+				UInt32 inSize,
+				EHandleParam)
+		: XWrapper<T**>((T**)::NewHandle(sizeof(T)*inSize),true) {}
+		// Handle
+		AHandle(
+				Handle inHandle,
+				bool inOwner = false)
+		: XWrapper<T**>((T**)inHandle,inOwner) {}
+		// T**
+		AHandle(
+				T **inHandle,
+				bool inOwner = false)
+		: XWrapper<T**>(inHandle,inOwner) {}
+		// Pointer
+		AHandle(
+				T* inPtr)
+		: XWrapper<T**>(NULL,true)
+		{
+			::PtrToHand(inPtr,&mObject,sizeof(T));
+		}
+	
+	T*
+		operator *()
+		{
+			return *mObject;
+		}
+		operator Handle()
+		{
+			return (Handle) mObject;
+		}
+	
+	Size
+		DataSize()
+		{
+			return ::GetHandleSize((Handle)mObject);
+		}
+	bool
+		IsResource()
+		{
+			::GetResAttrs((Handle)mObject);
+			return ::ResError() != resNotFound;
+		}
+	
+	void
+		Lock()
+		{
+			::HLock((Handle)mObject);
+		}
+	void
+		Unlock()
+		{
+			::HUnlock((Handle)mObject);
+		}
+	bool
+		Locked()
+		{
+			return ::HGetState((Handle)mObject) & kHandleLockedMask;
+		}
+	bool
+		Valid()
+		{
+			return ::IsHandleValid((Handle)mObject);
+		}
+	
+protected:
+	// XWrapper
+	void
+		DisposeSelf()
+		{
+			if (IsResource())
+				::ReleaseResource((Handle)mObject);
+			else
+				::DisposeHandle((Handle)mObject);
+		}
+};
+
+class StLockHandle
+{
+public:
+		StLockHandle(
+				Handle inHandle)
+		: mHandle(inHandle),
+		  mWasLocked(::HGetState(inHandle) & 0x80)
+		{
+			if (!mWasLocked)
+				::HLock(inHandle);
+		}
+		~StLockHandle()
+		{
+			if (!mWasLocked)
+				::HUnlock(mHandle);
+		}
+	
+protected:
+	Handle mHandle;
+	bool mWasLocked;
+};
+
+#define DisposeAHandle_(_type_) inline void XWrapper<_type_**>::DisposeSelf() {}

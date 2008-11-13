@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>QS File Attributes Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSFileAttributesPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>File Attributes Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+
+	<key>CFBundleVersion</key>
+	<string>A9</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Blacktree, Inc.</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSHFSLockAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHFSAttributeActions</string>
+			<key>actionSelector</key>
+			<string>lock:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Lock File</string>
+		</dict>
+		<key>QSHFSMakeInvisibleAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHFSAttributeActions</string>
+			<key>actionSelector</key>
+			<string>makeInvisible:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Make Invisible (Hide)</string>
+		</dict>
+		<key>QSHFSMakeVisibleAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHFSAttributeActions</string>
+			<key>actionSelector</key>
+			<string>makeVisible:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Make Visible (Show)</string>
+		</dict>
+		<key>QSHFSSetLabelAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHFSAttributeActions</string>
+			<key>actionSelector</key>
+			<string>setLabelForFile:to:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Set Label...</string>
+		</dict>
+		<key>QSHFSUnlockAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHFSAttributeActions</string>
+			<key>actionSelector</key>
+			<string>unlock:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Unlock File</string>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>description</key>
+		<string>File Lock/Unlock Visible/Invisible actions</string>
+		<key>requiresFeature</key>
+		<string>0</string>
+		<key>webIcon</key>
+		<string>image:GenericDocumentIcon</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSHFSAttributeActions</key>
+			<string>QSHFSAttributeActions</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

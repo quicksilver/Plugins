@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>NetNewsWire Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSNNWPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>NetNewsWire Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>AA</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Blacktree, Inc.</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Applications</string>
+		</array>
+		<key>description</key>
+		<string>Subscriptions and Headlines</string>
+		<key>icon</key>
+		<string>com.ranchero.NetNewsWire</string>
+		<key>requiresBundle</key>
+		<string>com.ranchero.NetNewsWire</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetNNWSubscriptions</string>
+			<key>source</key>
+			<string>QSNNWSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSNNWSource</key>
+			<string>QSNNWSource</string>
+		</dict>
+		<key>QSBundleDrawingHandlers</key>
+		<dict>
+			<key>com.ranchero.NetNewsWire</key>
+			<string>QSNNWSource</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>QSNNWHeadlineType</key>
+			<string>QSNNWSource</string>
+			<key>QSNNWSubscriptionType</key>
+			<string>QSNNWSource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSNNWSource</key>
+			<string>QSNNWSource</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>feature</key>
+		<integer>2</integer>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,13 @@
+<element id="com.blacktree.Quicksilver.QSBuddyPopModule" name="BuddyPop Module" version="83">
+    <info>
+        <category>Applications</category>
+        <category>Contacts</category>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSActionProviders">
+            <action-provider id="QS_BuddyPop_Module" class="QS_BuddyPop_Module"></action-provider>
+        </extension>
+    </extensions>
+</element>

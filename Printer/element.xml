@@ -1,0 +1,51 @@
+<element id="com.blacktree.Quicksilver.QSPrinterPlugIn" name="Printer Module" version="6C">
+    <info>
+        <image>com.apple.print.PrintCenter</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSPrinterPlugInAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSPrinterPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>print:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.print.PrintCenter</string>
+                        <key>name</key>
+                        <string>Print</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSPreferencePanes">
+            <preference-pane id="QSPrinterPrefPane" class="QSPrinterPrefPane">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSPrinterPrefPane</string>
+                        <key>description</key>
+                        <string>Preferences</string>
+                        <key>icon</key>
+                        <string>com.apple.print.PrintCenter</string>
+                        <key>name</key>
+                        <string>Printing</string>
+                    </dict>
+                </plist>
+            </preference-pane>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSPrinterPlugInAction" class="QSPrinterPlugInAction"></action-provider>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.apple.print.PrintCenter" class="QSPrinterPlugInSource"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,3 @@
+usage: qs [-s] file
+ -s --shelf			send to shelf
+ file				file to select or - to read from stdin

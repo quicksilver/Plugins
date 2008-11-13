@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>QS Mozilla Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSMozillaPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Mozilla/Firefox Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+
+	<key>CFBundleVersion</key>
+	<string>81</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Blacktree, Inc.</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>description</key>
+		<string>Bookmarks for Mozilla and Firefox</string>
+		<key>requiresFeature</key>
+		<string>0</string>
+		<key>webIcon</key>
+		<string>http://blacktree.com/apps/quicksilver/images/appicons/Firefox.gif</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetNetscapeBookmarks</string>
+			<key>icon</key>
+			<string>com.netscape.mozilla</string>
+			<key>requiresBundle</key>
+			<string>com.netscape.mozilla</string>
+			<key>requiresSettingsPath</key>
+			<true/>
+			<key>settings</key>
+			<dict>
+				<key>parser</key>
+				<string>QSHTMLLinkParser</string>
+				<key>path</key>
+				<string>~/Library/Mozilla/Profiles/default/*/bookmarks.html</string>
+				<key>skipItem</key>
+				<true/>
+			</dict>
+			<key>source</key>
+			<string>QSFileSystemObjectSource</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetMozillaBookmarks</string>
+			<key>icon</key>
+			<string>org.mozilla.mozilla</string>
+			<key>name</key>
+			<string>Mozilla Bookmarks</string>
+			<key>requiresBundle</key>
+			<string>org.mozilla.mozilla</string>
+			<key>requiresSettingsPath</key>
+			<true/>
+			<key>settings</key>
+			<dict>
+				<key>parser</key>
+				<string>QSHTMLLinkParser</string>
+				<key>path</key>
+				<string>~/Library/Mozilla/Profiles/default/*/bookmarks.html</string>
+				<key>skipItem</key>
+				<true/>
+			</dict>
+			<key>source</key>
+			<string>QSFileSystemObjectSource</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetFirefoxBookmarks</string>
+			<key>icon</key>
+			<string>org.mozilla.firefox</string>
+			<key>modificationDate</key>
+			<real>103311904</real>
+			<key>name</key>
+			<string>Firefox Bookmarks</string>
+			<key>requiresSettingsPath</key>
+			<true/>
+			<key>settings</key>
+			<dict>
+				<key>parser</key>
+				<string>QSHTMLLinkParser</string>
+				<key>path</key>
+				<string>~/Library/Phoenix/Profiles/default/*/bookmarks.html</string>
+				<key>skipItem</key>
+				<true/>
+			</dict>
+			<key>source</key>
+			<string>QSFileSystemObjectSource</string>
+		</dict>
+	</array>
+</dict>
+</plist>

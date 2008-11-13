@@ -1,0 +1,205 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		7FF8B9E307B7FF790088CEEF /* Copy PlugIns */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7F07ADD1085E432300E2AFC4 /* Build configuration list for PBXAggregateTarget "Copy PlugIns" */;
+			buildPhases = (
+				7FF8B9E207B7FF790088CEEF /* CopyFiles */,
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Copy PlugIns";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			dependencies = (
+			);
+			name = "Copy PlugIns";
+			productName = "Copy PlugIns";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		7FF8B9E407B7FF830088CEEF /* Developer Module.qsplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FF8B99B07B7FF4C0088CEEF /* Developer Module.qsplugin */; };
+		7FF8B9E507B7FF840088CEEF /* Extra Scripts.qsplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FF8B99C07B7FF4C0088CEEF /* Extra Scripts.qsplugin */; };
+		7FF8B9E607B7FF840088CEEF /* Watson Module.qsplugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FF8B99D07B7FF4C0088CEEF /* Watson Module.qsplugin */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		7FF8B99007B7FF390088CEEF /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Development;
+		};
+		7FF8B99107B7FF390088CEEF /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7FF8B9E207B7FF790088CEEF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = PlugIns;
+			dstSubfolderSpec = 16;
+			files = (
+				7FF8B9E407B7FF830088CEEF /* Developer Module.qsplugin in CopyFiles */,
+				7FF8B9E507B7FF840088CEEF /* Extra Scripts.qsplugin in CopyFiles */,
+				7FF8B9E607B7FF840088CEEF /* Watson Module.qsplugin in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7FF8B99B07B7FF4C0088CEEF /* Developer Module.qsplugin */ = {isa = PBXFileReference; lastKnownFileType = wrapper.cfbundle; path = "Developer Module.qsplugin"; sourceTree = "<group>"; };
+		7FF8B99C07B7FF4C0088CEEF /* Extra Scripts.qsplugin */ = {isa = PBXFileReference; lastKnownFileType = wrapper.cfbundle; path = "Extra Scripts.qsplugin"; sourceTree = "<group>"; };
+		7FF8B99D07B7FF4C0088CEEF /* Watson Module.qsplugin */ = {isa = PBXFileReference; lastKnownFileType = wrapper.cfbundle; path = "Watson Module.qsplugin"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		7FF8B98E07B7FF390088CEEF = {
+			isa = PBXGroup;
+			children = (
+				7FF8B99B07B7FF4C0088CEEF /* Developer Module.qsplugin */,
+				7FF8B99C07B7FF4C0088CEEF /* Extra Scripts.qsplugin */,
+				7FF8B99D07B7FF4C0088CEEF /* Watson Module.qsplugin */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		7FF8B99207B7FF390088CEEF /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7F07ADD5085E432300E2AFC4 /* Build configuration list for PBXProject "CodelessPlugIns" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				7FF8B99007B7FF390088CEEF /* Development */,
+				7FF8B99107B7FF390088CEEF /* Deployment */,
+			);
+			hasScannedForEncodings = 0;
+			mainGroup = 7FF8B98E07B7FF390088CEEF;
+			projectDirPath = "";
+			targets = (
+				7FF8B9E307B7FF790088CEEF /* Copy PlugIns */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		7F07ADD2085E432300E2AFC4 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Copy PlugIns";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Development;
+		};
+		7F07ADD3085E432300E2AFC4 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Copy PlugIns";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Deployment;
+		};
+		7F07ADD4085E432300E2AFC4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Copy PlugIns";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Default;
+		};
+		7F07ADD6085E432300E2AFC4 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		7F07ADD7085E432300E2AFC4 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		7F07ADD8085E432300E2AFC4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F07ADD1085E432300E2AFC4 /* Build configuration list for PBXAggregateTarget "Copy PlugIns" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07ADD2085E432300E2AFC4 /* Development */,
+				7F07ADD3085E432300E2AFC4 /* Deployment */,
+				7F07ADD4085E432300E2AFC4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7F07ADD5085E432300E2AFC4 /* Build configuration list for PBXProject "CodelessPlugIns" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07ADD6085E432300E2AFC4 /* Development */,
+				7F07ADD7085E432300E2AFC4 /* Deployment */,
+				7F07ADD8085E432300E2AFC4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7FF8B99207B7FF390088CEEF /* Project object */;
+}

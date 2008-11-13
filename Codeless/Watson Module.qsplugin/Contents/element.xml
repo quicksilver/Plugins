@@ -1,0 +1,44 @@
+<element id="com.blacktree.Quicksilver.QSWatsonPlugIn" name="Watson Module" version="81">
+    <info>
+        <image>com.karelia.watson</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetWatsonGroup">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetWatsonGroup</string>
+                        <key>children</key>
+                        <array>
+                            <dict>
+                                <key>ID</key>
+                                <string>QSPresetUserWatsonTools</string>
+                                <key>icon</key>
+                                <string>com.karelia.watson</string>
+                                <key>settings</key>
+                                <dict>
+                                    <key>folderTypes</key>
+                                    <array>
+                                        <string>WatsonTool</string>
+                                    </array>
+                                    <key>parser</key>
+                                    <string>QSDirectoryParser</string>
+                                    <key>path</key>
+                                    <string>~/Library/Application Support/Watson</string>
+                                </dict>
+                                <key>source</key>
+                                <string>QSFileSystemObjectSource</string>
+                            </dict>
+                        </array>
+                        <key>icon</key>
+                        <string>com.karelia.watson</string>
+                        <key>source</key>
+                        <string>QSGroupObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!DOCTYPE toolbar SYSTEM "atoolbar.dtd">
+<toolbar>
+	<item>
+		<id>com.uncommonplace.accela.test.toolbar.custom</id>
+		<text>Custom</text>
+		<command>Cust</command>
+		<iconcreator>macs</iconcreator>
+		<icontype>note</icontype>
+		<attributes>
+			<allowduplicates />
+		</attributes>
+	</item>
+	<default>
+		<id>com.uncommonplace.accela.test.toolbar.custom</id>
+		<id>com.apple.hitoolbox.toolbar.flexiblespace</id>
+		<id>com.apple.hitoolbox.toolbar.customize</id>
+	</default>
+	<allowed>
+		<id>com.uncommonplace.accela.test.toolbar.custom</id>
+		<id>com.apple.hitoolbox.toolbar.separator</id>
+		<id>com.apple.hitoolbox.toolbar.space</id>
+		<id>com.apple.hitoolbox.toolbar.flexiblespace</id>
+		<id>com.apple.hitoolbox.toolbar.customize</id>
+		<id>com.apple.hitoolbox.toolbar.print</id>
+	</allowed>
+</toolbar>

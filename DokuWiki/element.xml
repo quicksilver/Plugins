@@ -1,0 +1,70 @@
+<element id="com.blacktree.Quicksilver.QSDokuWikiPlugIn" name="DokuWiki Module" version="2C">
+    <info>
+        <image>DokuWiki</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="DokuWiki" class="[com.blacktree.Quicksilver.QSDokuWikiPlugIn]:DokuWiki.png"></image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSDokuWikiPageShowRevsAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSDokuWikiPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>showPageRevisions:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>org.splitbrain.dokuwiki.page</string>
+                        </array>
+                        <key>name</key>
+                        <string>Show Revisions</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSDokuWikiPageEditAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSDokuWikiPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>editPage:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>org.splitbrain.dokuwiki.page</string>
+                        </array>
+                        <key>name</key>
+                        <string>Edit</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSDokuWikiPageShowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSDokuWikiPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>showPage:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>org.splitbrain.dokuwiki.page</string>
+                        </array>
+                        <key>name</key>
+                        <string>Show</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSFSParsers">
+            <file-parser id="QSDokuWikiParser" class="QSDokuWikiParser"></file-parser>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="QSDokuWikiPlugIn_Type" class="QSDokuWikiPlugIn_Source"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSDokuWikiPlugIn" class="QSDokuWikiPlugIn"></action-provider>
+        </extension>
+    </extensions>
+</element>

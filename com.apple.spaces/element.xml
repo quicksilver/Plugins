@@ -1,0 +1,89 @@
+<element name="Spaces Module" id="com.blacktree.Quicksilver.QSSpacesPlugIn" version="61">
+    <info>
+        <category>Utility</category>
+        <image>com.apple.spaceslauncher</image>
+    </info>
+    <requirements/>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset name="Spaces" id="QSPresetSpaces">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetSpaces</string>
+                        <key>name</key>
+                        <string>Spaces</string>
+                        <key>source</key>
+                        <string>QSSpacesPlugInSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action name="Select Desktop" id="QSWorkspaceSelectAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSSpacesPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>selectWorkspace:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.workspaceid</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.spaceslauncher</string>
+                        <key>name</key>
+                        <string>Select Desktop</string>
+                        <key>precedence</key>
+                        <string>5</string>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Move to Space..." id="QSMoveWindowToWorkspaceAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSSpacesPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>moveWindow:toWorkspace:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.spaceslauncher</string>
+                        <key>name</key>
+                        <string>Move to Space...</string>
+                        <key>precedence</key>
+                        <string>2</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSSpacesPlugInAction" class="QSSpacesPlugInAction"/>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="qs.workspaceid" class="QSSpacesPlugInSource"/>
+        </extension>
+        <extension point="QSTypeDefinitions">
+            <object-type name="Spaces" id="qs.workspaceid">
+                <plist version="1.0">
+                    <dict>
+                        <key>icon</key>
+                        <string>com.apple.spaceslauncher</string>
+                        <key>name</key>
+                        <string>Spaces</string>
+                    </dict>
+                </plist>
+            </object-type>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSSpacesPlugInSource" class="QSSpacesPlugInSource"/>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.apple.spaceslauncher" class="QSDesktopManagerPlugInSource"/>
+        </extension>
+    </extensions>
+</element>

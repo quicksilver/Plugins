@@ -1,0 +1,10 @@
+<element id="com.blacktree.Quicksilver.QSDependencyRequiringPlugIn" name="DependantPlugIn" version="1E">
+    <info>
+        <image></image>
+    </info>
+    <requirements>
+        <requirement bundle="com.blacktree.Quicksilver.QSCorePlugIn" name="Core"></requirement>
+        <requirement bundle="com.blacktree.Quicksilver.QSDependencyFufillingPlugIn" name="Fufill"></requirement>
+    </requirements>
+    <extensions xmlns:qs="com.blacktree"></extensions>
+</element>

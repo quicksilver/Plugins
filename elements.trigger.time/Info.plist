@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Time Triggers</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSChronoTriggersPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Time Triggers</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>BB</string>
+	<key>NSPrincipalClass</key>
+	<string>QSChronoTriggersPlugIn</string>
+	<key>QSActionsTemplate</key>
+	<dict>
+		<key>QSChronoTriggersPlugInAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSChronoTriggersPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>performActionOnObject:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSChronoTriggersPlugIn_Type</string>
+			</array>
+			<key>name</key>
+			<string>Action: QSChronoTriggersPlugIn</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc</string>
+		<key>categories</key>
+		<array/>
+		<key>description</key>
+		<string>Create repeating or scheduled triggers</string>
+		<key>icon</key>
+		<string>Clock</string>
+		<key>relatedBundles </key>
+		<array/>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSTriggerManagers</key>
+		<dict>
+			<key>QSChronoTrigger</key>
+			<string>QSChronoTriggerManager</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

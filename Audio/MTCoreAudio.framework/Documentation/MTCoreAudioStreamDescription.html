@@ -1,0 +1,353 @@
+<html>
+<head>
+<title>MTCoreAudioStreamDescription</title>
+</head>
+
+<body>
+<h1>MTCoreAudioStreamDescription</h1>
+<strong>Conforms to: NSCopying</strong><br><br>
+An <strong>MTCoreAudioStreamDescription</strong> encapsulates a CoreAudio
+<a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h">AudioStreamBasicDescription</a>,
+which describes the audio data
+format associated with an audio device and its streams.
+
+<h2>Method Types</h2>
+<hr>
+<ul plain>
+	<li>Creating instances
+	<ul plain>
+		<br>
+		<li> <a href="#streamDescriptionWithAudioStreamBasicDescription:">
++ streamDescriptionWithAudioStreamBasicDescription:</a>
+		<li> <a href="#streamDescription">+ streamDescription</a>
+		<li> <a href="#nativeStreamDescription">+ nativeStreamDescription</a>
+		<li> <a href="#init">- init</a>
+		<li> <a href="#initWithAudioStreamBasicDescription:">- initWithAudioStreamBasicDescription:</a>
+	</ul>
+
+	<br>
+	<li>Descriptive summary
+	<ul plain>
+		<br>
+		<li> <a href="#description">- description</a>
+		<li> <a href="#bundleForDescriptionStrings">- bundleForDescriptionStrings</a>
+	</ul>
+
+	<br>
+	<li>Working with attributes
+	<ul plain>
+		<br>
+		<li> <a href="#audioStreamBasicDescription">- audioStreamBasicDescription</a>
+		<li> <a href="#sampleRate">- sampleRate</a>
+		<li> <a href="#setSampleRate:">- setSampleRate:</a>
+		<li> <a href="#formatID">- formatID</a>
+		<li> <a href="#setFormatID:">- setFormatID:</a>
+		<li> <a href="#formatFlags">- formatFlags</a>
+		<li> <a href="#setFormatFlags:">- setFormatFlags:</a>
+		<li> <a href="#bytesPerPacket">- bytesPerPacket</a>
+		<li> <a href="#setBytesPerPacket:">- setBytesPerPacket:</a>
+		<li> <a href="#framesPerPacket">- framesPerPacket</a>
+		<li> <a href="#setFramesPerPacket:">- setFramesPerPacket:</a>
+		<li> <a href="#bytesPerFrame">- bytesPerFrame</a>
+		<li> <a href="#setBytesPerFrame:">- setBytesPerFrame:</a>
+		<li> <a href="#channelsPerFrame">- channelsPerFrame</a>
+		<li> <a href="#setChannelsPerFrame:">- setChannelsPerFrame:</a>
+		<li> <a href="#bitsPerChannel">- bitsPerChannel</a>
+		<li> <a href="#setBitsPerChannel:">- setBitsPerChannel:</a>
+	</ul>
+	
+	<br>
+	<li>Working with format flags
+	<ul plain>
+		<br>
+		<li> <a href="#isNativeFormat">- isNativeFormat</a>
+		<li> <a href="#setNativeFormat">- setNativeFormat</a>
+		<li> <a href="#isCanonicalFormat">- isCanonicalFormat</a>
+		<li> <a href="#isLinearPCMFormat">- isLinearPCMFormat</a>
+		<li> <a href="#isInterleaved">- isInterleaved</a>
+		<li> <a href="#setIsInterleaved:">- setIsInterleaved:</a>
+	</ul>
+
+	<br>
+</ul>
+
+<h2>Class Methods</h2>
+<hr>
+<h3><a name="nativeStreamDescription">nativeStreamDescription</a></h3>
+<code>+ (MTCoreAudioStreamDescription *) nativeStreamDescription</code>
+<br><br>
+Creates and returns a new MTCoreAudioStreamDescription configured for the canonical logical stream format (32-bit floating point, native endian, packed linear PCM, 1 frame per packet, interleaved), with zero channels and sample rate of zero Hz.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="streamDescription">streamDescription</a></h3>
+<code>+ (MTCoreAudioStreamDescription *) streamDescription</code>
+<br><br>
+Creates and returns a new, empty MTCoreAudioStreamDescription,
+with linear PCM format and all other attributes set to 0.  Note that although any field set
+to 0 is supposed to be ignored,
+<a href="MTCoreAudioConstantsAndTypes.html#MTCoreAudioStreamSide">kMTCoreAudioStreamPhysicalSide</a>s
+may not like 0 attributes.  Use
+<a href="MTCoreAudioStream.html#matchStreamDescription:forSide:">matchStreamDescription:forSide:</a>
+(<a href="MTCoreAudioStream.html">MTCoreAudioStream</a>) when constructing
+an MTCoreAudioDescription for use on kMTCoreAudioStreamPhysicalSides.
+<br><br>
+<hr width="25%" align=left>
+
+
+<h3><a name="streamDescriptionWithAudioStreamBasicDescription:">streamDescriptionWithAudioStreamBasicDescription:</a></h3>
+<code>+ (MTCoreAudioStreamDescription *) streamDescriptionWithAudioStreamBasicDescription:(AudioStreamBasicDescription)theDescription</code>
+<br><br>
+Creates and returns an MTCoreAudioStreamDescription with its attributes
+taken directly from <i>theDescription</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h2>Instance Methods</h2>
+<hr>
+
+<h3><a name="audioStreamBasicDescription">audioStreamBasicDescription</a></h3>
+<code>- (AudioStreamBasicDescription) audioStreamBasicDescription</code>
+<br><br>
+Returns an <a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h">AudioStreamBasicDescription</a>
+corresponding to the attributes of the instance.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="bitsPerChannel">bitsPerChannel</a></h3>
+<code>- (UInt32)  bitsPerChannel</code>
+<br><br>
+Gets the number of bits per channel.  For
+<a href="MTCoreAudioConstantsAndTypes.html#MTCoreAudioStreamSide">kMTCoreAudioStreamLogicalSide</a>,
+this is always 32.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="bundleForDescriptionStrings">bundleForDescriptionStrings</a></h3>
+<code>- (NSBundle *) bundleForDescriptionStrings</code>
+<br><br>
+Returns the bundle containing the localized strings to use in constructing a textual description of the receiver.  The default implementation returns the bundle in which class <code>MTCoreAudioStreamDescription</code> is defined.  Subclasses may override this method to indicate that a different bundle contains a <code>StreamDescription.strings</code> file for use by <a href="#description">description</a>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="bytesPerFrame">bytesPerFrame</a></h3>
+<code>- (UInt32)  bytesPerFrame</code>
+<br><br>
+Gets the number of bytes per frame.  One frame represents one sample from
+each channel at one instant in time.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="bytesPerPacket">bytesPerPacket</a></h3>
+<code>- (UInt32)  bytesPerPacket</code>
+<br><br>
+Gets the number of bytes per packet.  See
+<a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h">CoreAudioTypes.h</a>
+for more information.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="channelsPerFrame">channelsPerFrame</a></h3>
+<code>- (UInt32)  channelsPerFrame</code>
+<br><br>
+Gets the number of channels in one frame.  A stream's audio data is a time-regular linear
+sequence of frames, where each frame consists of one sample from each channel
+in the stream at one instant in time.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="description">description</a></h3>
+<code>- (NSString *) description</code>
+<br><br>
+Returns a human-readable description of the attributes of
+the MTCoreAudioStreamDescription.  When the format is "lpcm 32-bit floating-point big-endian packed",
+the "floating-point big-endian packed" part is not included.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="formatFlags">formatFlags</a></h3>
+<code>- (UInt32)  formatFlags</code>
+<br><br>
+Gets the format flags.  See
+<a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h">CoreAudioTypes.h</a>
+for more information.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="formatID">formatID</a></h3>
+<code>- (UInt32)  formatID</code>
+<br><br>
+Returns the four-character-code identifying the audio data format.  Usually 'lpcm'
+(<a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h">kAudioFormatLinearPCM</a>).
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="framesPerPacket">framesPerPacket</a></h3>
+<code>- (UInt32)  framesPerPacket</code>
+<br><br>
+Gets the number of frames per packet.  See
+<a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h">CoreAudioTypes.h</a>
+for more information.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="init">init</a></h3>
+<code>- (MTCoreAudioStreamDescription *) init</code>
+<br><br>
+Initializes a newly allocated instance with linear PCM format and all other attributes 0.
+See class method <a href="#streamDescription">streamDescription</a> for more information.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="initWithAudioStreamBasicDescription:">initWithAudioStreamBasicDescription:</a></h3>
+<code>- (MTCoreAudioStreamDescription *) initWithAudioStreamBasicDescription:(AudioStreamBasicDescription)theDescription</code>
+<br><br>
+Initializes a new instance with its attributes taken directly from <i>theDescription</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="isCanonicalFormat">isCanonicalFormat</a></h3>
+<code>- (Boolean) isCanonicalFormat</code>
+<br><br>
+Returns <code>YES</code> if the receiver is in the canonical logical format (32-bit floating point, native endian, packed linear PCM, 1 frame per packet, interleaved or non-interleaved), and <code>NO</code> otherwise.  Note that the <a href="#isNativeFormat">native logical format</a> is the interleaved canonical format.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="isInterleaved">isInterleaved</a></h3>
+<code>- (Boolean) isInterleaved</code>
+<br><br>
+If the receiver's format is <a href="#isLinearPCMFormat">Linear PCM</a>, returns <code>YES</code> if samples for multiple channels are interleaved in the same buffer, and <code>NO</code> if there is a separate buffer for each channel (de-interleaved).  The result of this method is undefined if the format is not Linear PCM.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="isLinearPCMFormat">isLinearPCMFormat</a></h3>
+<code>- (Boolean) isLinearPCMFormat</code>
+<br><br>
+Returns <code>YES</code> if the receiver's format is Linear Pulse Code Modulation (integer or floating point), and <code>NO</code> otherwise.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="isNativeFormat">isNativeFormat</a></h3>
+<code>- (Boolean) isNativeFormat</code>
+<br><br>
+Returns <code>YES</code> if the receiver is in the native logical format (32-bit floating point, native endian, packed linear PCM, 1 frame per packet, interleaved), and <code>NO</code> otherwise.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="sampleRate">sampleRate</a></h3>
+<code>- (Float32) sampleRate</code>
+<br><br>
+Returns the sample rate in Hertz.  If the sample rate is 0.0 in an instance obtained from
+<a href="MTCoreAudioDevice.html#streamDescriptionsForChannel:forDirection:">streamDescriptionsForChannel:forDirection:</a>
+(<a href="MTCoreAudioDevice.html">MTCoreAudioDevice</a>) or
+<a href="MTCoreAudioStream.html#streamDescriptionsForSide">streamDescriptionsForSide:</a>
+(<a href="MTCoreAudioStream.html">MTCoreAudioStream</a>)
+, that means any sample rate is supported.  The device should always have a non-zero
+sample rate set.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setBitsPerChannel:">setBitsPerChannel:</a></h3>
+<code>- (MTCoreAudioStreamDescription *)    setBitsPerChannel:(UInt32)theBitsPerChannel</code>
+<br><br>
+Sets the number of bits per channel.
+Returns the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setBytesPerFrame:">setBytesPerFrame:</a></h3>
+<code>- (MTCoreAudioStreamDescription *)    setBytesPerFrame:(UInt32)theBytesPerFrame</code>
+<br><br>
+Sets the number of bytes per frame.  One frame represents one sample from
+each channel at one instant in time.
+Returns the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setBytesPerPacket:">setBytesPerPacket:</a></h3>
+<code>- (MTCoreAudioStreamDescription *)    setBytesPerPacket:(UInt32)theBytesPerPacket</code>
+<br><br>
+Sets the number of bytes per packet.  See
+<a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h">CoreAudioTypes.h</a>
+for more information.
+Returns the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setChannelsPerFrame:">setChannelsPerFrame:</a></h3>
+<code>- (MTCoreAudioStreamDescription *)    setChannelsPerFrame:(UInt32)theChannelsPerFrame</code>
+<br><br>
+Sets the number of channels in one frame.  A stream's audio data is a time-regular linear
+sequence of frames, where each frame consists of one sample from each channel
+in the stream at one instant in time.  If the stream format is the <a href="#isCanonicalFormat">canonical logical format</a>,
+then the bytes per frame and bytes per packet are updated as well.
+Returns the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setFormatFlags:">setFormatFlags:</a></h3>
+<code>- (MTCoreAudioStreamDescription *)    setFormatFlags:</code>
+<br><br>
+Sets the format flags.  See
+<a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h">CoreAudioTypes.h</a>
+for more information.
+Returns the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setFormatID:">setFormatID:</a></h3>
+<code>- (MTCoreAudioStreamDescription *)    setFormatID:(UInt32)theFormatID</code>
+<br><br>
+Sets the four-character-code identifying the audio data format.
+See <a href="#formatID">formatID</a> for more information.
+Returns the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setFramesPerPacket:">setFramesPerPacket:</a></h3>
+<code>- (MTCoreAudioStreamDescription *)    setFramesPerPacket:(UInt32)theFramesPerPacket</code>
+<br><br>
+Sets the number of frames per packet.  See
+<a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/CoreAudioTypes.h">CoreAudioTypes.h</a>
+for more information.
+Returns the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setIsInterleaved:">setIsInterleaved:</a></h3>
+<code>- (MTCoreAudioStreamDescription *) setIsInterleaved:(Boolean)interleave</code>
+<br><br>
+If the receiver's format is <a href="#isLinearPCMFormat">Linear PCM</a>, sets whether samples for multiple channels are interleaved in the same buffer or kept in separate buffers (de-interleaved).
+If the stream format is the <a href="#isCanonicalFormat">canonical logical format</a>,
+then the bytes per frame and bytes per packet are updated as well.
+Has no effect if the format is not Linear PCM.
+Returns the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setNativeFormat">setNativeFormat</a></h3>
+<code>- (MTCoreAudioStreamDescription *) setNativeFormat</code>
+<br><br>
+Sets the receiver to the canonical logical format (32-bit floating point, native endian, packed linear PCM, 1 frame per packet, interleaved).
+Sets the bytes per frame and bytes per packet based on the number of channels per frame.
+Returns the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setSampleRate:">setSampleRate:</a></h3>
+<code>- (MTCoreAudioStreamDescription *) setSampleRate:(Float32)theSampleRate;</code>
+<br><br>
+Sets the sample rate.  The device should always have a non-zero sample rate.
+Returns the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<hr>
+
+<a href="http://aldebaran.armory.com/~zenomt/">Mike</a> &gt;
+<a href="http://aldebaran.armory.com/~zenomt/macosx/">Mac OS X</a> &gt;
+<a href="./index.html">MTCoreAudio.framework</a> &gt;
+MTCoreAudioStreamDescription
+
+</body>
+</html>

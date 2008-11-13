@@ -1,0 +1,11 @@
+<element id="com.blacktree.Quicksilver.QSChronoTriggersPlugIn" name="Time Triggers" version="BB">
+    <info>
+        <image>Clock</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSTriggerManagers">
+            <trigger-manager id="QSChronoTrigger" class="QSChronoTriggerManager"></trigger-manager>
+        </extension>
+    </extensions>
+</element>

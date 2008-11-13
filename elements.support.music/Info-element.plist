@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Music Support</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSMusicSupport</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Music Support</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>B1</string>
+	<key>NSPrincipalClass</key>
+	<string>QSMusicSupport</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>hidden</key>
+		<true/>
+		<key>qsversion</key>
+		<string>2000</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSFSFileTypePreviewers</key>
+		<dict>
+			<key>m4a</key>
+			<string>QSMusicFilePreviewProvider</string>
+			<key>m4p</key>
+			<string>QSMusicFilePreviewProvider</string>
+			<key>mp3</key>
+			<string>QSMusicFilePreviewProvider</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

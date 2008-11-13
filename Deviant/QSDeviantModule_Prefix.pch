@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSDeviantModule' target in the 'QSDeviantModule' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+    #import <AddressBook/AddressBook.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSDeviantModuleType @"QSDeviantModuleType"

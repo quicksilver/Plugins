@@ -1,0 +1,118 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		7FF8B98E07B7FF390088CEEF = {
+			children = (
+				7FF8B99B07B7FF4C0088CEEF,
+				7FF8B99C07B7FF4C0088CEEF,
+				7FF8B99D07B7FF4C0088CEEF,
+			);
+			isa = PBXGroup;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		7FF8B99007B7FF390088CEEF = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		7FF8B99107B7FF390088CEEF = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+		7FF8B99207B7FF390088CEEF = {
+			buildSettings = {
+			};
+			buildStyles = (
+				7FF8B99007B7FF390088CEEF,
+				7FF8B99107B7FF390088CEEF,
+			);
+			hasScannedForEncodings = 0;
+			isa = PBXProject;
+			mainGroup = 7FF8B98E07B7FF390088CEEF;
+			projectDirPath = "";
+			targets = (
+				7FF8B9E307B7FF790088CEEF,
+			);
+		};
+		7FF8B99B07B7FF4C0088CEEF = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.cfbundle;
+			path = "Developer Module.qsplugin";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		7FF8B99C07B7FF4C0088CEEF = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.cfbundle;
+			path = "Extra Scripts.qsplugin";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		7FF8B99D07B7FF4C0088CEEF = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.cfbundle;
+			path = "Watson Module.qsplugin";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		7FF8B9E207B7FF790088CEEF = {
+			buildActionMask = 2147483647;
+			dstPath = PlugIns;
+			dstSubfolderSpec = 16;
+			files = (
+				7FF8B9E407B7FF830088CEEF,
+				7FF8B9E507B7FF840088CEEF,
+				7FF8B9E607B7FF840088CEEF,
+			);
+			isa = PBXCopyFilesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FF8B9E307B7FF790088CEEF = {
+			buildPhases = (
+				7FF8B9E207B7FF790088CEEF,
+			);
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Copy PlugIns";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+			);
+			isa = PBXAggregateTarget;
+			name = "Copy PlugIns";
+			productName = "Copy PlugIns";
+		};
+		7FF8B9E407B7FF830088CEEF = {
+			fileRef = 7FF8B99B07B7FF4C0088CEEF;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		7FF8B9E507B7FF840088CEEF = {
+			fileRef = 7FF8B99C07B7FF4C0088CEEF;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		7FF8B9E607B7FF840088CEEF = {
+			fileRef = 7FF8B99D07B7FF4C0088CEEF;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+	};
+	rootObject = 7FF8B99207B7FF390088CEEF;
+}

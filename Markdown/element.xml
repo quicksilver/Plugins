@@ -1,0 +1,33 @@
+<element id="com.blacktree.Quicksilver.QSMarkdownPlugIn" name="Markdown Module" version="24">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSMarkdownConvertAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSMarkdownPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>convertMarkdownToHTML:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Convert Markdown to HTML</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSMarkdownPlugIn_Action" class="QSMarkdownPlugIn_Action"></action-provider>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,7 @@
+<element id="com.blacktree.Quicksilver.QSDockExtensionPlugIn" name="QSDockExtensionPlugIn" version="1B">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree"></extensions>
+</element>

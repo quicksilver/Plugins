@@ -1,0 +1,56 @@
+<element id="com.blacktree.Quicksilver.QSNetworkLocationPlugIn" name="Network Location Module" version="95">
+    <info>
+        <category>System</category>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetNetworkLocations">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetNetworkLocations</string>
+                        <key>catalogPath</key>
+                        <string>QSPresetSystemGroup/QSPresetConfiguration</string>
+                        <key>name</key>
+                        <string>Network Locations</string>
+                        <key>source</key>
+                        <string>QSNetworkLocationObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSNetworkLocationSelectAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSNetworkLocationActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>selectNetwork:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.networklocation</string>
+                        </array>
+                        <key>icon</key>
+                        <string>GenericNetworkIcon</string>
+                        <key>name</key>
+                        <string>Switch to Location</string>
+                        <key>precedence</key>
+                        <integer>2</integer>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSNetworkLocationObjectSource" class="QSNetworkLocationObjectSource"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="qs.networklocation" class="QSNetworkLocationObjectSource"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSNetworkLocationActionProvider" class="QSNetworkLocationActionProvider"></action-provider>
+        </extension>
+    </extensions>
+</element>

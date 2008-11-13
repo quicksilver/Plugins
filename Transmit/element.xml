@@ -1,0 +1,55 @@
+<element id="com.blacktree.Quicksilver.QSTransmitModule" name="Transmit 3 Module" version="DD">
+    <info>
+        <category>Files</category>
+        <category>Applications</category>
+        <image>com.panic.Transmit3</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetTransmitFavorites">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetTransmitFavorites</string>
+                        <key>name</key>
+                        <string>Transmit Favorites</string>
+                        <key>source</key>
+                        <string>QSTransmitSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSTransmitUploadAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSTransmitSource</string>
+                        <key>actionSelector</key>
+                        <string>uploadFiles:toSite:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.panic.Transmit3</string>
+                        <key>name</key>
+                        <string>Upload to Site...</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSTransmitSource" class="QSTransmitSource"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="QSTransmitSiteType" class="QSTransmitSource"></object-handler>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.panic.Transmit3" class="QSTransmitSource"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

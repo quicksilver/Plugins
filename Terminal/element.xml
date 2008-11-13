@@ -1,0 +1,291 @@
+<element id="com.blacktree.Quicksilver.QSTerminalPlugIn" name="Terminal Module" version="11B">
+    <info>
+        <category>System</category>
+        <category>Appications</category>
+        <category>Development</category>
+        <image>com.apple.Terminal</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetTerminalFiles">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetTerminalFiles</string>
+                        <key>enabled</key>
+                        <true></true>
+                        <key>icon</key>
+                        <string>com.apple.Terminal</string>
+                        <key>name</key>
+                        <string>Terminal Files</string>
+                        <key>requiresSettingsPath</key>
+                        <true></true>
+                        <key>settings</key>
+                        <dict>
+                            <key>folderDepth</key>
+                            <integer>1</integer>
+                            <key>folderTypes</key>
+                            <array>
+                                <string>term</string>
+                                <string>command</string>
+                            </array>
+                            <key>parser</key>
+                            <string>QSDirectoryParser</string>
+                            <key>path</key>
+                            <string>~/Library/Application Support/Terminal</string>
+                            <key>skipItem</key>
+                            <true></true>
+                        </dict>
+                        <key>source</key>
+                        <string>QSFileSystemObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+            <catalog-preset id="QSPresetBashHistory">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetBashHistory</string>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>icon</key>
+                        <string>com.apple.Terminal</string>
+                        <key>name</key>
+                        <string>Bash Command History</string>
+                        <key>requiresSettingsPath</key>
+                        <true></true>
+                        <key>settings</key>
+                        <dict>
+                            <key>lineContentType</key>
+                            <string>qs.shellcommand</string>
+                            <key>parser</key>
+                            <string>QSTextLineParser</string>
+                            <key>path</key>
+                            <string>~/.bash_history</string>
+                            <key>skipItem</key>
+                            <true></true>
+                        </dict>
+                        <key>source</key>
+                        <string>QSFileSystemObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSCLExecuteShellCommandAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSCLExecutableProvider</string>
+                        <key>actionSelector</key>
+                        <string>executeText:</string>
+                        <key>description</key>
+                        <string>Run a Text Command in Shell</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.shellcommand</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <true></true>
+                        <key>icon</key>
+                        <string>ExecutableBinaryIcon</string>
+                        <key>name</key>
+                        <string>Run Command in Shell</string>
+                        <key>precedence</key>
+                        <integer>3</integer>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSCLTermShowDirectoryAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSCLExecutableProvider</string>
+                        <key>actionSelector</key>
+                        <string>showDirectoryInTerminal:</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>'fold'</string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>TerminalIcon</string>
+                        <key>name</key>
+                        <string>Go To Directory in Terminal</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSCLTermExecuteShellCommandAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSCLExecutableProvider</string>
+                        <key>actionSelector</key>
+                        <string>executeTextInTerminal:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.shellcommand</string>
+                        </array>
+                        <key>icon</key>
+                        <string>TerminalIcon</string>
+                        <key>name</key>
+                        <string>Run a Text Command in Terminal</string>
+                        <key>precedence</key>
+                        <integer>4</integer>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSShellScriptRunAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSCLExecutableProvider</string>
+                        <key>actionSelector</key>
+                        <string>executeObject:arguments:</string>
+                        <key>description</key>
+                        <string>Run a Shell Script</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>sh</string>
+                            <string>pl</string>
+                            <string>command</string>
+                            <string>php</string>
+                            <string>py</string>
+                            <string>rb</string>
+                            <string></string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <true></true>
+                        <key>icon</key>
+                        <string>ExecutableBinaryIcon</string>
+                        <key>indirectOptional</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Run [...]</string>
+                        <key>rankModification</key>
+                        <real>2</real>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSCLTermShowManPageAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSCLExecutableProvider</string>
+                        <key>actionSelector</key>
+                        <string>showManPage:</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string></string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>TerminalIcon</string>
+                        <key>name</key>
+                        <string>Show Man Page</string>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSCLTermExecuteWithArgsAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSCLExecutableProvider</string>
+                        <key>actionSelector</key>
+                        <string>executeObjectInTerm:arguments:</string>
+                        <key>description</key>
+                        <string>Run a Shell Script in the Terminal</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>sh</string>
+                            <string>command</string>
+                            <string>php</string>
+                            <string>pl</string>
+                            <string>py</string>
+                            <string>rb</string>
+                            <string></string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>TerminalIcon</string>
+                        <key>indirectOptional</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Run in Terminal [...]</string>
+                        <key>rankModification</key>
+                        <real>2</real>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSCLExecuteTextAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSCLExecutableProvider</string>
+                        <key>actionSelector</key>
+                        <string>executeText:</string>
+                        <key>description</key>
+                        <string>Run a Text Command in Shell</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <true></true>
+                        <key>icon</key>
+                        <string>ExecutableBinaryIcon</string>
+                        <key>name</key>
+                        <string>Run Command in Shell</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSCLTermExecuteTextAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSCLExecutableProvider</string>
+                        <key>actionSelector</key>
+                        <string>executeTextInTerminal:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>TerminalIcon</string>
+                        <key>name</key>
+                        <string>Run a Text Command in Terminal</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSTerminalMediators">
+            <terminal-mediator id="com.apple.Terminal" class="QSAppleTerminalMediator"></terminal-mediator>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="qs.shellcommand" class="QSCLExecutableProvider"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSCLExecutableProvider" class="QSCLExecutableProvider"></action-provider>
+        </extension>
+    </extensions>
+</element>

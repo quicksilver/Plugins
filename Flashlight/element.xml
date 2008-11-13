@@ -1,0 +1,16 @@
+<element id="com.blacktree.Quicksilver.QSFlashlightInterface" name="Flashlight Interface" version="88">
+    <info>
+        <category>Interfaces</category>
+        <image>interface</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="SpotlightGraphiteBackground" class="/System/Library/CoreServices/Search.bundle/Contents/Resources/MDSearchBar-6.tiff"></image-resource>
+            <image-resource id="SpotlightBlueBackground" class="/System/Library/CoreServices/Search.bundle/Contents/Resources/MDSearchBar-1.tiff"></image-resource>
+        </extension>
+        <extension point="QSCommandInterfaceControllers">
+            <command-interface id="QSFlashlightInterface" class="QSFlashlightInterface"></command-interface>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,35 @@
+<element id="com.blacktree.Quicksilver.QSGoogleCalendarPlugIn" name="Google Calendar Module" version="A5">
+    <info>
+        <category>Calendar</category>
+        <category>Web</category>
+        <image>com.apple.iCal</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSGoogleCalendarCreateEventAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSGoogleCalendarPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>createEvent:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.google.calendar</string>
+                        <key>indirectOptional</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Google Calendar Event </string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSGoogleCalendarPlugInAction" class="QSGoogleCalendarPlugInAction"></action-provider>
+        </extension>
+    </extensions>
+</element>

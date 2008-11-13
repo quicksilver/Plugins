@@ -1,0 +1,98 @@
+<element id="com.blacktree.Quicksilver.QSRemoteDesktopPlugIn" name="Remote Desktop Module" version="2F">
+    <info>
+        <category>System</category>
+        <category>Applications</category>
+        <image>com.apple.RemoteDesktop</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetQSRemoteDesktopPlugIn">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetQSRemoteDesktopPlugIn</string>
+                        <key>name</key>
+                        <string>QSRemoteDesktopPlugIn</string>
+                        <key>source</key>
+                        <string>QSRemoteDesktopPlugInSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSRemoteDesktopObserveAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSRemoteDesktopPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>observeComputer:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>com.apple.RemoteDesktop.uuid</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.RemoteDesktop</string>
+                        <key>name</key>
+                        <string>Observe</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSRemoteDesktopCopyFilesAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSRemoteDesktopPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>copyFiles:toComputer:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.RemoteDesktop</string>
+                        <key>name</key>
+                        <string>Copy via Remote Desktop</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSRemoteDesktopControlAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSRemoteDesktopPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>controlComputer:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>com.apple.RemoteDesktop.uuid</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.RemoteDesktop</string>
+                        <key>name</key>
+                        <string>Control</string>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSRemoteDesktopPlugInSource" class="QSRemoteDesktopPlugInSource"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="com.apple.RemoteDesktop.uuid" class="QSRemoteDesktopPlugInSource"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSRemoteDesktopPlugInAction" class="QSRemoteDesktopPlugInAction"></action-provider>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.apple.RemoteDesktop" class="QSRemoteDesktopPlugInSource"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

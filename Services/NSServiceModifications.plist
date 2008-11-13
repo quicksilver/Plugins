@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.ScriptEditor2</key>
+	<dict>
+		<key>Script Editor/Get Result of AppleScript</key>
+		<dict>
+			<key>disabled</key>
+			<true/>
+		</dict>
+		<key>Script Editor/Run as AppleScript</key>
+		<dict>
+			<key>disabled</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>com.apple.TextEdit</key>
+	<dict>
+		<key>TextEdit/Open Selected File</key>
+		<dict>
+			<key>disabled</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>com.apple.finder</key>
+	<dict>
+		<key>Finder/Open</key>
+		<dict>
+			<key>disabled</key>
+			<true/>
+		</dict>
+		<key>Finder/Reveal</key>
+		<dict>
+			<key>disabled</key>
+			<true/>
+		</dict>
+		<key>Finder/Show Info</key>
+		<dict>
+			<key>disabled</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>com.apple.mail</key>
+	<dict>
+		<key>Mail/Send File</key>
+		<dict>
+			<key>disabled</key>
+			<true/>
+		</dict>
+		<key>Mail/Send To</key>
+		<dict>
+			<key>disabled</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>com.apple.speech.SpeechService</key>
+	<dict>
+		<key>Speech/Start Speaking Text</key>
+		<dict>
+			<key>name</key>
+			<string>Speak Text</string>
+		</dict>
+		<key>Speech/Stop Speaking</key>
+		<dict>
+			<key>disabled</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>com.barebones.bbedit</key>
+	<dict>
+		<key>BBEdit/Open File</key>
+		<dict>
+			<key>disabled</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>com.blacktree.Quicksilver</key>
+	<dict>
+		<key>Send to Quicksilver...</key>
+		<dict>
+			<key>disabled</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>de.qdev.ExifRenamer</key>
+	<dict>
+		<key>ExifRenamer/Rename File or Folder contents</key>
+		<dict>
+			<key>disabled</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

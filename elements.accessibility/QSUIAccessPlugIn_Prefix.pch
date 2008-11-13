@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSUIAccessPlugIn' target in the 'QSUIAccessPlugIn' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSUIElementType @"qs.ui.element"
+#define kQSUIActionType @"qs.ui.action"

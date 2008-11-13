@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Flashlight Interface</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSFlashlightInterface</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Flashlight Interface</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleSignature</key>
+	<string>daed</string>
+	<key>CFBundleVersion</key>
+	<string>88</string>
+	<key>NSPrincipalClass</key>
+	<string>QSFlashlightInterface</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Interfaces</string>
+		</array>
+		<key>description</key>
+		<string>Provides a Spotlight style interface.</string>
+		<key>icon</key>
+		<string>interface</string>
+		<key>qsversion</key>
+		<string>31DF</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSCommandInterfaceControllers</key>
+		<dict>
+			<key>QSFlashlightInterface</key>
+			<string>QSFlashlightInterface</string>
+		</dict>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>SpotlightBlueBackground</key>
+		<string>/System/Library/CoreServices/Search.bundle/Contents/Resources/MDSearchBar-1.tiff</string>
+		<key>SpotlightGraphiteBackground</key>
+		<string>/System/Library/CoreServices/Search.bundle/Contents/Resources/MDSearchBar-6.tiff</string>
+	</dict>
+</dict>
+</plist>

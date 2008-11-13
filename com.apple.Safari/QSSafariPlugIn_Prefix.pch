@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'QSSafariPlugIn' target in the 'QSSafariPlugIn' project
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import <QSCore/QSCore.h>
+#import <QSFoundation/QSFoundation.h>
+#endif
+
+
+#define kQSSafariPlugInType @"QSSafariPlugInType"

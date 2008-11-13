@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'QSSofaPlugIn' target in the 'QSSofaPlugIn' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSSofaPlugInType @"QSSofaPlugInType"

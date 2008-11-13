@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>QSDependencyFufillingPlugIn</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSDependencyFufillingPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Fuffiller</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>1C</string>
+	<key>NSPrincipalClass</key>
+	<string>QSDependencyFufillingPlugIn</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string></string>
+		<key>categories</key>
+		<array/>
+		<key>description</key>
+		<string></string>
+		<key>relatedBundles </key>
+		<array/>
+		<key>webIcon</key>
+		<string></string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict/>
+</dict>
+</plist>

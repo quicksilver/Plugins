@@ -1,0 +1,41 @@
+<element id="com.blacktree.Quicksilver.QSCaminoPlugIn" name="Camino Module" version="97">
+    <info>
+        <category>Applications</category>
+        <category>Web</category>
+        <image>org.mozilla.navigator</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetCaminoBookmarks">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetCaminoBookmarks</string>
+                        <key>icon</key>
+                        <string>org.mozilla.navigator</string>
+                        <key>name</key>
+                        <string>Camino Bookmarks</string>
+                        <key>requiresSettingsPath</key>
+                        <true></true>
+                        <key>settings</key>
+                        <dict>
+                            <key>parser</key>
+                            <string>QSCaminoBookmarksParser</string>
+                            <key>path</key>
+                            <string>~/Library/Application Support/Camino/bookmarks.plist</string>
+                            <key>skipItem</key>
+                            <integer>1</integer>
+                        </dict>
+                        <key>source</key>
+                        <string>QSFileSystemObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="QSFSParsers">
+            <file-parser id="QSCaminoBookmarksParser" class="QSCaminoBookmarksParser"></file-parser>
+            <file-parser id="QSOldCaminoBookmarksParser" class="QSOldCaminoBookmarksParser"></file-parser>
+        </extension>
+    </extensions>
+</element>

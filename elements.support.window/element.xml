@@ -1,0 +1,189 @@
+<element name="Window Support" id="com.blacktree.Quicksilver.QSWindowHandlingPlugIn" version="B5">
+    <info>
+        <image>Window</image>
+    </info>
+    <requirements/>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset name="Open Windows" id="QSPresetOpenWindows">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetOpenWindows</string>
+                        <key>name</key>
+                        <string>Open Windows</string>
+                        <key>source</key>
+                        <string>QSWindowHandlingPlugInSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.resources.images">
+            <image-resource name="" id="Window">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.blacktree.Quicksilver.QSWindowHandlingPlugIn</string>
+                        <key>resource</key>
+                        <string>Window.icns</string>
+                    </dict>
+                </plist>
+            </image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action name="Set Scale..." id="QSWindowSetScaleAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSWindowHandlingPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>setWindow:scale:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                        <key>name</key>
+                        <string>Set Scale...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Set Ignores Mouse" id="QSWindowSetIgnoresMouseAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSWindowHandlingPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>setWindow:ignoresMouse:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                        <key>name</key>
+                        <string>Set Ignores Mouse</string>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Select Window" id="QSWindowSelectAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSWindowHandlingPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>selectWindow:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                        <key>name</key>
+                        <string>Select Window</string>
+                        <key>precedence</key>
+                        <string>3</string>
+                        <key>rankModification</key>
+                        <real>2</real>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Set Alpha (Opacity)..." id="QSWindowSetAlphaAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSWindowHandlingPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>setWindow:alpha:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                        <key>name</key>
+                        <string>Set Alpha (Opacity)...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Set Has Shadow..." id="QSWindowSetHasShadowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSWindowHandlingPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>setWindow:hasShadow:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                        <key>name</key>
+                        <string>Set Has Shadow...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action name="Set Level..." id="QSWindowSetLevelAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSWindowHandlingPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>setWindow:level:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                        <key>name</key>
+                        <string>Set Level...</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSWindowHandlingPlugInAction" class="QSWindowHandlingPlugInAction"/>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="qs.windowid" class="QSWindowHandlingPlugInSource"/>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSWindowHandlingPlugInSource" class="QSWindowHandlingPlugInSource"/>
+        </extension>
+        <extension point="QSProxies">
+            <object-proxy name="All Windows Under Mouse" id="QSAllWindowsUnderMouseProxy" class="QSWindowHandlingPlugInSource">
+                <plist version="1.0">
+                    <dict>
+                        <key>name</key>
+                        <string>All Windows Under Mouse</string>
+                        <key>providerClass</key>
+                        <string>QSWindowHandlingPlugInSource</string>
+                        <key>types</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                    </dict>
+                </plist>
+            </object-proxy>
+            <object-proxy name="Window Under Mouse" id="QSWindowUnderMouseProxy" class="QSWindowHandlingPlugInSource">
+                <plist version="1.0">
+                    <dict>
+                        <key>name</key>
+                        <string>Window Under Mouse</string>
+                        <key>providerClass</key>
+                        <string>QSWindowHandlingPlugInSource</string>
+                        <key>types</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                    </dict>
+                </plist>
+            </object-proxy>
+            <object-proxy name="Current Window" id="QSKeyWindowProxy" class="QSWindowHandlingPlugInSource">
+                <plist version="1.0">
+                    <dict>
+                        <key>name</key>
+                        <string>Current Window</string>
+                        <key>providerClass</key>
+                        <string>QSWindowHandlingPlugInSource</string>
+                        <key>types</key>
+                        <array>
+                            <string>qs.windowid</string>
+                        </array>
+                    </dict>
+                </plist>
+            </object-proxy>
+        </extension>
+    </extensions>
+</element>

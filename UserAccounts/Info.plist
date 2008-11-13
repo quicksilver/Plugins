@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>User Accounts Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSAccountsModule</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>User Accounts Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>9E</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Blacktree, Inc.</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSUserSwitchAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAccountsSource</string>
+			<key>actionSelector</key>
+			<string>switchToUser:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSUserPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>User</string>
+			<key>name</key>
+			<string>Switch to User</string>
+			<key>precedence</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>System</string>
+		</array>
+		<key>description</key>
+		<string>Adds user accounts to the catalog and a fast user switch action</string>
+		<key>icon</key>
+		<string>User</string>
+		<key>requiresFeature</key>
+		<string>0</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetAccounts</string>
+			<key>catalogPath</key>
+			<string>QSPresetSystemGroup/QSPresetConfiguration</string>
+			<key>name</key>
+			<string>User Accounts</string>
+			<key>source</key>
+			<string>QSAccountsSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSAccountsSource</key>
+			<string>QSAccountsSource</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>QSUserPboardType</key>
+			<string>QSAccountsSource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSAccountsSource</key>
+			<string>QSAccountsSource</string>
+		</dict>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>User</key>
+		<string>[com.blacktree.Quicksilver.QSAccountsModule]:User</string>
+	</dict>
+</dict>
+</plist>

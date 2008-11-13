@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Alarm Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSAlarmPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Alarm Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>47</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSAlarmAfterDelayAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAlarmPlugIn</string>
+			<key>actionSelector</key>
+			<string>alarm:afterDelay:</string>
+			<key>directTypes</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>icon</key>
+			<string>Recent</string>
+			<key>name</key>
+			<string>Alarm after Delay...</string>
+		</dict>
+		<key>QSAlarmAtTimeAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAlarmPlugIn</string>
+			<key>actionSelector</key>
+			<string>alarm:atTime:</string>
+			<key>directTypes</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>icon</key>
+			<string>Recent</string>
+			<key>name</key>
+			<string>Alarm at Time...</string>
+		</dict>
+		<key>QSAlarmNowAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAlarmPlugIn</string>
+			<key>actionSelector</key>
+			<string>alarmNow:</string>
+			<key>directTypes</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>icon</key>
+			<string>Recent</string>
+			<key>name</key>
+			<string>Alarm</string>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array/>
+		<key>description</key>
+		<string>Allows alarms to be set with text, sounds, or commands.</string>
+		<key>icon</key>
+		<string>Recent</string>
+		<key>qsversion</key>
+		<string>29CC</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSAlarmPlugIn</key>
+			<string>QSAlarmPlugIn</string>
+		</dict>
+		<key>QSPreferencePanes</key>
+		<dict>
+			<key>QSAlarmPlugIn_PrefPane</key>
+			<dict>
+				<key>class</key>
+				<string>QSPreferencePane</string>
+				<key>description</key>
+				<string>Preferences</string>
+				<key>icon</key>
+				<string>Recent</string>
+				<key>name</key>
+				<string>Alarm</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

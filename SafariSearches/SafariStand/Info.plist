@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>SafariStand Queries</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSSafariStandPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>SafariStand Queries</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>25</string>
+	<key>NSPrincipalClass</key>
+	<string>QSSafariStandPlugIn</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Web</string>
+			<string>Search</string>
+		</array>
+		<key>description</key>
+		<string>Provides access to SafariStand QuickSearches as queries</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetSafariStandQueries</string>
+			<key>icon</key>
+			<string>Find</string>
+			<key>name</key>
+			<string>SafariStand Quick Searches</string>
+			<key>requiresSettingsPath</key>
+			<true/>
+			<key>settings</key>
+			<dict>
+				<key>parser</key>
+				<string>QSSafariStandQueryParser</string>
+				<key>path</key>
+				<string>~/Library/Preferences/jp.hetima.SafariStand.plist</string>
+				<key>skipItem</key>
+				<integer>1</integer>
+			</dict>
+			<key>source</key>
+			<string>QSFileSystemObjectSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSFSParsers</key>
+		<dict>
+			<key>QSSafariStandQueryParser</key>
+			<string>QSSafariStandQueryParser</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

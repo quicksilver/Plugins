@@ -1,0 +1,177 @@
+<element id="com.blacktree.Quicksilver.QSCompressionPlugIn" name="File Compression Module" version="A5">
+    <info>
+        <category>Files</category>
+        <category>Utility</category>
+        <image>com.apple.bomarchivehelper</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.actions">
+            <action id="QSFileCompressAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSCompressionActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>compressFile:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <integer>1</integer>
+                        <key>icon</key>
+                        <string>com.apple.bomarchivehelper</string>
+                        <key>name</key>
+                        <string>Compress (Create Archive)</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSFileCompressUsingAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSCompressionActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>compressFile:withFormat:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <integer>1</integer>
+                        <key>icon</key>
+                        <string>com.apple.bomarchivehelper</string>
+                        <key>name</key>
+                        <string>Compress Using...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSFileDecompressAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSCompressionActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>decompressFile:</string>
+                        <key>directFileTypes</key>
+                        <array>
+                            <string>zip</string>
+                            <string>cpio</string>
+                            <string>cpgz</string>
+                        </array>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>displaysResult</key>
+                        <integer>1</integer>
+                        <key>icon</key>
+                        <string>com.apple.bomarchivehelper</string>
+                        <key>name</key>
+                        <string>Decompress</string>
+                        <key>rankModification</key>
+                        <real>4</real>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSFileCompressors">
+            <bundle-draw-handler id="cpgz" class="QSCompressionActionProvider">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSCompressionActionProvider</string>
+                        <key>extension</key>
+                        <string>cpgz</string>
+                        <key>icon</key>
+                        <string></string>
+                        <key>selector</key>
+                        <string>cpgzCompress:destination:</string>
+                    </dict>
+                </plist>
+            </bundle-draw-handler>
+            <bundle-draw-handler id="zip" class="QSCompressionActionProvider">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSCompressionActionProvider</string>
+                        <key>extension</key>
+                        <string>zip</string>
+                        <key>icon</key>
+                        <string></string>
+                        <key>selector</key>
+                        <string>zipCompress:destination:</string>
+                    </dict>
+                </plist>
+            </bundle-draw-handler>
+            <bundle-draw-handler id="tgz" class="QSCompressionActionProvider">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSCompressionActionProvider</string>
+                        <key>extension</key>
+                        <string>tgz</string>
+                        <key>icon</key>
+                        <string></string>
+                        <key>selector</key>
+                        <string>tgzCompress:destination:</string>
+                    </dict>
+                </plist>
+            </bundle-draw-handler>
+            <bundle-draw-handler id="tbz" class="QSCompressionActionProvider">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSCompressionActionProvider</string>
+                        <key>extension</key>
+                        <string>tbz</string>
+                        <key>icon</key>
+                        <string></string>
+                        <key>selector</key>
+                        <string>tbzCompress:destination:</string>
+                    </dict>
+                </plist>
+            </bundle-draw-handler>
+            <bundle-draw-handler id="cpio" class="QSCompressionActionProvider">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSCompressionActionProvider</string>
+                        <key>extension</key>
+                        <string>cpio</string>
+                        <key>icon</key>
+                        <string></string>
+                        <key>selector</key>
+                        <string>cpioCompress:destination:</string>
+                    </dict>
+                </plist>
+            </bundle-draw-handler>
+        </extension>
+        <extension point="QSPreferencePanes">
+            <preference-pane id="QSCompressionPrefPane" class="QSPreferencePane">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSPreferencePane</string>
+                        <key>description</key>
+                        <string>Destination and Format Options</string>
+                        <key>icon</key>
+                        <string>com.apple.bomarchivehelper</string>
+                        <key>name</key>
+                        <string>Compression</string>
+                        <key>nibBundle</key>
+                        <string>com.blacktree.Quicksilver.QSCompressionPlugIn</string>
+                        <key>nibName</key>
+                        <string>QSCompressionPrefPane</string>
+                    </dict>
+                </plist>
+            </preference-pane>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSCompressionActionProvider" class="QSCompressionActionProvider"></action-provider>
+        </extension>
+    </extensions>
+</element>

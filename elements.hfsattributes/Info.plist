@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>File Attribute Actions</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSFileAttributesPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>File Attribute Actions</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.5.0</string>
+	<key>CFBundleVersion</key>
+	<string>B9</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSHFSLockAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHFSAttributeActions</string>
+			<key>actionSelector</key>
+			<string>lock:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Display</string>
+			<key>name</key>
+			<string>Lock File</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>QSHFSMakeInvisibleAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHFSAttributeActions</string>
+			<key>actionSelector</key>
+			<string>makeInvisible:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Display</string>
+			<key>name</key>
+			<string>Make Invisible (hide)</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>QSHFSMakeVisibleAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHFSAttributeActions</string>
+			<key>actionSelector</key>
+			<string>makeVisible:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Display</string>
+			<key>name</key>
+			<string>Make Visible (Show)...</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>QSHFSSetLabelAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHFSAttributeActions</string>
+			<key>actionSelector</key>
+			<string>setLabelForFile:to:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Display</string>
+			<key>name</key>
+			<string>Set Label...</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>QSHFSUnlockAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHFSAttributeActions</string>
+			<key>actionSelector</key>
+			<string>unlock:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>Display</string>
+			<key>name</key>
+			<string>Unlock File</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>QSSetFileCommentAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHFSAttributeActions</string>
+			<key>actionSelector</key>
+			<string>setCommentForFile:to:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.finder</string>
+			<key>name</key>
+			<string>Set Comment...</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>QSSetFileIconAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSHFSAttributeActions</string>
+			<key>actionSelector</key>
+			<string>setIconForFile:to:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.finder</string>
+			<key>name</key>
+			<string>Set Icon...</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Files</string>
+		</array>
+		<key>description</key>
+		<string>File locking, labeling and visibility actions</string>
+		<key>icon</key>
+		<string>GenericDocumentIcon</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSHFSAttributeActions</key>
+			<string>QSHFSAttributeActions</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

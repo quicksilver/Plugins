@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Easy Ajax</title>
+    <script type="text/javascript" src="prototype.js"></script>
+    <SCRIPT LANGUAGE="JavaScript"><!--
+ 	Event.observe(window, 'load', init, false);
+	
+	function init(){
+		//$('greeting-submit').style.display = 'none';
+		Event.observe('object-search', 'keyup', object_search, false);
+		Event.observe('action-search', 'keyup', action_search, false);
+	}
+
+	function object_search(){
+	  	var url = 'http://localhost:5001/query';
+		var pars = escape($F('object-search'));
+		var target = 'object-results';
+		var myAjax = new Ajax.Updater(target, url, {	method: 'get',	parameters: pars});
+	}
+	
+	function action_search(){
+	  	var url = 'http://localhost:5001/query';
+		var pars = escape($F('action-search'));
+		var target = 'action-results';
+		var myAjax = new Ajax.Updater(target, url, {	method: 'get',	parameters: pars});
+	}
+
+    -->
+    </SCRIPT>
+</head> 
+<body>
+	<form method="get" action="" id="greeting-form">
+	<table width="512" align="center" border="1"><tr>
+		<td width="256" align="center">
+			<img id="dicon" src="http://localhost:5001/image?com.apple.Safari"><br>Safari
+		</td>
+		<td width="256" align="center">
+			<img src="http://localhost:5001/image?com.apple.iChat"><br>iChat
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<input id="object-search" type="text" />
+			<div id="object-results"></div>
+			<!--input name="dobject" onchange="document.images['dicon'].src = 'http://localhost:5001/image?'+this.value;" -->
+		</td>
+		<td align="center">
+			<input id="action-search" type="text" />
+			<div id="action-results"></div>
+		</td>
+		</tr>
+		</table>
+<input id="greeting-submit" type="submit" value="Greet me!" />
+		    </form>
+		</body>
+		</html>

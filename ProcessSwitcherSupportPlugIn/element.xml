@@ -1,0 +1,222 @@
+<element id="com.blacktree.Quicksilver.QSProcessSwitcherSupportPlugIn" name="Process Switcher Support" version="36">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.triggers.presets">
+            <trigger-preset id="QSSwitchToNextAppCommand">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSSwitchToNextAppCommand</string>
+                        <key>command</key>
+                        <string>QSSwitchToNextAppCommand</string>
+                        <key>name</key>
+                        <string>Swich to Next Application</string>
+                        <key>set</key>
+                        <string>Process Switcher</string>
+                    </dict>
+                </plist>
+            </trigger-preset>
+            <trigger-preset id="QSSwitchToPreviousAppCommand">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSSwitchToPreviousAppCommand</string>
+                        <key>command</key>
+                        <string>QSSwitchToPreviousAppCommand</string>
+                        <key>name</key>
+                        <string>Swich to Previous Application</string>
+                        <key>set</key>
+                        <string>Process Switcher</string>
+                    </dict>
+                </plist>
+            </trigger-preset>
+            <trigger-preset id="QSShowProcessSwitcherCommand">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSShowProcessSwitcherCommand</string>
+                        <key>command</key>
+                        <string>QSShowProcessSwitcherCommand</string>
+                        <key>name</key>
+                        <string>Show Process Switcher</string>
+                        <key>set</key>
+                        <string>Process Switcher</string>
+                    </dict>
+                </plist>
+            </trigger-preset>
+            <trigger-preset id="QSShowMouseProcessSwitcherCommand">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSShowMouseProcessSwitcherCommand</string>
+                        <key>command</key>
+                        <string>QSShowMouseProcessSwitcherCommand</string>
+                        <key>name</key>
+                        <string>Show Process Switcher Under Mouse</string>
+                        <key>set</key>
+                        <string>Process Switcher</string>
+                    </dict>
+                </plist>
+            </trigger-preset>
+        </extension>
+        <extension point="QSCommands">
+            <command id="QSShowMouseProcessSwitcherCommand">
+                <plist version="1.0">
+                    <dict>
+                        <key>command</key>
+                        <dict>
+                            <key>actionID</key>
+                            <string>QSObjCSendMessageAction</string>
+                            <key>directArchive</key>
+                            <dict>
+                                <key>data</key>
+                                <dict>
+                                    <key>qs.action</key>
+                                    <dict>
+                                        <key>actionClass</key>
+                                        <string>QSProcessSwitcherSupportPlugIn</string>
+                                        <key>actionSelector</key>
+                                        <string>showSwitcherUnderMouse</string>
+                                        <key>icon</key>
+                                        <string>ProcessSwitcher</string>
+                                        <key>name</key>
+                                        <string>Show Playing Track</string>
+                                    </dict>
+                                </dict>
+                            </dict>
+                            <key>directID</key>
+                            <string></string>
+                        </dict>
+                    </dict>
+                </plist>
+            </command>
+            <command id="QSSwitchToNextAppCommand">
+                <plist version="1.0">
+                    <dict>
+                        <key>command</key>
+                        <dict>
+                            <key>actionID</key>
+                            <string>QSObjCSendMessageAction</string>
+                            <key>directArchive</key>
+                            <dict>
+                                <key>data</key>
+                                <dict>
+                                    <key>qs.action</key>
+                                    <dict>
+                                        <key>actionClass</key>
+                                        <string>QSProcessSwitcherSupportPlugIn</string>
+                                        <key>actionSelector</key>
+                                        <string>switchToNextApp</string>
+                                        <key>icon</key>
+                                        <string>ProcessSwitcher</string>
+                                        <key>name</key>
+                                        <string>Show Playing Track</string>
+                                    </dict>
+                                </dict>
+                            </dict>
+                            <key>directID</key>
+                            <string></string>
+                        </dict>
+                    </dict>
+                </plist>
+            </command>
+            <command id="QSSwitchToPreviousAppCommand">
+                <plist version="1.0">
+                    <dict>
+                        <key>command</key>
+                        <dict>
+                            <key>actionID</key>
+                            <string>QSObjCSendMessageAction</string>
+                            <key>directArchive</key>
+                            <dict>
+                                <key>data</key>
+                                <dict>
+                                    <key>qs.action</key>
+                                    <dict>
+                                        <key>actionClass</key>
+                                        <string>QSProcessSwitcherSupportPlugIn</string>
+                                        <key>actionSelector</key>
+                                        <string>switchToPrevApp</string>
+                                        <key>icon</key>
+                                        <string>ProcessSwitcher</string>
+                                        <key>name</key>
+                                        <string>Show Playing Track</string>
+                                    </dict>
+                                </dict>
+                            </dict>
+                            <key>directID</key>
+                            <string></string>
+                        </dict>
+                    </dict>
+                </plist>
+            </command>
+            <command id="QSShowProcessSwitcherCommand">
+                <plist version="1.0">
+                    <dict>
+                        <key>command</key>
+                        <dict>
+                            <key>actionID</key>
+                            <string>QSObjCSendMessageAction</string>
+                            <key>directArchive</key>
+                            <dict>
+                                <key>data</key>
+                                <dict>
+                                    <key>qs.action</key>
+                                    <dict>
+                                        <key>actionClass</key>
+                                        <string>QSProcessSwitcherSupportPlugIn</string>
+                                        <key>actionSelector</key>
+                                        <string>showSwitcher</string>
+                                        <key>icon</key>
+                                        <string>ProcessSwitcher</string>
+                                        <key>name</key>
+                                        <string>Show Playing Track</string>
+                                    </dict>
+                                </dict>
+                            </dict>
+                            <key>directID</key>
+                            <string></string>
+                        </dict>
+                    </dict>
+                </plist>
+            </command>
+        </extension>
+        <extension point="QSPreferencePanes">
+            <preference-pane id="QSProcessSwitcherSupportPlugIn_PrefPane" class="QSPreferencePane">
+                <plist version="1.0">
+                    <dict>
+                        <key>class</key>
+                        <string>QSPreferencePane</string>
+                        <key>description</key>
+                        <string>Switching Options</string>
+                        <key>icon</key>
+                        <string></string>
+                        <key>name</key>
+                        <string>Process Switcher</string>
+                    </dict>
+                </plist>
+            </preference-pane>
+        </extension>
+        <extension point="QSRegistryHeaders">
+            <extension-point id="QSProcessSwitchers">
+                <plist version="1.0">
+                    <dict>
+                        <key>classTable</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Process Switcher</string>
+                        <key>registryPreferredSelector</key>
+                        <string>preferredProcessSwitcherID</string>
+                        <key>selector</key>
+                        <string>preferredProcessSwitcher</string>
+                        <key>type</key>
+                        <string>mediator</string>
+                    </dict>
+                </plist>
+            </extension-point>
+        </extension>
+    </extensions>
+</element>

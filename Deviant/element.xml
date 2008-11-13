@@ -1,0 +1,48 @@
+<element id="com.blacktree.Quicksilver.QSDeviantModule" name="Deviant Module" version="85">
+    <info>
+        <category>Miscellaneous</category>
+        <image>Deviant</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="Deviant">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.blacktree.Quicksilver.QSDeviantModule</string>
+                        <key>resource</key>
+                        <string>deviant.png</string>
+                    </dict>
+                </plist>
+            </image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSDeviantSwitchDesktopAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSDeviantActionProvider</string>
+                        <key>actionSelector</key>
+                        <string>linkToDesktop:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSFilenamesPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>Deviant</string>
+                        <key>name</key>
+                        <string>Select Window</string>
+                        <key>precedence</key>
+                        <string>0</string>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSDeviantActionProvider" class="QSDeviantActionProvider"></action-provider>
+        </extension>
+    </extensions>
+</element>

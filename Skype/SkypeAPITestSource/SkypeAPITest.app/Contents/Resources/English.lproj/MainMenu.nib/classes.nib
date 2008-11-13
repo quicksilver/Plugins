@@ -1,0 +1,13 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {onConnectBtn = id; onDisconnectBtn = id; onSendBtn = id; }; 
+            CLASS = SkypeController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {commandField = id; infoView = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

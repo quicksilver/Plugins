@@ -1,0 +1,32 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = IKImageView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            CLASS = QSImageAdjustController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {imageView = IKImageView; }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            ACTIONS = {cancel = id; centerCrop = id; ok = id; reset = id; setValueForSender = id; }; 
+            CLASS = QSImageCropScaleController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                cHeightField = NSTextField; 
+                cWidthField = NSTextField; 
+                centerButton = NSButton; 
+                oHeightField = NSTextField; 
+                oWidthField = NSTextField; 
+                psHeightField = NSTextField; 
+                psSlider = id; 
+                psWidthField = NSTextField; 
+                resetButton = NSButton; 
+                sHeightField = NSTextField; 
+                sWidthField = NSTextField; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

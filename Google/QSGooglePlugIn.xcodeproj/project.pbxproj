@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1022AE906B3469300299BEC /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1022AE706B3469300299BEC /* QSCore.framework */; };
+		E1022AEA06B3469300299BEC /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1022AE806B3469300299BEC /* QSInterface.framework */; };
+		E16C2BEB07904E0500CDB59C /* Google.icns in Resources */ = {isa = PBXBuildFile; fileRef = E16C2BEA07904E0500CDB59C /* Google.icns */; };
+		E184974E0787CAF30098C82E /* QSGooglePrefPane.h in Resources */ = {isa = PBXBuildFile; fileRef = E184974C0787CAF30098C82E /* QSGooglePrefPane.h */; };
+		E184974F0787CAF30098C82E /* QSGooglePrefPane.m in Sources */ = {isa = PBXBuildFile; fileRef = E184974D0787CAF30098C82E /* QSGooglePrefPane.m */; };
+		E18497600787CB2C0098C82E /* QSGooglePrefPane.nib in Resources */ = {isa = PBXBuildFile; fileRef = E184975F0787CB2C0098C82E /* QSGooglePrefPane.nib */; };
+		E18497660787CB800098C82E /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18497650787CB800098C82E /* PreferencePanes.framework */; };
+		E184977D0787CBBD0098C82E /* ActionCommandFormats.strings in Resources */ = {isa = PBXBuildFile; fileRef = E18497770787CBBD0098C82E /* ActionCommandFormats.strings */; };
+		E184977E0787CBBD0098C82E /* ActionNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = E18497790787CBBD0098C82E /* ActionNames.strings */; };
+		E184977F0787CBBD0098C82E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E184977B0787CBBD0098C82E /* Localizable.strings */; };
+		E1E4C6F407870D8F004D903D /* QSGoogleStub.h in Resources */ = {isa = PBXBuildFile; fileRef = E1E4C6F007870D8F004D903D /* QSGoogleStub.h */; };
+		E1E4C6F507870D8F004D903D /* QSGoogleStub.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E4C6F107870D8F004D903D /* QSGoogleStub.m */; };
+		E1E4C6F607870D8F004D903D /* WSGeneratedObj.h in Resources */ = {isa = PBXBuildFile; fileRef = E1E4C6F207870D8F004D903D /* WSGeneratedObj.h */; };
+		E1E4C6F707870D8F004D903D /* WSGeneratedObj.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E4C6F307870D8F004D903D /* WSGeneratedObj.m */; };
+		E1E4C78C07870DAD004D903D /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E4C78B07870DAD004D903D /* CoreServices.framework */; };
+		E1E4C7B907870F56004D903D /* QSGooglePlugIn_Action.h in Resources */ = {isa = PBXBuildFile; fileRef = E1E4C7B707870F56004D903D /* QSGooglePlugIn_Action.h */; };
+		E1E4C7BA07870F56004D903D /* QSGooglePlugIn_Action.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E4C7B807870F56004D903D /* QSGooglePlugIn_Action.m */; };
+		E1EAB046068128A200774DFF /* QSGooglePlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSGooglePlugIn.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		2E58F360FFB2326E11CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		32DBCF980370C29C00C91783 /* QSGooglePlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSGooglePlugIn_Prefix.pch; sourceTree = "<group>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /*  */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ""; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E1022AE706B3469300299BEC /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework; sourceTree = "<absolute>"; };
+		E1022AE806B3469300299BEC /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSInterface.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework; sourceTree = "<absolute>"; };
+		E16C2BEA07904E0500CDB59C /* Google.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Google.icns; sourceTree = "<group>"; };
+		E184974C0787CAF30098C82E /* QSGooglePrefPane.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSGooglePrefPane.h; sourceTree = "<group>"; };
+		E184974D0787CAF30098C82E /* QSGooglePrefPane.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSGooglePrefPane.m; sourceTree = "<group>"; };
+		E184975F0787CB2C0098C82E /* QSGooglePrefPane.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSGooglePrefPane.nib; sourceTree = "<group>"; };
+		E18497650787CB800098C82E /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
+		E18497780787CBBD0098C82E /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ActionCommandFormats.strings; sourceTree = "<group>"; };
+		E184977A0787CBBD0098C82E /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ActionNames.strings; sourceTree = "<group>"; };
+		E184977C0787CBBD0098C82E /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E1E4C6F007870D8F004D903D /* QSGoogleStub.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSGoogleStub.h; sourceTree = "<group>"; };
+		E1E4C6F107870D8F004D903D /* QSGoogleStub.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSGoogleStub.m; sourceTree = "<group>"; };
+		E1E4C6F207870D8F004D903D /* WSGeneratedObj.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = WSGeneratedObj.h; sourceTree = "<group>"; };
+		E1E4C6F307870D8F004D903D /* WSGeneratedObj.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = WSGeneratedObj.m; sourceTree = "<group>"; };
+		E1E4C78B07870DAD004D903D /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		E1E4C7B707870F56004D903D /* QSGooglePlugIn_Action.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSGooglePlugIn_Action.h; sourceTree = "<group>"; };
+		E1E4C7B807870F56004D903D /* QSGooglePlugIn_Action.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSGooglePlugIn_Action.m; sourceTree = "<group>"; };
+		E1EAB045068128A200774DFF /* QSGooglePlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSGooglePlugIn.m; sourceTree = "<group>"; };
+		E1EAB047068128A800774DFF /* QSGooglePlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSGooglePlugIn.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				E1022AE906B3469300299BEC /* QSCore.framework in Frameworks */,
+				E1022AEA06B3469300299BEC /* QSInterface.framework in Frameworks */,
+				E1E4C78C07870DAD004D903D /* CoreServices.framework in Frameworks */,
+				E18497660787CB800098C82E /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSGooglePlugIn */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = QSGooglePlugIn;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E16C2BEA07904E0500CDB59C /* Google.icns */,
+				E18497770787CBBD0098C82E /* ActionCommandFormats.strings */,
+				E18497790787CBBD0098C82E /* ActionNames.strings */,
+				E184977B0787CBBD0098C82E /* Localizable.strings */,
+				E184975F0787CB2C0098C82E /* QSGooglePrefPane.nib */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /*  */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E18497650787CB800098C82E /* PreferencePanes.framework */,
+				E1E4C78B07870DAD004D903D /* CoreServices.framework */,
+				E1022AE706B3469300299BEC /* QSCore.framework */,
+				E1022AE806B3469300299BEC /* QSInterface.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E184974C0787CAF30098C82E /* QSGooglePrefPane.h */,
+				E184974D0787CAF30098C82E /* QSGooglePrefPane.m */,
+				E1E4C7B707870F56004D903D /* QSGooglePlugIn_Action.h */,
+				E1E4C7B807870F56004D903D /* QSGooglePlugIn_Action.m */,
+				E1E4C6F007870D8F004D903D /* QSGoogleStub.h */,
+				E1E4C6F107870D8F004D903D /* QSGoogleStub.m */,
+				E1E4C6F207870D8F004D903D /* WSGeneratedObj.h */,
+				E1E4C6F307870D8F004D903D /* WSGeneratedObj.m */,
+				E1EAB045068128A200774DFF /* QSGooglePlugIn.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF980370C29C00C91783 /* QSGooglePlugIn_Prefix.pch */,
+				E1EAB047068128A800774DFF /* QSGooglePlugIn.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* Google Support */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FD49B480990317E00517F3A /* Build configuration list for PBXNativeTarget "Google Support" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
+					/Volumes/Lore/Forge/Development/Quicksilver/PlugIns/QSGooglePlugIn,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSGooglePlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Google Support";
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			dependencies = (
+			);
+			name = "Google Support";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSGooglePlugIn;
+			productReference = 8D1AC9740486D14A00FE50C9 /*  */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7FD49B4C0990317E00517F3A /* Build configuration list for PBXProject "QSGooglePlugIn" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				2E58F360FFB2326E11CA0CBA /* Development */,
+				2E58F361FFB2326E11CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* QSGooglePlugIn */;
+			projectDirPath = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* Google Support */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E4C6F407870D8F004D903D /* QSGoogleStub.h in Resources */,
+				E1E4C6F607870D8F004D903D /* WSGeneratedObj.h in Resources */,
+				E1E4C7B907870F56004D903D /* QSGooglePlugIn_Action.h in Resources */,
+				E184974E0787CAF30098C82E /* QSGooglePrefPane.h in Resources */,
+				E18497600787CB2C0098C82E /* QSGooglePrefPane.nib in Resources */,
+				E184977D0787CBBD0098C82E /* ActionCommandFormats.strings in Resources */,
+				E184977E0787CBBD0098C82E /* ActionNames.strings in Resources */,
+				E184977F0787CBBD0098C82E /* Localizable.strings in Resources */,
+				E16C2BEB07904E0500CDB59C /* Google.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF /* QSGooglePlugIn.m in Sources */,
+				E1E4C6F507870D8F004D903D /* QSGoogleStub.m in Sources */,
+				E1E4C6F707870D8F004D903D /* WSGeneratedObj.m in Sources */,
+				E1E4C7BA07870F56004D903D /* QSGooglePlugIn_Action.m in Sources */,
+				E184974F0787CAF30098C82E /* QSGooglePrefPane.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E18497770787CBBD0098C82E /* ActionCommandFormats.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E18497780787CBBD0098C82E /* English */,
+			);
+			name = ActionCommandFormats.strings;
+			sourceTree = "<group>";
+		};
+		E18497790787CBBD0098C82E /* ActionNames.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E184977A0787CBBD0098C82E /* English */,
+			);
+			name = ActionNames.strings;
+			sourceTree = "<group>";
+		};
+		E184977B0787CBBD0098C82E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E184977C0787CBBD0098C82E /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7FD49B490990317E00517F3A /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
+					/Volumes/Lore/Forge/Development/Quicksilver/PlugIns/QSGooglePlugIn,
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSGooglePlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Google Support";
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		7FD49B4A0990317E00517F3A /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
+					/Volumes/Lore/Forge/Development/Quicksilver/PlugIns/QSGooglePlugIn,
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSGooglePlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Google Support";
+				WRAPPER_EXTENSION = qsplugin;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		7FD49B4B0990317E00517F3A /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
+					/Volumes/Lore/Forge/Development/Quicksilver/PlugIns/QSGooglePlugIn,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSGooglePlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Google Support";
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			name = Default;
+		};
+		7FD49B4D0990317E00517F3A /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		7FD49B4E0990317E00517F3A /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		7FD49B4F0990317E00517F3A /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FD49B480990317E00517F3A /* Build configuration list for PBXNativeTarget "Google Support" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FD49B490990317E00517F3A /* Development */,
+				7FD49B4A0990317E00517F3A /* Deployment */,
+				7FD49B4B0990317E00517F3A /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7FD49B4C0990317E00517F3A /* Build configuration list for PBXProject "QSGooglePlugIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FD49B4D0990317E00517F3A /* Development */,
+				7FD49B4E0990317E00517F3A /* Deployment */,
+				7FD49B4F0990317E00517F3A /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

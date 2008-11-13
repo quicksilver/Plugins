@@ -1,0 +1,47 @@
+<element id="com.blacktree.Quicksilver.QSDeliciousLibraryModule" name="Delicious Library Module" version="37">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetDeliciousLibraryModule">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetDeliciousLibraryModule</string>
+                        <key>name</key>
+                        <string>Delicious Library Items</string>
+                        <key>source</key>
+                        <string>QSDeliciousLibraryModule_Source</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="DeliciousLibraryShelf">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.blacktree.Quicksilver.QSDeliciousLibraryModule</string>
+                        <key>resource</key>
+                        <string>shelf_lg.tiff</string>
+                    </dict>
+                </plist>
+            </image-resource>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSDeliciousLibraryModule_Source" class="QSDeliciousLibraryModule_Source"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="qs.deliciouslibrary.shelf" class="QSDeliciousLibraryModule_Source"></object-handler>
+            <object-handler id="qs.deliciouslibrary.item" class="QSDeliciousLibraryModule_Source"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSDeliciousLibraryModule_Action" class="QSDeliciousLibraryModule_Action"></action-provider>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.delicious-monster.library" class="QSDeliciousLibraryModule_Source"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

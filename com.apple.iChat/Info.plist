@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>iChat</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSiChatPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>iChat Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.5.0</string>
+	<key>CFBundleVersion</key>
+	<string>14D</string>
+	<key>NSPrincipalClass</key>
+	<string>QSiChatPlugIn</string>
+	<key>QSActions</key>
+	<dict>
+		<key>QSiChatSetStatusAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAppleScriptActions</string>
+			<key>actionHandler</key>
+			<string>set_status</string>
+			<key>actionScript</key>
+			<string>iChat.scpt</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>enabled</key>
+			<false/>
+			<key>icon</key>
+			<string>com.apple.iChat</string>
+			<key>name</key>
+			<string>Set iChat Status</string>
+		</dict>
+	</dict>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Mail &amp; Chat</string>
+		</array>
+		<key>description</key>
+		<string>Enables Chat actions for iChat</string>
+		<key>icon</key>
+		<string>com.apple.iChat</string>
+		<key>relatedBundles</key>
+		<array>
+			<string>com.apple.iChat</string>
+		</array>
+		<key>requiresFeature</key>
+		<string>0</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>com.apple.iChat</key>
+			<string>QSiChatMediator</string>
+		</dict>
+		<key>QSBundleDrawingHandlers</key>
+		<dict>
+			<key>com.apple.iChat</key>
+			<string>QSiChatMediator</string>
+		</dict>
+		<key>QSChatMediators</key>
+		<dict>
+			<key>com.apple.iChat</key>
+			<string>QSiChatMediator</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>plugins</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>com.blacktree.Quicksilver.QSChatSupport</string>
+				<key>name</key>
+				<string>Chat Support</string>
+			</dict>
+		</array>
+		<key>version</key>
+		<string>12CC</string>
+	</dict>
+</dict>
+</plist>

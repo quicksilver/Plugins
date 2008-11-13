@@ -1,0 +1,96 @@
+<element id="com.blacktree.Quicksilver.QSStikkitPlugIn" name="Stikkit" version="108">
+    <info>
+        <category>Web</category>
+        <image>stikkit</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="stikkit" class="[com.blacktree.Quicksilver.QSStikkitPlugIn]:stikkit.png"></image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSStikkitPrependAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSStikkitPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>prependToStikkit:withString:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>com.stikkit.stikkit</string>
+                        </array>
+                        <key>icon</key>
+                        <string>stikkit</string>
+                        <key>name</key>
+                        <string>Prepend Text...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSStikkitAppendAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSStikkitPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>appendToStikkit:withString:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>com.stikkit.stikkit</string>
+                        </array>
+                        <key>icon</key>
+                        <string>stikkit</string>
+                        <key>name</key>
+                        <string>Append Text...</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSStikkitCreateAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSStikkitPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>createStikkitWithString:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>stikkit</string>
+                        <key>name</key>
+                        <string>Create Stikkit</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSStikkitEditAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSStikkitPlugIn</string>
+                        <key>actionSelector</key>
+                        <string>editStikkit:withString:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>com.stikkit.stikkit</string>
+                        </array>
+                        <key>icon</key>
+                        <string>stikkit</string>
+                        <key>name</key>
+                        <string>Edit...</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSStikkitPlugIn" class="QSStikkitPlugIn"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="com.stikkit.stikkit" class="QSStikkitPlugIn"></object-handler>
+            <object-handler id="com.stikkit.tag" class="QSStikkitPlugIn"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSStikkitPlugIn" class="QSStikkitPlugIn"></action-provider>
+        </extension>
+    </extensions>
+</element>

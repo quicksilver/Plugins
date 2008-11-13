@@ -1,0 +1,14 @@
+//
+// Prefix header for all source files of the 'QSAppleMailPlugIn' target in the 'QSAppleMailPlugIn' project
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import <QSCore/QSCore.h>
+#import <QSCore/QSMacros.h>
+#endif
+
+
+#define kQSAppleMailMailboxType @"qs.mail.mailbox"
+#define kQSAppleMailMessageType @"qs.mail.message"
+#define MAIL_BID @"com.apple.mail"

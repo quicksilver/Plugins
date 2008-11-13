@@ -1,0 +1,995 @@
+<html>
+<head>
+<title>MTCoreAudioDevice</title>
+</head>
+
+<body>
+<h1>MTCoreAudioDevice</h1>
+<p>
+An <strong>MTCoreAudioDevice</strong> instance represents an audio device connected to
+the system.  The instance may have a delegate, and may have an
+<a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/AudioHardware.h">AudioDeviceIOProc</a>
+or an <a href="#setIOTarget:withSelector:withClientData:">IOTarget</a>.
+Additionally, the class itself may have a delegate to be notified of changes
+to the global audio hardware environment.
+</p>
+
+<p>
+There may be more than one instance that refers to the same physical audio
+hardware device.
+</p>
+
+<h2>Method Types</h2>
+<hr>
+<ul plain>
+	<li>Creating instances
+	<ul plain>
+		<br>
+		<li> <a href="#allDevices">+ allDevices</a>
+		<li> <a href="#allDevicesByRelation">+ allDevicesByRelation</a>
+		<li> <a href="#devicesWithName:havingStreamsForDirection:">+ devicesWithName:havingStreamsForDirection:</a>
+		<li> <a href="#deviceWithID:">+ deviceWithID:</a>
+		<li> <a href="#deviceWithUID:">+ deviceWithUID:</a>
+		<li> <a href="#defaultInputDevice">+ defaultInputDevice</a>
+		<li> <a href="#defaultOutputDevice">+ defaultOutputDevice</a>
+		<li> <a href="#defaultSystemOutputDevice">+ defaultSystemOutputDevice</a>
+		<li> <a href="#initWithDeviceID:">- initWithDeviceID:</a>
+		<li> <a href="#clone">- clone</a>
+		<li> <a href="#relatedDevices">- relatedDevices</a>
+	</ul>
+
+	<br>
+	<li>Working with delegates
+	<ul plain>
+		<br>
+		<li> <a href="#class-setDelegate:">+ setDelegate:</a>
+		<li> <a href="#class-delegate">+ delegate</a>
+		<li> <a href="#attachNotificationsToThisThread">+ attachNotificationsToThisThread</a>
+		<li> <a href="#setDelegate:">- setDelegate:</a>
+		<li> <a href="#delegate">- delegate</a>
+		<br><br>
+		<li> <a href="#class-delegate-methods">Methods implemented by the class's delegate</a>
+		<li> <a href="#delegate-methods">Methods implemented by an instance's delegate</a>
+		<li> <a href="#notifications">Notifications</a>
+	</ul>
+
+	<br>
+	<li>A device's identifying information
+	<ul plain>
+		<br>
+		<li> <a href="#deviceID">- deviceID</a>
+		<li> <a href="#deviceName">- deviceName</a>
+		<li> <a href="#deviceUID">- deviceUID</a>
+		<li> <a href="#deviceManufacturer">- deviceManufacturer</a>
+		<li> <a href="#isEqual:">- isEqual:</a>
+	</ul>
+
+	<br>
+	<li>Working with streams
+	<ul plain>
+		<br>
+		<li> <a href="#streamFactory">- streamFactory</a>
+		<li> <a href="#streamsForDirection:">- streamsForDirection:</a>
+		<li> <a href="#channelsByStreamForDirection:">- channelsByStreamForDirection:</a>
+		<li> <a href="#channelsForDirection:">- channelsForDirection:</a>
+	</ul>
+
+	<br>
+	<li>Working with sources
+	<ul plain>
+		<br>
+		<li> <a href="#dataSourceForDirection:">- dataSourceForDirection:</a>
+		<li> <a href="#dataSourcesForDirection:">- dataSourcesForDirection:</a>
+		<li> <a href="#canSetDataSourceForDirection:">- canSetDataSourceForDirection:</a>
+		<li> <a href="#setDataSource:forDirection:">- setDataSource:forDirection:</a>
+		<li> <a href="#clockSourceForChannel:forDirection:">- clockSourceForChannel:forDirection:</a>
+		<li> <a href="#clockSourcesForChannel:forDirection:">- clockSourcesForChannel:forDirection:</a>
+		<li> <a href="#setClockSource:forChannel:forDirection:">- setClockSource:forChannel:forDirection:</a>
+	</ul>
+
+	<br>
+	<li>Working with buffering
+	<ul plain>
+		<br>
+		<li> <a href="#deviceBufferSizeInFrames">- deviceBufferSizeInFrames</a>
+		<li> <a href="#deviceMaxVariableBufferSizeInFrames">- deviceMaxVariableBufferSizeInFrames</a>
+		<li> <a href="#deviceMinBufferSizeInFrames">- deviceMinBufferSizeInFrames</a>
+		<li> <a href="#deviceMaxBufferSizeInFrames">- deviceMaxBufferSizeInFrames</a>
+		<li> <a href="#setDeviceBufferSizeInFrames:">- setDeviceBufferSizeInFrames:</a>
+		<li> <a href="#deviceLatencyFramesForDirection:">- deviceLatencyFramesForDirection:</a>
+		<li> <a href="#deviceSafetyOffsetFramesForDirection:">- deviceSafetyOffsetFramesForDirection:</a>
+	</ul>
+
+	<br>
+
+	<br>
+	<li>Working with volume
+	<ul plain>
+		<br>
+		<li> <a href="#volumeInfoForChannel:forDirection:">- volumeInfoForChannel:forDirection:</a>
+		<li> <a href="#volumeForChannel:forDirection:">- volumeForChannel:forDirection:</a>
+		<li> <a href="#volumeInDecibelsForChannel:forDirection:">- volumeInDecibelsForChannel:forDirection:</a>
+		<li> <a href="#setVolume:forChannel:forDirection:">- setVolume:forChannel:forDirection:</a>
+		<li> <a href="#setVolumeDecibels:forChannel:forDirection:">- setVolumeDecibels:forChannel:forDirection:</a>
+		<li> <a href="#volumeInDecibelsForVolume:forChannel:forDirection:">- volumeInDecibelsForVolume:forChannel:forDirection:</a>
+		<li> <a href="#volumeForVolumeInDecibels:forChannel:forDirection:">- volumeForVolumeInDecibels:forChannel:forDirection:</a>
+		<li> <a href="#setMute:forChannel:forDirection:">- setMute:forChannel:forDirection:</a>
+		<li> <a href="#setPlayThru:forChannel:">- setPlayThru:forChannel:</a>
+	</ul>
+
+	<br>
+
+	<br>
+	<li>Working with stream formats
+	<ul plain>
+		<br>
+		<li> <a href="#streamDescriptionFactory">- streamDescriptionFactory</a>
+		<li> <a href="#streamDescriptionForChannel:forDirection:">- streamDescriptionForChannel:forDirection:</a>
+		<li> <a href="#streamDescriptionsForChannel:forDirection:">- streamDescriptionsForChannel:forDirection:</a>
+		<li> <a href="#setStreamDescription:forChannel:forDirection:">- setStreamDescription:forChannel:forDirection:</a>
+		<li> <a href="#matchStreamDescription:forChannel:forDirection:">- matchStreamDescription:forChannel:forDirection:</a>
+	</ul>
+	
+	<br>
+	<li>Working with sample rates
+	<ul plain>
+		<br>
+		<li> <a href="#nominalSampleRate">- nominalSampleRate</a>
+		<li> <a href="#nominalSampleRates">- nominalSampleRates</a>
+		<li> <a href="#supportsNominalSampleRate:">- supportsNominalSampleRate:</a>
+		<li> <a href="#setNominalSampleRate:">- setNominalSampleRate:</a>
+		<li> <a href="#actualSampleRate">- actualSampleRate</a>
+	</ul>
+
+	<br>
+
+	<br>
+	<li>Working with IO
+	<ul plain>
+		<br>
+		<li> <a href="#setIOProc:withClientData:">- setIOProc:withClientData:</a>
+		<li> <a href="#setIOTarget:withSelector:withClientData:">- setIOTarget:withSelector:withClientData:</a>
+		<li> <a href="#removeIOProc">- removeIOProc</a>
+		<li> <a href="#removeIOTarget">- removeIOTarget</a>
+		<li> <a href="#deviceStart">- deviceStart</a>
+		<li> <a href="#deviceStop">- deviceStop</a>
+		<li> <a href="#setDevicePaused:">- setDevicePaused:</a>
+	</ul>
+
+	<br>
+	
+	<br>
+</ul>
+
+
+<h2>Class Methods</h2>
+<hr>
+
+<h3><a name="allDevices">allDevices</a></h3>
+<code>+ (NSArray *)           allDevices</code>
+<br><br>
+Returns an NSArray of all audio devices attached to the system.  Instances are ordered by ascending device name,
+with device UID as the tie-breaker.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="allDevicesByRelation">allDevicesByRelation</a></h3>
+<code>+ (NSArray *)           allDevicesByRelation</code>
+<br><br>
+Returns all of the audio devices attached to the system, as an NSArray of NSArrays of audio devices.  Each sub-array groups all devices that are related, as determined by the respective audio drivers.  The devices in each sub-array are ordered in the manner of <a href="#allDevices">+allDevices</a>, and the order of the sub-arrays is deternmined using the same ordering rules, by the first device in each sub-array. 
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="attachNotificationsToThisThread"> attachNotificationsToThisThread </a></h3>
+<code>+ (void) attachNotificationsToThisThread</code>
+<br><br>
+Instructs the HAL to move its notifications to the run loop of the thread from which this message was sent.  It's recommended that the HAL's notifications should be attached to the main thread in Cocoa graphical applications.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="defaultInputDevice">defaultInputDevice</a></h3>
+<code>+ (MTCoreAudioDevice *) defaultInputDevice</code>
+<br><br>
+Returns a new instance representing the system's default input device.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="defaultOutputDevice">defaultOutputDevice</a></h3>
+<code>+ (MTCoreAudioDevice *) defaultOutputDevice</code>
+<br><br>
+Returns a new instance representing the system's default output device for normal audio.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="defaultSystemOutputDevice">defaultSystemOutputDevice</a></h3>
+<code>+ (MTCoreAudioDevice *) defaultSystemOutputDevice</code>
+<br><br>
+Returns a new instance representing the system's default output device for system
+services, such as SysBeep().
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="class-delegate">delegate</a></h3>
+<code>+ (id)   delegate</code>
+<br><br>
+Returns the delegate for the class.  See
+<a href="#class-delegate-methods">methods implemented by the class's delegate</a>.
+Does not retain the delegate, so make sure you change or remove the delegate
+before deallocating <i>theDelegate</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="devicesWithName:havingStreamsForDirection:">devicesWithName:havingStreamsForDirection:</a></h3>
+<code>+ (NSArray *) devicesWithName:(NSString *)theName havingStreamsForDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns a (possibly empty) NSArray of device instances, each of which
+represents an attached audio device with name <i>theName</i> and at least one stream/channel for <i>theDirection</i>.
+Devices are ordered by ascending device UID.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceWithID:">deviceWithID:</a></h3>
+<code>+ (MTCoreAudioDevice *) deviceWithID:(AudioDeviceID)theID</code>
+<br><br>
+Returns a new instance representing the audio device with ID <i>theID</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceWithUID:">deviceWithUID:</a></h3>
+<code>+ (MTCoreAudioDevice *) deviceWithUID:(NSString *)theUID</code>
+<br><br>
+Returns a new instance representing the audio device with Unique Identifier <i>theUID</i>.
+Audio device Unique Identifiers are persistent across runs of a program and system
+restarts.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="class-setDelegate:">setDelegate:</a></h3>
+<code>+ (void) setDelegate:(id)theDelegate</code>
+<br><br>
+Sets the class's delegate to <i>theDelegate</i>.  See
+<a href="#class-delegate-methods">methods implemented by the class's delegate</a>.
+Does not retain the delegate, so make sure you change or remove the delegate
+before deallocating <i>theDelegate</i>.  If <i>theDelegate</i> is <code>nil</code>,
+the class's delegate is removed.
+<br><br>
+<hr width="25%" align=left>
+
+<hr>
+
+<h2>Instance Methods</h2>
+<hr>
+
+<h3><a name="actualSampleRate"> actualSampleRate</a></h3>
+<code>- (Float64) actualSampleRate</code>
+<br><br>
+Returns the actual sampling rate at which the device is currently
+running, or the nominal sampling rate if the device is not running
+right now.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="canSetDataSourceForDirection:">canSetDataSourceForDirection:</a></h3>
+<code>- (Boolean) canSetDataSourceForDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns <code>YES</code> if the device's master source in <i>theDirection</i> can be
+changed by
+<a href="#setDataSource:forDirection:">setDataSource:forDirection:</a>
+to one of the values returned by
+<a href="#dataSourcesForDirection:">dataSourcesForDirection:</a>,
+and <code>NO</code> if that property can't be set under program control.
+If this method returns <code>NO</code> but <code>dataSourcesForDirection:</code>
+returns multiple sources, then the value of
+<a href="#dataSourceForDirection:">dataSourceForDirection:</a>
+is informational, and reflects an externally-controlled choice, such
+as Headphones vs. Internal Speakers.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="channelsByStreamForDirection:">channelsByStreamForDirection:</a></h3>
+<code>- (NSArray *) channelsByStreamForDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns an NSArray of NSNumbers.  Each element of the array represents the
+number of channels in the corresponding stream.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="channelsForDirection:">channelsForDirection:</a></h3>
+<code>- (UInt32)    channelsForDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns the number of channels in <i>theDirection</i>.  Returns 0 if the device
+doesn't support the requested direction.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="clockSourceForChannel:forDirection:">clockSourceForChannel:forDirection:</a></h3>
+<code>- (NSString *) clockSourceForChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns the current clock source
+for channel <i>theChannel</i> of direction <i>theDirection</i>.
+Returns <code>nil</code> if this device or channel does not define a clock source in the direction.
+Typically, sources won't be defined if a device has only one clock in the direction.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="clockSourcesForChannel:forDirection:">clockSourcesForChannel:forDirection:</a></h3>
+<code>- (NSArray *)  clockSourcesForChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns an NSArray of NSStrings representing the available clock sources for the
+given channel in the given direction.  Returns <code>nil</code> if the device
+doesn't feel like it defines any clock sources.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="clone">clone</a></h3>
+<code>- (MTCoreAudioDevice *) clone</code>
+<br><br>
+Returns a new, autoreleased MTCoreAudioDevice instance that refers to the same audio device
+as the receiver.  The new instance's delegate and AudioIOProc, if any, are <strong>not</strong> copied.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="dataSourceForDirection:">dataSourceForDirection:</a></h3>
+<code>- (NSString *) dataSourceForDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns the current device master data source (such as "Internal Microphone" or "Line in")
+for direction <i>theDirection</i>.
+Returns <code>nil</code> if this device does not define a master source in the direction.
+Typically, sources won't be defined if a device has only one port in the direction.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="dataSourcesForDirection:">dataSourcesForDirection:</a></h3>
+<code>- (NSArray *)  dataSourcesForDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns an NSArray of NSStrings representing the available device master sources for the
+given direction.  Returns an empty NSArray if the device
+doesn't feel like it defines a master source.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="delegate">delegate</a></h3>
+<code>- (id)   delegate</code>
+<br><br>
+Returns the delegate for the instance.  See
+<a href="#delegate-methods">methods implemented by the delegate</a>.
+Does not retain the delegate, so make sure you change or remove the delegate
+before deallocating <i>theDelegate</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceBufferSizeInFrames">deviceBufferSizeInFrames</a></h3>
+<code>- (UInt32) deviceBufferSizeInFrames</code>
+<br><br>
+Returns the current length in frames of the buffers that will be used with the IOProc.
+If the sizes of the IO buffers may vary by a small amount from IO cycle to IO cycle,
+then this will indicate the smallest buffer that will be passed.
+This, along with the sample rate, defines the minumum length of time represented by
+one IO cycle.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceID">deviceID</a></h3>
+<code>- (AudioDeviceID) deviceID</code>
+<br><br>
+Returns the AudioDeviceID (a UInt32) with which this instance is associated.
+This identifier is not persistent across runs of a program or system restarts.
+See <a href="#deviceUID">deviceUID</a> for a persistent device identifier.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceLatencyFramesForDirection:">deviceLatencyFramesForDirection:</a></h3>
+<code>- (UInt32) deviceLatencyFramesForDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns the number of frames of latency in <i>theDirection</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceManufacturer">deviceManufacturer</a></h3>
+<code>- (NSString *)    deviceManufacturer</code>
+<br><br>
+The manufacturer of this device, such as "Apple".
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceMaxBufferSizeInFrames">deviceMaxBufferSizeInFrames</a></h3>
+<code>- (UInt32) deviceMaxBufferSizeInFrames</code>
+<br><br>
+Returns the largest permissible IO buffer size, in frames.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceMaxVariableBufferSizeInFrames">deviceMaxVariableBufferSizeInFrames</a></h3>
+<code>- (UInt32) deviceMaxVariableBufferSizeInFrames</code>
+<br><br>
+If the sizes of the IO buffers may vary by a small amount from IO cycle to IO cycle,
+to accommodate the natural rhythms of the device, this will indicate the largest buffer
+that will be passed.  If the size of the IO buffers will not vary from cycle to cycle,
+this value will be identical to <a href="#deviceBufferSizeInFrames">deviceBufferSizeInFrames</a>.
+This, along with the sample rate, defines the maximum length of time represented by
+one IO cycle.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceMinBufferSizeInFrames">deviceMinBufferSizeInFrames</a></h3>
+<code>- (UInt32) deviceMinBufferSizeInFrames</code>
+<br><br>
+Returns the smallest permissible IO buffer size, in frames.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceName">deviceName</a></h3>
+<code>- (NSString *)    deviceName</code>
+<br><br>
+The human-readable name of this device, such as "Built-in audio controller".
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceSafetyOffsetFramesForDirection:">deviceSafetyOffsetFramesForDirection:</a></h3>
+<code>- (UInt32) deviceSafetyOffsetFramesForDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns the number of frames ahead (playback) or behind (recording) the head that it is safe to start reading or writing.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceStart">deviceStart</a></h3>
+<code>- (Boolean) deviceStart</code>
+<br><br>
+Attempts to start IO cycles for the device using the <a href="#setIOProc:withClientData:">instance's IOProc</a>
+or <a href="#setIOTarget:withSelector:withClientData:">IOTarget</a>.  Returns <code>true</code> if
+IO cycles will start or are already started, and <code>false</code> if the device can't be started.  If the device can't
+be started, the delegate will be sent <a href="#audioDeviceStartDidFail:forReason:">audioDeviceStartDidFail:forReason:</a>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceStop">deviceStop</a></h3>
+<code>- (void) deviceStop</code>
+<br><br>
+Halts IO cycles for the receiver.  An in-progress IO cycle will complete before this method completes.
+The <a href="#setIOProc:withClientData:">IOProc</a>/<a href="#setIOTarget:withSelector:withClientData:">IOTarget</a> is also halted when the instance is deallocated.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="deviceUID">deviceUID</a></h3>
+<code>- (NSString *)    deviceUID</code>
+<br><br>
+Returns the Unique Identifier of this device.
+Audio device Unique Identifiers are persistent across runs of a program and system
+restarts.  See also <a href="#deviceWithUID:">deviceWithUID:</a>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="initWithDeviceID:">initWithDeviceID:</a></h3>
+<code>- (MTCoreAudioDevice *) initWithDeviceID:(AudioDeviceID)theID</code>
+<br><br>
+Initializes a new instance representing the audio device with ID <i>theID</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="isEqual:">isEqual:</a></h3>
+<code>- (BOOL) isEqual:(id)other</code>
+<br><br>
+Returns <code>YES</code> if the receiver and <i>other</i> refer to the
+same Actual Audio Device, and <code>NO</code> if they do not.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="matchStreamDescription:forChannel:forDirection:">matchStreamDescription:forChannel:forDirection:</a></h3>
+<code>- (MTCoreAudioStreamDescription *) matchStreamDescription:(MTCoreAudioStreamDescription *)theDescription forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns a new <a href="MTCoreAudioStreamDescription.html">MTCoreAudioStreamDescription</a>
+that's the device's best match to an available stream format on <i>theChannel</i> in
+<i>theDirection</i>.  Matching is done at the discretion of the device driver; returned
+formats may be significantly different than that passed in.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="nominalSampleRate">nominalSampleRate</a></h3>
+<code>- (Float64) nominalSampleRate</code>
+<br><br>
+Returns the nominal sampling rate to which the device is currently set.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="nominalSampleRates">nominalSampleRates</a></h3>
+<code>- (NSArray *) nominalSampleRates</code>
+<br><br>
+Returns the ranges of available sampling rates supported by the device.
+Each entry of the returned NSArray is itself an NSArray consisting of
+two NSNumbers.  The first NSNumber is the minimum sampling rate in
+a range, the second is the maximum sampling rate in that same range.
+The device may support multiple, disjoint ranges of sampling rates,
+such as (for example) 4000-8000Hz, 24000-24000Hz, 32000-48000Hz.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="relatedDevices">relatedDevices</a></h3>
+<code>- (NSArray *) relatedDevices</code>
+<br><br>
+Returns an NSArray, ordered in the manner of <a href="#allDevices">+allDevices</a>, of all audio devices attached to the system that are related to the receiver.  Relationship is determined by the respective drivers.  Includes the receiver.  
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="removeIOProc">removeIOProc</a></h3>
+<code>- (void) removeIOProc</code>
+<br><br>
+Removes the <a href="#setIOProc:withClientData:">instance's IOProc</a>
+or <a href="#setIOTarget:withSelector:withClientData:">IOTarget</a>,
+if it had one.  If the device was running the instance's
+IOProc or IOTarget, it is stopped.  The instance's IOProc/IOTarget is removed automatically when
+the instance is deallocated.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="removeIOTarget">removeIOTarget</a></h3>
+<code>- (void) removeIOTarget</code>
+<br><br>
+This is equivalent to <a href="#removeIOProc">removeIOProc</a>, and is provided
+for consistency.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setClockSource:forChannel:forDirection:">setClockSource:forChannel:forDirection:</a></h3>
+<code>- (void)       setClockSource:(NSString *)theSource forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sets the clock source for <i>theChannel</i> in <i>theDirection</i>.  <i>theSource</i> should
+be one of the values returned by <a href="#clockSourcesForChannel:forDirection:">clockSourcesForChannel:forDirection:</a>.
+This method has no effect if <i>theSource</i> is not an available clock source.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setDataSource:forDirection:">setDataSource:forDirection:</a></h3>
+<code>- (void)       setDataSource:(NSString *)theSource forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sets the device master source for <i>theDirection</i>.  <i>theSource</i> should
+be one of the values returned by <a href="#dataSourcesForDirection:">dataSourcesForDirection:</a>.
+This method has no effect if <i>theSource</i> is not an available source.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setDelegate:">setDelegate:</a></h3>
+<code>- (void) setDelegate:(id)theDelegate</code>
+<br><br>
+Sets the delegate to <i>theDelegate</i>.  See
+<a href="#delegate-methods">methods implemented by the delegate</a>.
+Does not retain the delegate, so make sure you change or remove the delegate
+before deallocating <i>theDelegate</i>.  If <i>theDelegate</i> is <code>nil</code>,
+the delegate is removed.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setDeviceBufferSizeInFrames:">setDeviceBufferSizeInFrames:</a></h3>
+<code>- (void)   setDeviceBufferSizeInFrames:(UInt32)numFrames</code>
+<br><br>
+Sets the length in frames of the buffers that will be passed to the IOProc.
+This, along with the sample rate, defines the length of time represented by
+one IO cycle.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setDevicePaused:">setDevicePaused:</a></h3>
+<code>- (void) setDevicePaused:(Boolean)shouldPause</code>
+<br><br>
+If <i>shouldPause</i> is <code>true</code>, then the receiver's IOProc/IOTarget will not run (and an in-progress one will be complete) after this method completes.  If <code>false</code>, then the IOProc/IOTarget may again be run.  Pausing the device keeps its IO cycles and timing running, and only prevents the IOProc/IOTarget from running.  This may be useful if changes to data used by an IOProc must be made asynchronously, without disturbing the IO timing or incurring the overhead of stopping and restarting the device's IO.  The paused state of a device is independent of its running state, as set by <a href="#deviceStart">deviceStart</a> and <a href="#deviceStop">deviceStop</a>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setIOProc:withClientData:">setIOProc:withClientData:</a></h3>
+<code>- (void) setIOProc:(AudioDeviceIOProc)theIOProc withClientData:(void *)theClientData</code>
+<br><br>
+Sets the instance's IOProc to <i>theIOProc</i>, which will be passed <i>theClientData</i> when running.
+An instance may have only one IOProc (or target/selector) at a time; if one is set and this method
+is called again, the old one will be replaced.  This method also issues
+<a href="#deviceStop">deviceStop</a>.
+Multiple instances representing the
+same physical device may each have their own IOProcs (or targets/selectors), which may be
+the same or distinct.
+See
+<a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/AudioHardware.h">AudioDeviceIOProc</a>
+for more information.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setIOTarget:withSelector:withClientData:">setIOTarget:withSelector:withClientData:</a></h3>
+<code>- (void) setIOTarget:(id)theTarget withSelector:(SEL)theSelector withClientData:(void *)theClientData</code>
+<br><br>
+This is the object analogue to <a href="#setIOProc:withClientData:">setIOProc:withClientData:</a>; the
+difference being that, during the IO cycle, the device instance will send <i>theSelector</i> to
+<i>theTarget</i>, rather than calling a C function.  The signature of <i>theSelector</i> must be the
+same as:
+<br>
+<code>- (OSStatus) ioCycleForDevice:(MTCoreAudioDevice *)theDevice timeStamp:(const AudioTimeStamp *)inNow inputData:(const AudioBufferList *)inInputData inputTime:(const AudioTimeStamp *)inInputTime outputData:(AudioBufferList *)outOutputData outputTime:(const AudioTimeStamp *)inOutputTime clientData:(void *)inClientData</code>
+<br>
+That is, the parameters must have the same type and be in the same order as the above, although they may have different
+names.  This is done, rather than using a fixed selector, so that one object can respond
+to the IO cycles of multiple devices in different ways.  The parameters of this method
+have the same sense as those of an <a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/AudioHardware.h">AudioDeviceIOProc</a>.
+An instance may have only one target/selector (or IOProc) at a time; if one is set and this method
+is called again, the old one will be replaced.  This method also issues
+<a href="#deviceStop">deviceStop</a>.
+<br>
+<br>
+Multiple instances representing the
+same physical device may each have their own targets/selectors (or IOProcs), which may be
+the same or distinct.
+<br>
+<br>
+<strong>Important note:</strong> there is no autorelease pool provided by the IOTarget dispatcher; if
+you require one, you must create one yourself.  However, it is strongly recommended that you avoid object
+creation and memory allocation during the IO cycle, to avoid dropouts and overloading.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setMute:forChannel:forDirection:">setMute:forChannel:forDirection:</a></h3>
+<code>- (void)    setMute:(BOOL)isMuted forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+If <i>isMuted</i> is <code>true</code>, mute <i>theChannel</i> in <i>theDirection</i>,
+otherwise, unmute it.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setNominalSampleRate:">setNominalSampleRate:</a></h3>
+<code>- (Boolean)   setNominalSampleRate:(Float64)theRate</code>
+<br><br>
+Attempt to set the nominal sampling rate of the device to <i>theRate</i>.  Returns
+<code>YES</code> if successful, and <code>NO</code> if unsuccessful.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setPlayThru:forChannel:">setPlayThru:forChannel:</a></h3>
+<code>- (void)    setPlayThru:(BOOL)isPlayingThru forChannel:(UInt32)theChannel</code>
+<br><br>
+If <i>isPlayingThru</i> is <code>TRUE</code>, turn on Play-Thru mode on <i>theChannel</i>.
+Otherwise, turn off Play-Thru mode.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setStreamDescription:forChannel:forDirection:">setStreamDescription:forChannel:forDirection:</a></h3>
+<code>- (Boolean) setStreamDescription:(MTCoreAudioStreamDescription *)theDescription forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sets the stream format of the stream containing <i>theChannel</i> in <i>theDirection</i>
+to <i>theDescription</i>.
+Returns <code>true</code> if the stream format was changed successfully, and </code>false</code> if not.
+See the caveat for <a href="#streamDescriptionForChannel:forDirection:">streamDescriptionForChannel:forDirection:</a>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setVolume:forChannel:forDirection:">setVolume:forChannel:forDirection:</a></h3>
+<code>- (void)    setVolume:(Float32)theVolume forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sets the volume of <i>theChannel</i> in <i>theDirection</i> to <i>theVolume</i>, which should
+be between 0.0 and 1.0.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="setVolumeDecibels:forChannel:forDirection:">setVolumeDecibels:forChannel:forDirection:</a></h3>
+<code>- (void)    setVolumeDecibels:(Float32)theVolumeDecibels forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sets the volume of <i>theChannel</i> in <i>theDirection</i> to <i>theVolumeDecibels</i>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="streamDescriptionFactory">streamDescriptionFactory</a></h3>
+<code>- (Class) streamDescriptionFactory </code>
+<br><br>
+Returns the factory object for <a href="MTCoreAudioStreamDescription.html">MTCoreAudioStreamDescription</a>s.
+Subclasses may override this method in order to also subclass the <i>MTCoreAudioStreamDescription</i> class.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="streamDescriptionForChannel:forDirection:">streamDescriptionForChannel:forDirection:</a></h3>
+<code>- (MTCoreAudioStreamDescription *) streamDescriptionForChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Return the current logical
+<a href="MTCoreAudioStreamDescription.html">stream format</a>
+for the stream containing <i>theChannel</i> in <i>theDirection</i>.
+Note that stream formats returned by queries to MTCoreAudioDevices are always
+for the <a href="MTCoreAudioConstantsAndTypes.html#MTCoreAudioStreamSide">kMTCoreAudioStreamLogicalSide</a>
+side of a stream, and are therefore 32-bit floating point.  Use
+<a href="MTCoreAudioStream.html">MTCoreAudioStream</a>s to query or set the
+<a href="MTCoreAudioConstantsAndTypes.html#MTCoreAudioStreamSide">kMTCoreAudioStreamPhysicalSide</a>
+side of a stream.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="streamDescriptionsForChannel:forDirection:">streamDescriptionsForChannel:forDirection:</a></h3>
+<code>- (NSArray *) streamDescriptionsForChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns an NSArray of
+<a href="MTCoreAudioStreamDescription.html">MTCoreAudioStreamDescription</a>s
+available on the stream containing <i>theChannel</i> in <i>theDirection</i>.
+See the caveat for <a href="#streamDescriptionForChannel:forDirection:">streamDescriptionForChannel:forDirection:</a>.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="streamFactory"> streamFactory </a></h3>
+<code>- (Class) streamFactory</code>
+<br><br>
+Returns the factory object for <a href="MTCoreAudioStream.html">MTCoreAudioStream</a>s.
+Subclasses may override this method in order to also subclass the <i>MTCoreAudioStream</i> class.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="streamsForDirection:">streamsForDirection:</a></h3>
+<code>- (NSArray *) streamsForDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns an NSArray of
+<a href="MTCoreAudioStream.html">MTCoreAudioStream</a>s for direction <i>theDirection</i>.
+Note that a device may have no streams in one direction or another if it is
+a record-only or playback-only device.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="supportsNominalSampleRate:">supportsNominalSampleRate:</a></h3>
+<code>- (Boolean)   supportsNominalSampleRate:(Float64)theRate</code>
+<br><br>
+Returns <code>YES</code> if <i>theRate</i> falls within one of the ranges reported by
+<a href="#nominalSampleRates">nominalSampleRates</a>, and <code>NO</code> if not.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="volumeForChannel:forDirection:">volumeForChannel:forDirection:</a></h3>
+<code>- (Float32) volumeForChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns the current volume of <i>theChannel</i> in <i>theDirection</i> as a Float32 between
+0.0 and 1.0.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="volumeForVolumeInDecibels:forChannel:forDirection:">volumeForVolumeInDecibels:forChannel:forDirection:</a></h3>
+<code>- (Float32) volumeForVolumeInDecibels:(Float32)theVolumeDecibels forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Convert from decibels to linear volume, according to the device's channel's characteristics.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="volumeInDecibelsForChannel:forDirection:">volumeInDecibelsForChannel:forDirection:</a></h3>
+<code>- (Float32) volumeInDecibelsForChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns the volume of <i>theChannel</i> in <i>theDirection</i> as a Float32, measured
+in decibels.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="volumeInDecibelsForVolume:forChannel:forDirection:">volumeInDecibelsForVolume:forChannel:forDirection:</a></h3>
+<code>- (Float32) volumeInDecibelsForVolume:(Float32)theVolume forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Convert from linear volume to decibels, according to the device's channel's characteristics.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="volumeInfoForChannel:forDirection:">volumeInfoForChannel:forDirection:</a></h3>
+<code>- (MTCoreAudioVolumeInfo) volumeInfoForChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Returns an <a href="MTCoreAudioConstantsAndTypes.html#MTCoreAudioVolumeInfo">MTCoreAudioVolumeInfo</a> structure
+which collects all the interesting volume-related information about <i>theChannel</i> in
+<i>theDirection</i> together, including whether the channel has a volume control, whether
+it can be muted, whether it is muted, the current volume setting, and more.
+<br><br>
+<hr width="25%" align=left>
+
+<hr>
+
+<h2><a name="class-delegate-methods">Methods implemented by the class's delegate</a></h2>
+<hr>
+
+<h3><a name="audioHardwareDefaultInputDeviceDidChange">audioHardwareDefaultInputDeviceDidChange</a></h3>
+<code>- (void) audioHardwareDefaultInputDeviceDidChange</code>
+<br><br>
+Sent when the default input device is changed by the user.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioHardwareDefaultOutputDeviceDidChange">audioHardwareDefaultOutputDeviceDidChange</a></h3>
+<code>- (void) audioHardwareDefaultOutputDeviceDidChange</code>
+<br><br>
+Sent when the default output device is changed by the user.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioHardwareDefaultSystemOutputDeviceDidChange">audioHardwareDefaultSystemOutputDeviceDidChange</a></h3>
+<code>- (void) audioHardwareDefaultSystemOutputDeviceDidChange</code>
+<br><br>
+Sent when the default output device for system audio services, such as SysBeep(),
+is changed by the user.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioHardwareDeviceListDidChange">audioHardwareDeviceListDidChange</a></h3>
+<code>- (void) audioHardwareDeviceListDidChange</code>
+<br><br>
+Sent when an audio device is added or removed from the system.
+<br><br>
+<hr width="25%" align=left>
+
+<hr>
+
+<h2><a name="delegate-methods">Methods implemented by an instance's delegate</a></h2>
+<hr>
+
+<h3><a name="audioDeviceBufferSizeInFramesDidChange:">audioDeviceBufferSizeInFramesDidChange:</a></h3>
+<code>- (void) audioDeviceBufferSizeInFramesDidChange:(MTCoreAudioDevice *)theDevice</code>
+<br><br>
+Sent when the length in frames of the IO buffers passed to the IOProc
+have changed.  If the length in frames of the IO buffers are variable
+from IO cycle to IO cycle, then this will be sent if either the minimum
+or maximum size changes.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceChannelsByStreamDidChange:forDirection:">audioDeviceChannelsByStreamDidChange:forDirection:</a></h3>
+<code>- (void) audioDeviceChannelsByStreamDidChange:(MTCoreAudioDevice *)theDevice forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sent when the channel configuration of the device changes in <i>theDirection</i>.  Any information about
+about a device's channel configuration should be discarded and refreshed.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceClockSourceDidChange:forChannel:forDirection:">audioDeviceClockSourceDidChange:forChannel:forDirection:</a></h3>
+<code>- (void) audioDeviceClockSourceDidChange:(MTCoreAudioDevice *)theDevice forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sent when the <a href="#clockSourceForChannel:forDirection:">clock source</a> for <i>theChannel</i> in <i>theDirection</i> changes.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceDidDie:">audioDeviceDidDie:</a></h3>
+<code>- (void) audioDeviceDidDie:(MTCoreAudioDevice *)theDevice</code>
+<br><br>
+Sent when an audio device is removed from the system or otherwise
+becomes unavailable.  Once this has been received, nothing further
+should be attempted with the device.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceDidOverload:">audioDeviceDidOverload:</a></h3>
+<code>- (void) audioDeviceDidOverload:(MTCoreAudioDevice *)theDevice</code>
+<br><br>
+<i>Adapted from the description for kAudioDeviceProcessorOverload</i>.
+Sent when the device's IO thread has been overloaded; that is, when
+the combined processing time for all of the device's IOProcs exceeds the duration of
+the buffer.  Overloading will cause the HAL to resync itself and restart
+the IO cycle to be sure that the IO thread goes to sleep.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceMuteDidChange:forChannel:forDirection:">audioDeviceMuteDidChange:forChannel:forDirection:</a></h3>
+<code>- (void) audioDeviceMuteDidChange:(MTCoreAudioDevice *)theDevice forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sent when the mute setting for <i>theChannel</i> in <i>theDirection</i> changes.  If the delegate doesn't
+implement this method but <strong>does</strong> implement
+<a href="#audioDeviceVolumeInfoDidChange:forChannel:forDirection:">audioDeviceVolumeInfoDidChange:forChannel:forDirection:</a>,
+that method is called.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceNominalSampleRateDidChange:">audioDeviceNominalSampleRateDidChange:</a></h3>
+<code>- (void) audioDeviceNominalSampleRateDidChange:(MTCoreAudioDevice *)theDevice</code>
+<br><br>
+Sent when the nominal sampling rate for the device changes.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceNominalSampleRatesDidChange:">audioDeviceNominalSampleRatesDidChange:</a></h3>
+<code>- (void) audioDeviceNominalSampleRatesDidChange:(MTCoreAudioDevice *)theDevice</code>
+<br><br>
+Sent when the list of available nominal sampling rate ranges for the device changes.  I don't
+know if this would ever get sent by a device, but <i>just in case</i>!
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDevicePlayThruDidChange:forChannel:forDirection:">audioDevicePlayThruDidChange:forChannel:forDirection:</a></h3>
+<code>- (void) audioDevicePlayThruDidChange:(MTCoreAudioDevice *)theDevice forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sent when the Play-Thru setting for <i>theChannel</i> in <i>theDirection</i> changes.  If the delegate doesn't
+implement this method but <strong>does</strong> implement
+<a href="#audioDeviceVolumeInfoDidChange:forChannel:forDirection:">audioDeviceVolumeInfoDidChange:forChannel:forDirection:</a>,
+that method is called.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceSomethingDidChange:">audioDeviceSomethingDidChange:</a></h3>
+<code>- (void) audioDeviceSomethingDidChange:(MTCoreAudioDevice *)theDevice</code>
+<br><br>
+<i>Description paraphrased from <a href="file:///System/Library/Frameworks/CoreAudio.framework/Headers/AudioHardware.h">AudioHardware.h</a>.</i>
+Sent when a change occurs to a device in a way that can't be conveyed by other means, such as controls appearing or disappearing.  The delegate should re-evaluate everything about the device when this message is receieved; in particular, the layout and values of controls.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceSourceDidChange:forDirection:">audioDeviceSourceDidChange:forDirection:</a></h3>
+<code>- (void) audioDeviceSourceDidChange:(MTCoreAudioDevice *)theDevice forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sent when the <a href="#dataSourceForDirection:">device master data source</a> for <i>theDirection</i> changes.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceStartDidFail:forReason:">audioDeviceStartDidFail:forReason:</a></h3>
+<code>- (void) audioDeviceStartDidFail:(MTCoreAudioDevice *)theDevice forReason:(OSStatus)theReason</code>
+<br><br>
+Sent when <a href="#deviceStart">deviceStart</a> fails.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceStreamDescriptionDidChange:forChannel:forDirection:">audioDeviceStreamDescriptionDidChange:forChannel:forDirection:</a></h3>
+<code>- (void) audioDeviceStreamDescriptionDidChange:(MTCoreAudioDevice *)theDevice forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sent when the stream format for the indicated channel and direction changes in any way
+(such as a sample rate change).
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceStreamsListDidChange:">audioDeviceStreamsListDidChange:</a></h3>
+<code>- (void) audioDeviceStreamsListDidChange:(MTCoreAudioDevice *)theDevice</code>
+<br><br>
+Sent when the stream configuration changes.  Any information obtained
+from <a href="MTCoreAudioStream.html">MTCoreAudioStream</a>s, and the list
+of MTCoreAudioStreams themselves, should be discarded and refreshed.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceVolumeDidChange:forChannel:forDirection:">audioDeviceVolumeDidChange:forChannel:forDirection:</a></h3>
+<code>- (void) audioDeviceVolumeDidChange:(MTCoreAudioDevice *)theDevice forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sent when the volume for <i>theChannel</i> in <i>theDirection</i> changes.  If the delegate doesn't
+implement this method but <strong>does</strong> implement
+<a href="#audioDeviceVolumeInfoDidChange:forChannel:forDirection:">audioDeviceVolumeInfoDidChange:forChannel:forDirection:</a>,
+that method is called.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="audioDeviceVolumeInfoDidChange:forChannel:forDirection:">audioDeviceVolumeInfoDidChange:forChannel:forDirection:</a></h3>
+<code>- (void) audioDeviceVolumeInfoDidChange:(MTCoreAudioDevice *)theDevice forChannel:(UInt32)theChannel forDirection:(MTCoreAudioDirection)theDirection</code>
+<br><br>
+Sent when any of the channel's volume, mute, or Play-Thru settings changes, if the more specific
+methods don't exist in the delegate.  See
+<a href="#audioDeviceVolumeDidChange:forChannel:forDirection:">audioDeviceVolumeDidChange:forChannel:forDirection:</a>,
+<a href="#audioDeviceMuteDidChange:forChannel:forDirection:">audioDeviceMuteDidChange:forChannel:forDirection:</a> and
+<a href="#audioDevicePlayThruDidChange:forChannel:forDirection:">audioDevicePlayThruDidChange:forChannel:forDirection:</a>.
+<br><br>
+<hr width="25%" align=left>
+
+<hr>
+
+<h2><a name="notifications">Notifications</a></h2>
+<hr>
+
+<h3><a name="MTCoreAudioHardwareDefaultInputDeviceDidChangeNotification">MTCoreAudioHardwareDefaultInputDeviceDidChangeNotification</a></h3>
+<code>MTCoreAudioHardwareDefaultInputDeviceDidChangeNotification</code>
+<br><br>
+Posted when the default input device is changed by the user.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="MTCoreAudioHardwareDefaultOutputDeviceDidChangeNotification">MTCoreAudioHardwareDefaultOutputDeviceDidChangeNotification</a></h3>
+<code>MTCoreAudioHardwareDefaultOutputDeviceDidChangeNotification</code>
+<br><br>
+Posted when the default output device is changed by the user.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="MTCoreAudioHardwareDefaultSystemOutputDeviceDidChangeNotification">MTCoreAudioHardwareDefaultSystemOutputDeviceDidChangeNotification</a></h3>
+<code>MTCoreAudioHardwareDefaultSystemOutputDeviceDidChangeNotification</code>
+<br><br>
+Posted when the default output device for system audio services, such as SysBeep(),
+is changed by the user.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="MTCoreAudioHardwareDeviceListDidChangeNotification">MTCoreAudioHardwareDeviceListDidChangeNotification</a></h3>
+<code>MTCoreAudioHardwareDeviceListDidChangeNotification</code>
+<br><br>
+Posted when an audio device is added or removed from the system.
+<br><br>
+<hr width="25%" align=left>
+
+
+<hr>
+
+<a href="http://aldebaran.armory.com/~zenomt/">Mike</a> &gt;
+<a href="http://aldebaran.armory.com/~zenomt/macosx/">Mac OS X</a> &gt;
+<a href="./index.html">MTCoreAudio.framework</a> &gt;
+MTCoreAudioDevice
+
+</body>
+</html>
+
+

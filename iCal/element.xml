@@ -1,0 +1,66 @@
+<element id="com.blacktree.Quicksilver.QSiCalModule" name="iCal Module" version="C0">
+    <info>
+        <category>Calendar</category>
+        <image>com.apple.iCal</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="iCal-Empty">
+                <plist version="1.0">
+                    <dict>
+                        <key>bundle</key>
+                        <string>com.apple.iCal</string>
+                        <key>resource</key>
+                        <string>App-empty.icns</string>
+                    </dict>
+                </plist>
+            </image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSiCalCreateToDoAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSiCalModule</string>
+                        <key>actionSelector</key>
+                        <string>createToDo:inCalendar:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.iCal</string>
+                        <key>indirectOptional</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Create iCal To-Do</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSiCalCreateEventAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSiCalModule</string>
+                        <key>actionSelector</key>
+                        <string>createEvent:inCalendar:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.apple.iCal</string>
+                        <key>indirectOptional</key>
+                        <true></true>
+                        <key>name</key>
+                        <string>Create iCal Event</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSBundleDrawingHandlers">
+            <bundle-draw-handler id="com.apple.iCal" class="QSiCalModule"></bundle-draw-handler>
+        </extension>
+    </extensions>
+</element>

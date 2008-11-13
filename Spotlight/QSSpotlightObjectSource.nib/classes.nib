@@ -1,0 +1,25 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            CLASS = QSAllApplicationsObjectSource; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = QSObjectSource; 
+        }, 
+        {CLASS = QSGroupObjectSource; LANGUAGE = ObjC; SUPERCLASS = QSObjectSource; }, 
+        {
+            CLASS = QSObjectSource; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {settingsView = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = QSSpotlightObjectSource; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = QSObjectSource; 
+        }, 
+        {CLASS = QSVolumesObjectSource; LANGUAGE = ObjC; SUPERCLASS = QSObjectSource; }
+    ); 
+    IBVersion = 1; 
+}

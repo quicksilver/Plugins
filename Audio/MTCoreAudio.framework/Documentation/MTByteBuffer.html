@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>MTByteBuffer</title>
+</head>
+
+<body>
+<h1>MTByteBuffer</h1>
+<p>
+<strong>Inherits from: <a href="MTBuffer.html">MTBuffer</a></strong>
+
+<p>
+An <strong>MTByteBuffer</strong> is a thread-safe, flow-controlled, fixed-size byte buffer.  In other words, it is a
+concrete subclass of <a href="MTBuffer.html">MTBuffer</a> where each abstract frame is one byte.  It is intended to be used as a
+producer/consumer conduit for arbitrary, byte-oriented data where each of producer and consumer may be
+batch-oriented or time-constrained.
+
+
+<h2>Method Types</h2>
+<hr>
+<ul plain>
+	<li>Creating instances
+	<ul plain>
+		<br>
+		<li> <a href="#initWithCapacity:">- initWithCapacity:</a>
+	</ul>
+
+	<br>
+	<li>Working with attributes
+	<ul plain>
+		<br>
+		<li> <a href="#capacity">- capacity</a>
+		<li> <a href="#count">- count</a>
+	</ul>
+	
+	<br>
+	<li>Working with data
+	<ul plain>
+		<br>
+		<li> <a href="#flush">- flush</a>
+		<li> <a href="#readToBytes:count:waitForData:">- readToBytes:count:waitForData:</a>
+		<li> <a href="#writeFromBytes:count:waitForRoom:">- writeFromBytes:count:waitForRoom:</a>
+	</ul>
+	
+	<br>
+</ul>
+
+
+<h2>Instance Methods</h2>
+<hr>
+
+<h3><a name="capacity">capacity</a></h3>
+<code>- (unsigned) capacity</code>
+<br><br>
+Returns the number of bytes the receiver can hold.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="count">count</a></h3>
+<code>- (unsigned) count</code>
+<br><br>
+Returns the number of bytes currently stored in the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="flush">flush</a></h3>
+<code>- (void) flush</code>
+<br><br>
+Empties the receiver.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="initWithCapacity:">initWithCapacity:</a></h3>
+<code>- (id) initWithCapacity:(unsigned)capacity</code>
+<br><br>
+Initializes a newly allocated buffer with space for <i>capacity</i> bytes.  This is the designated initializer.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="readToBytes:count:waitForData:">readToBytes:count:waitForData:</a></h3>
+<code>- (unsigned) readToBytes:(void *)theBytes count:(unsigned)count waitForData:(Boolean)wait</code>
+<br><br>
+Copies up to <i>count</i> bytes from the receiver into <i>theBytes</i>.  If <i>wait</i> is <code>NO</code>,
+then a maximum of
+<a href="#count">[receiver count]</a> bytes will be copied immediately.  If <i>wait</i> is <code>YES</code>,
+then exactly <i>count</i> bytes will be copied, and this method will pause if necessary until enough data
+has been written into the buffer by
+<a href="#writeFromBytes:count:waitForRoom:">writeFromBytes:count:waitForRoom:</a> to supply the request.
+Returns the number of bytes copied.
+<br><br>
+<hr width="25%" align=left>
+
+<h3><a name="writeFromBytes:count:waitForRoom:">writeFromBytes:count:waitForRoom:</a></h3>
+<code>- (unsigned) writeFromBytes:(void *)theBytes count:(unsigned)count waitForRoom:(Boolean)wait</code>
+<br><br>
+Copies up to <i>count</i> bytes from <i>theBytes</i> into the receiver.  If <i>wait</i> is <code>NO</code>,
+then a maximum of
+<a href="#capacity">capacity</a> minus <a href="#count">[receiver count]</a> bytes will be
+copied immediately.  If <i>wait</i> is <code>YES</code>, then exactly <i>count</i> bytes will be copied,
+and this method will pause if necessary until enough room has been made in the buffer by
+<a href="#readToBytes:count:waitForData:">readToBytes:count:waitForData:</a> to accommodate the request.
+Returns the number of bytes copied.
+<br><br>
+<hr width="25%" align=left>
+
+
+<hr>
+
+<a href="http://aldebaran.armory.com/~zenomt/">Mike</a> &gt;
+<a href="http://aldebaran.armory.com/~zenomt/macosx/">Mac OS X</a> &gt;
+<a href="./index.html">MTCoreAudio.framework</a> &gt;
+MTByteBuffer
+
+</body>
+</html>

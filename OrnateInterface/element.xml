@@ -1,0 +1,11 @@
+<element id="com.blacktree.Quicksilver.QSOrnateInterfacePlugIn" name="Ornate Interface" version="F0">
+    <info>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSCommandInterfaceControllers">
+            <command-interface id="QSOrnateInterfaceController" class="QSOrnateInterfaceController"></command-interface>
+        </extension>
+    </extensions>
+</element>

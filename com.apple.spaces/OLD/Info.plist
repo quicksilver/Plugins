@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>QS Workspace Manager</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSDesktopManagerModule</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Desktop Manager Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.5.0</string>
+	<key>CFBundleVersion</key>
+	<string>83</string>
+	<key>NSPrincipalClass</key>
+	<string>QSDesktopManagerModule</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>description</key>
+		<string></string>
+		<key>requiresFeature</key>
+		<string>2</string>
+		<key>webIcon</key>
+		<string></string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetQSDesktopManagerModule</string>
+			<key>name</key>
+			<string>Desktops (Workspaces)</string>
+			<key>source</key>
+			<string>QSDesktopManagerModule_Source</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSActionProviders</key>
+		<dict>
+			<key>QSDesktopManagerModule_Action</key>
+			<string>QSDesktopManagerModule_Action</string>
+		</dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>net.sf.wsmanager.desktopmanager</key>
+			<string>QSDesktopManagerModule_Source</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>qs.workspaceid</key>
+			<string>QSDesktopManagerModule_Source</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>QSDesktopManagerModule_Source</key>
+			<string>QSDesktopManagerModule_Source</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

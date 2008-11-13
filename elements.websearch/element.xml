@@ -1,0 +1,117 @@
+<element id="com.blacktree.Quicksilver.QSWebSearchPlugIn" name="Web Search Module" version="105">
+    <info>
+        <category>Web</category>
+        <category>Search</category>
+        <image>Find</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetDocWebSearches">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetDocWebSearches</string>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>name</key>
+                        <string>Web Searches (from docs.blacktree.com)</string>
+                        <key>settings</key>
+                        <dict>
+                            <key>contentPrefix</key>
+                            <string>&lt;div class="QSWebSearchContentStart">&lt;/div></string>
+                            <key>contentSuffix</key>
+                            <string>&lt;div class="QSWebSearchContentEnd">&lt;/div></string>
+                            <key>path</key>
+                            <string>http://docs.blacktree.com/doku.php?id=quicksilver:web_search_list</string>
+                        </dict>
+                        <key>source</key>
+                        <string>QSWebSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSURLSearchForAndReturnAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSURLSearchActions</string>
+                        <key>actionSelector</key>
+                        <string>doURLSearchForAndReturnAction:withString:</string>
+                        <key>description</key>
+                        <string>Returns the results of a query directly to the command window</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>Apple URL pasteboard type</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>icon</key>
+                        <string>Find</string>
+                        <key>name</key>
+                        <string>Show Results for Search...</string>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSURLSearchForAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSURLSearchActions</string>
+                        <key>actionSelector</key>
+                        <string>doURLSearchForAction:withString:</string>
+                        <key>alternateAction</key>
+                        <string>QSURLSearchForAndReturnAction</string>
+                        <key>description</key>
+                        <string>Search for text on a web site</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>Apple URL pasteboard type</string>
+                        </array>
+                        <key>icon</key>
+                        <string>Find</string>
+                        <key>name</key>
+                        <string>Search For...</string>
+                        <key>rankModification</key>
+                        <real>4</real>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSURLFindWithAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSURLSearchActions</string>
+                        <key>actionSelector</key>
+                        <string>doURLSearchForAction:withString:</string>
+                        <key>description</key>
+                        <string>Find text on a website</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>Find</string>
+                        <key>name</key>
+                        <string>Find With...</string>
+                        <key>reverseArguments</key>
+                        <true></true>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSWebSearchSource" class="QSWebSearchSource"></object-source>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSURLSearchActions" class="QSURLSearchActions"></action-provider>
+        </extension>
+    </extensions>
+</element>

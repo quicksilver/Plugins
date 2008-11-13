@@ -1,0 +1,261 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7FE7D04E0D1EB7770043A815 /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D0460D1EB7770043A815 /* Common.xcconfig */; };
+		7FE7D04F0D1EB7770043A815 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D0470D1EB7770043A815 /* Debug.xcconfig */; };
+		7FE7D0500D1EB7770043A815 /* Developer.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D0480D1EB7770043A815 /* Developer.xcconfig */; };
+		7FE7D0510D1EB7770043A815 /* QSElement.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D0490D1EB7770043A815 /* QSElement.xcconfig */; };
+		7FE7D0520D1EB7770043A815 /* QSPlugIn.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D04B0D1EB7770043A815 /* QSPlugIn.xcconfig */; };
+		7FE7D0530D1EB7770043A815 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D04D0D1EB7770043A815 /* Release.xcconfig */; };
+		7FE7D1160D1EB8590043A815 /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7FE7D1150D1EB8590043A815 /* element.xml */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1EE9FFB079F184900342677 /* QSHFSAttributeActions.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE9FF9079F184900342677 /* QSHFSAttributeActions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32DBCF980370C29C00C91783 /* QSFileAttributesPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSFileAttributesPlugin_Prefix.pch; sourceTree = "<group>"; };
+		7FE7D0460D1EB7770043A815 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = Configuration/Common.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D0470D1EB7770043A815 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D0480D1EB7770043A815 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = Configuration/Developer.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D0490D1EB7770043A815 /* QSElement.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSElement.xcconfig; path = Configuration/QSElement.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D04A0D1EB7770043A815 /* QSElement_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSElement_Prefix.pch; path = Configuration/QSElement_Prefix.pch; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D04B0D1EB7770043A815 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn.xcconfig; path = Configuration/QSPlugIn.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D04C0D1EB7770043A815 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSPlugIn_Prefix.pch; path = Configuration/QSPlugIn_Prefix.pch; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D04D0D1EB7770043A815 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D1150D1EB8590043A815 /* element.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* File Attribute Actions.element */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "File Attribute Actions.element"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E1EE9FF8079F184900342677 /* QSHFSAttributeActions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSHFSAttributeActions.h; sourceTree = "<group>"; };
+		E1EE9FF9079F184900342677 /* QSHFSAttributeActions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSHFSAttributeActions.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSFileAttributesPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				7FE7D0450D1EB7770043A815 /* Configuration */,
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = QSFileAttributesPlugin;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7FE7D1150D1EB8590043A815 /* element.xml */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* File Attribute Actions.element */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1EE9FF8079F184900342677 /* QSHFSAttributeActions.h */,
+				E1EE9FF9079F184900342677 /* QSHFSAttributeActions.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF980370C29C00C91783 /* QSFileAttributesPlugin_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		7FE7D0450D1EB7770043A815 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				7FE7D0460D1EB7770043A815 /* Common.xcconfig */,
+				7FE7D0470D1EB7770043A815 /* Debug.xcconfig */,
+				7FE7D0480D1EB7770043A815 /* Developer.xcconfig */,
+				7FE7D0490D1EB7770043A815 /* QSElement.xcconfig */,
+				7FE7D04A0D1EB7770043A815 /* QSElement_Prefix.pch */,
+				7FE7D04B0D1EB7770043A815 /* QSPlugIn.xcconfig */,
+				7FE7D04C0D1EB7770043A815 /* QSPlugIn_Prefix.pch */,
+				7FE7D04D0D1EB7770043A815 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* File Attribute Actions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F07AFEA085E433000E2AFC4 /* Build configuration list for PBXNativeTarget "File Attribute Actions" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "File Attribute Actions";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSFileAttributesPlugin;
+			productReference = 8D1AC9740486D14A00FE50C9 /* File Attribute Actions.element */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7F07AFEE085E433000E2AFC4 /* Build configuration list for PBXProject "QSFileAttributesPlugin copy" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* QSFileAttributesPlugin */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* File Attribute Actions */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FE7D04E0D1EB7770043A815 /* Common.xcconfig in Resources */,
+				7FE7D04F0D1EB7770043A815 /* Debug.xcconfig in Resources */,
+				7FE7D0500D1EB7770043A815 /* Developer.xcconfig in Resources */,
+				7FE7D0510D1EB7770043A815 /* QSElement.xcconfig in Resources */,
+				7FE7D0520D1EB7770043A815 /* QSPlugIn.xcconfig in Resources */,
+				7FE7D0530D1EB7770043A815 /* Release.xcconfig in Resources */,
+				7FE7D1160D1EB8590043A815 /* element.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EE9FFB079F184900342677 /* QSHFSAttributeActions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7F07AFEC085E433000E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D0490D1EB7770043A815 /* QSElement.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "File Attribute Actions";
+			};
+			name = Release;
+		};
+		7F07AFF0085E433000E2AFC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D04D0D1EB7770043A815 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		7FE7D0F80D1EB78F0043A815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D0470D1EB7770043A815 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		7FE7D0F90D1EB78F0043A815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D0490D1EB7770043A815 /* QSElement.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "File Attribute Actions";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F07AFEA085E433000E2AFC4 /* Build configuration list for PBXNativeTarget "File Attribute Actions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AFEC085E433000E2AFC4 /* Release */,
+				7FE7D0F90D1EB78F0043A815 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F07AFEE085E433000E2AFC4 /* Build configuration list for PBXProject "QSFileAttributesPlugin copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F07AFF0085E433000E2AFC4 /* Release */,
+				7FE7D0F80D1EB78F0043A815 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

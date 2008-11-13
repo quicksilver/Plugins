@@ -1,0 +1,118 @@
+<element id="com.blacktree.Quicksilver.QSYojimboPlugIn" name="Yojimbo Module" version="7C">
+    <info>
+        <category>Text</category>
+        <category>Database</category>
+        <category>Applications</category>
+        <image>com.barebones.yojimbo</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetQSYojimboPlugIn">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetQSYojimboPlugIn</string>
+                        <key>name</key>
+                        <string>Yojimbo Items</string>
+                        <key>source</key>
+                        <string>QSYojimboPlugInSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSYojimboAppendAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSYojimboPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>appendToNote:content:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>com.barebones.yojimbo.item</string>
+                        </array>
+                        <key>enabled</key>
+                        <false></false>
+                        <key>icon</key>
+                        <string>com.barebones.yojimbo</string>
+                        <key>name</key>
+                        <string>Append Text (Makes Plaintext)</string>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSYojimboAddAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSYojimboPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>addObject:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>NSStringPboardType</string>
+                            <string>Apple URL pasteboard type</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.barebones.yojimbo</string>
+                        <key>name</key>
+                        <string>Add to Yojimbo</string>
+                        <key>validatesObjects</key>
+                        <true></true>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSYojimboAddArchiveAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSYojimboPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>addObjectArchive:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>Apple URL pasteboard type</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.barebones.yojimbo</string>
+                        <key>name</key>
+                        <string>Archive to Yojimbo</string>
+                    </dict>
+                </plist>
+            </action>
+            <action id="QSYojimboShowAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSYojimboPlugInAction</string>
+                        <key>actionSelector</key>
+                        <string>showObject:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>com.barebones.yojimbo.item</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.barebones.yojimbo</string>
+                        <key>name</key>
+                        <string>Show in Yojimbo</string>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSYojimboPlugInSource" class="QSYojimboPlugInSource"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="QSYojimboPlugInType" class="QSYojimboPlugInSource"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSYojimboPlugInAction" class="QSYojimboPlugInAction"></action-provider>
+        </extension>
+        <extension point="QSBundleChildHandlers">
+            <bundle-child-handler id="com.barebones.yojimbo" class="QSYojimboPlugInSource"></bundle-child-handler>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'QSFlashlightInterface' target in the 'QSFlashlightInterface' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSFlashlightInterfaceType @"QSFlashlightInterfaceType"

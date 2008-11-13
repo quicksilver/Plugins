@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		0259C573FE90428111CA0C5A = {
+			buildSettings = {
+			};
+			buildStyles = (
+				2E58F360FFB2326E11CA0CBA,
+				2E58F361FFB2326E11CA0CBA,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 0259C574FE90428111CA0C5A;
+			projectDirPath = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9,
+			);
+		};
+		0259C574FE90428111CA0C5A = {
+			children = (
+				32DBCF9E0370C38000C91783,
+				32DBCF9F0370C38200C91783,
+				0259C582FE90428111CA0C5A,
+				1ED78706FE9D4A0611CA0C5A,
+				2E58F364FFB232C311CA0CBA,
+			);
+			isa = PBXGroup;
+			name = QSCaminoPlugIn;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A = {
+			children = (
+				8D1AC9730486D14A00FE50C9,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//020
+//021
+//022
+//023
+//024
+//1E0
+//1E1
+//1E2
+//1E3
+//1E4
+		1ED78706FE9D4A0611CA0C5A = {
+			children = (
+				8D1AC9740486D14A00FE50C9,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//1E0
+//1E1
+//1E2
+//1E3
+//1E4
+//2E0
+//2E1
+//2E2
+//2E3
+//2E4
+		2E58F360FFB2326E11CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		2E58F361FFB2326E11CA0CBA = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+		2E58F364FFB232C311CA0CBA = {
+			children = (
+				DD92D38A0106425D02CA0E72,
+				7F35FF3C07F9ACD90056051D,
+				7F35FF3E07F9ACD90056051D,
+				7FFA8E9C0816CCCA00A858CD,
+				7FFA8E9D0816CCCA00A858CD,
+				7FC20C8107FB741700FDD3CA,
+			);
+			isa = PBXGroup;
+			name = Frameworks;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//2E0
+//2E1
+//2E2
+//2E3
+//2E4
+//320
+//321
+//322
+//323
+//324
+		32DBCF980370C29C00C91783 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = QSCaminoPlugIn_Prefix.pch;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 = {
+			children = (
+				7F3F94A5084FCAD600B757FA,
+				7F3F94A6084FCAD600B757FA,
+			);
+			isa = PBXGroup;
+			name = Classes;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 = {
+			children = (
+				32DBCF980370C29C00C91783,
+			);
+			isa = PBXGroup;
+			name = "Other Sources";
+			path = "";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//320
+//321
+//322
+//323
+//324
+//7F0
+//7F1
+//7F2
+//7F3
+//7F4
+		7F35FF3C07F9ACD90056051D = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			path = QSCore.framework;
+			refType = 4;
+			sourceTree = QSFrameworks;
+		};
+		7F35FF3D07F9ACD90056051D = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			path = QSEffects.framework;
+			refType = 4;
+			sourceTree = QSFrameworks;
+		};
+		7F35FF3E07F9ACD90056051D = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			path = QSFoundation.framework;
+			refType = 4;
+			sourceTree = QSFrameworks;
+		};
+		7F35FF3F07F9ACD90056051D = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			path = QSInterface.framework;
+			refType = 4;
+			sourceTree = QSFrameworks;
+		};
+		7F35FF4007F9ACD90056051D = {
+			fileRef = 7F35FF3C07F9ACD90056051D;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		7F35FF4207F9ACD90056051D = {
+			fileRef = 7F35FF3E07F9ACD90056051D;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		7F3F94A5084FCAD600B757FA = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = QSCaminoParser.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		7F3F94A6084FCAD600B757FA = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = QSCaminoParser.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		7F3F94A7084FCAD600B757FA = {
+			fileRef = 7F3F94A6084FCAD600B757FA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		7FC20C8107FB741700FDD3CA = {
+			children = (
+				7F35FF3D07F9ACD90056051D,
+				7F35FF3F07F9ACD90056051D,
+			);
+			isa = PBXGroup;
+			name = "Other Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		7FFA8E9C0816CCCA00A858CD = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			path = QSEffects.framework;
+			refType = 4;
+			sourceTree = QSFrameworks;
+		};
+		7FFA8E9D0816CCCA00A858CD = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			path = QSInterface.framework;
+			refType = 4;
+			sourceTree = QSFrameworks;
+		};
+//7F0
+//7F1
+//7F2
+//7F3
+//7F4
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+		8D1AC9600486D14A00FE50C9 = {
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9,
+				8D1AC96A0486D14A00FE50C9,
+				8D1AC96E0486D14A00FE50C9,
+				E1022B2806B3475D00299BEC,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				BUILD_DIR = "$(SYMROOT)/PlugIns/";
+				FRAMEWORK_SEARCH_PATHS = "/Applications/Quicksilver.app/Contents/Frameworks /Volumes/Lore/Forge/Build";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QSCaminoPlugIn_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Developer/Palettes";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "Camino Module";
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = "Camino Module";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSCaminoPlugIn;
+			productReference = 8D1AC9740486D14A00FE50C9;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1AC9660486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96A0486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				7F3F94A7084FCAD600B757FA,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96E0486D14A00FE50C9 = {
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9,
+				7F35FF4007F9ACD90056051D,
+				7F35FF4207F9ACD90056051D,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC9700486D14A00FE50C9 = {
+			fileRef = DD92D38A0106425D02CA0E72;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D1AC9730486D14A00FE50C9 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist;
+			path = Info.plist;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8D1AC9740486D14A00FE50C9 = {
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = "Camino Module.qsplugin";
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+//DD0
+//DD1
+//DD2
+//DD3
+//DD4
+		DD92D38A0106425D02CA0E72 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+//DD0
+//DD1
+//DD2
+//DD3
+//DD4
+//E10
+//E11
+//E12
+//E13
+//E14
+		E1022B2806B3475D00299BEC = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			isa = PBXShellScriptBuildPhase;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+	};
+	rootObject = 0259C573FE90428111CA0C5A;
+}

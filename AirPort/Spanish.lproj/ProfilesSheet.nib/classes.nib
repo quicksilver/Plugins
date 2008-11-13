@@ -1,0 +1,31 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                profileMakeActive = id; 
+                profilesAdd = id; 
+                profilesDelete = id; 
+                profilesDuplicate = id; 
+                profilesOK = id; 
+                profilesRename = id; 
+                profilesShowHelp = id; 
+            }; 
+            CLASS = ProfilesSheetController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_profilesAddButton" = id; 
+                "_profilesDeleteButton" = id; 
+                "_profilesDescription" = id; 
+                "_profilesDuplicateButton" = id; 
+                "_profilesHelpButton" = id; 
+                "_profilesOKButton" = id; 
+                "_profilesPanel" = id; 
+                "_profilesRenameButton" = id; 
+                "_profilesTable" = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

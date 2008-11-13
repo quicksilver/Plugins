@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'QSAcidSearchPlugIn' target in the 'QSAcidSearchPlugIn' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import <QSCore/QSCore.h>
+#endif
+
+
+#define kQSAcidSearchPlugInType @"QSAcidSearchPlugInType"

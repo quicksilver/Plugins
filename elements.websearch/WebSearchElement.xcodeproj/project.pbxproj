@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F7EB2D70BFEB69300AFDF2C /* QSWebSearchPlugIn_Source.h in Resources */ = {isa = PBXBuildFile; fileRef = E1B32E9F078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.h */; };
+		7F7EB2D80BFEB69300AFDF2C /* QSWebSearchSource.nib in Resources */ = {isa = PBXBuildFile; fileRef = E1B332FE078CD6980076DA42 /* QSWebSearchSource.nib */; };
+		7F7EB2D90BFEB69300AFDF2C /* QSObjectSource.name.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1F2DC1D078D977D007B9046 /* QSObjectSource.name.strings */; };
+		7F7EB2DB0BFEB69300AFDF2C /* QSWebSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1812CB3076BDBFA00A8EFA8 /* QSWebSearchController.m */; };
+		7F7EB2DC0BFEB69300AFDF2C /* QSURLSearchActions.m in Sources */ = {isa = PBXBuildFile; fileRef = E1812D45076BDEE700A8EFA8 /* QSURLSearchActions.m */; };
+		7F7EB2DD0BFEB69300AFDF2C /* QSWebSearchPlugIn_Source.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B32EA0078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.m */; };
+		7F7EB2DF0BFEB69300AFDF2C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		7F7EB40C0BFEB72500AFDF2C /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7F7EB40B0BFEB72500AFDF2C /* element.xml */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1812CB5076BDBFA00A8EFA8 /* QSWebSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1812CB3076BDBFA00A8EFA8 /* QSWebSearchController.m */; };
+		E1812D47076BDEE700A8EFA8 /* QSURLSearchActions.m in Sources */ = {isa = PBXBuildFile; fileRef = E1812D45076BDEE700A8EFA8 /* QSURLSearchActions.m */; };
+		E1B32EA1078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.h in Resources */ = {isa = PBXBuildFile; fileRef = E1B32E9F078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.h */; };
+		E1B32EA2078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B32EA0078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.m */; };
+		E1B332FF078CD6980076DA42 /* QSWebSearchSource.nib in Resources */ = {isa = PBXBuildFile; fileRef = E1B332FE078CD6980076DA42 /* QSWebSearchSource.nib */; };
+		E1F2DC1F078D977D007B9046 /* QSObjectSource.name.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1F2DC1D078D977D007B9046 /* QSObjectSource.name.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32DBCF980370C29C00C91783 /* QSWebSearchPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSWebSearchPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		7F7EB2E90BFEB69300AFDF2C /* Web Search.element */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Web Search.element"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F7EB40B0BFEB72500AFDF2C /* element.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
+		7FA985BD096F208600321006 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
+		7FA985BE096F208600321006 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
+		7FA985BF096F208600321006 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
+		7FA985C0096F208600321006 /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
+		7FE7D3040D1EFF470043A815 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = Configuration/Common.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D3050D1EFF470043A815 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D3060D1EFF470043A815 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = Configuration/Developer.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D3070D1EFF470043A815 /* QSElement.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSElement.xcconfig; path = Configuration/QSElement.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D3080D1EFF470043A815 /* QSElement_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSElement_Prefix.pch; path = Configuration/QSElement_Prefix.pch; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D3090D1EFF470043A815 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn.xcconfig; path = Configuration/QSPlugIn.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D30A0D1EFF470043A815 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSPlugIn_Prefix.pch; path = Configuration/QSPlugIn_Prefix.pch; sourceTree = QS_SOURCE_ROOT; };
+		7FE7D30B0D1EFF470043A815 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = QS_SOURCE_ROOT; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* Web Search Module.element */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Web Search Module.element"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E1812CB2076BDBFA00A8EFA8 /* QSWebSearchController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSWebSearchController.h; sourceTree = "<group>"; };
+		E1812CB3076BDBFA00A8EFA8 /* QSWebSearchController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSWebSearchController.m; sourceTree = "<group>"; };
+		E1812D44076BDEE700A8EFA8 /* QSURLSearchActions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSURLSearchActions.h; sourceTree = "<group>"; };
+		E1812D45076BDEE700A8EFA8 /* QSURLSearchActions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSURLSearchActions.m; sourceTree = "<group>"; };
+		E1B32E9F078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSWebSearchPlugIn_Source.h; sourceTree = "<group>"; };
+		E1B32EA0078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSWebSearchPlugIn_Source.m; sourceTree = "<group>"; };
+		E1B332FE078CD6980076DA42 /* QSWebSearchSource.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSWebSearchSource.nib; sourceTree = "<group>"; };
+		E1EAB045068128A200774DFF /* QSWebSearchPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSWebSearchPlugIn.m; sourceTree = "<group>"; };
+		E1EAB047068128A800774DFF /* QSWebSearchPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSWebSearchPlugIn.h; sourceTree = "<group>"; };
+		E1F2DB1B078D2AD2007B9046 /* DNDArrayController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DNDArrayController.h; sourceTree = "<group>"; };
+		E1F2DB1C078D2AD2007B9046 /* DNDArrayController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DNDArrayController.m; sourceTree = "<group>"; };
+		E1F2DC1E078D977D007B9046 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = English; path = English.lproj/QSObjectSource.name.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F7EB2DE0BFEB69300AFDF2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F7EB2DF0BFEB69300AFDF2C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSWebSearchPlugIn */ = {
+			isa = PBXGroup;
+			children = (
+				7FE7D3030D1EFF470043A815 /* Configuration */,
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = QSWebSearchPlugIn;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F7EB40B0BFEB72500AFDF2C /* element.xml */,
+				E1F2DC1D078D977D007B9046 /* QSObjectSource.name.strings */,
+				E1B332FE078CD6980076DA42 /* QSWebSearchSource.nib */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* Web Search Module.element */,
+				7F7EB2E90BFEB69300AFDF2C /* Web Search.element */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FA985BD096F208600321006 /* QSCore.framework */,
+				7FA985BE096F208600321006 /* QSEffects.framework */,
+				7FA985BF096F208600321006 /* QSFoundation.framework */,
+				7FA985C0096F208600321006 /* QSInterface.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1EAB045068128A200774DFF /* QSWebSearchPlugIn.m */,
+				E1812CB2076BDBFA00A8EFA8 /* QSWebSearchController.h */,
+				E1812CB3076BDBFA00A8EFA8 /* QSWebSearchController.m */,
+				E1812D44076BDEE700A8EFA8 /* QSURLSearchActions.h */,
+				E1812D45076BDEE700A8EFA8 /* QSURLSearchActions.m */,
+				E1B32E9F078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.h */,
+				E1B32EA0078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.m */,
+				E1F2DB1B078D2AD2007B9046 /* DNDArrayController.h */,
+				E1F2DB1C078D2AD2007B9046 /* DNDArrayController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF980370C29C00C91783 /* QSWebSearchPlugIn_Prefix.pch */,
+				E1EAB047068128A800774DFF /* QSWebSearchPlugIn.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		7FE7D3030D1EFF470043A815 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				7FE7D3040D1EFF470043A815 /* Common.xcconfig */,
+				7FE7D3050D1EFF470043A815 /* Debug.xcconfig */,
+				7FE7D3060D1EFF470043A815 /* Developer.xcconfig */,
+				7FE7D3070D1EFF470043A815 /* QSElement.xcconfig */,
+				7FE7D3080D1EFF470043A815 /* QSElement_Prefix.pch */,
+				7FE7D3090D1EFF470043A815 /* QSPlugIn.xcconfig */,
+				7FE7D30A0D1EFF470043A815 /* QSPlugIn_Prefix.pch */,
+				7FE7D30B0D1EFF470043A815 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F7EB2D50BFEB69300AFDF2C /* Web Search */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F7EB2E50BFEB69300AFDF2C /* Build configuration list for PBXNativeTarget "Web Search" */;
+			buildPhases = (
+				7F7EB2D60BFEB69300AFDF2C /* Resources */,
+				7F7EB2DA0BFEB69300AFDF2C /* Sources */,
+				7F7EB2DE0BFEB69300AFDF2C /* Frameworks */,
+				7F7EB2E40BFEB69300AFDF2C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Web Search";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSWebSearchPlugIn;
+			productReference = 7F7EB2E90BFEB69300AFDF2C /* Web Search.element */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1AC9600486D14A00FE50C9 /* Web Search Module */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FFF25CC085E488700266176 /* Build configuration list for PBXNativeTarget "Web Search Module" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Web Search Module";
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = QSWebSearchPlugIn;
+			productReference = 8D1AC9740486D14A00FE50C9 /* Web Search Module.element */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7FFF25D0085E488700266176 /* Build configuration list for PBXProject "WebSearchElement" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* QSWebSearchPlugIn */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* Web Search Module */,
+				7F7EB2D50BFEB69300AFDF2C /* Web Search */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F7EB2D60BFEB69300AFDF2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F7EB2D70BFEB69300AFDF2C /* QSWebSearchPlugIn_Source.h in Resources */,
+				7F7EB2D80BFEB69300AFDF2C /* QSWebSearchSource.nib in Resources */,
+				7F7EB2D90BFEB69300AFDF2C /* QSObjectSource.name.strings in Resources */,
+				7F7EB40C0BFEB72500AFDF2C /* element.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1B32EA1078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.h in Resources */,
+				E1B332FF078CD6980076DA42 /* QSWebSearchSource.nib in Resources */,
+				E1F2DC1F078D977D007B9046 /* QSObjectSource.name.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F7EB2E40BFEB69300AFDF2C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# $SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F7EB2DA0BFEB69300AFDF2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F7EB2DB0BFEB69300AFDF2C /* QSWebSearchController.m in Sources */,
+				7F7EB2DC0BFEB69300AFDF2C /* QSURLSearchActions.m in Sources */,
+				7F7EB2DD0BFEB69300AFDF2C /* QSWebSearchPlugIn_Source.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1812CB5076BDBFA00A8EFA8 /* QSWebSearchController.m in Sources */,
+				E1812D47076BDEE700A8EFA8 /* QSURLSearchActions.m in Sources */,
+				E1B32EA2078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E1F2DC1D078D977D007B9046 /* QSObjectSource.name.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1F2DC1E078D977D007B9046 /* English */,
+			);
+			name = QSObjectSource.name.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F69A1980D1F078400D5C99E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D3050D1EFF470043A815 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		7F69A1990D1F078400D5C99E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D3070D1EFF470043A815 /* QSElement.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		7F69A19A0D1F078400D5C99E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D3070D1EFF470043A815 /* QSElement.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		7F7EB2E70BFEB69300AFDF2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D3070D1EFF470043A815 /* QSElement.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		7FFF25CE085E488700266176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D3070D1EFF470043A815 /* QSElement.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		7FFF25D2085E488700266176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE7D30B0D1EFF470043A815 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F7EB2E50BFEB69300AFDF2C /* Build configuration list for PBXNativeTarget "Web Search" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F7EB2E70BFEB69300AFDF2C /* Release */,
+				7F69A19A0D1F078400D5C99E /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7FFF25CC085E488700266176 /* Build configuration list for PBXNativeTarget "Web Search Module" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FFF25CE085E488700266176 /* Release */,
+				7F69A1990D1F078400D5C99E /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7FFF25D0085E488700266176 /* Build configuration list for PBXProject "WebSearchElement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FFF25D2085E488700266176 /* Release */,
+				7F69A1980D1F078400D5C99E /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

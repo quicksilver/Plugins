@@ -1,0 +1,24 @@
+<element id="com.blacktree.Quicksilver.QSXcodePlugIn" name="Xcode Module" version="23">
+    <info>
+        <category>Development</category>
+        <image>com.apple.Xcode</image>
+    </info>
+    <requirements/>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSFileObjectCreationHandlers">
+            <extension id="com.apple.xcode.project" class="QSXcodePlugIn"/>
+        </extension>
+        <extension point="QSFSParsers">
+            <file-parser id="QSXcodePlugIn" class="QSXcodePlugIn"/>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="qs.apple.xcode.project" class="QSXcodePlugInSource"/>
+        </extension>
+        <extension point="QSFSFileTypeParsers">
+            <file-type-parser id="com.apple.xcode.project" class="QSXcodePlugIn"/>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSXcodePlugInAction" class="QSXcodePlugInAction"/>
+        </extension>
+    </extensions>
+</element>

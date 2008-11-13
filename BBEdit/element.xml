@@ -1,0 +1,70 @@
+<element id="com.blacktree.Quicksilver.QSBBEditPlugIn" name="BBEdit Module" version="2C">
+    <info>
+        <category>Development</category>
+        <category>Applications</category>
+        <category>Text</category>
+        <image></image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetBBEditRecents">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetBBEditRecents</string>
+                        <key>enabled</key>
+                        <integer>1</integer>
+                        <key>icon</key>
+                        <string>com.barebones.bbedit</string>
+                        <key>modificationDate</key>
+                        <real>108654312</real>
+                        <key>name</key>
+                        <string>BBEdit Recent Documents</string>
+                        <key>settings</key>
+                        <dict>
+                            <key>folderDepth</key>
+                            <integer>1</integer>
+                            <key>parser</key>
+                            <string>QSDirectoryParser</string>
+                            <key>path</key>
+                            <string>~/Library/Preferences/BBEdit Preferences/Recent Files &amp; Favorites</string>
+                        </dict>
+                        <key>source</key>
+                        <string>QSFileSystemObjectSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSBBEditShowLineAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSBBEditPlugIn_Action</string>
+                        <key>actionSelector</key>
+                        <string>openLineReference:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSLineReferenceType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>com.barebones.bbedit</string>
+                        <key>name</key>
+                        <string>Select in BBEdit</string>
+                        <key>rankModification</key>
+                        <integer>3</integer>
+                        <key>validatesObjects</key>
+                        <false></false>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSBBEditPlugIn_Action" class="QSBBEditPlugIn_Action"></action-provider>
+        </extension>
+        <extension point="QSBundleChildPresets">
+            <bundle-child-preset id="com.barebones.bbedit" class="QSPresetBBEditRecents"></bundle-child-preset>
+        </extension>
+    </extensions>
+</element>

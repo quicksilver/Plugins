@@ -1,0 +1,11 @@
+<element id="com.blacktree.elements.WebBridge" name="WebBridge" version="1A">
+    <info>
+        <image></image>
+    </info>
+    <requirements/>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSLoadAtLaunch">
+            <extension id="WebBridgeElement" class="WebBridgeElement"/>
+        </extension>
+    </extensions>
+</element>

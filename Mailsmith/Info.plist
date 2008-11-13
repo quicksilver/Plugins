@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Mailsmith Module</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSMailsmithPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Mailsmith Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.5.0</string>
+	<key>CFBundleVersion</key>
+	<string>9A</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Blacktree, Inc.</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Mail &amp; Chat</string>
+			<string>Applications</string>
+		</array>
+		<key>description</key>
+		<string>Enables email actions for Mailsmith</string>
+		<key>requiresBundle</key>
+		<string>com.barebones.mailsmith</string>
+		<key>requiresFeature</key>
+		<string>0</string>
+		<key>webIcon</key>
+		<string>http://blacktree.com/apps/quicksilver/images/appicons/Mailsmith.gif</string>
+	</dict>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSMailMediators</key>
+		<dict>
+			<key>com.barebones.mailsmith</key>
+			<string>QSMailsmithMailMediator</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

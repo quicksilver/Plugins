@@ -1,0 +1,12 @@
+<element id="com.blacktree.Quicksilver.QSCommonMusicArtworkPlugIn" name="Music ARTchive Artwork" version="45">
+    <info>
+        <category>Music</category>
+        <image>public.music.artwork</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="QSMusicArtworkSources">
+            <extension id="public.music.artwork" class="QSCommonMusicArtworkPlugIn"></extension>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,37 @@
+/* Strings for the app */
+
+SwitchToNextWorkspace = "Switch to Next Desktop";
+SwitchToPrevWorkspace = "Switch to Previous Desktop";
+ShowOperationsMenu = "Show Operations Window";
+ShowPreferences = "Show Preferences Window";
+SwitchToDesktop1 = "Switch to Desktop 1";
+SwitchToDesktop2 = "Switch to Desktop 2";
+SwitchToDesktop3 = "Switch to Desktop 3";
+SwitchToDesktop4 = "Switch to Desktop 4";
+SwitchToDesktop5 = "Switch to Desktop 5";
+SwitchToDesktop6 = "Switch to Desktop 6";
+SwitchToDesktop7 = "Switch to Desktop 7";
+SwitchToDesktop8 = "Switch to Desktop 8";
+SwitchToDesktop9 = "Switch to Desktop 9";
+SwitchToDesktop10 = "Switch to Desktop 10";
+RunApplication = "Run Application";
+StartCouvert = "Trigger Couvert";
+NoWindowsOnDesktop = "No Windows on Desktop";
+SwitchToFormat = "Move To %@";
+Untitled = "Untitled Window";
+CollectDefault = "Collect windows";
+CollectAlternate = "Leave as they are";
+CollectInfo = "Leaving windows on other workspaces could result in them becoming inaccessible.";
+CollectOther = "Don't Quit";
+CollectMessage = "Should Desktop Manager collect all windows onto one workspace before quitting?";
+WarpToNextWorkspace = "Move Window to Next Desktop";
+WarpToPrevWorkspace = "Move Window to Previous Desktop";
+RunApplicationMessage = "Desktop Manager encountered an error";
+RunApplicationDefault = "OK";
+RunApplicationInfo = "There was an error attemting to run the '%@' Application. This may be because Desktop Manager couldn't find it.";
+FastDesktopCreate = "Fast Desktop Create";
+MiscOperations = "Miscellaneous Operations";
+WindowManipulation = "Window Manipulation";
+DesktopNavigation = "Desktop Navigation";
+MakeSticky = "Put on all desktops";
+MakeUnSticky = "Leave on this desktop";

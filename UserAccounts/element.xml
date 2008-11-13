@@ -1,0 +1,59 @@
+<element id="com.blacktree.Quicksilver.QSAccountsModule" name="User Accounts Module" version="9E">
+    <info>
+        <category>System</category>
+        <image>User</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetAccounts">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetAccounts</string>
+                        <key>catalogPath</key>
+                        <string>QSPresetSystemGroup/QSPresetConfiguration</string>
+                        <key>name</key>
+                        <string>User Accounts</string>
+                        <key>source</key>
+                        <string>QSAccountsSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="com.blacktree.resources.images">
+            <image-resource id="User" class="[com.blacktree.Quicksilver.QSAccountsModule]:User"></image-resource>
+        </extension>
+        <extension point="com.blacktree.actions">
+            <action id="QSUserSwitchAction">
+                <plist version="1.0">
+                    <dict>
+                        <key>actionClass</key>
+                        <string>QSAccountsSource</string>
+                        <key>actionSelector</key>
+                        <string>switchToUser:</string>
+                        <key>directTypes</key>
+                        <array>
+                            <string>QSUserPboardType</string>
+                        </array>
+                        <key>icon</key>
+                        <string>User</string>
+                        <key>name</key>
+                        <string>Switch to User</string>
+                        <key>precedence</key>
+                        <integer>4</integer>
+                    </dict>
+                </plist>
+            </action>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSAccountsSource" class="QSAccountsSource"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="QSUserPboardType" class="QSAccountsSource"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSAccountsSource" class="QSAccountsSource"></action-provider>
+        </extension>
+    </extensions>
+</element>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.QSExtraScriptsPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Extra Scripts</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>84</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2004, Blacktree, Inc.</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Blacktree, Inc.</string>
+		<key>categories</key>
+		<array>
+			<string>Quicksilver</string>
+		</array>
+		<key>description</key>
+		<string>A set of system Shell/AppleScripts that emulate some OS functions like restarting and process actions.</string>
+		<key>icon</key>
+		<string>AppleScript</string>
+		<key>requiresFeature</key>
+		<string>0</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetQSExtraScripts</string>
+			<key>catalogPath</key>
+			<string>QSPresetModules/QSPresetScriptsGroup</string>
+			<key>modificationDate</key>
+			<real>103923344</real>
+			<key>name</key>
+			<string>Scripts (QS Extras)</string>
+			<key>settings</key>
+			<dict>
+				<key>baseBundle</key>
+				<string>com.blacktree.Quicksilver.QSExtraScriptsPlugIn</string>
+				<key>folderDepth</key>
+				<integer>4</integer>
+				<key>folderTypes</key>
+				<array>
+					<string>public.script</string>
+					<string>public.plain-text</string>
+					<string>com.apple.applescript.script</string>
+					<string>public.executable</string>
+				</array>
+				<key>parser</key>
+				<string>QSDirectoryParser</string>
+				<key>path</key>
+				<string>Contents/Resources/ExtraScripts/</string>
+				<key>scanContents</key>
+				<integer>1</integer>
+				<key>skipItem</key>
+				<integer>1</integer>
+			</dict>
+			<key>source</key>
+			<string>QSFileSystemObjectSource</string>
+		</dict>
+	</array>
+</dict>
+</plist>

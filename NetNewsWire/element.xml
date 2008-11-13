@@ -1,0 +1,34 @@
+<element id="com.blacktree.Quicksilver.QSNNWPlugIn" name="NetNewsWire Module" version="AA">
+    <info>
+        <category>Applications</category>
+        <image>com.ranchero.NetNewsWire</image>
+    </info>
+    <requirements></requirements>
+    <extensions xmlns:qs="com.blacktree">
+        <extension point="com.blacktree.catalog.presets">
+            <catalog-preset id="QSPresetNNWSubscriptions">
+                <plist version="1.0">
+                    <dict>
+                        <key>ID</key>
+                        <string>QSPresetNNWSubscriptions</string>
+                        <key>source</key>
+                        <string>QSNNWSource</string>
+                    </dict>
+                </plist>
+            </catalog-preset>
+        </extension>
+        <extension point="QSBundleDrawingHandlers">
+            <bundle-draw-handler id="com.ranchero.NetNewsWire" class="QSNNWSource"></bundle-draw-handler>
+        </extension>
+        <extension point="QSObjectSources">
+            <object-source id="QSNNWSource" class="QSNNWSource"></object-source>
+        </extension>
+        <extension point="QSObjectHandlers">
+            <object-handler id="QSNNWHeadlineType" class="QSNNWSource"></object-handler>
+            <object-handler id="QSNNWSubscriptionType" class="QSNNWSource"></object-handler>
+        </extension>
+        <extension point="QSActionProviders">
+            <action-provider id="QSNNWSource" class="QSNNWSource"></action-provider>
+        </extension>
+    </extensions>
+</element>
