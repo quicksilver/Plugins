@@ -14,7 +14,7 @@
 - (void)dealloc{
 	[super dealloc];
 }
-- (NSString *)identifierForObject:(id <QSObject>)object{
+- (NSString *)identifierForObject:(QSObject*)object{
     return [@"[uid]:"stringByAppendingString:[[object objectForType:QSUserPboardType]objectForKey:@"uid"]];
 }
 

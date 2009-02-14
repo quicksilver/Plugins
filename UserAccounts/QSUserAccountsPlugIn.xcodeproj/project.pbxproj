@@ -16,6 +16,14 @@
 
 /* Begin PBXFileReference section */
 		32DBCF980370C29C00C91783 /* QSUserAccountsPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSUserAccountsPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		4D4D67200F47351F00DAAB6B /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		4D4D67210F47351F00DAAB6B /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		4D4D67220F47351F00DAAB6B /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		4D4D67230F47351F00DAAB6B /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		4D4D67240F47351F00DAAB6B /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		4D4D67250F47351F00DAAB6B /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		4D4D67260F47351F00DAAB6B /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		4D4D67270F47351F00DAAB6B /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		7F35FF3C07F9ACD90056051D /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
 		7F35FF3D07F9ACD90056051D /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
 		7F35FF3E07F9ACD90056051D /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
@@ -45,6 +53,7 @@
 		0259C574FE90428111CA0C5A /* QSUserAccountsPlugIn */ = {
 			isa = PBXGroup;
 			children = (
+				4D4D671F0F47351F00DAAB6B /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -99,6 +108,22 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		4D4D671F0F47351F00DAAB6B /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4D4D67200F47351F00DAAB6B /* Common.xcconfig */,
+				4D4D67210F47351F00DAAB6B /* Debug.xcconfig */,
+				4D4D67220F47351F00DAAB6B /* Developer.xcconfig */,
+				4D4D67230F47351F00DAAB6B /* QSPlugIn.xcconfig */,
+				4D4D67240F47351F00DAAB6B /* QSPlugIn_Debug.xcconfig */,
+				4D4D67250F47351F00DAAB6B /* QSPlugIn_Prefix.pch */,
+				4D4D67260F47351F00DAAB6B /* QSPlugIn_Release.xcconfig */,
+				4D4D67270F47351F00DAAB6B /* Release.xcconfig */,
+			);
+			name = Configuration;
+			path = ../Configuration;
+			sourceTree = SOURCE_ROOT;
+		};
 		7FC20C8107FB741700FDD3CA /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,9 +161,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7FFF25B9085E488700266176 /* Build configuration list for PBXProject "QSUserAccountsPlugIn" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSUserAccountsPlugIn */;
 			projectDirPath = "";
+			projectRoot = ..;
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* User Accounts Module */,
 			);
@@ -184,28 +211,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7FFF25B6085E488700266176 /* Development */ = {
+		7FFF25B6085E488700266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D4D67240F47351F00DAAB6B /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				BUILD_DIR = "$(SYMROOT)/PlugIns/";
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = /Applications/Quicksilver.app/Contents/Frameworks;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSUserAccountsPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "User Accounts Module";
-				WRAPPER_EXTENSION = qsplugin;
-				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
 		7FFF25B7085E488700266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D4D67260F47351F00DAAB6B /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = /Applications/Quicksilver.app/Contents/Frameworks;
@@ -221,48 +237,19 @@
 			};
 			name = Release;
 		};
-		7FFF25B8085E488700266176 /* Default */ = {
+		7FFF25BA085E488700266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D4D67210F47351F00DAAB6B /* Debug.xcconfig */;
 			buildSettings = {
-				BUILD_DIR = "$(SYMROOT)/PlugIns/";
-				FRAMEWORK_SEARCH_PATHS = /Applications/Quicksilver.app/Contents/Frameworks;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSUserAccountsPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "User Accounts Module";
-				WRAPPER_EXTENSION = qsplugin;
 			};
-			name = Default;
-		};
-		7FFF25BA085E488700266176 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Development;
+			name = Debug;
 		};
 		7FFF25BB085E488700266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D4D67270F47351F00DAAB6B /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;
-		};
-		7FFF25BC085E488700266176 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Default;
 		};
 /* End XCBuildConfiguration section */
 
@@ -270,22 +257,20 @@
 		7FFF25B5085E488700266176 /* Build configuration list for PBXNativeTarget "User Accounts Module" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF25B6085E488700266176 /* Development */,
+				7FFF25B6085E488700266176 /* Debug */,
 				7FFF25B7085E488700266176 /* Release */,
-				7FFF25B8085E488700266176 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		7FFF25B9085E488700266176 /* Build configuration list for PBXProject "QSUserAccountsPlugIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF25BA085E488700266176 /* Development */,
+				7FFF25BA085E488700266176 /* Debug */,
 				7FFF25BB085E488700266176 /* Release */,
-				7FFF25BC085E488700266176 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
