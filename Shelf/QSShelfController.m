@@ -1,13 +1,13 @@
 #import "QSShelfController.h"
-#import <QSBase/QSCore.h>
-#import <QSBase/QSObject_Pasteboard.h>
-#import <QSBase/QSLibrarian.h>
-#import <QSBase/QSDockingWindow.h>
-#import <QSBase/QSObjectView.h> 
-#import <QSBase/QSObjectCell.h>
-#import <QSBase/QSInterfaceController.h>
-
-#import <QSBase/QSInterfaceMediator.h>
+#import <QSFoundation/QSFoundation.h>
+#import <QSCore/QSObject_Pasteboard.h>
+#import <QSCore/QSLibrarian.h>
+#import <QSCore/QSExecutor.h>
+#import <QSInterface/QSDockingWindow.h>
+#import <QSInterface/QSObjectView.h> 
+#import <QSInterface/QSObjectCell.h>
+#import <QSInterface/QSInterfaceController.h>
+#import <QSCore/QSInterfaceMediator.h>
 
 
 
@@ -297,7 +297,7 @@ static int _moveRow = -1;
 
 - (IBAction)tableDoubleAction:(id)sender{
     id selectedObject=[[QSLib shelfNamed:@"General"] objectAtIndex:[shelfTableView selectedRow]];
-    QSAction *action=[[QSLib rankedActionsForDirectObject:selectedObject indirectObject:nil]objectAtIndex:0];
+    QSAction *action=[[QSExec rankedActionsForDirectObject:selectedObject indirectObject:nil]objectAtIndex:0];
     int argumentCount=[(QSAction *)action argumentCount];
      
    // if (VERBOSE) NSLog(@"double %@ %@",selectedObject, action);

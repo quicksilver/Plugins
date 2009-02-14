@@ -4,7 +4,7 @@
 
 #import "QSShelfController.h"
 //#import "QSPasteboardController.h"
-#import <QSBase/QSLibrarian.h>
+#import <QSCore/QSLibrarian.h>
 #define QSShelfPboardType @"qs.shelf"
 
 #define kQSShelfShowAction @"QSShelfShowAction"
@@ -44,7 +44,7 @@
 
 
 // Object Handler Methods
-- (NSString *)identifierForObject:(id <QSObject>)object{
+- (NSString *)identifierForObject:(QSObject*)object{
     return [@"[Shelf]:" stringByAppendingString:[object objectForType:QSShelfPboardType]];
 }
 
@@ -134,8 +134,8 @@
 }
 
 - (QSObject *) putObjectOnShelf:(QSObject *)dObject{
-	dObject=[dObject resolvedObject];
-    [[QSShelfController sharedInstance]addObject:dObject atIndex:0];   
+	dObject = (QSObject*)[dObject resolvedObject];
+    [[QSShelfController sharedInstance] addObject:dObject atIndex:0];   
     return nil;
 }
 
