@@ -58,22 +58,46 @@
 
 - (void)addNodesFromList:(NSArray *)list toArray:(NSMutableArray *)array{
 	
-	NSString *sourcePath=[@"~/Library/Application Support/iCal/Sources/" stringByStandardizingPath];
+	NSString *sourcePath=[@"~/Library/Calendars/" stringByStandardizingPath];
+	
+	NSFileManager *fm=[NSFileManager defaultManager];
+	
+	
 	foreach (node,list){
 		//NSLog(@"node %@",node);
-		NSString *subPath=[sourcePath stringByAppendingFormat:@"/%@.calendar",[node objectForKey:@"SourceKey"]];
-		NSDictionary *info=[NSDictionary dictionaryWithContentsOfFile:[subPath stringByAppendingPathComponent:@"Info.plist"]];
+		NSString *subPath=[sourcePath stringByAppendingFormat:@"/%@",node];
+		
+		//NSLog(@"subPath: %@",subPath);
+		
+		NSString *icnsPath = [subPath stringByAppendingFormat:@"/Events/"];
+		NSArray *icnsArray = [fm directoryContentsAtPath:icnsPath];
+		
+		
+		NSDictionary *info=[NSDictionary dictionaryWithContentsOfFile:[subPath stringByAppendingPathComponent:@"/Info.plist"]];
 		if (info){
 			NSString *name=[info objectForKey:@"Title"];
-			QSObject *object=[QSObject fileObjectWithPath:[subPath stringByAppendingPathComponent:@"corestorage.ics"]];
+			if([icnsArray count] != 0)
+			{
+			QSObject *object=[QSObject fileObjectWithPath:[icnsPath stringByAppendingPathComponent:[icnsArray objectAtIndex:0]]];
 			[object setName:name];
 			[object setIdentifier:subPath];
 			[object setDetails:@"Calendar"];
 			[object setObject:name forType:@"QSICalCalendar"];
 			[array addObject:object];
+			}
+			else 
+			{
+				QSObject *object=[QSObject fileObjectWithPath:[subPath stringByAppendingPathComponent:@"Info.plist"]];
+				[object setName:name];
+				[object setIdentifier:subPath];
+				[object setDetails:@"Calendar"];
+				[object setObject:name forType:@"QSICalCalendar"];
+				[array addObject:object];
+			}
+
 		}
-		NSArray *sublist=[node objectForKey:@"Subnodes"];
-		if (sublist) [self addNodesFromList:sublist toArray:array];
+		//NSArray *sublist=[node objectForKey:@"Subnodes"];
+		//if (sublist) [self addNodesFromList:sublist toArray:array];
 		
 	}
 }
@@ -81,9 +105,29 @@
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
 	NSFileManager *fm=[NSFileManager defaultManager];
 	NSMutableArray *array=[NSMutableArray array];
-	NSString *path=[@"~/Library/Application Support/iCal/" stringByStandardizingPath];
-	NSDictionary *nodes=[NSDictionary dictionaryWithContentsOfFile:[path stringByAppendingPathComponent:@"nodes.plist"]];
-	NSArray *list=[nodes objectForKey:@"List"];
+	NSString *path=[@"~/Library/Calendars" stringByStandardizingPath];
+	NSMutableArray *list=[NSMutableArray array];
+	
+	// Get contents of calendars folder
+	NSArray *dirArray = [fm directoryContentsAtPath:path];
+
+	//NSLog(@"dirArray: %@", dirArray);
+	int i = 0;
+	foreach(path, dirArray)
+	{
+		//NSLog(@"path: %@", path);
+		if([[dirArray objectAtIndex:i] rangeOfString:@".calendar"].location != NSNotFound)
+		{
+
+			[list addObject:path];
+		}
+		i += 1;
+	}
+	
+	//NSLog(@"list is: %@", list);
+	
+	//NSDictionary *nodes=[NSDictionary dictionaryWithContentsOfFile:[path stringByAppendingPathComponent:@"nodes.plist"]];
+	//NSArray *list=[nodes objectForKey:@"List"];
 	
 	[self addNodesFromList:list toArray:array];
 	
