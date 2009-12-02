@@ -5,7 +5,6 @@
 
 #import <QSCore/QSLibrarian.h>
 #import <QSCore/QSNotifyMediator.h>
-#import <QSCore/QSExecutor.h>
 #import "CalculatorAction.h"
 #import "CalculatorPrefPane.h"
 
@@ -107,7 +106,7 @@
 		case CalculatorDisplayLargeType: {
 			// Display result as large type
 			
-#WARNING actionForIdentifier was giving  -[QSLibrarian actionForIdentifier:]: unrecognized selector sent to instance xxx
+#warning actionForIdentifier method was giving  -[QSLibrarian actionForIdentifier:]: unrecognized selector sent to instance xxx error so I removed. Mod below
 			
 			// Couldn't work out this QSLibrarian stuff. Replaced with just calling QSShowLargeType(NSString *)
 			
@@ -117,7 +116,6 @@
 			QSShowLargeType(outString);
 			[[QSReg preferredCommandInterface] selectObject:result];
 			result = nil;
-			NSLog(@"1");
 			break;
 		} case CalculatorDisplayNotification: {
 			// Display result as notification
