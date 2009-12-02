@@ -5,6 +5,7 @@
 
 #import <QSCore/QSLibrarian.h>
 #import <QSCore/QSNotifyMediator.h>
+#import <QSCore/QSExecutor.h>
 #import "CalculatorAction.h"
 #import "CalculatorPrefPane.h"
 
@@ -105,10 +106,18 @@
 			break;
 		case CalculatorDisplayLargeType: {
 			// Display result as large type
-			QSAction *largeTypeAction = [[QSLibrarian sharedInstance] actionForIdentifier:@"QSLargeTypeAction"];
-			[largeTypeAction performOnDirectObject:result indirectObject:nil];
+			
+#WARNING actionForIdentifier was giving  -[QSLibrarian actionForIdentifier:]: unrecognized selector sent to instance xxx
+			
+			// Couldn't work out this QSLibrarian stuff. Replaced with just calling QSShowLargeType(NSString *)
+			
+			//QSAction *largeTypeAction = [[QSLibrarian sharedInstance] actionForIdentifier:@"QSlargeTypeAction"];
+			//[largeTypeAction performOnDirectObject:result indirectObject:nil];
+			// Fix 02/12/2009 Patrick Robertson
+			QSShowLargeType(outString);
 			[[QSReg preferredCommandInterface] selectObject:result];
 			result = nil;
+			NSLog(@"1");
 			break;
 		} case CalculatorDisplayNotification: {
 			// Display result as notification
