@@ -62,7 +62,7 @@
 }
 - (QSObject *)doURLSearchForAction:(QSObject *)dObject withString:(QSObject *)iObject{
 	
-	foreach(urlString,[dObject arrayForType:QSURLType]){
+	for(NSString * urlString in [dObject arrayForType:QSURLType]){
 		NSURL *url=[NSURL URLWithString:urlString];
 		
 		NSString *string=[iObject stringValue];
@@ -72,7 +72,7 @@
 	return nil;
 }
 - (QSObject *)doURLSearchForAndReturnAction:(QSObject *)dObject withString:(QSObject *)iObject{
-	foreach(urlString,[dObject arrayForType:QSURLType]){
+	for(NSString * urlString in [dObject arrayForType:QSURLType]){
 		NSURL *url=[NSURL URLWithString:urlString];
 		NSString *string=[iObject stringValue];
 		CFStringEncoding encoding=[[dObject objectForMeta:kQSStringEncoding]intValue];

@@ -13,17 +13,6 @@
 			buildPhases = (
 			);
 			dependencies = (
-				4DB4A1030E100D570010C540 /* PBXTargetDependency */,
-				4DB4A1050E100D570010C540 /* PBXTargetDependency */,
-				4DB4A1070E100D570010C540 /* PBXTargetDependency */,
-				4DB4A1090E100D570010C540 /* PBXTargetDependency */,
-				4DB4A10B0E100D570010C540 /* PBXTargetDependency */,
-				4DB4A10D0E100D570010C540 /* PBXTargetDependency */,
-				4DB4A10F0E100D570010C540 /* PBXTargetDependency */,
-				4DB4A1110E100D570010C540 /* PBXTargetDependency */,
-				4DB4A1130E100D570010C540 /* PBXTargetDependency */,
-				4DB4A1150E100D570010C540 /* PBXTargetDependency */,
-				4DB4A1170E100D570010C540 /* PBXTargetDependency */,
 			);
 			name = "Build All";
 			productName = "Build ALl";
@@ -31,6 +20,867 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXContainerItemProxy section */
+		14A8AA4410CE06F4003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8AA3D10CE06F4003857E3 /* QSAirPortPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "AirPort Module";
+		};
+		14A8BA8B10CE10AD003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8BA8610CE10AD003857E3 /* QSAmazonPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Amazon Module";
+		};
+		14A8C9C710CE116B003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8C9C210CE116B003857E3 /* QSYouControlDesktopsPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSYouControlDesktopsPlugIn;
+		};
+		14A8C9D210CE11A7003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8C9CB10CE11A7003857E3 /* QSYojimboPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Yojimbo Module";
+		};
+		14A8C9D910CE11CF003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8C9D410CE11CF003857E3 /* QSXattrMetadataImporter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D576316048677EA00EA77CD;
+			remoteInfo = QSXattrMetadataImporter;
+		};
+		14A8C9E010CE120C003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8C9DB10CE120C003857E3 /* QSExtendedAttributesPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Extended Attributes Module";
+		};
+		14A8C9E710CE121B003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8C9E210CE121B003857E3 /* QSX10PlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "X-10 Support";
+		};
+		14A8C9F010CE122B003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8C9E910CE122B003857E3 /* QSUserAccountsPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "User Accounts Module";
+		};
+		14A8C9F710CE1255003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8C9F210CE1255003857E3 /* TSActionsPlugin.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
+			remoteInfo = TSActionsPlugin;
+		};
+		14A8CA3310CE1283003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA2C10CE1283003857E3 /* QSTransmitModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Transmit Module";
+		};
+		14A8CA3A10CE129C003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA3510CE129C003857E3 /* QSTranslationPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSTranslationPlugIn;
+		};
+		14A8CA4310CE12B8003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA3C10CE12B8003857E3 /* QSTextMatePlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "TextMate Module";
+		};
+		14A8CA4C10CE12FD003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA4510CE12FD003857E3 /* QSTerminalPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Terminal Module";
+		};
+		14A8CA5510CE1328003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA4E10CE1328003857E3 /* QSTeleflipPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Teleflip Module";
+		};
+		14A8CA5E10CE133D003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA5710CE133D003857E3 /* QSSymbolicHotKeyPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "System HotKey Commands";
+		};
+		14A8CA6710CE134B003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA6010CE134B003857E3 /* Stikkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Stikkit Module";
+		};
+		14A8CA7010CE1373003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA6910CE1373003857E3 /* QSSpotlightPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Spotlight Module";
+		};
+		14A8CA7910CE1384003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA7210CE1384003857E3 /* QSSoundSupport.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSSoundSupport;
+		};
+		14A8CA8210CE139D003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA7B10CE139D003857E3 /* QSSlideshowPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Slideshow Action";
+		};
+		14A8CA9510CE13D0003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA9010CE13D0003857E3 /* QSSkypePlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Skype Module";
+		};
+		14A8CA9F10CE1402003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA9710CE1402003857E3 /* QSShelfPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Shelf Module";
+		};
+		14A8CAA110CE1402003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CA9710CE1402003857E3 /* QSShelfPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 33C91D9A0BB0D57300ABE01B;
+			remoteInfo = "Shelf Element";
+		};
+		14A8CABC10CE1599003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CAB510CE1599003857E3 /* QSServicesMenuPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Services Menu Module";
+		};
+		14A8CAC510CE15A9003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CABE10CE15A9003857E3 /* QSScreenCapturePlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Screen Capture Actions";
+		};
+		14A8CACE10CE15E4003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CAC710CE15E4003857E3 /* QSRemoteDesktopPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Remote Desktop Module";
+		};
+		14A8CAD510CE15F7003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CAD010CE15F7003857E3 /* QSWindowInterface.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Window Interface";
+		};
+		14A8CAE910CE160C003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CAE310CE160C003857E3 /* QSWeatherPlugin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSWeatherPlugin;
+		};
+		14A8CAF010CE1623003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CAEB10CE1623003857E3 /* Spellcheck Action.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Spellcheck Action";
+		};
+		14A8CAF710CE165C003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CAF210CE165C003857E3 /* QSShiiraPlugIn.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSShiiraPlugIn;
+		};
+		14A8CAFE10CE1675003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CAF910CE1675003857E3 /* QSSherlockPlugIn.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSSherlockPlugIn;
+		};
+		14A8CB0710CE1685003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB0010CE1685003857E3 /* QSRSSPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSRSSPlugIn;
+		};
+		14A8CB1010CE1695003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB0910CE1695003857E3 /* QSPatchPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = B51Patch;
+		};
+		14A8CB1910CE16A8003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB1210CE16A8003857E3 /* QSOmniWebPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "OmniWeb Module";
+		};
+		14A8CB2210CE16BD003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB1B10CE16BD003857E3 /* QSOmniFocusPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSOmniFocusPlugIn;
+		};
+		14A8CB2910CE16D7003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB2410CE16D7003857E3 /* QSHomestarRunnerPlugIn.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSHomestarRunnerPlugIn;
+		};
+		14A8CB3210CE16EB003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB2B10CE16EB003857E3 /* QSFullscreenPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSFullscreenPlugIn;
+		};
+		14A8CB3B10CE16FD003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB3410CE16FD003857E3 /* QSDuffStringRanker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "TextMate Ranker";
+		};
+		14A8CB4D10CE1744003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB4310CE1744003857E3 /* QSAdiumPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Adium Module";
+		};
+		14A8CB4F10CE1744003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB4310CE1744003857E3 /* QSAdiumPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E384106A07C3239B008110E3;
+			remoteInfo = "Quicksilver Plugin";
+		};
+		14A8CB5C10CE1769003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB5710CE1769003857E3 /* QSProcessSwitcherSupportPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Process Switcher Support";
+		};
+		14A8CB6510CE177D003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB5E10CE177D003857E3 /* QSProcessManipulationPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Process Manipulation Actions";
+		};
+		14A8CB6E10CE178E003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB6710CE178E003857E3 /* QSPrinterPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Printer Module";
+		};
+		14A8CB7710CE17D0003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB7010CE17D0003857E3 /* QSPowerManagementPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Power Management Support";
+		};
+		14A8CB8010CE17E2003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB7910CE17E2003857E3 /* QSPhonePlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Phone Actions";
+		};
+		14A8CB8910CE17F4003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB8210CE17F4003857E3 /* QSPathFinderPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Path Finder Module";
+		};
+		14A8CB9010CE180A003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB8B10CE180A003857E3 /* QSOrnateInterfacePlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Ornate Interface";
+		};
+		14A8CB9910CE1906003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB9410CE1906003857E3 /* MoreAppleEvents.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 034768DEFF38A45A11DB9C8B;
+			remoteInfo = MoreAppleEvents;
+		};
+		14A8CBA210CE1917003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CB9B10CE1917003857E3 /* QSNowContactPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSNowContactPlugIn;
+		};
+		14A8CBAF10CE193C003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CBAA10CE193C003857E3 /* QSNimbusSwitcherPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Nimbus Switcher";
+		};
+		14A8CBD010CE19BE003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CBB110CE194B003857E3 /* QSNetworkLocationPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Network Location Module";
+		};
+		14A8CBD910CE19E4003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CBD210CE19E4003857E3 /* QSNetNewsWirePlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "NetNewsWire Module";
+		};
+		14A8CBE210CE1A1E003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CBDB10CE1A1E003857E3 /* QSMiniInterface.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Mini Interface";
+		};
+		14A8CBEB10CE1A33003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CBE410CE1A33003857E3 /* QSMenuInterface.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Menu Interface";
+		};
+		14A8CBF210CE1A45003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CBED10CE1A45003857E3 /* QSMarkdownPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Markdown Module";
+		};
+		14A8CBFB10CE1A59003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CBF410CE1A59003857E3 /* QSMailsmithPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSMailsmithPlugIn;
+		};
+		14A8CC0410CE1A78003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CBFD10CE1A78003857E3 /* QSKeychainPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Keychain Module";
+		};
+		14A8CC0D10CE1A84003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC0610CE1A84003857E3 /* QSiPhotoPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "iPhoto Module";
+		};
+		14A8CC1610CE1A99003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC0F10CE1A99003857E3 /* QSIndigoPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Indigo X10 Module";
+		};
+		14A8CC2310CE1AEE003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC1C10CE1AEE003857E3 /* QSImageManipulationPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Image Manipulation Actions";
+		};
+		14A8CC2C10CE1B2C003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC2510CE1B2C003857E3 /* QSiCalModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "iCal Module";
+		};
+		14A8CC5D10CE1B56003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC5610CE1B56003857E3 /* QSGoogleCalendarPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Google Calendar Module";
+		};
+		14A8CC6410CE1B68003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC5F10CE1B68003857E3 /* QSGooglePlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Google Support";
+		};
+		14A8CC6D10CE1B84003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC6610CE1B84003857E3 /* QSFlashlightInterface.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Flashlight Interface";
+		};
+		14A8CC7610CE1B93003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC6F10CE1B93003857E3 /* QSFirefoxPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Firefox Module";
+		};
+		14A8CC8310CE1BC5003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC7E10CE1BC5003857E3 /* QSEudoraPlugIn.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSEudoraPlugIn;
+		};
+		14A8CC8D10CE1BDD003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC8510CE1BDD003857E3 /* WebSearchElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Web Search Module";
+		};
+		14A8CC8F10CE1BDD003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC8510CE1BDD003857E3 /* WebSearchElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7F7EB2E90BFEB69300AFDF2C;
+			remoteInfo = "Web Search";
+		};
+		14A8CC9910CE1BF1003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC9110CE1BF1003857E3 /* WebBridge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Web Bridge";
+		};
+		14A8CC9B10CE1BF1003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CC9110CE1BF1003857E3 /* WebBridge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7F953E780C3FDF1D001E5264;
+			remoteInfo = WebBridgePlugin;
+		};
+		14A8CCCC10CE1C1F003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CCC310CE1C1F003857E3 /* Sparkle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = Sparkle;
+		};
+		14A8CCCE10CE1C1F003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CCC310CE1C1F003857E3 /* Sparkle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 61B5F90209C4CEE200B25A18;
+			remoteInfo = "Sparkle Test App";
+		};
+		14A8CCD710CE1C2F003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CCD010CE1C2F003857E3 /* QSChronoTriggersPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Chrono Triggers";
+		};
+		14A8CCE010CE1C40003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CCD910CE1C40003857E3 /* QSMouseTriggersPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Mouse Triggers";
+		};
+		14A8CD0510CE1C70003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CCFE10CE1C70003857E3 /* QSMouseTriggersElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Mouse Triggers";
+		};
+		14A8CD0E10CE1C83003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD0710CE1C83003857E3 /* QSHotKeyTriggers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "HotKey Triggers";
+		};
+		14A8CD1710CE1CA8003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD1010CE1CA8003857E3 /* QSEventTriggersElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Event Triggers";
+		};
+		14A8CD2410CE1D51003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD1F10CE1D51003857E3 /* QSWindowModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Window Manipulation Module";
+		};
+		14A8CD2E10CE1D66003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD2610CE1D66003857E3 /* MusicSupportElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Music Support";
+		};
+		14A8CD3910CE1D76003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD3210CE1D76003857E3 /* MailSupportElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Email Support";
+		};
+		14A8CD4210CE1D8C003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD3B10CE1D8C003857E3 /* FileAttributesElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "File Attribute Actions";
+		};
+		14A8CD4B10CE1DAC003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD4410CE1DAC003857E3 /* ClipboardElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = Clipboard;
+		};
+		14A8CD5410CE1DBA003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD4D10CE1DBA003857E3 /* QSUIAccessElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "UI Access";
+		};
+		14A8CD5B10CE3EF5003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD5610CE3EF5003857E3 /* QSDokuWikiPlugIn.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "DokuWiki Module";
+		};
+		14A8CD6410CE3F0A003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD5D10CE3F0A003857E3 /* QSDockExtensionPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Dock Extension Support";
+		};
+		14A8CD6D10CE3F1B003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD6610CE3F1B003857E3 /* QS Displays Module.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Displays Module";
+		};
+		14A8CD7610CE3F29003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD6F10CE3F29003857E3 /* QSDiskImagePlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Disk Image Support";
+		};
+		14A8CD8D10CE3F58003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD7E10CE3F58003857E3 /* DictPlugin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Dictionary Module";
+		};
+		14A8CD9610CE3F65003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD8F10CE3F65003857E3 /* QSDeviantModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Deviant Module";
+		};
+		14A8CD9F10CE3F75003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CD9810CE3F75003857E3 /* QSDesktopManagerPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Desktop Manager Module";
+		};
+		14A8CDA610CE3F83003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CDA110CE3F83003857E3 /* QSDeliciousLibraryModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Delicious Library Module";
+		};
+		14A8CDE510CE3F98003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CDDE10CE3F98003857E3 /* QSDeliciousPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Social Bookmarks Module";
+		};
+		14A8CDEC10CE3FA6003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CDE710CE3FA6003857E3 /* QSSystemDaemonsPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSSystemDaemonsPlugIn;
+		};
+		14A8CDF510CE3FD1003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CDEE10CE3FD1003857E3 /* QSCompressionPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "File Compression Module";
+		};
+		14A8CE0010CE3FFB003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CDF710CE3FFB003857E3 /* QSCommandLineTool.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Command Line Tool";
+		};
+		14A8CE0210CE3FFB003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CDF710CE3FFB003857E3 /* QSCommandLineTool.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E1C4F00A06B8659500FA8819;
+			remoteInfo = qs;
+		};
+		14A8CE1210CE4029003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CE0A10CE4029003857E3 /* DevDocsElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Developer Module";
+		};
+		14A8CE1410CE4029003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CE0A10CE4029003857E3 /* DevDocsElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7F28172B0BFC17FC00EFCE79;
+			remoteInfo = "Developer Element";
+		};
+		14A8CE1D10CE403B003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CE1610CE403B003857E3 /* XcodeElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7F2819C80BFC1D9700EFCE79;
+			remoteInfo = Xcode;
+		};
+		14A8CE2610CE404A003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CE1F10CE404A003857E3 /* SpacesElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = Spaces;
+		};
+		14A8CE2F10CE405B003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CE2810CE405B003857E3 /* QSSafariPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Safari Module";
+		};
+		14A8CE3510CE407E003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CE3110CE407E003857E3 /* AppleMailElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Apple Mail";
+		};
+		14A8CE3E10CE408C003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CE3710CE408C003857E3 /* iChatElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = iChat;
+		};
+		14A8CE4D10CE40B8003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CE4610CE40B8003857E3 /* AutomatorElement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = Automator;
+		};
+		14A8CE8710CE41D8003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CE8010CE41D8003857E3 /* QSCLIXPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "CLIX Module";
+		};
+		14A8CE9010CE41E5003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CE8910CE41E5003857E3 /* QSCl1pPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Cl1p Upload";
+		};
+		14A8CE9910CE41F3003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CE9210CE41F3003857E3 /* QSCaminoPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Camino Module";
+		};
+		14A8CEA010CE4208003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CE9B10CE4208003857E3 /* QSCalendarSupport.xcode */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSCalendarSupport;
+		};
+		14A8CEC510CE425F003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CEBE10CE425F003857E3 /* QSBluetoothPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Bluetooth Module";
+		};
+		14A8CECE10CE4283003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CEC710CE4283003857E3 /* QSBezelInterfacePlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Bezel Interface";
+		};
+		14A8CEEE10CE42C4003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CEE710CE42C4003857E3 /* QSAudioPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Audio Module";
+		};
+		14A8CEF710CE42D1003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CEF010CE42D1003857E3 /* QSAOLPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSAOLPlugIn;
+		};
+		14A8CEFD10CE42E1003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CEF910CE42E1003857E3 /* QSAmazonPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Amazon Module";
+		};
+		14A8CF0310CE42EF003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CEFF10CE42EF003857E3 /* QSAlarmPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Alarm Module";
+		};
+		14A8CF0F10CE4313003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A8CF0B10CE4313003857E3 /* QSAddressBookActionsPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = QSAddressBookActionsPlugIn;
+		};
+		14A8D26E10CE5C36003857E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Desktop Picture Action";
+		};
+		14E29B3710D1240200DCC5F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14E29B3010D1240200DCC5F2 /* QSSurveyPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "User Data Request";
+		};
+		14E29B7A10D1265800DCC5F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14E29B7310D1265800DCC5F2 /* QSCommonMusicArtworkPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "ARTchive Artwork";
+		};
+		14E29B8110D1266C00DCC5F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14E29B7C10D1266C00DCC5F2 /* QSClutterPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Clutter Artwork";
+		};
+		14E29B8A10D1267D00DCC5F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14E29B8310D1267D00DCC5F2 /* QSSofaPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Sofa Artwork";
+		};
+		14E29B9110D1268F00DCC5F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14E29B8C10D1268F00DCC5F2 /* QSSynergyPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Synergy Artwork";
+		};
+		14E29C3110D128E000DCC5F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14E29C2A10D128E000DCC5F2 /* QSAcidSearchPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "AcidSearch Queries";
+		};
+		14E29C3A10D128F000DCC5F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14E29C3310D128F000DCC5F2 /* QSSafariStandPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "SafariStand Queries";
+		};
+		14E29C4310D1290500DCC5F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14E29C3C10D1290500DCC5F2 /* QSSogudiPlugIn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
+			remoteInfo = "Sogudi Queries";
+		};
 		4DB4A0910E100BFD0010C540 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4DB4A08A0E100BFD0010C540 /* ColloquyPlugin.xcodeproj */;
@@ -101,93 +951,125 @@
 			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
 			remoteInfo = "File Tagging Module";
 		};
-		4DB4A0F00E100D170010C540 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8D1AC9740486D14A00FE50C9;
-			remoteInfo = "Desktop Picture Action";
-		};
-		4DB4A1020E100D570010C540 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB4A0A50E100C1A0010C540 /* QSGmailPlugIn.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
-			remoteInfo = "Gmail Module";
-		};
-		4DB4A1040E100D570010C540 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB4A0B70E100CDB0010C540 /* TextManipulationElement.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
-			remoteInfo = "Text Manipulation";
-		};
-		4DB4A1060E100D570010C540 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB4A0AE0E100C2B0010C540 /* DiffModule.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
-			remoteInfo = DiffModule;
-		};
-		4DB4A1080E100D570010C540 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB4A0930E100C0A0010C540 /* QSAddressBookPlugIn.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
-			remoteInfo = "Apple Address Book Module";
-		};
-		4DB4A10A0E100D570010C540 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB4A08A0E100BFD0010C540 /* ColloquyPlugin.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
-			remoteInfo = "Colloquy Module";
-		};
-		4DB4A10C0E100D570010C540 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
-			remoteInfo = "Calculator Module";
-		};
-		4DB4A10E0E100D570010C540 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB4A0C00E100CE70010C540 /* FindModule.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
-			remoteInfo = "Find Module";
-		};
-		4DB4A1100E100D570010C540 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB4A0CE0E100CF80010C540 /* GrowlNotifier.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
-			remoteInfo = "Growl Module";
-		};
-		4DB4A1120E100D570010C540 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB4A0D70E100D030010C540 /* NotificationHub.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
-			remoteInfo = NotificationHub;
-		};
-		4DB4A1140E100D570010C540 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB4A0E00E100D0E0010C540 /* QSFileTagsPlugIn.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
-			remoteInfo = "File Tagging Module";
-		};
-		4DB4A1160E100D570010C540 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
-			remoteInfo = "Desktop Picture Action";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14A8AA3D10CE06F4003857E3 /* QSAirPortPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAirPortPlugIn.xcodeproj; path = AirPort/QSAirPortPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8BA8610CE10AD003857E3 /* QSAmazonPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAmazonPlugIn.xcodeproj; path = Amazon/QSAmazonPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8C9C210CE116B003857E3 /* QSYouControlDesktopsPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSYouControlDesktopsPlugIn.xcodeproj; path = YouControlDesktopsPlugIn/QSYouControlDesktopsPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8C9CB10CE11A7003857E3 /* QSYojimboPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSYojimboPlugIn.xcodeproj; path = Yojimbo/QSYojimboPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8C9D410CE11CF003857E3 /* QSXattrMetadataImporter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSXattrMetadataImporter.xcodeproj; path = XattrMetadataImporter/QSXattrMetadataImporter.xcodeproj; sourceTree = "<group>"; };
+		14A8C9DB10CE120C003857E3 /* QSExtendedAttributesPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSExtendedAttributesPlugIn.xcodeproj; path = Xattr/QSExtendedAttributesPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8C9E210CE121B003857E3 /* QSX10PlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSX10PlugIn.xcodeproj; path = X10PlugIn/QSX10PlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8C9E910CE122B003857E3 /* QSUserAccountsPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSUserAccountsPlugIn.xcodeproj; path = UserAccounts/QSUserAccountsPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8C9F210CE1255003857E3 /* TSActionsPlugin.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TSActionsPlugin.xcode; path = TSActionsPlugin/trunk/TSActionsPlugin.xcode; sourceTree = "<group>"; };
+		14A8CA2C10CE1283003857E3 /* QSTransmitModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSTransmitModule.xcodeproj; path = Transmit/QSTransmitModule.xcodeproj; sourceTree = "<group>"; };
+		14A8CA3510CE129C003857E3 /* QSTranslationPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSTranslationPlugIn.xcodeproj; path = Translation/QSTranslationPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CA3C10CE12B8003857E3 /* QSTextMatePlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSTextMatePlugIn.xcodeproj; path = TextMate/QSTextMatePlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CA4510CE12FD003857E3 /* QSTerminalPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSTerminalPlugIn.xcodeproj; path = Terminal/QSTerminalPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CA4E10CE1328003857E3 /* QSTeleflipPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSTeleflipPlugIn.xcodeproj; path = Teleflip/QSTeleflipPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CA5710CE133D003857E3 /* QSSymbolicHotKeyPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSymbolicHotKeyPlugIn.xcodeproj; path = SystemHotKeys/QSSymbolicHotKeyPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CA6010CE134B003857E3 /* Stikkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Stikkit.xcodeproj; path = Stikkit/Stikkit.xcodeproj; sourceTree = "<group>"; };
+		14A8CA6910CE1373003857E3 /* QSSpotlightPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSpotlightPlugIn.xcodeproj; path = Spotlight/QSSpotlightPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CA7210CE1384003857E3 /* QSSoundSupport.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSoundSupport.xcodeproj; path = SoundSupport/QSSoundSupport.xcodeproj; sourceTree = "<group>"; };
+		14A8CA7B10CE139D003857E3 /* QSSlideshowPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSlideshowPlugIn.xcodeproj; path = Slideshow/QSSlideshowPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CA9010CE13D0003857E3 /* QSSkypePlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSkypePlugIn.xcodeproj; path = Skype/QSSkypePlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CA9710CE1402003857E3 /* QSShelfPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSShelfPlugIn.xcodeproj; path = Shelf/QSShelfPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CAB510CE1599003857E3 /* QSServicesMenuPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSServicesMenuPlugIn.xcodeproj; path = Services/QSServicesMenuPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CABE10CE15A9003857E3 /* QSScreenCapturePlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSScreenCapturePlugIn.xcodeproj; path = ScreenCapture/QSScreenCapturePlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CAC710CE15E4003857E3 /* QSRemoteDesktopPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSRemoteDesktopPlugIn.xcodeproj; path = RemoteDesktop/QSRemoteDesktopPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CAD010CE15F7003857E3 /* QSWindowInterface.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSWindowInterface.xcode; path = QSWindowInterfacePlugIn/trunk/QSWindowInterface.xcode; sourceTree = "<group>"; };
+		14A8CAE310CE160C003857E3 /* QSWeatherPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSWeatherPlugin.xcodeproj; path = QSWeatherPlugin/trunk/QSWeatherPlugin.xcodeproj; sourceTree = "<group>"; };
+		14A8CAEB10CE1623003857E3 /* Spellcheck Action.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Spellcheck Action.xcode"; path = "QSSpellcheckAction/trunk/Spellcheck Action.xcode"; sourceTree = "<group>"; };
+		14A8CAF210CE165C003857E3 /* QSShiiraPlugIn.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSShiiraPlugIn.xcode; path = QSShiiraPlugIn/trunk/QSShiiraPlugIn.xcode; sourceTree = "<group>"; };
+		14A8CAF910CE1675003857E3 /* QSSherlockPlugIn.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSherlockPlugIn.xcode; path = QSSherlockPlugIn/trunk/QSSherlockPlugIn.xcode; sourceTree = "<group>"; };
+		14A8CB0010CE1685003857E3 /* QSRSSPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSRSSPlugIn.xcodeproj; path = QSRSSPlugIn/QSRSSPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB0910CE1695003857E3 /* QSPatchPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSPatchPlugIn.xcodeproj; path = QSPatchPlugIn/QSPatchPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB1210CE16A8003857E3 /* QSOmniWebPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSOmniWebPlugIn.xcodeproj; path = QSOmniWebPlugIn/trunk/QSOmniWebPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB1B10CE16BD003857E3 /* QSOmniFocusPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSOmniFocusPlugIn.xcodeproj; path = QSOmniFocusPlugIn/QSOmniFocusPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB2410CE16D7003857E3 /* QSHomestarRunnerPlugIn.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSHomestarRunnerPlugIn.xcode; path = QSHomestarRunnerPlugIn/trunk/QSHomestarRunnerPlugIn.xcode; sourceTree = "<group>"; };
+		14A8CB2B10CE16EB003857E3 /* QSFullscreenPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSFullscreenPlugIn.xcodeproj; path = QSFullscreenPlugIn/QSFullscreenPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB3410CE16FD003857E3 /* QSDuffStringRanker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSDuffStringRanker.xcodeproj; path = QSDuffsRanker/trunk/QSDuffsRanker/QSDuffStringRanker.xcodeproj; sourceTree = "<group>"; };
+		14A8CB4310CE1744003857E3 /* QSAdiumPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAdiumPlugIn.xcodeproj; path = QSAdiumPlugIn/trunk/QSAdiumPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB5710CE1769003857E3 /* QSProcessSwitcherSupportPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSProcessSwitcherSupportPlugIn.xcodeproj; path = ProcessSwitcherSupportPlugIn/QSProcessSwitcherSupportPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB5E10CE177D003857E3 /* QSProcessManipulationPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSProcessManipulationPlugIn.xcodeproj; path = ProcessManipulationPlugIn/QSProcessManipulationPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB6710CE178E003857E3 /* QSPrinterPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSPrinterPlugIn.xcodeproj; path = Printer/QSPrinterPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB7010CE17D0003857E3 /* QSPowerManagementPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSPowerManagementPlugIn.xcodeproj; path = PowerManagementPlugIn/QSPowerManagementPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB7910CE17E2003857E3 /* QSPhonePlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSPhonePlugIn.xcodeproj; path = Phone/QSPhonePlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB8210CE17F4003857E3 /* QSPathFinderPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSPathFinderPlugIn.xcodeproj; path = PathFinder/QSPathFinderPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB8B10CE180A003857E3 /* QSOrnateInterfacePlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSOrnateInterfacePlugIn.xcodeproj; path = OrnateInterface/QSOrnateInterfacePlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CB9410CE1906003857E3 /* MoreAppleEvents.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MoreAppleEvents.xcodeproj; path = OnMyCommand/Common/MoreAppleEvents/MoreAppleEvents.xcodeproj; sourceTree = "<group>"; };
+		14A8CB9B10CE1917003857E3 /* QSNowContactPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSNowContactPlugIn.xcodeproj; path = NowContact/QSNowContactPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CBAA10CE193C003857E3 /* QSNimbusSwitcherPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSNimbusSwitcherPlugIn.xcodeproj; path = NimbusAppSwitcher/QSNimbusSwitcherPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CBB110CE194B003857E3 /* QSNetworkLocationPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSNetworkLocationPlugIn.xcodeproj; path = NetworkLocation/QSNetworkLocationPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CBD210CE19E4003857E3 /* QSNetNewsWirePlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSNetNewsWirePlugIn.xcodeproj; path = NetNewsWire/QSNetNewsWirePlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CBDB10CE1A1E003857E3 /* QSMiniInterface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSMiniInterface.xcodeproj; path = Mini/QSMiniInterface.xcodeproj; sourceTree = "<group>"; };
+		14A8CBE410CE1A33003857E3 /* QSMenuInterface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSMenuInterface.xcodeproj; path = Menu/QSMenuInterface.xcodeproj; sourceTree = "<group>"; };
+		14A8CBED10CE1A45003857E3 /* QSMarkdownPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSMarkdownPlugIn.xcodeproj; path = Markdown/QSMarkdownPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CBF410CE1A59003857E3 /* QSMailsmithPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSMailsmithPlugIn.xcodeproj; path = Mailsmith/QSMailsmithPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CBFD10CE1A78003857E3 /* QSKeychainPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSKeychainPlugIn.xcodeproj; path = Keychain/QSKeychainPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CC0610CE1A84003857E3 /* QSiPhotoPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSiPhotoPlugIn.xcodeproj; path = iPhoto/QSiPhotoPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CC0F10CE1A99003857E3 /* QSIndigoPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSIndigoPlugIn.xcodeproj; path = Indigo/QSIndigoPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CC1C10CE1AEE003857E3 /* QSImageManipulationPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSImageManipulationPlugIn.xcodeproj; path = ImageManipulation/QSImageManipulationPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CC2510CE1B2C003857E3 /* QSiCalModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSiCalModule.xcodeproj; path = iCal/QSiCalModule.xcodeproj; sourceTree = "<group>"; };
+		14A8CC5610CE1B56003857E3 /* QSGoogleCalendarPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSGoogleCalendarPlugIn.xcodeproj; path = GoogleCalendar/QSGoogleCalendarPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CC5F10CE1B68003857E3 /* QSGooglePlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSGooglePlugIn.xcodeproj; path = Google/QSGooglePlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CC6610CE1B84003857E3 /* QSFlashlightInterface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSFlashlightInterface.xcodeproj; path = Flashlight/QSFlashlightInterface.xcodeproj; sourceTree = "<group>"; };
+		14A8CC6F10CE1B93003857E3 /* QSFirefoxPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSFirefoxPlugIn.xcodeproj; path = Firefox/QSFirefoxPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CC7E10CE1BC5003857E3 /* QSEudoraPlugIn.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSEudoraPlugIn.xcode; path = Eudora/QSEudoraPlugIn.xcode; sourceTree = "<group>"; };
+		14A8CC8510CE1BDD003857E3 /* WebSearchElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WebSearchElement.xcodeproj; path = elements.websearch/WebSearchElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CC9110CE1BF1003857E3 /* WebBridge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WebBridge.xcodeproj; path = elements.webbridge/WebBridge.xcodeproj; sourceTree = "<group>"; };
+		14A8CCC310CE1C1F003857E3 /* Sparkle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sparkle.xcodeproj; path = elements.update/Sparkle/Extras/Source/Sparkle.xcodeproj; sourceTree = "<group>"; };
+		14A8CCD010CE1C2F003857E3 /* QSChronoTriggersPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSChronoTriggersPlugIn.xcodeproj; path = elements.trigger.time/QSChronoTriggersPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CCD910CE1C40003857E3 /* QSMouseTriggersPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSMouseTriggersPlugIn.xcodeproj; path = elements.trigger.mouse/trunk/QSMouseTriggersPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CCFE10CE1C70003857E3 /* QSMouseTriggersElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSMouseTriggersElement.xcodeproj; path = elements.trigger.mouse/trunk/QSMouseTriggersElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CD0710CE1C83003857E3 /* QSHotKeyTriggers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSHotKeyTriggers.xcodeproj; path = elements.trigger.hotkey/QSHotKeyTriggers.xcodeproj; sourceTree = "<group>"; };
+		14A8CD1010CE1CA8003857E3 /* QSEventTriggersElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSEventTriggersElement.xcodeproj; path = elements.trigger.event/QSEventTriggersElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CD1F10CE1D51003857E3 /* QSWindowModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSWindowModule.xcodeproj; path = elements.support.window/Windows/QSWindowModule.xcodeproj; sourceTree = "<group>"; };
+		14A8CD2610CE1D66003857E3 /* MusicSupportElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MusicSupportElement.xcodeproj; path = elements.support.music/MusicSupportElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CD3210CE1D76003857E3 /* MailSupportElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MailSupportElement.xcodeproj; path = elements.support.mail/MailSupportElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CD3B10CE1D8C003857E3 /* FileAttributesElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FileAttributesElement.xcodeproj; path = elements.hfsattributes/FileAttributesElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CD4410CE1DAC003857E3 /* ClipboardElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ClipboardElement.xcodeproj; path = elements.clipboard/ClipboardElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CD4D10CE1DBA003857E3 /* QSUIAccessElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSUIAccessElement.xcodeproj; path = elements.accessibility/QSUIAccessElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CD5610CE3EF5003857E3 /* QSDokuWikiPlugIn.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSDokuWikiPlugIn.xcode; path = DokuWiki/QSDokuWikiPlugIn.xcode; sourceTree = "<group>"; };
+		14A8CD5D10CE3F0A003857E3 /* QSDockExtensionPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSDockExtensionPlugIn.xcodeproj; path = Dock/QSDockExtensionPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CD6610CE3F1B003857E3 /* QS Displays Module.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "QS Displays Module.xcodeproj"; path = "Displays/QS Displays Module.xcodeproj"; sourceTree = "<group>"; };
+		14A8CD6F10CE3F29003857E3 /* QSDiskImagePlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSDiskImagePlugIn.xcodeproj; path = DiskImage/QSDiskImagePlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CD7E10CE3F58003857E3 /* DictPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DictPlugin.xcodeproj; path = DictPlugin/trunk/DictPlugin.xcodeproj; sourceTree = "<group>"; };
+		14A8CD8F10CE3F65003857E3 /* QSDeviantModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSDeviantModule.xcodeproj; path = Deviant/QSDeviantModule.xcodeproj; sourceTree = "<group>"; };
+		14A8CD9810CE3F75003857E3 /* QSDesktopManagerPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSDesktopManagerPlugIn.xcodeproj; path = DesktopManager/QSDesktopManagerPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CDA110CE3F83003857E3 /* QSDeliciousLibraryModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSDeliciousLibraryModule.xcodeproj; path = DeliciousLibrary/QSDeliciousLibraryModule.xcodeproj; sourceTree = "<group>"; };
+		14A8CDDE10CE3F98003857E3 /* QSDeliciousPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSDeliciousPlugIn.xcodeproj; path = del.icio.us/QSDeliciousPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CDE710CE3FA6003857E3 /* QSSystemDaemonsPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSystemDaemonsPlugIn.xcodeproj; path = Daemons/QSSystemDaemonsPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CDEE10CE3FD1003857E3 /* QSCompressionPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSCompressionPlugIn.xcodeproj; path = Compression/QSCompressionPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CDF710CE3FFB003857E3 /* QSCommandLineTool.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSCommandLineTool.xcodeproj; path = CommandLineTool/QSCommandLineTool.xcodeproj; sourceTree = "<group>"; };
+		14A8CE0A10CE4029003857E3 /* DevDocsElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DevDocsElement.xcodeproj; path = com.apple.Xcode.devdocs/DevDocsElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CE1610CE403B003857E3 /* XcodeElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XcodeElement.xcodeproj; path = com.apple.Xcode.application/XcodeElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CE1F10CE404A003857E3 /* SpacesElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SpacesElement.xcodeproj; path = com.apple.spaces/SpacesElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CE2810CE405B003857E3 /* QSSafariPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSafariPlugIn.xcodeproj; path = com.apple.Safari/QSSafariPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CE3110CE407E003857E3 /* AppleMailElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppleMailElement.xcodeproj; path = com.apple.Mail/AppleMailElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CE3710CE408C003857E3 /* iChatElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iChatElement.xcodeproj; path = com.apple.iChat/iChatElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CE4610CE40B8003857E3 /* AutomatorElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AutomatorElement.xcodeproj; path = com.apple.Automatior/AutomatorElement.xcodeproj; sourceTree = "<group>"; };
+		14A8CE7B10CE41C7003857E3 /* CodelessPlugIns.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CodelessPlugIns.xcodeproj; path = Codeless/CodelessPlugIns.xcodeproj; sourceTree = "<group>"; };
+		14A8CE8010CE41D8003857E3 /* QSCLIXPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSCLIXPlugIn.xcodeproj; path = CLIX/QSCLIXPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CE8910CE41E5003857E3 /* QSCl1pPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSCl1pPlugIn.xcodeproj; path = Cl1p/QSCl1pPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CE9210CE41F3003857E3 /* QSCaminoPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSCaminoPlugIn.xcodeproj; path = Camino/QSCaminoPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CE9B10CE4208003857E3 /* QSCalendarSupport.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSCalendarSupport.xcode; path = CalendarSupport/QSCalendarSupport.xcode; sourceTree = "<group>"; };
+		14A8CEBE10CE425F003857E3 /* QSBluetoothPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSBluetoothPlugIn.xcodeproj; path = Bluetooth/QSBluetoothPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CEC710CE4283003857E3 /* QSBezelInterfacePlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSBezelInterfacePlugIn.xcodeproj; path = Bezel/QSBezelInterfacePlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CEE710CE42C4003857E3 /* QSAudioPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAudioPlugIn.xcodeproj; path = Audio/QSAudioPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CEF010CE42D1003857E3 /* QSAOLPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAOLPlugIn.xcodeproj; path = AOL/QSAOLPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CEF910CE42E1003857E3 /* QSAmazonPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAmazonPlugIn.xcodeproj; path = Amazon/QSAmazonPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CEFF10CE42EF003857E3 /* QSAlarmPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAlarmPlugIn.xcodeproj; path = Alarm/QSAlarmPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14A8CF0B10CE4313003857E3 /* QSAddressBookActionsPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAddressBookActionsPlugIn.xcodeproj; path = AddressBookActionsPlugIn/QSAddressBookActionsPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14E29B3010D1240200DCC5F2 /* QSSurveyPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSurveyPlugIn.xcodeproj; path = elements.survey/QSSurveyPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14E29B7310D1265800DCC5F2 /* QSCommonMusicArtworkPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSCommonMusicArtworkPlugIn.xcodeproj; path = MusicArtwork/ARTchive/QSCommonMusicArtworkPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14E29B7C10D1266C00DCC5F2 /* QSClutterPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSClutterPlugIn.xcodeproj; path = MusicArtwork/Clutter/QSClutterPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14E29B8310D1267D00DCC5F2 /* QSSofaPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSofaPlugIn.xcodeproj; path = MusicArtwork/Sofa/QSSofaPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14E29B8C10D1268F00DCC5F2 /* QSSynergyPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSynergyPlugIn.xcodeproj; path = MusicArtwork/Synergy/QSSynergyPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14E29C2A10D128E000DCC5F2 /* QSAcidSearchPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAcidSearchPlugIn.xcodeproj; path = SafariSearches/AcidSearch/QSAcidSearchPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14E29C3310D128F000DCC5F2 /* QSSafariStandPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSafariStandPlugIn.xcodeproj; path = SafariSearches/SafariStand/QSSafariStandPlugIn.xcodeproj; sourceTree = "<group>"; };
+		14E29C3C10D1290500DCC5F2 /* QSSogudiPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSSogudiPlugIn.xcodeproj; path = SafariSearches/Sogudi/QSSogudiPlugIn.xcodeproj; sourceTree = "<group>"; };
 		4DB4A08A0E100BFD0010C540 /* ColloquyPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ColloquyPlugin.xcodeproj; path = ColloquyPlugin/trunk/ColloquyPlugin.xcodeproj; sourceTree = "<group>"; };
 		4DB4A0930E100C0A0010C540 /* QSAddressBookPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAddressBookPlugIn.xcodeproj; path = com.apple.AddressBook/trunk/QSAddressBookPlugIn.xcodeproj; sourceTree = "<group>"; };
 		4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CalculatorPlugin.xcodeproj; path = com.apple.calculator/trunk/CalculatorPlugin.xcodeproj; sourceTree = "<group>"; };
@@ -198,10 +1080,1120 @@
 		4DB4A0CE0E100CF80010C540 /* GrowlNotifier.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GrowlNotifier.xcodeproj; path = GrowlNotifier/trunk/GrowlNotifier.xcodeproj; sourceTree = "<group>"; };
 		4DB4A0D70E100D030010C540 /* NotificationHub.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NotificationHub.xcodeproj; path = NotificationHub/trunk/NotificationHub.xcodeproj; sourceTree = "<group>"; };
 		4DB4A0E00E100D0E0010C540 /* QSFileTagsPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSFileTagsPlugIn.xcodeproj; path = public.file.tags/trunk/QSFileTagsPlugIn.xcodeproj; sourceTree = "<group>"; };
-		4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Desktop Picture Action.xcodeproj"; path = "QSDesktopPictureAction/trunk/Desktop Picture Action.xcodeproj"; sourceTree = "<group>"; };
+		4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Desktop Picture Action.xcodeproj"; path = "QSDesktopPictureAction/trunk/Desktop Picture Action.xcodeproj"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		14A8839B10CFBDAC007D08C4 /* Unknown use. Does not compile. */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE7B10CE41C7003857E3 /* CodelessPlugIns.xcodeproj */,
+				14A8CD3210CE1D76003857E3 /* MailSupportElement.xcodeproj */,
+				14A8CD2610CE1D66003857E3 /* MusicSupportElement.xcodeproj */,
+			);
+			name = "Unknown use. Does not compile.";
+			sourceTree = "<group>";
+		};
+		14A8AA3E10CE06F4003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8AA4510CE06F4003857E3 /* AirPort Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8BA8710CE10AD003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8BA8C10CE10AD003857E3 /* Amazon Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8C9C310CE116B003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8C9C810CE116B003857E3 /* QSYouControlDesktopsPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8C9CC10CE11A7003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8C9D310CE11A7003857E3 /* QSYojimboPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8C9D510CE11CF003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8C9DA10CE11CF003857E3 /* QSXattrMetadataImporter.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8C9DC10CE120C003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8C9E110CE120C003857E3 /* Extended Attributes Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8C9E310CE121B003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8C9E810CE121B003857E3 /* X-10 Support.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8C9EA10CE122B003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8C9F110CE122B003857E3 /* User Accounts Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8C9F310CE1255003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8C9F810CE1255003857E3 /* TS Actions Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CA2D10CE1283003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CA3410CE1283003857E3 /* Transmit Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CA3610CE129C003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CA3B10CE129C003857E3 /* QSTranslationPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CA3D10CE12B8003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CA4410CE12B8003857E3 /* TextMate Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CA4610CE12FD003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CA4D10CE12FD003857E3 /* Terminal Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CA4F10CE1328003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CA5610CE1328003857E3 /* QSTeleflipPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CA5810CE133D003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CA5F10CE133D003857E3 /* System HotKey Commands.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CA6110CE134B003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CA6810CE134B003857E3 /* del.icio.us Bookmarks.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CA6A10CE1373003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CA7110CE1373003857E3 /* Spotlight Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CA7310CE1384003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CA7A10CE1384003857E3 /* QSSoundSupport.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CA7C10CE139D003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CA8310CE139D003857E3 /* Slideshow Action.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CA9110CE13D0003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CA9610CE13D0003857E3 /* Skype Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CA9810CE1402003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CAA010CE1402003857E3 /* Shelf Module.qsplugin */,
+				14A8CAA210CE1402003857E3 /* Shelf Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CAB610CE1599003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CABD10CE1599003857E3 /* Services Menu Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CABF10CE15A9003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CAC610CE15A9003857E3 /* QSScreenCapturePlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CAC810CE15E4003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CACF10CE15E4003857E3 /* Remote Desktop Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CAD110CE15F7003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CAD610CE15F7003857E3 /* Window Interface.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CAE410CE160C003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CAEA10CE160C003857E3 /* QSWeatherPlugin.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CAEC10CE1623003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CAF110CE1623003857E3 /* Spellcheck Action.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CAF310CE165C003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CAF810CE165C003857E3 /* QSShiiraPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CAFA10CE1675003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CAFF10CE1675003857E3 /* QS Sherlock Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB0110CE1685003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB0810CE1685003857E3 /* QSRSSPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB0A10CE1695003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB1110CE1695003857E3 /* B51Patch.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB1310CE16A8003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB1A10CE16A8003857E3 /* OmniWeb Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB1C10CE16BD003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB2310CE16BD003857E3 /* OmniFocus Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB2510CE16D7003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB2A10CE16D7003857E3 /* QSHomestarRunnerPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB2C10CE16EB003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB3310CE16EB003857E3 /* QSFullscreenPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB3510CE16FD003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB3C10CE16FD003857E3 /* TextMate Ranker.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB4410CE1744003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB4E10CE1744003857E3 /* Adium Module.bundle */,
+				14A8CB5010CE1744003857E3 /* Quicksilver.AdiumPlugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB5810CE1769003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB5D10CE1769003857E3 /* QSProcessSwitcherSupportPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB5F10CE177D003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB6610CE177D003857E3 /* Process Manipulation Actions.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB6810CE178E003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB6F10CE178E003857E3 /* Printer Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB7110CE17D0003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB7810CE17D0003857E3 /* QSPowerManagementPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB7A10CE17E2003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB8110CE17E2003857E3 /* Phone Actions.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB8310CE17F4003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB8A10CE17F4003857E3 /* Path Finder Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB8C10CE180A003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB9110CE180A003857E3 /* Ornate Interface.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB9510CE1906003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CB9A10CE1906003857E3 /* MoreAppleEvents.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CB9C10CE1917003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CBA310CE1917003857E3 /* QS NUDC Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CBAB10CE193C003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CBB010CE193C003857E3 /* QSNimbusSwitcherPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CBCD10CE19BE003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CBD110CE19BE003857E3 /* Network Location Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CBD310CE19E4003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CBDA10CE19E4003857E3 /* NetNewsWire Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CBDC10CE1A1E003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CBE310CE1A1E003857E3 /* Mini Interface.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CBE510CE1A33003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CBEC10CE1A33003857E3 /* Menu Interface.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CBEE10CE1A45003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CBF310CE1A45003857E3 /* Markdown Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CBF510CE1A59003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CBFC10CE1A59003857E3 /* QSMailsmithPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CBFE10CE1A78003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC0510CE1A78003857E3 /* Keychain Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC0710CE1A84003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC0E10CE1A84003857E3 /* iPhoto Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC1010CE1A99003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC1710CE1A99003857E3 /* Indigo X10 Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC1D10CE1AEE003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC2410CE1AEE003857E3 /* Image Manipulation Actions.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC2610CE1B2C003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC2D10CE1B2C003857E3 /* iCal Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC5710CE1B56003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC5E10CE1B56003857E3 /* Google Calendar Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC6010CE1B68003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC6510CE1B68003857E3 /* Google Support.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC6710CE1B84003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC6E10CE1B84003857E3 /* Flashlight Interface.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC7010CE1B93003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC7710CE1B93003857E3 /* Firefox Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC7F10CE1BC5003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC8410CE1BC5003857E3 /* QSEudoraPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC8610CE1BDD003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC8E10CE1BDD003857E3 /* Web Search Module.bundle */,
+				14A8CC9010CE1BDD003857E3 /* Web Search Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CC9210CE1BF1003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CC9A10CE1BF1003857E3 /* WebBridge.qsplugin */,
+				14A8CC9C10CE1BF1003857E3 /* WebBridgePlugin.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CCC410CE1C1F003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CCCD10CE1C1F003857E3 /* Sparkle.framework */,
+				14A8CCCF10CE1C1F003857E3 /* Sparkle Test App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CCD110CE1C2F003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CCD810CE1C2F003857E3 /* Time Triggers.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CCDA10CE1C40003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CCE110CE1C40003857E3 /* Mouse Triggers.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CCFF10CE1C70003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD0610CE1C70003857E3 /* Mouse Triggers.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD0810CE1C83003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD0F10CE1C83003857E3 /* HotKey Triggers.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD1110CE1CA8003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD1810CE1CA8003857E3 /* Event Triggers.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD2010CE1D51003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD2510CE1D51003857E3 /* Window Manipulation Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD2710CE1D66003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD2F10CE1D66003857E3 /* Music Support.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD3310CE1D76003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD3A10CE1D76003857E3 /* .qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD3C10CE1D8C003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD4310CE1D8C003857E3 /* File Attribute Actions.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD4510CE1DAC003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD4C10CE1DAC003857E3 /* Clipboard Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD4E10CE1DBA003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD5510CE1DBA003857E3 /* UI Access.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD5710CE3EF5003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD5C10CE3EF5003857E3 /* DokuWiki Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD5E10CE3F0A003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD6510CE3F0A003857E3 /* QSDockExtensionPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD6710CE3F1B003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD6E10CE3F1B003857E3 /* Displays Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD7010CE3F29003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD7710CE3F29003857E3 /* Disk Image Support.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD7F10CE3F58003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD8E10CE3F58003857E3 /* Dictionary Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD9010CE3F65003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD9710CE3F65003857E3 /* Deviant Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CD9910CE3F75003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CDA010CE3F75003857E3 /* QSDesktopManagerPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CDA210CE3F83003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CDA710CE3F83003857E3 /* Delicious Library Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CDDF10CE3F98003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CDE610CE3F98003857E3 /* Social Bookmarks.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CDE810CE3FA6003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CDED10CE3FA6003857E3 /* QSSystemDaemonsPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CDEF10CE3FD1003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CDF610CE3FD1003857E3 /* File Compression Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CDF810CE3FFB003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE0110CE3FFB003857E3 /* Command Line Tool.qsplugin */,
+				14A8CE0310CE3FFB003857E3 /* qs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CE0B10CE4029003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE1310CE4029003857E3 /* Developer Module.qsplugin */,
+				14A8CE1510CE4029003857E3 /* Developer Documentation.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CE1710CE403B003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE1E10CE403B003857E3 /* Xcode Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CE2010CE404A003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE2710CE404A003857E3 /* Spaces Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CE2910CE405B003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE3010CE405B003857E3 /* Safari Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CE3210CE407E003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE3610CE407E003857E3 /* Apple Mail Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CE3810CE408C003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE3F10CE408C003857E3 /* .qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CE4710CE40B8003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE4E10CE40B8003857E3 /* Automator.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CE7C10CE41C7003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CE8110CE41D8003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE8810CE41D8003857E3 /* CLIX Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CE8A10CE41E5003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE9110CE41E5003857E3 /* QSCl1pPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CE9310CE41F3003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE9A10CE41F3003857E3 /* Camino Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CE9C10CE4208003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CEA110CE4208003857E3 /* QSCalendarSupport.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CEBF10CE425F003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CEC610CE425F003857E3 /* Bluetooth Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CEC810CE4283003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CECF10CE4283003857E3 /* Bezel Interface.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CEE810CE42C4003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CEEF10CE42C4003857E3 /* Audio Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CEF110CE42D1003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CEF810CE42D1003857E3 /* QSAOLPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CEFA10CE42E1003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CEFE10CE42E1003857E3 /* Amazon Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CF0010CE42EF003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CF0410CE42EF003857E3 /* QSAlarmPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CF0C10CE4313003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CF1010CE4313003857E3 /* QSAddressBookActionsPlugIn.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8CF1110CE4327003857E3 /* 10.5 and 10.6 ready */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "10.5 and 10.6 ready";
+			sourceTree = "<group>";
+		};
+		14A8CF1210CE433E003857E3 /* 10.5 only ready */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "10.5 only ready";
+			sourceTree = "<group>";
+		};
+		14A8CF1310CE434A003857E3 /* 10.6 only ready */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "10.6 only ready";
+			sourceTree = "<group>";
+		};
+		14A8CF3D10CE44DC003857E3 /* Compiles */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CE3110CE407E003857E3 /* AppleMailElement.xcodeproj */,
+				14A8CE4610CE40B8003857E3 /* AutomatorElement.xcodeproj */,
+				4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */,
+				4DB4A08A0E100BFD0010C540 /* ColloquyPlugin.xcodeproj */,
+				4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */,
+				14A8CE0A10CE4029003857E3 /* DevDocsElement.xcodeproj */,
+				14A8CD7E10CE3F58003857E3 /* DictPlugin.xcodeproj */,
+				4DB4A0AE0E100C2B0010C540 /* DiffModule.xcodeproj */,
+				14A8CD3B10CE1D8C003857E3 /* FileAttributesElement.xcodeproj */,
+				4DB4A0C00E100CE70010C540 /* FindModule.xcodeproj */,
+				4DB4A0CE0E100CF80010C540 /* GrowlNotifier.xcodeproj */,
+				4DB4A0D70E100D030010C540 /* NotificationHub.xcodeproj */,
+				14A8CD6610CE3F1B003857E3 /* QS Displays Module.xcodeproj */,
+				14E29C2A10D128E000DCC5F2 /* QSAcidSearchPlugIn.xcodeproj */,
+				4DB4A0930E100C0A0010C540 /* QSAddressBookPlugIn.xcodeproj */,
+				14A8AA3D10CE06F4003857E3 /* QSAirPortPlugIn.xcodeproj */,
+				14A8CEFF10CE42EF003857E3 /* QSAlarmPlugIn.xcodeproj */,
+				14A8CEF010CE42D1003857E3 /* QSAOLPlugIn.xcodeproj */,
+				14A8CEE710CE42C4003857E3 /* QSAudioPlugIn.xcodeproj */,
+				14A8CEBE10CE425F003857E3 /* QSBluetoothPlugIn.xcodeproj */,
+				14A8CE9210CE41F3003857E3 /* QSCaminoPlugIn.xcodeproj */,
+				14A8CCD010CE1C2F003857E3 /* QSChronoTriggersPlugIn.xcodeproj */,
+				14A8CE8910CE41E5003857E3 /* QSCl1pPlugIn.xcodeproj */,
+				14A8CE8010CE41D8003857E3 /* QSCLIXPlugIn.xcodeproj */,
+				14E29B7C10D1266C00DCC5F2 /* QSClutterPlugIn.xcodeproj */,
+				14E29B7310D1265800DCC5F2 /* QSCommonMusicArtworkPlugIn.xcodeproj */,
+				14A8CDEE10CE3FD1003857E3 /* QSCompressionPlugIn.xcodeproj */,
+				14A8CDA110CE3F83003857E3 /* QSDeliciousLibraryModule.xcodeproj */,
+				14A8CDDE10CE3F98003857E3 /* QSDeliciousPlugIn.xcodeproj */,
+				14A8CD9810CE3F75003857E3 /* QSDesktopManagerPlugIn.xcodeproj */,
+				14A8CD8F10CE3F65003857E3 /* QSDeviantModule.xcodeproj */,
+				14A8CD6F10CE3F29003857E3 /* QSDiskImagePlugIn.xcodeproj */,
+				14A8CD5D10CE3F0A003857E3 /* QSDockExtensionPlugIn.xcodeproj */,
+				14A8CD5610CE3EF5003857E3 /* QSDokuWikiPlugIn.xcode */,
+				14A8CD1010CE1CA8003857E3 /* QSEventTriggersElement.xcodeproj */,
+				14A8C9DB10CE120C003857E3 /* QSExtendedAttributesPlugIn.xcodeproj */,
+				4DB4A0E00E100D0E0010C540 /* QSFileTagsPlugIn.xcodeproj */,
+				14A8CC6F10CE1B93003857E3 /* QSFirefoxPlugIn.xcodeproj */,
+				14A8CC6610CE1B84003857E3 /* QSFlashlightInterface.xcodeproj */,
+				14A8CB2B10CE16EB003857E3 /* QSFullscreenPlugIn.xcodeproj */,
+				4DB4A0A50E100C1A0010C540 /* QSGmailPlugIn.xcodeproj */,
+				14A8CC5610CE1B56003857E3 /* QSGoogleCalendarPlugIn.xcodeproj */,
+				14A8CC5F10CE1B68003857E3 /* QSGooglePlugIn.xcodeproj */,
+				14A8CB2410CE16D7003857E3 /* QSHomestarRunnerPlugIn.xcode */,
+				14A8CC2510CE1B2C003857E3 /* QSiCalModule.xcodeproj */,
+				14A8CC1C10CE1AEE003857E3 /* QSImageManipulationPlugIn.xcodeproj */,
+				14A8CC0F10CE1A99003857E3 /* QSIndigoPlugIn.xcodeproj */,
+				14A8CC0610CE1A84003857E3 /* QSiPhotoPlugIn.xcodeproj */,
+				14A8CBFD10CE1A78003857E3 /* QSKeychainPlugIn.xcodeproj */,
+				14A8CBED10CE1A45003857E3 /* QSMarkdownPlugIn.xcodeproj */,
+				14A8CBE410CE1A33003857E3 /* QSMenuInterface.xcodeproj */,
+				14A8CBDB10CE1A1E003857E3 /* QSMiniInterface.xcodeproj */,
+				14A8CCD910CE1C40003857E3 /* QSMouseTriggersPlugIn.xcodeproj */,
+				14A8CBD210CE19E4003857E3 /* QSNetNewsWirePlugIn.xcodeproj */,
+				14A8CB1210CE16A8003857E3 /* QSOmniWebPlugIn.xcodeproj */,
+				14A8CB0910CE1695003857E3 /* QSPatchPlugIn.xcodeproj */,
+				14A8CB8210CE17F4003857E3 /* QSPathFinderPlugIn.xcodeproj */,
+				14A8CB7910CE17E2003857E3 /* QSPhonePlugIn.xcodeproj */,
+				14A8CB6710CE178E003857E3 /* QSPrinterPlugIn.xcodeproj */,
+				14A8CB5E10CE177D003857E3 /* QSProcessManipulationPlugIn.xcodeproj */,
+				14A8CAC710CE15E4003857E3 /* QSRemoteDesktopPlugIn.xcodeproj */,
+				14A8CB0010CE1685003857E3 /* QSRSSPlugIn.xcodeproj */,
+				14A8CE2810CE405B003857E3 /* QSSafariPlugIn.xcodeproj */,
+				14E29C3310D128F000DCC5F2 /* QSSafariStandPlugIn.xcodeproj */,
+				14A8CABE10CE15A9003857E3 /* QSScreenCapturePlugIn.xcodeproj */,
+				14A8CAB510CE1599003857E3 /* QSServicesMenuPlugIn.xcodeproj */,
+				14A8CA9710CE1402003857E3 /* QSShelfPlugIn.xcodeproj */,
+				14A8CAF910CE1675003857E3 /* QSSherlockPlugIn.xcode */,
+				14A8CAF210CE165C003857E3 /* QSShiiraPlugIn.xcode */,
+				14A8CA9010CE13D0003857E3 /* QSSkypePlugIn.xcodeproj */,
+				14E29B8310D1267D00DCC5F2 /* QSSofaPlugIn.xcodeproj */,
+				14E29C3C10D1290500DCC5F2 /* QSSogudiPlugIn.xcodeproj */,
+				14E29B3010D1240200DCC5F2 /* QSSurveyPlugIn.xcodeproj */,
+				14A8CA5710CE133D003857E3 /* QSSymbolicHotKeyPlugIn.xcodeproj */,
+				14E29B8C10D1268F00DCC5F2 /* QSSynergyPlugIn.xcodeproj */,
+				14A8CDE710CE3FA6003857E3 /* QSSystemDaemonsPlugIn.xcodeproj */,
+				14A8CA4E10CE1328003857E3 /* QSTeleflipPlugIn.xcodeproj */,
+				14A8CA4510CE12FD003857E3 /* QSTerminalPlugIn.xcodeproj */,
+				14A8CA3C10CE12B8003857E3 /* QSTextMatePlugIn.xcodeproj */,
+				14A8CA3510CE129C003857E3 /* QSTranslationPlugIn.xcodeproj */,
+				14A8CA2C10CE1283003857E3 /* QSTransmitModule.xcodeproj */,
+				14A8CD4D10CE1DBA003857E3 /* QSUIAccessElement.xcodeproj */,
+				14A8C9E910CE122B003857E3 /* QSUserAccountsPlugIn.xcodeproj */,
+				14A8CAD010CE15F7003857E3 /* QSWindowInterface.xcode */,
+				14A8C9E210CE121B003857E3 /* QSX10PlugIn.xcodeproj */,
+				14A8C9D410CE11CF003857E3 /* QSXattrMetadataImporter.xcodeproj */,
+				14A8C9CB10CE11A7003857E3 /* QSYojimboPlugIn.xcodeproj */,
+				14A8C9C210CE116B003857E3 /* QSYouControlDesktopsPlugIn.xcodeproj */,
+				14A8CAEB10CE1623003857E3 /* Spellcheck Action.xcode */,
+				14A8CA6010CE134B003857E3 /* Stikkit.xcodeproj */,
+				4DB4A0B70E100CDB0010C540 /* TextManipulationElement.xcodeproj */,
+				14A8CC9110CE1BF1003857E3 /* WebBridge.xcodeproj */,
+				14A8CE1610CE403B003857E3 /* XcodeElement.xcodeproj */,
+			);
+			name = Compiles;
+			sourceTree = "<group>";
+		};
+		14A8D26B10CE5C36003857E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A8D26F10CE5C36003857E3 /* Desktop Picture Action.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A8D3CE10CE6E08003857E3 /* Does not compile. Needs tweaking. */ = {
+			isa = PBXGroup;
+			children = (
+				14A8CD4410CE1DAC003857E3 /* ClipboardElement.xcodeproj */,
+				14A8CE3710CE408C003857E3 /* iChatElement.xcodeproj */,
+				14A8CB9410CE1906003857E3 /* MoreAppleEvents.xcodeproj */,
+				14A8CF0B10CE4313003857E3 /* QSAddressBookActionsPlugIn.xcodeproj */,
+				14A8CB4310CE1744003857E3 /* QSAdiumPlugIn.xcodeproj */,
+				14A8BA8610CE10AD003857E3 /* QSAmazonPlugIn.xcodeproj */,
+				14A8CEC710CE4283003857E3 /* QSBezelInterfacePlugIn.xcodeproj */,
+				14A8CE9B10CE4208003857E3 /* QSCalendarSupport.xcode */,
+				14A8CDF710CE3FFB003857E3 /* QSCommandLineTool.xcodeproj */,
+				14A8CB3410CE16FD003857E3 /* QSDuffStringRanker.xcodeproj */,
+				14A8CC7E10CE1BC5003857E3 /* QSEudoraPlugIn.xcode */,
+				14A8CD0710CE1C83003857E3 /* QSHotKeyTriggers.xcodeproj */,
+				14A8CBF410CE1A59003857E3 /* QSMailsmithPlugIn.xcodeproj */,
+				14A8CCFE10CE1C70003857E3 /* QSMouseTriggersElement.xcodeproj */,
+				14A8CBB110CE194B003857E3 /* QSNetworkLocationPlugIn.xcodeproj */,
+				14A8CBAA10CE193C003857E3 /* QSNimbusSwitcherPlugIn.xcodeproj */,
+				14A8CB9B10CE1917003857E3 /* QSNowContactPlugIn.xcodeproj */,
+				14A8CB1B10CE16BD003857E3 /* QSOmniFocusPlugIn.xcodeproj */,
+				14A8CB8B10CE180A003857E3 /* QSOrnateInterfacePlugIn.xcodeproj */,
+				14A8CB7010CE17D0003857E3 /* QSPowerManagementPlugIn.xcodeproj */,
+				14A8CB5710CE1769003857E3 /* QSProcessSwitcherSupportPlugIn.xcodeproj */,
+				14A8CA7B10CE139D003857E3 /* QSSlideshowPlugIn.xcodeproj */,
+				14A8CA7210CE1384003857E3 /* QSSoundSupport.xcodeproj */,
+				14A8CA6910CE1373003857E3 /* QSSpotlightPlugIn.xcodeproj */,
+				14A8CAE310CE160C003857E3 /* QSWeatherPlugin.xcodeproj */,
+				14A8CD1F10CE1D51003857E3 /* QSWindowModule.xcodeproj */,
+				14A8CE1F10CE404A003857E3 /* SpacesElement.xcodeproj */,
+				14A8CCC310CE1C1F003857E3 /* Sparkle.xcodeproj */,
+				14A8C9F210CE1255003857E3 /* TSActionsPlugin.xcode */,
+				14A8CC8510CE1BDD003857E3 /* WebSearchElement.xcodeproj */,
+			);
+			name = "Does not compile. Needs tweaking.";
+			sourceTree = "<group>";
+		};
+		14E29B3110D1240200DCC5F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14E29B3810D1240200DCC5F2 /* User Data Request.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14E29B7410D1265800DCC5F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14E29B7B10D1265800DCC5F2 /* ARTchive Artwork.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14E29B7D10D1266C00DCC5F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14E29B8210D1266C00DCC5F2 /* Clutter Artwork.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14E29B8410D1267D00DCC5F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14E29B8B10D1267D00DCC5F2 /* Sofa Artwork.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14E29B8D10D1268F00DCC5F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14E29B9210D1268F00DCC5F2 /* Synergy Artwork.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14E29C2B10D128E000DCC5F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14E29C3210D128E000DCC5F2 /* AcidSearch Queries.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14E29C3410D128F000DCC5F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14E29C3B10D128F000DCC5F2 /* SafariStand Queries.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14E29C3D10D1290500DCC5F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14E29C4410D1290500DCC5F2 /* Sogudi Queries.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4DB4A08B0E100BFD0010C540 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,28 +2274,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4DB4A0EA0E100D170010C540 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4DB4A0F10E100D170010C540 /* Desktop Picture Action.qsplugin */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7F69A6CF0D200F3600D5C99E = {
 			isa = PBXGroup;
 			children = (
-				4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */,
-				4DB4A0E00E100D0E0010C540 /* QSFileTagsPlugIn.xcodeproj */,
-				4DB4A0D70E100D030010C540 /* NotificationHub.xcodeproj */,
-				4DB4A0CE0E100CF80010C540 /* GrowlNotifier.xcodeproj */,
-				4DB4A0C00E100CE70010C540 /* FindModule.xcodeproj */,
-				4DB4A0B70E100CDB0010C540 /* TextManipulationElement.xcodeproj */,
-				4DB4A0AE0E100C2B0010C540 /* DiffModule.xcodeproj */,
-				4DB4A0A50E100C1A0010C540 /* QSGmailPlugIn.xcodeproj */,
-				4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */,
-				4DB4A0930E100C0A0010C540 /* QSAddressBookPlugIn.xcodeproj */,
-				4DB4A08A0E100BFD0010C540 /* ColloquyPlugin.xcodeproj */,
+				14A8839B10CFBDAC007D08C4 /* Unknown use. Does not compile. */,
+				14A8D3CE10CE6E08003857E3 /* Does not compile. Needs tweaking. */,
+				14A8CF3D10CE44DC003857E3 /* Compiles */,
+				14A8CF1210CE433E003857E3 /* 10.5 only ready */,
+				14A8CF1310CE434A003857E3 /* 10.6 only ready */,
+				14A8CF1110CE4327003857E3 /* 10.5 and 10.6 ready */,
 			);
 			sourceTree = "<group>";
 		};
@@ -322,20 +2301,48 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 14A8CE3210CE407E003857E3 /* Products */;
+					ProjectRef = 14A8CE3110CE407E003857E3 /* AppleMailElement.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CE4710CE40B8003857E3 /* Products */;
+					ProjectRef = 14A8CE4610CE40B8003857E3 /* AutomatorElement.xcodeproj */;
+				},
+				{
 					ProductGroup = 4DB4A09D0E100C130010C540 /* Products */;
 					ProjectRef = 4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CD4510CE1DAC003857E3 /* Products */;
+					ProjectRef = 14A8CD4410CE1DAC003857E3 /* ClipboardElement.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CE7C10CE41C7003857E3 /* Products */;
+					ProjectRef = 14A8CE7B10CE41C7003857E3 /* CodelessPlugIns.xcodeproj */;
 				},
 				{
 					ProductGroup = 4DB4A08B0E100BFD0010C540 /* Products */;
 					ProjectRef = 4DB4A08A0E100BFD0010C540 /* ColloquyPlugin.xcodeproj */;
 				},
 				{
-					ProductGroup = 4DB4A0EA0E100D170010C540 /* Products */;
+					ProductGroup = 14A8D26B10CE5C36003857E3 /* Products */;
 					ProjectRef = 4DB4A0E90E100D170010C540 /* Desktop Picture Action.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CE0B10CE4029003857E3 /* Products */;
+					ProjectRef = 14A8CE0A10CE4029003857E3 /* DevDocsElement.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CD7F10CE3F58003857E3 /* Products */;
+					ProjectRef = 14A8CD7E10CE3F58003857E3 /* DictPlugin.xcodeproj */;
 				},
 				{
 					ProductGroup = 4DB4A0AF0E100C2B0010C540 /* Products */;
 					ProjectRef = 4DB4A0AE0E100C2B0010C540 /* DiffModule.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CD3C10CE1D8C003857E3 /* Products */;
+					ProjectRef = 14A8CD3B10CE1D8C003857E3 /* FileAttributesElement.xcodeproj */;
 				},
 				{
 					ProductGroup = 4DB4A0C10E100CE70010C540 /* Products */;
@@ -346,24 +2353,460 @@
 					ProjectRef = 4DB4A0CE0E100CF80010C540 /* GrowlNotifier.xcodeproj */;
 				},
 				{
+					ProductGroup = 14A8CE3810CE408C003857E3 /* Products */;
+					ProjectRef = 14A8CE3710CE408C003857E3 /* iChatElement.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CD3310CE1D76003857E3 /* Products */;
+					ProjectRef = 14A8CD3210CE1D76003857E3 /* MailSupportElement.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB9510CE1906003857E3 /* Products */;
+					ProjectRef = 14A8CB9410CE1906003857E3 /* MoreAppleEvents.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CD2710CE1D66003857E3 /* Products */;
+					ProjectRef = 14A8CD2610CE1D66003857E3 /* MusicSupportElement.xcodeproj */;
+				},
+				{
 					ProductGroup = 4DB4A0D80E100D030010C540 /* Products */;
 					ProjectRef = 4DB4A0D70E100D030010C540 /* NotificationHub.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CD6710CE3F1B003857E3 /* Products */;
+					ProjectRef = 14A8CD6610CE3F1B003857E3 /* QS Displays Module.xcodeproj */;
+				},
+				{
+					ProductGroup = 14E29C2B10D128E000DCC5F2 /* Products */;
+					ProjectRef = 14E29C2A10D128E000DCC5F2 /* QSAcidSearchPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CF0C10CE4313003857E3 /* Products */;
+					ProjectRef = 14A8CF0B10CE4313003857E3 /* QSAddressBookActionsPlugIn.xcodeproj */;
 				},
 				{
 					ProductGroup = 4DB4A0940E100C0A0010C540 /* Products */;
 					ProjectRef = 4DB4A0930E100C0A0010C540 /* QSAddressBookPlugIn.xcodeproj */;
 				},
 				{
+					ProductGroup = 14A8CB4410CE1744003857E3 /* Products */;
+					ProjectRef = 14A8CB4310CE1744003857E3 /* QSAdiumPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8AA3E10CE06F4003857E3 /* Products */;
+					ProjectRef = 14A8AA3D10CE06F4003857E3 /* QSAirPortPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CF0010CE42EF003857E3 /* Products */;
+					ProjectRef = 14A8CEFF10CE42EF003857E3 /* QSAlarmPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8BA8710CE10AD003857E3 /* Products */;
+					ProjectRef = 14A8BA8610CE10AD003857E3 /* QSAmazonPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CEFA10CE42E1003857E3 /* Products */;
+					ProjectRef = 14A8CEF910CE42E1003857E3 /* QSAmazonPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CEF110CE42D1003857E3 /* Products */;
+					ProjectRef = 14A8CEF010CE42D1003857E3 /* QSAOLPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CEE810CE42C4003857E3 /* Products */;
+					ProjectRef = 14A8CEE710CE42C4003857E3 /* QSAudioPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CEC810CE4283003857E3 /* Products */;
+					ProjectRef = 14A8CEC710CE4283003857E3 /* QSBezelInterfacePlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CEBF10CE425F003857E3 /* Products */;
+					ProjectRef = 14A8CEBE10CE425F003857E3 /* QSBluetoothPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CE9C10CE4208003857E3 /* Products */;
+					ProjectRef = 14A8CE9B10CE4208003857E3 /* QSCalendarSupport.xcode */;
+				},
+				{
+					ProductGroup = 14A8CE9310CE41F3003857E3 /* Products */;
+					ProjectRef = 14A8CE9210CE41F3003857E3 /* QSCaminoPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CCD110CE1C2F003857E3 /* Products */;
+					ProjectRef = 14A8CCD010CE1C2F003857E3 /* QSChronoTriggersPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CE8A10CE41E5003857E3 /* Products */;
+					ProjectRef = 14A8CE8910CE41E5003857E3 /* QSCl1pPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CE8110CE41D8003857E3 /* Products */;
+					ProjectRef = 14A8CE8010CE41D8003857E3 /* QSCLIXPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14E29B7D10D1266C00DCC5F2 /* Products */;
+					ProjectRef = 14E29B7C10D1266C00DCC5F2 /* QSClutterPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CDF810CE3FFB003857E3 /* Products */;
+					ProjectRef = 14A8CDF710CE3FFB003857E3 /* QSCommandLineTool.xcodeproj */;
+				},
+				{
+					ProductGroup = 14E29B7410D1265800DCC5F2 /* Products */;
+					ProjectRef = 14E29B7310D1265800DCC5F2 /* QSCommonMusicArtworkPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CDEF10CE3FD1003857E3 /* Products */;
+					ProjectRef = 14A8CDEE10CE3FD1003857E3 /* QSCompressionPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CDA210CE3F83003857E3 /* Products */;
+					ProjectRef = 14A8CDA110CE3F83003857E3 /* QSDeliciousLibraryModule.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CDDF10CE3F98003857E3 /* Products */;
+					ProjectRef = 14A8CDDE10CE3F98003857E3 /* QSDeliciousPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CD9910CE3F75003857E3 /* Products */;
+					ProjectRef = 14A8CD9810CE3F75003857E3 /* QSDesktopManagerPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CD9010CE3F65003857E3 /* Products */;
+					ProjectRef = 14A8CD8F10CE3F65003857E3 /* QSDeviantModule.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CD7010CE3F29003857E3 /* Products */;
+					ProjectRef = 14A8CD6F10CE3F29003857E3 /* QSDiskImagePlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CD5E10CE3F0A003857E3 /* Products */;
+					ProjectRef = 14A8CD5D10CE3F0A003857E3 /* QSDockExtensionPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CD5710CE3EF5003857E3 /* Products */;
+					ProjectRef = 14A8CD5610CE3EF5003857E3 /* QSDokuWikiPlugIn.xcode */;
+				},
+				{
+					ProductGroup = 14A8CB3510CE16FD003857E3 /* Products */;
+					ProjectRef = 14A8CB3410CE16FD003857E3 /* QSDuffStringRanker.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CC7F10CE1BC5003857E3 /* Products */;
+					ProjectRef = 14A8CC7E10CE1BC5003857E3 /* QSEudoraPlugIn.xcode */;
+				},
+				{
+					ProductGroup = 14A8CD1110CE1CA8003857E3 /* Products */;
+					ProjectRef = 14A8CD1010CE1CA8003857E3 /* QSEventTriggersElement.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8C9DC10CE120C003857E3 /* Products */;
+					ProjectRef = 14A8C9DB10CE120C003857E3 /* QSExtendedAttributesPlugIn.xcodeproj */;
+				},
+				{
 					ProductGroup = 4DB4A0E10E100D0E0010C540 /* Products */;
 					ProjectRef = 4DB4A0E00E100D0E0010C540 /* QSFileTagsPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CC7010CE1B93003857E3 /* Products */;
+					ProjectRef = 14A8CC6F10CE1B93003857E3 /* QSFirefoxPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CC6710CE1B84003857E3 /* Products */;
+					ProjectRef = 14A8CC6610CE1B84003857E3 /* QSFlashlightInterface.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB2C10CE16EB003857E3 /* Products */;
+					ProjectRef = 14A8CB2B10CE16EB003857E3 /* QSFullscreenPlugIn.xcodeproj */;
 				},
 				{
 					ProductGroup = 4DB4A0A60E100C1A0010C540 /* Products */;
 					ProjectRef = 4DB4A0A50E100C1A0010C540 /* QSGmailPlugIn.xcodeproj */;
 				},
 				{
+					ProductGroup = 14A8CC5710CE1B56003857E3 /* Products */;
+					ProjectRef = 14A8CC5610CE1B56003857E3 /* QSGoogleCalendarPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CC6010CE1B68003857E3 /* Products */;
+					ProjectRef = 14A8CC5F10CE1B68003857E3 /* QSGooglePlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB2510CE16D7003857E3 /* Products */;
+					ProjectRef = 14A8CB2410CE16D7003857E3 /* QSHomestarRunnerPlugIn.xcode */;
+				},
+				{
+					ProductGroup = 14A8CD0810CE1C83003857E3 /* Products */;
+					ProjectRef = 14A8CD0710CE1C83003857E3 /* QSHotKeyTriggers.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CC2610CE1B2C003857E3 /* Products */;
+					ProjectRef = 14A8CC2510CE1B2C003857E3 /* QSiCalModule.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CC1D10CE1AEE003857E3 /* Products */;
+					ProjectRef = 14A8CC1C10CE1AEE003857E3 /* QSImageManipulationPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CC1010CE1A99003857E3 /* Products */;
+					ProjectRef = 14A8CC0F10CE1A99003857E3 /* QSIndigoPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CC0710CE1A84003857E3 /* Products */;
+					ProjectRef = 14A8CC0610CE1A84003857E3 /* QSiPhotoPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CBFE10CE1A78003857E3 /* Products */;
+					ProjectRef = 14A8CBFD10CE1A78003857E3 /* QSKeychainPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CBF510CE1A59003857E3 /* Products */;
+					ProjectRef = 14A8CBF410CE1A59003857E3 /* QSMailsmithPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CBEE10CE1A45003857E3 /* Products */;
+					ProjectRef = 14A8CBED10CE1A45003857E3 /* QSMarkdownPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CBE510CE1A33003857E3 /* Products */;
+					ProjectRef = 14A8CBE410CE1A33003857E3 /* QSMenuInterface.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CBDC10CE1A1E003857E3 /* Products */;
+					ProjectRef = 14A8CBDB10CE1A1E003857E3 /* QSMiniInterface.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CCFF10CE1C70003857E3 /* Products */;
+					ProjectRef = 14A8CCFE10CE1C70003857E3 /* QSMouseTriggersElement.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CCDA10CE1C40003857E3 /* Products */;
+					ProjectRef = 14A8CCD910CE1C40003857E3 /* QSMouseTriggersPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CBD310CE19E4003857E3 /* Products */;
+					ProjectRef = 14A8CBD210CE19E4003857E3 /* QSNetNewsWirePlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CBCD10CE19BE003857E3 /* Products */;
+					ProjectRef = 14A8CBB110CE194B003857E3 /* QSNetworkLocationPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CBAB10CE193C003857E3 /* Products */;
+					ProjectRef = 14A8CBAA10CE193C003857E3 /* QSNimbusSwitcherPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB9C10CE1917003857E3 /* Products */;
+					ProjectRef = 14A8CB9B10CE1917003857E3 /* QSNowContactPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB1C10CE16BD003857E3 /* Products */;
+					ProjectRef = 14A8CB1B10CE16BD003857E3 /* QSOmniFocusPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB1310CE16A8003857E3 /* Products */;
+					ProjectRef = 14A8CB1210CE16A8003857E3 /* QSOmniWebPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB8C10CE180A003857E3 /* Products */;
+					ProjectRef = 14A8CB8B10CE180A003857E3 /* QSOrnateInterfacePlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB0A10CE1695003857E3 /* Products */;
+					ProjectRef = 14A8CB0910CE1695003857E3 /* QSPatchPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB8310CE17F4003857E3 /* Products */;
+					ProjectRef = 14A8CB8210CE17F4003857E3 /* QSPathFinderPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB7A10CE17E2003857E3 /* Products */;
+					ProjectRef = 14A8CB7910CE17E2003857E3 /* QSPhonePlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB7110CE17D0003857E3 /* Products */;
+					ProjectRef = 14A8CB7010CE17D0003857E3 /* QSPowerManagementPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB6810CE178E003857E3 /* Products */;
+					ProjectRef = 14A8CB6710CE178E003857E3 /* QSPrinterPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB5F10CE177D003857E3 /* Products */;
+					ProjectRef = 14A8CB5E10CE177D003857E3 /* QSProcessManipulationPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB5810CE1769003857E3 /* Products */;
+					ProjectRef = 14A8CB5710CE1769003857E3 /* QSProcessSwitcherSupportPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CAC810CE15E4003857E3 /* Products */;
+					ProjectRef = 14A8CAC710CE15E4003857E3 /* QSRemoteDesktopPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CB0110CE1685003857E3 /* Products */;
+					ProjectRef = 14A8CB0010CE1685003857E3 /* QSRSSPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CE2910CE405B003857E3 /* Products */;
+					ProjectRef = 14A8CE2810CE405B003857E3 /* QSSafariPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14E29C3410D128F000DCC5F2 /* Products */;
+					ProjectRef = 14E29C3310D128F000DCC5F2 /* QSSafariStandPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CABF10CE15A9003857E3 /* Products */;
+					ProjectRef = 14A8CABE10CE15A9003857E3 /* QSScreenCapturePlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CAB610CE1599003857E3 /* Products */;
+					ProjectRef = 14A8CAB510CE1599003857E3 /* QSServicesMenuPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CA9810CE1402003857E3 /* Products */;
+					ProjectRef = 14A8CA9710CE1402003857E3 /* QSShelfPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CAFA10CE1675003857E3 /* Products */;
+					ProjectRef = 14A8CAF910CE1675003857E3 /* QSSherlockPlugIn.xcode */;
+				},
+				{
+					ProductGroup = 14A8CAF310CE165C003857E3 /* Products */;
+					ProjectRef = 14A8CAF210CE165C003857E3 /* QSShiiraPlugIn.xcode */;
+				},
+				{
+					ProductGroup = 14A8CA9110CE13D0003857E3 /* Products */;
+					ProjectRef = 14A8CA9010CE13D0003857E3 /* QSSkypePlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CA7C10CE139D003857E3 /* Products */;
+					ProjectRef = 14A8CA7B10CE139D003857E3 /* QSSlideshowPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14E29B8410D1267D00DCC5F2 /* Products */;
+					ProjectRef = 14E29B8310D1267D00DCC5F2 /* QSSofaPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14E29C3D10D1290500DCC5F2 /* Products */;
+					ProjectRef = 14E29C3C10D1290500DCC5F2 /* QSSogudiPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CA7310CE1384003857E3 /* Products */;
+					ProjectRef = 14A8CA7210CE1384003857E3 /* QSSoundSupport.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CA6A10CE1373003857E3 /* Products */;
+					ProjectRef = 14A8CA6910CE1373003857E3 /* QSSpotlightPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14E29B3110D1240200DCC5F2 /* Products */;
+					ProjectRef = 14E29B3010D1240200DCC5F2 /* QSSurveyPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CA5810CE133D003857E3 /* Products */;
+					ProjectRef = 14A8CA5710CE133D003857E3 /* QSSymbolicHotKeyPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14E29B8D10D1268F00DCC5F2 /* Products */;
+					ProjectRef = 14E29B8C10D1268F00DCC5F2 /* QSSynergyPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CDE810CE3FA6003857E3 /* Products */;
+					ProjectRef = 14A8CDE710CE3FA6003857E3 /* QSSystemDaemonsPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CA4F10CE1328003857E3 /* Products */;
+					ProjectRef = 14A8CA4E10CE1328003857E3 /* QSTeleflipPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CA4610CE12FD003857E3 /* Products */;
+					ProjectRef = 14A8CA4510CE12FD003857E3 /* QSTerminalPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CA3D10CE12B8003857E3 /* Products */;
+					ProjectRef = 14A8CA3C10CE12B8003857E3 /* QSTextMatePlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CA3610CE129C003857E3 /* Products */;
+					ProjectRef = 14A8CA3510CE129C003857E3 /* QSTranslationPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CA2D10CE1283003857E3 /* Products */;
+					ProjectRef = 14A8CA2C10CE1283003857E3 /* QSTransmitModule.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CD4E10CE1DBA003857E3 /* Products */;
+					ProjectRef = 14A8CD4D10CE1DBA003857E3 /* QSUIAccessElement.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8C9EA10CE122B003857E3 /* Products */;
+					ProjectRef = 14A8C9E910CE122B003857E3 /* QSUserAccountsPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CAE410CE160C003857E3 /* Products */;
+					ProjectRef = 14A8CAE310CE160C003857E3 /* QSWeatherPlugin.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CAD110CE15F7003857E3 /* Products */;
+					ProjectRef = 14A8CAD010CE15F7003857E3 /* QSWindowInterface.xcode */;
+				},
+				{
+					ProductGroup = 14A8CD2010CE1D51003857E3 /* Products */;
+					ProjectRef = 14A8CD1F10CE1D51003857E3 /* QSWindowModule.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8C9E310CE121B003857E3 /* Products */;
+					ProjectRef = 14A8C9E210CE121B003857E3 /* QSX10PlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8C9D510CE11CF003857E3 /* Products */;
+					ProjectRef = 14A8C9D410CE11CF003857E3 /* QSXattrMetadataImporter.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8C9CC10CE11A7003857E3 /* Products */;
+					ProjectRef = 14A8C9CB10CE11A7003857E3 /* QSYojimboPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8C9C310CE116B003857E3 /* Products */;
+					ProjectRef = 14A8C9C210CE116B003857E3 /* QSYouControlDesktopsPlugIn.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CE2010CE404A003857E3 /* Products */;
+					ProjectRef = 14A8CE1F10CE404A003857E3 /* SpacesElement.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CCC410CE1C1F003857E3 /* Products */;
+					ProjectRef = 14A8CCC310CE1C1F003857E3 /* Sparkle.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CAEC10CE1623003857E3 /* Products */;
+					ProjectRef = 14A8CAEB10CE1623003857E3 /* Spellcheck Action.xcode */;
+				},
+				{
+					ProductGroup = 14A8CA6110CE134B003857E3 /* Products */;
+					ProjectRef = 14A8CA6010CE134B003857E3 /* Stikkit.xcodeproj */;
+				},
+				{
 					ProductGroup = 4DB4A0B80E100CDB0010C540 /* Products */;
 					ProjectRef = 4DB4A0B70E100CDB0010C540 /* TextManipulationElement.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8C9F310CE1255003857E3 /* Products */;
+					ProjectRef = 14A8C9F210CE1255003857E3 /* TSActionsPlugin.xcode */;
+				},
+				{
+					ProductGroup = 14A8CC9210CE1BF1003857E3 /* Products */;
+					ProjectRef = 14A8CC9110CE1BF1003857E3 /* WebBridge.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CC8610CE1BDD003857E3 /* Products */;
+					ProjectRef = 14A8CC8510CE1BDD003857E3 /* WebSearchElement.xcodeproj */;
+				},
+				{
+					ProductGroup = 14A8CE1710CE403B003857E3 /* Products */;
+					ProjectRef = 14A8CE1610CE403B003857E3 /* XcodeElement.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -374,6 +2817,867 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		14A8AA4510CE06F4003857E3 /* AirPort Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AirPort Module.qsplugin";
+			remoteRef = 14A8AA4410CE06F4003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8BA8C10CE10AD003857E3 /* Amazon Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Amazon Module.qsplugin";
+			remoteRef = 14A8BA8B10CE10AD003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8C9C810CE116B003857E3 /* QSYouControlDesktopsPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSYouControlDesktopsPlugIn.qsplugin;
+			remoteRef = 14A8C9C710CE116B003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8C9D310CE11A7003857E3 /* QSYojimboPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSYojimboPlugIn.qsplugin;
+			remoteRef = 14A8C9D210CE11A7003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8C9DA10CE11CF003857E3 /* QSXattrMetadataImporter.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSXattrMetadataImporter.qsplugin;
+			remoteRef = 14A8C9D910CE11CF003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8C9E110CE120C003857E3 /* Extended Attributes Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Extended Attributes Module.qsplugin";
+			remoteRef = 14A8C9E010CE120C003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8C9E810CE121B003857E3 /* X-10 Support.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "X-10 Support.qsplugin";
+			remoteRef = 14A8C9E710CE121B003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8C9F110CE122B003857E3 /* User Accounts Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "User Accounts Module.qsplugin";
+			remoteRef = 14A8C9F010CE122B003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8C9F810CE1255003857E3 /* TS Actions Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "TS Actions Module.qsplugin";
+			remoteRef = 14A8C9F710CE1255003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CA3410CE1283003857E3 /* Transmit Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Transmit Module.qsplugin";
+			remoteRef = 14A8CA3310CE1283003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CA3B10CE129C003857E3 /* QSTranslationPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSTranslationPlugIn.qsplugin;
+			remoteRef = 14A8CA3A10CE129C003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CA4410CE12B8003857E3 /* TextMate Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "TextMate Module.qsplugin";
+			remoteRef = 14A8CA4310CE12B8003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CA4D10CE12FD003857E3 /* Terminal Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Terminal Module.qsplugin";
+			remoteRef = 14A8CA4C10CE12FD003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CA5610CE1328003857E3 /* QSTeleflipPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSTeleflipPlugIn.qsplugin;
+			remoteRef = 14A8CA5510CE1328003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CA5F10CE133D003857E3 /* System HotKey Commands.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "System HotKey Commands.qsplugin";
+			remoteRef = 14A8CA5E10CE133D003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CA6810CE134B003857E3 /* del.icio.us Bookmarks.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "del.icio.us Bookmarks.qsplugin";
+			remoteRef = 14A8CA6710CE134B003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CA7110CE1373003857E3 /* Spotlight Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Spotlight Module.qsplugin";
+			remoteRef = 14A8CA7010CE1373003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CA7A10CE1384003857E3 /* QSSoundSupport.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSSoundSupport.qsplugin;
+			remoteRef = 14A8CA7910CE1384003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CA8310CE139D003857E3 /* Slideshow Action.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Slideshow Action.qsplugin";
+			remoteRef = 14A8CA8210CE139D003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CA9610CE13D0003857E3 /* Skype Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Skype Module.qsplugin";
+			remoteRef = 14A8CA9510CE13D0003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CAA010CE1402003857E3 /* Shelf Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Shelf Module.qsplugin";
+			remoteRef = 14A8CA9F10CE1402003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CAA210CE1402003857E3 /* Shelf Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Shelf Module.qsplugin";
+			remoteRef = 14A8CAA110CE1402003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CABD10CE1599003857E3 /* Services Menu Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Services Menu Module.qsplugin";
+			remoteRef = 14A8CABC10CE1599003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CAC610CE15A9003857E3 /* QSScreenCapturePlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSScreenCapturePlugIn.qsplugin;
+			remoteRef = 14A8CAC510CE15A9003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CACF10CE15E4003857E3 /* Remote Desktop Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Remote Desktop Module.qsplugin";
+			remoteRef = 14A8CACE10CE15E4003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CAD610CE15F7003857E3 /* Window Interface.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Window Interface.qsplugin";
+			remoteRef = 14A8CAD510CE15F7003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CAEA10CE160C003857E3 /* QSWeatherPlugin.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSWeatherPlugin.qsplugin;
+			remoteRef = 14A8CAE910CE160C003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CAF110CE1623003857E3 /* Spellcheck Action.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Spellcheck Action.qsplugin";
+			remoteRef = 14A8CAF010CE1623003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CAF810CE165C003857E3 /* QSShiiraPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSShiiraPlugIn.qsplugin;
+			remoteRef = 14A8CAF710CE165C003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CAFF10CE1675003857E3 /* QS Sherlock Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QS Sherlock Module.qsplugin";
+			remoteRef = 14A8CAFE10CE1675003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB0810CE1685003857E3 /* QSRSSPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSRSSPlugIn.qsplugin;
+			remoteRef = 14A8CB0710CE1685003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB1110CE1695003857E3 /* B51Patch.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = B51Patch.qsplugin;
+			remoteRef = 14A8CB1010CE1695003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB1A10CE16A8003857E3 /* OmniWeb Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "OmniWeb Module.qsplugin";
+			remoteRef = 14A8CB1910CE16A8003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB2310CE16BD003857E3 /* OmniFocus Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "OmniFocus Module.qsplugin";
+			remoteRef = 14A8CB2210CE16BD003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB2A10CE16D7003857E3 /* QSHomestarRunnerPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSHomestarRunnerPlugIn.qsplugin;
+			remoteRef = 14A8CB2910CE16D7003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB3310CE16EB003857E3 /* QSFullscreenPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSFullscreenPlugIn.qsplugin;
+			remoteRef = 14A8CB3210CE16EB003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB3C10CE16FD003857E3 /* TextMate Ranker.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "TextMate Ranker.qsplugin";
+			remoteRef = 14A8CB3B10CE16FD003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB4E10CE1744003857E3 /* Adium Module.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Adium Module.bundle";
+			remoteRef = 14A8CB4D10CE1744003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB5010CE1744003857E3 /* Quicksilver.AdiumPlugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Quicksilver.AdiumPlugin;
+			remoteRef = 14A8CB4F10CE1744003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB5D10CE1769003857E3 /* QSProcessSwitcherSupportPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSProcessSwitcherSupportPlugIn.qsplugin;
+			remoteRef = 14A8CB5C10CE1769003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB6610CE177D003857E3 /* Process Manipulation Actions.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Process Manipulation Actions.qsplugin";
+			remoteRef = 14A8CB6510CE177D003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB6F10CE178E003857E3 /* Printer Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Printer Module.qsplugin";
+			remoteRef = 14A8CB6E10CE178E003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB7810CE17D0003857E3 /* QSPowerManagementPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSPowerManagementPlugIn.qsplugin;
+			remoteRef = 14A8CB7710CE17D0003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB8110CE17E2003857E3 /* Phone Actions.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Phone Actions.qsplugin";
+			remoteRef = 14A8CB8010CE17E2003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB8A10CE17F4003857E3 /* Path Finder Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Path Finder Module.qsplugin";
+			remoteRef = 14A8CB8910CE17F4003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB9110CE180A003857E3 /* Ornate Interface.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Ornate Interface.qsplugin";
+			remoteRef = 14A8CB9010CE180A003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CB9A10CE1906003857E3 /* MoreAppleEvents.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MoreAppleEvents.framework;
+			remoteRef = 14A8CB9910CE1906003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CBA310CE1917003857E3 /* QS NUDC Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QS NUDC Module.qsplugin";
+			remoteRef = 14A8CBA210CE1917003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CBB010CE193C003857E3 /* QSNimbusSwitcherPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSNimbusSwitcherPlugIn.qsplugin;
+			remoteRef = 14A8CBAF10CE193C003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CBD110CE19BE003857E3 /* Network Location Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Network Location Module.qsplugin";
+			remoteRef = 14A8CBD010CE19BE003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CBDA10CE19E4003857E3 /* NetNewsWire Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "NetNewsWire Module.qsplugin";
+			remoteRef = 14A8CBD910CE19E4003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CBE310CE1A1E003857E3 /* Mini Interface.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Mini Interface.qsplugin";
+			remoteRef = 14A8CBE210CE1A1E003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CBEC10CE1A33003857E3 /* Menu Interface.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Menu Interface.qsplugin";
+			remoteRef = 14A8CBEB10CE1A33003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CBF310CE1A45003857E3 /* Markdown Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Markdown Module.qsplugin";
+			remoteRef = 14A8CBF210CE1A45003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CBFC10CE1A59003857E3 /* QSMailsmithPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSMailsmithPlugIn.qsplugin;
+			remoteRef = 14A8CBFB10CE1A59003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC0510CE1A78003857E3 /* Keychain Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Keychain Module.qsplugin";
+			remoteRef = 14A8CC0410CE1A78003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC0E10CE1A84003857E3 /* iPhoto Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "iPhoto Module.qsplugin";
+			remoteRef = 14A8CC0D10CE1A84003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC1710CE1A99003857E3 /* Indigo X10 Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Indigo X10 Module.qsplugin";
+			remoteRef = 14A8CC1610CE1A99003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC2410CE1AEE003857E3 /* Image Manipulation Actions.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Image Manipulation Actions.qsplugin";
+			remoteRef = 14A8CC2310CE1AEE003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC2D10CE1B2C003857E3 /* iCal Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "iCal Module.qsplugin";
+			remoteRef = 14A8CC2C10CE1B2C003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC5E10CE1B56003857E3 /* Google Calendar Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Google Calendar Module.qsplugin";
+			remoteRef = 14A8CC5D10CE1B56003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC6510CE1B68003857E3 /* Google Support.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Google Support.qsplugin";
+			remoteRef = 14A8CC6410CE1B68003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC6E10CE1B84003857E3 /* Flashlight Interface.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Flashlight Interface.qsplugin";
+			remoteRef = 14A8CC6D10CE1B84003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC7710CE1B93003857E3 /* Firefox Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Firefox Module.qsplugin";
+			remoteRef = 14A8CC7610CE1B93003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC8410CE1BC5003857E3 /* QSEudoraPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSEudoraPlugIn.qsplugin;
+			remoteRef = 14A8CC8310CE1BC5003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC8E10CE1BDD003857E3 /* Web Search Module.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Web Search Module.bundle";
+			remoteRef = 14A8CC8D10CE1BDD003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC9010CE1BDD003857E3 /* Web Search Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Web Search Module.qsplugin";
+			remoteRef = 14A8CC8F10CE1BDD003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC9A10CE1BF1003857E3 /* WebBridge.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = WebBridge.qsplugin;
+			remoteRef = 14A8CC9910CE1BF1003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CC9C10CE1BF1003857E3 /* WebBridgePlugin.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = WebBridgePlugin.qsplugin;
+			remoteRef = 14A8CC9B10CE1BF1003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CCCD10CE1C1F003857E3 /* Sparkle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Sparkle.framework;
+			remoteRef = 14A8CCCC10CE1C1F003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CCCF10CE1C1F003857E3 /* Sparkle Test App.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Sparkle Test App.app";
+			remoteRef = 14A8CCCE10CE1C1F003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CCD810CE1C2F003857E3 /* Time Triggers.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Time Triggers.qsplugin";
+			remoteRef = 14A8CCD710CE1C2F003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CCE110CE1C40003857E3 /* Mouse Triggers.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Mouse Triggers.qsplugin";
+			remoteRef = 14A8CCE010CE1C40003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD0610CE1C70003857E3 /* Mouse Triggers.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Mouse Triggers.qsplugin";
+			remoteRef = 14A8CD0510CE1C70003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD0F10CE1C83003857E3 /* HotKey Triggers.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "HotKey Triggers.qsplugin";
+			remoteRef = 14A8CD0E10CE1C83003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD1810CE1CA8003857E3 /* Event Triggers.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Event Triggers.qsplugin";
+			remoteRef = 14A8CD1710CE1CA8003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD2510CE1D51003857E3 /* Window Manipulation Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Window Manipulation Module.qsplugin";
+			remoteRef = 14A8CD2410CE1D51003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD2F10CE1D66003857E3 /* Music Support.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Music Support.qsplugin";
+			remoteRef = 14A8CD2E10CE1D66003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD3A10CE1D76003857E3 /* .qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = .qsplugin;
+			remoteRef = 14A8CD3910CE1D76003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD4310CE1D8C003857E3 /* File Attribute Actions.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "File Attribute Actions.qsplugin";
+			remoteRef = 14A8CD4210CE1D8C003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD4C10CE1DAC003857E3 /* Clipboard Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Clipboard Module.qsplugin";
+			remoteRef = 14A8CD4B10CE1DAC003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD5510CE1DBA003857E3 /* UI Access.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UI Access.qsplugin";
+			remoteRef = 14A8CD5410CE1DBA003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD5C10CE3EF5003857E3 /* DokuWiki Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "DokuWiki Module.qsplugin";
+			remoteRef = 14A8CD5B10CE3EF5003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD6510CE3F0A003857E3 /* QSDockExtensionPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSDockExtensionPlugIn.qsplugin;
+			remoteRef = 14A8CD6410CE3F0A003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD6E10CE3F1B003857E3 /* Displays Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Displays Module.qsplugin";
+			remoteRef = 14A8CD6D10CE3F1B003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD7710CE3F29003857E3 /* Disk Image Support.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Disk Image Support.qsplugin";
+			remoteRef = 14A8CD7610CE3F29003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD8E10CE3F58003857E3 /* Dictionary Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Dictionary Module.qsplugin";
+			remoteRef = 14A8CD8D10CE3F58003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CD9710CE3F65003857E3 /* Deviant Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Deviant Module.qsplugin";
+			remoteRef = 14A8CD9610CE3F65003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CDA010CE3F75003857E3 /* QSDesktopManagerPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSDesktopManagerPlugIn.qsplugin;
+			remoteRef = 14A8CD9F10CE3F75003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CDA710CE3F83003857E3 /* Delicious Library Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Delicious Library Module.qsplugin";
+			remoteRef = 14A8CDA610CE3F83003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CDE610CE3F98003857E3 /* Social Bookmarks.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Social Bookmarks.qsplugin";
+			remoteRef = 14A8CDE510CE3F98003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CDED10CE3FA6003857E3 /* QSSystemDaemonsPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSSystemDaemonsPlugIn.qsplugin;
+			remoteRef = 14A8CDEC10CE3FA6003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CDF610CE3FD1003857E3 /* File Compression Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "File Compression Module.qsplugin";
+			remoteRef = 14A8CDF510CE3FD1003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE0110CE3FFB003857E3 /* Command Line Tool.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Command Line Tool.qsplugin";
+			remoteRef = 14A8CE0010CE3FFB003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE0310CE3FFB003857E3 /* qs */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = qs;
+			remoteRef = 14A8CE0210CE3FFB003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE1310CE4029003857E3 /* Developer Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Developer Module.qsplugin";
+			remoteRef = 14A8CE1210CE4029003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE1510CE4029003857E3 /* Developer Documentation.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Developer Documentation.qsplugin";
+			remoteRef = 14A8CE1410CE4029003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE1E10CE403B003857E3 /* Xcode Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Xcode Module.qsplugin";
+			remoteRef = 14A8CE1D10CE403B003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE2710CE404A003857E3 /* Spaces Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Spaces Module.qsplugin";
+			remoteRef = 14A8CE2610CE404A003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE3010CE405B003857E3 /* Safari Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Safari Module.qsplugin";
+			remoteRef = 14A8CE2F10CE405B003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE3610CE407E003857E3 /* Apple Mail Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Apple Mail Module.qsplugin";
+			remoteRef = 14A8CE3510CE407E003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE3F10CE408C003857E3 /* .qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = .qsplugin;
+			remoteRef = 14A8CE3E10CE408C003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE4E10CE40B8003857E3 /* Automator.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Automator.qsplugin;
+			remoteRef = 14A8CE4D10CE40B8003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE8810CE41D8003857E3 /* CLIX Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CLIX Module.qsplugin";
+			remoteRef = 14A8CE8710CE41D8003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE9110CE41E5003857E3 /* QSCl1pPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSCl1pPlugIn.qsplugin;
+			remoteRef = 14A8CE9010CE41E5003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CE9A10CE41F3003857E3 /* Camino Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Camino Module.qsplugin";
+			remoteRef = 14A8CE9910CE41F3003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CEA110CE4208003857E3 /* QSCalendarSupport.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSCalendarSupport.qsplugin;
+			remoteRef = 14A8CEA010CE4208003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CEC610CE425F003857E3 /* Bluetooth Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Bluetooth Module.qsplugin";
+			remoteRef = 14A8CEC510CE425F003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CECF10CE4283003857E3 /* Bezel Interface.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Bezel Interface.qsplugin";
+			remoteRef = 14A8CECE10CE4283003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CEEF10CE42C4003857E3 /* Audio Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Audio Module.qsplugin";
+			remoteRef = 14A8CEEE10CE42C4003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CEF810CE42D1003857E3 /* QSAOLPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSAOLPlugIn.qsplugin;
+			remoteRef = 14A8CEF710CE42D1003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CEFE10CE42E1003857E3 /* Amazon Module.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Amazon Module.qsplugin";
+			remoteRef = 14A8CEFD10CE42E1003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CF0410CE42EF003857E3 /* QSAlarmPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSAlarmPlugIn.qsplugin;
+			remoteRef = 14A8CF0310CE42EF003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8CF1010CE4313003857E3 /* QSAddressBookActionsPlugIn.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QSAddressBookActionsPlugIn.qsplugin;
+			remoteRef = 14A8CF0F10CE4313003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14A8D26F10CE5C36003857E3 /* Desktop Picture Action.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Desktop Picture Action.qsplugin";
+			remoteRef = 14A8D26E10CE5C36003857E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14E29B3810D1240200DCC5F2 /* User Data Request.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "User Data Request.qsplugin";
+			remoteRef = 14E29B3710D1240200DCC5F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14E29B7B10D1265800DCC5F2 /* ARTchive Artwork.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ARTchive Artwork.qsplugin";
+			remoteRef = 14E29B7A10D1265800DCC5F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14E29B8210D1266C00DCC5F2 /* Clutter Artwork.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Clutter Artwork.qsplugin";
+			remoteRef = 14E29B8110D1266C00DCC5F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14E29B8B10D1267D00DCC5F2 /* Sofa Artwork.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Sofa Artwork.qsplugin";
+			remoteRef = 14E29B8A10D1267D00DCC5F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14E29B9210D1268F00DCC5F2 /* Synergy Artwork.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Synergy Artwork.qsplugin";
+			remoteRef = 14E29B9110D1268F00DCC5F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14E29C3210D128E000DCC5F2 /* AcidSearch Queries.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AcidSearch Queries.qsplugin";
+			remoteRef = 14E29C3110D128E000DCC5F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14E29C3B10D128F000DCC5F2 /* SafariStand Queries.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SafariStand Queries.qsplugin";
+			remoteRef = 14E29C3A10D128F000DCC5F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		14E29C4410D1290500DCC5F2 /* Sogudi Queries.qsplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Sogudi Queries.qsplugin";
+			remoteRef = 14E29C4310D1290500DCC5F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		4DB4A0920E100BFD0010C540 /* Colloquy Module.qsplugin */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -444,72 +3748,7 @@
 			remoteRef = 4DB4A0E70E100D0E0010C540 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4DB4A0F10E100D170010C540 /* Desktop Picture Action.qsplugin */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Desktop Picture Action.qsplugin";
-			remoteRef = 4DB4A0F00E100D170010C540 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
-
-/* Begin PBXTargetDependency section */
-		4DB4A1030E100D570010C540 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Gmail Module";
-			targetProxy = 4DB4A1020E100D570010C540 /* PBXContainerItemProxy */;
-		};
-		4DB4A1050E100D570010C540 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Text Manipulation";
-			targetProxy = 4DB4A1040E100D570010C540 /* PBXContainerItemProxy */;
-		};
-		4DB4A1070E100D570010C540 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DiffModule;
-			targetProxy = 4DB4A1060E100D570010C540 /* PBXContainerItemProxy */;
-		};
-		4DB4A1090E100D570010C540 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Apple Address Book Module";
-			targetProxy = 4DB4A1080E100D570010C540 /* PBXContainerItemProxy */;
-		};
-		4DB4A10B0E100D570010C540 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Colloquy Module";
-			targetProxy = 4DB4A10A0E100D570010C540 /* PBXContainerItemProxy */;
-		};
-		4DB4A10D0E100D570010C540 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Calculator Module";
-			targetProxy = 4DB4A10C0E100D570010C540 /* PBXContainerItemProxy */;
-		};
-		4DB4A10F0E100D570010C540 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Find Module";
-			targetProxy = 4DB4A10E0E100D570010C540 /* PBXContainerItemProxy */;
-		};
-		4DB4A1110E100D570010C540 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Growl Module";
-			targetProxy = 4DB4A1100E100D570010C540 /* PBXContainerItemProxy */;
-		};
-		4DB4A1130E100D570010C540 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NotificationHub;
-			targetProxy = 4DB4A1120E100D570010C540 /* PBXContainerItemProxy */;
-		};
-		4DB4A1150E100D570010C540 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "File Tagging Module";
-			targetProxy = 4DB4A1140E100D570010C540 /* PBXContainerItemProxy */;
-		};
-		4DB4A1170E100D570010C540 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Desktop Picture Action";
-			targetProxy = 4DB4A1160E100D570010C540 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7F69A6D20D200F3600D5C99E /* Debug */ = {

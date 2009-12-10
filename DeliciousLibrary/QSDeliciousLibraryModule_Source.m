@@ -12,6 +12,9 @@
 
 #define QSAmazonItemType @"com.amazon.asin"
 
+#define QSDeliciousLibraryItemType @"qs.deliciouslibrary.item"
+#define QSDeliciousLibraryShelfType @"qs.deliciouslibrary.shelf"
+
 #define DELICIOUS_FILE [@"~/Library/Application Support/Delicious Library/Library Media Data.xml" stringByStandardizingPath]
 #define DELICIOUS_IMAGES [@"~/Library/Application Support/Delicious Library/Images/" stringByStandardizingPath]
 #define DELICIOUS_TYPES [NSArray arrayWithObjects:@"book",@"movie",@"game",@"music",nil]

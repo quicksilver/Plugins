@@ -1,7 +1,7 @@
 #import "QSWindowInterfaceController.h"
 #import <Carbon/Carbon.h>
-#import <QSCore/NSGeometry_BLTRExtensions.h>
-#import <QSInterface/QSWindow.h>
+#import <QSFoundation/NSGeometry_BLTRExtensions.h>
+#import <QSEffects/QSWindow.h>
 #import <QSInterface/QSSearchObjectView.h>
 
 #import <IOKit/IOCFBundle.h>

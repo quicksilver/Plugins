@@ -4,6 +4,7 @@
 #import <QSCore/QSResourceManager.h>
 
 #import "QSPhoneDialerActionProvider.h"
+#import "QSPhonePlugIn.h"
 
 @implementation QSPhonePrefPane
 

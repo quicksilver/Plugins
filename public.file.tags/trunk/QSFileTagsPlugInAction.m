@@ -18,7 +18,7 @@
 - (NSArray *)tagsFromString:(NSString *)string {
 	NSArray *tags = [string componentsSeparatedByString:@" "];
 	NSMutableArray *realTags = [NSMutableArray array];
-	foreach(tag, tags) {
+	for(NSString * tag in tags) {
         if ([[QSMDTagsQueryManager sharedInstance] stringByRemovingTagPrefix:tag]) {
 			[realTags addObject:tag];
 		}
@@ -31,7 +31,7 @@
 	
 	NSMutableArray *array = [[string componentsSeparatedByString:@" "] mutableCopy];
 	if (setTags) {
-		foreach(component, array) {
+		for(NSString * component in array) {
             if ([[QSMDTagsQueryManager sharedInstance] stringByRemovingTagPrefix:component]) {
 				[array removeObject:component];
 			}

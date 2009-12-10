@@ -16,31 +16,15 @@
 		E1EAB046068128A200774DFF /* QSAmazonPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSAmazonPlugIn.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		2E58F360FFB2326E11CA0CBA /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
-		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXFileReference section */
+		14E6197210CFD2BA007663EE /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/Common.xcconfig"; sourceTree = SOURCE_ROOT; };
+		14E6197310CFD2BA007663EE /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/Debug.xcconfig"; sourceTree = SOURCE_ROOT; };
+		14E6197410CFD2BA007663EE /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/Developer.xcconfig"; sourceTree = SOURCE_ROOT; };
+		14E6197510CFD2BA007663EE /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn_Debug.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/QSPlugIn_Debug.xcconfig"; sourceTree = SOURCE_ROOT; };
+		14E6197610CFD2BA007663EE /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSPlugIn_Prefix.pch; path = "../../blacktree-alchemy/Quicksilver/Configuration/QSPlugIn_Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		14E6197710CFD2BA007663EE /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn_Release.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/QSPlugIn_Release.xcconfig"; sourceTree = SOURCE_ROOT; };
+		14E6197810CFD2BA007663EE /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/QSPlugIn.xcconfig"; sourceTree = SOURCE_ROOT; };
+		14E6197910CFD2BA007663EE /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/Release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		32DBCF980370C29C00C91783 /* QSAmazonPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAmazonPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		7FB93F7108638D0A00B33E33 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
 		7FB93F7208638D0A00B33E33 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
@@ -71,6 +55,7 @@
 		0259C574FE90428111CA0C5A /* QSAmazonPlugIn */ = {
 			isa = PBXGroup;
 			children = (
+				14E6196F10CFD2AC007663EE /* Configurations */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -87,6 +72,21 @@
 				8D1AC9730486D14A00FE50C9 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		14E6196F10CFD2AC007663EE /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				14E6197210CFD2BA007663EE /* Common.xcconfig */,
+				14E6197310CFD2BA007663EE /* Debug.xcconfig */,
+				14E6197410CFD2BA007663EE /* Developer.xcconfig */,
+				14E6197510CFD2BA007663EE /* QSPlugIn_Debug.xcconfig */,
+				14E6197610CFD2BA007663EE /* QSPlugIn_Prefix.pch */,
+				14E6197710CFD2BA007663EE /* QSPlugIn_Release.xcconfig */,
+				14E6197810CFD2BA007663EE /* QSPlugIn.xcconfig */,
+				14E6197910CFD2BA007663EE /* Release.xcconfig */,
+			);
+			name = Configurations;
 			sourceTree = "<group>";
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
@@ -140,17 +140,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSAmazonPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "Amazon Module";
-				WRAPPER_EXTENSION = qsplugin;
-			};
 			dependencies = (
 			);
 			name = "Amazon Module";
@@ -165,15 +154,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7F07AF1A085E432A00E2AFC4 /* Build configuration list for PBXProject "QSAmazonPlugIn" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				2E58F360FFB2326E11CA0CBA /* Development */,
-				2E58F361FFB2326E11CA0CBA /* Deployment */,
-			);
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSAmazonPlugIn */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Amazon Module */,
 			);
@@ -195,14 +180,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -221,56 +206,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7F07AF17085E432A00E2AFC4 /* Development */ = {
+		7F07AF17085E432A00E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E6197510CFD2BA007663EE /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					"$(SRCROOT)/../../../Build/Release",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSAmazonPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Amazon Module";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
 		7F07AF18085E432A00E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E6197710CFD2BA007663EE /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					"$(SRCROOT)/../../../Build/Release",
-				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSAmazonPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Amazon Module";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
-		7F07AF1B085E432A00E2AFC4 /* Development */ = {
+		7F07AF1B085E432A00E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E6197310CFD2BA007663EE /* Debug.xcconfig */;
 			buildSettings = {
 			};
-			name = Development;
+			name = Debug;
 		};
 		7F07AF1C085E432A00E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E6197910CFD2BA007663EE /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
@@ -281,7 +244,7 @@
 		7F07AF16085E432A00E2AFC4 /* Build configuration list for PBXNativeTarget "Amazon Module" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F07AF17085E432A00E2AFC4 /* Development */,
+				7F07AF17085E432A00E2AFC4 /* Debug */,
 				7F07AF18085E432A00E2AFC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -290,7 +253,7 @@
 		7F07AF1A085E432A00E2AFC4 /* Build configuration list for PBXProject "QSAmazonPlugIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F07AF1B085E432A00E2AFC4 /* Development */,
+				7F07AF1B085E432A00E2AFC4 /* Debug */,
 				7F07AF1C085E432A00E2AFC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

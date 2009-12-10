@@ -13,31 +13,15 @@
 		E1EAB046068128A200774DFF /* QSX10PlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSX10PlugIn.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		2E58F360FFB2326E11CA0CBA /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
-		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXFileReference section */
+		14D9D31410D1033B00BEABA0 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14D9D31510D1033B00BEABA0 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14D9D31610D1033B00BEABA0 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14D9D31710D1033B00BEABA0 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14D9D31810D1033B00BEABA0 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14D9D31910D1033B00BEABA0 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14D9D31A10D1033B00BEABA0 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14D9D31B10D1033B00BEABA0 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSX10PlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSX10PlugIn_Prefix.pch; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* X-10 Support.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "X-10 Support.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +49,7 @@
 		0259C574FE90428111CA0C5A /* QSX10PlugIn */ = {
 			isa = PBXGroup;
 			children = (
+				14D9D31110D1032600BEABA0 /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -81,6 +66,21 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
+		};
+		14D9D31110D1032600BEABA0 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				14D9D31410D1033B00BEABA0 /* Common.xcconfig */,
+				14D9D31510D1033B00BEABA0 /* Debug.xcconfig */,
+				14D9D31610D1033B00BEABA0 /* Developer.xcconfig */,
+				14D9D31710D1033B00BEABA0 /* QSPlugIn_Debug.xcconfig */,
+				14D9D31810D1033B00BEABA0 /* QSPlugIn_Prefix.pch */,
+				14D9D31910D1033B00BEABA0 /* QSPlugIn_Release.xcconfig */,
+				14D9D31A10D1033B00BEABA0 /* QSPlugIn.xcconfig */,
+				14D9D31B10D1033B00BEABA0 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -131,17 +131,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSX10PlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "X-10 Support";
-				WRAPPER_EXTENSION = qsplugin;
-			};
 			dependencies = (
 			);
 			name = "X-10 Support";
@@ -156,15 +145,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7FFF2603085E488800266176 /* Build configuration list for PBXProject "QSX10PlugIn" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				2E58F360FFB2326E11CA0CBA /* Development */,
-				2E58F361FFB2326E11CA0CBA /* Deployment */,
-			);
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSX10PlugIn */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* X-10 Support */,
 			);
@@ -184,14 +169,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -209,76 +194,39 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7FFF2600085E488800266176 /* Development */ = {
+		7FFF2600085E488800266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D9D31710D1033B00BEABA0 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSX10PlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "X-10 Support";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
-		7FFF2601085E488800266176 /* Deployment */ = {
+		7FFF2601085E488800266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D9D31910D1033B00BEABA0 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSX10PlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "X-10 Support";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		7FFF2602085E488800266176 /* Default */ = {
+		7FFF2604085E488800266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSX10PlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "X-10 Support";
-				WRAPPER_EXTENSION = qsplugin;
-			};
-			name = Default;
-		};
-		7FFF2604085E488800266176 /* Development */ = {
-			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D9D31510D1033B00BEABA0 /* Debug.xcconfig */;
 			buildSettings = {
 			};
-			name = Development;
+			name = Debug;
 		};
-		7FFF2605085E488800266176 /* Deployment */ = {
+		7FFF2605085E488800266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D9D31B10D1033B00BEABA0 /* Release.xcconfig */;
 			buildSettings = {
 			};
-			name = Deployment;
-		};
-		7FFF2606085E488800266176 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -286,22 +234,20 @@
 		7FFF25FF085E488800266176 /* Build configuration list for PBXNativeTarget "X-10 Support" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF2600085E488800266176 /* Development */,
-				7FFF2601085E488800266176 /* Deployment */,
-				7FFF2602085E488800266176 /* Default */,
+				7FFF2600085E488800266176 /* Debug */,
+				7FFF2601085E488800266176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		7FFF2603085E488800266176 /* Build configuration list for PBXProject "QSX10PlugIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF2604085E488800266176 /* Development */,
-				7FFF2605085E488800266176 /* Deployment */,
-				7FFF2606085E488800266176 /* Default */,
+				7FFF2604085E488800266176 /* Debug */,
+				7FFF2605085E488800266176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

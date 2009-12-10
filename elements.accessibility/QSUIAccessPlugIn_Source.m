@@ -63,7 +63,7 @@
 - (NSArray *)objectsForElements:(NSArray *)elements{
 	if (!elements)return nil;
 	NSMutableArray *objects=[NSMutableArray arrayWithCapacity:[elements count]];
-	foreach(element,elements){
+	for(NSString * element in elements){
 		NSString *name; 
 		AXUIElementCopyAttributeValue (element, kAXTitleAttribute, &name);
 		[name autorelease];

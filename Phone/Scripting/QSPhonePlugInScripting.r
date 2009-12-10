@@ -33,7 +33,7 @@ resource 'aete' (0, "QSPhonePlugIn") {
 			{
 				"method", 'meth', 'TEXT',
 				"dial method",
-				optional,
+				required,
 				singleItem, notEnumerated, Reserved13
 			}
 		},

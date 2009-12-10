@@ -7,6 +7,7 @@
 //
 
 #import "QSIndigoPlugIn_Action.h"
+#import "QSIndigo.h"
 
 @implementation QSIndigoPlugIn_Action
 - (NSString *)target{

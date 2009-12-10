@@ -21,6 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14D9D0AF10D0FC7F00BEABA0 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14D9D0B010D0FC7F00BEABA0 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14D9D0B110D0FC7F00BEABA0 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14D9D0B210D0FC7F00BEABA0 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14D9D0B310D0FC7F00BEABA0 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14D9D0B410D0FC7F00BEABA0 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14D9D0B510D0FC7F00BEABA0 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14D9D0B610D0FC7F00BEABA0 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSTransmitModule_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTransmitModule_Prefix.pch; sourceTree = "<group>"; };
 		7F4EE84C083570B2000731DA /* BonjourCollection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BonjourCollection.h; sourceTree = "<group>"; };
 		7F4EE84D083570B2000731DA /* BonjourCollection.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = BonjourCollection.m; sourceTree = "<group>"; };
@@ -67,6 +75,7 @@
 		0259C574FE90428111CA0C5A /* QSTransmitModule */ = {
 			isa = PBXGroup;
 			children = (
+				14D9D0AC10D0FC6A00BEABA0 /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				E1127F960695F44F008AE6A3 /* Templates */,
@@ -86,6 +95,21 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
+		};
+		14D9D0AC10D0FC6A00BEABA0 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				14D9D0AF10D0FC7F00BEABA0 /* Common.xcconfig */,
+				14D9D0B010D0FC7F00BEABA0 /* Debug.xcconfig */,
+				14D9D0B110D0FC7F00BEABA0 /* Developer.xcconfig */,
+				14D9D0B210D0FC7F00BEABA0 /* QSPlugIn_Debug.xcconfig */,
+				14D9D0B310D0FC7F00BEABA0 /* QSPlugIn_Prefix.pch */,
+				14D9D0B410D0FC7F00BEABA0 /* QSPlugIn_Release.xcconfig */,
+				14D9D0B510D0FC7F00BEABA0 /* QSPlugIn.xcconfig */,
+				14D9D0B610D0FC7F00BEABA0 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -183,9 +207,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7FFF2597085E488700266176 /* Build configuration list for PBXProject "QSTransmitModule" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSTransmitModule */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Transmit Module */,
 			);
@@ -221,14 +247,14 @@
 		};
 		E1B9F2A907A2020B00B4017B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -263,104 +289,39 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7FFF2594085E488700266176 /* Development */ = {
+		7FFF2594085E488700266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D9D0B210D0FC7F00BEABA0 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				BUILD_DIR = "$(SYMROOT)/PlugIns/";
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(FRAMEWORK_SEARCH_PATHS)",
-					"$(SRCROOT)/../../../Build/Release",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSTransmitModule_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Transmit Module";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
 		7FFF2595085E488700266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D9D0B410D0FC7F00BEABA0 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(FRAMEWORK_SEARCH_PATHS)",
-					"$(SRCROOT)/../../../Build/Release",
-				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSTransmitModule_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Transmit Module";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
-		7FFF2596085E488700266176 /* Default */ = {
+		7FFF2598085E488700266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D9D0B010D0FC7F00BEABA0 /* Debug.xcconfig */;
 			buildSettings = {
-				BUILD_DIR = "$(SYMROOT)/PlugIns/";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(FRAMEWORK_SEARCH_PATHS)",
-					"$(SRCROOT)/../../../Build/Release",
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSTransmitModule_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "Transmit Module";
-				WRAPPER_EXTENSION = qsplugin;
 			};
-			name = Default;
-		};
-		7FFF2598085E488700266176 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Development;
+			name = Debug;
 		};
 		7FFF2599085E488700266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D9D0B610D0FC7F00BEABA0 /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;
-		};
-		7FFF259A085E488700266176 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Default;
 		};
 /* End XCBuildConfiguration section */
 
@@ -368,22 +329,20 @@
 		7FFF2593085E488700266176 /* Build configuration list for PBXNativeTarget "Transmit Module" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF2594085E488700266176 /* Development */,
+				7FFF2594085E488700266176 /* Debug */,
 				7FFF2595085E488700266176 /* Release */,
-				7FFF2596085E488700266176 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		7FFF2597085E488700266176 /* Build configuration list for PBXProject "QSTransmitModule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF2598085E488700266176 /* Development */,
+				7FFF2598085E488700266176 /* Debug */,
 				7FFF2599085E488700266176 /* Release */,
-				7FFF259A085E488700266176 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

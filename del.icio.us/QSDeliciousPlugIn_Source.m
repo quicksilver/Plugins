@@ -9,6 +9,7 @@
 #import "QSDeliciousPlugIn_Source.h"
 #import <QSCore/QSCore.h>
 
+#define kQSDeliciousTagType @"us.icio.del.tag"
 #define DELICIOUS_API_URL @"api.del.icio.us/v1"
 #define MAGNOLIA_API_URL @"ma.gnolia.com/api/mirrord/v1"
 

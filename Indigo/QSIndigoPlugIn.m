@@ -8,6 +8,7 @@
 
 #import "QSIndigoPlugIn.h"
 
+
 @implementation QSIndigoPlugIn
 
 

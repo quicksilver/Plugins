@@ -9,7 +9,7 @@
 #import "QSHotKeyTriggerManager.h"
 
 
-#import <QSBase/QSHotKeyEditor.h>
+#import <QSInterface/QSHotKeyEditor.h>
 //#import <QSCore/QSTrigger.h>
 //#import <QSEffects/QSWindow.h>
 //#import <QSEffects/QSShading.h>

@@ -8,6 +8,7 @@
 
 #import "QSYojimboPlugInSource.h"
 #import <QSCore/QSObject.h>
+#import "QSYojimboPlugInDefines.h"
 
 
 @implementation QSYojimboPlugInSource
@@ -43,7 +44,7 @@ NSArray *contents = [manager directoryContentsAtPath:path];
     QSObject *newObject;
     contents = [contents pathsMatchingExtensions:[NSArray arrayWithObject:@"yojimboitem"]];
     NSLog(@"contents %@", contents);
-foreach (file, contents) {
+for (NSString * file in contents) {
 file = [path stringByAppendingPathComponent:file];
 
 NSDictionary *item = [NSDictionary dictionaryWithContentsOfFile:file];

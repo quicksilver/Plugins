@@ -7,47 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1477B28410D0E99A00B6698F /* Skype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1477B28310D0E99A00B6698F /* Skype.framework */; };
 		7F2EA51E08BCC5680011D3CA /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2EA51A08BCC5680011D3CA /* QSCore.framework */; };
 		7F2EA51F08BCC5680011D3CA /* QSEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2EA51B08BCC5680011D3CA /* QSEffects.framework */; };
 		7F2EA52008BCC5680011D3CA /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2EA51C08BCC5680011D3CA /* QSFoundation.framework */; };
 		7F2EA52108BCC5680011D3CA /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2EA51D08BCC5680011D3CA /* QSInterface.framework */; };
-		7FE57F8A0A23283500EA2AB6 /* Skype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE57F890A23283500EA2AB6 /* Skype.framework */; };
 		7FF6088908D3167100923E78 /* QSSkypePlugIn_Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF6088608D3167100923E78 /* QSSkypePlugIn_Action.m */; };
 		7FF6088A08D3167100923E78 /* QSSkypePlugIn_Source.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF6088808D3167100923E78 /* QSSkypePlugIn_Source.m */; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		2E58F360FFB2326E11CA0CBA /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
-		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXFileReference section */
+		1477B26E10D0E8FE00B6698F /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		1477B26F10D0E8FE00B6698F /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		1477B27010D0E8FE00B6698F /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		1477B27110D0E8FE00B6698F /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		1477B27210D0E8FE00B6698F /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		1477B27310D0E8FE00B6698F /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		1477B27410D0E8FE00B6698F /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		1477B27510D0E8FE00B6698F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		1477B28310D0E99A00B6698F /* Skype.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Skype.framework; path = /Applications/Skype.app/Contents/Frameworks/Skype.framework; sourceTree = "<absolute>"; };
 		32DBCF980370C29C00C91783 /* QSSkypePlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSSkypePlugIn_Prefix.pch; sourceTree = "<group>"; };
 		7F2EA51A08BCC5680011D3CA /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
 		7F2EA51B08BCC5680011D3CA /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
 		7F2EA51C08BCC5680011D3CA /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
 		7F2EA51D08BCC5680011D3CA /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
-		7FE57F890A23283500EA2AB6 /* Skype.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Skype.framework; path = ../../../../Applications/Skype.app/Contents/Frameworks/Skype.framework; sourceTree = SOURCE_ROOT; };
 		7FF6088508D3167100923E78 /* QSSkypePlugIn_Action.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSSkypePlugIn_Action.h; sourceTree = "<group>"; };
 		7FF6088608D3167100923E78 /* QSSkypePlugIn_Action.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSSkypePlugIn_Action.m; sourceTree = "<group>"; };
 		7FF6088708D3167100923E78 /* QSSkypePlugIn_Source.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSSkypePlugIn_Source.h; sourceTree = "<group>"; };
@@ -67,7 +51,7 @@
 				7F2EA51F08BCC5680011D3CA /* QSEffects.framework in Frameworks */,
 				7F2EA52008BCC5680011D3CA /* QSFoundation.framework in Frameworks */,
 				7F2EA52108BCC5680011D3CA /* QSInterface.framework in Frameworks */,
-				7FE57F8A0A23283500EA2AB6 /* Skype.framework in Frameworks */,
+				1477B28410D0E99A00B6698F /* Skype.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +61,7 @@
 		0259C574FE90428111CA0C5A /* QSSkypePlugIn */ = {
 			isa = PBXGroup;
 			children = (
+				1477B26B10D0E8E100B6698F /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -94,6 +79,21 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		1477B26B10D0E8E100B6698F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				1477B26E10D0E8FE00B6698F /* Common.xcconfig */,
+				1477B26F10D0E8FE00B6698F /* Debug.xcconfig */,
+				1477B27010D0E8FE00B6698F /* Developer.xcconfig */,
+				1477B27110D0E8FE00B6698F /* QSPlugIn_Debug.xcconfig */,
+				1477B27210D0E8FE00B6698F /* QSPlugIn_Prefix.pch */,
+				1477B27310D0E8FE00B6698F /* QSPlugIn_Release.xcconfig */,
+				1477B27410D0E8FE00B6698F /* QSPlugIn.xcconfig */,
+				1477B27510D0E8FE00B6698F /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
+		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +105,7 @@
 		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7FE57F890A23283500EA2AB6 /* Skype.framework */,
+				1477B28310D0E99A00B6698F /* Skype.framework */,
 				7F2EA51A08BCC5680011D3CA /* QSCore.framework */,
 				7F2EA51B08BCC5680011D3CA /* QSEffects.framework */,
 				7F2EA51C08BCC5680011D3CA /* QSFoundation.framework */,
@@ -148,17 +148,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSSkypePlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = QSSkypePlugIn;
-				WRAPPER_EXTENSION = qsplugin;
-			};
 			dependencies = (
 			);
 			name = "Skype Module";
@@ -173,15 +162,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7FFF2525085E488600266176 /* Build configuration list for PBXProject "QSSkypePlugIn" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				2E58F360FFB2326E11CA0CBA /* Development */,
-				2E58F361FFB2326E11CA0CBA /* Deployment */,
-			);
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSSkypePlugIn */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Skype Module */,
 			);
@@ -201,14 +186,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -229,39 +214,27 @@
 /* Begin XCBuildConfiguration section */
 		7FFF2523085E488600266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1477B27310D0E8FE00B6698F /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(QSFrameworks)",
-					"$(SRCROOT)/../../../../Library/Frameworks",
-					"$(SRCROOT)/../../../../Applications/Skype.app/Contents/Frameworks",
-					"$(SRCROOT)",
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSSkypePlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_APPS_DIR)/Skype.app/Contents/Frameworks\"";
 				OTHER_LDFLAGS = (
 					"-bundle",
 					"-weak_framework",
 					Skype,
 				);
 				PRODUCT_NAME = "Skype Module";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
 		7FFF2527085E488600266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1477B27510D0E8FE00B6698F /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;
 		};

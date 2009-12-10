@@ -23,7 +23,7 @@
 	id controller=[[NSApp delegate]interfaceController];
 	
 	NSMutableArray *array=[NSMutableArray array];
-	foreach(attr,[attrs allNames]){
+	for(NSString * attr in [attrs allNames]){
 		QSObject *object=[QSObject objectWithType:QSExtendedAttributesType value:[attrs attributeForKey:attr] name:[attrs attributeForKey:attr]];
 		
 		[object setDetails:attr];

@@ -63,6 +63,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14E619E110CFD70C007663EE /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/Common.xcconfig"; sourceTree = SOURCE_ROOT; };
+		14E619E210CFD70C007663EE /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/Debug.xcconfig"; sourceTree = SOURCE_ROOT; };
+		14E619E310CFD70C007663EE /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/Developer.xcconfig"; sourceTree = SOURCE_ROOT; };
+		14E619E410CFD70C007663EE /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn_Debug.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/QSPlugIn_Debug.xcconfig"; sourceTree = SOURCE_ROOT; };
+		14E619E510CFD70C007663EE /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSPlugIn_Prefix.pch; path = "../../blacktree-alchemy/Quicksilver/Configuration/QSPlugIn_Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		14E619E610CFD70C007663EE /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn_Release.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/QSPlugIn_Release.xcconfig"; sourceTree = SOURCE_ROOT; };
+		14E619E710CFD70C007663EE /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/QSPlugIn.xcconfig"; sourceTree = SOURCE_ROOT; };
+		14E619E810CFD70C007663EE /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = "../../blacktree-alchemy/Quicksilver/Configuration/Release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		32DBCF980370C29C00C91783 /* QSAudioPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAudioPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		7FE9888B0A1E8AE600708973 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = ../../../../../../../../../Volumes/Lux/Developer/Build/Release/QSCore.framework; sourceTree = QSFrameworks; };
 		7FE9888C0A1E8AE600708973 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSFoundation.framework; path = ../../../../../../../../../Volumes/Lux/Developer/Build/Release/QSFoundation.framework; sourceTree = QSFrameworks; };
@@ -118,6 +126,7 @@
 		0259C574FE90428111CA0C5A /* QSAudioPlugIn */ = {
 			isa = PBXGroup;
 			children = (
+				14E619DE10CFD700007663EE /* Configurations */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
@@ -133,6 +142,21 @@
 				8D1AC9730486D14A00FE50C9 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		14E619DE10CFD700007663EE /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				14E619E110CFD70C007663EE /* Common.xcconfig */,
+				14E619E210CFD70C007663EE /* Debug.xcconfig */,
+				14E619E310CFD70C007663EE /* Developer.xcconfig */,
+				14E619E410CFD70C007663EE /* QSPlugIn_Debug.xcconfig */,
+				14E619E510CFD70C007663EE /* QSPlugIn_Prefix.pch */,
+				14E619E610CFD70C007663EE /* QSPlugIn_Release.xcconfig */,
+				14E619E710CFD70C007663EE /* QSPlugIn.xcconfig */,
+				14E619E810CFD70C007663EE /* Release.xcconfig */,
+			);
+			name = Configurations;
 			sourceTree = "<group>";
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
@@ -223,9 +247,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7F07AF32085E432A00E2AFC4 /* Build configuration list for PBXProject "QSAudioPlugIn" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSAudioPlugIn */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Audio Module */,
 			);
@@ -246,14 +272,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -279,73 +305,37 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7F07AF2F085E432A00E2AFC4 /* Development */ = {
+		7F07AF2F085E432A00E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E619E410CFD70C007663EE /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSAudioPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Audio Module";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
-		7F07AF30085E432A00E2AFC4 /* Deployment */ = {
+		7F07AF30085E432A00E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E619E610CFD70C007663EE /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSAudioPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Audio Module";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		7F07AF31085E432A00E2AFC4 /* Default */ = {
+		7F07AF33085E432A00E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSAudioPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "Audio Module";
-				WRAPPER_EXTENSION = qsplugin;
-			};
-			name = Default;
-		};
-		7F07AF33085E432A00E2AFC4 /* Development */ = {
-			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E619E210CFD70C007663EE /* Debug.xcconfig */;
 			buildSettings = {
 			};
-			name = Development;
+			name = Debug;
 		};
-		7F07AF34085E432A00E2AFC4 /* Deployment */ = {
+		7F07AF34085E432A00E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E619E810CFD70C007663EE /* Release.xcconfig */;
 			buildSettings = {
 			};
-			name = Deployment;
-		};
-		7F07AF35085E432A00E2AFC4 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -353,22 +343,20 @@
 		7F07AF2E085E432A00E2AFC4 /* Build configuration list for PBXNativeTarget "Audio Module" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F07AF2F085E432A00E2AFC4 /* Development */,
-				7F07AF30085E432A00E2AFC4 /* Deployment */,
-				7F07AF31085E432A00E2AFC4 /* Default */,
+				7F07AF2F085E432A00E2AFC4 /* Debug */,
+				7F07AF30085E432A00E2AFC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		7F07AF32085E432A00E2AFC4 /* Build configuration list for PBXProject "QSAudioPlugIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F07AF33085E432A00E2AFC4 /* Development */,
-				7F07AF34085E432A00E2AFC4 /* Deployment */,
-				7F07AF35085E432A00E2AFC4 /* Default */,
+				7F07AF33085E432A00E2AFC4 /* Debug */,
+				7F07AF34085E432A00E2AFC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

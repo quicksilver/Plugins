@@ -18,31 +18,15 @@
 		E1EAB046068128A200774DFF /* QSMarkdownPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSMarkdownPlugIn.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		2E58F360FFB2326E11CA0CBA /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
-		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXFileReference section */
+		14DE8D0410D0B8AF00851A6F /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14DE8D0510D0B8AF00851A6F /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14DE8D0610D0B8AF00851A6F /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14DE8D0710D0B8AF00851A6F /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14DE8D0810D0B8AF00851A6F /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14DE8D0910D0B8AF00851A6F /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14DE8D0A10D0B8AF00851A6F /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14DE8D0B10D0B8AF00851A6F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSMarkdownPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSMarkdownPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* Markdown Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Markdown Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +59,7 @@
 		0259C574FE90428111CA0C5A /* QSMarkdownPlugIn */ = {
 			isa = PBXGroup;
 			children = (
+				14DE8D0310D0B89800851A6F /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -94,6 +79,21 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
+		};
+		14DE8D0310D0B89800851A6F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				14DE8D0410D0B8AF00851A6F /* Common.xcconfig */,
+				14DE8D0510D0B8AF00851A6F /* Debug.xcconfig */,
+				14DE8D0610D0B8AF00851A6F /* Developer.xcconfig */,
+				14DE8D0710D0B8AF00851A6F /* QSPlugIn_Debug.xcconfig */,
+				14DE8D0810D0B8AF00851A6F /* QSPlugIn_Prefix.pch */,
+				14DE8D0910D0B8AF00851A6F /* QSPlugIn_Release.xcconfig */,
+				14DE8D0A10D0B8AF00851A6F /* QSPlugIn.xcconfig */,
+				14DE8D0B10D0B8AF00851A6F /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -146,17 +146,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSMarkdownPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "Markdown Module";
-				WRAPPER_EXTENSION = qsplugin;
-			};
 			dependencies = (
 			);
 			name = "Markdown Module";
@@ -171,15 +160,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7FFF246D085E488500266176 /* Build configuration list for PBXProject "QSMarkdownPlugIn" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				2E58F360FFB2326E11CA0CBA /* Development */,
-				2E58F361FFB2326E11CA0CBA /* Deployment */,
-			);
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSMarkdownPlugIn */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Markdown Module */,
 			);
@@ -203,14 +188,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -229,76 +214,39 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7FFF246A085E488500266176 /* Development */ = {
+		7FFF246A085E488500266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE8D0710D0B8AF00851A6F /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSMarkdownPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Markdown Module";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
-		7FFF246B085E488500266176 /* Deployment */ = {
+		7FFF246B085E488500266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE8D0910D0B8AF00851A6F /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSMarkdownPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Markdown Module";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		7FFF246C085E488500266176 /* Default */ = {
+		7FFF246E085E488500266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSMarkdownPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "Markdown Module";
-				WRAPPER_EXTENSION = qsplugin;
-			};
-			name = Default;
-		};
-		7FFF246E085E488500266176 /* Development */ = {
-			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE8D0510D0B8AF00851A6F /* Debug.xcconfig */;
 			buildSettings = {
 			};
-			name = Development;
+			name = Debug;
 		};
-		7FFF246F085E488500266176 /* Deployment */ = {
+		7FFF246F085E488500266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE8D0B10D0B8AF00851A6F /* Release.xcconfig */;
 			buildSettings = {
 			};
-			name = Deployment;
-		};
-		7FFF2470085E488500266176 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -306,22 +254,20 @@
 		7FFF2469085E488500266176 /* Build configuration list for PBXNativeTarget "Markdown Module" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF246A085E488500266176 /* Development */,
-				7FFF246B085E488500266176 /* Deployment */,
-				7FFF246C085E488500266176 /* Default */,
+				7FFF246A085E488500266176 /* Debug */,
+				7FFF246B085E488500266176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		7FFF246D085E488500266176 /* Build configuration list for PBXProject "QSMarkdownPlugIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF246E085E488500266176 /* Development */,
-				7FFF246F085E488500266176 /* Deployment */,
-				7FFF2470085E488500266176 /* Default */,
+				7FFF246E085E488500266176 /* Debug */,
+				7FFF246F085E488500266176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

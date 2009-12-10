@@ -162,7 +162,7 @@
 	NSXMLElement *documentRoot = [[root elementsForName:@"Documents"] lastObject];
 	NSArray *documents = [documentRoot elementsForName:@"Document"];
 //	NSFileManager *fm = [NSFileManager defaultManager];
-	foreach(document, documents) {
+	for(NSXMLElement * document in documents) {
 		NSString *name = [[[document elementsForName:@"Name"] lastObject] stringValue];
 		NSString *path = [[[document elementsForName:@"Path"] lastObject] stringValue];
 		
@@ -201,7 +201,7 @@
 	NSXMLElement *categoryRoot = [[root elementsForName:@"Categories"] lastObject];
 	NSArray *categories = [categoryRoot elementsForName:@"Category"];
 	
-	foreach(category, categories) {
+	for(NSXMLElement * category in categories) {
 		NSString *name = [[[category elementsForName:@"Name"] lastObject] stringValue];
 		NSString *path = [[[category elementsForName:@"Path"] lastObject] stringValue];
 		NSFileManager *fm = [NSFileManager defaultManager];

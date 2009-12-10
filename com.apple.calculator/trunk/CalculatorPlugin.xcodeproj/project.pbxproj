@@ -22,14 +22,17 @@
 		0A83260506B74EBA00F4F4EE /* CalculatorPrefPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorPrefPane.m; sourceTree = "<group>"; };
 		0AB0246406D0356D0073A3CD /* Info.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Info.rtf; sourceTree = "<group>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		4DB839950D13F43D00A0CA18 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
-		4DB839960D13F43D00A0CA18 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		4DB8399C0D13F43D00A0CA18 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
-		4DB8399E0D13F43D00A0CA18 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
-		4DB839A00D13F43D00A0CA18 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		14A8D03710CE4FDF003857E3 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14A8D03810CE4FDF003857E3 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14A8D03910CE4FDF003857E3 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14A8D03A10CE4FDF003857E3 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14A8D03B10CE4FDF003857E3 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14A8D03C10CE4FDF003857E3 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14A8D03D10CE4FDF003857E3 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14A8D03E10CE4FDF003857E3 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		4DB839FC0D13FAA700A0CA18 /* element.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* Calculator Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D2EAB90D0D5CF8003EB1BD /* CalculatorPrefPane.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = CalculatorPrefPane.nib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,15 +125,17 @@
 		4DB839940D13F43D00A0CA18 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				4DB839950D13F43D00A0CA18 /* Common.xcconfig */,
-				4DB839960D13F43D00A0CA18 /* Debug.xcconfig */,
-				4DB8399C0D13F43D00A0CA18 /* QSPlugIn.xcconfig */,
-				4DB8399E0D13F43D00A0CA18 /* QSPlugIn_Prefix.pch */,
-				4DB839A00D13F43D00A0CA18 /* Release.xcconfig */,
+				14A8D03710CE4FDF003857E3 /* Common.xcconfig */,
+				14A8D03810CE4FDF003857E3 /* Debug.xcconfig */,
+				14A8D03910CE4FDF003857E3 /* Developer.xcconfig */,
+				14A8D03A10CE4FDF003857E3 /* QSPlugIn_Debug.xcconfig */,
+				14A8D03B10CE4FDF003857E3 /* QSPlugIn_Prefix.pch */,
+				14A8D03C10CE4FDF003857E3 /* QSPlugIn_Release.xcconfig */,
+				14A8D03D10CE4FDF003857E3 /* QSPlugIn.xcconfig */,
+				14A8D03E10CE4FDF003857E3 /* Release.xcconfig */,
 			);
-			name = Configuration;
-			path = ../../Configuration;
-			sourceTree = SOURCE_ROOT;
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -187,14 +192,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		0A6B6F6406D152AD00205B03 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"$SRCROOT/bltrversion\" \"$INFOPLIST_FILE\"";
 		};
@@ -215,14 +220,14 @@
 /* Begin XCBuildConfiguration section */
 		4DB8398C0D13F41200A0CA18 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DB839A00D13F43D00A0CA18 /* Release.xcconfig */;
+			baseConfigurationReference = 14A8D03E10CE4FDF003857E3 /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		4DB8398D0D13F41200A0CA18 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DB8399C0D13F43D00A0CA18 /* QSPlugIn.xcconfig */;
+			baseConfigurationReference = 14A8D03C10CE4FDF003857E3 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_PREPROCESS = NO;
 				PRODUCT_NAME = "Calculator Module";
@@ -231,7 +236,7 @@
 		};
 		BB8B95710C24E834004C6479 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DB8399C0D13F43D00A0CA18 /* QSPlugIn.xcconfig */;
+			baseConfigurationReference = 14A8D03A10CE4FDF003857E3 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_PREPROCESS = NO;
 				PRODUCT_NAME = "Calculator Module";
@@ -240,7 +245,7 @@
 		};
 		BB8B95750C24E834004C6479 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DB839960D13F43D00A0CA18 /* Debug.xcconfig */;
+			baseConfigurationReference = 14A8D03810CE4FDF003857E3 /* Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;

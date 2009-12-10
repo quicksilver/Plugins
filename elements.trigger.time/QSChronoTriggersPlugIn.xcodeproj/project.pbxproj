@@ -16,6 +16,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14E61AD010CFDDCA007663EE /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14E61AD110CFDDCA007663EE /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14E61AD210CFDDCA007663EE /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14E61AD310CFDDCA007663EE /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14E61AD410CFDDCA007663EE /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14E61AD510CFDDCA007663EE /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14E61AD610CFDDCA007663EE /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14E61AD710CFDDCA007663EE /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSChronoTriggersPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSChronoTriggersPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		7FB94019086393F600B33E33 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
 		7FB9401A086393F600B33E33 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
@@ -45,6 +53,7 @@
 		0259C574FE90428111CA0C5A /* QSChronologicalTriggersPlugIn */ = {
 			isa = PBXGroup;
 			children = (
+				14E61ACB10CFDD83007663EE /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -63,6 +72,21 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
+		};
+		14E61ACB10CFDD83007663EE /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				14E61AD010CFDDCA007663EE /* Common.xcconfig */,
+				14E61AD110CFDDCA007663EE /* Debug.xcconfig */,
+				14E61AD210CFDDCA007663EE /* Developer.xcconfig */,
+				14E61AD310CFDDCA007663EE /* QSPlugIn_Debug.xcconfig */,
+				14E61AD410CFDDCA007663EE /* QSPlugIn_Prefix.pch */,
+				14E61AD510CFDDCA007663EE /* QSPlugIn_Release.xcconfig */,
+				14E61AD610CFDDCA007663EE /* QSPlugIn.xcconfig */,
+				14E61AD710CFDDCA007663EE /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -127,9 +151,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7F07AF6A085E432C00E2AFC4 /* Build configuration list for PBXProject "QSChronoTriggersPlugIn" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSChronologicalTriggersPlugIn */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Chrono Triggers */,
 			);
@@ -151,14 +177,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -178,26 +204,16 @@
 /* Begin XCBuildConfiguration section */
 		7F07AF68085E432C00E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E61AD510CFDDCA007663EE /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(QSFrameworks)",
-					"$(SRCROOT)/../../../Build/Release",
-				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSChronoTriggersPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Time Triggers";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
 		7F07AF6C085E432C00E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E61AD710CFDDCA007663EE /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;

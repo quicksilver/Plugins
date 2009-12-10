@@ -3,428 +3,307 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 39;
+	objectVersion = 42;
 	objects = {
-		014CEA420018CDE011CA2923 = {
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			isa = PBXBuildStyle;
-			name = Development;
-		};
-		014CEA430018CDE011CA2923 = {
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			isa = PBXBuildStyle;
-			name = Deployment;
-		};
-//010
-//011
-//012
-//013
-//014
-//080
-//081
-//082
-//083
-//084
-		089C1669FE841209C02AAC07 = {
-			buildSettings = {
-			};
-			buildStyles = (
-				014CEA420018CDE011CA2923,
-				014CEA430018CDE011CA2923,
-			);
-			hasScannedForEncodings = 1;
-			isa = PBXProject;
-			mainGroup = 089C166AFE841209C02AAC07;
-			projectDirPath = "";
-			targets = (
-				8D5B49AC048680CD000E48DA,
-			);
-		};
-		089C166AFE841209C02AAC07 = {
-			children = (
-				08FB77AFFE84173DC02AAC07,
-				32C88E010371C26100C91783,
-				089C167CFE841241C02AAC07,
-				089C1671FE841209C02AAC07,
-				19C28FB8FE9D52D311CA2CBB,
-			);
-			isa = PBXGroup;
-			name = TSActionsPlugin;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		089C1671FE841209C02AAC07 = {
-			children = (
-				1058C7ACFEA557BF11CA2CBB,
-				1058C7AEFEA557BF11CA2CBB,
-			);
-			isa = PBXGroup;
-			name = "Frameworks and Libraries";
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		089C1672FE841209C02AAC07 = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = Foundation.framework;
-			path = /System/Library/Frameworks/Foundation.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		089C167CFE841241C02AAC07 = {
-			children = (
-				0AB50DC806C68CDB001041B3,
-				0ABDFAA9068A62E200A1C139,
-				8D5B49B7048680CD000E48DA,
-				089C167DFE841241C02AAC07,
-				0AB50EE906C698A1001041B3,
-			);
-			isa = PBXGroup;
-			name = Resources;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		089C167DFE841241C02AAC07 = {
-			children = (
-				089C167EFE841241C02AAC07,
-			);
-			isa = PBXVariantGroup;
-			name = InfoPlist.strings;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		089C167EFE841241C02AAC07 = {
-			fileEncoding = 10;
-			isa = PBXFileReference;
-			lastKnownFileType = text.plist.strings;
-			name = English;
-			path = English.lproj/InfoPlist.strings;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		089C167FFE841241C02AAC07 = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = AppKit.framework;
-			path = /System/Library/Frameworks/AppKit.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		08FB77AFFE84173DC02AAC07 = {
-			children = (
-				0ABDFA85068A614900A1C139,
-				0ABDFA86068A614900A1C139,
-			);
-			isa = PBXGroup;
-			name = Classes;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-//080
-//081
-//082
-//083
-//084
-//0A0
-//0A1
-//0A2
-//0A3
-//0A4
-		0AB50DC806C68CDB001041B3 = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.gif;
-			path = bugmenot.gif;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		0AB50DC906C68CDB001041B3 = {
-			fileRef = 0AB50DC806C68CDB001041B3;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		0AB50E3E06C6910C001041B3 = {
+
+/* Begin PBXBuildFile section */
+		0AB50DC906C68CDB001041B3 /* bugmenot.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0AB50DC806C68CDB001041B3 /* bugmenot.gif */; };
+		0AB50EEA06C698A1001041B3 /* Info.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AB50EE906C698A1001041B3 /* Info.rtf */; };
+		0ABDFA0A068A605F00A1C139 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABDFA09068A605F00A1C139 /* QSCore.framework */; };
+		0ABDFA87068A614900A1C139 /* TSActions.h in Resources */ = {isa = PBXBuildFile; fileRef = 0ABDFA85068A614900A1C139 /* TSActions.h */; };
+		0ABDFA88068A614900A1C139 /* TSActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABDFA86068A614900A1C139 /* TSActions.m */; };
+		0ABDFAAA068A62E200A1C139 /* ActionNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ABDFAA9068A62E200A1C139 /* ActionNames.strings */; };
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		0AB50DC806C68CDB001041B3 /* bugmenot.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bugmenot.gif; sourceTree = "<group>"; };
+		0AB50EE906C698A1001041B3 /* Info.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Info.rtf; sourceTree = "<group>"; };
+		0ABDFA09068A605F00A1C139 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = /Users/kevin/Dev/Quicksilver/QSCore.framework; sourceTree = "<absolute>"; };
+		0ABDFA85068A614900A1C139 /* TSActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSActions.h; sourceTree = "<group>"; };
+		0ABDFA86068A614900A1C139 /* TSActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSActions.m; sourceTree = "<group>"; };
+		0ABDFAA5068A62B500A1C139 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ActionNames.strings; sourceTree = "<group>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		14E299A710D11BA600DCC5F2 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14E299A810D11BA600DCC5F2 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14E299A910D11BA600DCC5F2 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14E299AA10D11BA600DCC5F2 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14E299AB10D11BA600DCC5F2 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14E299AC10D11BA600DCC5F2 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14E299AD10D11BA600DCC5F2 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14E299AE10D11BA600DCC5F2 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		32DBCF630370AF2F00C91783 /* TSActionsPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSActionsPlugin_Prefix.pch; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* TS Actions Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TS Actions Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				0ABDFA0A068A605F00A1C139 /* QSCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* TSActionsPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				14E299A210D11B9000DCC5F2 /* Configuration */,
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = TSActionsPlugin;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0AB50DC806C68CDB001041B3 /* bugmenot.gif */,
+				0ABDFAA9068A62E200A1C139 /* ActionNames.strings */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+				0AB50EE906C698A1001041B3 /* Info.rtf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0ABDFA85068A614900A1C139 /* TSActions.h */,
+				0ABDFA86068A614900A1C139 /* TSActions.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+				0ABDFA09068A605F00A1C139 /* QSCore.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		14E299A210D11B9000DCC5F2 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				14E299A710D11BA600DCC5F2 /* Common.xcconfig */,
+				14E299A810D11BA600DCC5F2 /* Debug.xcconfig */,
+				14E299A910D11BA600DCC5F2 /* Developer.xcconfig */,
+				14E299AA10D11BA600DCC5F2 /* QSPlugIn_Debug.xcconfig */,
+				14E299AB10D11BA600DCC5F2 /* QSPlugIn_Prefix.pch */,
+				14E299AC10D11BA600DCC5F2 /* QSPlugIn_Release.xcconfig */,
+				14E299AD10D11BA600DCC5F2 /* QSPlugIn.xcconfig */,
+				14E299AE10D11BA600DCC5F2 /* Release.xcconfig */,
+			);
+			name = Configuration;
+			path = "../../../blacktree-alchemy/Quicksilver/Configuration";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* TS Actions Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF630370AF2F00C91783 /* TSActionsPlugin_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* TSActionsPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14E299A410D11B9000DCC5F2 /* Build configuration list for PBXNativeTarget "TSActionsPlugin" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+				0AB50E3E06C6910C001041B3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TSActionsPlugin;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = TSActionsPlugin;
+			productReference = 8D5B49B6048680CD000E48DA /* TS Actions Module.qsplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 14E299A310D11B9000DCC5F2 /* Build configuration list for PBXProject "TSActionsPlugin" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* TSActionsPlugin */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* TSActionsPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				0ABDFA87068A614900A1C139 /* TSActions.h in Resources */,
+				0ABDFAAA068A62E200A1C139 /* ActionNames.strings in Resources */,
+				0AB50DC906C68CDB001041B3 /* bugmenot.gif in Resources */,
+				0AB50EEA06C698A1001041B3 /* Info.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AB50E3E06C6910C001041B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
-			isa = PBXShellScriptBuildPhase;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
-		0AB50EE906C698A1001041B3 = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.rtf;
-			path = Info.rtf;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		0AB50EEA06C698A1001041B3 = {
-			fileRef = 0AB50EE906C698A1001041B3;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		0ABDFA09068A605F00A1C139 = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = QSCore.framework;
-			path = /Users/kevin/Dev/Quicksilver/QSCore.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		0ABDFA0A068A605F00A1C139 = {
-			fileRef = 0ABDFA09068A605F00A1C139;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		0ABDFA85068A614900A1C139 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = TSActions.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		0ABDFA86068A614900A1C139 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = TSActions.m;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		0ABDFA87068A614900A1C139 = {
-			fileRef = 0ABDFA85068A614900A1C139;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		0ABDFA88068A614900A1C139 = {
-			fileRef = 0ABDFA86068A614900A1C139;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		0ABDFAA5068A62B500A1C139 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = text.plist.strings;
-			name = English;
-			path = English.lproj/ActionNames.strings;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		0ABDFAA9068A62E200A1C139 = {
-			children = (
-				0ABDFAA5068A62B500A1C139,
-			);
-			isa = PBXVariantGroup;
-			name = ActionNames.strings;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		0ABDFAAA068A62E200A1C139 = {
-			fileRef = 0ABDFAA9068A62E200A1C139;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-//0A0
-//0A1
-//0A2
-//0A3
-//0A4
-//100
-//101
-//102
-//103
-//104
-		1058C7ACFEA557BF11CA2CBB = {
-			children = (
-				1058C7ADFEA557BF11CA2CBB,
-				0ABDFA09068A605F00A1C139,
-			);
-			isa = PBXGroup;
-			name = "Linked Frameworks";
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		1058C7ADFEA557BF11CA2CBB = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = Cocoa.framework;
-			path = /System/Library/Frameworks/Cocoa.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		1058C7AEFEA557BF11CA2CBB = {
-			children = (
-				089C1672FE841209C02AAC07,
-				089C167FFE841241C02AAC07,
-			);
-			isa = PBXGroup;
-			name = "Other Frameworks";
-			refType = 4;
-			sourceTree = "<group>";
-		};
-//100
-//101
-//102
-//103
-//104
-//190
-//191
-//192
-//193
-//194
-		19C28FB8FE9D52D311CA2CBB = {
-			children = (
-				8D5B49B6048680CD000E48DA,
-			);
-			isa = PBXGroup;
-			name = Products;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-//190
-//191
-//192
-//193
-//194
-//320
-//321
-//322
-//323
-//324
-		32C88E010371C26100C91783 = {
-			children = (
-				32DBCF630370AF2F00C91783,
-			);
-			isa = PBXGroup;
-			name = "Other Sources";
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		32DBCF630370AF2F00C91783 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = TSActionsPlugin_Prefix.pch;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-//320
-//321
-//322
-//323
-//324
-//8D0
-//8D1
-//8D2
-//8D3
-//8D4
-		8D5B49AC048680CD000E48DA = {
-			buildPhases = (
-				8D5B49AF048680CD000E48DA,
-				8D5B49B1048680CD000E48DA,
-				8D5B49B3048680CD000E48DA,
-				0AB50E3E06C6910C001041B3,
-			);
-			buildRules = (
-			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = /Users/kevin/Dev/Quicksilver;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = TSActionsPlugin_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				LIBRARY_STYLE = BUNDLE;
-				PRODUCT_NAME = "TS Actions Module";
-				WRAPPER_EXTENSION = qsplugin;
-			};
-			dependencies = (
-			);
-			isa = PBXNativeTarget;
-			name = TSActionsPlugin;
-			productInstallPath = "$(HOME)/Library/Bundles";
-			productName = TSActionsPlugin;
-			productReference = 8D5B49B6048680CD000E48DA;
-			productType = "com.apple.product-type.bundle";
-		};
-		8D5B49AF048680CD000E48DA = {
-			buildActionMask = 2147483647;
-			files = (
-				8D5B49B0048680CD000E48DA,
-				0ABDFA87068A614900A1C139,
-				0ABDFAAA068A62E200A1C139,
-				0AB50DC906C68CDB001041B3,
-				0AB50EEA06C698A1001041B3,
-			);
-			isa = PBXResourcesBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D5B49B0048680CD000E48DA = {
-			fileRef = 089C167DFE841241C02AAC07;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		8D5B49B1048680CD000E48DA = {
-			buildActionMask = 2147483647;
-			files = (
-				0ABDFA88068A614900A1C139,
-			);
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D5B49B3048680CD000E48DA = {
 			buildActionMask = 2147483647;
 			files = (
-				8D5B49B4048680CD000E48DA,
-				0ABDFA0A068A605F00A1C139,
+				0ABDFA88068A614900A1C139 /* TSActions.m in Sources */,
 			);
-			isa = PBXFrameworksBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D5B49B4048680CD000E48DA = {
-			fileRef = 1058C7ADFEA557BF11CA2CBB;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		8D5B49B6048680CD000E48DA = {
-			explicitFileType = wrapper.cfbundle;
-			includeInIndex = 0;
-			isa = PBXFileReference;
-			path = "TS Actions Module.qsplugin";
-			refType = 3;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8D5B49B7048680CD000E48DA = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = text.xml;
-			path = Info.plist;
-			refType = 4;
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		0ABDFAA9068A62E200A1C139 /* ActionNames.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0ABDFAA5068A62B500A1C139 /* English */,
+			);
+			name = ActionNames.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14E2999A10D11B8000DCC5F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E299A810D11BA600DCC5F2 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		14E2999B10D11B8000DCC5F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E299AE10D11BA600DCC5F2 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		14E2999D10D11B8000DCC5F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E299AA10D11BA600DCC5F2 /* QSPlugIn_Debug.xcconfig */;
+			buildSettings = {
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = "TS Actions Module";
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		14E2999E10D11B8000DCC5F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E299AC10D11BA600DCC5F2 /* QSPlugIn_Release.xcconfig */;
+			buildSettings = {
+				ORDER_FILE = "-bundle";
+				PRODUCT_NAME = "TS Actions Module";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14E299A310D11B9000DCC5F2 /* Build configuration list for PBXProject "TSActionsPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E2999A10D11B8000DCC5F2 /* Debug */,
+				14E2999B10D11B8000DCC5F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		14E299A410D11B9000DCC5F2 /* Build configuration list for PBXNativeTarget "TSActionsPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E2999D10D11B8000DCC5F2 /* Debug */,
+				14E2999E10D11B8000DCC5F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
 	};
-	rootObject = 089C1669FE841209C02AAC07;
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
 }

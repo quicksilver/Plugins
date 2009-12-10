@@ -9,6 +9,7 @@
 #import <QSCore/QSObject_StringHandling.h>
 
 #import <QSCore/QSDefines.h>
+#include "QSTerminalPlugIn.h"
 
 //#define kQSCLExecuteAction @"ShellScriptRunAction"
 #define kQSCLExecuteWithArgsAction @"QSShellScriptRunAction"

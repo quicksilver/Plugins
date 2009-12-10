@@ -2,7 +2,8 @@
 
 #import <AppKit/AppKit.h>
 
-#import <QSCore/QSProcessSwitcher.h>
+//#import <QSCore/QSProcessSwitcher.h>
+#define kQSNimbusSwitcherPlugInType @"QSNimbusSwitcherPlugInType"
 
 @class QSObjectView;
 

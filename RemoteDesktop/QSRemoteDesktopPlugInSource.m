@@ -6,8 +6,9 @@
 //  Copyright __MyCompanyName__ 2006. All rights reserved.
 //
 
-#import "QSRemoteDesktopPlugInSource.h"
 #import <QSCore/QSObject.h>
+#import "QSRemoteDesktopPlugInSource.h"
+#import "QSRemoteDesktopDefines.h"
 
 
 @implementation QSRemoteDesktopPlugInSource
@@ -31,7 +32,7 @@
 	
 	NSArray *computers = [(NSArray *) CFPreferencesCopyValue((CFStringRef) @"ComputerDatabase", (CFStringRef) @"com.apple.RemoteDesktop", kCFPreferencesCurrentUser, kCFPreferencesAnyHost) autorelease];
 	
-	foreach(computer,computers){
+	for(NSDictionary * computer in computers){
 		NSString *uuid=[computer objectForKey:@"uuid"];
 		NSString *name=[computer objectForKey:@"name"];
 		

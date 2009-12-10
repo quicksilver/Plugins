@@ -3,573 +3,315 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 39;
+	objectVersion = 42;
 	objects = {
-		0259C573FE90428111CA0C5A = {
-			buildSettings = {
-			};
-			buildStyles = (
-				2E58F360FFB2326E11CA0CBA,
-				2E58F361FFB2326E11CA0CBA,
+
+/* Begin PBXBuildFile section */
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1022AE906B3469300299BEC /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1022AE706B3469300299BEC /* QSCore.framework */; };
+		E131F8B007B447EF00D0E4AC /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E131F8AE07B447EF00D0E4AC /* QSFoundation.framework */; };
+		E1EAB046068128A200774DFF /* QSCalendarSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSCalendarSupport.m */; };
+		E304EDE307FC7D5E003B943E /* NSData+Base64.h in Resources */ = {isa = PBXBuildFile; fileRef = E304EDDC07FC7D5E003B943E /* NSData+Base64.h */; };
+		E304EDE407FC7D5E003B943E /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E304EDDD07FC7D5E003B943E /* NSData+Base64.m */; };
+		E304EDE507FC7D5E003B943E /* VFileGlobals.h in Resources */ = {isa = PBXBuildFile; fileRef = E304EDDE07FC7D5E003B943E /* VFileGlobals.h */; };
+		E304EDE607FC7D5E003B943E /* VFileObject.h in Resources */ = {isa = PBXBuildFile; fileRef = E304EDDF07FC7D5E003B943E /* VFileObject.h */; };
+		E304EDE707FC7D5E003B943E /* VFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E304EDE007FC7D5E003B943E /* VFileObject.m */; };
+		E304EDE807FC7D5E003B943E /* VFileProperty.h in Resources */ = {isa = PBXBuildFile; fileRef = E304EDE107FC7D5E003B943E /* VFileProperty.h */; };
+		E304EDE907FC7D5E003B943E /* VFileProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E304EDE207FC7D5E003B943E /* VFileProperty.m */; };
+		E304EDED07FC7D81003B943E /* VCalendar.h in Resources */ = {isa = PBXBuildFile; fileRef = E304EDEB07FC7D81003B943E /* VCalendar.h */; };
+		E304EDEE07FC7D81003B943E /* VCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = E304EDEC07FC7D81003B943E /* VCalendar.m */; };
+		E304EDFC07FC8885003B943E /* VEvent.h in Resources */ = {isa = PBXBuildFile; fileRef = E304EDFA07FC8885003B943E /* VEvent.h */; };
+		E304EDFD07FC8885003B943E /* VEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E304EDFB07FC8885003B943E /* VEvent.m */; };
+		E304EE0407FC8C8F003B943E /* NSDate+Calendaring.h in Resources */ = {isa = PBXBuildFile; fileRef = E304EE0207FC8C8F003B943E /* NSDate+Calendaring.h */; };
+		E304EE0507FC8C8F003B943E /* NSDate+Calendaring.m in Sources */ = {isa = PBXBuildFile; fileRef = E304EE0307FC8C8F003B943E /* NSDate+Calendaring.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14E61A8310CFDB4C007663EE /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14E61A8410CFDB4C007663EE /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14E61A8510CFDB4C007663EE /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14E61A8610CFDB4C007663EE /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14E61A8710CFDB4C007663EE /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14E61A8810CFDB4C007663EE /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14E61A8910CFDB4C007663EE /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14E61A8A10CFDB4C007663EE /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		32DBCF980370C29C00C91783 /* QSCalendarSupport_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSCalendarSupport_Prefix.pch; sourceTree = "<group>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* QSCalendarSupport.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSCalendarSupport.qsplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E1022AE706B3469300299BEC /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework; sourceTree = "<absolute>"; };
+		E1022AE806B3469300299BEC /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSInterface.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework; sourceTree = "<absolute>"; };
+		E131F8AD07B447EF00D0E4AC /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSEffects.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework; sourceTree = "<absolute>"; };
+		E131F8AE07B447EF00D0E4AC /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSFoundation.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSFoundation.framework; sourceTree = "<absolute>"; };
+		E1EAB045068128A200774DFF /* QSCalendarSupport.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSCalendarSupport.m; sourceTree = "<group>"; };
+		E1EAB047068128A800774DFF /* QSCalendarSupport.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSCalendarSupport.h; sourceTree = "<group>"; };
+		E304EDDC07FC7D5E003B943E /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "/Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/NSData+Base64.h"; sourceTree = "<absolute>"; };
+		E304EDDD07FC7D5E003B943E /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "/Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/NSData+Base64.m"; sourceTree = "<absolute>"; };
+		E304EDDE07FC7D5E003B943E /* VFileGlobals.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VFileGlobals.h; path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileGlobals.h; sourceTree = "<absolute>"; };
+		E304EDDF07FC7D5E003B943E /* VFileObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VFileObject.h; path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileObject.h; sourceTree = "<absolute>"; };
+		E304EDE007FC7D5E003B943E /* VFileObject.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VFileObject.m; path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileObject.m; sourceTree = "<absolute>"; };
+		E304EDE107FC7D5E003B943E /* VFileProperty.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VFileProperty.h; path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileProperty.h; sourceTree = "<absolute>"; };
+		E304EDE207FC7D5E003B943E /* VFileProperty.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = VFileProperty.m; path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileProperty.m; sourceTree = "<absolute>"; };
+		E304EDEB07FC7D81003B943E /* VCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCalendar.h; sourceTree = "<group>"; };
+		E304EDEC07FC7D81003B943E /* VCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCalendar.m; sourceTree = "<group>"; };
+		E304EDFA07FC8885003B943E /* VEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEvent.h; sourceTree = "<group>"; };
+		E304EDFB07FC8885003B943E /* VEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEvent.m; sourceTree = "<group>"; };
+		E304EE0207FC8C8F003B943E /* NSDate+Calendaring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Calendaring.h"; sourceTree = "<group>"; };
+		E304EE0307FC8C8F003B943E /* NSDate+Calendaring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Calendaring.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				E1022AE906B3469300299BEC /* QSCore.framework in Frameworks */,
+				E131F8B007B447EF00D0E4AC /* QSFoundation.framework in Frameworks */,
 			);
-			hasScannedForEncodings = 1;
-			isa = PBXProject;
-			mainGroup = 0259C574FE90428111CA0C5A;
-			projectDirPath = "";
-			targets = (
-				8D1AC9600486D14A00FE50C9,
-			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0259C574FE90428111CA0C5A = {
-			children = (
-				32DBCF9E0370C38000C91783,
-				32DBCF9F0370C38200C91783,
-				0259C582FE90428111CA0C5A,
-				1ED78706FE9D4A0611CA0C5A,
-				2E58F364FFB232C311CA0CBA,
-			);
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSCalendarSupport */ = {
 			isa = PBXGroup;
+			children = (
+				14E61A7E10CFDB1F007663EE /* Configuration */,
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
 			name = QSCalendarSupport;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-		0259C582FE90428111CA0C5A = {
-			children = (
-				8D1AC9730486D14A00FE50C9,
-			);
+		0259C582FE90428111CA0C5A /* Resources */ = {
 			isa = PBXGroup;
+			children = (
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+			);
 			name = Resources;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-//020
-//021
-//022
-//023
-//024
-//1E0
-//1E1
-//1E2
-//1E3
-//1E4
-		1ED78706FE9D4A0611CA0C5A = {
-			children = (
-				8D1AC9740486D14A00FE50C9,
-			);
+		14E61A7E10CFDB1F007663EE /* Configuration */ = {
 			isa = PBXGroup;
+			children = (
+				14E61A8310CFDB4C007663EE /* Common.xcconfig */,
+				14E61A8410CFDB4C007663EE /* Debug.xcconfig */,
+				14E61A8510CFDB4C007663EE /* Developer.xcconfig */,
+				14E61A8610CFDB4C007663EE /* QSPlugIn_Debug.xcconfig */,
+				14E61A8710CFDB4C007663EE /* QSPlugIn_Prefix.pch */,
+				14E61A8810CFDB4C007663EE /* QSPlugIn_Release.xcconfig */,
+				14E61A8910CFDB4C007663EE /* QSPlugIn.xcconfig */,
+				14E61A8A10CFDB4C007663EE /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* QSCalendarSupport.qsplugin */,
+			);
 			name = Products;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-//1E0
-//1E1
-//1E2
-//1E3
-//1E4
-//2E0
-//2E1
-//2E2
-//2E3
-//2E4
-		2E58F360FFB2326E11CA0CBA = {
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			isa = PBXBuildStyle;
-			name = Development;
-		};
-		2E58F361FFB2326E11CA0CBA = {
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			isa = PBXBuildStyle;
-			name = Deployment;
-		};
-		2E58F364FFB232C311CA0CBA = {
-			children = (
-				DD92D38A0106425D02CA0E72,
-				E131F8AE07B447EF00D0E4AC,
-				E1022AE706B3469300299BEC,
-				E131F8AD07B447EF00D0E4AC,
-				E1022AE806B3469300299BEC,
-			);
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
 			isa = PBXGroup;
+			children = (
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+				E131F8AE07B447EF00D0E4AC /* QSFoundation.framework */,
+				E1022AE706B3469300299BEC /* QSCore.framework */,
+				E131F8AD07B447EF00D0E4AC /* QSEffects.framework */,
+				E1022AE806B3469300299BEC /* QSInterface.framework */,
+			);
 			name = Frameworks;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-//2E0
-//2E1
-//2E2
-//2E3
-//2E4
-//320
-//321
-//322
-//323
-//324
-		32DBCF980370C29C00C91783 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = QSCalendarSupport_Prefix.pch;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		32DBCF9E0370C38000C91783 = {
-			children = (
-				E304EE0207FC8C8F003B943E,
-				E304EE0307FC8C8F003B943E,
-				E304EDEA07FC7D6A003B943E,
-				E1EAB047068128A800774DFF,
-				E1EAB045068128A200774DFF,
-				E304EDEB07FC7D81003B943E,
-				E304EDEC07FC7D81003B943E,
-				E304EDFA07FC8885003B943E,
-				E304EDFB07FC8885003B943E,
-			);
+		32DBCF9E0370C38000C91783 /* Classes */ = {
 			isa = PBXGroup;
+			children = (
+				E304EE0207FC8C8F003B943E /* NSDate+Calendaring.h */,
+				E304EE0307FC8C8F003B943E /* NSDate+Calendaring.m */,
+				E304EDEA07FC7D6A003B943E /* VFile */,
+				E1EAB047068128A800774DFF /* QSCalendarSupport.h */,
+				E1EAB045068128A200774DFF /* QSCalendarSupport.m */,
+				E304EDEB07FC7D81003B943E /* VCalendar.h */,
+				E304EDEC07FC7D81003B943E /* VCalendar.m */,
+				E304EDFA07FC8885003B943E /* VEvent.h */,
+				E304EDFB07FC8885003B943E /* VEvent.m */,
+			);
 			name = Classes;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-		32DBCF9F0370C38200C91783 = {
-			children = (
-				32DBCF980370C29C00C91783,
-			);
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
+			children = (
+				32DBCF980370C29C00C91783 /* QSCalendarSupport_Prefix.pch */,
+			);
 			name = "Other Sources";
-			path = "";
-			refType = 4;
 			sourceTree = "<group>";
 		};
-//320
-//321
-//322
-//323
-//324
-//8D0
-//8D1
-//8D2
-//8D3
-//8D4
-		8D1AC9600486D14A00FE50C9 = {
+		E304EDEA07FC7D6A003B943E /* VFile */ = {
+			isa = PBXGroup;
+			children = (
+				E304EDDC07FC7D5E003B943E /* NSData+Base64.h */,
+				E304EDDD07FC7D5E003B943E /* NSData+Base64.m */,
+				E304EDDE07FC7D5E003B943E /* VFileGlobals.h */,
+				E304EDDF07FC7D5E003B943E /* VFileObject.h */,
+				E304EDE007FC7D5E003B943E /* VFileObject.m */,
+				E304EDE107FC7D5E003B943E /* VFileProperty.h */,
+				E304EDE207FC7D5E003B943E /* VFileProperty.m */,
+			);
+			name = VFile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* QSCalendarSupport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14E61A8010CFDB1F007663EE /* Build configuration list for PBXNativeTarget "QSCalendarSupport" */;
 			buildPhases = (
-				8D1AC9660486D14A00FE50C9,
-				8D1AC96A0486D14A00FE50C9,
-				8D1AC96E0486D14A00FE50C9,
-				E1022B2806B3475D00299BEC,
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSCalendarSupport_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = QSCalendarSupport;
-				WRAPPER_EXTENSION = qsplugin;
-			};
 			dependencies = (
 			);
-			isa = PBXNativeTarget;
 			name = QSCalendarSupport;
 			productInstallPath = "$(HOME)/Developer/Palettes";
 			productName = QSCalendarSupport;
-			productReference = 8D1AC9740486D14A00FE50C9;
+			productReference = 8D1AC9740486D14A00FE50C9 /* QSCalendarSupport.qsplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
-		8D1AC9660486D14A00FE50C9 = {
-			buildActionMask = 2147483647;
-			files = (
-				E304EDE307FC7D5E003B943E,
-				E304EDE507FC7D5E003B943E,
-				E304EDE607FC7D5E003B943E,
-				E304EDE807FC7D5E003B943E,
-				E304EDED07FC7D81003B943E,
-				E304EDFC07FC8885003B943E,
-				E304EE0407FC8C8F003B943E,
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 14E61A7F10CFDB1F007663EE /* Build configuration list for PBXProject "QSCalendarSupport" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* QSCalendarSupport */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* QSCalendarSupport */,
 			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D1AC96A0486D14A00FE50C9 = {
 			buildActionMask = 2147483647;
 			files = (
-				E1EAB046068128A200774DFF,
-				E304EDE407FC7D5E003B943E,
-				E304EDE707FC7D5E003B943E,
-				E304EDE907FC7D5E003B943E,
-				E304EDEE07FC7D81003B943E,
-				E304EDFD07FC8885003B943E,
-				E304EE0507FC8C8F003B943E,
+				E304EDE307FC7D5E003B943E /* NSData+Base64.h in Resources */,
+				E304EDE507FC7D5E003B943E /* VFileGlobals.h in Resources */,
+				E304EDE607FC7D5E003B943E /* VFileObject.h in Resources */,
+				E304EDE807FC7D5E003B943E /* VFileProperty.h in Resources */,
+				E304EDED07FC7D81003B943E /* VCalendar.h in Resources */,
+				E304EDFC07FC8885003B943E /* VEvent.h in Resources */,
+				E304EE0407FC8C8F003B943E /* NSDate+Calendaring.h in Resources */,
 			);
-			isa = PBXSourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D1AC96E0486D14A00FE50C9 = {
-			buildActionMask = 2147483647;
-			files = (
-				8D1AC9700486D14A00FE50C9,
-				E1022AE906B3469300299BEC,
-				E131F8B007B447EF00D0E4AC,
-			);
-			isa = PBXFrameworksBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D1AC9700486D14A00FE50C9 = {
-			fileRef = DD92D38A0106425D02CA0E72;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		8D1AC9730486D14A00FE50C9 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = text.plist;
-			path = Info.plist;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		8D1AC9740486D14A00FE50C9 = {
-			explicitFileType = wrapper.cfbundle;
-			includeInIndex = 0;
-			isa = PBXFileReference;
-			path = QSCalendarSupport.qsplugin;
-			refType = 3;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-//8D0
-//8D1
-//8D2
-//8D3
-//8D4
-//DD0
-//DD1
-//DD2
-//DD3
-//DD4
-		DD92D38A0106425D02CA0E72 = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = Cocoa.framework;
-			path = /System/Library/Frameworks/Cocoa.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-//DD0
-//DD1
-//DD2
-//DD3
-//DD4
-//E10
-//E11
-//E12
-//E13
-//E14
-		E1022AE706B3469300299BEC = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = QSCore.framework;
-			path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E1022AE806B3469300299BEC = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = QSInterface.framework;
-			path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E1022AE906B3469300299BEC = {
-			fileRef = E1022AE706B3469300299BEC;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E1022B2806B3475D00299BEC = {
-			buildActionMask = 2147483647;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
-			isa = PBXShellScriptBuildPhase;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
-		E131F8AD07B447EF00D0E4AC = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = QSEffects.framework;
-			path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E131F8AE07B447EF00D0E4AC = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = QSFoundation.framework;
-			path = /Applications/Quicksilver.app/Contents/Frameworks/QSFoundation.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E131F8B007B447EF00D0E4AC = {
-			fileRef = E131F8AE07B447EF00D0E4AC;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E1EAB045068128A200774DFF = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = QSCalendarSupport.m;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E1EAB046068128A200774DFF = {
-			fileRef = E1EAB045068128A200774DFF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E1EAB047068128A800774DFF = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = QSCalendarSupport.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-//E10
-//E11
-//E12
-//E13
-//E14
-//E30
-//E31
-//E32
-//E33
-//E34
-		E304EDDC07FC7D5E003B943E = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = "NSData+Base64.h";
-			path = "/Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/NSData+Base64.h";
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E304EDDD07FC7D5E003B943E = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			name = "NSData+Base64.m";
-			path = "/Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/NSData+Base64.m";
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E304EDDE07FC7D5E003B943E = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = VFileGlobals.h;
-			path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileGlobals.h;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E304EDDF07FC7D5E003B943E = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = VFileObject.h;
-			path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileObject.h;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E304EDE007FC7D5E003B943E = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			name = VFileObject.m;
-			path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileObject.m;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E304EDE107FC7D5E003B943E = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = VFileProperty.h;
-			path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileProperty.h;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E304EDE207FC7D5E003B943E = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			name = VFileProperty.m;
-			path = /Users/donovan/Development/Quicksilver/Plugins/svn/ContactSupport/VFileProperty.m;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E304EDE307FC7D5E003B943E = {
-			fileRef = E304EDDC07FC7D5E003B943E;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E304EDE407FC7D5E003B943E = {
-			fileRef = E304EDDD07FC7D5E003B943E;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E304EDE507FC7D5E003B943E = {
-			fileRef = E304EDDE07FC7D5E003B943E;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E304EDE607FC7D5E003B943E = {
-			fileRef = E304EDDF07FC7D5E003B943E;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E304EDE707FC7D5E003B943E = {
-			fileRef = E304EDE007FC7D5E003B943E;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E304EDE807FC7D5E003B943E = {
-			fileRef = E304EDE107FC7D5E003B943E;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E304EDE907FC7D5E003B943E = {
-			fileRef = E304EDE207FC7D5E003B943E;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E304EDEA07FC7D6A003B943E = {
-			children = (
-				E304EDDC07FC7D5E003B943E,
-				E304EDDD07FC7D5E003B943E,
-				E304EDDE07FC7D5E003B943E,
-				E304EDDF07FC7D5E003B943E,
-				E304EDE007FC7D5E003B943E,
-				E304EDE107FC7D5E003B943E,
-				E304EDE207FC7D5E003B943E,
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF /* QSCalendarSupport.m in Sources */,
+				E304EDE407FC7D5E003B943E /* NSData+Base64.m in Sources */,
+				E304EDE707FC7D5E003B943E /* VFileObject.m in Sources */,
+				E304EDE907FC7D5E003B943E /* VFileProperty.m in Sources */,
+				E304EDEE07FC7D81003B943E /* VCalendar.m in Sources */,
+				E304EDFD07FC8885003B943E /* VEvent.m in Sources */,
+				E304EE0507FC8C8F003B943E /* NSDate+Calendaring.m in Sources */,
 			);
-			isa = PBXGroup;
-			name = VFile;
-			refType = 4;
-			sourceTree = "<group>";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E304EDEB07FC7D81003B943E = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = VCalendar.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E304EDEC07FC7D81003B943E = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = VCalendar.m;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E304EDED07FC7D81003B943E = {
-			fileRef = E304EDEB07FC7D81003B943E;
-			isa = PBXBuildFile;
-			settings = {
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		14E61A7710CFDB02007663EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E61A8410CFDB4C007663EE /* Debug.xcconfig */;
+			buildSettings = {
 			};
+			name = Debug;
 		};
-		E304EDEE07FC7D81003B943E = {
-			fileRef = E304EDEC07FC7D81003B943E;
-			isa = PBXBuildFile;
-			settings = {
+		14E61A7810CFDB02007663EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E61A8A10CFDB4C007663EE /* Release.xcconfig */;
+			buildSettings = {
 			};
+			name = Release;
 		};
-		E304EDFA07FC8885003B943E = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = VEvent.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E304EDFB07FC8885003B943E = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = VEvent.m;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E304EDFC07FC8885003B943E = {
-			fileRef = E304EDFA07FC8885003B943E;
-			isa = PBXBuildFile;
-			settings = {
+		14E61A7A10CFDB02007663EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E61A8610CFDB4C007663EE /* QSPlugIn_Debug.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = QSCalendarSupport;
+				ZERO_LINK = YES;
 			};
+			name = Debug;
 		};
-		E304EDFD07FC8885003B943E = {
-			fileRef = E304EDFB07FC8885003B943E;
-			isa = PBXBuildFile;
-			settings = {
+		14E61A7B10CFDB02007663EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E61A8810CFDB4C007663EE /* QSPlugIn_Release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = QSCalendarSupport;
+				ZERO_LINK = NO;
 			};
+			name = Release;
 		};
-		E304EE0207FC8C8F003B943E = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = "NSDate+Calendaring.h";
-			refType = 4;
-			sourceTree = "<group>";
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14E61A7F10CFDB1F007663EE /* Build configuration list for PBXProject "QSCalendarSupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E61A7710CFDB02007663EE /* Debug */,
+				14E61A7810CFDB02007663EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
-		E304EE0307FC8C8F003B943E = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = "NSDate+Calendaring.m";
-			refType = 4;
-			sourceTree = "<group>";
+		14E61A8010CFDB1F007663EE /* Build configuration list for PBXNativeTarget "QSCalendarSupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E61A7A10CFDB02007663EE /* Debug */,
+				14E61A7B10CFDB02007663EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
-		E304EE0407FC8C8F003B943E = {
-			fileRef = E304EE0207FC8C8F003B943E;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E304EE0507FC8C8F003B943E = {
-			fileRef = E304EE0307FC8C8F003B943E;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
+/* End XCConfigurationList section */
 	};
-	rootObject = 0259C573FE90428111CA0C5A;
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
 }

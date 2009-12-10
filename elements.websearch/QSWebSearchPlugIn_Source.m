@@ -37,7 +37,7 @@
 	NSMutableArray *urlArray=[theEntry objectForKey:@"queryList"];
     NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
     QSObject *newObject;
-	foreach(urlDict,urlArray){
+	for(NSDictionary * urlDict,urlArray){
 		newObject=[QSObject URLObjectWithURL:[urlDict objectForKey:@"url"] title:[urlDict objectForKey:@"name"]];
 		NSNumber *encoding=[urlDict objectForKey:@"encoding"];
 		if (encoding)

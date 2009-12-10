@@ -6,8 +6,9 @@
 //  Copyright __MyCompanyName__ 2004. All rights reserved.
 //
 
-#import "QSIndigoPlugIn_Source.h"
 #import <QSCore/QSCore.h>
+#import "QSIndigoPlugIn_Source.h"
+#import "QSIndigo.h"
 
 
 @implementation QSIndigoPlugIn_Source

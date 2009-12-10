@@ -1,14 +1,6 @@
 //
-// Prefix header for all source files of the 'QSPhonePlugIn' target in the 'QSPhonePlugIn' project
+// Header for all source files of the 'QSPhonePlugIn' target in the 'QSPhonePlugIn' project
 //
-
-#ifdef __OBJC__
-#import <Cocoa/Cocoa.h>
-
-#import <QSFoundation/QSFoundation.h>
-#import <QSCore/QSCore.h>
-#endif
-
 
 #define kQSPhonePlugInType @"QSPhonePlugInType"
 

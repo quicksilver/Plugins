@@ -27,7 +27,7 @@
 	NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
 	
 	QSObject *newObject;
-	foreach(command,commands){
+	for(NSString * command in commands){
 		NSArray *components=[command componentsSeparatedByString:@","];
 		if ([components count]<4)continue;
 		NSString *title=[components objectAtIndex:0];

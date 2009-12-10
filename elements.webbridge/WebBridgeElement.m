@@ -99,7 +99,7 @@
     NSXMLElement *root = [NSXMLElement elementWithName:@"results"];
     NSXMLDocument *document = [[[NSXMLDocument alloc] initWithRootElement:root] autorelease];
     
-    foreach(object, objects) {
+    for(id object in objects) {
       NSXMLElement *objectElement = [NSXMLElement elementWithName:@"div"];
       NSString *identifier = [object identifier];
       if (!identifier) {

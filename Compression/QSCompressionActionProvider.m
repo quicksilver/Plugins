@@ -16,7 +16,7 @@
 	NSTask *task=[[[NSTask alloc]init]autorelease];
     [task setLaunchPath:@"/usr/bin/tar"];
     NSMutableArray *arguments=[NSMutableArray arrayWithObjects:@"-zcf",destinationPath,nil];
-   foreach(path,paths){
+   for(NSString * path in paths){
 		[arguments addObject:@"-C"];
 		[arguments addObject:[path stringByDeletingLastPathComponent]];
 		[arguments addObject:[path lastPathComponent]];
@@ -30,7 +30,7 @@
 	NSTask *task=[[[NSTask alloc]init]autorelease];
     [task setLaunchPath:@"/usr/bin/tar"];
     NSMutableArray *arguments=[NSMutableArray arrayWithObjects:@"-jcf",destinationPath,nil];
-   foreach(path,paths){
+   for(NSString * path in paths){
 		[arguments addObject:@"-C"];
 		[arguments addObject:[path stringByDeletingLastPathComponent]];
 		[arguments addObject:[path lastPathComponent]];

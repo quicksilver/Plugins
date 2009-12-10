@@ -9,6 +9,9 @@
 #import <QSCore/QSObject.h>
 #import "QSIndigoPlugIn.h"
 
+
+
+
 @interface QSIndigoPlugIn : NSObject
 {
 }

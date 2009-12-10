@@ -23,14 +23,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 4DAD2F2D0E12633B00932F54 /* QSDictionaryLookup.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E /* QSDictionaryLookup */;
+			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
 			remoteInfo = QSDictionaryLookup;
 		};
 		4DAD2F3C0E12634600932F54 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4DAD2F360E12634600932F54 /* DictProtocolTest.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8D1107320486CEB800E47090 /* DictProtocolTest.app */;
+			remoteGlobalIDString = 8D1107320486CEB800E47090;
 			remoteInfo = DictProtocolTest;
 		};
 /* End PBXContainerItemProxy section */
@@ -41,16 +41,18 @@
 		0AB01F4A06CC52040073A3CD /* Info.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Info.rtf; sourceTree = "<group>"; };
 		0AD38B0506BD0E3B00F45CFC /* dict.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dict.jpg; sourceTree = "<group>"; };
 		0AD38B1506BD0F2900F45CFC /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/ActionNames.strings; sourceTree = "<group>"; };
+		14A883F410CFC2E2007D08C4 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14A883F510CFC2E2007D08C4 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14A883F610CFC2E2007D08C4 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14A883F710CFC2E2007D08C4 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14A883F810CFC2E2007D08C4 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14A883F910CFC2E2007D08C4 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14A883FA10CFC2E2007D08C4 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14A883FB10CFC2E2007D08C4 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* DictPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictPlugin_Prefix.pch; sourceTree = "<group>"; };
-		4D0C0D850E0FC0480027D189 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
-		4D0C0D860E0FC0480027D189 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		4D0C0D870E0FC0480027D189 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = "/Volumes/myHD/Projects/Quicksilver/elements-trunk/Configuration/Developer.xcconfig"; sourceTree = "<absolute>"; };
-		4D0C0D880E0FC0480027D189 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
-		4D0C0D890E0FC0480027D189 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
-		4D0C0D8A0E0FC0480027D189 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		4DAD2F2D0E12633B00932F54 /* QSDictionaryLookup.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSDictionaryLookup.xcodeproj; path = QSDictionaryLookupProject/QSDictionaryLookup.xcodeproj; sourceTree = "<group>"; };
 		4DAD2F360E12634600932F54 /* DictProtocolTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = DictProtocolTest.xcodeproj; sourceTree = "<group>"; };
-		7FB0A2E50935FD5E00F75926 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FB0A2E50935FD5E00F75926 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FB0A2E70935FD6700F75926 /* QSDictionaryPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSDictionaryPlugIn.h; sourceTree = "<group>"; };
 		7FB0A2E80935FD6700F75926 /* QSDictionaryPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSDictionaryPlugIn.m; sourceTree = "<group>"; };
 		7FD0C5BF0936064B00F5C459 /* QSDictionaryLookup */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = QSDictionaryLookup; sourceTree = "<group>"; };
@@ -136,16 +138,17 @@
 		4D0C0D840E0FC0480027D189 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				4D0C0D850E0FC0480027D189 /* Common.xcconfig */,
-				4D0C0D860E0FC0480027D189 /* Debug.xcconfig */,
-				4D0C0D870E0FC0480027D189 /* Developer.xcconfig */,
-				4D0C0D880E0FC0480027D189 /* QSPlugIn.xcconfig */,
-				4D0C0D890E0FC0480027D189 /* QSPlugIn_Prefix.pch */,
-				4D0C0D8A0E0FC0480027D189 /* Release.xcconfig */,
+				14A883F410CFC2E2007D08C4 /* Common.xcconfig */,
+				14A883F510CFC2E2007D08C4 /* Debug.xcconfig */,
+				14A883F610CFC2E2007D08C4 /* Developer.xcconfig */,
+				14A883F710CFC2E2007D08C4 /* QSPlugIn_Debug.xcconfig */,
+				14A883F810CFC2E2007D08C4 /* QSPlugIn_Prefix.pch */,
+				14A883F910CFC2E2007D08C4 /* QSPlugIn_Release.xcconfig */,
+				14A883FA10CFC2E2007D08C4 /* QSPlugIn.xcconfig */,
+				14A883FB10CFC2E2007D08C4 /* Release.xcconfig */,
 			);
-			name = Configuration;
-			path = ../../Configuration;
-			sourceTree = SOURCE_ROOT;
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		4DAD2F2E0E12633B00932F54 /* Products */ = {
 			isa = PBXGroup;
@@ -248,14 +251,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -288,7 +291,7 @@
 /* Begin XCBuildConfiguration section */
 		7F07ADEA085E432400E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0D880E0FC0480027D189 /* QSPlugIn.xcconfig */;
+			baseConfigurationReference = 14A883F710CFC2E2007D08C4 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "Dictionary Module";
 			};
@@ -296,7 +299,7 @@
 		};
 		7F07ADEB085E432400E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0D880E0FC0480027D189 /* QSPlugIn.xcconfig */;
+			baseConfigurationReference = 14A883F910CFC2E2007D08C4 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "Dictionary Module";
 			};
@@ -304,14 +307,14 @@
 		};
 		7F07ADEE085E432400E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0D860E0FC0480027D189 /* Debug.xcconfig */;
+			baseConfigurationReference = 14A883F510CFC2E2007D08C4 /* Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		7F07ADEF085E432400E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0D8A0E0FC0480027D189 /* Release.xcconfig */;
+			baseConfigurationReference = 14A883FB10CFC2E2007D08C4 /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;

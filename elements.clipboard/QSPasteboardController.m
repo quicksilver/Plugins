@@ -1,17 +1,17 @@
 
 #import "QSPasteboardMonitor.h"
 #import "QSPasteboardController.h"
-//#import <QSBase/QSDockingWindow.h>
+#import <QSInterface/QSDockingWindow.h>
 //#import <QSBase/NDHotKeyEvent.h>
 //#import <QSBase/NDHotKeyEvent_QSMods.h>
 //#import <QSInterface/QSInterface.h>
 //
-//#import <QSCore/QSNullObject.h>
+#import <QSCore/QSNullObject.h>
 //#import <QSCore/QSLibrarian.h>
 //
 #import "QSPasteboardAccessoryCell.h"
 //
-//#import <QSInterface/QSObjectCell.h>
+#import <QSInterface/QSObjectCell.h>
 //
 
 @implementation QSPasteboardController

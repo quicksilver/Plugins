@@ -37,7 +37,7 @@
 	AXUIElementCopyAttributeValues(element, kAXChildrenAttribute, 0, count, &children);	
 
 	NSArray *attributes=[NSArray arrayWithObjects:kAXTitleAttribute,kAXEnabledAttribute,kAXRoleAttribute,nil];
-	foreach(child,children){
+	for(NSString * child in children){
 		NSArray *array=nil;
 		NSArray *attributeValues;
 		AXUIElementCopyMultipleAttributeValues (child,attributes,0,&attributeValues); 

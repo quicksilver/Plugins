@@ -63,7 +63,7 @@
 	NSFileManager *fm=[NSFileManager defaultManager];
 	
 	
-	foreach (node,list){
+	for (NSString * node in list){
 		//NSLog(@"node %@",node);
 		NSString *subPath=[sourcePath stringByAppendingFormat:@"/%@",node];
 		
@@ -113,7 +113,7 @@
 
 	//NSLog(@"dirArray: %@", dirArray);
 	int i = 0;
-	foreach(path, dirArray)
+	for(NSString * path in dirArray)
 	{
 		//NSLog(@"path: %@", path);
 		if([[dirArray objectAtIndex:i] rangeOfString:@".calendar"].location != NSNotFound)

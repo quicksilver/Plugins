@@ -16,8 +16,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14E29C8610D12A0D00DCC5F2 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14E29C8710D12A0D00DCC5F2 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14E29C8810D12A0D00DCC5F2 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14E29C8910D12A0D00DCC5F2 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14E29C8A10D12A0D00DCC5F2 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14E29C8B10D12A0D00DCC5F2 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14E29C8C10D12A0D00DCC5F2 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14E29C8D10D12A0D00DCC5F2 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSSafariStandPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSSafariStandPlugIn_Prefix.pch; sourceTree = "<group>"; };
-		7FA98211096F087B00321006 /* QSKeys.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = QSKeys.h; path = ../../../Application/trunk/Prefix/QSKeys.h; sourceTree = SOURCE_ROOT; };
 		7FDB76D20AA8BB1600CCE360 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
 		7FDB76D30AA8BB1600CCE360 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
 		7FDB76D40AA8BB1600CCE360 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
@@ -48,7 +55,7 @@
 		0259C574FE90428111CA0C5A /* QSSafariStandPlugIn */ = {
 			isa = PBXGroup;
 			children = (
-				7FA98211096F087B00321006 /* QSKeys.h */,
+				14E29C7B10D1299A00DCC5F2 /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -65,6 +72,21 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
+		};
+		14E29C7B10D1299A00DCC5F2 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				14E29C8610D12A0D00DCC5F2 /* Common.xcconfig */,
+				14E29C8710D12A0D00DCC5F2 /* Debug.xcconfig */,
+				14E29C8810D12A0D00DCC5F2 /* Developer.xcconfig */,
+				14E29C8910D12A0D00DCC5F2 /* QSPlugIn_Debug.xcconfig */,
+				14E29C8A10D12A0D00DCC5F2 /* QSPlugIn_Prefix.pch */,
+				14E29C8B10D12A0D00DCC5F2 /* QSPlugIn_Release.xcconfig */,
+				14E29C8C10D12A0D00DCC5F2 /* QSPlugIn.xcconfig */,
+				14E29C8D10D12A0D00DCC5F2 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -131,9 +153,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7FFF24F8085E488600266176 /* Build configuration list for PBXProject "QSSafariStandPlugIn" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSSafariStandPlugIn */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* SafariStand Queries */,
 			);
@@ -153,14 +177,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -178,95 +202,39 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7FFF24F5085E488600266176 /* Development */ = {
+		7FFF24F5085E488600266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E29C8910D12A0D00DCC5F2 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					"$(SRCROOT)/../../../../Build/Release",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../../../../Developer/Build/Release\"";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSSafariStandPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "SafariStand Queries";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
 		7FFF24F6085E488600266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E29C8B10D12A0D00DCC5F2 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSSafariStandPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "SafariStand Queries";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
-		7FFF24F7085E488600266176 /* Default */ = {
+		7FFF24F9085E488600266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E29C8710D12A0D00DCC5F2 /* Debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					"$(SRCROOT)/../../../../Build/Release",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../../../../Developer/Build/Release\"";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSSafariStandPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "SafariStand Queries";
-				WRAPPER_EXTENSION = qsplugin;
 			};
-			name = Default;
-		};
-		7FFF24F9085E488600266176 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Development;
+			name = Debug;
 		};
 		7FFF24FA085E488600266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E29C8D10D12A0D00DCC5F2 /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;
-		};
-		7FFF24FB085E488600266176 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Default;
 		};
 /* End XCBuildConfiguration section */
 
@@ -274,22 +242,20 @@
 		7FFF24F4085E488600266176 /* Build configuration list for PBXNativeTarget "SafariStand Queries" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF24F5085E488600266176 /* Development */,
+				7FFF24F5085E488600266176 /* Debug */,
 				7FFF24F6085E488600266176 /* Release */,
-				7FFF24F7085E488600266176 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		7FFF24F8085E488600266176 /* Build configuration list for PBXProject "QSSafariStandPlugIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF24F9085E488600266176 /* Development */,
+				7FFF24F9085E488600266176 /* Debug */,
 				7FFF24FA085E488600266176 /* Release */,
-				7FFF24FB085E488600266176 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

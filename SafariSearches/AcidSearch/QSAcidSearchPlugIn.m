@@ -8,7 +8,7 @@
 
 #import "QSAcidSearchPlugIn.h"
 
-#import "QSKeys.h"
+#import <QSCore/QSKeys.h>
 
 @implementation QSAcidSearchQueryParser
 

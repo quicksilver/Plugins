@@ -3,7 +3,8 @@
 #import "QSMenuWindow.h"
 
 #import <QSFoundation/QSFoundation.h>
-#import "QSPreferenceKeys.h"
+#import <QSCore/QSPreferenceKeys.h>
+
 NSRect menuRect2(){
     NSRect menuRect=[[[NSScreen screens]objectAtIndex:0]frame];
     float yOffset=NSHeight(menuRect)-22;

@@ -3,959 +3,421 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 39;
+	objectVersion = 42;
 	objects = {
-		0259C573FE90428111CA0C5A = {
-			buildSettings = {
-			};
-			buildStyles = (
-				2E58F360FFB2326E11CA0CBA,
-				2E58F361FFB2326E11CA0CBA,
+
+/* Begin PBXBuildFile section */
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1022AEA06B3469300299BEC /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1022AE806B3469300299BEC /* QSInterface.framework */; };
+		E1EAB046068128A200774DFF /* QSHomestarRunnerPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSHomestarRunnerPlugIn.m */; };
+		E30DFC5A072CC39E003FA678 /* QSHomestarRunnerSBEmailHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = E30DFC58072CC39E003FA678 /* QSHomestarRunnerSBEmailHandler.h */; };
+		E30DFC5B072CC39E003FA678 /* QSHomestarRunnerSBEmailHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E30DFC59072CC39E003FA678 /* QSHomestarRunnerSBEmailHandler.m */; };
+		E33B35E1072C1150002FDE07 /* mailto.icns in Resources */ = {isa = PBXBuildFile; fileRef = E33B35E0072C1150002FDE07 /* mailto.icns */; };
+		E36DF157072BB07400AD860D /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E36DF156072BB07400AD860D /* QSCore.framework */; };
+		E36DF23B072BC16D00AD860D /* AGRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = E36DF230072BC16D00AD860D /* AGRegex.m */; };
+		E36DF23C072BC16D00AD860D /* chartables.c in Sources */ = {isa = PBXBuildFile; fileRef = E36DF232072BC16D00AD860D /* chartables.c */; };
+		E36DF23D072BC16D00AD860D /* config.h in Sources */ = {isa = PBXBuildFile; fileRef = E36DF233072BC16D00AD860D /* config.h */; };
+		E36DF23E072BC16D00AD860D /* get.c in Sources */ = {isa = PBXBuildFile; fileRef = E36DF234072BC16D00AD860D /* get.c */; };
+		E36DF23F072BC16D00AD860D /* internal.h in Sources */ = {isa = PBXBuildFile; fileRef = E36DF235072BC16D00AD860D /* internal.h */; };
+		E36DF240072BC16D00AD860D /* maketables.c in Sources */ = {isa = PBXBuildFile; fileRef = E36DF236072BC16D00AD860D /* maketables.c */; };
+		E36DF241072BC16D00AD860D /* pcre.c in Sources */ = {isa = PBXBuildFile; fileRef = E36DF237072BC16D00AD860D /* pcre.c */; };
+		E36DF242072BC16D00AD860D /* pcre.h in Sources */ = {isa = PBXBuildFile; fileRef = E36DF238072BC16D00AD860D /* pcre.h */; };
+		E36DF243072BC16D00AD860D /* study.c in Sources */ = {isa = PBXBuildFile; fileRef = E36DF239072BC16D00AD860D /* study.c */; };
+		E36DF244072BC16D00AD860D /* AGRegex.h in Sources */ = {isa = PBXBuildFile; fileRef = E36DF23A072BC16D00AD860D /* AGRegex.h */; };
+		E379A57A072FCACD009589AF /* HRObjectManager.h in Sources */ = {isa = PBXBuildFile; fileRef = E379A578072FCACD009589AF /* HRObjectManager.h */; };
+		E379A57B072FCACD009589AF /* HRObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E379A579072FCACD009589AF /* HRObjectManager.m */; };
+		E379A57E072FCFF3009589AF /* HRObjectParser.h in Sources */ = {isa = PBXBuildFile; fileRef = E379A57C072FCFF3009589AF /* HRObjectParser.h */; };
+		E379A57F072FCFF3009589AF /* HRObjectParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E379A57D072FCFF3009589AF /* HRObjectParser.m */; };
+		E379A582072FD058009589AF /* HREmailParser.h in Sources */ = {isa = PBXBuildFile; fileRef = E379A580072FD058009589AF /* HREmailParser.h */; };
+		E379A583072FD058009589AF /* HREmailParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E379A581072FD058009589AF /* HREmailParser.m */; };
+		E39821F6072E5E3400A2C9B8 /* panpan.icns in Resources */ = {isa = PBXBuildFile; fileRef = E39821F5072E5E3400A2C9B8 /* panpan.icns */; };
+		E39942AA072BDBB100D493FF /* bonus-stinkoman.icns in Resources */ = {isa = PBXBuildFile; fileRef = E3994297072BDBB000D493FF /* bonus-stinkoman.icns */; };
+		E39942AB072BDBB100D493FF /* pompom.icns in Resources */ = {isa = PBXBuildFile; fileRef = E3994298072BDBB000D493FF /* pompom.icns */; };
+		E39942AC072BDBB100D493FF /* homestarhead.icns in Resources */ = {isa = PBXBuildFile; fileRef = E3994299072BDBB000D493FF /* homestarhead.icns */; };
+		E39942AD072BDBB100D493FF /* poopsmith.icns in Resources */ = {isa = PBXBuildFile; fileRef = E399429A072BDBB000D493FF /* poopsmith.icns */; };
+		E39942AE072BDBB100D493FF /* strongsad.icns in Resources */ = {isa = PBXBuildFile; fileRef = E399429B072BDBB000D493FF /* strongsad.icns */; };
+		E39942AF072BDBB100D493FF /* bonus-trogdor.icns in Resources */ = {isa = PBXBuildFile; fileRef = E399429C072BDBB000D493FF /* bonus-trogdor.icns */; };
+		E39942B0072BDBB100D493FF /* kingoftown.icns in Resources */ = {isa = PBXBuildFile; fileRef = E399429D072BDBB000D493FF /* kingoftown.icns */; };
+		E39942B1072BDBB100D493FF /* thecheat.icns in Resources */ = {isa = PBXBuildFile; fileRef = E399429E072BDBB000D493FF /* thecheat.icns */; };
+		E39942B2072BDBB100D493FF /* Homestar Runner.icns in Resources */ = {isa = PBXBuildFile; fileRef = E399429F072BDBB000D493FF /* Homestar Runner.icns */; };
+		E39942B3072BDBB100D493FF /* strongbadhead.icns in Resources */ = {isa = PBXBuildFile; fileRef = E39942A0072BDBB000D493FF /* strongbadhead.icns */; };
+		E39942B4072BDBB100D493FF /* homsar.icns in Resources */ = {isa = PBXBuildFile; fileRef = E39942A1072BDBB000D493FF /* homsar.icns */; };
+		E39942B5072BDBB100D493FF /* strongbad.icns in Resources */ = {isa = PBXBuildFile; fileRef = E39942A2072BDBB000D493FF /* strongbad.icns */; };
+		E39942B6072BDBB100D493FF /* bubs.icns in Resources */ = {isa = PBXBuildFile; fileRef = E39942A3072BDBB000D493FF /* bubs.icns */; };
+		E39942B7072BDBB100D493FF /* strongmad.icns in Resources */ = {isa = PBXBuildFile; fileRef = E39942A4072BDBB000D493FF /* strongmad.icns */; };
+		E39942B8072BDBB100D493FF /* homestar folder.icns in Resources */ = {isa = PBXBuildFile; fileRef = E39942A5072BDBB000D493FF /* homestar folder.icns */; };
+		E39942B9072BDBB100D493FF /* marzipan.icns in Resources */ = {isa = PBXBuildFile; fileRef = E39942A6072BDBB000D493FF /* marzipan.icns */; };
+		E39942BA072BDBB100D493FF /* bonus-marshie.icns in Resources */ = {isa = PBXBuildFile; fileRef = E39942A7072BDBB000D493FF /* bonus-marshie.icns */; };
+		E39942BB072BDBB100D493FF /* coachz.icns in Resources */ = {isa = PBXBuildFile; fileRef = E39942A8072BDBB000D493FF /* coachz.icns */; };
+		E39942BC072BDBB100D493FF /* homestar.icns in Resources */ = {isa = PBXBuildFile; fileRef = E39942A9072BDBB100D493FF /* homestar.icns */; };
+		E3A1F25E072CEC830074AB76 /* QSHomestarRunnerConstants.h in Sources */ = {isa = PBXBuildFile; fileRef = E3A1F25D072CEC830074AB76 /* QSHomestarRunnerConstants.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14DE8B3D10D0A39B00851A6F /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14DE8B3E10D0A39B00851A6F /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14DE8B3F10D0A39B00851A6F /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14DE8B4010D0A39B00851A6F /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14DE8B4110D0A39B00851A6F /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14DE8B4210D0A39B00851A6F /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14DE8B4310D0A39B00851A6F /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14DE8B4410D0A39B00851A6F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		32DBCF980370C29C00C91783 /* QSHomestarRunnerPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSHomestarRunnerPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* QSHomestarRunnerPlugIn.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSHomestarRunnerPlugIn.qsplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E1022AE806B3469300299BEC /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSInterface.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework; sourceTree = "<absolute>"; };
+		E1EAB045068128A200774DFF /* QSHomestarRunnerPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSHomestarRunnerPlugIn.m; sourceTree = "<group>"; };
+		E1EAB047068128A800774DFF /* QSHomestarRunnerPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSHomestarRunnerPlugIn.h; sourceTree = "<group>"; };
+		E30DFC58072CC39E003FA678 /* QSHomestarRunnerSBEmailHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSHomestarRunnerSBEmailHandler.h; sourceTree = "<group>"; };
+		E30DFC59072CC39E003FA678 /* QSHomestarRunnerSBEmailHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSHomestarRunnerSBEmailHandler.m; sourceTree = "<group>"; };
+		E33B35E0072C1150002FDE07 /* mailto.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = mailto.icns; sourceTree = "<group>"; };
+		E36DF156072BB07400AD860D /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework; sourceTree = "<absolute>"; };
+		E36DF230072BC16D00AD860D /* AGRegex.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AGRegex.m; sourceTree = "<group>"; };
+		E36DF232072BC16D00AD860D /* chartables.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = chartables.c; sourceTree = "<group>"; };
+		E36DF233072BC16D00AD860D /* config.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		E36DF234072BC16D00AD860D /* get.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = get.c; sourceTree = "<group>"; };
+		E36DF235072BC16D00AD860D /* internal.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
+		E36DF236072BC16D00AD860D /* maketables.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = maketables.c; sourceTree = "<group>"; };
+		E36DF237072BC16D00AD860D /* pcre.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = pcre.c; sourceTree = "<group>"; };
+		E36DF238072BC16D00AD860D /* pcre.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = pcre.h; sourceTree = "<group>"; };
+		E36DF239072BC16D00AD860D /* study.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = study.c; sourceTree = "<group>"; };
+		E36DF23A072BC16D00AD860D /* AGRegex.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AGRegex.h; sourceTree = "<group>"; };
+		E379A578072FCACD009589AF /* HRObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRObjectManager.h; sourceTree = "<group>"; };
+		E379A579072FCACD009589AF /* HRObjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRObjectManager.m; sourceTree = "<group>"; };
+		E379A57C072FCFF3009589AF /* HRObjectParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRObjectParser.h; sourceTree = "<group>"; };
+		E379A57D072FCFF3009589AF /* HRObjectParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRObjectParser.m; sourceTree = "<group>"; };
+		E379A580072FD058009589AF /* HREmailParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HREmailParser.h; sourceTree = "<group>"; };
+		E379A581072FD058009589AF /* HREmailParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HREmailParser.m; sourceTree = "<group>"; };
+		E39821F5072E5E3400A2C9B8 /* panpan.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = panpan.icns; sourceTree = "<group>"; };
+		E3994297072BDBB000D493FF /* bonus-stinkoman.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "bonus-stinkoman.icns"; sourceTree = "<group>"; };
+		E3994298072BDBB000D493FF /* pompom.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = pompom.icns; sourceTree = "<group>"; };
+		E3994299072BDBB000D493FF /* homestarhead.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = homestarhead.icns; sourceTree = "<group>"; };
+		E399429A072BDBB000D493FF /* poopsmith.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = poopsmith.icns; sourceTree = "<group>"; };
+		E399429B072BDBB000D493FF /* strongsad.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = strongsad.icns; sourceTree = "<group>"; };
+		E399429C072BDBB000D493FF /* bonus-trogdor.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "bonus-trogdor.icns"; sourceTree = "<group>"; };
+		E399429D072BDBB000D493FF /* kingoftown.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = kingoftown.icns; sourceTree = "<group>"; };
+		E399429E072BDBB000D493FF /* thecheat.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = thecheat.icns; sourceTree = "<group>"; };
+		E399429F072BDBB000D493FF /* Homestar Runner.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "Homestar Runner.icns"; sourceTree = "<group>"; };
+		E39942A0072BDBB000D493FF /* strongbadhead.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = strongbadhead.icns; sourceTree = "<group>"; };
+		E39942A1072BDBB000D493FF /* homsar.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = homsar.icns; sourceTree = "<group>"; };
+		E39942A2072BDBB000D493FF /* strongbad.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = strongbad.icns; sourceTree = "<group>"; };
+		E39942A3072BDBB000D493FF /* bubs.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = bubs.icns; sourceTree = "<group>"; };
+		E39942A4072BDBB000D493FF /* strongmad.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = strongmad.icns; sourceTree = "<group>"; };
+		E39942A5072BDBB000D493FF /* homestar folder.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "homestar folder.icns"; sourceTree = "<group>"; };
+		E39942A6072BDBB000D493FF /* marzipan.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = marzipan.icns; sourceTree = "<group>"; };
+		E39942A7072BDBB000D493FF /* bonus-marshie.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "bonus-marshie.icns"; sourceTree = "<group>"; };
+		E39942A8072BDBB000D493FF /* coachz.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = coachz.icns; sourceTree = "<group>"; };
+		E39942A9072BDBB100D493FF /* homestar.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = homestar.icns; sourceTree = "<group>"; };
+		E3A1F25D072CEC830074AB76 /* QSHomestarRunnerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSHomestarRunnerConstants.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				E1022AEA06B3469300299BEC /* QSInterface.framework in Frameworks */,
+				E36DF157072BB07400AD860D /* QSCore.framework in Frameworks */,
 			);
-			hasScannedForEncodings = 1;
-			isa = PBXProject;
-			mainGroup = 0259C574FE90428111CA0C5A;
-			projectDirPath = "";
-			targets = (
-				8D1AC9600486D14A00FE50C9,
-			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0259C574FE90428111CA0C5A = {
-			children = (
-				E36DF231072BC16D00AD860D,
-				32DBCF9E0370C38000C91783,
-				32DBCF9F0370C38200C91783,
-				0259C582FE90428111CA0C5A,
-				1ED78706FE9D4A0611CA0C5A,
-				2E58F364FFB232C311CA0CBA,
-			);
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSHomestarRunnerPlugIn */ = {
 			isa = PBXGroup;
+			children = (
+				14DE8B3810D0A37700851A6F /* Configuration */,
+				E36DF231072BC16D00AD860D /* pcre-4.3 */,
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
 			name = QSHomestarRunnerPlugIn;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-		0259C582FE90428111CA0C5A = {
-			children = (
-				E33B35E0072C1150002FDE07,
-				E3994297072BDBB000D493FF,
-				E3994298072BDBB000D493FF,
-				E3994299072BDBB000D493FF,
-				E399429A072BDBB000D493FF,
-				E399429B072BDBB000D493FF,
-				E399429C072BDBB000D493FF,
-				E399429D072BDBB000D493FF,
-				E399429E072BDBB000D493FF,
-				E399429F072BDBB000D493FF,
-				E39942A0072BDBB000D493FF,
-				E39942A1072BDBB000D493FF,
-				E39942A2072BDBB000D493FF,
-				E39942A3072BDBB000D493FF,
-				E39942A4072BDBB000D493FF,
-				E39942A5072BDBB000D493FF,
-				E39942A6072BDBB000D493FF,
-				E39942A7072BDBB000D493FF,
-				E39821F5072E5E3400A2C9B8,
-				E39942A8072BDBB000D493FF,
-				E39942A9072BDBB100D493FF,
-				8D1AC9730486D14A00FE50C9,
-			);
+		0259C582FE90428111CA0C5A /* Resources */ = {
 			isa = PBXGroup;
+			children = (
+				E33B35E0072C1150002FDE07 /* mailto.icns */,
+				E3994297072BDBB000D493FF /* bonus-stinkoman.icns */,
+				E3994298072BDBB000D493FF /* pompom.icns */,
+				E3994299072BDBB000D493FF /* homestarhead.icns */,
+				E399429A072BDBB000D493FF /* poopsmith.icns */,
+				E399429B072BDBB000D493FF /* strongsad.icns */,
+				E399429C072BDBB000D493FF /* bonus-trogdor.icns */,
+				E399429D072BDBB000D493FF /* kingoftown.icns */,
+				E399429E072BDBB000D493FF /* thecheat.icns */,
+				E399429F072BDBB000D493FF /* Homestar Runner.icns */,
+				E39942A0072BDBB000D493FF /* strongbadhead.icns */,
+				E39942A1072BDBB000D493FF /* homsar.icns */,
+				E39942A2072BDBB000D493FF /* strongbad.icns */,
+				E39942A3072BDBB000D493FF /* bubs.icns */,
+				E39942A4072BDBB000D493FF /* strongmad.icns */,
+				E39942A5072BDBB000D493FF /* homestar folder.icns */,
+				E39942A6072BDBB000D493FF /* marzipan.icns */,
+				E39942A7072BDBB000D493FF /* bonus-marshie.icns */,
+				E39821F5072E5E3400A2C9B8 /* panpan.icns */,
+				E39942A8072BDBB000D493FF /* coachz.icns */,
+				E39942A9072BDBB100D493FF /* homestar.icns */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+			);
 			name = Resources;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-//020
-//021
-//022
-//023
-//024
-//1E0
-//1E1
-//1E2
-//1E3
-//1E4
-		1ED78706FE9D4A0611CA0C5A = {
-			children = (
-				8D1AC9740486D14A00FE50C9,
-			);
+		14DE8B3810D0A37700851A6F /* Configuration */ = {
 			isa = PBXGroup;
+			children = (
+				14DE8B3D10D0A39B00851A6F /* Common.xcconfig */,
+				14DE8B3E10D0A39B00851A6F /* Debug.xcconfig */,
+				14DE8B3F10D0A39B00851A6F /* Developer.xcconfig */,
+				14DE8B4010D0A39B00851A6F /* QSPlugIn_Debug.xcconfig */,
+				14DE8B4110D0A39B00851A6F /* QSPlugIn_Prefix.pch */,
+				14DE8B4210D0A39B00851A6F /* QSPlugIn_Release.xcconfig */,
+				14DE8B4310D0A39B00851A6F /* QSPlugIn.xcconfig */,
+				14DE8B4410D0A39B00851A6F /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* QSHomestarRunnerPlugIn.qsplugin */,
+			);
 			name = Products;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-//1E0
-//1E1
-//1E2
-//1E3
-//1E4
-//2E0
-//2E1
-//2E2
-//2E3
-//2E4
-		2E58F360FFB2326E11CA0CBA = {
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			isa = PBXBuildStyle;
-			name = Development;
-		};
-		2E58F361FFB2326E11CA0CBA = {
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			isa = PBXBuildStyle;
-			name = Deployment;
-		};
-		2E58F364FFB232C311CA0CBA = {
-			children = (
-				E36DF156072BB07400AD860D,
-				E1022AE806B3469300299BEC,
-				DD92D38A0106425D02CA0E72,
-			);
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
 			isa = PBXGroup;
+			children = (
+				E36DF156072BB07400AD860D /* QSCore.framework */,
+				E1022AE806B3469300299BEC /* QSInterface.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
 			name = Frameworks;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-//2E0
-//2E1
-//2E2
-//2E3
-//2E4
-//320
-//321
-//322
-//323
-//324
-		32DBCF980370C29C00C91783 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = QSHomestarRunnerPlugIn_Prefix.pch;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		32DBCF9E0370C38000C91783 = {
-			children = (
-				E1EAB047068128A800774DFF,
-				E1EAB045068128A200774DFF,
-				E30DFC58072CC39E003FA678,
-				E30DFC59072CC39E003FA678,
-				E379A578072FCACD009589AF,
-				E379A579072FCACD009589AF,
-				E379A57C072FCFF3009589AF,
-				E379A57D072FCFF3009589AF,
-				E379A580072FD058009589AF,
-				E379A581072FD058009589AF,
-			);
+		32DBCF9E0370C38000C91783 /* Classes */ = {
 			isa = PBXGroup;
+			children = (
+				E1EAB047068128A800774DFF /* QSHomestarRunnerPlugIn.h */,
+				E1EAB045068128A200774DFF /* QSHomestarRunnerPlugIn.m */,
+				E30DFC58072CC39E003FA678 /* QSHomestarRunnerSBEmailHandler.h */,
+				E30DFC59072CC39E003FA678 /* QSHomestarRunnerSBEmailHandler.m */,
+				E379A578072FCACD009589AF /* HRObjectManager.h */,
+				E379A579072FCACD009589AF /* HRObjectManager.m */,
+				E379A57C072FCFF3009589AF /* HRObjectParser.h */,
+				E379A57D072FCFF3009589AF /* HRObjectParser.m */,
+				E379A580072FD058009589AF /* HREmailParser.h */,
+				E379A581072FD058009589AF /* HREmailParser.m */,
+			);
 			name = Classes;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-		32DBCF9F0370C38200C91783 = {
-			children = (
-				E36DF23A072BC16D00AD860D,
-				E36DF230072BC16D00AD860D,
-				32DBCF980370C29C00C91783,
-				E3A1F25D072CEC830074AB76,
-			);
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
+			children = (
+				E36DF23A072BC16D00AD860D /* AGRegex.h */,
+				E36DF230072BC16D00AD860D /* AGRegex.m */,
+				32DBCF980370C29C00C91783 /* QSHomestarRunnerPlugIn_Prefix.pch */,
+				E3A1F25D072CEC830074AB76 /* QSHomestarRunnerConstants.h */,
+			);
 			name = "Other Sources";
-			path = "";
-			refType = 4;
 			sourceTree = "<group>";
 		};
-//320
-//321
-//322
-//323
-//324
-//8D0
-//8D1
-//8D2
-//8D3
-//8D4
-		8D1AC9600486D14A00FE50C9 = {
+		E36DF231072BC16D00AD860D /* pcre-4.3 */ = {
+			isa = PBXGroup;
+			children = (
+				E36DF232072BC16D00AD860D /* chartables.c */,
+				E36DF233072BC16D00AD860D /* config.h */,
+				E36DF234072BC16D00AD860D /* get.c */,
+				E36DF235072BC16D00AD860D /* internal.h */,
+				E36DF236072BC16D00AD860D /* maketables.c */,
+				E36DF237072BC16D00AD860D /* pcre.c */,
+				E36DF238072BC16D00AD860D /* pcre.h */,
+				E36DF239072BC16D00AD860D /* study.c */,
+			);
+			path = "pcre-4.3";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* QSHomestarRunnerPlugIn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14DE8B3A10D0A37700851A6F /* Build configuration list for PBXNativeTarget "QSHomestarRunnerPlugIn" */;
 			buildPhases = (
-				8D1AC9660486D14A00FE50C9,
-				8D1AC96A0486D14A00FE50C9,
-				8D1AC96E0486D14A00FE50C9,
-				E1022B2806B3475D00299BEC,
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks \"$(SYSTEM_APPS_DIR)/Quicksilver.app/Contents/Frameworks\"";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSHomestarRunnerPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = QSHomestarRunnerPlugIn;
-				WRAPPER_EXTENSION = qsplugin;
-			};
 			dependencies = (
 			);
-			isa = PBXNativeTarget;
 			name = QSHomestarRunnerPlugIn;
 			productInstallPath = "$(HOME)/Developer/Palettes";
 			productName = QSHomestarRunnerPlugIn;
-			productReference = 8D1AC9740486D14A00FE50C9;
+			productReference = 8D1AC9740486D14A00FE50C9 /* QSHomestarRunnerPlugIn.qsplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
-		8D1AC9660486D14A00FE50C9 = {
-			buildActionMask = 2147483647;
-			files = (
-				E39942AA072BDBB100D493FF,
-				E39942AB072BDBB100D493FF,
-				E39942AC072BDBB100D493FF,
-				E39942AD072BDBB100D493FF,
-				E39942AE072BDBB100D493FF,
-				E39942AF072BDBB100D493FF,
-				E39942B0072BDBB100D493FF,
-				E39942B1072BDBB100D493FF,
-				E39942B2072BDBB100D493FF,
-				E39942B3072BDBB100D493FF,
-				E39942B4072BDBB100D493FF,
-				E39942B5072BDBB100D493FF,
-				E39942B6072BDBB100D493FF,
-				E39942B7072BDBB100D493FF,
-				E39942B8072BDBB100D493FF,
-				E39942B9072BDBB100D493FF,
-				E39942BA072BDBB100D493FF,
-				E39942BB072BDBB100D493FF,
-				E39942BC072BDBB100D493FF,
-				E33B35E1072C1150002FDE07,
-				E39821F6072E5E3400A2C9B8,
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 14DE8B3910D0A37700851A6F /* Build configuration list for PBXProject "QSHomestarRunnerPlugIn" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* QSHomestarRunnerPlugIn */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* QSHomestarRunnerPlugIn */,
 			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D1AC96A0486D14A00FE50C9 = {
 			buildActionMask = 2147483647;
 			files = (
-				E1EAB046068128A200774DFF,
-				E36DF23B072BC16D00AD860D,
-				E36DF23C072BC16D00AD860D,
-				E36DF23D072BC16D00AD860D,
-				E36DF23E072BC16D00AD860D,
-				E36DF23F072BC16D00AD860D,
-				E36DF240072BC16D00AD860D,
-				E36DF241072BC16D00AD860D,
-				E36DF242072BC16D00AD860D,
-				E36DF243072BC16D00AD860D,
-				E36DF244072BC16D00AD860D,
-				E30DFC5A072CC39E003FA678,
-				E30DFC5B072CC39E003FA678,
-				E3A1F25E072CEC830074AB76,
-				E379A57A072FCACD009589AF,
-				E379A57B072FCACD009589AF,
-				E379A57E072FCFF3009589AF,
-				E379A57F072FCFF3009589AF,
-				E379A582072FD058009589AF,
-				E379A583072FD058009589AF,
+				E39942AA072BDBB100D493FF /* bonus-stinkoman.icns in Resources */,
+				E39942AB072BDBB100D493FF /* pompom.icns in Resources */,
+				E39942AC072BDBB100D493FF /* homestarhead.icns in Resources */,
+				E39942AD072BDBB100D493FF /* poopsmith.icns in Resources */,
+				E39942AE072BDBB100D493FF /* strongsad.icns in Resources */,
+				E39942AF072BDBB100D493FF /* bonus-trogdor.icns in Resources */,
+				E39942B0072BDBB100D493FF /* kingoftown.icns in Resources */,
+				E39942B1072BDBB100D493FF /* thecheat.icns in Resources */,
+				E39942B2072BDBB100D493FF /* Homestar Runner.icns in Resources */,
+				E39942B3072BDBB100D493FF /* strongbadhead.icns in Resources */,
+				E39942B4072BDBB100D493FF /* homsar.icns in Resources */,
+				E39942B5072BDBB100D493FF /* strongbad.icns in Resources */,
+				E39942B6072BDBB100D493FF /* bubs.icns in Resources */,
+				E39942B7072BDBB100D493FF /* strongmad.icns in Resources */,
+				E39942B8072BDBB100D493FF /* homestar folder.icns in Resources */,
+				E39942B9072BDBB100D493FF /* marzipan.icns in Resources */,
+				E39942BA072BDBB100D493FF /* bonus-marshie.icns in Resources */,
+				E39942BB072BDBB100D493FF /* coachz.icns in Resources */,
+				E39942BC072BDBB100D493FF /* homestar.icns in Resources */,
+				E33B35E1072C1150002FDE07 /* mailto.icns in Resources */,
+				E39821F6072E5E3400A2C9B8 /* panpan.icns in Resources */,
 			);
-			isa = PBXSourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D1AC96E0486D14A00FE50C9 = {
-			buildActionMask = 2147483647;
-			files = (
-				8D1AC9700486D14A00FE50C9,
-				E1022AEA06B3469300299BEC,
-				E36DF157072BB07400AD860D,
-			);
-			isa = PBXFrameworksBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D1AC9700486D14A00FE50C9 = {
-			fileRef = DD92D38A0106425D02CA0E72;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		8D1AC9730486D14A00FE50C9 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = text.plist;
-			path = Info.plist;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		8D1AC9740486D14A00FE50C9 = {
-			explicitFileType = wrapper.cfbundle;
-			includeInIndex = 0;
-			isa = PBXFileReference;
-			path = QSHomestarRunnerPlugIn.qsplugin;
-			refType = 3;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-//8D0
-//8D1
-//8D2
-//8D3
-//8D4
-//DD0
-//DD1
-//DD2
-//DD3
-//DD4
-		DD92D38A0106425D02CA0E72 = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = Cocoa.framework;
-			path = /System/Library/Frameworks/Cocoa.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-//DD0
-//DD1
-//DD2
-//DD3
-//DD4
-//E10
-//E11
-//E12
-//E13
-//E14
-		E1022AE806B3469300299BEC = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = QSInterface.framework;
-			path = /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E1022AEA06B3469300299BEC = {
-			fileRef = E1022AE806B3469300299BEC;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E1022B2806B3475D00299BEC = {
-			buildActionMask = 2147483647;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
-			isa = PBXShellScriptBuildPhase;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
-		E1EAB045068128A200774DFF = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = QSHomestarRunnerPlugIn.m;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E1EAB046068128A200774DFF = {
-			fileRef = E1EAB045068128A200774DFF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E1EAB047068128A800774DFF = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = QSHomestarRunnerPlugIn.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-//E10
-//E11
-//E12
-//E13
-//E14
-//E30
-//E31
-//E32
-//E33
-//E34
-		E30DFC58072CC39E003FA678 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = QSHomestarRunnerSBEmailHandler.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E30DFC59072CC39E003FA678 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = QSHomestarRunnerSBEmailHandler.m;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E30DFC5A072CC39E003FA678 = {
-			fileRef = E30DFC58072CC39E003FA678;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E30DFC5B072CC39E003FA678 = {
-			fileRef = E30DFC59072CC39E003FA678;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E33B35E0072C1150002FDE07 = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = mailto.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E33B35E1072C1150002FDE07 = {
-			fileRef = E33B35E0072C1150002FDE07;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E36DF156072BB07400AD860D = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = QSCore.framework;
-			path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		E36DF157072BB07400AD860D = {
-			fileRef = E36DF156072BB07400AD860D;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E36DF230072BC16D00AD860D = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = AGRegex.m;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E36DF231072BC16D00AD860D = {
-			children = (
-				E36DF232072BC16D00AD860D,
-				E36DF233072BC16D00AD860D,
-				E36DF234072BC16D00AD860D,
-				E36DF235072BC16D00AD860D,
-				E36DF236072BC16D00AD860D,
-				E36DF237072BC16D00AD860D,
-				E36DF238072BC16D00AD860D,
-				E36DF239072BC16D00AD860D,
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF /* QSHomestarRunnerPlugIn.m in Sources */,
+				E36DF23B072BC16D00AD860D /* AGRegex.m in Sources */,
+				E36DF23C072BC16D00AD860D /* chartables.c in Sources */,
+				E36DF23D072BC16D00AD860D /* config.h in Sources */,
+				E36DF23E072BC16D00AD860D /* get.c in Sources */,
+				E36DF23F072BC16D00AD860D /* internal.h in Sources */,
+				E36DF240072BC16D00AD860D /* maketables.c in Sources */,
+				E36DF241072BC16D00AD860D /* pcre.c in Sources */,
+				E36DF242072BC16D00AD860D /* pcre.h in Sources */,
+				E36DF243072BC16D00AD860D /* study.c in Sources */,
+				E36DF244072BC16D00AD860D /* AGRegex.h in Sources */,
+				E30DFC5A072CC39E003FA678 /* QSHomestarRunnerSBEmailHandler.h in Sources */,
+				E30DFC5B072CC39E003FA678 /* QSHomestarRunnerSBEmailHandler.m in Sources */,
+				E3A1F25E072CEC830074AB76 /* QSHomestarRunnerConstants.h in Sources */,
+				E379A57A072FCACD009589AF /* HRObjectManager.h in Sources */,
+				E379A57B072FCACD009589AF /* HRObjectManager.m in Sources */,
+				E379A57E072FCFF3009589AF /* HRObjectParser.h in Sources */,
+				E379A57F072FCFF3009589AF /* HRObjectParser.m in Sources */,
+				E379A582072FD058009589AF /* HREmailParser.h in Sources */,
+				E379A583072FD058009589AF /* HREmailParser.m in Sources */,
 			);
-			isa = PBXGroup;
-			path = "pcre-4.3";
-			refType = 4;
-			sourceTree = "<group>";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E36DF232072BC16D00AD860D = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.c;
-			path = chartables.c;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E36DF233072BC16D00AD860D = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = config.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E36DF234072BC16D00AD860D = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.c;
-			path = get.c;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E36DF235072BC16D00AD860D = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = internal.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E36DF236072BC16D00AD860D = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.c;
-			path = maketables.c;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E36DF237072BC16D00AD860D = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.c;
-			path = pcre.c;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E36DF238072BC16D00AD860D = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = pcre.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E36DF239072BC16D00AD860D = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.c;
-			path = study.c;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E36DF23A072BC16D00AD860D = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = AGRegex.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E36DF23B072BC16D00AD860D = {
-			fileRef = E36DF230072BC16D00AD860D;
-			isa = PBXBuildFile;
-			settings = {
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		14DE8B3010D0A35B00851A6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE8B3E10D0A39B00851A6F /* Debug.xcconfig */;
+			buildSettings = {
 			};
+			name = Debug;
 		};
-		E36DF23C072BC16D00AD860D = {
-			fileRef = E36DF232072BC16D00AD860D;
-			isa = PBXBuildFile;
-			settings = {
+		14DE8B3110D0A35B00851A6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE8B4410D0A39B00851A6F /* Release.xcconfig */;
+			buildSettings = {
 			};
+			name = Release;
 		};
-		E36DF23D072BC16D00AD860D = {
-			fileRef = E36DF233072BC16D00AD860D;
-			isa = PBXBuildFile;
-			settings = {
+		14DE8B3310D0A35B00851A6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE8B4010D0A39B00851A6F /* QSPlugIn_Debug.xcconfig */;
+			buildSettings = {
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = QSHomestarRunnerPlugIn;
+				ZERO_LINK = YES;
 			};
+			name = Debug;
 		};
-		E36DF23E072BC16D00AD860D = {
-			fileRef = E36DF234072BC16D00AD860D;
-			isa = PBXBuildFile;
-			settings = {
+		14DE8B3410D0A35B00851A6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE8B4210D0A39B00851A6F /* QSPlugIn_Release.xcconfig */;
+			buildSettings = {
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = QSHomestarRunnerPlugIn;
+				ZERO_LINK = NO;
 			};
+			name = Release;
 		};
-		E36DF23F072BC16D00AD860D = {
-			fileRef = E36DF235072BC16D00AD860D;
-			isa = PBXBuildFile;
-			settings = {
-			};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14DE8B3910D0A37700851A6F /* Build configuration list for PBXProject "QSHomestarRunnerPlugIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14DE8B3010D0A35B00851A6F /* Debug */,
+				14DE8B3110D0A35B00851A6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
-		E36DF240072BC16D00AD860D = {
-			fileRef = E36DF236072BC16D00AD860D;
-			isa = PBXBuildFile;
-			settings = {
-			};
+		14DE8B3A10D0A37700851A6F /* Build configuration list for PBXNativeTarget "QSHomestarRunnerPlugIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14DE8B3310D0A35B00851A6F /* Debug */,
+				14DE8B3410D0A35B00851A6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
-		E36DF241072BC16D00AD860D = {
-			fileRef = E36DF237072BC16D00AD860D;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E36DF242072BC16D00AD860D = {
-			fileRef = E36DF238072BC16D00AD860D;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E36DF243072BC16D00AD860D = {
-			fileRef = E36DF239072BC16D00AD860D;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E36DF244072BC16D00AD860D = {
-			fileRef = E36DF23A072BC16D00AD860D;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E379A578072FCACD009589AF = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = HRObjectManager.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E379A579072FCACD009589AF = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = HRObjectManager.m;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E379A57A072FCACD009589AF = {
-			fileRef = E379A578072FCACD009589AF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E379A57B072FCACD009589AF = {
-			fileRef = E379A579072FCACD009589AF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E379A57C072FCFF3009589AF = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = HRObjectParser.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E379A57D072FCFF3009589AF = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = HRObjectParser.m;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E379A57E072FCFF3009589AF = {
-			fileRef = E379A57C072FCFF3009589AF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E379A57F072FCFF3009589AF = {
-			fileRef = E379A57D072FCFF3009589AF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E379A580072FD058009589AF = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = HREmailParser.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E379A581072FD058009589AF = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = HREmailParser.m;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E379A582072FD058009589AF = {
-			fileRef = E379A580072FD058009589AF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E379A583072FD058009589AF = {
-			fileRef = E379A581072FD058009589AF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39821F5072E5E3400A2C9B8 = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = panpan.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E39821F6072E5E3400A2C9B8 = {
-			fileRef = E39821F5072E5E3400A2C9B8;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E3994297072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = "bonus-stinkoman.icns";
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E3994298072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = pompom.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E3994299072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = homestarhead.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E399429A072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = poopsmith.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E399429B072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = strongsad.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E399429C072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = "bonus-trogdor.icns";
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E399429D072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = kingoftown.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E399429E072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = thecheat.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E399429F072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = "Homestar Runner.icns";
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E39942A0072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = strongbadhead.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E39942A1072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = homsar.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E39942A2072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = strongbad.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E39942A3072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = bubs.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E39942A4072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = strongmad.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E39942A5072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = "homestar folder.icns";
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E39942A6072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = marzipan.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E39942A7072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = "bonus-marshie.icns";
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E39942A8072BDBB000D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = coachz.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E39942A9072BDBB100D493FF = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.icns;
-			path = homestar.icns;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E39942AA072BDBB100D493FF = {
-			fileRef = E3994297072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942AB072BDBB100D493FF = {
-			fileRef = E3994298072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942AC072BDBB100D493FF = {
-			fileRef = E3994299072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942AD072BDBB100D493FF = {
-			fileRef = E399429A072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942AE072BDBB100D493FF = {
-			fileRef = E399429B072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942AF072BDBB100D493FF = {
-			fileRef = E399429C072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942B0072BDBB100D493FF = {
-			fileRef = E399429D072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942B1072BDBB100D493FF = {
-			fileRef = E399429E072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942B2072BDBB100D493FF = {
-			fileRef = E399429F072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942B3072BDBB100D493FF = {
-			fileRef = E39942A0072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942B4072BDBB100D493FF = {
-			fileRef = E39942A1072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942B5072BDBB100D493FF = {
-			fileRef = E39942A2072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942B6072BDBB100D493FF = {
-			fileRef = E39942A3072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942B7072BDBB100D493FF = {
-			fileRef = E39942A4072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942B8072BDBB100D493FF = {
-			fileRef = E39942A5072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942B9072BDBB100D493FF = {
-			fileRef = E39942A6072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942BA072BDBB100D493FF = {
-			fileRef = E39942A7072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942BB072BDBB100D493FF = {
-			fileRef = E39942A8072BDBB000D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E39942BC072BDBB100D493FF = {
-			fileRef = E39942A9072BDBB100D493FF;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		E3A1F25D072CEC830074AB76 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = QSHomestarRunnerConstants.h;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		E3A1F25E072CEC830074AB76 = {
-			fileRef = E3A1F25D072CEC830074AB76;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
+/* End XCConfigurationList section */
 	};
-	rootObject = 0259C573FE90428111CA0C5A;
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
 }

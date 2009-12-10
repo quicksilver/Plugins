@@ -5,6 +5,7 @@
 #import "QSModemPhoneDialer.h"
 #import "QSSpeakerPhoneDialer.h"
 #import <QSCore/QSFeatureLevel.h>
+#import "QSPhonePlugIn.h"
 
 
 NSString *QSFormattedPhoneNumberString(NSString *number){

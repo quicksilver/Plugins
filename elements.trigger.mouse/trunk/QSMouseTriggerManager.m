@@ -195,7 +195,7 @@ BOOL is1043;
 										 anchor:i] addObject:entry];
 				}
 			}else if (screen==-1 && screenCount>1){
-				foreach(targetScreen,screens){
+				for(NSScreen * targetScreen in screens){
 					[[self anchorArrayForScreen:[targetScreen screenNumber]
 										 anchor:i] addObject:entry];	
 				}
@@ -322,7 +322,7 @@ BOOL is1043;
 	
 	
 	
-	foreach(match,matchedTriggers){
+	for(id match in matchedTriggers){
 		//	NSLog(@"matched %@",match);
 		[[QSTriggerCenter sharedInstance] executeTrigger:match]; 
 	}
@@ -770,7 +770,7 @@ BOOL is1043;
 	//NSLog(@"screen change!");
 	[anchorArrays removeAllObjects];
 	[anchorWindows removeAllObjects];
-	foreach(trigger,[[QSTriggerCenter sharedInstance]triggers]){
+	for(NSDictionary * trigger in [[QSTriggerCenter sharedInstance]triggers]){
 		if ([[trigger objectForKey:@"type"]isEqualToString:@"QSMouseTrigger"]){
 			[self disableTrigger:trigger];
 			[self enableTrigger:trigger];

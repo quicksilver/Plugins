@@ -59,7 +59,7 @@
 		NSArray *paths=[fav remotePathShortcuts];
 		//NSLog(@"path %@ %@ %@",uuid,[FavoriteCollection mainCollection],paths);
 		NSMutableArray *objects=[NSMutableArray array];
-		foreach(path,paths){
+		for(NSString * path in paths){
 			QSObject *newObject=[self objectForFavorite:fav subpath:path];
 			[objects addObject:newObject];
 		}

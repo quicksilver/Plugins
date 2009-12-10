@@ -13,6 +13,7 @@
 
 #include <openssl/bio.h>
 #include <openssl/evp.h>
+#include "QSStikkitPlugInDefines.h"
 
 #define QSURLEncode(s) [(NSString*)CFURLCreateStringByAddingPercentEscapes(NULL,s,NULL,@":@/=+&?", kCFStringEncodingUTF8) autorelease]
 

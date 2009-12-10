@@ -41,7 +41,7 @@
   NSMutableArray *children = [NSMutableArray array];
   
   NSArray *childIDs = [object valueForKey:@"children"];
-  foreach(childID, childIDs) {
+  for(NSString * childID in childIDs) {
     NSDictionary *child = [objectDict objectForKey:childID];
     NSString *type = [child objectForKey:@"isa"];
     NSString *sourceTree = [child objectForKey:@"sourceTree"];

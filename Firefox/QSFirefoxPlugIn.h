@@ -10,6 +10,8 @@
 #import "QSFirefoxPlugIn.h"
 #import <QSCore/QSParser.h>
 
+#define kQSFirefoxPlugInType @"QSFirefoxPlugInType"
+
 @interface QSFirefoxPlugIn : NSObject
 {
 }

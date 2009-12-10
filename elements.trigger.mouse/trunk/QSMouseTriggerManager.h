@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import <QSCore/QSTriggerManager.h>
-
-#import "QSTriggerManager.h"
+#import <QSCore/QSTriggerManager.h>
 #import "QSMouseTriggerView.h"
+
 @interface QSMouseTriggerManager : QSTriggerManager {
     NSMutableDictionary *anchorWindows;
     NSMutableDictionary *anchorArrays;

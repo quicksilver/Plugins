@@ -15,28 +15,29 @@
 
 
 - (NSImage *)iconForFile:(NSString *)path ofType:(NSString *)type{
-
-  NSImage * theImage = nil;
-  NSURL *fileURL = [NSURL fileURLWithPath:path];
-  NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger: 128] 
-                                                      forKey:kQLThumbnailOptionIconModeKey];
-  CGSize iconSize = {256.0, 256.0};
-  
-  QLThumbnailRef thumbnail = QLThumbnailCreate(NULL, (CFURLRef)fileURL, iconSize, (CFDictionaryRef)options);
-  if (thumbnail) {
-    CGImageRef cgImage = QLThumbnailCopyImage(thumbnail);
-    if (cgImage) {
-      NSBitmapImageRep *rep = [[[NSBitmapImageRep alloc] initWithCGImage:cgImage] autorelease];
-      theImage = [[[NSImage alloc] init] autorelease];
-      [theImage addRepresentation:rep];
-      CFRelease(cgImage);
-    }
-    CFRelease(thumbnail);
-  }
-  return theImage;
-  NSImage *icon=nil;
 	
-  
+	NSImage * theImage = nil;
+	NSURL *fileURL = [NSURL fileURLWithPath:path];
+	NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger: 128] 
+														forKey:kQLThumbnailOptionIconModeKey];
+	CGSize iconSize = {256.0, 256.0};
+	
+
+QLThumbnailRef thumbnail = QLThumbnailCreate(NULL, (CFURLRef)fileURL, iconSize, (CFDictionaryRef)options);
+	if (thumbnail) {
+		CGImageRef cgImage = QLThumbnailCopyImage(thumbnail);
+		if (cgImage) {
+			NSBitmapImageRep *rep = [[[NSBitmapImageRep alloc] initWithCGImage:cgImage] autorelease];
+			theImage = [[[NSImage alloc] init] autorelease];
+			[theImage addRepresentation:rep];
+			CFRelease(cgImage);
+		}
+		CFRelease(thumbnail);
+	}
+	return theImage;
+	NSImage *icon=nil;
+	
+	
 	
 	BOOL isMP3=NO,isAAC=NO;
 	
@@ -70,9 +71,9 @@
 					if (bytes[coverData.location+i]==0) i++; //Skip Extra
 					NSRange imageDataRange=NSMakeRange(coverData.location+i,coverData.length-i);
 					if (NSMaxRange(imageDataRange)<=[data length]){
-					data=[data subdataWithRange:imageDataRange];
-					
-					icon=[[[NSImage alloc]initWithData:data]autorelease];
+						data=[data subdataWithRange:imageDataRange];
+						
+						icon=[[[NSImage alloc]initWithData:data]autorelease];
 					}
 				}
 			}
@@ -97,8 +98,8 @@
 }
 - (NSRange)rangeOfAtom:(UInt32)atom inData:(NSData *)data range:(NSRange)range{
 	if (range.location==NSNotFound) return NSMakeRange(NSNotFound,0);
-  atom=CFSwapInt32HostToBig(atom);
-
+	atom=CFSwapInt32HostToBig(atom);
+	
 	UInt8 *bytes, *bytePtr;
 	unsigned long int byteIndex, byteCount;
 	
@@ -108,7 +109,7 @@
 	UInt32 *type;
 	UInt32 *length;
 	
-  // Scan data for byte sequence
+	// Scan data for byte sequence
 	for (byteIndex = range.location, bytePtr = bytes+range.location; byteIndex < byteCount-8 && byteIndex < NSMaxRange(range)-8; byteIndex++,bytePtr++) {
 		length=(UInt32 *)(bytePtr);
 		type=(UInt32 *)(bytePtr+4);
@@ -126,7 +127,7 @@
 - (NSRange)rangeOfFrame:(UInt32)frame inData:(NSData *)data range:(NSRange)range{
 	UInt8 *bytes, *bytePtr;
 	unsigned long int byteIndex, byteCount;
-	  frame=CFSwapInt32HostToBig(frame);
+	frame=CFSwapInt32HostToBig(frame);
 	byteCount = [data length];
 	bytes = (UInt8 *)[data bytes];
 	if (!byteCount || !bytes)return NSMakeRange(NSNotFound,0);

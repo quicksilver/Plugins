@@ -120,7 +120,7 @@
 + (NSArray *)imObjectsForPerson:(ABPerson *)person asChild:(BOOL)asChild {
 	NSArray *imTypes = [NSArray arrayWithObjects:kABAIMInstantProperty, kABJabberInstantProperty, kABMSNInstantProperty, kABYahooInstantProperty, kABICQInstantProperty, nil];
     NSMutableArray *contactlings = [NSMutableArray arrayWithCapacity:1];
-	foreach(type, imTypes) {
+	for(NSString * type in imTypes) {
 		ABMultiValue *ims = [person valueForProperty:type];
 		int i;
 		for (i = 0; i < [ims count]; i++) {

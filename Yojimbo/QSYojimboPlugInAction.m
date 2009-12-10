@@ -7,6 +7,7 @@
 //
 
 #import "QSYojimboPlugInAction.h"
+#import "QSYojimboPlugInDefines.h"
 
 @implementation QSYojimboPlugInAction
 

@@ -19,6 +19,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14A8851D10CFCBF8007D08C4 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14A8851E10CFCBF8007D08C4 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14A8851F10CFCBF8007D08C4 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14A8852010CFCBF8007D08C4 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14A8852110CFCBF8007D08C4 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14A8852210CFCBF8007D08C4 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14A8852310CFCBF8007D08C4 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14A8852410CFCBF8007D08C4 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QS Displays Module_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QS Displays Module_Prefix.pch"; sourceTree = "<group>"; };
 		7F699754096ED79800420E96 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
 		7F699755096ED79800420E96 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
@@ -52,6 +60,7 @@
 		0259C574FE90428111CA0C5A /* QS_Displays_Module */ = {
 			isa = PBXGroup;
 			children = (
+				14A8851310CFCBC9007D08C4 /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -74,6 +83,21 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
+		};
+		14A8851310CFCBC9007D08C4 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				14A8851D10CFCBF8007D08C4 /* Common.xcconfig */,
+				14A8851E10CFCBF8007D08C4 /* Debug.xcconfig */,
+				14A8851F10CFCBF8007D08C4 /* Developer.xcconfig */,
+				14A8852010CFCBF8007D08C4 /* QSPlugIn_Debug.xcconfig */,
+				14A8852110CFCBF8007D08C4 /* QSPlugIn_Prefix.pch */,
+				14A8852210CFCBF8007D08C4 /* QSPlugIn_Release.xcconfig */,
+				14A8852310CFCBF8007D08C4 /* QSPlugIn.xcconfig */,
+				14A8852410CFCBF8007D08C4 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -137,6 +161,7 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7F07AEE6085E432800E2AFC4 /* Build configuration list for PBXProject "QS Displays Module" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -147,6 +172,7 @@
 			);
 			mainGroup = 0259C574FE90428111CA0C5A /* QS_Displays_Module */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Displays Module */,
 			);
@@ -207,102 +233,37 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7F07AEE3085E432800E2AFC4 /* Development */ = {
+		7F07AEE3085E432800E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A8852010CFCBF8007D08C4 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				COPYING_PRESERVES_HFS_DATA = YES;
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					/Users/nicholas/Forge/Development/Quicksilver/build,
-					/Volumes/Lore/Forge/Development/Quicksilver/build,
-					"$(SRCROOT)/../../../Build/Release",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QS Displays Module_Prefix.pch";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Displays Module";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
 		7F07AEE4085E432800E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A8852210CFCBF8007D08C4 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					/Users/nicholas/Forge/Development/Quicksilver/build,
-					/Volumes/Lore/Forge/Development/Quicksilver/build,
-					"$(SRCROOT)/../../../Build/Release",
-				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QS Displays Module_Prefix.pch";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Displays Module";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
-		7F07AEE5085E432800E2AFC4 /* Default */ = {
+		7F07AEE7085E432800E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A8851E10CFCBF8007D08C4 /* Debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					/Users/nicholas/Forge/Development/Quicksilver/build,
-					/Volumes/Lore/Forge/Development/Quicksilver/build,
-					"$(SRCROOT)/../../../Build/Release",
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QS Displays Module_Prefix.pch";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "Displays Module";
-				WRAPPER_EXTENSION = qsplugin;
 			};
-			name = Default;
-		};
-		7F07AEE7085E432800E2AFC4 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Development;
+			name = Debug;
 		};
 		7F07AEE8085E432800E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A8852410CFCBF8007D08C4 /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;
-		};
-		7F07AEE9085E432800E2AFC4 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Default;
 		};
 /* End XCBuildConfiguration section */
 
@@ -310,22 +271,20 @@
 		7F07AEE2085E432800E2AFC4 /* Build configuration list for PBXNativeTarget "Displays Module" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F07AEE3085E432800E2AFC4 /* Development */,
+				7F07AEE3085E432800E2AFC4 /* Debug */,
 				7F07AEE4085E432800E2AFC4 /* Release */,
-				7F07AEE5085E432800E2AFC4 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		7F07AEE6085E432800E2AFC4 /* Build configuration list for PBXProject "QS Displays Module" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F07AEE7085E432800E2AFC4 /* Development */,
+				7F07AEE7085E432800E2AFC4 /* Debug */,
 				7F07AEE8085E432800E2AFC4 /* Release */,
-				7F07AEE9085E432800E2AFC4 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

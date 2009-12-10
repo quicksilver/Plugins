@@ -15,13 +15,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14A8D11B10CE54D2003857E3 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14A8D11C10CE54D2003857E3 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14A8D11D10CE54D2003857E3 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14A8D11E10CE54D2003857E3 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14A8D11F10CE54D2003857E3 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14A8D12010CE54D2003857E3 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14A8D12110CE54D2003857E3 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14A8D12210CE54D2003857E3 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSFileTagsPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSFileTagsPlugIn_Prefix.pch; sourceTree = "<group>"; };
-		4D0C0E2D0E0FD1160027D189 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
-		4D0C0E2E0E0FD1160027D189 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		4D0C0E2F0E0FD1160027D189 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = "/Volumes/myHD/Projects/Quicksilver/elements-trunk/Configuration/Developer.xcconfig"; sourceTree = "<absolute>"; };
-		4D0C0E300E0FD1160027D189 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
-		4D0C0E310E0FD1160027D189 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
-		4D0C0E320E0FD1160027D189 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		4DC29E4D0E793D2000B5055F /* QSMDTagsQueryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSMDTagsQueryManager.h; sourceTree = "<group>"; };
 		4DC29E4E0E793D2000B5055F /* QSMDTagsQueryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSMDTagsQueryManager.m; sourceTree = "<group>"; };
 		7FA1BE8D083BE47B003EE7CA /* QSFileTagsPlugInAction.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSFileTagsPlugInAction.h; sourceTree = "<group>"; };
@@ -108,16 +110,17 @@
 		4D0C0E2C0E0FD1160027D189 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				4D0C0E2D0E0FD1160027D189 /* Common.xcconfig */,
-				4D0C0E2E0E0FD1160027D189 /* Debug.xcconfig */,
-				4D0C0E2F0E0FD1160027D189 /* Developer.xcconfig */,
-				4D0C0E300E0FD1160027D189 /* QSPlugIn.xcconfig */,
-				4D0C0E310E0FD1160027D189 /* QSPlugIn_Prefix.pch */,
-				4D0C0E320E0FD1160027D189 /* Release.xcconfig */,
+				14A8D11B10CE54D2003857E3 /* Common.xcconfig */,
+				14A8D11C10CE54D2003857E3 /* Debug.xcconfig */,
+				14A8D11D10CE54D2003857E3 /* Developer.xcconfig */,
+				14A8D11E10CE54D2003857E3 /* QSPlugIn_Debug.xcconfig */,
+				14A8D11F10CE54D2003857E3 /* QSPlugIn_Prefix.pch */,
+				14A8D12010CE54D2003857E3 /* QSPlugIn_Release.xcconfig */,
+				14A8D12110CE54D2003857E3 /* QSPlugIn.xcconfig */,
+				14A8D12210CE54D2003857E3 /* Release.xcconfig */,
 			);
-			name = Configuration;
-			path = ../../Configuration;
-			sourceTree = SOURCE_ROOT;
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		7FC20C8107FB741700FDD3CA /* Other Frameworks */ = {
 			isa = PBXGroup;
@@ -180,14 +183,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -209,14 +212,14 @@
 /* Begin XCBuildConfiguration section */
 		4D0C0E290E0FD0F80027D189 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0E320E0FD1160027D189 /* Release.xcconfig */;
+			baseConfigurationReference = 14A8D12210CE54D2003857E3 /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		4D0C0E2A0E0FD0F80027D189 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0E300E0FD1160027D189 /* QSPlugIn.xcconfig */;
+			baseConfigurationReference = 14A8D12010CE54D2003857E3 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "File Tagging Module";
 			};
@@ -224,7 +227,7 @@
 		};
 		7F07AFF4085E433100E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0E300E0FD1160027D189 /* QSPlugIn.xcconfig */;
+			baseConfigurationReference = 14A8D11E10CE54D2003857E3 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "File Tagging Module";
 			};
@@ -232,7 +235,7 @@
 		};
 		7F07AFF8085E433100E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0E2E0E0FD1160027D189 /* Debug.xcconfig */;
+			baseConfigurationReference = 14A8D11C10CE54D2003857E3 /* Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;

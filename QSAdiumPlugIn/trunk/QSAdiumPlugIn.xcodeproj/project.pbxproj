@@ -178,24 +178,26 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 34BD9CD1053146CC000AB133 /* Adium */;
+			remoteGlobalIDString = 34BD9CD1053146CC000AB133;
 			remoteInfo = Adium;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14A8856E10CFD0C6007D08C4 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14A8856F10CFD0C6007D08C4 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14A8857010CFD0C6007D08C4 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14A8857110CFD0C6007D08C4 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14A8857210CFD0C6007D08C4 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14A8857310CFD0C6007D08C4 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14A8857410CFD0C6007D08C4 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14A8857510CFD0C6007D08C4 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSAdiumPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAdiumPlugIn_Prefix.pch; sourceTree = "<group>"; };
-		4D0C0E630E0FD1FF0027D189 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
-		4D0C0E640E0FD1FF0027D189 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		4D0C0E650E0FD1FF0027D189 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = "/Volumes/myHD/Projects/Quicksilver/elements-trunk/Configuration/Developer.xcconfig"; sourceTree = "<absolute>"; };
-		4D0C0E660E0FD1FF0027D189 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
-		4D0C0E670E0FD1FF0027D189 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
-		4D0C0E680E0FD1FF0027D189 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		4D1F1B380E13C8F00058FE2A /* Adium.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Adium.xcodeproj; path = "../../../../../Sources/adium-trunk/Adium.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		4D1F1B740E13C90D0058FE2A /* AIUtilities.framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AIUtilities.framework.xcodeproj; path = "../../../../../Sources/adium-trunk/Frameworks/AIUtilities Framework/AIUtilities.framework.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		4D38C5650E13D73E0077F9CA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1AC9740486D14A00FE50C9 /* Adium Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Adium Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1AC9740486D14A00FE50C9 /* Adium Module.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Adium Module.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36E191808312D8E00FADC55 /* QSChatActions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = QSChatActions.h; path = "../PlugIns/Chat Support.qsplugin/Contents/Resources/QSChatActions.h"; sourceTree = "QS Plugins"; };
 		D36E191908312D8E00FADC55 /* QSChatMediator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = QSChatMediator.h; path = "../PlugIns/Chat Support.qsplugin/Contents/Resources/QSChatMediator.h"; sourceTree = "QS Plugins"; };
 		E1EAB045068128A200774DFF /* QSAdiumPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSAdiumPlugIn.m; sourceTree = "<group>"; };
@@ -220,7 +222,7 @@
 		E384107507C324CC008110E3 /* Quicksilver_prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quicksilver_prefix.pch; path = AdiumQuicksilverPlugin/Quicksilver_prefix.pch; sourceTree = "<group>"; };
 		E384107A07C32514008110E3 /* QuicksilverPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = QuicksilverPlugin.h; path = AdiumQuicksilverPlugin/QuicksilverPlugin.h; sourceTree = "<group>"; };
 		E384107B07C32514008110E3 /* QuicksilverPlugin.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = QuicksilverPlugin.m; path = AdiumQuicksilverPlugin/QuicksilverPlugin.m; sourceTree = "<group>"; };
-		E384107C07C32514008110E3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = Info.plist; path = AdiumQuicksilverPlugin/Info.plist; sourceTree = "<group>"; };
+		E384107C07C32514008110E3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = Info.plist; path = AdiumQuicksilverPlugin/Info.plist; sourceTree = "<group>"; };
 		E3A43B040729E49A00C14EB6 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		E3A6EECE07CCFAAE00E5C7A5 /* AdiumGroup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdiumGroup.png; sourceTree = "<group>"; };
 		E3C0E24907C45F18003024FD /* QSAdiumActionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAdiumActionProvider.h; sourceTree = "<group>"; };
@@ -292,7 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				E384106A07C3239B008110E3 /* Quicksilver.AdiumPlugin */,
-				8D1AC9740486D14A00FE50C9 /* Adium Module.qsplugin */,
+				8D1AC9740486D14A00FE50C9 /* Adium Module.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -331,16 +333,17 @@
 		4D0C0E620E0FD1FF0027D189 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				4D0C0E630E0FD1FF0027D189 /* Common.xcconfig */,
-				4D0C0E640E0FD1FF0027D189 /* Debug.xcconfig */,
-				4D0C0E650E0FD1FF0027D189 /* Developer.xcconfig */,
-				4D0C0E660E0FD1FF0027D189 /* QSPlugIn.xcconfig */,
-				4D0C0E670E0FD1FF0027D189 /* QSPlugIn_Prefix.pch */,
-				4D0C0E680E0FD1FF0027D189 /* Release.xcconfig */,
+				14A8856E10CFD0C6007D08C4 /* Common.xcconfig */,
+				14A8856F10CFD0C6007D08C4 /* Debug.xcconfig */,
+				14A8857010CFD0C6007D08C4 /* Developer.xcconfig */,
+				14A8857110CFD0C6007D08C4 /* QSPlugIn_Debug.xcconfig */,
+				14A8857210CFD0C6007D08C4 /* QSPlugIn_Prefix.pch */,
+				14A8857310CFD0C6007D08C4 /* QSPlugIn_Release.xcconfig */,
+				14A8857410CFD0C6007D08C4 /* QSPlugIn.xcconfig */,
+				14A8857510CFD0C6007D08C4 /* Release.xcconfig */,
 			);
-			name = Configuration;
-			path = ../../Configuration;
-			sourceTree = SOURCE_ROOT;
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		4D1F1B390E13C8F00058FE2A /* Products */ = {
 			isa = PBXGroup;
@@ -427,7 +430,7 @@
 			name = "Adium Module";
 			productInstallPath = "$(HOME)/Developer/Palettes";
 			productName = QSAdiumPlugIn;
-			productReference = 8D1AC9740486D14A00FE50C9 /* Adium Module.qsplugin */;
+			productReference = 8D1AC9740486D14A00FE50C9 /* Adium Module.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		E384106907C3239B008110E3 /* Quicksilver Plugin */ = {
@@ -639,14 +642,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -699,7 +702,7 @@
 /* Begin XCBuildConfiguration section */
 		4D0C0E4F0E0FD1C50027D189 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0E640E0FD1FF0027D189 /* Debug.xcconfig */;
+			baseConfigurationReference = 14A8856F10CFD0C6007D08C4 /* Debug.xcconfig */;
 			buildSettings = {
 				ADIUM_SOURCE_ROOT = "/Volumes/myHD/Sources/adium-trunk";
 			};
@@ -707,7 +710,7 @@
 		};
 		4D0C0E500E0FD1C50027D189 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0E680E0FD1FF0027D189 /* Release.xcconfig */;
+			baseConfigurationReference = 14A8857510CFD0C6007D08C4 /* Release.xcconfig */;
 			buildSettings = {
 				ADIUM_SOURCE_ROOT = "/Volumes/myHD/Sources/adium-trunk";
 			};
@@ -715,7 +718,6 @@
 		};
 		4D0C0E520E0FD1C50027D189 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0E660E0FD1FF0027D189 /* QSPlugIn.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "Adium Module";
 			};
@@ -723,7 +725,6 @@
 		};
 		4D0C0E530E0FD1C50027D189 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0E660E0FD1FF0027D189 /* QSPlugIn.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "Adium Module";
 			};

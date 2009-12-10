@@ -3,371 +3,270 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 39;
+	objectVersion = 42;
 	objects = {
-		0259C573FE90428111CA0C5A = {
-			buildSettings = {
-			};
-			buildStyles = (
-				2E58F360FFB2326E11CA0CBA,
-				2E58F361FFB2326E11CA0CBA,
+
+/* Begin PBXBuildFile section */
+		7F35FF4007F9ACD90056051D /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3C07F9ACD90056051D /* QSCore.framework */; };
+		7F35FF4207F9ACD90056051D /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3E07F9ACD90056051D /* QSFoundation.framework */; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E1EAB046068128A200774DFF /* QSEudoraPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSEudoraPlugIn.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14A6EEE410D02A44000B05B4 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14A6EEE510D02A44000B05B4 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14A6EEE610D02A44000B05B4 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14A6EEE710D02A44000B05B4 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14A6EEE810D02A44000B05B4 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14A6EEE910D02A44000B05B4 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14A6EEEA10D02A44000B05B4 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14A6EEEB10D02A44000B05B4 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		32DBCF980370C29C00C91783 /* QSEudoraPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSEudoraPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		7F35FF3C07F9ACD90056051D /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
+		7F35FF3D07F9ACD90056051D /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
+		7F35FF3E07F9ACD90056051D /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
+		7F35FF3F07F9ACD90056051D /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
+		7FFA8E9C0816CCCA00A858CD /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
+		7FFA8E9D0816CCCA00A858CD /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* QSEudoraPlugIn.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSEudoraPlugIn.qsplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E1EAB045068128A200774DFF /* QSEudoraPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSEudoraPlugIn.m; sourceTree = "<group>"; };
+		E1EAB047068128A800774DFF /* QSEudoraPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSEudoraPlugIn.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				7F35FF4007F9ACD90056051D /* QSCore.framework in Frameworks */,
+				7F35FF4207F9ACD90056051D /* QSFoundation.framework in Frameworks */,
 			);
-			hasScannedForEncodings = 1;
-			isa = PBXProject;
-			mainGroup = 0259C574FE90428111CA0C5A;
-			projectDirPath = "";
-			targets = (
-				8D1AC9600486D14A00FE50C9,
-			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0259C574FE90428111CA0C5A = {
-			children = (
-				32DBCF9E0370C38000C91783,
-				32DBCF9F0370C38200C91783,
-				0259C582FE90428111CA0C5A,
-				1ED78706FE9D4A0611CA0C5A,
-				2E58F364FFB232C311CA0CBA,
-			);
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* QSEudoraPlugIn */ = {
 			isa = PBXGroup;
+			children = (
+				14A6EEDF10D02A28000B05B4 /* Configuration */,
+				32DBCF9E0370C38000C91783 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
 			name = QSEudoraPlugIn;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-		0259C582FE90428111CA0C5A = {
-			children = (
-				8D1AC9730486D14A00FE50C9,
-			);
+		0259C582FE90428111CA0C5A /* Resources */ = {
 			isa = PBXGroup;
+			children = (
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+			);
 			name = Resources;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-//020
-//021
-//022
-//023
-//024
-//1E0
-//1E1
-//1E2
-//1E3
-//1E4
-		1ED78706FE9D4A0611CA0C5A = {
-			children = (
-				8D1AC9740486D14A00FE50C9,
-			);
+		14A6EEDF10D02A28000B05B4 /* Configuration */ = {
 			isa = PBXGroup;
+			children = (
+				14A6EEE410D02A44000B05B4 /* Common.xcconfig */,
+				14A6EEE510D02A44000B05B4 /* Debug.xcconfig */,
+				14A6EEE610D02A44000B05B4 /* Developer.xcconfig */,
+				14A6EEE710D02A44000B05B4 /* QSPlugIn_Debug.xcconfig */,
+				14A6EEE810D02A44000B05B4 /* QSPlugIn_Prefix.pch */,
+				14A6EEE910D02A44000B05B4 /* QSPlugIn_Release.xcconfig */,
+				14A6EEEA10D02A44000B05B4 /* QSPlugIn.xcconfig */,
+				14A6EEEB10D02A44000B05B4 /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* QSEudoraPlugIn.qsplugin */,
+			);
 			name = Products;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-//1E0
-//1E1
-//1E2
-//1E3
-//1E4
-//2E0
-//2E1
-//2E2
-//2E3
-//2E4
-		2E58F360FFB2326E11CA0CBA = {
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			isa = PBXBuildStyle;
-			name = Development;
-		};
-		2E58F361FFB2326E11CA0CBA = {
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			isa = PBXBuildStyle;
-			name = Deployment;
-		};
-		2E58F364FFB232C311CA0CBA = {
-			children = (
-				DD92D38A0106425D02CA0E72,
-				7F35FF3C07F9ACD90056051D,
-				7F35FF3E07F9ACD90056051D,
-				7FFA8E9C0816CCCA00A858CD,
-				7FFA8E9D0816CCCA00A858CD,
-				7FC20C8107FB741700FDD3CA,
-			);
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
 			isa = PBXGroup;
+			children = (
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+				7F35FF3C07F9ACD90056051D /* QSCore.framework */,
+				7F35FF3E07F9ACD90056051D /* QSFoundation.framework */,
+				7FFA8E9C0816CCCA00A858CD /* QSEffects.framework */,
+				7FFA8E9D0816CCCA00A858CD /* QSInterface.framework */,
+				7FC20C8107FB741700FDD3CA /* Other Frameworks */,
+			);
 			name = Frameworks;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-//2E0
-//2E1
-//2E2
-//2E3
-//2E4
-//320
-//321
-//322
-//323
-//324
-		32DBCF980370C29C00C91783 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = QSEudoraPlugIn_Prefix.pch;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		32DBCF9E0370C38000C91783 = {
-			children = (
-				E1EAB047068128A800774DFF,
-				E1EAB045068128A200774DFF,
-			);
+		32DBCF9E0370C38000C91783 /* Classes */ = {
 			isa = PBXGroup;
+			children = (
+				E1EAB047068128A800774DFF /* QSEudoraPlugIn.h */,
+				E1EAB045068128A200774DFF /* QSEudoraPlugIn.m */,
+			);
 			name = Classes;
-			refType = 4;
 			sourceTree = "<group>";
 		};
-		32DBCF9F0370C38200C91783 = {
-			children = (
-				32DBCF980370C29C00C91783,
-			);
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
+			children = (
+				32DBCF980370C29C00C91783 /* QSEudoraPlugIn_Prefix.pch */,
+			);
 			name = "Other Sources";
-			path = "";
-			refType = 4;
 			sourceTree = "<group>";
 		};
-//320
-//321
-//322
-//323
-//324
-//7F0
-//7F1
-//7F2
-//7F3
-//7F4
-		7F35FF3C07F9ACD90056051D = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			path = QSCore.framework;
-			refType = 4;
-			sourceTree = QSFrameworks;
-		};
-		7F35FF3D07F9ACD90056051D = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			path = QSEffects.framework;
-			refType = 4;
-			sourceTree = QSFrameworks;
-		};
-		7F35FF3E07F9ACD90056051D = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			path = QSFoundation.framework;
-			refType = 4;
-			sourceTree = QSFrameworks;
-		};
-		7F35FF3F07F9ACD90056051D = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			path = QSInterface.framework;
-			refType = 4;
-			sourceTree = QSFrameworks;
-		};
-		7F35FF4007F9ACD90056051D = {
-			fileRef = 7F35FF3C07F9ACD90056051D;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		7F35FF4207F9ACD90056051D = {
-			fileRef = 7F35FF3E07F9ACD90056051D;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		7FC20C8107FB741700FDD3CA = {
-			children = (
-				7F35FF3D07F9ACD90056051D,
-				7F35FF3F07F9ACD90056051D,
-			);
+		7FC20C8107FB741700FDD3CA /* Other Frameworks */ = {
 			isa = PBXGroup;
+			children = (
+				7F35FF3D07F9ACD90056051D /* QSEffects.framework */,
+				7F35FF3F07F9ACD90056051D /* QSInterface.framework */,
+			);
 			name = "Other Frameworks";
-			refType = 4;
 			sourceTree = "<group>";
 		};
-		7FFA8E9C0816CCCA00A858CD = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			path = QSEffects.framework;
-			refType = 4;
-			sourceTree = QSFrameworks;
-		};
-		7FFA8E9D0816CCCA00A858CD = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			path = QSInterface.framework;
-			refType = 4;
-			sourceTree = QSFrameworks;
-		};
-//7F0
-//7F1
-//7F2
-//7F3
-//7F4
-//8D0
-//8D1
-//8D2
-//8D3
-//8D4
-		8D1AC9600486D14A00FE50C9 = {
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* QSEudoraPlugIn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14A6EEE110D02A28000B05B4 /* Build configuration list for PBXNativeTarget "QSEudoraPlugIn" */;
 			buildPhases = (
-				8D1AC9660486D14A00FE50C9,
-				8D1AC96A0486D14A00FE50C9,
-				8D1AC96E0486D14A00FE50C9,
-				E1022B2806B3475D00299BEC,
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				E1022B2806B3475D00299BEC /* ShellScript */,
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				BUILD_DIR = "$(SYMROOT)/PlugIns/";
-				FRAMEWORK_SEARCH_PATHS = "/Applications/Quicksilver.app/Contents/Frameworks /Volumes/Lore/Forge/Build";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSEudoraPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = QSEudoraPlugIn;
-				WRAPPER_EXTENSION = qsplugin;
-			};
 			dependencies = (
 			);
-			isa = PBXNativeTarget;
 			name = QSEudoraPlugIn;
 			productInstallPath = "$(HOME)/Developer/Palettes";
 			productName = QSEudoraPlugIn;
-			productReference = 8D1AC9740486D14A00FE50C9;
+			productReference = 8D1AC9740486D14A00FE50C9 /* QSEudoraPlugIn.qsplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
-		8D1AC9660486D14A00FE50C9 = {
-			buildActionMask = 2147483647;
-			files = (
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 14A6EEE010D02A28000B05B4 /* Build configuration list for PBXProject "QSEudoraPlugIn" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* QSEudoraPlugIn */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* QSEudoraPlugIn */,
 			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D1AC96A0486D14A00FE50C9 = {
 			buildActionMask = 2147483647;
 			files = (
-				E1EAB046068128A200774DFF,
 			);
-			isa = PBXSourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D1AC96E0486D14A00FE50C9 = {
-			buildActionMask = 2147483647;
-			files = (
-				8D1AC9700486D14A00FE50C9,
-				7F35FF4007F9ACD90056051D,
-				7F35FF4207F9ACD90056051D,
-			);
-			isa = PBXFrameworksBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D1AC9700486D14A00FE50C9 = {
-			fileRef = DD92D38A0106425D02CA0E72;
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		8D1AC9730486D14A00FE50C9 = {
-			fileEncoding = 4;
-			isa = PBXFileReference;
-			lastKnownFileType = text.plist;
-			path = Info.plist;
-			refType = 4;
-			sourceTree = "<group>";
-		};
-		8D1AC9740486D14A00FE50C9 = {
-			explicitFileType = wrapper.cfbundle;
-			includeInIndex = 0;
-			isa = PBXFileReference;
-			path = QSEudoraPlugIn.qsplugin;
-			refType = 3;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-//8D0
-//8D1
-//8D2
-//8D3
-//8D4
-//DD0
-//DD1
-//DD2
-//DD3
-//DD4
-		DD92D38A0106425D02CA0E72 = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = Cocoa.framework;
-			path = /System/Library/Frameworks/Cocoa.framework;
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-//DD0
-//DD1
-//DD2
-//DD3
-//DD4
-//E10
-//E11
-//E12
-//E13
-//E14
-		E1022B2806B3475D00299BEC = {
-			buildActionMask = 2147483647;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E1022B2806B3475D00299BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
-			isa = PBXShellScriptBuildPhase;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
-		E1EAB045068128A200774DFF = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.objc;
-			path = QSEudoraPlugIn.m;
-			refType = 4;
-			sourceTree = "<group>";
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EAB046068128A200774DFF /* QSEudoraPlugIn.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1EAB046068128A200774DFF = {
-			fileRef = E1EAB045068128A200774DFF;
-			isa = PBXBuildFile;
-			settings = {
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		14A6EED710D02A18000B05B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A6EEE510D02A44000B05B4 /* Debug.xcconfig */;
+			buildSettings = {
 			};
+			name = Debug;
 		};
-		E1EAB047068128A800774DFF = {
-			fileEncoding = 30;
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			path = QSEudoraPlugIn.h;
-			refType = 4;
-			sourceTree = "<group>";
+		14A6EED810D02A18000B05B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A6EEEB10D02A44000B05B4 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
 		};
+		14A6EEDA10D02A18000B05B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A6EEE710D02A44000B05B4 /* QSPlugIn_Debug.xcconfig */;
+			buildSettings = {
+				BUILD_DIR = "$(SYMROOT)/PlugIns/";
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = QSEudoraPlugIn;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		14A6EEDB10D02A18000B05B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A6EEE910D02A44000B05B4 /* QSPlugIn_Release.xcconfig */;
+			buildSettings = {
+				OTHER_LDFLAGS = "-bundle";
+				PRODUCT_NAME = QSEudoraPlugIn;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14A6EEE010D02A28000B05B4 /* Build configuration list for PBXProject "QSEudoraPlugIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A6EED710D02A18000B05B4 /* Debug */,
+				14A6EED810D02A18000B05B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		14A6EEE110D02A28000B05B4 /* Build configuration list for PBXNativeTarget "QSEudoraPlugIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A6EEDA10D02A18000B05B4 /* Debug */,
+				14A6EEDB10D02A18000B05B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
 	};
-	rootObject = 0259C573FE90428111CA0C5A;
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
 }

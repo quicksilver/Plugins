@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7F010CAE08D9FC1500054659 /* InstantMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F010CAD08D9FC1500054659 /* InstantMessage.framework */; };
-		7F4084BD0D16CBDE00E15BB0 /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7F4084B70D16CBDE00E15BB0 /* Common.xcconfig */; };
-		7F4084BE0D16CBDE00E15BB0 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7F4084B80D16CBDE00E15BB0 /* Debug.xcconfig */; };
-		7F4084BF0D16CBDE00E15BB0 /* Developer.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7F4084B90D16CBDE00E15BB0 /* Developer.xcconfig */; };
-		7F4084C00D16CBDE00E15BB0 /* QSElement.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7F4084BA0D16CBDE00E15BB0 /* QSElement.xcconfig */; };
-		7F4084C10D16CBDE00E15BB0 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7F4084BC0D16CBDE00E15BB0 /* Release.xcconfig */; };
 		7F4086930D16CE9000E15BB0 /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7F4086920D16CE9000E15BB0 /* element.xml */; };
 		7F5D1FC50D25AF280077ED43 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5D1FC40D25AF280077ED43 /* ScriptingBridge.framework */; };
 		7F8FC6220D25E52800BD8C1C /* iChatPresenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8FC6210D25E52800BD8C1C /* iChatPresenceController.m */; };
@@ -228,22 +223,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14A8844F10CFC464007D08C4 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14A8845010CFC464007D08C4 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14A8845110CFC464007D08C4 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14A8845210CFC464007D08C4 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14A8845310CFC464007D08C4 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14A8845410CFC464007D08C4 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14A8845510CFC464007D08C4 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14A8845610CFC464007D08C4 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSiChatPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSiChatPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		7F010CAD08D9FC1500054659 /* InstantMessage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstantMessage.framework; path = /System/Library/Frameworks/InstantMessage.framework; sourceTree = "<absolute>"; };
 		7F010D0808D9FCE900054659 /* QSChatMediator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = QSChatMediator.h; path = ../elements.support.chat/QSChatMediator.h; sourceTree = SOURCE_ROOT; };
-		7F4084B70D16CBDE00E15BB0 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = Configuration/Common.xcconfig; sourceTree = QS_SOURCE_ROOT; };
-		7F4084B80D16CBDE00E15BB0 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = QS_SOURCE_ROOT; };
-		7F4084B90D16CBDE00E15BB0 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = Configuration/Developer.xcconfig; sourceTree = QS_SOURCE_ROOT; };
-		7F4084BA0D16CBDE00E15BB0 /* QSElement.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSElement.xcconfig; path = Configuration/QSElement.xcconfig; sourceTree = QS_SOURCE_ROOT; };
-		7F4084BB0D16CBDE00E15BB0 /* QSElement_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSElement_Prefix.pch; path = Configuration/QSElement_Prefix.pch; sourceTree = QS_SOURCE_ROOT; };
-		7F4084BC0D16CBDE00E15BB0 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = QS_SOURCE_ROOT; };
 		7F4086920D16CE9000E15BB0 /* element.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
 		7F5D1FC40D25AF280077ED43 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = /System/Library/Frameworks/ScriptingBridge.framework; sourceTree = "<absolute>"; };
 		7F5D1FD10D25AFF60077ED43 /* iChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iChat.h; sourceTree = "<group>"; };
 		7F8FC6200D25E52800BD8C1C /* iChatPresenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iChatPresenceController.h; sourceTree = "<group>"; };
 		7F8FC6210D25E52800BD8C1C /* iChatPresenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iChatPresenceController.m; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1AC9740486D14A00FE50C9 /* iChat.element */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iChat.element; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1AC9740486D14A00FE50C9 /* .qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = .qsplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E104367406F8AC6300CF1415 /* QSiChatMediator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSiChatMediator.h; sourceTree = "<group>"; };
 		E104367506F8AC6300CF1415 /* QSiChatMediator.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSiChatMediator.m; sourceTree = "<group>"; };
@@ -497,7 +494,7 @@
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1AC9740486D14A00FE50C9 /* iChat.element */,
+				8D1AC9740486D14A00FE50C9 /* .qsplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -540,12 +537,14 @@
 		7F4084B60D16CBDE00E15BB0 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				7F4084B70D16CBDE00E15BB0 /* Common.xcconfig */,
-				7F4084B80D16CBDE00E15BB0 /* Debug.xcconfig */,
-				7F4084B90D16CBDE00E15BB0 /* Developer.xcconfig */,
-				7F4084BA0D16CBDE00E15BB0 /* QSElement.xcconfig */,
-				7F4084BB0D16CBDE00E15BB0 /* QSElement_Prefix.pch */,
-				7F4084BC0D16CBDE00E15BB0 /* Release.xcconfig */,
+				14A8844F10CFC464007D08C4 /* Common.xcconfig */,
+				14A8845010CFC464007D08C4 /* Debug.xcconfig */,
+				14A8845110CFC464007D08C4 /* Developer.xcconfig */,
+				14A8845210CFC464007D08C4 /* QSPlugIn_Debug.xcconfig */,
+				14A8845310CFC464007D08C4 /* QSPlugIn_Prefix.pch */,
+				14A8845410CFC464007D08C4 /* QSPlugIn_Release.xcconfig */,
+				14A8845510CFC464007D08C4 /* QSPlugIn.xcconfig */,
+				14A8845610CFC464007D08C4 /* Release.xcconfig */,
 			);
 			path = Configuration;
 			sourceTree = QS_SOURCE_ROOT;
@@ -779,7 +778,7 @@
 			name = iChat;
 			productInstallPath = "$(HOME)/Developer/Palettes";
 			productName = QSiChatPlugIn;
-			productReference = 8D1AC9740486D14A00FE50C9 /* iChat.element */;
+			productReference = 8D1AC9740486D14A00FE50C9 /* .qsplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -1009,11 +1008,6 @@
 				E112974806F8B9F7005E3B5A /* XHTMLEncoder.h in Resources */,
 				E112974906F8B9F7005E3B5A /* XHTMLGenerator.h in Resources */,
 				E112974A06F8B9F7005E3B5A /* XMLStreamer.h in Resources */,
-				7F4084BD0D16CBDE00E15BB0 /* Common.xcconfig in Resources */,
-				7F4084BE0D16CBDE00E15BB0 /* Debug.xcconfig in Resources */,
-				7F4084BF0D16CBDE00E15BB0 /* Developer.xcconfig in Resources */,
-				7F4084C00D16CBDE00E15BB0 /* QSElement.xcconfig in Resources */,
-				7F4084C10D16CBDE00E15BB0 /* Release.xcconfig in Resources */,
 				7F4086930D16CE9000E15BB0 /* element.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1023,14 +1017,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -1052,28 +1046,28 @@
 /* Begin XCBuildConfiguration section */
 		7F07B02C085E433300E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F4084BA0D16CBDE00E15BB0 /* QSElement.xcconfig */;
+			baseConfigurationReference = 14A8845410CFC464007D08C4 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		7F07B030085E433300E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F4084BC0D16CBDE00E15BB0 /* Release.xcconfig */;
+			baseConfigurationReference = 14A8845610CFC464007D08C4 /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		7F40856E0D16CC7800E15BB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F4084B80D16CBDE00E15BB0 /* Debug.xcconfig */;
+			baseConfigurationReference = 14A8845010CFC464007D08C4 /* Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		7F40856F0D16CC7800E15BB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F4084BA0D16CBDE00E15BB0 /* QSElement.xcconfig */;
+			baseConfigurationReference = 14A8845210CFC464007D08C4 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;

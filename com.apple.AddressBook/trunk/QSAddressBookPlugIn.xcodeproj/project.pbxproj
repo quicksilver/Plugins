@@ -21,12 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D0C0D230E0FBBBA0027D189 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
-		4D0C0D240E0FBBBA0027D189 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		4D0C0D250E0FBBBA0027D189 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = "/Volumes/myHD/Projects/Quicksilver/elements-trunk/Configuration/Developer.xcconfig"; sourceTree = "<absolute>"; };
-		4D0C0D260E0FBBBA0027D189 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
-		4D0C0D270E0FBBBA0027D189 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
-		4D0C0D280E0FBBBA0027D189 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		14A8D0F510CE53C7003857E3 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14A8D0F610CE53C7003857E3 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14A8D0F710CE53C7003857E3 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14A8D0F810CE53C7003857E3 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14A8D0F910CE53C7003857E3 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14A8D0FA10CE53C7003857E3 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14A8D0FB10CE53C7003857E3 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14A8D0FC10CE53C7003857E3 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		7F20FCC007EB0FAC007A01B3 /* QSAddressBookObjectSource.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSAddressBookObjectSource.nib; sourceTree = SOURCE_ROOT; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* Address Book Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Address Book Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,16 +120,17 @@
 		4D0C0D220E0FBBBA0027D189 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				4D0C0D230E0FBBBA0027D189 /* Common.xcconfig */,
-				4D0C0D240E0FBBBA0027D189 /* Debug.xcconfig */,
-				4D0C0D250E0FBBBA0027D189 /* Developer.xcconfig */,
-				4D0C0D260E0FBBBA0027D189 /* QSPlugIn.xcconfig */,
-				4D0C0D270E0FBBBA0027D189 /* QSPlugIn_Prefix.pch */,
-				4D0C0D280E0FBBBA0027D189 /* Release.xcconfig */,
+				14A8D0F510CE53C7003857E3 /* Common.xcconfig */,
+				14A8D0F610CE53C7003857E3 /* Debug.xcconfig */,
+				14A8D0F710CE53C7003857E3 /* Developer.xcconfig */,
+				14A8D0F810CE53C7003857E3 /* QSPlugIn_Debug.xcconfig */,
+				14A8D0F910CE53C7003857E3 /* QSPlugIn_Prefix.pch */,
+				14A8D0FA10CE53C7003857E3 /* QSPlugIn_Release.xcconfig */,
+				14A8D0FB10CE53C7003857E3 /* QSPlugIn.xcconfig */,
+				14A8D0FC10CE53C7003857E3 /* Release.xcconfig */,
 			);
-			name = Configuration;
-			path = ../../Configuration;
-			sourceTree = SOURCE_ROOT;
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -187,14 +190,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -217,14 +220,14 @@
 /* Begin XCBuildConfiguration section */
 		4D0C0D1D0E0FBB950027D189 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0D280E0FBBBA0027D189 /* Release.xcconfig */;
+			baseConfigurationReference = 14A8D0FC10CE53C7003857E3 /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		4D0C0D1E0E0FBB950027D189 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0D260E0FBBBA0027D189 /* QSPlugIn.xcconfig */;
+			baseConfigurationReference = 14A8D0FA10CE53C7003857E3 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "Address Book Module";
 			};
@@ -232,7 +235,7 @@
 		};
 		7F07AEFC085E432900E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0D260E0FBBBA0027D189 /* QSPlugIn.xcconfig */;
+			baseConfigurationReference = 14A8D0F810CE53C7003857E3 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "Address Book Module";
 			};
@@ -240,7 +243,7 @@
 		};
 		7F07AF00085E432900E2AFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0D240E0FBBBA0027D189 /* Debug.xcconfig */;
+			baseConfigurationReference = 14A8D0F610CE53C7003857E3 /* Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;

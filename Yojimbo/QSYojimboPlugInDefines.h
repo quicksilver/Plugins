@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'QSYojimboPlugIn' target in the 'QSYojimboPlugIn' project
+// header for all source files of the 'QSYojimboPlugIn' target in the 'QSYojimboPlugIn' project
 //
 
 #ifdef __OBJC__

@@ -144,7 +144,7 @@
 
 float QSFirstStringFloat(NSString *string){
 	float f=0;
-	foreach(component,[string componentsSeparatedByString:@" "]){
+	for(NSString * component in [string componentsSeparatedByString:@" "]){
 		//NSLog(@"comp %@",component);
 		f=[component floatValue];
 		if (f!=0)break;
@@ -172,7 +172,7 @@ NSLog(@"setimage %@ %@",image, metaData);
 	
 	NSArray *sourcePaths=[dObject validPaths];
 	NSArray *outputFiles=[NSMutableArray arrayWithCapacity:[sourcePaths count]];
-	foreach(path,sourcePaths){
+	for(NSString * path in sourcePaths){
 		NSString *destinationPath=nil;
 		if (useTempFile){
 			destinationPath=[self temporaryPath];
@@ -259,7 +259,7 @@ NSLog(@"setimage %@ %@",image, metaData);
 	
 	NSArray *sourcePaths=[dObject validPaths];
 	NSArray *outputFiles=[NSMutableArray arrayWithCapacity:[sourcePaths count]];
-	foreach(path,sourcePaths){
+	for(NSString * path in sourcePaths){
 		NSAutoreleasePool *pool=[[NSAutoreleasePool alloc]init];
 #warning should honor gif's NSImageRGBColorTable value
 		NSString *destinationPath=nil;
@@ -373,7 +373,7 @@ NSLog(@"setimage %@ %@",image, metaData);
 	
 	NSArray *sourcePaths=[dObject validPaths];
 	NSArray *outputFiles=[NSMutableArray arrayWithCapacity:[sourcePaths count]];
-	foreach(path,sourcePaths){
+	for(NSString * path in sourcePaths){
 		NSString *destinationPath=nil;
 		if (useTempFile){
 			destinationPath=[self temporaryPath];

@@ -16,6 +16,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1483E56D10D0F202009F139A /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		1483E56E10D0F202009F139A /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		1483E56F10D0F202009F139A /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		1483E57010D0F202009F139A /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		1483E57110D0F202009F139A /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		1483E57210D0F202009F139A /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		1483E57310D0F202009F139A /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		1483E57410D0F202009F139A /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSSymbolicHotKeyPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSSymbolicHotKeyPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		7FA98484096F0FA700321006 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
 		7FA98485096F0FA700321006 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
@@ -46,6 +54,7 @@
 		0259C574FE90428111CA0C5A /* QSSymbolicHotKeyPlugIn */ = {
 			isa = PBXGroup;
 			children = (
+				1483E56A10D0F1EB009F139A /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -63,6 +72,21 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
+		};
+		1483E56A10D0F1EB009F139A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				1483E56D10D0F202009F139A /* Common.xcconfig */,
+				1483E56E10D0F202009F139A /* Debug.xcconfig */,
+				1483E56F10D0F202009F139A /* Developer.xcconfig */,
+				1483E57010D0F202009F139A /* QSPlugIn_Debug.xcconfig */,
+				1483E57110D0F202009F139A /* QSPlugIn_Prefix.pch */,
+				1483E57210D0F202009F139A /* QSPlugIn_Release.xcconfig */,
+				1483E57310D0F202009F139A /* QSPlugIn.xcconfig */,
+				1483E57410D0F202009F139A /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -128,9 +152,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7F98F64409021A6400465995 /* Build configuration list for PBXProject "QSSymbolicHotKeyPlugIn" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSSymbolicHotKeyPlugIn */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* System HotKey Commands */,
 			);
@@ -151,14 +177,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -176,100 +202,39 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7F98F64109021A6400465995 /* Development */ = {
+		7F98F64109021A6400465995 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1483E57010D0F202009F139A /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					"$(SRCROOT)/../../../Build/Release",
-				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSSymbolicHotKeyPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "System HotKey Commands";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
 		7F98F64209021A6400465995 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1483E57210D0F202009F139A /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					"$(SRCROOT)/../../../Build/Release",
-				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSSymbolicHotKeyPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "System HotKey Commands";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
-		7F98F64309021A6400465995 /* Default */ = {
+		7F98F64509021A6400465995 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1483E56E10D0F202009F139A /* Debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					"$(SRCROOT)/../../../Build/Release",
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSSymbolicHotKeyPlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "System HotKey Commands";
-				WRAPPER_EXTENSION = qsplugin;
 			};
-			name = Default;
-		};
-		7F98F64509021A6400465995 /* Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Development;
+			name = Debug;
 		};
 		7F98F64609021A6400465995 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1483E57410D0F202009F139A /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;
-		};
-		7F98F64709021A6400465995 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
-			};
-			name = Default;
 		};
 /* End XCBuildConfiguration section */
 
@@ -277,22 +242,20 @@
 		7F98F64009021A6400465995 /* Build configuration list for PBXNativeTarget "System HotKey Commands" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F98F64109021A6400465995 /* Development */,
+				7F98F64109021A6400465995 /* Debug */,
 				7F98F64209021A6400465995 /* Release */,
-				7F98F64309021A6400465995 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		7F98F64409021A6400465995 /* Build configuration list for PBXProject "QSSymbolicHotKeyPlugIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F98F64509021A6400465995 /* Development */,
+				7F98F64509021A6400465995 /* Debug */,
 				7F98F64609021A6400465995 /* Release */,
-				7F98F64709021A6400465995 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

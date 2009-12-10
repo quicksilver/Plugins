@@ -6,10 +6,11 @@
 #import <QSInterface/QSBezelBackgroundView.h>
 #import <QSInterface/QSInterface.h>
 #import <QSInterface/QSObjectCell.h>
-#import <QSInterface/QSFancyObjectCell.h>
+//#import <QSInterface/QSFancyObjectCell.h>
 #import <QSInterface/QSSearchObjectView.h>
 
-#import <QSCore/DRColorPermutator.h>
+//#import <QSCore/DRColorPermutator.h>
+#import <QSCore/QSResourceManager.h>
 #import <QSFoundation/NSGeometry_BLTRExtensions.h>
 #import <QSFoundation/QSFoundation.h>
 #import <QSInterface/QSInterface.h>

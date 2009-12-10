@@ -7,7 +7,7 @@
 //
 
 #import "QSSafariStandPlugIn.h"
-#import "QSKeys.h"
+#import <QSCore/QSKeys.h>
 
 @implementation QSSafariStandQueryParser
 

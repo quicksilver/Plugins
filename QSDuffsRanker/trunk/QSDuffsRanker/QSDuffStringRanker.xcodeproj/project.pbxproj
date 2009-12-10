@@ -17,17 +17,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14A6EEB710D02952000B05B4 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14A6EEB810D02952000B05B4 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14A6EEB910D02952000B05B4 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14A6EEBA10D02952000B05B4 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14A6EEBB10D02952000B05B4 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14A6EEBC10D02952000B05B4 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14A6EEBD10D02952000B05B4 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14A6EEBE10D02952000B05B4 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		170E1DB807ABFC54002AFF30 /* DuffStringRanker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuffStringRanker.h; sourceTree = "<group>"; };
 		170E1DB907ABFC54002AFF30 /* DuffStringRanker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DuffStringRanker.mm; sourceTree = "<group>"; };
 		175C2D2B082687EC0030B33B /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSFoundation.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSFoundation.framework; sourceTree = "<absolute>"; };
 		175C2D2C082687EC0030B33B /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSEffects.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework; sourceTree = "<absolute>"; };
 		32DBCF980370C29C00C91783 /* QSDuffStringRanker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSDuffStringRanker_Prefix.pch; sourceTree = "<group>"; };
-		4D0C0E9D0E0FD3660027D189 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
-		4D0C0E9E0E0FD3660027D189 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		4D0C0E9F0E0FD3660027D189 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = "/Volumes/myHD/Projects/Quicksilver/elements-trunk/Configuration/Developer.xcconfig"; sourceTree = "<absolute>"; };
-		4D0C0EA00E0FD3660027D189 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
-		4D0C0EA10E0FD3660027D189 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
-		4D0C0EA20E0FD3660027D189 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* TextMate Ranker.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TextMate Ranker.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -112,16 +114,17 @@
 		4D0C0E9C0E0FD3660027D189 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				4D0C0E9D0E0FD3660027D189 /* Common.xcconfig */,
-				4D0C0E9E0E0FD3660027D189 /* Debug.xcconfig */,
-				4D0C0E9F0E0FD3660027D189 /* Developer.xcconfig */,
-				4D0C0EA00E0FD3660027D189 /* QSPlugIn.xcconfig */,
-				4D0C0EA10E0FD3660027D189 /* QSPlugIn_Prefix.pch */,
-				4D0C0EA20E0FD3660027D189 /* Release.xcconfig */,
+				14A6EEB710D02952000B05B4 /* Common.xcconfig */,
+				14A6EEB810D02952000B05B4 /* Debug.xcconfig */,
+				14A6EEB910D02952000B05B4 /* Developer.xcconfig */,
+				14A6EEBA10D02952000B05B4 /* QSPlugIn_Debug.xcconfig */,
+				14A6EEBB10D02952000B05B4 /* QSPlugIn_Prefix.pch */,
+				14A6EEBC10D02952000B05B4 /* QSPlugIn_Release.xcconfig */,
+				14A6EEBD10D02952000B05B4 /* QSPlugIn.xcconfig */,
+				14A6EEBE10D02952000B05B4 /* Release.xcconfig */,
 			);
-			name = Configuration;
-			path = ../../../Configuration;
-			sourceTree = SOURCE_ROOT;
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -203,30 +206,32 @@
 /* Begin XCBuildConfiguration section */
 		7F4ADED10A4F7170002A2A1B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0EA00E0FD3660027D189 /* QSPlugIn.xcconfig */;
+			baseConfigurationReference = 14A6EEBA10D02952000B05B4 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
+				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "TextMate Ranker";
 			};
 			name = Debug;
 		};
 		7F4ADED20A4F7170002A2A1B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0EA00E0FD3660027D189 /* QSPlugIn.xcconfig */;
+			baseConfigurationReference = 14A6EEBC10D02952000B05B4 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
+				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "TextMate Ranker";
 			};
 			name = Release;
 		};
 		7F4ADED50A4F7170002A2A1B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0E9E0E0FD3660027D189 /* Debug.xcconfig */;
+			baseConfigurationReference = 14A6EEB810D02952000B05B4 /* Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		7F4ADED60A4F7170002A2A1B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D0C0EA20E0FD3660027D189 /* Release.xcconfig */;
+			baseConfigurationReference = 14A6EEBE10D02952000B05B4 /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;

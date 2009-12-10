@@ -6,9 +6,12 @@
 //  Copyright __MyCompanyName__ 2006. All rights reserved.
 //
 
-#import "QSRemoteDesktopPlugInAction.h"
-
 #import <QSCore/QSLibrarian.h>
+#import "QSRemoteDesktopPlugInAction.h"
+#import "QSRemoteDesktopDefines.h"
+
+
+
 @implementation QSRemoteDesktopPlugInAction
 
 #define kQSRemoteDesktopPlugInAction @"QSRemoteDesktopPlugInAction"

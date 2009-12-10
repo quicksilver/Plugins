@@ -4,6 +4,7 @@
 
 
 //#import <QSCore/QSMailMediator.h>
+#define kQSMailsmithPlugInType @"QSMailsmithPlugInType"
 
 @interface QSMailsmithMailMediator : NSObject {
 

@@ -3,6 +3,8 @@
 #import <Foundation/Foundation.h>
 #import <QSCore/QSActionProvider.h>
 
+#define kQSServicesMenuPlugInType @"QSServicesMenuPlugInType"
+
 @interface QSServiceActions : QSActionProvider {
     NSString *serviceBundle;
     NSArray *serviceArray;

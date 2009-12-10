@@ -22,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14DE8A9310D09EA100851A6F /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14DE8A9410D09EA100851A6F /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14DE8A9510D09EA100851A6F /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14DE8A9610D09EA100851A6F /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14DE8A9710D09EA100851A6F /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14DE8A9810D09EA100851A6F /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14DE8A9910D09EA100851A6F /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14DE8A9A10D09EA100851A6F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSFlashlightInterface_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSFlashlightInterface_Prefix.pch; sourceTree = "<group>"; };
 		7F095FC90830712F009C3703 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
 		7F095FCA0830712F009C3703 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
@@ -60,6 +68,7 @@
 		0259C574FE90428111CA0C5A /* QSFlashlightInterface */ = {
 			isa = PBXGroup;
 			children = (
+				14DE8A9010D09E8800851A6F /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				E1127F960695F44F008AE6A3 /* Templates */,
@@ -82,6 +91,21 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
+		};
+		14DE8A9010D09E8800851A6F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				14DE8A9310D09EA100851A6F /* Common.xcconfig */,
+				14DE8A9410D09EA100851A6F /* Debug.xcconfig */,
+				14DE8A9510D09EA100851A6F /* Developer.xcconfig */,
+				14DE8A9610D09EA100851A6F /* QSPlugIn_Debug.xcconfig */,
+				14DE8A9710D09EA100851A6F /* QSPlugIn_Prefix.pch */,
+				14DE8A9810D09EA100851A6F /* QSPlugIn_Release.xcconfig */,
+				14DE8A9910D09EA100851A6F /* QSPlugIn.xcconfig */,
+				14DE8A9A10D09EA100851A6F /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -136,10 +160,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F07B002085E433200E2AFC4 /* Build configuration list for PBXNativeTarget "Flashlight Interface" */;
 			buildPhases = (
-				7F4ADECF096F37F600C9B950 /* ShellScript */,
 				8D1AC9660486D14A00FE50C9 /* Resources */,
 				8D1AC96A0486D14A00FE50C9 /* Sources */,
 				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				7F4ADECF096F37F600C9B950 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -157,9 +181,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7F07B006085E433200E2AFC4 /* Build configuration list for PBXProject "QSFlashlightInterface" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSFlashlightInterface */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Flashlight Interface */,
 			);
@@ -184,14 +210,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		7F4ADECF096F37F600C9B950 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -231,31 +257,18 @@
 /* Begin XCBuildConfiguration section */
 		7F07B004085E433200E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE8A9810D09EA100851A6F /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSFlashlightInterface_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Flashlight Interface";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
 		7F07B008085E433200E2AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE8A9A10D09EA100851A6F /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Release;
 		};

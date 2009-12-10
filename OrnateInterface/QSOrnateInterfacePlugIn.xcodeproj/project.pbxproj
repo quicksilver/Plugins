@@ -20,31 +20,15 @@
 		E19BDB4F071E3011009BCC54 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E19BDB4D071E3011009BCC54 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		2E58F360FFB2326E11CA0CBA /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
-		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXFileReference section */
+		14DE91DD10D0C94700851A6F /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		14DE91DE10D0C94700851A6F /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		14DE91DF10D0C94700851A6F /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		14DE91E010D0C94700851A6F /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		14DE91E110D0C94700851A6F /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		14DE91E210D0C94700851A6F /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		14DE91E310D0C94700851A6F /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		14DE91E410D0C94700851A6F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSOrnateInterfacePlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSOrnateInterfacePlugIn_Prefix.pch; sourceTree = "<group>"; };
 		7F6C483109004A4A006EA551 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = ../../../../Build/Release/QSCore.framework; sourceTree = SOURCE_ROOT; };
 		7F6C483209004A4A006EA551 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSEffects.framework; path = ../../../../Build/Release/QSEffects.framework; sourceTree = SOURCE_ROOT; };
@@ -80,6 +64,7 @@
 		0259C574FE90428111CA0C5A /* QSOrnateInterfacePlugIn */ = {
 			isa = PBXGroup;
 			children = (
+				14DE91D810D0C92200851A6F /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -100,6 +85,21 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
+		};
+		14DE91D810D0C92200851A6F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				14DE91DD10D0C94700851A6F /* Common.xcconfig */,
+				14DE91DE10D0C94700851A6F /* Debug.xcconfig */,
+				14DE91DF10D0C94700851A6F /* Developer.xcconfig */,
+				14DE91E010D0C94700851A6F /* QSPlugIn_Debug.xcconfig */,
+				14DE91E110D0C94700851A6F /* QSPlugIn_Prefix.pch */,
+				14DE91E210D0C94700851A6F /* QSPlugIn_Release.xcconfig */,
+				14DE91E310D0C94700851A6F /* QSPlugIn.xcconfig */,
+				14DE91E410D0C94700851A6F /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -152,20 +152,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					/Volumes/Lore/Forge/Build,
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSOrnateInterfacePlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "Ornate Interface";
-				WRAPPER_EXTENSION = qsplugin;
-			};
 			dependencies = (
 			);
 			name = "Ornate Interface";
@@ -180,12 +166,7 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7FFF24CB085E488600266176 /* Build configuration list for PBXProject "QSOrnateInterfacePlugIn" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				2E58F360FFB2326E11CA0CBA /* Development */,
-				2E58F361FFB2326E11CA0CBA /* Deployment */,
-			);
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -196,6 +177,7 @@
 			);
 			mainGroup = 0259C574FE90428111CA0C5A /* QSOrnateInterfacePlugIn */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* Ornate Interface */,
 			);
@@ -220,14 +202,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -256,83 +238,39 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7FFF24C8085E488600266176 /* Development */ = {
+		7FFF24C8085E488600266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE91E010D0C94700851A6F /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSOrnateInterfacePlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Ornate Interface";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
-		7FFF24C9085E488600266176 /* Deployment */ = {
+		7FFF24C9085E488600266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE91E210D0C94700851A6F /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					/Volumes/Lore/Forge/Build,
-					"$(SRCROOT)/../../../../Build/Release",
-				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSOrnateInterfacePlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Ornate Interface";
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		7FFF24CA085E488600266176 /* Default */ = {
+		7FFF24CC085E488600266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					/Volumes/Lore/Forge/Development/Quicksilver/build/Quicksilver.app/Contents/Frameworks,
-					/Volumes/Lore/Forge/Build,
-					"$(SRCROOT)/../../../../Build/Release",
-				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSOrnateInterfacePlugIn_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = "Ornate Interface";
-				WRAPPER_EXTENSION = qsplugin;
-			};
-			name = Default;
-		};
-		7FFF24CC085E488600266176 /* Development */ = {
-			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE91DE10D0C94700851A6F /* Debug.xcconfig */;
 			buildSettings = {
 			};
-			name = Development;
+			name = Debug;
 		};
-		7FFF24CD085E488600266176 /* Deployment */ = {
+		7FFF24CD085E488600266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DE91E410D0C94700851A6F /* Release.xcconfig */;
 			buildSettings = {
 			};
-			name = Deployment;
-		};
-		7FFF24CE085E488600266176 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -340,22 +278,20 @@
 		7FFF24C7085E488600266176 /* Build configuration list for PBXNativeTarget "Ornate Interface" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF24C8085E488600266176 /* Development */,
-				7FFF24C9085E488600266176 /* Deployment */,
-				7FFF24CA085E488600266176 /* Default */,
+				7FFF24C8085E488600266176 /* Debug */,
+				7FFF24C9085E488600266176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		7FFF24CB085E488600266176 /* Build configuration list for PBXProject "QSOrnateInterfacePlugIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF24CC085E488600266176 /* Development */,
-				7FFF24CD085E488600266176 /* Deployment */,
-				7FFF24CE085E488600266176 /* Default */,
+				7FFF24CC085E488600266176 /* Debug */,
+				7FFF24CD085E488600266176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

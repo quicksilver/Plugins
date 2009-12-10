@@ -114,7 +114,7 @@ return nil;
 	if ([lines count]){
 		int offset=[[lines objectAtIndex:0]rangeOfString:@"NAME"].location;
 		lines=[lines subarrayWithRange:NSMakeRange(1,[lines count]-1)];
-		foreach(line,lines){
+		for(NSString * line in lines){
 			//NSLog([line substringFromIndex:63]);	
 			if ([line length]>offset+1){
 				QSObject *object=[QSObject objectWithString:[line substringFromIndex:offset]];

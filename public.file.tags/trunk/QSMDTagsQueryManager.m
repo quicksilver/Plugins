@@ -35,7 +35,7 @@ static QSMDTagsQueryManager *defaultQueryManager = nil;
 }
 
 - (void)dealloc {
-    foreach(tag, [tagQueries allKeys]) {
+    for(NSString * tag in [tagQueries allKeys]) {
         [self stopScanningForTagPrefix:tag delegate:self];
     }
     [tagQueries release], tagQueries = nil;
@@ -53,7 +53,7 @@ static QSMDTagsQueryManager *defaultQueryManager = nil;
 }
 
 - (NSString*)tagPrefixForTag:(NSString*)tag {
-    foreach(tagPrefix, [self tagPrefixes]) {
+    for(NSString * tagPrefix in [self tagPrefixes]) {
         if([tag hasPrefix:tagPrefix])
             return tagPrefix;
     }
@@ -99,7 +99,7 @@ static QSMDTagsQueryManager *defaultQueryManager = nil;
 	NSEnumerator *commentEnum = [[[aQuery results] valueForKey:(NSString *)kMDItemFinderComment] objectEnumerator];
 	NSString *comment;
 	while(comment = [commentEnum nextObject]) {
-		foreach(word, [comment componentsSeparatedByString:@" "]) {
+		for(NSString * word in [comment componentsSeparatedByString:@" "]) {
 			if ([word hasPrefix:prefix])
 				[set addObject:word];
 		}
@@ -115,7 +115,7 @@ static QSMDTagsQueryManager *defaultQueryManager = nil;
 	while(result = [resultsEnum nextObject]) {
         NSString *name = [result valueForAttribute:(NSString *)kMDItemPath];
         NSString *comment = [result valueForAttribute:(NSString *)kMDItemFinderComment];
-		foreach(word, [comment componentsSeparatedByString:@" "]) {
+		for(NSString * word in [comment componentsSeparatedByString:@" "]) {
 			if ([word isEqualToString:tag])
 				[set addObject:name];
 		}
@@ -217,7 +217,7 @@ static QSMDTagsQueryManager *defaultQueryManager = nil;
 
 - (NSArray*)filesForTags:(NSArray*)tags {
     NSMutableSet * files = nil;
-    foreach(tag, tags) {
+    for(NSString * tag in tags) {
         NSArray *tempArray = [self filesForTag:tag];
         if (tempArray) {
             files = [NSMutableArray arrayWithCapacity:[tempArray count]];
@@ -244,7 +244,7 @@ static QSMDTagsQueryManager *defaultQueryManager = nil;
 
 #pragma mark Notification Handling
 - (void)performSelector:(SEL)selector onDelegatesForTagPrefix:(NSString*)tagPrefix {
-    foreach (delegate, [tagDelegates objectForKey:tagPrefix]) {
+    for (id delegate in [tagDelegates objectForKey:tagPrefix]) {
         if ([delegate respondsToSelector:selector])
             [delegate performSelector:selector withObject:tagPrefix];
     }

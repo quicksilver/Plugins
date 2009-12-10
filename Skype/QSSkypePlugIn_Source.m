@@ -48,7 +48,7 @@
 		string=[string substringFromIndex:6];
 		NSArray *handles=[string componentsSeparatedByString:@", "];
 		NSLog(@"contacts %@",handles);
-		foreach(handle,handles){
+		for(NSString * handle in handles){
 			[SkypeAPI sendSkypeCommand:[NSString stringWithFormat:@"GET USER %@ DISPLAYNAME",handle]];
 			[SkypeAPI sendSkypeCommand:[NSString stringWithFormat:@"GET USER %@ FULLNAME",handle]];
 		}

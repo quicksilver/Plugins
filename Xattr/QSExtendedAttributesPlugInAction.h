@@ -10,6 +10,7 @@
 #import <QSCore/QSActionProvider.h>
 #import "QSExtendedAttributesPlugInAction.h"
 #define QSExtendedAttributesPlugInType @"QSExtendedAttributesPlugIn_Type"
+#define kQSExtendedAttributesPlugInType @"QSExtendedAttributesPlugInType"
 @interface QSExtendedAttributesPlugInAction : QSActionProvider
 {
 }

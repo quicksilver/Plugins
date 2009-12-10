@@ -1,7 +1,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "QSMailMediator.h"
+#import "./../elements.support.mail/QSMailMediator.h"
 @interface QSAOLMailMediator : NSObject {
 
 }

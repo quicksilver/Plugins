@@ -16,6 +16,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1483E51810D0F079009F139A /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		1483E51910D0F079009F139A /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		1483E51A10D0F079009F139A /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		1483E51B10D0F079009F139A /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		1483E51C10D0F079009F139A /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		1483E51D10D0F079009F139A /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		1483E51E10D0F079009F139A /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		1483E51F10D0F079009F139A /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSSoundSupport_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSSoundSupport_Prefix.pch; sourceTree = "<group>"; };
 		7F20F1FF07E9FF02007A01B3 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F20F20007E9FF02007A01B3 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +55,7 @@
 		0259C574FE90428111CA0C5A /* QSSoundSupport */ = {
 			isa = PBXGroup;
 			children = (
+				1483E4AF10D0F05E009F139A /* Configuration */,
 				32DBCF9E0370C38000C91783 /* Classes */,
 				32DBCF9F0370C38200C91783 /* Other Sources */,
 				0259C582FE90428111CA0C5A /* Resources */,
@@ -63,6 +72,21 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
+		};
+		1483E4AF10D0F05E009F139A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				1483E51810D0F079009F139A /* Common.xcconfig */,
+				1483E51910D0F079009F139A /* Debug.xcconfig */,
+				1483E51A10D0F079009F139A /* Developer.xcconfig */,
+				1483E51B10D0F079009F139A /* QSPlugIn_Debug.xcconfig */,
+				1483E51C10D0F079009F139A /* QSPlugIn_Prefix.pch */,
+				1483E51D10D0F079009F139A /* QSPlugIn_Release.xcconfig */,
+				1483E51E10D0F079009F139A /* QSPlugIn.xcconfig */,
+				1483E51F10D0F079009F139A /* Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = QS_SOURCE_ROOT;
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -129,9 +153,11 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7FFF254F085E488600266176 /* Build configuration list for PBXProject "QSSoundSupport" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSSoundSupport */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1AC9600486D14A00FE50C9 /* QSSoundSupport */,
 			);
@@ -151,14 +177,14 @@
 /* Begin PBXShellScriptBuildPhase section */
 		E1022B2806B3475D00299BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
@@ -176,79 +202,39 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7FFF254C085E488600266176 /* Development */ = {
+		7FFF254C085E488600266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1483E51B10D0F079009F139A /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				BUILD_DIR = "$(SYMROOT)/Embedded/PlugIns";
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Build;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSSoundSupport_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = QSSoundSupport;
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = YES;
 			};
-			name = Development;
+			name = Debug;
 		};
-		7FFF254D085E488600266176 /* Deployment */ = {
+		7FFF254D085E488600266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1483E51D10D0F079009F139A /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				BUILD_DIR = "$(SYMROOT)/Embedded/PlugIns";
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Build;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSSoundSupport_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = QSSoundSupport;
-				WRAPPER_EXTENSION = qsplugin;
 				ZERO_LINK = NO;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		7FFF254E085E488600266176 /* Default */ = {
+		7FFF2550085E488600266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUILD_DIR = "$(SYMROOT)/Embedded/PlugIns";
-				FRAMEWORK_SEARCH_PATHS = /Volumes/Lore/Forge/Build;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSSoundSupport_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Developer/Palettes";
-				OTHER_LDFLAGS = "-bundle";
-				PRODUCT_NAME = QSSoundSupport;
-				WRAPPER_EXTENSION = qsplugin;
-			};
-			name = Default;
-		};
-		7FFF2550085E488600266176 /* Development */ = {
-			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1483E51910D0F079009F139A /* Debug.xcconfig */;
 			buildSettings = {
 			};
-			name = Development;
+			name = Debug;
 		};
-		7FFF2551085E488600266176 /* Deployment */ = {
+		7FFF2551085E488600266176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1483E51F10D0F079009F139A /* Release.xcconfig */;
 			buildSettings = {
 			};
-			name = Deployment;
-		};
-		7FFF2552085E488600266176 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -256,22 +242,20 @@
 		7FFF254B085E488600266176 /* Build configuration list for PBXNativeTarget "QSSoundSupport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF254C085E488600266176 /* Development */,
-				7FFF254D085E488600266176 /* Deployment */,
-				7FFF254E085E488600266176 /* Default */,
+				7FFF254C085E488600266176 /* Debug */,
+				7FFF254D085E488600266176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		7FFF254F085E488600266176 /* Build configuration list for PBXProject "QSSoundSupport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FFF2550085E488600266176 /* Development */,
-				7FFF2551085E488600266176 /* Deployment */,
-				7FFF2552085E488600266176 /* Default */,
+				7FFF2550085E488600266176 /* Debug */,
+				7FFF2551085E488600266176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

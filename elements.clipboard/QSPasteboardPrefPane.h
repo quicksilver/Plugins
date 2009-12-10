@@ -1,7 +1,7 @@
 
 
 #import <Foundation/Foundation.h>
-//#import <QSBase/QSPreferencePane.h>
+#import <QSInterface/QSPreferencePane.h>
 
 @interface QSPasteboardPrefPane : QSPreferencePane {
 

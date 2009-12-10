@@ -8,6 +8,7 @@
 #import <QSCore/QSExecutor.h>
 #import <QSFoundation/NSWorkspace_BLTRExtensions.h>
 
+
 #define NSServicesKey	 		@"NSServices"
 #define NSMenuItemKey	 		@"NSMenuItem"
 #define NSMenuItemDisabledKey 		@"NSMenuItem (Disabled)"
