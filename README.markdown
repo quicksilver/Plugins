@@ -30,6 +30,12 @@ Setting Name: `QSFramework`
 Display Name: a suitable name, e.g. `Quicksilver Frameworks`  
 Path: `/Applications/Quicksilver.app/Contents/Frameworks` (or path of Quicksilver.app if different)
 
+For some plugins to compile correctly a source tree must also be set for QS_SOURCE_ROOT that points to the location of the [Quicksilver source code](http://github.com/tiennou/blacktree-alchemy).
+
+Setting Name: 'QS_SOURCE_ROOT'
+Display Name: a suitable name, e.g. 'Quicksilver source code root'
+Path: '/Users/<user>/<path to Quicksilver source code>'
+
 
 Legal Stuff 
 -----------
