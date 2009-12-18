@@ -35,17 +35,8 @@
 
 - (QSObject *)appendToNote:(QSObject *)dObject content:(QSObject *)iObject{
 	NSString *uuid=[dObject objectForType:kQSYojimboPlugInType];
-	NSString *body=[dObject objectForType:QSTextType];
 	NSString *text=[iObject stringValue];
-	body=[body stringByAppendingFormat:@"\r%@",text];//
-//	NSDictionary *attributes=[NSDictionary dictionaryWithObject:[NSFont boldSystemFontOfSize:24] forKey:NSFontAttributeName];
-//	NSAttributedString *string=[[[NSAttributedString alloc]initWithString:body attributes:attributes]autorelease];
-	
-//	NSLog(@"str %@ %@",string,[NSAppleEventDescriptor descriptorWithObjectAPPLE:string]);
-	NSAppleEventDescriptor *ident=[[self script] executeSubroutine:@"set_note" arguments:[NSArray arrayWithObjects:uuid,body,nil]
-															 error:nil];
-	
-	[dObject setObject:body forType:QSTextType];
+	NSAppleEventDescriptor *ident=[[self script] executeSubroutine:@"append_to_note" arguments:[NSArray arrayWithObjects:uuid,text,nil] error:nil];
 	return nil;
 }
 
@@ -64,9 +55,8 @@
 }
 
 - (QSObject *)showObject:(QSObject *)dObject{
-	NSString *uuid=[dObject objectForType:kQSYojimboPlugInType];
-	NSString *path=[[NSString stringWithFormat:@"~/Library/Caches/Metadata/com.barebones.yojimbo/%@.yojimboitem",uuid]stringByStandardizingPath];
-	[[NSWorkspace sharedWorkspace]openFile:path];
+  NSString *uuid=[dObject objectForType:kQSYojimboPlugInType];
+  NSAppleEventDescriptor *ident=[[self script] executeSubroutine:@"show_item" arguments:uuid error:nil];
 	return nil;
 }
 
