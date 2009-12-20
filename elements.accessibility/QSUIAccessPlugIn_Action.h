@@ -16,5 +16,6 @@
 @interface QSUIAccessPlugIn_Action : QSActionProvider
 {
 }
+- (QSObject *)resolvedProxy:(QSObject *)dObject;
 @end
 

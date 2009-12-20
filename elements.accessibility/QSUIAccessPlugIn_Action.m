@@ -17,6 +17,7 @@
 @implementation QSUIAccessPlugIn_Action
 
 - (QSObject *)getUIElementForApplication:(QSObject *)dObject{
+  dObject = [self resolvedProxy:dObject];
 	pid_t pid=[[[dObject objectForType:QSProcessType]objectForKey:@"NSApplicationProcessIdentifier"]intValue];
 	AXUIElementRef app=AXUIElementCreateApplication (pid);
 	QSObject *object=[QSObject objectForUIElement:app];
@@ -44,8 +45,8 @@
 		NSString *name=[attributeValues objectAtIndex:0]; 
 		NSNumber *enabled=[attributeValues objectAtIndex:1];
 		NSString *role=[attributeValues objectAtIndex:2];
-		if (AXValueGetType(name)==kAXValueAXErrorType)name=@"????";
-	
+		if (AXValueGetType(name)==kAXValueAXErrorType)continue;
+		if (![name isKindOfClass:[NSString class]]) continue;
 		if ([name isEqualToString:@"Apple"])continue;
 		if ([name isEqualToString:@"Services"])continue;
 		if (![enabled boolValue]) continue;
@@ -85,6 +86,7 @@
 
 
 - (QSObject *)searchAppMenus:(QSObject *)dObject{
+  dObject = [self resolvedProxy:dObject];
 	pid_t pid=[[[dObject objectForType:QSProcessType]objectForKey:@"NSApplicationProcessIdentifier"]intValue];
 	AXUIElementRef app=AXUIElementCreateApplication (pid);	
 	AXUIElementRef menuBar;
@@ -97,6 +99,7 @@
 
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
 	if ([action isEqualToString:@"QSPickMenuItemsAction"]){
+	  dObject = [self resolvedProxy:dObject];
 		pid_t pid=[[[dObject objectForType:QSProcessType]objectForKey:@"NSApplicationProcessIdentifier"]intValue];
 		AXUIElementRef app=AXUIElementCreateApplication (pid);	
 		AXUIElementRef menuBar;
@@ -107,6 +110,7 @@
 		return [NSArray arrayWithObjects:[NSNull null],actions,nil];
 		return nil;
 	}else if ([action isEqualToString:@"QSPickMenusAction"]){
+	  dObject = [self resolvedProxy:dObject];
 		pid_t pid=[[[dObject objectForType:QSProcessType]objectForKey:@"NSApplicationProcessIdentifier"]intValue];
 		AXUIElementRef app=AXUIElementCreateApplication (pid);	
 		AXUIElementRef menuBar;
@@ -170,4 +174,13 @@
 	AXUIElementPerformAction (element,kAXPressAction);
 	return nil;
 }
+
+- (QSObject *)resolvedProxy:(QSObject *)dObject
+{
+  if ([dObject respondsToSelector:@selector(resolvedObject)]) return [dObject resolvedObject];
+  
+  if ([dObject respondsToSelector:@selector(object)]) return [self resolvedProxy:[dObject object]];
+  return dObject;
+}
+
 @end
