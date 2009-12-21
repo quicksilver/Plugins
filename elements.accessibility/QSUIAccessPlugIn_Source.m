@@ -110,6 +110,7 @@
 	NSString *name;
 	AXUIElementCopyAttributeValue (element, kAXTitleAttribute, &name);
 	[name autorelease];
+	if (AXValueGetType(name) == kAXValueAXErrorType) return nil;
 	return [self objectForUIElement:element name:name];
 }
 +(QSObject *)objectForUIElement:(id)element name:(NSString *)name{	
