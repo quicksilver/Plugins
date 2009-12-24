@@ -63,7 +63,8 @@
 	NSFileManager *fm=[NSFileManager defaultManager];
 	
 	
-	foreach (node,list){
+	for (NSString *node in list)
+	{
 		//NSLog(@"node %@",node);
 		NSString *subPath=[sourcePath stringByAppendingFormat:@"/%@",node];
 		
@@ -78,12 +79,12 @@
 			NSString *name=[info objectForKey:@"Title"];
 			if([icnsArray count] != 0)
 			{
-			QSObject *object=[QSObject fileObjectWithPath:[icnsPath stringByAppendingPathComponent:[icnsArray objectAtIndex:0]]];
-			[object setName:name];
-			[object setIdentifier:subPath];
-			[object setDetails:@"Calendar"];
-			[object setObject:name forType:@"QSICalCalendar"];
-			[array addObject:object];
+				QSObject *object=[QSObject fileObjectWithPath:[icnsPath stringByAppendingPathComponent:[icnsArray objectAtIndex:0]]];
+				[object setName:name];
+				[object setIdentifier:subPath];
+				[object setDetails:@"Calendar"];
+				[object setObject:name forType:@"QSICalCalendar"];
+				[array addObject:object];
 			}
 			else 
 			{
@@ -94,7 +95,7 @@
 				[object setObject:name forType:@"QSICalCalendar"];
 				[array addObject:object];
 			}
-
+			
 		}
 		//NSArray *sublist=[node objectForKey:@"Subnodes"];
 		//if (sublist) [self addNodesFromList:sublist toArray:array];
@@ -110,15 +111,15 @@
 	
 	// Get contents of calendars folder
 	NSArray *dirArray = [fm directoryContentsAtPath:path];
-
+	
 	//NSLog(@"dirArray: %@", dirArray);
 	int i = 0;
-	foreach(path, dirArray)
+	for(NSString *path in dirArray)
 	{
 		//NSLog(@"path: %@", path);
 		if([[dirArray objectAtIndex:i] rangeOfString:@".calendar"].location != NSNotFound)
 		{
-
+			
 			[list addObject:path];
 		}
 		i += 1;
