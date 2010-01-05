@@ -26,29 +26,23 @@
 	return object;
 }
 
-- (NSArray *)menuItemsForElement:(AXUIElementRef)element depth:(int)depth {
-  if (depth < 0) return [NSArray arrayWithObject:[QSObject objectForUIElement:element]];
-  
+NSArray *MenuItemsForElement(AXUIElementRef element, int depth, NSString *name) {
   NSArray *children = nil;
   AXUIElementCopyAttributeValue(element, kAXChildrenAttribute, &children);
-  if ([children count] < 1) {
-    QSObject *menuObject = [QSObject objectForUIElement:element];
+  if (([children count] < 1) || (depth < 1)) {
+    QSObject *menuObject = (name) ? [QSObject objectForUIElement:element name:name] : [QSObject objectForUIElement:element];
     return (menuObject) ? [NSArray arrayWithObject:menuObject] : [NSArray array];
   }
   
   NSMutableArray *menuItems = [NSMutableArray array];
   for (id child in children) {
-    NSArray *attributeKeys = [NSArray arrayWithObjects:kAXTitleAttribute, kAXEnabledAttribute, nil];
-    NSArray *attributes = nil;
-    AXUIElementCopyMultipleAttributeValues(child, attributeKeys, 0, &attributes); 
-    NSString *name    = [attributes objectAtIndex:0];
-    NSNumber *enabled = [attributes objectAtIndex:1];
-    if ((![enabled respondsToSelector:@selector(boolValue)]) || (![enabled boolValue])) continue;
-    if ([name respondsToSelector:@selector(isEqualToString:)]) {
-      if ([name isEqualToString:@"Apple"]) continue;
-      if ([name isEqualToString:@"Services"]) continue;
+    CFBooleanRef enabled = NULL;
+    if ((AXUIElementCopyAttributeValue(child, kAXEnabledAttribute, &enabled) != kAXErrorSuccess) || (!CFBooleanGetValue(enabled))) continue;
+    CFStringRef name = nil;
+    if (AXUIElementCopyAttributeValue(child, kAXTitleAttribute, &name) == kAXErrorSuccess) {
+      if (([name isEqualToString:@"Apple"]) || ([name isEqualToString:@"Services"])) continue;
     }
-    [menuItems addObjectsFromArray:[self menuItemsForElement:child depth:depth - 1]];
+   [menuItems addObjectsFromArray:MenuItemsForElement(child,depth - 1,name)];
   }
   
   return menuItems;
@@ -65,7 +59,7 @@
 	AXUIElementRef app=AXUIElementCreateApplication (pid);	
 	AXUIElementRef menuBar;
 	AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
-	NSArray *items=[self menuItemsForElement:menuBar depth:7];
+	NSArray *items=MenuItemsForElement(menuBar,7,nil);
 	
 	[QSPreferredCommandInterface showArray:items];
 	return nil;
@@ -78,7 +72,7 @@
 		AXUIElementRef app=AXUIElementCreateApplication (pid);	
 		AXUIElementRef menuBar;
 		AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
-		NSArray *actions=[self menuItemsForElement:menuBar depth:7];
+		NSArray *actions=MenuItemsForElement(menuBar,7,nil);
 		
 		//NSLog(@"actions: %@",actions);
 		return [NSArray arrayWithObjects:[NSNull null],actions,nil];
@@ -90,7 +84,7 @@
 		AXUIElementRef menuBar;
 		AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
 	
-		NSArray *actions=[self menuItemsForElement:menuBar depth:0];
+		NSArray *actions=MenuItemsForElement(menuBar,0,nil);
 				
 		//NSLog(@"actions: %@",actions);
 		return [NSArray arrayWithObjects:[NSNull null],actions,nil];
