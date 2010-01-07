@@ -48,14 +48,39 @@ Also note that if your action returns a `QSObject` to Quicksilver, that *will* b
 
 ### The Comma Trick ###
 
-If you want your actions to support the comma-trick (where a user can select several things in the first pane and act on them), you'll have to write actions in a certain way. As far as I can tell, the only thing you can get when multiple objects are passed to your action at once is a string representation of each. `QSObject`s have several string properties and I'm not sure which it gives back. I believe it's "name". Anyway, you can get at the strings like this:
+If you want your actions to support the comma trick (where a user can select several things in the first pane and act on them), you'll have to write actions to loop through all the objects and do the appropriate thing. The easiest technique involves getting a quick string representation of each. `QSObject`s have several string properties and I'm not sure which it gives back. I believe it's "name". Anyway, you can get at the strings like this:
 
     for(NSString *userSelectedThing in [dObject arrayForType:QSBlahType])
     {
         // code
     }
 
-Maybe you *can* get a string representation that way, but don't have to? Maybe this only applies if you're trying to get objects that match your custom type?
+Note that the above code will also work if the user just passes a single item to your action.
+
+If you need to get the full details of the `QSObject`s passed in, you can do something like the following.
+
+In `BlahAction.h`, add:
+
+    #define kQSObjectComponents       @"QSObjectComponents"
+
+And then in your action's code, loop through the objects with:
+
+    for (QSObject *individual in [dObject objectForCache:kQSObjectComponents])
+    {
+        NSString *thisGuy = [individual name];
+        NSString *somethingWeNeed = [individual objectForMeta:@"key"];
+    }
+
+Unlike the first example, this will *only* work if multiple items were passed in by the user, so you need to write code to detect multiple objects and code to handle the single object case. One way to tell if you're dealing with single vs. multiple objects is to look at the string value:
+
+    if ([[dObject stringValue] isEqualToString:@"combined objects"])
+    {
+        // multiple objects
+    } else {
+        // single object
+    }
+
+That seems shaky to me (what if Quicksilver doesn't always send that string value?), but it seems to work for now.
 
 ### Validating Objects ###
 
@@ -165,8 +190,6 @@ And then in the various action methods in `BlahAction.m`, you can look for objec
 
     [dObject arrayForType:QSRemoteHostsType]
 
-I believe this is the only way to get your actions to work with the comma trick. See the section on Actions for more details (and by "details", I mean wild speculation).
-
 ## QSObject ##
 
 Your plug-in will communicate with Quicksilver pretty much entirely through `QSObject` objects. That is, Quicksilver will send `QSObject`s to your methods, and if you need to send something back to Quicksilver, you'll return either a single `QSObject` or an array of them. Here's what I know about creating them and using those previously created.
@@ -251,11 +274,11 @@ This metadata has many possibilities, but two of the more obvious are:
 
 #### "combined objects" ####
 
-If a user sends multiple things to your action using the comma trick, then `[dObject stringValue]` will return "combined objects". I give an example of how to loop through one of these combined objects in the Actions section, but it seems you can only get a string. I'm not sure which string it is (I believe it's `name`), nor am I sure if there's a way to get to the other data an object has. Surely there's a way.
+If a user sends multiple things to your action using the comma trick, then `[dObject stringValue]` will return "combined objects". I give examples of how to loop through one of these combined objects in the Actions section.
 
 #### Getting Specific Objects ####
 
-It looks like the `objectWithIdentifier:` method will return an existing `QSObject` if you know what it's ID was set to (probably because you set it yourself). Maybe this could be useful for multiple objects sent via the comma trick? I haven't used it or tested it.
+It looks like the `objectWithIdentifier:` method will return an existing `QSObject` if you know what it's ID was set to (probably because you set it yourself). I haven't used it or tested it.
 
 ### More Information ###
 
