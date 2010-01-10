@@ -27,7 +27,7 @@
 		14DE93C910D0D9BD00851A6F /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		14DE93CA10D0D9BD00851A6F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSSafariPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSSafariPlugIn_Prefix.pch; sourceTree = "<group>"; };
-		7FDB78670AA8BBA900CCE360 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
+		7FDB78670AA8BBA900CCE360 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = "../../../../Users/paulkohut/Downloads/untitled folder/b54/blacktree-alchemy-read-only/Quicksilver/build/Debug/Quicksilver.app/Contents/Frameworks/QSCore.framework"; sourceTree = QSFramework; };
 		7FDB78680AA8BBA900CCE360 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
 		7FDB78690AA8BBA900CCE360 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
 		7FDB786A0AA8BBA900CCE360 /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };

@@ -1988,6 +1988,8 @@
 		14A8CF3D10CE44DC003857E3 /* Compiles */ = {
 			isa = PBXGroup;
 			children = (
+				14A8CD4410CE1DAC003857E3 /* ClipboardElement.xcodeproj */,
+				14A8CC8510CE1BDD003857E3 /* WebSearchElement.xcodeproj */,
 				14A8CE3110CE407E003857E3 /* AppleMailElement.xcodeproj */,
 				14A8CE4610CE40B8003857E3 /* AutomatorElement.xcodeproj */,
 				4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */,
@@ -2096,7 +2098,6 @@
 		14A8D3CE10CE6E08003857E3 /* Does not compile. Needs tweaking. */ = {
 			isa = PBXGroup;
 			children = (
-				14A8CD4410CE1DAC003857E3 /* ClipboardElement.xcodeproj */,
 				14A8CE3710CE408C003857E3 /* iChatElement.xcodeproj */,
 				14A8CB9410CE1906003857E3 /* MoreAppleEvents.xcodeproj */,
 				14A8CF0B10CE4313003857E3 /* QSAddressBookActionsPlugIn.xcodeproj */,
@@ -2125,7 +2126,6 @@
 				14A8CE1F10CE404A003857E3 /* SpacesElement.xcodeproj */,
 				14A8CCC310CE1C1F003857E3 /* Sparkle.xcodeproj */,
 				14A8C9F210CE1255003857E3 /* TSActionsPlugin.xcode */,
-				14A8CC8510CE1BDD003857E3 /* WebSearchElement.xcodeproj */,
 			);
 			name = "Does not compile. Needs tweaking.";
 			sourceTree = "<group>";
