@@ -80,7 +80,9 @@ Unlike the first example, this will *only* work if multiple items were passed in
         // single object
     }
 
-That seems shaky to me (what if Quicksilver doesn't always send that string value?), but it seems to work for now.
+That seems shaky to me (what if Quicksilver doesn't always send that string value?), and I don't think it will work if the objects passed in are `QSFilePathType`, but it seems to work for a majority of cases.
+
+For actions that won't support the comma trick, you should use the object validation process to prevent those actions from ever showing up, rather than checking for multiple objects in the action itself.
 
 ### Validating Objects ###
 
@@ -121,11 +123,17 @@ There are two sections in `Info.plist` you should know about.
 
 If you want to see what these look like, open `~/Library/Application Support/Quicksilver/Catalog.plist` and look at the `customEntries` section. In fact, one easy way to create a catalog preset for your plug-in is to create it as a custom entry in Quicksilver, then copy/paste it from `Catalog.plist`. The only thing you may want to add by hand is an `icon`, which can go right under `name`. You'd also change `sources` to something like `QSBlahSource` if you're defining your own.
 
-The other important section in the `Info.plist` is `QSRegistration`. If you're creating your own source instead of using one of the built-ins, you'll need to add it here so Quicksilver will use it. You'll want to make sure there's a dictionary called `QSObjectSources`. Create an item under this and set both the name and value to the name of the class in `BlahSource.m` that provides the source, such as `QSBlahSource`. There are other dictionaries under `QSRegistration`, but I haven't figured out exactly what they do.
+The other important section in the `Info.plist` is `QSRegistration`. If you're creating your own source instead of using one of the built-ins, you'll need to add it here so Quicksilver will use it. You'll want to make sure there's a dictionary called `QSObjectSources`. Create an item under this and set both the name and value to the name of the class in `BlahSource.m` that provides the source, such as `QSBlahSource`.
+
+Also under `QSRegistration` are some settings you'll need if you want users to be able to "right arrow" into things (which can also be done with '/'). As far as I can tell, you use `QSBundleChildHandlers` to allow right arrowing into things that don't "belong" to your plug-in and you use `QSObjectHandlers` for things your plug-in will create.
+
+The thing you use `QSBundleChildHandlers` for is generally some application that's already on the system and related to your plug-in, but has no direct knowledge of, or support for Quicksilver. The left hand side should be a bundle identifier, like `com.apple.Finder` and the right hand side should be the name of a class in your plug-in that contains a `loadChildrenForObject:` method.
+
+`QSObjectHandlers` is how you can allow users to "right arrow" into things you create. On the left should be a type of object in Quicksilver and on the right should again be the name of a class in your plug-in that contains a `loadChildrenForObject:` method. This definitely works with types you invent (see Custom Types below) and I assume it will work for existing types, but haven't tried it. I think this setting must be present for the `setQuickIconForObject:` to get called as well, even if you won't be defining children.
 
 ### Code ###
 
-There are some methods you'll want to define in `BlahSource.m` and Quicksilver will call them at the appropriate time. This is not a complete list of available methods, just the ones I've run across and (I think) figured out. You can look at existing plug-ins for some example code.
+There are some methods you'll want to define in `BlahSource.m` and Quicksilver will call them at the appropriate time. This is not a complete list of available methods, just the ones I've run across and (I think) figured out. You can look at existing plug-ins for some example code. Note that many of these methods are only called by Quicksilver if you define something for `QSObjectHandlers` in `Info.plist`.
 
 The information for an entry (from `Info.plist`) can be pulled in like this:
 
@@ -141,8 +149,9 @@ There are several ways to create a `QSObject`. Here are a couple:
 
     QSObject *myObject = [QSObject objectWithString:string];
     QSObject *myObject = [QSObject objectWithName:name];
+    QSObject *myObject = [QSObject URLObjectWithURL:url];
 
-All of the available ways and the differences between them isn't entirely clear, so experiment and see what works for you. There are also things you may want to do to your objects prior to adding them to the array to be returned, like `setIdentifier:`, `setLabel:`, `setObject:forType:` etc. There's a whole section in this document on `QSObject` that provides more details.
+All of the available ways and the differences between them isn't entirely clear, so experiment and see what works for you. There are also things you may want to do to your objects prior to adding them to the array to be returned, like `setIdentifier:`, `setLabel:`, `setDetails:`, `setObject:forType:` etc. There's a whole section in this document on `QSObject` that provides more details.
 
 #### - (BOOL)indexIsValidFromDate:(NSDate *)indexDate forEntry:(NSDictionary *)theEntry
 
@@ -161,6 +170,17 @@ If you call `setIcon:` when adding objects to the catalog, they will show up at 
     [object setIcon:[QSResourceManager imageNamed:@"GenericNetworkIcon"]];
 
 Quicksilver calls this in real-time as objects need to be displayed, which is why it appears more reliably. (It's probably more efficient that way too, compared to storing an icon to everything in the catalog whether it gets used or not.)
+
+This method does not seem to be called for `QSObject`s created using `objectWithString:`. That method makes a call to `loadIcon:` internally, which must tell Quicksilver that it already has an icon and doesn't need to go look for one.
+
+#### - (BOOL)loadChildrenForObject:(QSObject *)object
+
+This is very similar to `objectsForEntry:`, but instead of adding things to the catalog, it loads them on the fly when you right arrow into the parent object. You just need to create an array of `QSObject`s, but instead of returning them, you assign them to an object like this:
+
+    [object setChildren:children];
+    return TRUE;
+
+These can be newly created objects or objects that are already in the catalog. In theory, you should be able to get existing items using `[QSObject objectWithIdentifier:uuid]`, but this seems to only work some of the time. I haven't figured out how to reliably set existing catalog objects as children.
 
 #### - (BOOL)isVisibleSource
 
@@ -221,7 +241,15 @@ I don't have a list of types Quicksilver already knows about or what might be sp
 
 #### Label ####
 
-This is optional, but if you want the text that appears most prominently in the user interface to be something other than the name, you can set this using `setLabel:@"some string"`. This is also the string that Quicksilver matches against when a user is typing, so keep that in mind. You can make things easier (or harder) for users to find in the catalog by messing with the label.
+This is optional, but if you want the text that appears most prominently in the user interface to be something other than the name, you can set this using `setLabel:@"some string"`.
+
+This is also the string that Quicksilver matches against when a user is typing, so keep that in mind. You can make things easier (or harder) for users to find in the catalog by messing with the label.
+
+#### Details ####
+
+The "details" string is the text that appears smaller underneath the label in most Quicksilver interfaces. Set it using `setDetails:@"some string"`.
+
+Setting this explicitly is optional but if you don't, Quicksilver will pick something. In some cases, it uses the identifier. Keep this in mind if your identifiers aren't very nice to look at.
 
 #### Icon ####
 
@@ -229,9 +257,17 @@ You can set an icon for a `QSObject` using the `setIcon:` method. I'm not even s
 
     [myObject setIcon:[QSResourceManager imageNamed:@"GenericNetworkIcon"]];
 
-I don't recommend using the `setIcon:` method when adding things to the catalog. (See the note on `setQuickIconForObject:` for an explanation.) However, using this method directly from one of your actions does work if you want to set the icon for something you're sending back to the Quicksilver UI.
+I don't recommend using the `setIcon:` method when adding things to the catalog. (See the note on `setQuickIconForObject:` for an explanation.) However, using this method directly from one of your actions does work if you want to set the icon temporarily for something you're sending back to the Quicksilver UI. (That too will go away, but this is only an issue if the user leaves the object you return up in the first pane.)
 
 FYI, if you want to use one of the standard system icons for something, many can be found in `/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources`. You can refer to them using only the file's name (no path and no ".icns" extension). To use the icon for an application, use it's bundle identifier, like `com.apple.Mail`.
+
+#### Children ####
+
+Usually, you'll load and set children on-the-fly using `loadChildrenForObject:`, but it does seem to be possible to set them when an object is first created as well. Assuming you have created an array of other `QSObject`s called "children", you can set them like this:
+
+    [myObject setChildren:children];
+
+These child objects will appear in the UI if a user select your object and hits → or /.
 
 #### Arbitrary Metadata ####
 
