@@ -29,7 +29,7 @@
 NSArray *MenuItemsForElement(AXUIElementRef element, int depth, NSString *name) {
   NSArray *children = nil;
   AXUIElementCopyAttributeValue(element, kAXChildrenAttribute, &children);
-  if (([children count] < 1) || (depth < 1)) {
+  if (([children count] < 1) || ([children count] > 50) || (depth < 1)) {
     QSObject *menuObject = (name) ? [QSObject objectForUIElement:element name:name] : [QSObject objectForUIElement:element];
     return (menuObject) ? [NSArray arrayWithObject:menuObject] : [NSArray array];
   }
