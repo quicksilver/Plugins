@@ -84,7 +84,7 @@ NSArray *MenuItemsForElement(AXUIElementRef element, int depth, NSString *name) 
 		AXUIElementRef menuBar;
 		AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
 	
-		NSArray *actions=MenuItemsForElement(menuBar,0,nil);
+		NSArray *actions=MenuItemsForElement(menuBar,1,nil);
 				
 		//NSLog(@"actions: %@",actions);
 		return [NSArray arrayWithObjects:[NSNull null],actions,nil];
