@@ -36,7 +36,7 @@
 - (QSObject *)appendToNote:(QSObject *)dObject content:(QSObject *)iObject{
 	NSString *uuid=[dObject objectForType:kQSYojimboPlugInType];
 	NSString *text=[iObject stringValue];
-	NSAppleEventDescriptor *ident=[[self script] executeSubroutine:@"append_to_note" arguments:[NSArray arrayWithObjects:uuid,text,nil] error:nil];
+    // NSAppleEventDescriptor *ident=[[self script] executeSubroutine:@"append_to_note" arguments:[NSArray arrayWithObjects:uuid,text,nil] error:nil];
 	return nil;
 }
 

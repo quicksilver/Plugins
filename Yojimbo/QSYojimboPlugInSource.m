@@ -33,6 +33,7 @@
 //}
 - (BOOL)loadChildrenForObject:(QSObject *)object{
 	[object setChildren:[self objectsForEntry:nil]];
+    return TRUE;
 }
 
 - (NSArray *) objectsForEntry:(NSDictionary *)theEntry{
