@@ -30,6 +30,16 @@ Etienne Samson offers this alternate technique:
 
 I'm sure this is good advice, but I don't know enough about Xcode to follow most of those steps, so I didn't. You probably should if you can.
 
+Many if the items in the template's `Info.plist` are named "SomethingTemplate". This prevents Quicksilver from having to process unused features. If you need to use settings in any of these sections, just rename them, removing "Template" from the end.
+
+## Documentation ##
+
+Before we get into the technical stuff, make sure you **provide adequate documentation** with any plug-in you create.
+
+This also goes for existing plug-ins that you're updating or fixing. Quicksilver plug-ins are notoriously light on documentation and as a result, people don't discover some of their best features for years. If you're not afraid to screw with the code, don't be afraid to screw with the documentation as well.
+
+The best place to document your plug-in is in the `Info.plist` by adding an `extendedDescription` to the `QSPlugIn` section. It can contain HTML.
+
 ## Actions ##
 
 The information in Ankur's tutorial is pretty good, but there are some things it doesn't mention.
