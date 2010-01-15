@@ -1,7 +1,7 @@
 
 
+#import "QSWebSearchPlugInDefines.h"
 #import "QSURLSearchActions.h"
-
 
 # define kURLSearchAction @"QSURLSearchAction"
 # define kURLSearchForAction @"QSURLSearchForAction"
@@ -28,7 +28,7 @@
 	if ([action isEqualToString:kURLSearchForAction] || [action isEqualToString:kURLSearchForAndReturnAction]){
 		NSString *webSearchString=[[NSPasteboard pasteboardWithName:NSFindPboard] stringForType:NSStringPboardType];
 		return [NSArray arrayWithObject: [QSObject textProxyObjectWithDefaultValue:(webSearchString?webSearchString:@"")]]; //[QSLibarrayForType:NSFilenamesPboardType];
-																															//        return [NSArray arrayWithObject:[QSTextEntryProxy sharedInstance]]; //[QSLibarrayForType:NSFilenamesPboardType];
+		// return [NSArray arrayWithObject:[QSTextEntryProxy sharedInstance]]; //[QSLibarrayForType:NSFilenamesPboardType];
 	}
 	
 	return nil;

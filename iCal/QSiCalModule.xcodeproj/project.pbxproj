@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 44;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		7F1BC7CB0893F777002F903E /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1BC7C90893F777002F903E /* QSFoundation.framework */; };
 		7F1BC89608944C9A002F903E /* iCal.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 7F1BC89508944C8F002F903E /* iCal.scpt */; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		CDBAD6CB10B9625E000D31A3 /* CalendarStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBAD6CA10B9625E000D31A3 /* CalendarStore.framework */; };
 		E1EAB046068128A200774DFF /* QSiCalModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSiCalModule.m */; };
 /* End PBXBuildFile section */
 
@@ -24,11 +25,12 @@
 		14DE8BB310D0A8A800851A6F /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		14DE8BB410D0A8A800851A6F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSiCalModule_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSiCalModule_Prefix.pch; sourceTree = "<group>"; };
-		7F1BC7C80893F777002F903E /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = ../../../Build/Release/QSCore.framework; sourceTree = SOURCE_ROOT; };
-		7F1BC7C90893F777002F903E /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSFoundation.framework; path = ../../../Build/Release/QSFoundation.framework; sourceTree = SOURCE_ROOT; };
+		7F1BC7C80893F777002F903E /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = "Apps/QS/blacktree-alchemy/Quicksilver/build/Release/QSCore.framework"; sourceTree = DEVELOPER_DIR; };
+		7F1BC7C90893F777002F903E /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSFoundation.framework; path = "Apps/QS/blacktree-alchemy/Quicksilver/build/Release/QSFoundation.framework"; sourceTree = DEVELOPER_DIR; };
 		7F1BC89508944C8F002F903E /* iCal.scpt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.scpt; path = iCal.scpt; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* iCal Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iCal Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDBAD6CA10B9625E000D31A3 /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = /System/Library/Frameworks/CalendarStore.framework; sourceTree = "<absolute>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E1EAB045068128A200774DFF /* QSiCalModule.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSiCalModule.m; sourceTree = "<group>"; };
 		E1EAB047068128A800774DFF /* QSiCalModule.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSiCalModule.h; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
 				7F1BC7CA0893F777002F903E /* QSCore.framework in Frameworks */,
 				7F1BC7CB0893F777002F903E /* QSFoundation.framework in Frameworks */,
+				CDBAD6CB10B9625E000D31A3 /* CalendarStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +60,7 @@
 				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
+				CDBAD6CA10B9625E000D31A3 /* CalendarStore.framework */,
 			);
 			name = QSiCalModule;
 			sourceTree = "<group>";
@@ -149,7 +153,7 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7F07B026085E433200E2AFC4 /* Build configuration list for PBXProject "QSiCalModule" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.0";
 			hasScannedForEncodings = 1;
 			mainGroup = 0259C574FE90428111CA0C5A /* QSiCalModule */;
 			projectDirPath = "";
@@ -228,6 +232,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14DE8BB410D0A8A800851A6F /* Release.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
 			};
 			name = Release;
 		};

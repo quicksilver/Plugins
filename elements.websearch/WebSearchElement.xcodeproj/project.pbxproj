@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14983B1B10D3C8D600ACE824 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14983B1710D3C8D600ACE824 /* QSCore.framework */; };
+		14983B1C10D3C8D600ACE824 /* QSEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14983B1810D3C8D600ACE824 /* QSEffects.framework */; };
+		14983B1D10D3C8D600ACE824 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14983B1910D3C8D600ACE824 /* QSFoundation.framework */; };
+		14983B1E10D3C8D600ACE824 /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14983B1A10D3C8D600ACE824 /* QSInterface.framework */; };
+		14983B1F10D3C8D600ACE824 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14983B1710D3C8D600ACE824 /* QSCore.framework */; };
+		14983B2010D3C8D600ACE824 /* QSEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14983B1810D3C8D600ACE824 /* QSEffects.framework */; };
+		14983B2110D3C8D600ACE824 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14983B1910D3C8D600ACE824 /* QSFoundation.framework */; };
+		14983B2210D3C8D600ACE824 /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14983B1A10D3C8D600ACE824 /* QSInterface.framework */; };
 		7F7EB2D70BFEB69300AFDF2C /* QSWebSearchPlugIn_Source.h in Resources */ = {isa = PBXBuildFile; fileRef = E1B32E9F078CCD0A0076DA42 /* QSWebSearchPlugIn_Source.h */; };
 		7F7EB2D80BFEB69300AFDF2C /* QSWebSearchSource.nib in Resources */ = {isa = PBXBuildFile; fileRef = E1B332FE078CD6980076DA42 /* QSWebSearchSource.nib */; };
 		7F7EB2D90BFEB69300AFDF2C /* QSObjectSource.name.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1F2DC1D078D977D007B9046 /* QSObjectSource.name.strings */; };
@@ -25,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14983B1710D3C8D600ACE824 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFramework; };
+		14983B1810D3C8D600ACE824 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFramework; };
+		14983B1910D3C8D600ACE824 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFramework; };
+		14983B1A10D3C8D600ACE824 /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFramework; };
 		14E29A5D10D11F2B00DCC5F2 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		14E29A5E10D11F2B00DCC5F2 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		14E29A5F10D11F2B00DCC5F2 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
@@ -33,15 +45,11 @@
 		14E29A6210D11F2B00DCC5F2 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
 		14E29A6310D11F2B00DCC5F2 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		14E29A6410D11F2B00DCC5F2 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		32DBCF980370C29C00C91783 /* QSWebSearchPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSWebSearchPlugIn_Prefix.pch; sourceTree = "<group>"; };
+		32DBCF980370C29C00C91783 /* QSWebSearchPlugInDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSWebSearchPlugInDefines.h; sourceTree = "<group>"; };
 		7F7EB2E90BFEB69300AFDF2C /* Web Search Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Web Search Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7EB40B0BFEB72500AFDF2C /* element.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
-		7FA985BD096F208600321006 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
-		7FA985BE096F208600321006 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
-		7FA985BF096F208600321006 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
-		7FA985C0096F208600321006 /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1AC9740486D14A00FE50C9 /* Web Search Module.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Web Search Module.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1AC9740486D14A00FE50C9 /* Web Search Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Web Search Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E1812CB2076BDBFA00A8EFA8 /* QSWebSearchController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSWebSearchController.h; sourceTree = "<group>"; };
 		E1812CB3076BDBFA00A8EFA8 /* QSWebSearchController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSWebSearchController.m; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F7EB2DF0BFEB69300AFDF2C /* Cocoa.framework in Frameworks */,
+				14983B1F10D3C8D600ACE824 /* QSCore.framework in Frameworks */,
+				14983B2010D3C8D600ACE824 /* QSEffects.framework in Frameworks */,
+				14983B2110D3C8D600ACE824 /* QSFoundation.framework in Frameworks */,
+				14983B2210D3C8D600ACE824 /* QSInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +83,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				14983B1B10D3C8D600ACE824 /* QSCore.framework in Frameworks */,
+				14983B1C10D3C8D600ACE824 /* QSEffects.framework in Frameworks */,
+				14983B1D10D3C8D600ACE824 /* QSFoundation.framework in Frameworks */,
+				14983B1E10D3C8D600ACE824 /* QSInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +120,7 @@
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1AC9740486D14A00FE50C9 /* Web Search Module.bundle */,
+				8D1AC9740486D14A00FE50C9 /* Web Search Module.qsplugin */,
 				7F7EB2E90BFEB69300AFDF2C /* Web Search Module.qsplugin */,
 			);
 			name = Products;
@@ -113,10 +129,10 @@
 		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7FA985BD096F208600321006 /* QSCore.framework */,
-				7FA985BE096F208600321006 /* QSEffects.framework */,
-				7FA985BF096F208600321006 /* QSFoundation.framework */,
-				7FA985C0096F208600321006 /* QSInterface.framework */,
+				14983B1710D3C8D600ACE824 /* QSCore.framework */,
+				14983B1810D3C8D600ACE824 /* QSEffects.framework */,
+				14983B1910D3C8D600ACE824 /* QSFoundation.framework */,
+				14983B1A10D3C8D600ACE824 /* QSInterface.framework */,
 				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -125,6 +141,7 @@
 		32DBCF9E0370C38000C91783 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E1EAB047068128A800774DFF /* QSWebSearchPlugIn.h */,
 				E1EAB045068128A200774DFF /* QSWebSearchPlugIn.m */,
 				E1812CB2076BDBFA00A8EFA8 /* QSWebSearchController.h */,
 				E1812CB3076BDBFA00A8EFA8 /* QSWebSearchController.m */,
@@ -141,8 +158,7 @@
 		32DBCF9F0370C38200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32DBCF980370C29C00C91783 /* QSWebSearchPlugIn_Prefix.pch */,
-				E1EAB047068128A800774DFF /* QSWebSearchPlugIn.h */,
+				32DBCF980370C29C00C91783 /* QSWebSearchPlugInDefines.h */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -200,7 +216,7 @@
 			name = "Web Search Module";
 			productInstallPath = "$(HOME)/Developer/Palettes";
 			productName = QSWebSearchPlugIn;
-			productReference = 8D1AC9740486D14A00FE50C9 /* Web Search Module.bundle */;
+			productReference = 8D1AC9740486D14A00FE50C9 /* Web Search Module.qsplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -318,10 +334,10 @@
 		};
 		7F69A1990D1F078400D5C99E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E29A6010D11F2B00DCC5F2 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Web Search Module";
-				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
@@ -329,9 +345,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14E29A6010D11F2B00DCC5F2 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Web Search Module";
-				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
@@ -341,7 +357,6 @@
 			buildSettings = {
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Web Search Module";
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -351,7 +366,6 @@
 			buildSettings = {
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Web Search Module";
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};

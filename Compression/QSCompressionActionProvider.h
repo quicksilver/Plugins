@@ -6,5 +6,6 @@
 
 
 @interface QSCompressionActionProvider : QSActionProvider
-
+{
+}
 @end

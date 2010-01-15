@@ -2,11 +2,10 @@
 // Prefix header for all source files of the 'QSWebSearchPlugIn' target in the 'QSWebSearchPlugIn' project
 //
 
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-	#import <QSFoundation/QSFoundation.h>
-	#import <QSCore/QSCore.h>
-#endif
+#import <Cocoa/Cocoa.h>
+#import <QSFoundation/QSFoundation.h>
+#import <QSCore/QSCore.h>
+
 
 
 #define kQSWebSearchPlugInType @"QSWebSearchPlugInType"

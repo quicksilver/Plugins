@@ -66,7 +66,7 @@
 			<key>icon</key>
 			<string>com.barebones.yojimbo</string>
 			<key>name</key>
-			<string>Append Text (Makes Plaintext)</string>
+			<string>Append Text</string>
 			<key>validatesObjects</key>
 			<true/>
 		</dict>

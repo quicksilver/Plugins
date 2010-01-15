@@ -228,7 +228,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14A6EEE710D02A44000B05B4 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				BUILD_DIR = "$(SYMROOT)/PlugIns/";
+				BUILD_DIR = "$(SYMROOT)/PlugIns";
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = QSEudoraPlugIn;
 				ZERO_LINK = YES;
