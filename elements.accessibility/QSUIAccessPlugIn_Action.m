@@ -26,7 +26,7 @@
 	return object;
 }
 
-NSArray *MenuItemsForElement(AXUIElementRef element, int depth, NSString *elementName, BOOL ignoreMenus) {
+NSArray *MenuItemsForElement(AXUIElementRef element, NSInteger depth, NSString *elementName, NSInteger menuIgnoreDepth) {
   NSArray *children = nil;
   AXUIElementCopyAttributeValue(element, kAXChildrenAttribute, &children);
   NSInteger childrenCount = [children count];
@@ -36,19 +36,23 @@ NSArray *MenuItemsForElement(AXUIElementRef element, int depth, NSString *elemen
   }
   
   NSMutableArray *menuItems = [NSMutableArray array];
-  BOOL appleMenuSkipped = NO;
-  BOOL servicesMenuSkipped = NO;
+  BOOL menuSkipped = NO;
   for (id child in children) {
     CFBooleanRef enabled = NULL;
     if ((AXUIElementCopyAttributeValue(child, kAXEnabledAttribute, &enabled) != kAXErrorSuccess) || (!CFBooleanGetValue(enabled))) continue;
     CFStringRef name = nil;
-    if (ignoreMenus && (!appleMenuSkipped || !servicesMenuSkipped)) {
-      if (AXUIElementCopyAttributeValue(child, kAXTitleAttribute, &name) == kAXErrorSuccess) {
-        if ([name isEqualToString:@"Apple"]) {appleMenuSkipped = YES; continue;}
-        if ([name isEqualToString:@"Services"]) {servicesMenuSkipped = YES; continue;}
-      }
+    
+    // try not to get the name attribute and test it unless we really have to
+    if (menuIgnoreDepth > 2 && !menuSkipped && (AXUIElementCopyAttributeValue(child, kAXTitleAttribute, &name) == kAXErrorSuccess) && [name isEqualToString:@"Apple"]) {
+      menuSkipped = YES;
+      continue;
     }
-   [menuItems addObjectsFromArray:MenuItemsForElement(child,depth - 1,name,NO)];
+    else if (menuIgnoreDepth > 0 && !menuSkipped && (AXUIElementCopyAttributeValue(child, kAXTitleAttribute, &name) == kAXErrorSuccess) && [name isEqualToString:@"Services"]) {
+      menuSkipped = YES;
+      continue;
+    }
+    
+    [menuItems addObjectsFromArray:MenuItemsForElement(child,depth - 1,name,menuIgnoreDepth - 1)];
   }
   
   return menuItems;
@@ -65,7 +69,7 @@ NSArray *MenuItemsForElement(AXUIElementRef element, int depth, NSString *elemen
 	AXUIElementRef app=AXUIElementCreateApplication (pid);	
 	AXUIElementRef menuBar;
 	AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
-	NSArray *items=MenuItemsForElement(menuBar,7,nil,YES);
+	NSArray *items=MenuItemsForElement(menuBar,7,nil,3);
 	
 	[QSPreferredCommandInterface showArray:items];
 	return nil;
@@ -185,7 +189,7 @@ void PressButtonInWindow(id buttonName, id window)
 		AXUIElementRef app=AXUIElementCreateApplication (pid);	
 		AXUIElementRef menuBar;
 		AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
-		NSArray *actions=MenuItemsForElement(menuBar,7,nil,YES);
+		NSArray *actions=MenuItemsForElement(menuBar,7,nil,3);
 		
 		//NSLog(@"actions: %@",actions);
 		return [NSArray arrayWithObjects:[NSNull null],actions,nil];
@@ -197,7 +201,7 @@ void PressButtonInWindow(id buttonName, id window)
 		AXUIElementRef menuBar;
 		AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
 	
-		NSArray *actions=MenuItemsForElement(menuBar,1,nil,YES);
+		NSArray *actions=MenuItemsForElement(menuBar,1,nil,0);
 				
 		//NSLog(@"actions: %@",actions);
 		return [NSArray arrayWithObjects:[NSNull null],actions,nil];
