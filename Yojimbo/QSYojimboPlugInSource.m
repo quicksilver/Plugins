@@ -30,7 +30,28 @@
 //    return nil;
 //}
 - (BOOL)loadChildrenForObject:(QSObject *)object{
-    [object setChildren:[self objectsForEntry:nil]];
+    if ([[object objectForMeta:@"itemKind"] isEqualToString:kQSYojimboTagType])
+    {
+        // right-arrowed into a tag
+        // return a list of matching items
+        NSMutableArray *children = [NSMutableArray arrayWithCapacity:1];
+        for (NSString *uuid in [object objectForMeta:@"items"])
+        {
+            NSLog(@"attempting to add item: %@", [QSObject objectWithIdentifier:uuid]);
+            [children addObject:[QSObject objectWithIdentifier:uuid]];
+        }
+        [object setChildren:children];
+    } else {
+        // right-arrowed into Yojimbo
+        // return a list of tags
+        NSMutableArray *tags = [NSMutableArray arrayWithCapacity:1];
+        for (QSObject *yojimboItem in [self objectsForEntry:nil])
+        {
+            if ([[yojimboItem objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.tag"])
+            [tags addObject:yojimboItem];
+        }
+        [object setChildren:tags];
+    }
     return TRUE;
 }
 
@@ -102,6 +123,8 @@
                     }
                     
                     if (newObject)
+                    // in order to find this as a child later, it seems we need to "register" it
+                        [QSObject registerObject:newObject withIdentifier:[item valueForKey:@"uuid"]];
                         [objects addObject:newObject];
                 }
                 @catch (id theException) {
@@ -206,7 +229,7 @@
 
 - (void)setQuickIconForObject:(QSObject *)object{
     // set some useful icons depending on the type of object
-    if ([[object objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.tag"])
+    if ([[object objectForMeta:@"itemKind"] isEqualToString:kQSYojimboTagType])
     {
         [object setIcon:[QSResourceManager imageNamed:@"com.barebones.yojimbo"]];
     } else if ([[object objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.yojimbopdfarchive"]) {
