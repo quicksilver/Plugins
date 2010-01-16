@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>87</string>
+	<string>93</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSYojimboAddAction</key>
@@ -111,7 +111,7 @@
 			<key>ID</key>
 			<string>QSPresetQSYojimboPlugIn</string>
 			<key>name</key>
-			<string>Yojimbo Items</string>
+			<string>Yojimbo Items and Tags</string>
 			<key>source</key>
 			<string>QSYojimboPlugInSource</string>
 		</dict>
