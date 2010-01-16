@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>93</string>
+	<string>A2</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSYojimboAddAction</key>
@@ -84,6 +84,8 @@
 			<string>com.barebones.yojimbo</string>
 			<key>name</key>
 			<string>Show in Yojimbo</string>
+			<key>precedence</key>
+			<string>2</string>
 		</dict>
 	</dict>
 	<key>QSPlugIn</key>
