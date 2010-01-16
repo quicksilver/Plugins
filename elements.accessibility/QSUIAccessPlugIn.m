@@ -13,18 +13,4 @@
 
 @implementation QSUIAccessPlugIn
 
-+ (void)loadPlugIn{
-	AXUIElementRef app=AXUIElementCreateApplication (8423);
-	NSLog(@"MO",app);
-
-
-	CFIndex count=-1;
-	NSArray *children=nil;
-	AXUIElementGetAttributeValueCount(app, kAXChildrenAttribute, &count);
-
-	AXUIElementCopyAttributeValues(app, kAXChildrenAttribute, 0, count, &children);
-
-	NSLog(@"children %d %@",count,children);
-
-}
 @end
