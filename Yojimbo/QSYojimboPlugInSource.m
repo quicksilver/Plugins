@@ -13,13 +13,11 @@
 
 @implementation QSYojimboPlugInSource
 - (BOOL)indexIsValidFromDate:(NSDate *)indexDate forEntry:(NSDictionary *)theEntry{
-  
-  NSString *path = [@"~/Library/Caches/Metadata/com.barebones.yojimbo" stringByStandardizingPath];
-  NSFileManager *manager = [NSFileManager defaultManager];
-  NSDate *modified = [[manager fileAttributesAtPath:path traverseLink:YES] fileModificationDate];
-  
-  return [indexDate compare:modified] == NSOrderedDescending;
-  
+    NSString *path = [@"~/Library/Caches/Metadata/com.barebones.yojimbo" stringByStandardizingPath];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSDate *modified = [[manager fileAttributesAtPath:path traverseLink:YES] fileModificationDate];
+    
+    return [indexDate compare:modified] == NSOrderedDescending;
 }
 
 - (NSImage *) iconForEntry:(NSDictionary *)dict{
@@ -32,55 +30,54 @@
 //    return nil;
 //}
 - (BOOL)loadChildrenForObject:(QSObject *)object{
-	[object setChildren:[self objectsForEntry:nil]];
+    [object setChildren:[self objectsForEntry:nil]];
     return TRUE;
 }
 
 - (NSArray *) objectsForEntry:(NSDictionary *)theEntry{
-NSString *path = [@"~/Library/Caches/Metadata/com.barebones.yojimbo" stringByStandardizingPath];
-NSFileManager *manager = [NSFileManager defaultManager];
-NSArray *contents = [manager directoryContentsAtPath:path];
-	
-	NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
-	QSObject *newObject = nil;
-  
-	for (NSString *topLevelDir in contents) {
-    topLevelDir = [path stringByAppendingPathComponent:topLevelDir];
-	  for (NSString *secondLevelDir in [manager directoryContentsAtPath:topLevelDir]) {
-	    secondLevelDir = [topLevelDir stringByAppendingPathComponent:secondLevelDir];
-	    for (NSString *yojimboItem in [manager directoryContentsAtPath:secondLevelDir]) {
-	      if ([yojimboItem rangeOfString:@"yojimbo"].location == NSNotFound) continue;
-	      yojimboItem = [secondLevelDir stringByAppendingPathComponent:yojimboItem];
-        NSDictionary *item = [NSDictionary dictionaryWithContentsOfFile:yojimboItem];
-        newObject = nil;
-        
-        @try {
-          if ([item valueForKey:@"urlString"]) {
-        		newObject=[QSObject URLObjectWithURL:[item valueForKey:@"urlString"] title:@""];
-        	}	else if ([item valueForKey:@"content"]){
-          	newObject=[QSObject objectWithString:[item valueForKey:@"content"]];
-          } else if ([[item valueForKey:@"encrypted"]boolValue]){
-          	newObject=[QSObject objectWithString:@"encrypted"];
-        		[newObject setDetails:@"Encrypted"];	
-        	}	else {
-            newObject = [QSObject objectWithString:@""];
-          }
-
-      		[newObject setName:[item valueForKey:@"name"]];
-        	[newObject setIdentifier:[item valueForKey:@"uuid"]];
-        	[newObject setObject:[item valueForKey:@"uuid"] forType:kQSYojimboPlugInType];
-
-        	if (newObject)
-        		[objects addObject:newObject];
-      	}
-      	@catch (id theException) {
-      		NSLog(@"error with: %@ %@", item, theException);
+    NSString *path = [@"~/Library/Caches/Metadata/com.barebones.yojimbo" stringByStandardizingPath];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSArray *contents = [manager directoryContentsAtPath:path];
+    
+    NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
+    QSObject *newObject = nil;
+    
+    for (NSString *topLevelDir in contents) {
+        topLevelDir = [path stringByAppendingPathComponent:topLevelDir];
+        for (NSString *secondLevelDir in [manager directoryContentsAtPath:topLevelDir]) {
+            secondLevelDir = [topLevelDir stringByAppendingPathComponent:secondLevelDir];
+            for (NSString *yojimboItem in [manager directoryContentsAtPath:secondLevelDir]) {
+                if ([yojimboItem rangeOfString:@"yojimbo"].location == NSNotFound) continue;
+                yojimboItem = [secondLevelDir stringByAppendingPathComponent:yojimboItem];
+                NSDictionary *item = [NSDictionary dictionaryWithContentsOfFile:yojimboItem];
+                newObject = nil;
+                
+                @try {
+                    if ([item valueForKey:@"urlString"]) {
+                        newObject=[QSObject URLObjectWithURL:[item valueForKey:@"urlString"] title:@""];
+                    } else if ([item valueForKey:@"content"]){
+                        newObject=[QSObject objectWithString:[item valueForKey:@"content"]];
+                    } else if ([[item valueForKey:@"encrypted"]boolValue]){
+                        newObject=[QSObject objectWithString:@"encrypted"];
+                        [newObject setDetails:@"Encrypted"];	
+                    } else {
+                        newObject = [QSObject objectWithString:@""];
+                    }
+                    
+                    [newObject setName:[item valueForKey:@"name"]];
+                    [newObject setIdentifier:[item valueForKey:@"uuid"]];
+                    [newObject setObject:[item valueForKey:@"uuid"] forType:kQSYojimboPlugInType];
+                    
+                    if (newObject)
+                        [objects addObject:newObject];
+                }
+                @catch (id theException) {
+                    NSLog(@"error with: %@ %@", item, theException);
+                }
+            }
         }
-      }
     }
-	}
-  
-  return objects;
+    return objects;
 }
 //
 //- (NSArray *) objectsForEntry:(NSDictionary *)theEntry{

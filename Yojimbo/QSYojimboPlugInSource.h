@@ -10,7 +10,7 @@
 
 @interface QSYojimboPlugInSource : QSObjectSource
 {
-	NSPersistentStoreCoordinator *persistentStoreCoordinator;
+    NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;
 //	@property BOOL enabled;
