@@ -15,11 +15,105 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>160</string>
+	<string>17D</string>
 	<key>NSPrincipalClass</key>
 	<string>QSUIAccessPlugIn</string>
 	<key>QSActions</key>
 	<dict>
+		<key>ActivateWindow</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSUIAccessPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>activateWindow:</string>
+			<key>directTypes</key>
+			<array>
+				<string>WindowsType</string>
+			</array>
+			<key>name</key>
+			<string>Activate Window</string>
+			<key>precedence</key>
+			<integer>3</integer>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>CloseWindow</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSUIAccessPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>closeWindow:</string>
+			<key>directTypes</key>
+			<array>
+				<string>WindowsType</string>
+			</array>
+			<key>name</key>
+			<string>Close Window</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>FocusedWindowForApp</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSUIAccessPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>focusedWindowForApp:</string>
+			<key>directTypes</key>
+			<array>
+				<string>qs.process</string>
+			</array>
+			<key>displaysResult</key>
+			<true/>
+			<key>name</key>
+			<string>Focused Window</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>GetWindowsForApp</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSUIAccessPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>getWindowsForApp:</string>
+			<key>directTypes</key>
+			<array>
+				<string>qs.process</string>
+			</array>
+			<key>displaysResult</key>
+			<true/>
+			<key>name</key>
+			<string>Show Windows</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>ListWindowsForApp</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSUIAccessPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>appWindows:activateWindow:</string>
+			<key>directTypes</key>
+			<array>
+				<string>qs.process</string>
+			</array>
+			<key>name</key>
+			<string>Windows…</string>
+		</dict>
+		<key>MinimizeWindow</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSUIAccessPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>minimizeWindow:</string>
+			<key>directTypes</key>
+			<array>
+				<string>WindowsType</string>
+			</array>
+			<key>name</key>
+			<string>Minimize Window</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
 		<key>QSGetUIElementsAction</key>
 		<dict>
 			<key>actionClass</key>
@@ -32,8 +126,6 @@
 			</array>
 			<key>displaysResult</key>
 			<true/>
-			<key>feature</key>
-			<integer>3</integer>
 			<key>name</key>
 			<string>Get UI Element</string>
 			<key>validatesObjects</key>
@@ -50,7 +142,7 @@
 				<string>qs.process</string>
 			</array>
 			<key>name</key>
-			<string>Menu Bar Items...</string>
+			<string>Menu Bar Items…</string>
 		</dict>
 		<key>QSPickMenusAction</key>
 		<dict>
@@ -63,7 +155,7 @@
 				<string>qs.process</string>
 			</array>
 			<key>name</key>
-			<string>Menu Bar...</string>
+			<string>Menu Bar…</string>
 		</dict>
 		<key>QSSearchMenuItemsAction</key>
 		<dict>
@@ -88,10 +180,8 @@
 			<array>
 				<string>qs.ui.element</string>
 			</array>
-			<key>feature</key>
-			<integer>2</integer>
 			<key>name</key>
-			<string>Perform Action...</string>
+			<string>Perform Action…</string>
 			<key>validatesObjects</key>
 			<false/>
 		</dict>
@@ -127,7 +217,41 @@
 			<key>validatesObjects</key>
 			<true/>
 		</dict>
+		<key>RaiseWindow</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSUIAccessPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>raiseWindow:</string>
+			<key>directTypes</key>
+			<array>
+				<string>WindowsType</string>
+			</array>
+			<key>enabled</key>
+			<false/>
+			<key>name</key>
+			<string>Raise Window</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>ZoomWindow</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSUIAccessPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>zoomWindow:</string>
+			<key>directTypes</key>
+			<array>
+				<string>WindowsType</string>
+			</array>
+			<key>name</key>
+			<string>Zoom Window</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
 	</dict>
+	<key>QSLoadImmediately</key>
+	<true/>
 	<key>QSPlugIn</key>
 	<dict>
 		<key>author</key>
@@ -137,9 +261,9 @@
 			<string>System</string>
 		</array>
 		<key>description</key>
-		<string>Access the menus of running applications.</string>
+		<string>Access the menus and windows of running applications.</string>
 		<key>extendedDescription</key>
-		<string>Access the menus of running applications.&lt;P&gt;&lt;h3&gt;Requirements&lt;/h3&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Access for assistive devices must be enabled in Universal Access pane of System Preferences&lt;/ul&gt;</string>
+		<string>Access the menus and windows of running applications.&lt;P&gt;&lt;h3&gt;Requirements&lt;/h3&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Access for assistive devices must be enabled in Universal Access pane of System Preferences&lt;/ul&gt;</string>
 		<key>icon</key>
 		<string>menu</string>
 	</dict>
@@ -149,6 +273,37 @@
 		<dict>
 			<key>QSUIAccessPlugIn_Action</key>
 			<string>QSUIAccessPlugIn_Action</string>
+		</dict>
+		<key>QSCommands</key>
+		<dict>
+			<key>ShowAllAppWindowsCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directID</key>
+					<string>AllAppWindowsMessage</string>
+					<key>name</key>
+					<string>Show All Windows</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>QSInternalMessages</key>
+		<dict>
+			<key>AllAppWindowsMessage</key>
+			<dict>
+				<key>actionClass</key>
+				<string>QSUIAccessPlugIn_Action</string>
+				<key>actionSelector</key>
+				<string>allAppWindows:</string>
+				<key>icon</key>
+				<string>Object</string>
+				<key>name</key>
+				<string>Show All Windows</string>
+				<key>runInMainThread</key>
+				<true/>
+			</dict>
 		</dict>
 		<key>QSObjectHandlers</key>
 		<dict>
@@ -165,5 +320,18 @@
 		<key>version</key>
 		<string>1337</string>
 	</dict>
+	<key>QSTriggerAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>ShowAllAppWindowsCommand</string>
+			<key>command</key>
+			<string>ShowAllAppWindowsCommand</string>
+			<key>set</key>
+			<string>Quicksilver</string>
+			<key>type</key>
+			<string>QSHotKeyTrigger</string>
+		</dict>
+	</array>
 </dict>
 </plist>
