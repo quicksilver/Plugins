@@ -30,15 +30,18 @@
 //    return nil;
 //}
 - (BOOL)loadChildrenForObject:(QSObject *)object{
+    // FIXME this method currently causes all items to be loaded from disk on every call
     if ([[object objectForMeta:@"itemKind"] isEqualToString:kQSYojimboTagType])
     {
         // right-arrowed into a tag
         // return a list of matching items
         NSMutableArray *children = [NSMutableArray arrayWithCapacity:1];
-        for (NSString *uuid in [object objectForMeta:@"items"])
+        for (QSObject *yojimboItem in [self objectsForEntry:nil])
         {
-            NSLog(@"attempting to add item: %@", [QSObject objectWithIdentifier:uuid]);
-            [children addObject:[QSObject objectWithIdentifier:uuid]];
+            if ([[yojimboItem objectForMeta:@"tags"] containsObject:[object name]])
+            {
+                [children addObject:yojimboItem];
+            }
         }
         [object setChildren:children];
     } else {
@@ -59,6 +62,7 @@
     NSString *path = [@"~/Library/Caches/Metadata/com.barebones.yojimbo" stringByStandardizingPath];
     NSFileManager *manager = [NSFileManager defaultManager];
     NSArray *contents = [manager directoryContentsAtPath:path];
+    // pretty names for various types of items Yojimbo stores
     NSDictionary *typeTable = [NSDictionary dictionaryWithObjectsAndKeys:
         @"Yojimbo Note", @"com.barebones.yojimbo.yojimbonote",
         @"Yojimbo Bookmark", @"com.barebones.yojimbo.yojimbobookmark",
@@ -74,6 +78,7 @@
     QSObject *tagObject = nil;
     NSMutableDictionary *tags = [NSMutableDictionary dictionaryWithCapacity:1];
     
+    // NSLog(@"Yojimbo plug-in hitting the filesystem");
     for (NSString *topLevelDir in contents) {
         topLevelDir = [path stringByAppendingPathComponent:topLevelDir];
         for (NSString *secondLevelDir in [manager directoryContentsAtPath:topLevelDir]) {
@@ -107,8 +112,13 @@
                     [newObject setObject:[item valueForKey:@"uuid"] forType:kQSYojimboPlugInType];
                     // store the type of Yojimbo item
                     [newObject setObject:[item valueForKey:@"itemKind"] forMeta:@"itemKind"];
+                    // store this item's tags
+                    [newObject setObject:[item valueForKey:@"tags"] forMeta:@"tags"];
                     
                     // get a list of all tags and the associated items
+                    /* I was hoping to use these UUIDs to pull existing items out of the catalog,
+                       but that doesn't seem to work, so they're not really used, but might as
+                       well store them while we're looping through */
                     for (NSString *tag in [item valueForKey:@"tags"])
                     {
                         if ([[tags allKeys] containsObject:tag])
