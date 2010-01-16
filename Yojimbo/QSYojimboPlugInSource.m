@@ -41,6 +41,8 @@
     
     NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
     QSObject *newObject = nil;
+    QSObject *tagObject = nil;
+    NSMutableDictionary *tags = [NSMutableDictionary dictionaryWithCapacity:1];
     
     for (NSString *topLevelDir in contents) {
         topLevelDir = [path stringByAppendingPathComponent:topLevelDir];
@@ -68,6 +70,20 @@
                     [newObject setIdentifier:[item valueForKey:@"uuid"]];
                     [newObject setObject:[item valueForKey:@"uuid"] forType:kQSYojimboPlugInType];
                     
+                    // get a list of all tags and the associated items
+                    for (NSString *tag in [item valueForKey:@"tags"])
+                    {
+                        if ([[tags allKeys] containsObject:tag])
+                        {
+                            // append to the list
+                            [[tags objectForKey:tag] addObject:[item valueForKey:@"uuid"]];
+                        } else {
+                            // create a list of items for this tag
+                            NSMutableArray *itemsForTag = [NSMutableArray arrayWithObject:[item valueForKey:@"uuid"]];
+                            [tags setObject:itemsForTag forKey:tag];
+                        }
+                    }
+                    
                     if (newObject)
                         [objects addObject:newObject];
                 }
@@ -76,6 +92,17 @@
                 }
             }
         }
+    }
+    // add tags to the catalog
+    for (NSString *tag in [tags allKeys])
+    {
+        NSString *ident = [NSString stringWithFormat:@"yojimbotag:%@", tag];
+        tagObject = [QSObject objectWithName:tag];
+        [tagObject setIdentifier:ident];
+        [tagObject setObject:tag forType:kQSYojimboTagType];
+        [tagObject setObject:[tags objectForKey:tag] forMeta:@"items"];
+        [tagObject setDetails:@"Yojimbo Tag"];
+        [objects addObject:tagObject];
     }
     return objects;
 }
@@ -158,10 +185,11 @@
 
 // Object Handler Methods
 
-/*
 - (void)setQuickIconForObject:(QSObject *)object{
-    [object setIcon:nil]; // An icon that is either already in memory or easy to load
+    NSLog(@"loading icon for object: %@", [object name]);
+    [object setIcon:[QSResourceManager imageNamed:@"com.barebones.yojimbo"]];
 }
+/*
 - (BOOL)loadIconForObject:(QSObject *)object{
 	return NO;
     id data=[object objectForType:kQSYojimboPlugInType];
