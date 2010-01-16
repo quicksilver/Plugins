@@ -55,20 +55,27 @@
                 newObject = nil;
                 
                 @try {
-                    if ([item valueForKey:@"urlString"]) {
-                        newObject=[QSObject URLObjectWithURL:[item valueForKey:@"urlString"] title:@""];
-                    } else if ([item valueForKey:@"content"]){
-                        newObject=[QSObject objectWithString:[item valueForKey:@"content"]];
-                    } else if ([[item valueForKey:@"encrypted"]boolValue]){
-                        newObject=[QSObject objectWithString:@"encrypted"];
-                        [newObject setDetails:@"Encrypted"];	
+                    if ([[item valueForKey:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.yojimbobookmark"]) {
+                        // Christ, BareBones! You can't settle on a capitalization scheme for dictionary keys?
+                        NSString *URLString;
+                        if ([item valueForKey:@"URLString"]) {
+                            URLString = [item valueForKey:@"URLString"];
+                        } else if ([item valueForKey:@"urlString"]) {
+                            URLString = [item valueForKey:@"urlString"];
+                        }
+                        newObject = [QSObject URLObjectWithURL:URLString title:[item valueForKey:@"name"]];
                     } else {
-                        newObject = [QSObject objectWithString:@""];
+                        newObject=[QSObject objectWithName:[item valueForKey:@"name"]];
                     }
                     
-                    [newObject setName:[item valueForKey:@"name"]];
-                    [newObject setIdentifier:[item valueForKey:@"uuid"]];
+                    // [newObject setName:[item valueForKey:@"name"]];
+                    [newObject setDetails:[item valueForKey:@"itemKind"]];
+                    if ([[item valueForKey:@"encrypted"]boolValue]){
+                        [newObject setDetails:@"Encrypted"];
+                    }                    [newObject setIdentifier:[item valueForKey:@"uuid"]];
                     [newObject setObject:[item valueForKey:@"uuid"] forType:kQSYojimboPlugInType];
+                    // store the type of Yojimbo item
+                    [newObject setObject:[item valueForKey:@"itemKind"] forMeta:@"itemKind"];
                     
                     // get a list of all tags and the associated items
                     for (NSString *tag in [item valueForKey:@"tags"])
@@ -101,6 +108,8 @@
         [tagObject setIdentifier:ident];
         [tagObject setObject:tag forType:kQSYojimboTagType];
         [tagObject setObject:[tags objectForKey:tag] forMeta:@"items"];
+        // tags don't have an official itemKind, but I'm making one up for consitency
+        [tagObject setObject:kQSYojimboTagType forMeta:@"itemKind"];
         [tagObject setDetails:@"Yojimbo Tag"];
         [objects addObject:tagObject];
     }
@@ -186,8 +195,15 @@
 // Object Handler Methods
 
 - (void)setQuickIconForObject:(QSObject *)object{
-    NSLog(@"loading icon for object: %@", [object name]);
-    [object setIcon:[QSResourceManager imageNamed:@"com.barebones.yojimbo"]];
+    // set some useful icons depending on the type of object
+    if ([[object objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.tag"])
+    {
+        [object setIcon:[QSResourceManager imageNamed:@"com.barebones.yojimbo"]];
+    } else if ([[object objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.yojimbopdfarchive"]) {
+        [object setIcon:[[NSWorkspace sharedWorkspace] iconForFileType:@"pdf"]];
+    } else {
+        [object setIcon:[[NSWorkspace sharedWorkspace] iconForFileType:@"yojimbonote"]];
+    }
 }
 /*
 - (BOOL)loadIconForObject:(QSObject *)object{
