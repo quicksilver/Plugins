@@ -10,3 +10,4 @@
 
 
 #define kQSYojimboPlugInType @"com.barebones.yojimbo.item"
+#define kQSYojimboTagType @"com.barebones.yojimbo.tag"
