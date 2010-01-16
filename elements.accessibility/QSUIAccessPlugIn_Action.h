@@ -8,6 +8,8 @@
 
 #define kQSUIElementType @"qs.ui.element"
 #define kQSUIActionType @"qs.ui.action"
+#define kWindowsAction @"WindowsAction"
+#define kWindowsProcessType @"WindowsProcessInfo"
 
 //#import <QSCore/QSObject.h>
 //#import <QSCore/QSActionProvider.h>
@@ -16,6 +18,15 @@
 @interface QSUIAccessPlugIn_Action : QSActionProvider
 {
 }
+- (QSObject *)getWindowsForApp:(QSObject *)dObject;
+- (QSObject *)focusedWindowForApp:(QSObject *)dObject;
+- (QSObject *)appWindows:(QSObject *)dObject raiseWindow:(QSObject *)iObject;
+- (QSObject *)activateWindow:(QSObject *)dObject;
+- (QSObject *)raiseWindow:(QSObject *)dObject;
+- (void)pressButton:(id)button inWindow:(id)window;
+- (QSObject *)zoomWindow:(QSObject *)dObject;
+- (QSObject *)allAppWindows:(QSObject *)dObject;
+
 - (QSObject *)resolvedProxy:(QSObject *)dObject;
 @end
 
