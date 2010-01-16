@@ -38,6 +38,15 @@
     NSString *path = [@"~/Library/Caches/Metadata/com.barebones.yojimbo" stringByStandardizingPath];
     NSFileManager *manager = [NSFileManager defaultManager];
     NSArray *contents = [manager directoryContentsAtPath:path];
+    NSDictionary *typeTable = [NSDictionary dictionaryWithObjectsAndKeys:
+        @"Yojimbo Note", @"com.barebones.yojimbo.yojimbonote",
+        @"Yojimbo Bookmark", @"com.barebones.yojimbo.yojimbobookmark",
+        @"Yojimbo Web Archive", @"com.barebones.yojimbo.yojimbowebarchive",
+        @"Yojimbo PDF Archive", @"com.barebones.yojimbo.yojimbopdfarchive",
+        @"Yojimbo Serial Number", @"com.barebones.yojimbo.yojimboserialnumber",
+        @"Yojimbo Image", @"com.barebones.yojimbo.yojimboimage",
+        nil
+    ];
     
     NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
     QSObject *newObject = nil;
@@ -65,14 +74,15 @@
                         }
                         newObject = [QSObject URLObjectWithURL:URLString title:[item valueForKey:@"name"]];
                     } else {
-                        newObject=[QSObject objectWithName:[item valueForKey:@"name"]];
+                        newObject = [QSObject objectWithName:[item valueForKey:@"name"]];
                     }
                     
-                    // [newObject setName:[item valueForKey:@"name"]];
-                    [newObject setDetails:[item valueForKey:@"itemKind"]];
                     if ([[item valueForKey:@"encrypted"]boolValue]){
-                        [newObject setDetails:@"Encrypted"];
-                    }                    [newObject setIdentifier:[item valueForKey:@"uuid"]];
+                        [newObject setDetails:[NSString stringWithFormat:@"%@ (Encrypted)", [typeTable valueForKey:[item valueForKey:@"itemKind"]]]];
+                    } else {
+                        [newObject setDetails:[typeTable valueForKey:[item valueForKey:@"itemKind"]]];
+                    }
+                    [newObject setIdentifier:[item valueForKey:@"uuid"]];
                     [newObject setObject:[item valueForKey:@"uuid"] forType:kQSYojimboPlugInType];
                     // store the type of Yojimbo item
                     [newObject setObject:[item valueForKey:@"itemKind"] forMeta:@"itemKind"];
