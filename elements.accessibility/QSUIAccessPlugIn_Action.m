@@ -75,7 +75,7 @@ NSArray *MenuItemsForElement(AXUIElementRef element, NSInteger depth, NSString *
 	return nil;
 }	
 
-NSArray *WindowsForApp(id process)
+NSArray *WindowsForApp(id process, BOOL appName)
 {
 	pid_t pid = [[process objectForKey:@"NSApplicationProcessIdentifier"] intValue];
   AXUIElementRef appElement = AXUIElementCreateApplication(pid);
@@ -83,7 +83,17 @@ NSArray *WindowsForApp(id process)
   AXUIElementCopyAttributeValue(appElement, kAXWindowsAttribute, &appWindows);
   NSMutableArray *windowObjects = [NSMutableArray array];
   for (id aWindow in appWindows) {
-    QSObject *object = [QSObject objectForWindow:aWindow];
+    QSObject *object = nil;
+    if (appName) {
+      NSString *windowTitle = nil;
+      AXUIElementCopyAttributeValue(aWindow, kAXTitleAttribute, &windowTitle);
+      if (!windowTitle) continue;
+      windowTitle = [windowTitle stringByAppendingFormat:@" — %@",[process objectForKey:@"NSApplicationName"]];
+      object = [QSObject objectForWindow:aWindow name:windowTitle];
+    }
+    else {
+      object = [QSObject objectForWindow:aWindow];
+    }
     if (!object) continue;
     [object setObject:process forType:kWindowsProcessType];
     [windowObjects addObject:object];
@@ -95,7 +105,7 @@ NSArray *WindowsForApp(id process)
 {
   dObject = [self resolvedProxy:dObject];
   id process = [dObject objectForType:QSProcessType];
-  NSArray *windowObjects = WindowsForApp(process);
+  NSArray *windowObjects = WindowsForApp(process, NO);
   return (windowObjects) ? [QSPreferredCommandInterface showArray:windowObjects] : nil;
 }
 
@@ -175,7 +185,7 @@ void PressButtonInWindow(id buttonName, id window)
   NSArray *launchedApps = [[NSWorkspace sharedWorkspace] launchedApplications];
   NSMutableArray *windows = [NSMutableArray array];
   for (NSDictionary *anApp in launchedApps) {
-    NSArray *windowObjects = WindowsForApp(anApp);
+    NSArray *windowObjects = WindowsForApp(anApp, YES);
     if (windowObjects) [windows addObjectsFromArray:windowObjects];
   }
 	[QSPreferredCommandInterface showArray:windows];
@@ -209,7 +219,7 @@ void PressButtonInWindow(id buttonName, id window)
 	}else if ([action isEqualToString:@"ListWindowsForApp"]) {
 	  dObject = [self resolvedProxy:dObject];
     id process = [dObject objectForType:QSProcessType];
-    NSArray *windowObjects = WindowsForApp(process);
+    NSArray *windowObjects = WindowsForApp(process, NO);
     return (windowObjects) ? [NSArray arrayWithObjects:[NSNull null],windowObjects,nil] : [NSArray array];
 	}else{
 		AXUIElementRef element=[dObject objectForType:kQSUIElementType];
