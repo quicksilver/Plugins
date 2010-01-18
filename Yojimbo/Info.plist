@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>A8</string>
+	<string>B5</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSYojimboAddAction</key>
@@ -23,23 +23,24 @@
 			<key>actionClass</key>
 			<string>QSYojimboPlugInAction</string>
 			<key>actionSelector</key>
-			<string>addObject:withTags:</string>
+			<string>addObject:withName:</string>
 			<key>directTypes</key>
 			<array>
 				<string>NSStringPboardType</string>
 				<string>Apple URL pasteboard type</string>
 			</array>
+			<key>displaysResult</key>
+			<true/>
 			<key>icon</key>
 			<string>com.barebones.yojimbo</string>
 			<key>indirectOptional</key>
-			<true/>
+			<false/>
 			<key>indirectTypes</key>
 			<array>
 				<string>NSString</string>
-				<string>com.barebones.yojimbo.tag</string>
 			</array>
 			<key>name</key>
-			<string>Add to Yojimbo</string>
+			<string>Add to Yojimbo…</string>
 			<key>validatesObjects</key>
 			<true/>
 		</dict>
@@ -93,6 +94,32 @@
 			<string>Show in Yojimbo</string>
 			<key>precedence</key>
 			<string>2</string>
+		</dict>
+		<key>QSYojimboTagAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSYojimboPlugInAction</string>
+			<key>actionSelector</key>
+			<string>addTagsToItem:withTags:</string>
+			<key>directTypes</key>
+			<array>
+				<string>com.barebones.yojimbo.item</string>
+			</array>
+			<key>icon</key>
+			<string>com.barebones.yojimbo</string>
+			<key>indirectOptional</key>
+			<false/>
+			<key>indirectTypes</key>
+			<array>
+				<string>NSString</string>
+				<string>com.barebones.yojimbo.tag</string>
+			</array>
+			<key>name</key>
+			<string>Add Tags to Item…</string>
+			<key>precedence</key>
+			<string>1</string>
+			<key>validatesObjects</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>QSPlugIn</key>

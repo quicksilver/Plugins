@@ -20,50 +20,68 @@
     return script;
 }
 
-- (QSObject *)addObject:(QSObject *)dObject withTags:(QSObject *)tags
+- (QSObject *)addObject:(QSObject *)dObject withName:(QSObject *)itemName
 {
     BOOL isURL=[dObject containsType:QSURLType];
-    // get a list of tags passed in
-    NSMutableArray *tagNames = [NSMutableArray arrayWithCapacity:1];
-    for (QSObject *tag in [tags objectForCache:kQSObjectComponents])
-    {
-        [tagNames addObject:[tag stringValue]];
-    }
-    NSAppleEventDescriptor *ident=[[self script]
+    NSAppleEventDescriptor *appleScriptResult=[[self script]
         executeSubroutine:isURL?@"add_url":@"add_note"
         arguments:[NSArray arrayWithObjects:
-            [dObject displayName],
-            [dObject stringValue],
-            tagNames,
+            [itemName stringValue], // item name
+            [dObject stringValue],  // item contents
             nil
         ]
         error:nil];
     
-    NSString *uuid= [ident stringValue];
-    // FIXME this should probably be makeObjectWithIdentifier
-    QSObject *newObject=[QSObject objectWithIdentifier:uuid];   
-    [newObject setName:[dObject name]];
+    NSString *uuid= [appleScriptResult stringValue];
+    QSObject *newObject=[QSObject makeObjectWithIdentifier:uuid];
+    [newObject setName:[itemName stringValue]];
     [newObject setIdentifier:uuid];
     [newObject setObject:uuid forType:kQSYojimboPlugInType];
     [newObject setPrimaryType:kQSYojimboPlugInType];
     return newObject;
 }
 
+- (QSObject *)addTagsToItem:(QSObject *)dObject withTags:(QSObject *)tags
+{
+    // get a list of tags passed in
+    NSMutableArray *tagNames = [NSMutableArray arrayWithCapacity:1];
+    if ([[tags stringValue] isEqualToString:@"combined objects"])
+    {
+        // multiple tags
+        for (QSObject *tag in [tags objectForCache:kQSObjectComponents])
+        {
+            [tagNames addObject:[tag stringValue]];
+        }
+    } else {
+        // single tag
+        [tagNames addObject:[tags stringValue]];
+    }
+    // add the tags to the item via AppleScript
+    // NSLog(@"attempting to tag %@ with %@", [dObject identifier], tagNames);
+    [[self script]
+        executeSubroutine:@"add_tags"
+        arguments:[NSArray arrayWithObjects:
+            [dObject identifier],
+            tagNames,
+            nil
+        ]
+        error:nil
+    ];
+}
+
 // TODO this appears to be unused. Either fix it or remove it
 - (QSObject *)appendToNote:(QSObject *)dObject content:(QSObject *)iObject{
     NSString *uuid=[dObject objectForType:kQSYojimboPlugInType];
     NSString *text=[iObject stringValue];
-    // NSAppleEventDescriptor *ident=[[self script] executeSubroutine:@"append_to_note" arguments:[NSArray arrayWithObjects:uuid,text,nil] error:nil];
+    // NSAppleEventDescriptor *appleScriptResult=[[self script] executeSubroutine:@"append_to_note" arguments:[NSArray arrayWithObjects:uuid,text,nil] error:nil];
     return nil;
 }
 
-// TODO add tag support to this action as well
 - (QSObject *)addObjectArchive:(QSObject *)dObject{
-    NSAppleEventDescriptor *ident=[[self script] executeSubroutine:@"add_url_archive" arguments:[NSArray arrayWithObject:[dObject objectForType:QSURLType]]
+    NSAppleEventDescriptor *appleScriptResult=[[self script] executeSubroutine:@"add_url_archive" arguments:[NSArray arrayWithObject:[dObject objectForType:QSURLType]]
                                                              error:nil];
-    NSString *uuid= [ident stringValue];
-    // FIXME this should probably be makeObjectWithIdentifier
-    QSObject *newObject=[QSObject objectWithIdentifier:uuid];   
+    NSString *uuid= [appleScriptResult stringValue];
+    QSObject *newObject=[QSObject makeObjectWithIdentifier:uuid];   
     [newObject setName:[dObject name]];
     [newObject setIdentifier:uuid];
     [newObject setObject:uuid forType:kQSYojimboPlugInType];
@@ -74,19 +92,31 @@
 
 - (QSObject *)showObject:(QSObject *)dObject{
     NSString *uuid=[dObject objectForType:kQSYojimboPlugInType];
-    NSAppleEventDescriptor *ident=[[self script] executeSubroutine:@"show_item" arguments:uuid error:nil];
+    NSAppleEventDescriptor *appleScriptResult=[[self script] executeSubroutine:@"show_item" arguments:uuid error:nil];
     return nil;
 }
 
 - (NSArray *) validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject{
-    if ([dObject containsType:kQSYojimboPlugInType]) return [NSArray arrayWithObject:@"QSYojimboAppendAction"];
-    else return [NSArray arrayWithObject:@"QSYojimboAddAction"];
+    if ([dObject containsType:kQSYojimboPlugInType])
+    {
+        return [NSArray arrayWithObjects:
+            @"QSYojimboTagAction",
+            @"QSYojimboAppendAction",
+            nil
+        ];
+    } else {
+        return [NSArray arrayWithObject:@"QSYojimboAddAction"];
+    }
 }
 
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
     // QSObject *textObject=[QSObject textProxyObjectWithDefaultValue:@""];
     // return [NSArray arrayWithObject:textObject];
     if ([action isEqualToString:@"QSYojimboAddAction"])
+    {
+        return [NSArray arrayWithObject: [QSObject textProxyObjectWithDefaultValue:[dObject name]]];
+    }
+    if ([action isEqualToString:@"QSYojimboTagAction"])
     {
         // TODO polulate this array with actual tag objects
         return [NSArray arrayWithObjects:
