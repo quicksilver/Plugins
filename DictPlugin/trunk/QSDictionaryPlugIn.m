@@ -8,46 +8,17 @@
 
 #import "QSDictionaryPlugIn.h"
 //#import <QSFoundation/NSTask_BLTRExtensions.h>
+#import "DCSPrivate.h"
 
-
-#define THESAURUS_NAME @"Oxford American Writers Thesaurus"
+#define THESAURUS_NAME @"Oxford American Writer's Thesaurus"
 #define DICTIONARY_NAME	@"New Oxford American Dictionary"
 
 @implementation QSDictionaryPlugIn
 - (void)lookupWord:(NSString *)word inDictionary:(NSString *)dictName{
-	word=[word lowercaseString];
-    CFRange range;
-    range.location = 0;
-    range.length = [word length];
-    NSString *definition;
-    definition = (NSString*)DCSCopyTextDefinition( NULL, (CFStringRef)word, range);
-    
-  	if (![definition length])
-        definition = [NSString stringWithFormat:@"\"%@\" could not be found.", word];
-    else definition = [definition stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"];
-    
-    id cont = [[NSClassFromString(@"QSSimpleWebWindowController") alloc] initWithWindow:nil];
-    [[cont window] center];
-    [[cont window] setLevel:NSFloatingWindowLevel];
-    [[cont window] setTitle:[NSString stringWithFormat:@"%@", word]];
-    [[cont window] makeKeyAndOrderFront:nil];	
-		
-#if 0
-	NSString *str = [NSString stringWithFormat:@"\"%@\" \"%@\" \"%@\"",[[NSBundle bundleForClass:[self class]] pathForResource:@"QSDictionaryLookup" ofType:@""], word, dictName];
-	//NSLog(@"string %@",str);
-	FILE *file = popen( [str UTF8String], "r" );
-	NSMutableData *pipeData=[NSMutableData data];
-	if( file )
-	{
-		char buffer[1024];
-		size_t length;
-		while (length = fread( buffer, 1, sizeof( buffer ), file ))[pipeData appendBytes:buffer length:length];
-		string=[[[NSString alloc]initWithData:pipeData encoding:NSUTF8StringEncoding]autorelease];
-		pclose( file );
-	}
-#endif
-
-	[cont loadHTMLString:definition baseURL:nil];
+  NSURL *dictURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"/Library/Dictionaries/%@.dictionary",dictName]];
+  DCSDictionaryRef dict = NULL;
+  if (dictURL) dict = DCSDictionaryCreate(dictURL);
+  HIDictionaryWindowShow(dict,word,CFRangeMake(0,[word length]),NULL,CGPointMake(0,0),NO,NULL);
 }
 
 - (QSObject *)lookupWordInDictionary:(QSObject *)dObject{

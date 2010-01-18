@@ -49,6 +49,7 @@
 		14A883F910CFC2E2007D08C4 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
 		14A883FA10CFC2E2007D08C4 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		14A883FB10CFC2E2007D08C4 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		2B915FF41104230500A63CE5 /* DCSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSPrivate.h; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* DictPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictPlugin_Prefix.pch; sourceTree = "<group>"; };
 		4DAD2F2D0E12633B00932F54 /* QSDictionaryLookup.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSDictionaryLookup.xcodeproj; path = QSDictionaryLookupProject/QSDictionaryLookup.xcodeproj; sourceTree = "<group>"; };
 		4DAD2F360E12634600932F54 /* DictProtocolTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = DictProtocolTest.xcodeproj; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				32DBCF980370C29C00C91783 /* DictPlugin_Prefix.pch */,
+				2B915FF41104230500A63CE5 /* DCSPrivate.h */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
