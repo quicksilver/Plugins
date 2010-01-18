@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>C3</string>
+	<string>CA</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSYojimboAddAction</key>
@@ -137,6 +137,8 @@
 	</dict>
 	<key>QSPlugIn</key>
 	<dict>
+		<key>author</key>
+		<string>Rob McBroom and many others</string>
 		<key>categories</key>
 		<array>
 			<string>Text</string>
@@ -149,8 +151,6 @@
 		<string>com.barebones.yojimbo</string>
 		<key>qsversion</key>
 		<string>29CC</string>
-		<key>author</key>
-		<string>Rob McBroom and many others</string>
 		<key>relatedBundles </key>
 		<array>
 			<string>com.barebones.yojimbo</string>
