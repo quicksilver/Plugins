@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>CA</string>
+	<string>D3</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSYojimboAddAction</key>
@@ -83,11 +83,11 @@
 				<string>com.barebones.yojimbo.item</string>
 			</array>
 			<key>enabled</key>
-			<false/>
+			<true/>
 			<key>icon</key>
 			<string>com.barebones.yojimbo</string>
 			<key>name</key>
-			<string>Append Text</string>
+			<string>Append text…</string>
 			<key>validatesObjects</key>
 			<true/>
 		</dict>
@@ -107,6 +107,8 @@
 			<string>Show in Yojimbo</string>
 			<key>precedence</key>
 			<string>2</string>
+			<key>validatesObjects</key>
+			<true/>
 		</dict>
 		<key>QSYojimboTagAction</key>
 		<dict>

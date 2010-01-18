@@ -85,11 +85,14 @@
     ];
 }
 
-// TODO this appears to be unused. Either fix it or remove it
 - (QSObject *)appendToNote:(QSObject *)dObject content:(QSObject *)iObject{
-    NSString *uuid=[dObject objectForType:kQSYojimboPlugInType];
+    NSString *uuid=[dObject identifier];
     NSString *text=[iObject stringValue];
-    // NSAppleEventDescriptor *appleScriptResult=[[self script] executeSubroutine:@"append_to_note" arguments:[NSArray arrayWithObjects:uuid,text,nil] error:nil];
+    NSAppleEventDescriptor *appleScriptResult = [[self script]
+        executeSubroutine:@"append_to_note"
+        arguments:[NSArray arrayWithObjects:uuid, text, nil]
+        error:nil
+    ];
     return nil;
 }
 
@@ -113,16 +116,22 @@
 }
 
 - (NSArray *) validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject{
+    // the list of actions to return
+    NSMutableArray *actions = [NSMutableArray arrayWithCapacity:1];
+    // check based on item type
     if ([dObject containsType:kQSYojimboPlugInType])
     {
-        return [NSArray arrayWithObjects:
-            @"QSYojimboTagAction",
-            @"QSYojimboAppendAction",
-            nil
-        ];
+        [actions addObject:@"QSYojimboShowAction"];
+        [actions addObject:@"QSYojimboTagAction"];
+        // only allow appending to notes
+        if ([[dObject objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.yojimbonote"])
+        {
+            [actions addObject:@"QSYojimboAppendAction"];
+        }
     } else {
-        return [NSArray arrayWithObject:@"QSYojimboAddAction"];
+        [actions addObject:@"QSYojimboAddAction"];
     }
+    return actions;
 }
 
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
@@ -131,6 +140,10 @@
     if ([action isEqualToString:@"QSYojimboAddAction"])
     {
         return [NSArray arrayWithObject: [QSObject textProxyObjectWithDefaultValue:[dObject name]]];
+    }
+    if ([action isEqualToString:@"QSYojimboAppendAction"])
+    {
+        return [NSArray arrayWithObject: [QSObject textProxyObjectWithDefaultValue:@""]];
     }
     if ([action isEqualToString:@"QSYojimboTagAction"])
     {
