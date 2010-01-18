@@ -22,9 +22,10 @@
     NSString *definition;
     definition = (NSString*)DCSCopyTextDefinition( NULL, (CFStringRef)word, range);
     
-	if (![definition length])
+  	if (![definition length])
         definition = [NSString stringWithFormat:@"\"%@\" could not be found.", word];
-
+    else definition = [definition stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"];
+    
     id cont = [[NSClassFromString(@"QSSimpleWebWindowController") alloc] initWithWindow:nil];
     [[cont window] center];
     [[cont window] setLevel:NSFloatingWindowLevel];
