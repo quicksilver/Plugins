@@ -133,9 +133,11 @@
                     }
                     
                     if (newObject)
-                    // in order to find this as a child later, it seems we need to "register" it
-                        [QSObject registerObject:newObject withIdentifier:[item valueForKey:@"uuid"]];
+                    {
+                        // in order to find this as a child later, it seems we need to "register" it
+                        // [QSObject registerObject:newObject withIdentifier:[item valueForKey:@"uuid"]];
                         [objects addObject:newObject];
+                    }
                 }
                 @catch (id theException) {
                     NSLog(@"error with: %@ %@", item, theException);

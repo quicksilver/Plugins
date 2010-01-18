@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>A2</string>
+	<string>A8</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSYojimboAddAction</key>
@@ -23,7 +23,7 @@
 			<key>actionClass</key>
 			<string>QSYojimboPlugInAction</string>
 			<key>actionSelector</key>
-			<string>addObject:</string>
+			<string>addObject:withTags:</string>
 			<key>directTypes</key>
 			<array>
 				<string>NSStringPboardType</string>
@@ -31,6 +31,13 @@
 			</array>
 			<key>icon</key>
 			<string>com.barebones.yojimbo</string>
+			<key>indirectOptional</key>
+			<true/>
+			<key>indirectTypes</key>
+			<array>
+				<string>NSString</string>
+				<string>com.barebones.yojimbo.tag</string>
+			</array>
 			<key>name</key>
 			<string>Add to Yojimbo</string>
 			<key>validatesObjects</key>

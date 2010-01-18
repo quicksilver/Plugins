@@ -19,12 +19,28 @@
     NSAppleScript *script=[[NSAppleScript alloc]initWithContentsOfURL:[NSURL fileURLWithPath:scriptPath] error:nil];
     return script;
 }
-- (QSObject *)addObject:(QSObject *)dObject{
+
+- (QSObject *)addObject:(QSObject *)dObject withTags:(QSObject *)tags
+{
     BOOL isURL=[dObject containsType:QSURLType];
-    NSAppleEventDescriptor *ident=[[self script] executeSubroutine:isURL?@"add_url":@"add_note" arguments:[NSArray arrayWithObjects:[dObject displayName],[dObject stringValue],nil]
-                                                             error:nil];
+    // get a list of tags passed in
+    NSMutableArray *tagNames = [NSMutableArray arrayWithCapacity:1];
+    for (QSObject *tag in [tags objectForCache:kQSObjectComponents])
+    {
+        [tagNames addObject:[tag stringValue]];
+    }
+    NSAppleEventDescriptor *ident=[[self script]
+        executeSubroutine:isURL?@"add_url":@"add_note"
+        arguments:[NSArray arrayWithObjects:
+            [dObject displayName],
+            [dObject stringValue],
+            tagNames,
+            nil
+        ]
+        error:nil];
     
     NSString *uuid= [ident stringValue];
+    // FIXME this should probably be makeObjectWithIdentifier
     QSObject *newObject=[QSObject objectWithIdentifier:uuid];   
     [newObject setName:[dObject name]];
     [newObject setIdentifier:uuid];
@@ -33,6 +49,7 @@
     return newObject;
 }
 
+// TODO this appears to be unused. Either fix it or remove it
 - (QSObject *)appendToNote:(QSObject *)dObject content:(QSObject *)iObject{
     NSString *uuid=[dObject objectForType:kQSYojimboPlugInType];
     NSString *text=[iObject stringValue];
@@ -40,10 +57,12 @@
     return nil;
 }
 
+// TODO add tag support to this action as well
 - (QSObject *)addObjectArchive:(QSObject *)dObject{
     NSAppleEventDescriptor *ident=[[self script] executeSubroutine:@"add_url_archive" arguments:[NSArray arrayWithObject:[dObject objectForType:QSURLType]]
                                                              error:nil];
     NSString *uuid= [ident stringValue];
+    // FIXME this should probably be makeObjectWithIdentifier
     QSObject *newObject=[QSObject objectWithIdentifier:uuid];   
     [newObject setName:[dObject name]];
     [newObject setIdentifier:uuid];
@@ -65,9 +84,16 @@
 }
 
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
-//  if ([action isEqualToString:@"QSTextPrependAction"]|| [action isEqualToString:@"QSTextAppendAction"])
-//      return nil;
-    QSObject *textObject=[QSObject textProxyObjectWithDefaultValue:@""];
-    return [NSArray arrayWithObject:textObject]; //[QSLibarrayForType:NSFilenamesPboardType];
+    // QSObject *textObject=[QSObject textProxyObjectWithDefaultValue:@""];
+    // return [NSArray arrayWithObject:textObject];
+    if ([action isEqualToString:@"QSYojimboAddAction"])
+    {
+        // TODO polulate this array with actual tag objects
+        return [NSArray arrayWithObjects:
+            [QSObject objectWithString:@"example tag 1"],
+            [QSObject objectWithString:@"example tag 2"],
+            nil
+        ];
+    }
 }
 @end
