@@ -22,12 +22,27 @@
 
 - (QSObject *)addObject:(QSObject *)dObject withName:(QSObject *)itemName
 {
-    BOOL isURL=[dObject containsType:QSURLType];
-    NSAppleEventDescriptor *appleScriptResult=[[self script]
-        executeSubroutine:isURL?@"add_url":@"add_note"
+    NSString *addRoutine = nil;
+    id itemContent = [dObject stringValue];
+    // figure out how to add this thing based on type
+    if ([dObject containsType:QSURLType])
+    {
+        // add this as a "bookmark"
+        addRoutine = @"add_url";
+    } else if ([dObject containsType:QSFilePathType]) {
+        // import a file
+        addRoutine = @"add_file";
+        // override default content
+        itemContent = [dObject objectForType:QSFilePathType];
+    } else {
+        // add this as a "note"
+        addRoutine = @"add_note";
+    }
+    NSAppleEventDescriptor *appleScriptResult = [[self script]
+        executeSubroutine:addRoutine
         arguments:[NSArray arrayWithObjects:
-            [itemName stringValue], // item name
-            [dObject stringValue],  // item contents
+            [itemName stringValue],
+            itemContent,
             nil
         ]
         error:nil];
@@ -35,6 +50,7 @@
     NSString *uuid= [appleScriptResult stringValue];
     QSObject *newObject=[QSObject makeObjectWithIdentifier:uuid];
     [newObject setName:[itemName stringValue]];
+    [newObject setDetails:@"New Yojimbo Item"];
     [newObject setIdentifier:uuid];
     [newObject setObject:uuid forType:kQSYojimboPlugInType];
     [newObject setPrimaryType:kQSYojimboPlugInType];

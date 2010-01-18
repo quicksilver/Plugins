@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>B5</string>
+	<string>C3</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSYojimboAddAction</key>
@@ -24,10 +24,21 @@
 			<string>QSYojimboPlugInAction</string>
 			<key>actionSelector</key>
 			<string>addObject:withName:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>pdf</string>
+				<string>rtf</string>
+				<string>txt</string>
+				<string>jpeg</string>
+				<string>jpg</string>
+				<string>png</string>
+				<string>gif</string>
+			</array>
 			<key>directTypes</key>
 			<array>
 				<string>NSStringPboardType</string>
 				<string>Apple URL pasteboard type</string>
+				<string>NSFilenamesPboardType</string>
 			</array>
 			<key>displaysResult</key>
 			<true/>
@@ -54,6 +65,8 @@
 			<array>
 				<string>Apple URL pasteboard type</string>
 			</array>
+			<key>displaysResult</key>
+			<true/>
 			<key>icon</key>
 			<string>com.barebones.yojimbo</string>
 			<key>name</key>
@@ -136,6 +149,8 @@
 		<string>com.barebones.yojimbo</string>
 		<key>qsversion</key>
 		<string>29CC</string>
+		<key>author</key>
+		<string>Rob McBroom and many others</string>
 		<key>relatedBundles </key>
 		<array>
 			<string>com.barebones.yojimbo</string>
