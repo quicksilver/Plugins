@@ -13,11 +13,15 @@ This plug-in works with Yojimbo 2.x. It will not work with 1.x. All actions that
 
 ## Actions ##
 
-* Add to Yojimbo…
+* Add to Yojimbo with Name…
   
   If you type, paste or "grab" some text into Quicksilver, you can add it as a new note Yojimbo with this action. You can also add files. Currently, it will allow PDF, TXT, RTF, JPEG, PNG and GIF. I couldn't find a complete list of supported types, but if you need to add something else, a workaround is to use "Open with… ⇥ Yojimbo".
   
   You'll be asked for a name for the new item in the third pane. There should be a reasonable default.
+
+* Add to Yojimbo with Contents…
+  
+  This is the reverse of the previous action. If the name you want to use for the new item is in the first pane, you can go to the third pane to enter the item's contents.
 
 * Archive to Yojimbo
   
@@ -27,9 +31,9 @@ This plug-in works with Yojimbo 2.x. It will not work with 1.x. All actions that
   
   With a Yojimbo item in Quicksilver's first pane, this should be the default action. It will open (or switch to) Yojimbo with the item selected.
 
-* Add Tags to Item…
+* Add Tags to Item(s)…
   
-  With a Yojimbo item in Quicksilver's first pane, you can add tags to it using this action. The third pane will present a list of existing Yojimbo tags. You can select multiple tags using the comma trick, enter tags manually in text-entry mode, or a combination of those.
+  With one or more Yojimbo items in Quicksilver's first pane, you can add tags using this action. The third pane will present a list of existing Yojimbo tags. You can select multiple tags using the comma trick, enter tags manually in text-entry mode, or a combination of those.
   
   Note: You cannot add multiple tags in text-entry mode by typing them all at once, but you can enter one at a time as text by typing one, hitting ⎋ then , then . and entering another.
 
@@ -58,4 +62,8 @@ All of the items in your Yojimbo library are added directly to the catalog, so s
 
 All of your tags in Yojimbo are also added to the catalog. If you locate and select a tag, then hit → or /, you will get a list of items in your library that have that tag.
 
-If you locate and select the Yojimbo application itself and hit → or /, you'll go directly to a list of tags. From there, you can hit → or / to go "into" a tag and see individual items.
+If you locate and select the Yojimbo application itself and hit → or /, you'll go directly to a list of tags. From there, you can hit → or / to go "into" a tag and see individual items. Items with no tags assigned are also available (grouped under "Untagged Items").
+
+### Note Features ###
+
+There are a couple of useful tricks specific to notes in Yojimbo. In addition to being able to append to them, they also support all of the standard actions you can perform on text in Quicksilver like "Paste", "Large Type", "E-mail…", etc. Each of these actions will use the plain-text version of the note's contents.

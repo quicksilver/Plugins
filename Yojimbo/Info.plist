@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>DF</string>
+	<string>E3</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSYojimboAddAction</key>
@@ -51,7 +51,7 @@
 				<string>NSString</string>
 			</array>
 			<key>name</key>
-			<string>Add to Yojimbo…</string>
+			<string>Add to Yojimbo with Name…</string>
 			<key>validatesObjects</key>
 			<true/>
 		</dict>
@@ -88,6 +88,45 @@
 			<string>com.barebones.yojimbo</string>
 			<key>name</key>
 			<string>Append text…</string>
+			<key>validatesObjects</key>
+			<true/>
+		</dict>
+		<key>QSYojimboNameAddAction</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSYojimboPlugInAction</string>
+			<key>actionSelector</key>
+			<string>addObject:withName:</string>
+			<key>directFileTypes</key>
+			<array>
+				<string>pdf</string>
+				<string>rtf</string>
+				<string>txt</string>
+				<string>jpeg</string>
+				<string>jpg</string>
+				<string>png</string>
+				<string>gif</string>
+			</array>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+				<string>Apple URL pasteboard type</string>
+				<string>NSFilenamesPboardType</string>
+			</array>
+			<key>displaysResult</key>
+			<true/>
+			<key>icon</key>
+			<string>com.barebones.yojimbo</string>
+			<key>indirectOptional</key>
+			<false/>
+			<key>indirectTypes</key>
+			<array>
+				<string>NSString</string>
+			</array>
+			<key>name</key>
+			<string>Add to Yojimbo with Contents…</string>
+			<key>reverseArguments</key>
+			<true/>
 			<key>validatesObjects</key>
 			<true/>
 		</dict>
@@ -130,7 +169,7 @@
 				<string>com.barebones.yojimbo.tag</string>
 			</array>
 			<key>name</key>
-			<string>Add Tags to Item…</string>
+			<string>Add Tags to Item(s)…</string>
 			<key>precedence</key>
 			<string>1</string>
 			<key>validatesObjects</key>
@@ -161,20 +200,23 @@
 &lt;h2 id="actions"&gt;Actions&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Add to Yojimbo…&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Add to Yojimbo with Name…&lt;/p&gt;
 
 &lt;p&gt;If you type, paste or "grab" some text into Quicksilver, you can add it as a new note Yojimbo with this action. You can also add files. Currently, it will allow PDF, TXT, RTF, JPEG, PNG and GIF. I couldn't find a complete list of supported types, but if you need to add something else, a workaround is to use "Open with… ⇥ Yojimbo".&lt;/p&gt;
 
 &lt;p&gt;You'll be asked for a name for the new item in the third pane. There should be a reasonable default.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add to Yojimbo with Contents…&lt;/p&gt;
+
+&lt;p&gt;This is the reverse of the previous action. If the name you want to use for the new item is in the first pane, you can go to the third pane to enter the item's contents.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Archive to Yojimbo&lt;/p&gt;
 
 &lt;p&gt;With a URL selected in Quicksilver, you can add the page it references as a web archive.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Show in Yojimbo&lt;/p&gt;
 
 &lt;p&gt;With a Yojimbo item in Quicksilver's first pane, this should be the default action. It will open (or switch to) Yojimbo with the item selected.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Add Tags to Item…&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Add Tags to Item(s)…&lt;/p&gt;
 
-&lt;p&gt;With a Yojimbo item in Quicksilver's first pane, you can add tags to it using this action. The third pane will present a list of existing Yojimbo tags. You can select multiple tags using the comma trick, enter tags manually in text-entry mode, or a combination of those.&lt;/p&gt;
+&lt;p&gt;With one or more Yojimbo items in Quicksilver's first pane, you can add tags using this action. The third pane will present a list of existing Yojimbo tags. You can select multiple tags using the comma trick, enter tags manually in text-entry mode, or a combination of those.&lt;/p&gt;
 
 &lt;p&gt;Note: You cannot add multiple tags in text-entry mode by typing them all at once, but you can enter one at a time as text by typing one, hitting ⎋ then , then . and entering another.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Append text…&lt;/p&gt;
@@ -205,7 +247,11 @@
 
 &lt;p&gt;All of your tags in Yojimbo are also added to the catalog. If you locate and select a tag, then hit → or /, you will get a list of items in your library that have that tag.&lt;/p&gt;
 
-&lt;p&gt;If you locate and select the Yojimbo application itself and hit → or /, you'll go directly to a list of tags. From there, you can hit → or / to go "into" a tag and see individual items.&lt;/p&gt;</string>
+&lt;p&gt;If you locate and select the Yojimbo application itself and hit → or /, you'll go directly to a list of tags. From there, you can hit → or / to go "into" a tag and see individual items. Items with no tags assigned are also available (grouped under "Untagged Items").&lt;/p&gt;
+
+&lt;h3 id="note_features"&gt;Note Features&lt;/h3&gt;
+
+&lt;p&gt;There are a couple of useful tricks specific to notes in Yojimbo. In addition to being able to append to them, they also support all of the standard actions you can perform on text in Quicksilver like "Paste", "Large Type", "E-mail…", etc. Each of these actions will use the plain-text version of the note's contents.&lt;/p&gt;</string>
 		<key>icon</key>
 		<string>com.barebones.yojimbo</string>
 		<key>qsversion</key>

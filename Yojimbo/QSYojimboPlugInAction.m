@@ -89,7 +89,6 @@
 }
 
 - (QSObject *)appendToNote:(QSObject *)dObject content:(QSObject *)iObject{
-    // TODO see how hard it would be to make this action reversible (it really needs to be)
     NSString *uuid=[dObject identifier];
     NSString *text=[iObject stringValue];
     NSAppleEventDescriptor *appleScriptResult = [[self script]
@@ -134,6 +133,7 @@
         }
     } else {
         [actions addObject:@"QSYojimboAddAction"];
+        [actions addObject:@"QSYojimboNameAddAction"];
     }
     return actions;
 }
@@ -141,7 +141,7 @@
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
     // QSObject *textObject=[QSObject textProxyObjectWithDefaultValue:@""];
     // return [NSArray arrayWithObject:textObject];
-    if ([action isEqualToString:@"QSYojimboAddAction"])
+    if ([action isEqualToString:@"QSYojimboAddAction"] || [action isEqualToString:@"QSYojimboNameAddAction"])
     {
         return [NSArray arrayWithObject: [QSObject textProxyObjectWithDefaultValue:[dObject name]]];
     }
