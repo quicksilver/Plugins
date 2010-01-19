@@ -73,6 +73,7 @@
         [tagNames addObject:[tags stringValue]];
     }
     // add the tags to the item via AppleScript
+    // TODO this needs to allow multiple items
     // NSLog(@"attempting to tag %@ with %@", [dObject identifier], tagNames);
     [[self script]
         executeSubroutine:@"add_tags"
@@ -144,7 +145,8 @@
     }
     if ([action isEqualToString:@"QSYojimboAppendAction"])
     {
-        return [NSArray arrayWithObject: [QSObject textProxyObjectWithDefaultValue:@""]];
+        NSString *clipBoardContents=[[NSPasteboard pasteboardWithName:NSGeneralPboard] stringForType:NSStringPboardType];
+        return [NSArray arrayWithObject: [QSObject textProxyObjectWithDefaultValue:clipBoardContents]];
     }
     if ([action isEqualToString:@"QSYojimboTagAction"])
     {
