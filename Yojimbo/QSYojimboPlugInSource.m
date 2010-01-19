@@ -13,6 +13,7 @@
 
 @implementation QSYojimboPlugInSource
 - (BOOL)indexIsValidFromDate:(NSDate *)indexDate forEntry:(NSDictionary *)theEntry{
+    // FIXME this needs to check every directory inside this one to correctly catch updates
     NSString *path = [@"~/Library/Caches/Metadata/com.barebones.yojimbo" stringByStandardizingPath];
     NSFileManager *manager = [NSFileManager defaultManager];
     NSDate *modified = [[manager fileAttributesAtPath:path traverseLink:YES] fileModificationDate];
@@ -31,7 +32,7 @@
 //}
 - (BOOL)loadChildrenForObject:(QSObject *)object{
     // FIXME this method currently causes all items to be loaded from disk on every call
-    if ([[object objectForMeta:@"itemKind"] isEqualToString:kQSYojimboTagType])
+    if ([object containsType:kQSYojimboTagType])
     {
         // right-arrowed into a tag
         // return a list of matching items
@@ -53,6 +54,7 @@
         {
             if ([[yojimboItem objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.tag"])
             [tags addObject:yojimboItem];
+            // TODO stick untagged items somewhere
         }
         [object setChildren:tags];
     }
