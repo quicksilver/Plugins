@@ -86,6 +86,7 @@
 }
 
 - (QSObject *)appendToNote:(QSObject *)dObject content:(QSObject *)iObject{
+    // TODO see how hard it would be to make this action reversible (it really needs to be)
     NSString *uuid=[dObject identifier];
     NSString *text=[iObject stringValue];
     NSAppleEventDescriptor *appleScriptResult = [[self script]

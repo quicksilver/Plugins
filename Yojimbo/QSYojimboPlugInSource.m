@@ -35,6 +35,7 @@
     {
         // right-arrowed into a tag
         // return a list of matching items
+        // TODO Can this be made to work with multiple tags selected (i.e. "AND" them together)?
         NSMutableArray *children = [NSMutableArray arrayWithCapacity:1];
         for (QSObject *yojimboItem in [self objectsForEntry:nil])
         {
@@ -109,7 +110,13 @@
                         [newObject setDetails:[typeTable valueForKey:[item valueForKey:@"itemKind"]]];
                     }
                     [newObject setIdentifier:[item valueForKey:@"uuid"]];
+                    [newObject setPrimaryType:kQSYojimboPlugInType];
                     [newObject setObject:[item valueForKey:@"uuid"] forType:kQSYojimboPlugInType];
+                    if ([[item valueForKey:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.yojimbonote"] && [item valueForKey:@"content"])
+                    {
+                        // this will enable actions like "Paste" and "Large Type" for notes
+                        [newObject setObject:[item valueForKey:@"content"] forType:QSTextType];
+                    }
                     // store the type of Yojimbo item
                     [newObject setObject:[item valueForKey:@"itemKind"] forMeta:@"itemKind"];
                     // store this item's tags
