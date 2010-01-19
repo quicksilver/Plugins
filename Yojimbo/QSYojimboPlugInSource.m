@@ -38,9 +38,16 @@
         // return a list of matching items
         // TODO Can this be made to work with multiple tags selected (i.e. "AND" them together)?
         NSMutableArray *children = [NSMutableArray arrayWithCapacity:1];
+        // list items with no tags
         for (QSObject *yojimboItem in [self objectsForEntry:nil])
         {
             if ([[yojimboItem objectForMeta:@"tags"] containsObject:[object name]])
+            {
+                [children addObject:yojimboItem];
+            } else if ([[object identifier] isEqualToString:@"yojimbotag:untagged"]
+                        && [[yojimboItem objectForMeta:@"tags"] count] == 0
+                        && ![yojimboItem containsType:kQSYojimboTagType]
+                      )
             {
                 [children addObject:yojimboItem];
             }
@@ -54,8 +61,15 @@
         {
             if ([[yojimboItem objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.tag"])
             [tags addObject:yojimboItem];
-            // TODO stick untagged items somewhere
         }
+        QSObject *tagObject = [QSObject objectWithName:@"Untagged Items"];
+        [tagObject setIdentifier:@"yojimbotag:untagged"];
+        [tagObject setObject:@"Untagged" forType:kQSYojimboTagType];
+        // tags don't have an official itemKind, but I'm making one up for consitency
+        [tagObject setObject:kQSYojimboTagType forMeta:@"itemKind"];
+        [tagObject setDetails:@"Items With No Tags"];
+        [tags addObject:tagObject];
+        
         [object setChildren:tags];
     }
     return TRUE;
