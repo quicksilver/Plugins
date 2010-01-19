@@ -72,18 +72,20 @@
         // single tag
         [tagNames addObject:[tags stringValue]];
     }
-    // add the tags to the item via AppleScript
-    // TODO this needs to allow multiple items
+    // add the tags to the item(s) via AppleScript
     // NSLog(@"attempting to tag %@ with %@", [dObject identifier], tagNames);
-    [[self script]
-        executeSubroutine:@"add_tags"
-        arguments:[NSArray arrayWithObjects:
-            [dObject identifier],
-            tagNames,
-            nil
-        ]
-        error:nil
-    ];
+    for (NSString *yojimboItem in [dObject arrayForType:kQSYojimboPlugInType])
+    {
+        [[self script]
+            executeSubroutine:@"add_tags"
+            arguments:[NSArray arrayWithObjects:
+                yojimboItem,
+                tagNames,
+                nil
+            ]
+            error:nil
+        ];
+    }
 }
 
 - (QSObject *)appendToNote:(QSObject *)dObject content:(QSObject *)iObject{
