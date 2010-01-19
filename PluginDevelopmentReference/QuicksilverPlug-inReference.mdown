@@ -58,7 +58,7 @@ Also note that if your action returns a `QSObject` to Quicksilver, that *will* b
 
 ### The Comma Trick ###
 
-If you want your actions to support the comma trick (where a user can select several things in the first pane and act on them), you'll have to write actions to loop through all the objects and do the appropriate thing. The easiest technique involves getting a quick string representation of each. `QSObject`s have several string properties and I'm not sure which it gives back. I believe it's "name". Anyway, you can get at the strings like this:
+If you want your actions to support the comma trick (where a user can select several things in the first pane and act on them), you'll have to write actions to loop through all the objects and do the appropriate thing. The easiest technique involves getting a quick representation of each. `QSObject`s have several properties and I'm not sure which it gives back, but it makes sense to think the object you'll get back here is whatever was set using `setObject:forType:`. Anyway, assuming these are strings, you can get at them like this:
 
     for(NSString *userSelectedThing in [dObject arrayForType:QSBlahType])
     {
@@ -202,6 +202,8 @@ Return FALSE to keep this off of the drop-down. Return TRUE if you want users to
 
 You may want to add a new type of thing to Quicksilver's catalog that doesn't conform to the existing types Quicksilver knows about. The main reason you'd want to do this is to make your actions apply only to relevant entries. For instance, you may want "SSH to host" as the default for remote hosts. Though hostnames and FQDNs are just strings and can be added to Quicksilver easily, simply adding them to the catalog as strings would cause the default action to be "Open URL" or "Large Type" in most cases. You would either have to choose the SSH action manually every time, or move it up in priority making it the default for all text and URLs, which probably isn't what you want.
 
+### Source ###
+
 To use a custom type when adding objects to the catalog, the first thing to do is add something like this to `BlahSource.h`:
 
     #define QSBlahType @"QSBlahType"
@@ -210,15 +212,17 @@ Then, in your `objectsForEntry:` method in `BlahSource.m`, you would do somethin
 
     [myObject setObject:someIdentifier forType:QSBlahType];
 
-Now, when you're adding actions to the `Info.plist`, they can use this as a value under `directTypes` or `indirectTypes`.
+Now, when you're adding actions to the `Info.plist`, they can use this as a value under `directTypes` or `indirectTypes`. You will almost certainly want to assign other types in addition to the one you've created. See "Types" in the QSObject section.
+
+### Actions ###
 
 Speaking of actions, if your action(s) need to refer to your custom type, you should add something like this to `BlahAction.h`:
 
     #define QSBlahType @"QSBlahType"
 
-And then in the various action methods in `BlahAction.m`, you can look for objects of that type with something like this:
+And then in the various action methods in `BlahAction.m`, you can test for objects of that type with something like this:
 
-    [dObject arrayForType:QSRemoteHostsType]
+    if ([dObject containsType:QSBlahType]) {}
 
 ## QSObject ##
 
@@ -245,7 +249,23 @@ I'm not sure how or if this is used by Quicksilver. It doesn't seem to be mandat
 
 #### Type ####
 
-There are two methods that seem to apply here: `setObject:forType:` and `setPrimaryType`. My memory is fuzzy and I'm too lazy to test, but `setPrimaryType` didn't seem to do anything. That leaves us with `setObject:forType:`, which does set the type, but now you have to figure out what the hell to pass to the `setObject:` part. It takes a string, so I just use the name, identifier, etc. Many examples just use `@""`, so maybe it doesn't matter what goes here. `forType:` also gets a string that can be an existing type, or one you're creating, like `QSBlahType`.
+To set a type for an object, do something like this:
+
+    [myObject setObject:someObject forType:QSSomeType];
+
+Each `QSObject` has an array of types, so you can call this method multiple times, each with a different type, if you want. That deserves some further discussion. Most actions in Quicksilver only work with certain types. You will probably want to make built-in actions or actions defined in other plug-ins do something useful with your objects, which may be of a new type Quicksilver has never heard of. The "Paste" and "Large Type" actions are prime examples. You can't very well expect various other plug-ins (or Quicksilver itself) to add support for your new type. This is where you want to use an existing type to get things working.
+
+Hopefully, by now, you've figured out what the object is supposed to be for each type you assign. It will be something that actions supporting that type can make use of. I'll use "Paste" as an example. The "Paste" action works with a few types I'm sure, but the simplest one is `QSTextType`. The thing you want to paste in that case will be a string. Your `QSObject` probably has many strings (name, label, details, etc.) so how can you tell Quicksilver which to spit out when running the "Paste" action? Like this:
+
+    [myObject setObject:thisString forType:QSTextType];
+
+Now, when a user selects this object and uses an action that works with `QSTextType`, it will use `thisString`.
+
+If you set multiple types, you should also set one as primary.
+
+    [myObject setPrimaryType:QSSomeType];
+
+I don't think you can use `setPrimaryType:` alone. You must also call `setObject:forType:` using the same type at some point.
 
 I don't have a list of types Quicksilver already knows about or what might be special about each one, but examples abound in existing source code.
 
