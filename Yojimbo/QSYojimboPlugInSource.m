@@ -35,22 +35,65 @@
     if ([object containsType:kQSYojimboTagType])
     {
         // right-arrowed into a tag
-        // return a list of matching items
-        // TODO Can this be made to work with multiple tags selected (i.e. "AND" them together)?
+        // return a list of matching tags and items
+        NSMutableArray *matchingTags = [NSMutableArray arrayWithCapacity:1];
         NSMutableArray *children = [NSMutableArray arrayWithCapacity:1];
-        // list items with no tags
+        // track which tags we're combining
+        NSMutableArray *navigationHistory = [NSMutableArray arrayWithArray:[object objectForMeta:@"navigationHistory"]];
+        if (navigationHistory)
+        {
+            [navigationHistory addObject:[object name]];
+        } else {
+            navigationHistory = [NSArray arrayWithObject:[object name]];
+        }
+        // NSLog(@"current navigation history: %@", navigationHistory);
+        /* on the assumption that it's easier to find tags by typing and
+        items by looking, we add items to the top of the list, then tags */
+        // add items to the list
         for (QSObject *yojimboItem in [self objectsForEntry:nil])
         {
-            if ([[yojimboItem objectForMeta:@"tags"] containsObject:[object name]])
+            BOOL matchesAllTags = true;
+            for (NSString *navTag in navigationHistory)
             {
+                if (![[yojimboItem objectForMeta:@"tags"] containsObject:navTag])
+                {
+                    matchesAllTags = false;
+                }
+            }
+            if (matchesAllTags) {
+                // add this item
                 [children addObject:yojimboItem];
+                // look for tags
+                for (NSString *tag in [yojimboItem objectForMeta:@"tags"])
+                {
+                    // if we don't have it yet, and it wasn't already arrowed into
+                    if (![matchingTags containsObject:tag] && ![navigationHistory containsObject:tag])
+                    {
+                        // we don't have this tag yet
+                        [matchingTags addObject:tag];
+                    }
+                }
             } else if ([[object identifier] isEqualToString:@"yojimbotag:untagged"]
-                        && [[yojimboItem objectForMeta:@"tags"] count] == 0
-                        && ![yojimboItem containsType:kQSYojimboTagType]
-                      )
+                    && [[yojimboItem objectForMeta:@"tags"] count] == 0
+                    && ![yojimboItem containsType:kQSYojimboTagType]
+               )
+            // list items with no tags
             {
                 [children addObject:yojimboItem];
             }
+        }
+        // add tags to the list
+        for (NSString *tag in matchingTags)
+        {
+            NSString *ident = [NSString stringWithFormat:@"yojimbotag:%@", tag];
+            QSObject *tagObject = [QSObject objectWithName:tag];
+            [tagObject setIdentifier:ident];
+            [tagObject setObject:tag forType:kQSYojimboTagType];
+            // tags don't have an official itemKind, but I'm making one up for consitency
+            [tagObject setObject:kQSYojimboTagType forMeta:@"itemKind"];
+            [tagObject setObject:navigationHistory forMeta:@"navigationHistory"];
+            [tagObject setDetails:@"Yojimbo Tag"];
+            [children addObject:tagObject];
         }
         [object setChildren:children];
     } else {

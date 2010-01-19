@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>E3</string>
+	<string>EF</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSYojimboAddAction</key>
@@ -189,69 +189,69 @@
 		<key>description</key>
 		<string>Add and Access Yojimbo Items</string>
 		<key>extendedDescription</key>
-		<string>&lt;h1 id="yojimbo_module"&gt;Yojimbo Module&lt;/h1&gt;
+		<string>&lt;h1 id=&quot;yojimbo_module&quot;&gt;Yojimbo Module&lt;/h1&gt;
 
-&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
 &lt;p&gt;This plug-in allows you to quickly find, add, and modify items in your Yojimbo library using Quicksilver. It also makes great use of your tags.&lt;/p&gt;
 
-&lt;p&gt;This plug-in works with Yojimbo 2.x. It will not work with 1.x. All actions that add or modify items in Yojimbo's library use BareBones supported AppleScript techniques.&lt;/p&gt;
+&lt;p&gt;This plug-in works with Yojimbo 2.x. It will not work with 1.x. All actions that add or modify items in Yojimbo&apos;s library use BareBones supported AppleScript techniques.&lt;/p&gt;
 
-&lt;h2 id="actions"&gt;Actions&lt;/h2&gt;
+&lt;h2 id=&quot;actions&quot;&gt;Actions&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Add to Yojimbo with Name…&lt;/p&gt;
 
-&lt;p&gt;If you type, paste or "grab" some text into Quicksilver, you can add it as a new note Yojimbo with this action. You can also add files. Currently, it will allow PDF, TXT, RTF, JPEG, PNG and GIF. I couldn't find a complete list of supported types, but if you need to add something else, a workaround is to use "Open with… ⇥ Yojimbo".&lt;/p&gt;
+&lt;p&gt;If you type, paste or &quot;grab&quot; some text into Quicksilver, you can add it as a new note Yojimbo with this action. You can also add files. Currently, it will allow PDF, TXT, RTF, JPEG, PNG and GIF. I couldn&apos;t find a complete list of supported types, but if you need to add something else, a workaround is to use &quot;Open with… ⇥ Yojimbo&quot;.&lt;/p&gt;
 
-&lt;p&gt;You'll be asked for a name for the new item in the third pane. There should be a reasonable default.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;You&apos;ll be asked for a name for the new item in the third pane. There should be a reasonable default.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Add to Yojimbo with Contents…&lt;/p&gt;
 
-&lt;p&gt;This is the reverse of the previous action. If the name you want to use for the new item is in the first pane, you can go to the third pane to enter the item's contents.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;This is the reverse of the previous action. If the name you want to use for the new item is in the first pane, you can go to the third pane to enter the item&apos;s contents.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Archive to Yojimbo&lt;/p&gt;
 
 &lt;p&gt;With a URL selected in Quicksilver, you can add the page it references as a web archive.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Show in Yojimbo&lt;/p&gt;
 
-&lt;p&gt;With a Yojimbo item in Quicksilver's first pane, this should be the default action. It will open (or switch to) Yojimbo with the item selected.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;With a Yojimbo item in Quicksilver&apos;s first pane, this should be the default action. It will open (or switch to) Yojimbo with the item selected.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Add Tags to Item(s)…&lt;/p&gt;
 
-&lt;p&gt;With one or more Yojimbo items in Quicksilver's first pane, you can add tags using this action. The third pane will present a list of existing Yojimbo tags. You can select multiple tags using the comma trick, enter tags manually in text-entry mode, or a combination of those.&lt;/p&gt;
+&lt;p&gt;With one or more Yojimbo items in Quicksilver&apos;s first pane, you can add tags using this action. The third pane will present a list of existing Yojimbo tags. You can select multiple tags using the comma trick, enter tags manually in text-entry mode, or a combination of those.&lt;/p&gt;
 
 &lt;p&gt;Note: You cannot add multiple tags in text-entry mode by typing them all at once, but you can enter one at a time as text by typing one, hitting ⎋ then , then . and entering another.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Append text…&lt;/p&gt;
 
-&lt;p&gt;With a Yojimbo note item in Quicksilver's first pane, you can append text to the contents of the note. Enter the text to append in the third pane.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;With a Yojimbo note item in Quicksilver&apos;s first pane, you can append text to the contents of the note. Enter the text to append in the third pane.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id="workflow"&gt;Workflow&lt;/h2&gt;
+&lt;h2 id=&quot;workflow&quot;&gt;Workflow&lt;/h2&gt;
 
 &lt;p&gt;Here are a couple of examples of how you might use Quicksilver to interact with Yojimbo.&lt;/p&gt;
 
-&lt;h3 id="adding_an_item"&gt;Adding an Item&lt;/h3&gt;
+&lt;h3 id=&quot;adding_an_item&quot;&gt;Adding an Item&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Select text or a file in Quicksilver.&lt;/li&gt;
-&lt;li&gt;Choose "Add to Yojimbo…" in the second pane.&lt;/li&gt;
+&lt;li&gt;Choose &quot;Add to Yojimbo…&quot; in the second pane.&lt;/li&gt;
 &lt;li&gt;Tab to the third pane to enter a name (or accept the default).&lt;/li&gt;
 &lt;li&gt;Hit ↩&lt;/li&gt;
 &lt;li&gt;The item will be added to Yojimbo and Quicksilver will pop back up with the item in the first pane.&lt;/li&gt;
-&lt;li&gt;Choose "Add Tags to Item…" in the second pane. (You can also open the item, or just hit ⎋ if you don't want to do anything further.)&lt;/li&gt;
+&lt;li&gt;Choose &quot;Add Tags to Item…&quot; in the second pane. (You can also open the item, or just hit ⎋ if you don&apos;t want to do anything further.)&lt;/li&gt;
 &lt;li&gt;Select or type the tags you want to assign.&lt;/li&gt;
 &lt;li&gt;Hit ↩&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id="locating_items"&gt;Locating Items&lt;/h3&gt;
+&lt;h3 id=&quot;locating_items&quot;&gt;Locating Items&lt;/h3&gt;
 
-&lt;p&gt;All of the items in your Yojimbo library are added directly to the catalog, so simply typing a few characters of the item's name might be enough to find it, but…&lt;/p&gt;
+&lt;p&gt;All of the items in your Yojimbo library are added directly to the catalog, so simply typing a few characters of the item&apos;s name might be enough to find it, but…&lt;/p&gt;
 
-&lt;p&gt;All of your tags in Yojimbo are also added to the catalog. If you locate and select a tag, then hit → or /, you will get a list of items in your library that have that tag.&lt;/p&gt;
+&lt;p&gt;All of your tags in Yojimbo are also added to the catalog. If you locate and select a tag, then hit → or /, you will get a list of items in your library that have that tag. You will also get a list of all other tags that those items contain. If you right arrow into one of those tags, you will see items that match both tags and any tags contained by those items that you haven&apos;t already arrowed through. Right arrowing into another tag will show items matching all three, etc. This emulates the indispensable behavior of Yojimbo&apos;s Tag Explorer.&lt;/p&gt;
 
-&lt;p&gt;If you locate and select the Yojimbo application itself and hit → or /, you'll go directly to a list of tags. From there, you can hit → or / to go "into" a tag and see individual items. Items with no tags assigned are also available (grouped under "Untagged Items").&lt;/p&gt;
+&lt;p&gt;If you locate and select the Yojimbo application itself and hit → or /, you&apos;ll go directly to a list of tags. From there, you can hit → or / to go &quot;into&quot; a tag or tags as described above. Items with no tags assigned are also available (grouped under &quot;Untagged Items&quot;).&lt;/p&gt;
 
-&lt;h3 id="note_features"&gt;Note Features&lt;/h3&gt;
+&lt;h3 id=&quot;note_features&quot;&gt;Note Features&lt;/h3&gt;
 
-&lt;p&gt;There are a couple of useful tricks specific to notes in Yojimbo. In addition to being able to append to them, they also support all of the standard actions you can perform on text in Quicksilver like "Paste", "Large Type", "E-mail…", etc. Each of these actions will use the plain-text version of the note's contents.&lt;/p&gt;</string>
+&lt;p&gt;There are a couple of useful tricks specific to notes in Yojimbo. In addition to being able to append to them, they also support all of the standard actions you can perform on text in Quicksilver like &quot;Paste&quot;, &quot;Large Type&quot;, &quot;E-mail…&quot;, etc. Each of these actions will use the plain-text version of the note&apos;s contents.&lt;/p&gt;</string>
 		<key>icon</key>
 		<string>com.barebones.yojimbo</string>
 		<key>qsversion</key>
