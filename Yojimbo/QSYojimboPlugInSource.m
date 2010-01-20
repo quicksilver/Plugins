@@ -13,12 +13,26 @@
 
 @implementation QSYojimboPlugInSource
 - (BOOL)indexIsValidFromDate:(NSDate *)indexDate forEntry:(NSDictionary *)theEntry{
-    // FIXME this needs to check every directory inside this one to correctly catch updates
+    /* the bad news is we have to look at every frakking parent folder
+       (looking at individual items would miss deletions)
+       the good news is we can bail out if we find just one that's updated */
     NSString *path = [@"~/Library/Caches/Metadata/com.barebones.yojimbo" stringByStandardizingPath];
     NSFileManager *manager = [NSFileManager defaultManager];
-    NSDate *modified = [[manager fileAttributesAtPath:path traverseLink:YES] fileModificationDate];
+    NSArray *contents = [manager directoryContentsAtPath:path];
+    for (NSString *topLevelDir in contents) {
+        topLevelDir = [path stringByAppendingPathComponent:topLevelDir];
+        for (NSString *secondLevelDir in [manager directoryContentsAtPath:topLevelDir]) {
+            secondLevelDir = [topLevelDir stringByAppendingPathComponent:secondLevelDir];
+            NSDate *modified = [[manager attributesOfItemAtPath:secondLevelDir error:NULL] fileModificationDate];
+            if ([indexDate compare:modified] == NSOrderedAscending) {
+                // something new - trigger a rescan
+                return NO;
+            }
+        }
+    }
     
-    return [indexDate compare:modified] == NSOrderedDescending;
+    // none of the files are new or changed
+    return YES;
 }
 
 - (NSImage *) iconForEntry:(NSDictionary *)dict{
