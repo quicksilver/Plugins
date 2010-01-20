@@ -58,7 +58,7 @@ Also note that if your action returns a `QSObject` to Quicksilver, that *will* b
 
 ### The Comma Trick ###
 
-If you want your actions to support the comma trick (where a user can select several things in the first pane and act on them), you'll have to write actions to loop through all the objects and do the appropriate thing. The easiest technique involves getting a quick representation of each. `QSObject`s have several properties and I'm not sure which it gives back, but it makes sense to think the object you'll get back here is whatever was set using `setObject:forType:`. Anyway, assuming these are strings, you can get at them like this:
+If you want your actions to support the comma trick (where a user can select several things in the first pane and act on them), you'll have to write actions to loop through all the objects and do the appropriate thing. If you expect to get several objects of the same type, the easiest technique involves getting a quick representation of each. `QSObject`s have several properties but you can specify which one should be associated with a specific type when the object is created using `setObject:forType:`. Assuming you set these as strings, you can get at them like this:
 
     for(NSString *userSelectedThing in [dObject arrayForType:QSBlahType])
     {
@@ -139,7 +139,17 @@ Also under `QSRegistration` are some settings you'll need if you want users to b
 
 The thing you use `QSBundleChildHandlers` for is generally some application that's already on the system and related to your plug-in, but has no direct knowledge of, or support for Quicksilver. The left hand side should be a bundle identifier, like `com.apple.Finder` and the right hand side should be the name of a class in your plug-in that contains a `loadChildrenForObject:` method.
 
-`QSObjectHandlers` is how you can allow users to "right arrow" into things you create. On the left should be a type of object in Quicksilver and on the right should again be the name of a class in your plug-in that contains a `loadChildrenForObject:` method. This definitely works with types you invent (see Custom Types below) and I assume it will work for existing types, but haven't tried it. I think this setting must be present for the `setQuickIconForObject:` to get called as well, even if you won't be defining children.
+`QSObjectHandlers` is how you can allow users to "right arrow" into things you create. On the left should be a type of object in Quicksilver and on the right should again be the name of a class in your plug-in that contains a `loadChildrenForObject:` method. This definitely works with types you invent (see Custom Types below) and I assume it will work for existing types, but haven't tried it. This setting must be present for the `setQuickIconForObject:` to get called as well, even if you won't be defining children. It might look like this:
+
+    <key>QSObjectHandlers</key>
+    <dict>
+        <key>QSBlahType</key>
+        <string>QSBlahSource</string>
+        <key>QSBlahAnotherType</key>
+        <string>QSBlahSource</string>
+    </dict>
+
+Note that you can use the same "source" class for all types, or create a separate class for each one. If you use the same source, the `loadChildrenForObject:` method will just have to figure out what to set as children based on the type of object passed to it.
 
 ### Code ###
 
@@ -185,12 +195,14 @@ This method does not seem to be called for `QSObject`s created using `objectWith
 
 #### - (BOOL)loadChildrenForObject:(QSObject *)object
 
-This is very similar to `objectsForEntry:`, but instead of adding things to the catalog, it loads them on the fly when you right arrow into the parent object. You just need to create an array of `QSObject`s, but instead of returning them, you assign them to an object like this:
+This is very similar to `objectsForEntry:`, but instead of adding things to the catalog, it loads them on the fly when you right arrow into the parent object. You just need to create an array of `QSObject`s, but instead of returning them, you assign them to the parent object like this:
 
     [object setChildren:children];
     return TRUE;
 
 These can be newly created objects or objects that are already in the catalog. In theory, you should be able to get existing items using `[QSObject objectWithIdentifier:uuid]`, but this seems to only work some of the time. I haven't figured out how to reliably set existing catalog objects as children.
+
+The secret might be to call `registerObject:withIdentifier:` on all the things that you want to use as children in `objectsForEntry:`, then get them later in the `loadChildrenForObject:` method by calling `objectWithIdentifier:`, but I haven't figured out exactly how (or if) that works.
 
 #### - (BOOL)isVisibleSource
 
@@ -212,7 +224,7 @@ Then, in your `objectsForEntry:` method in `BlahSource.m`, you would do somethin
 
     [myObject setObject:someIdentifier forType:QSBlahType];
 
-Now, when you're adding actions to the `Info.plist`, they can use this as a value under `directTypes` or `indirectTypes`. You will almost certainly want to assign other types in addition to the one you've created. See "Types" in the QSObject section.
+Now, when you're adding actions to the `Info.plist`, they can use this as a value under `directTypes` or `indirectTypes`. You will almost certainly want to assign other types in addition to the one you've created. See "Types" in the QSObject section for details.
 
 ### Actions ###
 
@@ -289,7 +301,7 @@ You can set an icon for a `QSObject` using the `setIcon:` method. I'm not even s
 
 I don't recommend using the `setIcon:` method when adding things to the catalog. (See the note on `setQuickIconForObject:` for an explanation.) However, using this method directly from one of your actions does work if you want to set the icon temporarily for something you're sending back to the Quicksilver UI. (That too will go away, but this is only an issue if the user leaves the object you return up in the first pane.)
 
-FYI, if you want to use one of the standard system icons for something, many can be found in `/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources`. You can refer to them using only the file's name (no path and no ".icns" extension). To use the icon for an application, use it's bundle identifier, like `com.apple.Mail`.
+FYI, if you want to use one of the standard system icons for something, many can be found in `/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources`. You can refer to them using only the file's name (no path and no ".icns" extension). To use the icon for an application, use its bundle identifier, like `com.apple.Mail`.
 
 #### Children ####
 
