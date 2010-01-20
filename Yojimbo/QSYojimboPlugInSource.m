@@ -312,6 +312,8 @@
         [object setIcon:[QSResourceManager imageNamed:@"com.barebones.yojimbo"]];
     } else if ([[object objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.yojimbopdfarchive"]) {
         [object setIcon:[[NSWorkspace sharedWorkspace] iconForFileType:@"pdf"]];
+    } else if ([[object objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.yojimbobookmark"]) {
+        [object setIcon:[QSResourceManager imageNamed:@"DefaultBookmarkIcon"]];
     } else {
         [object setIcon:[[NSWorkspace sharedWorkspace] iconForFileType:@"yojimbonote"]];
     }
