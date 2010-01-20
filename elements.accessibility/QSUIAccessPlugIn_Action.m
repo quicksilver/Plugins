@@ -192,6 +192,15 @@ void PressButtonInWindow(id buttonName, id window)
 	return nil;
 }
 
+- (id)resolveProxyObject:(id)proxy{
+  if (![[proxy identifier] isEqualToString:@"CurrentFocusedWindow"]) return nil;
+  NSDictionary *curAppInfo = [[NSWorkspace sharedWorkspace] activeApplication];
+  QSObject *curAppObject = [QSObject objectWithName:[curAppInfo objectForKey:@"NSApplicationName"]];
+  [curAppObject setObject:curAppInfo forType:QSProcessType];
+  return [self focusedWindowForApp:curAppObject];
+}
+
+
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
 	if ([action isEqualToString:@"QSPickMenuItemsAction"]){
 	  dObject = [self resolvedProxy:dObject];

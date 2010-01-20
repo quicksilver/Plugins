@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>17D</string>
+	<string>19A</string>
 	<key>NSPrincipalClass</key>
 	<string>QSUIAccessPlugIn</string>
 	<key>QSActions</key>
@@ -311,6 +311,20 @@
 			<string>QSUIAccessPlugIn_Source</string>
 			<key>qs.ui.element</key>
 			<string>QSUIAccessPlugIn_Source</string>
+		</dict>
+		<key>QSProxies</key>
+		<dict>
+			<key>CurrentFocusedWindow</key>
+			<dict>
+				<key>name</key>
+				<string>Current Focused Window</string>
+				<key>providerClass</key>
+				<string>QSUIAccessPlugIn_Action</string>
+				<key>types</key>
+				<array>
+					<string>WindowsType</string>
+				</array>
+			</dict>
 		</dict>
 	</dict>
 	<key>QSRequirements</key>

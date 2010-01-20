@@ -26,7 +26,9 @@
 - (void)pressButton:(id)button inWindow:(id)window;
 - (QSObject *)zoomWindow:(QSObject *)dObject;
 - (QSObject *)allAppWindows:(QSObject *)dObject;
+- (id)resolveProxyObject:(id)proxy;
 
 - (QSObject *)resolvedProxy:(QSObject *)dObject;
+
 @end
 
