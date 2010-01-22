@@ -44,6 +44,10 @@ The best place to document your plug-in is in the `Info.plist` by adding an `ext
 
 The information in Ankur's tutorial is pretty good, but there are some things it doesn't mention.
 
+<!--
+TODO replicate all of the information in the tutorial here so it's in one place
+-->
+
 ### Direct and Indirect Objects ###
 
 You may see references to direct and indirect objects. Basically, direct objects are the things in the first pane of Quicksilver's interface and indirect objects are the thing in the third pane.
@@ -55,6 +59,16 @@ If you're looking at existing code, these are usually referred to as `dObject` a
 Something to note about the `displaysResult` option in `Info.plist`: This only means that Quicksilver will pop the interface back up *if* your action returns a `QSObject` to it. If you have an action that may or may not return something to the interface, it appears to be safe to enable this.
 
 Also note that if your action returns a `QSObject` to Quicksilver, that *will* become the thing in the first pane, whether the UI is re-displayed or not. If not, the user will see the object you returned the next time he invokes Quicksilver.
+
+### Alternate Actions ###
+
+Alternate actions are a very powerful feature of Quicksilver. When a user selects an action in the second pane, they can hit ↩ to run it, or they can hit ⌘↩ to run an alternate (if one is defined). Generally an alternate action will be similar to the main action, but modified in some way.
+
+You create alternate actions just like any other action by adding a section for it in `Info.plist` and adding code in `BlahAction.m` for it. The main thing to note is that an action doesn't need to be active (checked in the preferences) to work as an alternate. You can define which of the actions in your plug-in are enabled or disabled by default, so an alternate could be something you never intend for the user to see/use directly or it could be one of the "normal" actions that you want to be conveniently accessible. Users can, of course, enable or disable actions themselves after your plug-in is installed.
+
+Alternate actions should be able to take the same number of arguments as the main action. You can't define an alternate that requires something in the third pane for an action that doesn't use the third pane.
+
+To define an alternate for an action, add an item named `alternateAction` to your action's properties in `Info.plist`. The value for `alternateAction` should be the name of another action as it appears under "QSActions" in the same plist.
 
 ### The Comma Trick ###
 
