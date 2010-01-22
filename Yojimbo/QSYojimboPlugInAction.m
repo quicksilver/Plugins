@@ -86,12 +86,13 @@
             error:nil
         ];
     }
+    return nil;
 }
 
 - (QSObject *)appendToNote:(QSObject *)dObject content:(QSObject *)iObject{
     NSString *uuid=[dObject identifier];
     NSString *text=[iObject stringValue];
-    NSAppleEventDescriptor *appleScriptResult = [[self script]
+    [[self script]
         executeSubroutine:@"append_to_note"
         arguments:[NSArray arrayWithObjects:uuid, text, nil]
         error:nil
@@ -114,7 +115,7 @@
 
 - (QSObject *)showObject:(QSObject *)dObject{
     NSString *uuid=[dObject objectForType:kQSYojimboPlugInType];
-    NSAppleEventDescriptor *appleScriptResult=[[self script] executeSubroutine:@"show_item" arguments:uuid error:nil];
+    [[self script] executeSubroutine:@"show_item" arguments:uuid error:nil];
     return nil;
 }
 
@@ -139,8 +140,6 @@
 }
 
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
-    // QSObject *textObject=[QSObject textProxyObjectWithDefaultValue:@""];
-    // return [NSArray arrayWithObject:textObject];
     if ([action isEqualToString:@"QSYojimboAddAction"] || [action isEqualToString:@"QSYojimboNameAddAction"])
     {
         return [NSArray arrayWithObject: [QSObject textProxyObjectWithDefaultValue:[dObject name]]];
@@ -202,5 +201,8 @@
         }
         return objects;
     }
+    // no matches - return empty string
+    QSObject *textObject=[QSObject textProxyObjectWithDefaultValue:@""];
+    return [NSArray arrayWithObject:textObject];
 }
 @end
