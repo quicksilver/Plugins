@@ -293,7 +293,28 @@ If you set multiple types, you should also set one as primary.
 
 I don't think you can use `setPrimaryType:` alone. You must also call `setObject:forType:` using the same type at some point.
 
-I don't have a list of types Quicksilver already knows about or what might be special about each one, but examples abound in existing source code.
+Here are all the types Quicksilver declares in `QSTypes.h`. I don't know what might be special about each one, but examples of their creation and use are probably available in existing code.
+
+    QSFilePathType
+    QSTextType
+    QSAliasDataType
+    QSAliasFilePathType
+    QSURLType
+    QSEmailAddressType
+    QSContactEmailType
+    QSContactPhoneType
+    QSContactAddressType
+    QSFormulaType
+    QSActionType
+    QSProcessType
+    QSMachineAddressType
+    QSABPersonType
+    QSNumericType
+    QSIMAccountType
+    QSIMMultiAccountType
+    QSPasteboardDataType
+    QSCommandType
+    QSHandledType
 
 #### Label ####
 
