@@ -189,12 +189,10 @@
         // add tags to the catalog
         for (NSString *tag in [tags allKeys])
         {
-            NSString *ident = [NSString stringWithFormat:@"yojimbotag:%@", tag];
             tagObject = [QSObject objectWithName:tag];
-            [tagObject setIdentifier:ident];
             [tagObject setObject:tag forType:kQSYojimboTagType];
             [tagObject setObject:[tags objectForKey:tag] forMeta:@"items"];
-            // tags don't have an official itemKind, but I'm making one up for consitency
+            // tags don't have an official itemKind, but I'm making one up for consistency
             [tagObject setObject:kQSYojimboTagType forMeta:@"itemKind"];
             [tagObject setDetails:@"Yojimbo Tag"];
             [objects addObject:tagObject];
