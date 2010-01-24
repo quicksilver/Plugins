@@ -45,7 +45,6 @@
 //    return nil;
 //}
 - (BOOL)loadChildrenForObject:(QSObject *)object{
-    // FIXME this method currently causes all items to be loaded from disk on every call
     if ([object containsType:kQSYojimboTagType])
     {
         // right-arrowed into a tag
@@ -63,9 +62,10 @@
         // NSLog(@"current navigation history: %@", navigationHistory);
         /* on the assumption that it's easier to find tags by typing and
         items by looking, we add items to the top of the list, then tags */
-        // add items to the list
-        for (QSObject *yojimboItem in [self objectsForEntry:nil])
+        // add items to the list using objects already created by objectsForEntry
+        for (NSString *uuid in [object objectForMeta:@"items"])
         {
+            QSObject *yojimboItem = [QSObject objectWithIdentifier:uuid];
             BOOL matchesAllTags = true;
             for (NSString *navTag in navigationHistory)
             {
@@ -99,14 +99,9 @@
         // add tags to the list
         for (NSString *tag in matchingTags)
         {
+            // use the tag object that was created by objectsForEntry
             NSString *ident = [NSString stringWithFormat:@"yojimbotag:%@", tag];
-            QSObject *tagObject = [QSObject objectWithName:tag];
-            [tagObject setIdentifier:ident];
-            [tagObject setObject:tag forType:kQSYojimboTagType];
-            // tags don't have an official itemKind, but I'm making one up for consitency
-            [tagObject setObject:kQSYojimboTagType forMeta:@"itemKind"];
-            [tagObject setObject:navigationHistory forMeta:@"navigationHistory"];
-            [tagObject setDetails:@"Yojimbo Tag"];
+            QSObject *tagObject = [QSObject objectWithIdentifier:ident];
             [children addObject:tagObject];
         }
         [object setChildren:children];
@@ -114,11 +109,13 @@
         // right-arrowed into Yojimbo
         // return a list of tags
         NSMutableArray *tags = [NSMutableArray arrayWithCapacity:1];
+        // FIXME this call currently causes all items to be loaded from disk on every call
         for (QSObject *yojimboItem in [self objectsForEntry:nil])
         {
             if ([[yojimboItem objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.tag"])
             [tags addObject:yojimboItem];
         }
+        // create a special object to allow access to items with no tags
         QSObject *tagObject = [QSObject objectWithName:@"Untagged Items"];
         [tagObject setIdentifier:@"yojimbotag:untagged"];
         [tagObject setObject:@"Untagged" forType:kQSYojimboTagType];
@@ -214,8 +211,6 @@
                     
                     if (newObject)
                     {
-                        // in order to find this as a child later, it seems we need to "register" it
-                        // [QSObject registerObject:newObject withIdentifier:[item valueForKey:@"uuid"]];
                         [objects addObject:newObject];
                     }
                 }
