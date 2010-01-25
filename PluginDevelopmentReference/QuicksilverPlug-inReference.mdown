@@ -214,9 +214,9 @@ This is very similar to `objectsForEntry:`, but instead of adding things to the 
     [object setChildren:children];
     return TRUE;
 
-These can be newly created objects or objects that are already in the catalog. In theory, you should be able to get existing items using `[QSObject objectWithIdentifier:uuid]`, but this seems to only work some of the time. I haven't figured out how to reliably set existing catalog objects as children.
+These can be newly created objects or objects that are already in the catalog. You should be able to get existing items using `[QSObject objectWithIdentifier:uuid]` (assuming you know the identifier).
 
-The secret might be to call `registerObject:withIdentifier:` on all the things that you want to use as children in `objectsForEntry:`, then get them later in the `loadChildrenForObject:` method by calling `objectWithIdentifier:`, but I haven't figured out exactly how (or if) that works.
+**Read up on identifiers in the QSObject section before creating/using objects as children.**
 
 #### - (BOOL)isVisibleSource
 
@@ -271,7 +271,17 @@ In my experience, you don't need to do anything more than the above to create a 
 
 #### Identifier ####
 
-I'm not sure how or if this is used by Quicksilver. It doesn't seem to be mandatory, so I'm guessing it's only available for your use. Set one using `setIdentifier:someString`.
+An identifier for your `QSObject` doesn't seem to be required (or perhaps Quicksilver will pick one internally if you don't explicitly set one) but I recommend always setting one. In any case, it's important to understand how they're used. You set one like this:
+
+    [myObject setIdentifier:someString];
+
+In addition to actually storing the identifier string in your object, this causes Quicksilver to add the object to an internal registry.
+
+If you choose an identifier that is already in use, you will **replace the existing object** with your new one in the registry. This has a couple of implications. First, you should obviously pick a unique string to use as an identifier. Second, if you end up "recreating" various objects (either to appear in the third pane, or to act as children for another object) be careful what you do with them. Here are some tips:
+
+  1. For objects that just serve some temporary purpose in the UI, don't even set an identifier.
+  2. Wherever possible, use existing objects instead of recreating identical ones.
+  3. If you want to use an existing object, but modify it in some way, create a new empty `QSObject` and assign it attributes from the existing object as needed.
 
 #### Type ####
 
@@ -391,11 +401,29 @@ If a user sends multiple things to your action using the comma trick, then `[dOb
 
 #### Getting Specific Objects ####
 
-It looks like the `objectWithIdentifier:` method will return an existing `QSObject` if you know what it's ID was set to (probably because you set it yourself). I haven't used it or tested it.
+The `objectWithIdentifier:` method will return an existing `QSObject` if you know what it's ID was set to (probably because you set it yourself). It's a class method, so you don't call it on any particular object.
+
+    QSObject *thisGuy = [QSObject objectWithIdentifier:uuid];
+
+The objects are looked up and returned from the object registry. I'm not sure exactly what the relationship is between the object registry and the catalog. Looking at the Quicksilver source indicates that they're independent, but in practice, I haven't been able to request an object by identifier unless it is in the catalog. If that's true, then the object your requesting must have been added to the catalog by `objectsForEntry:` at some prior point.
 
 ### More Information ###
 
 A lot can be figured out by looking through `QSObject.m`. If you really want to track down *everything* `QSObject` provides, search for "@implementation QSObject" in the Quicksilver source and stare in horror at the number of results.
+
+## Building and Testing ##
+
+When testing a newly built plug-in, if things don't work as expected, don't go back to the code looking for the problem right away. It may be that you're testing against cached data from older code. This process seems to ensure that you're actually testing your latest build.
+
+  1. Install the newly built plug-in
+  2. Relaunch Quicksilver
+  3. Rescan the catalog entries for your plug-in
+  4. Relaunch Quicksilver again
+
+If you're trying to work on one of the existing plug-ins and you can't get it to build, here are a couple of things that have worked for me.
+
+  1. Build Quicksilver from source. The process puts a lot of things in `/tmp` that the source for the plug-ins expect to find there.
+  2. Tell Xcode to do a "Release" build instead of "Debug". (I'm not sure what all the ramifications are with this, but it seems to work.)
 
 ## Links ##
 
