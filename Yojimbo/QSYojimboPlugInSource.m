@@ -102,7 +102,16 @@
             // use the tag object that was created by objectsForEntry
             NSString *ident = [NSString stringWithFormat:@"yojimbotag:%@", tag];
             QSObject *tagObject = [QSObject objectWithIdentifier:ident];
-            [children addObject:tagObject];
+            // navigation history is transient and shouldn't be set on the
+            // actual tag, so we use a temporary stand-in with no identifier
+            NSString *tag = [tagObject name];
+            QSObject *transientTag = [QSObject objectWithName:tag];
+            [transientTag setObject:tag forType:kQSYojimboTagType];
+            [transientTag setObject:[tagObject objectForMeta:@"items"] forMeta:@"items"];
+            [transientTag setObject:kQSYojimboTagType forMeta:@"itemKind"];
+            [transientTag setDetails:@"Yojimbo Tag"];
+            [transientTag setObject:navigationHistory forMeta:@"navigationHistory"];
+            [children addObject:transientTag];
         }
         [object setChildren:children];
     } else {
@@ -115,14 +124,6 @@
             if ([[yojimboItem objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.tag"])
             [tags addObject:yojimboItem];
         }
-        // create a special object to allow access to items with no tags
-        QSObject *tagObject = [QSObject objectWithName:@"Untagged Items"];
-        [tagObject setIdentifier:@"yojimbotag:untagged"];
-        [tagObject setObject:@"Untagged" forType:kQSYojimboTagType];
-        // tags don't have an official itemKind, but I'm making one up for consitency
-        [tagObject setObject:kQSYojimboTagType forMeta:@"itemKind"];
-        [tagObject setDetails:@"Items With No Tags"];
-        [tags addObject:tagObject];
         
         [object setChildren:tags];
     }
@@ -148,6 +149,7 @@
     QSObject *newObject = nil;
     QSObject *tagObject = nil;
     NSMutableDictionary *tags = [NSMutableDictionary dictionaryWithCapacity:1];
+    NSMutableArray *untaggedItems = [NSMutableArray arrayWithCapacity:1];
     
     // NSLog(@"Yojimbo plug-in hitting the filesystem");
     for (NSString *topLevelDir in contents) {
@@ -192,20 +194,22 @@
                     // store this item's tags
                     [newObject setObject:[item valueForKey:@"tags"] forMeta:@"tags"];
                     
-                    // get a list of all tags and the associated items
-                    /* I was hoping to use these UUIDs to pull existing items out of the catalog,
-                       but that doesn't seem to work, so they're not really used, but might as
-                       well store them while we're looping through */
-                    for (NSString *tag in [item valueForKey:@"tags"])
+                    if ([[item valueForKey:@"tags"] count] == 0)
                     {
-                        if ([[tags allKeys] containsObject:tag])
+                        [untaggedItems addObject:[item valueForKey:@"uuid"]];
+                    } else {
+                        // get a list of all tags and the associated items
+                        for (NSString *tag in [item valueForKey:@"tags"])
                         {
-                            // append to the list
-                            [[tags objectForKey:tag] addObject:[item valueForKey:@"uuid"]];
-                        } else {
-                            // create a list of items for this tag
-                            NSMutableArray *itemsForTag = [NSMutableArray arrayWithObject:[item valueForKey:@"uuid"]];
-                            [tags setObject:itemsForTag forKey:tag];
+                            if ([[tags allKeys] containsObject:tag])
+                            {
+                                // append to the list
+                                [[tags objectForKey:tag] addObject:[item valueForKey:@"uuid"]];
+                            } else {
+                                // create a list of items for this tag
+                                NSMutableArray *itemsForTag = [NSMutableArray arrayWithObject:[item valueForKey:@"uuid"]];
+                                [tags setObject:itemsForTag forKey:tag];
+                            }
                         }
                     }
                     
@@ -228,11 +232,22 @@
         [tagObject setIdentifier:ident];
         [tagObject setObject:tag forType:kQSYojimboTagType];
         [tagObject setObject:[tags objectForKey:tag] forMeta:@"items"];
-        // tags don't have an official itemKind, but I'm making one up for consitency
+        // tags don't have an official itemKind, but I'm making one up for consistency
         [tagObject setObject:kQSYojimboTagType forMeta:@"itemKind"];
         [tagObject setDetails:@"Yojimbo Tag"];
         [objects addObject:tagObject];
     }
+    
+    // create and register an "untagged items" object
+    // to allow access to items with no tags
+    QSObject *untagged = [QSObject objectWithName:@"Untagged Items"];
+    [untagged setObject:@"Untagged" forType:kQSYojimboTagType];
+    [untagged setObject:kQSYojimboTagType forMeta:@"itemKind"];
+    [untagged setObject:untaggedItems forMeta:@"items"];
+    [untagged setDetails:@"Items With No Tags"];
+    [untagged setIdentifier:@"yojimbotag:untagged"];
+    [objects addObject:untagged];
+    
     return objects;
 }
 //

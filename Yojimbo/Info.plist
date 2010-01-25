@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>104</string>
+	<string>116</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSYojimboAddAction</key>
