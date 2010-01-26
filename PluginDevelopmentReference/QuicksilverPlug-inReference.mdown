@@ -422,8 +422,8 @@ When testing a newly built plug-in, if things don't work as expected, don't go b
 
 If you're trying to work on one of the existing plug-ins and you can't get it to build, here are a couple of things that have worked for me.
 
-  1. Build Quicksilver from source. The process puts a lot of things in `/tmp` that the source for the plug-ins expect to find there.
-  2. Tell Xcode to do a "Release" build instead of "Debug". (I'm not sure what all the ramifications are with this, but it seems to work.)
+  1. Build Quicksilver from source (Release, not Debug). The process puts a lot of things in `/tmp/QS/build/release/` that the source for the plug-ins expect to find there.
+  2. Tell Xcode to do a "Release" build of the plug-in instead of "Debug". (I'm not sure what all the ramifications are with this, but it seems to work.)
 
 ## Links ##
 
