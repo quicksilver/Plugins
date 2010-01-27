@@ -137,6 +137,10 @@ If the third pane will ask for some sort of search text, you should stick to the
     NSString *searchString=[[NSPasteboard pasteboardWithName:NSFindPboard] stringForType:NSStringPboardType];
     return [NSArray arrayWithObject:[QSObject textProxyObjectWithDefaultValue:searchString]];
 
+### AppleScript Actions ###
+
+<!-- TODO talk about how and why to use pure AppleScript -->
+
 ## Adding to the Catalog ##
 
 ### Info.plist ###
