@@ -30,7 +30,7 @@ Etienne Samson offers this alternate technique:
 
 I'm sure this is good advice, but I don't know enough about Xcode to follow most of those steps, so I didn't. You probably should if you can.
 
-Many if the items in the template's `Info.plist` are named "SomethingTemplate". This prevents Quicksilver from having to process unused features. If you need to use settings in any of these sections, just rename them, removing "Template" from the end.
+Many of the items in the template's `Info.plist` are named "SomethingTemplate". This prevents Quicksilver from having to process unused features. If you need to use settings in any of these sections, just rename them, removing "Template" from the end.
 
 ## Documentation ##
 
