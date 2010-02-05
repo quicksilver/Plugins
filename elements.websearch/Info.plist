@@ -1,96 +1,96 @@
 {
-    CFBundleDevelopmentRegion = English;
-    CFBundleExecutable = "Web Search Module";
-    CFBundleIdentifier = "com.blacktree.Quicksilver.QSWebSearchPlugIn";
-    CFBundleInfoDictionaryVersion = "6.0";
-    CFBundleName = "Web Search Module";
-    CFBundlePackageType = BNDL;
-    CFBundleVersion = 11B;
-    NSPrincipalClass = QSWebSearchPlugIn;
-    QSActions =     {
-        QSURLFindWithAction =         {
-            actionClass = QSURLSearchActions;
-            actionSelector = "doURLSearchForAction:withString:";
-            description = "Find text on a website";
-            directTypes =             (
-                NSStringPboardType
-            );
-            icon = Find;
-            name = "Find With...";
-            reverseArguments = YES;
-            validatesObjects = YES;
-        };
-        QSURLSearchForAction =         {
-            actionClass = QSURLSearchActions;
-            actionSelector = "doURLSearchForAction:withString:";
-            alternateAction = QSURLSearchForAndReturnAction;
-            description = "Search for text on a web site";
-            directTypes =             (
-                "Apple URL pasteboard type"
-            );
-            icon = Find;
-            name = "Search For...";
-            rankModification = "4.000000";
-            validatesObjects = YES;
-        };
-        QSURLSearchForAndReturnAction =         {
-            actionClass = QSURLSearchActions;
-            actionSelector = "doURLSearchForAndReturnAction:withString:";
-            description = "Returns the results of a query directly to the command window";
-            directTypes =             (
-                "Apple URL pasteboard type"
-            );
-            enabled = NO;
-            icon = Find;
-            name = "Show Results for Search...";
-            validatesObjects = YES;
-        };
-    };
-    QSObjectSources =     {
-        QSWebSearchSource = QSWebSearchSource;
-    };
-    QSPlugIn =     {
-        author = "Blacktree, Inc.";
-        categories =         (
-            Web,
-            Search
-        );
-        description = "Allows searching the web";
-        icon = Find;
-        "relatedBundles " =         (
-            "com.apple.Safari"
-        );
-    };
-    QSPresetAdditions =     (
-                {
-            ID = QSPresetDocWebSearches;
-            enabled = YES;
-            name = "Web Searches (from docs.blacktree.com)";
-            settings =             {
-                contentPrefix = "<div class=\"QSWebSearchContentStart\"></div>";
-                contentSuffix = "<div class=\"QSWebSearchContentEnd\"></div>";
-                path = "http://docs.blacktree.com/doku.php?id=quicksilver:web_search_list";
-            };
-            source = QSWebSource;
-        },
-                {
-            ID = QSPresetDocWebFullListSearches;
-            enabled = NO;
-            name = "Web Searches - Full List (from docs.blacktree.com)";
-            settings =             {
-                contentPrefix = "<div class=\"QSWebSearchContentStart\"></div>";
-                contentSuffix = "<div class=\"QSWebSearchContentEnd\"></div>";
-                path = "http://docs.blacktree.com/quicksilver/extended_web_search_list";
-            };
-            source = QSWebSource;
-        }
-    );
-    QSRegistration =     {
-        QSActionProviders =         {
-            QSURLSearchActions = QSURLSearchActions;
-        };
-        QSObjectSources =         {
-            QSWebSearchSource = QSWebSearchSource;
-        };
-    };
+	"CFBundleDevelopmentRegion" = English;
+	CFBundleExecutable = "$(EXECUTABLE_NAME)";
+	CFBundleIdentifier = "com.blacktree.Quicksilver.QSWebSearchPlugIn";
+	"CFBundleInfoDictionaryVersion" = "6.0";
+	CFBundleName = "Web Search Module";
+	CFBundlePackageType = BNDL;
+	CFBundleVersion = 11B;
+	NSPrincipalClass = QSWebSearchPlugIn;
+	QSActions = {
+		QSURLFindWithAction = {
+			actionClass = QSURLSearchActions;
+			actionSelector = "doURLSearchForAction:withString:";
+			description = "Find text on a website";
+			directTypes = (
+				NSStringPboardType,
+			);
+			icon = Find;
+			name = "Find With...";
+			reverseArguments = YES;
+			validatesObjects = YES;
+		};
+		QSURLSearchForAction = {
+			actionClass = QSURLSearchActions;
+			actionSelector = "doURLSearchForAction:withString:";
+			alternateAction = "QSURLSearchForAndReturnAction";
+			description = "Search for text on a web site";
+			directTypes = (
+				"Apple URL pasteboard type",
+			);
+			icon = Find;
+			name = "Search For...";
+			rankModification = "4.000000";
+			validatesObjects = YES;
+		};
+		"QSURLSearchForAndReturnAction" = {
+			actionClass = QSURLSearchActions;
+			actionSelector = "doURLSearchForAndReturnAction:withString:";
+			description = "Returns the results of a query directly to the command window";
+			directTypes = (
+				"Apple URL pasteboard type",
+			);
+			enabled = NO;
+			icon = Find;
+			name = "Show Results for Search...";
+			validatesObjects = YES;
+		};
+	};
+	QSObjectSources = {
+		QSWebSearchSource = QSWebSearchSource;
+	};
+	QSPlugIn = {
+		author = "Blacktree, Inc.";
+		categories = (
+			Web,
+			Search,
+		);
+		description = "Allows searching the web";
+		icon = Find;
+		"relatedBundles " = (
+			"com.apple.Safari",
+		);
+	};
+	QSPresetAdditions = (
+		{
+			ID = "QSPresetDocWebSearches";
+			enabled = YES;
+			name = "Web Searches (from docs.blacktree.com)";
+			settings = {
+				contentPrefix = "<div class=\"QSWebSearchContentStart\"></div>";
+				contentSuffix = "<div class=\"QSWebSearchContentEnd\"></div>";
+				path = "http://docs.blacktree.com/doku.php?id=quicksilver:web_search_list";
+			};
+			source = QSWebSource;
+		},
+		{
+			ID = "QSPresetDocWebFullListSearches";
+			enabled = NO;
+			name = "Web Searches - Full List (from docs.blacktree.com)";
+			settings = {
+				contentPrefix = "<div class=\"QSWebSearchContentStart\"></div>";
+				contentSuffix = "<div class=\"QSWebSearchContentEnd\"></div>";
+				path = "http://docs.blacktree.com/quicksilver/extended_web_search_list";
+			};
+			source = QSWebSource;
+		},
+	);
+	QSRegistration = {
+		QSActionProviders = {
+			QSURLSearchActions = QSURLSearchActions;
+		};
+		QSObjectSources = {
+			QSWebSearchSource = QSWebSearchSource;
+		};
+	};
 }

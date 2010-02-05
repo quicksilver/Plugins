@@ -107,9 +107,10 @@
 
 
 +(QSObject *)objectForUIElement:(id)element{
-	NSString *name;
-	AXUIElementCopyAttributeValue (element, kAXTitleAttribute, &name);
+	NSString *name = nil;
+	if (AXUIElementCopyAttributeValue(element, kAXTitleAttribute, &name) != kAXErrorSuccess) return nil;
 	[name autorelease];
+	if (AXValueGetType(name) == kAXValueAXErrorType) return nil;
 	return [self objectForUIElement:element name:name];
 }
 +(QSObject *)objectForUIElement:(id)element name:(NSString *)name{	

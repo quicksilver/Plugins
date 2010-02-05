@@ -11,80 +11,196 @@
 
 @implementation QSYojimboPlugInAction
 
-
 #define kQSYojimboPlugInAction @"QSYojimboPlugInAction"
+
 - (NSAppleScript *)script{
-	NSString *scriptPath=[[NSBundle bundleForClass:[self class]]pathForResource:@"Yojimbo" ofType:@"scpt"];
-	if (!scriptPath)return nil;
-	NSAppleScript *script=[[NSAppleScript alloc]initWithContentsOfURL:[NSURL fileURLWithPath:scriptPath] error:nil];
-	return script;
+    NSString *scriptPath=[[NSBundle bundleForClass:[self class]]pathForResource:@"Yojimbo" ofType:@"scpt"];
+    if (!scriptPath)return nil;
+    NSAppleScript *script=[[NSAppleScript alloc]initWithContentsOfURL:[NSURL fileURLWithPath:scriptPath] error:nil];
+    return script;
 }
-- (QSObject *)addObject:(QSObject *)dObject{
-	BOOL isURL=[dObject containsType:QSURLType];
-	NSAppleEventDescriptor *ident=[[self script] executeSubroutine:isURL?@"add_url":@"add_note" arguments:[NSArray arrayWithObjects:[dObject displayName],[dObject stringValue],nil]
-															 error:nil];
-	
-	NSString *uuid=	[ident stringValue];
-	QSObject *newObject=[QSObject objectWithIdentifier:uuid];	
-	[newObject setName:[dObject name]];
-	[newObject setIdentifier:uuid];
-	[newObject setObject:uuid forType:kQSYojimboPlugInType];
-	[newObject setPrimaryType:kQSYojimboPlugInType];
-	return newObject;
+
+- (QSObject *)addObject:(QSObject *)dObject withName:(QSObject *)itemName
+{
+    NSString *addRoutine = nil;
+    id itemContent = [dObject stringValue];
+    // figure out how to add this thing based on type
+    if ([dObject containsType:QSURLType])
+    {
+        // add this as a "bookmark"
+        addRoutine = @"add_url";
+    } else if ([dObject containsType:QSFilePathType]) {
+        // import a file
+        addRoutine = @"add_file";
+        // override default content
+        itemContent = [dObject objectForType:QSFilePathType];
+    } else {
+        // add this as a "note"
+        addRoutine = @"add_note";
+    }
+    NSAppleEventDescriptor *appleScriptResult = [[self script]
+        executeSubroutine:addRoutine
+        arguments:[NSArray arrayWithObjects:
+            [itemName stringValue],
+            itemContent,
+            nil
+        ]
+        error:nil];
+    
+    NSString *uuid= [appleScriptResult stringValue];
+    QSObject *newObject=[QSObject makeObjectWithIdentifier:uuid];
+    [newObject setName:[itemName stringValue]];
+    [newObject setDetails:@"New Yojimbo Item"];
+    [newObject setIdentifier:uuid];
+    [newObject setObject:uuid forType:kQSYojimboPlugInType];
+    [newObject setPrimaryType:kQSYojimboPlugInType];
+    return newObject;
+}
+
+- (QSObject *)addTagsToItem:(QSObject *)dObject withTags:(QSObject *)tags
+{
+    // get a list of tags passed in
+    NSMutableArray *tagNames = [NSMutableArray arrayWithCapacity:1];
+    if ([[tags stringValue] isEqualToString:@"combined objects"])
+    {
+        // multiple tags
+        for (QSObject *tag in [tags objectForCache:kQSObjectComponents])
+        {
+            [tagNames addObject:[tag stringValue]];
+        }
+    } else {
+        // single tag
+        [tagNames addObject:[tags stringValue]];
+    }
+    // add the tags to the item(s) via AppleScript
+    // NSLog(@"attempting to tag %@ with %@", [dObject identifier], tagNames);
+    for (NSString *yojimboItem in [dObject arrayForType:kQSYojimboPlugInType])
+    {
+        [[self script]
+            executeSubroutine:@"add_tags"
+            arguments:[NSArray arrayWithObjects:
+                yojimboItem,
+                tagNames,
+                nil
+            ]
+            error:nil
+        ];
+    }
+    return nil;
 }
 
 - (QSObject *)appendToNote:(QSObject *)dObject content:(QSObject *)iObject{
-	NSString *uuid=[dObject objectForType:kQSYojimboPlugInType];
-	NSString *body=[dObject objectForType:QSTextType];
-	NSString *text=[iObject stringValue];
-	body=[body stringByAppendingFormat:@"\r%@",text];//
-//	NSDictionary *attributes=[NSDictionary dictionaryWithObject:[NSFont boldSystemFontOfSize:24] forKey:NSFontAttributeName];
-//	NSAttributedString *string=[[[NSAttributedString alloc]initWithString:body attributes:attributes]autorelease];
-	
-//	NSLog(@"str %@ %@",string,[NSAppleEventDescriptor descriptorWithObjectAPPLE:string]);
-	NSAppleEventDescriptor *ident=[[self script] executeSubroutine:@"set_note" arguments:[NSArray arrayWithObjects:uuid,body,nil]
-															 error:nil];
-	
-	[dObject setObject:body forType:QSTextType];
-	return nil;
+    NSString *uuid=[dObject identifier];
+    NSString *text=[iObject stringValue];
+    [[self script]
+        executeSubroutine:@"append_to_note"
+        arguments:[NSArray arrayWithObjects:uuid, text, nil]
+        error:nil
+    ];
+    return nil;
 }
 
 - (QSObject *)addObjectArchive:(QSObject *)dObject{
-	NSAppleEventDescriptor *ident=[[self script] executeSubroutine:@"add_url_archive" arguments:[NSArray arrayWithObject:[dObject objectForType:QSURLType]]
-															 error:nil];
-	NSString *uuid=	[ident stringValue];
-	QSObject *newObject=[QSObject objectWithIdentifier:uuid];	
-	[newObject setName:[dObject name]];
-	[newObject setIdentifier:uuid];
-	[newObject setObject:uuid forType:kQSYojimboPlugInType];
-	[newObject setPrimaryType:kQSYojimboPlugInType];
-	//NSLog(@"newob %@",newObject);
-	return newObject;
-	
+    NSAppleEventDescriptor *appleScriptResult=[[self script] executeSubroutine:@"add_url_archive" arguments:[NSArray arrayWithObject:[dObject objectForType:QSURLType]]
+                                                             error:nil];
+    NSString *uuid= [appleScriptResult stringValue];
+    QSObject *newObject=[QSObject makeObjectWithIdentifier:uuid];   
+    [newObject setName:[dObject name]];
+    [newObject setIdentifier:uuid];
+    [newObject setObject:uuid forType:kQSYojimboPlugInType];
+    [newObject setPrimaryType:kQSYojimboPlugInType];
+    //NSLog(@"newob %@",newObject);
+    return newObject;
 }
 
 - (QSObject *)showObject:(QSObject *)dObject{
-	NSString *uuid=[dObject objectForType:kQSYojimboPlugInType];
-	NSString *path=[[NSString stringWithFormat:@"~/Library/Caches/Metadata/com.barebones.yojimbo/%@.yojimboitem",uuid]stringByStandardizingPath];
-	[[NSWorkspace sharedWorkspace]openFile:path];
-	return nil;
+    NSString *uuid=[dObject objectForType:kQSYojimboPlugInType];
+    [[self script] executeSubroutine:@"show_item" arguments:uuid error:nil];
+    return nil;
 }
-
 
 - (NSArray *) validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject{
-	if ([dObject containsType:kQSYojimboPlugInType]) return [NSArray arrayWithObject:@"QSYojimboAppendAction"];
-	else return [NSArray arrayWithObject:@"QSYojimboAddAction"];
-	
+    // the list of actions to return
+    NSMutableArray *actions = [NSMutableArray arrayWithCapacity:1];
+    // check based on item type
+    if ([dObject containsType:kQSYojimboPlugInType])
+    {
+        [actions addObject:@"QSYojimboShowAction"];
+        [actions addObject:@"QSYojimboTagAction"];
+        // only allow appending to notes
+        if ([[dObject objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.yojimbonote"])
+        {
+            [actions addObject:@"QSYojimboAppendAction"];
+        }
+    } else {
+        [actions addObject:@"QSYojimboAddAction"];
+        [actions addObject:@"QSYojimboNameAddAction"];
+    }
+    return actions;
 }
-
-
 
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
-//	if ([action isEqualToString:@"QSTextPrependAction"]|| [action isEqualToString:@"QSTextAppendAction"])
-//		return nil;
-	QSObject *textObject=[QSObject textProxyObjectWithDefaultValue:@""];
-	return [NSArray arrayWithObject:textObject]; //[QSLibarrayForType:NSFilenamesPboardType];
+    if ([action isEqualToString:@"QSYojimboAddAction"] || [action isEqualToString:@"QSYojimboNameAddAction"])
+    {
+        return [NSArray arrayWithObject: [QSObject textProxyObjectWithDefaultValue:[dObject name]]];
+    }
+    if ([action isEqualToString:@"QSYojimboAppendAction"])
+    {
+        NSString *clipBoardContents=[[NSPasteboard pasteboardWithName:NSGeneralPboard] stringForType:NSStringPboardType];
+        return [NSArray arrayWithObject: [QSObject textProxyObjectWithDefaultValue:clipBoardContents]];
+    }
+    if ([action isEqualToString:@"QSYojimboTagAction"])
+    {
+        // FIXME this method currently causes all items to be loaded from disk on every call
+        // return a list of tags
+        NSString *path = [@"~/Library/Caches/Metadata/com.barebones.yojimbo" stringByStandardizingPath];
+        NSFileManager *manager = [NSFileManager defaultManager];
+        NSArray *contents = [manager directoryContentsAtPath:path];
+        NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
+        QSObject *tagObject = nil;
+        NSMutableDictionary *tags = [NSMutableDictionary dictionaryWithCapacity:1];
+        
+        // NSLog(@"Yojimbo plug-in hitting the filesystem");
+        for (NSString *topLevelDir in contents) {
+            topLevelDir = [path stringByAppendingPathComponent:topLevelDir];
+            for (NSString *secondLevelDir in [manager directoryContentsAtPath:topLevelDir]) {
+                secondLevelDir = [topLevelDir stringByAppendingPathComponent:secondLevelDir];
+                for (NSString *yojimboItem in [manager directoryContentsAtPath:secondLevelDir]) {
+                    if ([yojimboItem rangeOfString:@"yojimbo"].location == NSNotFound) continue;
+                    yojimboItem = [secondLevelDir stringByAppendingPathComponent:yojimboItem];
+                    NSDictionary *item = [NSDictionary dictionaryWithContentsOfFile:yojimboItem];
+
+                    // get a list of all tags and the associated items
+                    for (NSString *tag in [item valueForKey:@"tags"])
+                    {
+                        if ([[tags allKeys] containsObject:tag])
+                        {
+                            // append to the list
+                            [[tags objectForKey:tag] addObject:[item valueForKey:@"uuid"]];
+                        } else {
+                            // create a list of items for this tag
+                            NSMutableArray *itemsForTag = [NSMutableArray arrayWithObject:[item valueForKey:@"uuid"]];
+                            [tags setObject:itemsForTag forKey:tag];
+                        }
+                    }
+                }
+            }
+        }
+        // add tags to the catalog
+        for (NSString *tag in [tags allKeys])
+        {
+            tagObject = [QSObject objectWithName:tag];
+            [tagObject setObject:tag forType:kQSYojimboTagType];
+            [tagObject setObject:[tags objectForKey:tag] forMeta:@"items"];
+            // tags don't have an official itemKind, but I'm making one up for consistency
+            [tagObject setObject:kQSYojimboTagType forMeta:@"itemKind"];
+            [tagObject setDetails:@"Yojimbo Tag"];
+            [objects addObject:tagObject];
+        }
+        return objects;
+    }
+    // no matches - return empty string
+    QSObject *textObject=[QSObject textProxyObjectWithDefaultValue:@""];
+    return [NSArray arrayWithObject:textObject];
 }
-
-
 @end

@@ -1,5 +1,5 @@
 
-
+#import "QSWebSearchPlugInDefines.h"
 #import "QSWebSearchController.h"
 
 
@@ -132,7 +132,9 @@
 }
 
 
-- (id)webSearch { return [[webSearch retain] autorelease]; }
+- (id)webSearch {
+	return [[webSearch retain] autorelease];
+}
 
 - (void)setWebSearch:(id)newWebSearch {
     [webSearch release];

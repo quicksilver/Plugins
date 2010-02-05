@@ -17,6 +17,7 @@
 @implementation QSUIAccessPlugIn_Action
 
 - (QSObject *)getUIElementForApplication:(QSObject *)dObject{
+  dObject = [self resolvedProxy:dObject];
 	pid_t pid=[[[dObject objectForType:QSProcessType]objectForKey:@"NSApplicationProcessIdentifier"]intValue];
 	AXUIElementRef app=AXUIElementCreateApplication (pid);
 	QSObject *object=[QSObject objectForUIElement:app];
@@ -25,58 +26,26 @@
 	return object;
 }
 
-- (NSArray *)menuItemsForElement:(AXUIElementRef)element depth:(int)depth leavesOnly:(BOOL)leavesOnly{
-	
-	CFIndex count=-1;
-	NSArray *children=nil;
-	AXUIElementGetAttributeValueCount(element, kAXChildrenAttribute, &count);
-	if (!count) return nil;
-	NSMutableArray *childrenObjects=[NSMutableArray arrayWithCapacity:count];
-	
-	
-	AXUIElementCopyAttributeValues(element, kAXChildrenAttribute, 0, count, &children);	
-
-	NSArray *attributes=[NSArray arrayWithObjects:kAXTitleAttribute,kAXEnabledAttribute,kAXRoleAttribute,nil];
-	for(NSString * child in children){
-		NSArray *array=nil;
-		NSArray *attributeValues;
-		AXUIElementCopyMultipleAttributeValues (child,attributes,0,&attributeValues); 
-		NSString *name=[attributeValues objectAtIndex:0]; 
-		NSNumber *enabled=[attributeValues objectAtIndex:1];
-		NSString *role=[attributeValues objectAtIndex:2];
-		if (AXValueGetType(name)==kAXValueAXErrorType)name=@"????";
-	
-		if ([name isEqualToString:@"Apple"])continue;
-		if ([name isEqualToString:@"Services"])continue;
-		if (![enabled boolValue]) continue;
-		
-		
-		BOOL isMenu=[role isEqualToString:@"AXMenu"];
-		if (isMenu){
-				array=[self menuItemsForElement:child depth:depth leavesOnly:leavesOnly];
-		}else if (depth){
-			array=[self menuItemsForElement:child depth:depth-1 leavesOnly:leavesOnly];
-		}
-		
-		if ([array count]){
-			[childrenObjects addObjectsFromArray:array];
-		}
-		
-		if (!isMenu && (!leavesOnly || ![array count])){
-			//NSLog(@"%@ %@ %@",name,enabled,role);
-			if ([name isEqualToString:@"-"]){
-				//[childrenObjects addObject:[QSSeparatorObject separatorWithName:@""]];
-			}else{
-				QSObject *object=[QSObject objectForUIElement:child name:name];
-				[childrenObjects addObject:object];	
-			}
-		}
-		[attributeValues release];
-	}
-	[children release];
-	
-	return childrenObjects;
-	
+NSArray *MenuItemsForElement(AXUIElementRef element, int depth, NSString *name) {
+  NSArray *children = nil;
+  AXUIElementCopyAttributeValue(element, kAXChildrenAttribute, &children);
+  if (([children count] < 1) || ([children count] > 50) || (depth < 1)) {
+    QSObject *menuObject = (name) ? [QSObject objectForUIElement:element name:name] : [QSObject objectForUIElement:element];
+    return (menuObject) ? [NSArray arrayWithObject:menuObject] : [NSArray array];
+  }
+  
+  NSMutableArray *menuItems = [NSMutableArray array];
+  for (id child in children) {
+    CFBooleanRef enabled = NULL;
+    if ((AXUIElementCopyAttributeValue(child, kAXEnabledAttribute, &enabled) != kAXErrorSuccess) || (!CFBooleanGetValue(enabled))) continue;
+    CFStringRef name = nil;
+    if (AXUIElementCopyAttributeValue(child, kAXTitleAttribute, &name) == kAXErrorSuccess) {
+      if (([name isEqualToString:@"Apple"]) || ([name isEqualToString:@"Services"])) continue;
+    }
+   [menuItems addObjectsFromArray:MenuItemsForElement(child,depth - 1,name)];
+  }
+  
+  return menuItems;
 }
 
 - (QSObject *)appMenus:(QSObject *)dObject pickItem:(QSObject *)iObject{
@@ -85,11 +54,12 @@
 
 
 - (QSObject *)searchAppMenus:(QSObject *)dObject{
+  dObject = [self resolvedProxy:dObject];
 	pid_t pid=[[[dObject objectForType:QSProcessType]objectForKey:@"NSApplicationProcessIdentifier"]intValue];
 	AXUIElementRef app=AXUIElementCreateApplication (pid);	
 	AXUIElementRef menuBar;
 	AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
-	NSArray *items=[self menuItemsForElement:menuBar depth:7 leavesOnly:YES];
+	NSArray *items=MenuItemsForElement(menuBar,7,nil);
 	
 	[QSPreferredCommandInterface showArray:items];
 	return nil;
@@ -97,22 +67,24 @@
 
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
 	if ([action isEqualToString:@"QSPickMenuItemsAction"]){
+	  dObject = [self resolvedProxy:dObject];
 		pid_t pid=[[[dObject objectForType:QSProcessType]objectForKey:@"NSApplicationProcessIdentifier"]intValue];
 		AXUIElementRef app=AXUIElementCreateApplication (pid);	
 		AXUIElementRef menuBar;
 		AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
-		NSArray *actions=[self menuItemsForElement:menuBar depth:7 leavesOnly:YES];
+		NSArray *actions=MenuItemsForElement(menuBar,7,nil);
 		
 		//NSLog(@"actions: %@",actions);
 		return [NSArray arrayWithObjects:[NSNull null],actions,nil];
 		return nil;
 	}else if ([action isEqualToString:@"QSPickMenusAction"]){
+	  dObject = [self resolvedProxy:dObject];
 		pid_t pid=[[[dObject objectForType:QSProcessType]objectForKey:@"NSApplicationProcessIdentifier"]intValue];
 		AXUIElementRef app=AXUIElementCreateApplication (pid);	
 		AXUIElementRef menuBar;
 		AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
 	
-		NSArray *actions=[self menuItemsForElement:menuBar depth:0 leavesOnly:YES];
+		NSArray *actions=MenuItemsForElement(menuBar,1,nil);
 				
 		//NSLog(@"actions: %@",actions);
 		return [NSArray arrayWithObjects:[NSNull null],actions,nil];
@@ -170,4 +142,13 @@
 	AXUIElementPerformAction (element,kAXPressAction);
 	return nil;
 }
+
+- (QSObject *)resolvedProxy:(QSObject *)dObject
+{
+  if ([dObject respondsToSelector:@selector(resolvedObject)]) return [dObject resolvedObject];
+  
+  if ([dObject respondsToSelector:@selector(object)]) return [self resolvedProxy:[dObject object]];
+  return dObject;
+}
+
 @end

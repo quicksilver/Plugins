@@ -34,9 +34,8 @@
     QSObject *newObject;
     
     //Albums
-    NSArray *albums=[[self iPhotoLibrary] objectForKey:@"List of Albums"];    NSDictionary *thisAlbum;
-    NSEnumerator *albumEnumerator=[albums objectEnumerator];
-    while(thisAlbum=[albumEnumerator nextObject]){
+    NSArray *albums=[[self iPhotoLibrary] objectForKey:@"List of Albums"];
+    for (NSDictionary *thisAlbum in albums){
         newObject=[QSObject objectWithName:[thisAlbum objectForKey:@"AlbumName"]];
         [newObject setObject:thisAlbum forType:QSiPhotoAlbumPboardType];
         [newObject setPrimaryType:QSiPhotoAlbumPboardType];
@@ -116,12 +115,11 @@
     if ([[object primaryType]isEqualToString:QSiPhotoAlbumPboardType]){
         NSDictionary *albumDict=[object primaryObject];
         NSArray *photos=[[[self iPhotoLibrary] objectForKey:@"Master Image List"]objectsForKeys:[albumDict objectForKey:@"KeyList"] notFoundMarker:[NSNull null]];
-        NSEnumerator *photoEnumerator=[photos objectEnumerator];
 		NSMutableArray *objects=[NSMutableArray arrayWithCapacity:[photos count]];
         QSObject *newObject;
         NSDictionary *photoInfo;
 		NSString *path;
-        while (photoInfo=[photoEnumerator nextObject]){
+        for (photoInfo in photos){
 			newObject=[QSObject objectWithName:[photoInfo objectForKey:@"Caption"]];
             [newObject setObject:photoInfo forType:QSiPhotoPhotoType];
             if (path=[photoInfo objectForKey:@"ImagePath"])
@@ -137,7 +135,7 @@
 - (NSDictionary *)iPhotoLibrary { 
     if (!iPhotoLibrary){
         NSString *libraryPath=[(NSString *)CFPreferencesCopyValue((CFStringRef) @"RootDirectory", (CFStringRef) @"com.apple.iPhoto", kCFPreferencesCurrentUser, kCFPreferencesAnyHost) autorelease];
-        libraryPath=[libraryPath stringByAppendingPathComponent:@"AlbumData.xml"];;
+        libraryPath=[[libraryPath stringByAppendingPathComponent:@"AlbumData.xml"] stringByExpandingTildeInPath];
         [self setiPhotoLibrary:[NSDictionary dictionaryWithContentsOfFile:libraryPath]]; 
     }
     return iPhotoLibrary; 

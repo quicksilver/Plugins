@@ -12,8 +12,9 @@
 @implementation QSWebSearchSource
 
 
-
-- (BOOL)isVisibleSource{return YES;}
+- (BOOL)isVisibleSource {
+	return YES;
+}
 
 - (BOOL)indexIsValidFromDate:(NSDate *)indexDate forEntry:(NSDictionary *)theEntry{
 		  NSDate *specDate=[NSDate dateWithTimeIntervalSinceReferenceDate:[[theEntry objectForKey:kItemModificationDate]floatValue]];
@@ -37,7 +38,7 @@
 	NSMutableArray *urlArray=[theEntry objectForKey:@"queryList"];
     NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
     QSObject *newObject;
-	for(NSDictionary * urlDict,urlArray){
+	for(NSDictionary * urlDict in urlArray){
 		newObject=[QSObject URLObjectWithURL:[urlDict objectForKey:@"url"] title:[urlDict objectForKey:@"name"]];
 		NSNumber *encoding=[urlDict objectForKey:@"encoding"];
 		if (encoding)
