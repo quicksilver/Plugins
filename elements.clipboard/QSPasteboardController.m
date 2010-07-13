@@ -576,7 +576,7 @@
 }
 - (void)tableView:(NSTableView *)aTableView willDisplayCell:(id)aCell forTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex {
   //NSLog(@"setCell %d", rowIndex);
-  
+  if (rowIndex >= [currentArray count]) return;
   if ([[aTableColumn identifier] isEqualToString:@"object"]) {
     [aCell setRepresentedObject:[currentArray objectAtIndex:rowIndex]];
 		[aCell setState:NSOffState];
