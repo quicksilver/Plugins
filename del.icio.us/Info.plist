@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>94</string>
+	<string>130</string>
 	<key>NSPrincipalClass</key>
 	<string>QSDeliciousPlugIn</string>
 	<key>QSPlugIn</key>

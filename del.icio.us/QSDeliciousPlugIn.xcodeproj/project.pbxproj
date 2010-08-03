@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28855EDF1207EA17003DC758 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28855EDE1207EA17003DC758 /* Security.framework */; };
 		7F8AD05107F2503600011548 /* QSDeliciousPlugInSource.nib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8AD05007F2503600011548 /* QSDeliciousPlugInSource.nib */; };
 		7F9441A10803A9D9007EDC31 /* QSObjectSource.name.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F9441A00803A9D9007EDC31 /* QSObjectSource.name.strings */; };
 		7FB0DC1A0B91FF8600A5B6FF /* bookmark_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB0DC190B91FF8600A5B6FF /* bookmark_icon.png */; };
@@ -30,11 +31,12 @@
 		14A6EB3E10CFFC79000B05B4 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
 		14A6EB3F10CFFC79000B05B4 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		14A6EB4010CFFC79000B05B4 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		28855EDE1207EA17003DC758 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7F8AD05007F2503600011548 /* QSDeliciousPlugInSource.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = QSDeliciousPlugInSource.nib; sourceTree = "<group>"; };
 		7F9441A00803A9D9007EDC31 /* QSObjectSource.name.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = QSObjectSource.name.strings; sourceTree = "<group>"; };
 		7FB0DC190B91FF8600A5B6FF /* bookmark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark_icon.png; sourceTree = "<group>"; };
-		7FB0DC2D0B91FFC500A5B6FF /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = "<group>"; };
-		7FB0DC2E0B91FFC600A5B6FF /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = "<group>"; };
+		7FB0DC2D0B91FFC500A5B6FF /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSCore.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework; sourceTree = "<absolute>"; };
+		7FB0DC2E0B91FFC600A5B6FF /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QSFoundation.framework; path = /Applications/Quicksilver.app/Contents/Frameworks/QSFoundation.framework; sourceTree = "<absolute>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* Social Bookmarks.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Social Bookmarks.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -55,6 +57,7 @@
 				E182BE5B06FC9C46007BF2C2 /* PreferencePanes.framework in Frameworks */,
 				7FB0DC2F0B91FFC600A5B6FF /* QSCore.framework in Frameworks */,
 				7FB0DC300B91FFC600A5B6FF /* QSFoundation.framework in Frameworks */,
+				28855EDF1207EA17003DC758 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +117,7 @@
 				7FB0DC2E0B91FFC600A5B6FF /* QSFoundation.framework */,
 				E182BE5A06FC9C46007BF2C2 /* PreferencePanes.framework */,
 				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+				28855EDE1207EA17003DC758 /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

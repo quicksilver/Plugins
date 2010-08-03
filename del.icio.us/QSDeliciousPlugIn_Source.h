@@ -9,7 +9,7 @@
 
 #import "QSDeliciousPlugIn_Source.h"
 
-@interface QSDeliciousPlugIn_Source : QSObjectSource{
+@interface QSDeliciousPlugIn_Source : QSObjectSource <NSXMLParserDelegate> {
 	NSMutableArray *posts;
 	NSMutableArray *tags;
 	NSMutableArray *dates;
@@ -17,8 +17,6 @@
 	IBOutlet NSTextField *userField;
 	IBOutlet NSTextField *passField;
 }
-
-- (IBAction)savePassword:(id)sender;
 
 @end
 
