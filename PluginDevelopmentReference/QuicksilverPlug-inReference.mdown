@@ -110,7 +110,9 @@ For actions that won't support the comma trick, you should use the object valida
 
 ### Validating Objects ###
 
-#### - (NSArray *)validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject
+#### validActionsForDirectObject ####
+
+Example: `- (NSArray *)validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject`
 
 If you set `validatesObjects` to TRUE on an action in `Info.plist`, that action will never appear unless you add some corresponding code. This method must exist in `BlahAction.m` and return the name of any actions that you think will be safe to run based on whatever validation steps you've gone through. It should return an array of action names as strings. Perhaps you don't want the actions to work with strings longer than 100 characters or something. You could accomplish that with:
 
@@ -122,7 +124,11 @@ If you set `validatesObjects` to TRUE on an action in `Info.plist`, that action 
     }
     return newActions;
 
-#### - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject
+Keep in mind that Quicksilver has to run this validation code on every object that ever gets selected in the first pane in order to determine if this action is applicable or not before it can display the actions in the second pane. And not just for your plug-in. It's every validation method from every active plug-in every time a user selects something. It should go without saying at this point, but make sure your `validActionsForDirectObject:` method returns quickly!
+
+#### validIndirectObjectsForAction
+
+Example: `- (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject`
 
 This method doesn't seem to be related to `validatesObjects` in the plist, but the name implies it has something to do with validation. In any case, it can be useful.
 
@@ -191,7 +197,9 @@ The information for an entry (from `Info.plist`) can be pulled in like this:
 
 Again, existing plug-ins can give you some examples of how to use this info.
 
-#### - (NSArray *)objectsForEntry:(NSDictionary *)theEntry
+#### objectsForEntry
+
+Example: `- (NSArray *)objectsForEntry:(NSDictionary *)theEntry`
 
 This method does the work of adding your objects to the catalog. It can do whatever you want it to do (parse files, get information over the network, query a database, etc.) as long as it returns an array of `QSObject`s.
 
@@ -203,7 +211,9 @@ There are several ways to create a `QSObject`. Here are a couple:
 
 All of the available ways and the differences between them isn't entirely clear, so experiment and see what works for you. There are also things you may want to do to your objects prior to adding them to the array to be returned, like `setIdentifier:`, `setLabel:`, `setDetails:`, `setObject:forType:` etc. There's a whole section in this document on `QSObject` that provides more details.
 
-#### - (BOOL)indexIsValidFromDate:(NSDate *)indexDate forEntry:(NSDictionary *)theEntry
+#### indexIsValidFromDate
+
+Example `- (BOOL)indexIsValidFromDate:(NSDate *)indexDate forEntry:(NSDictionary *)theEntry`
 
 Quicksilver runs this during scheduled catalog updates (every 10 minutes by default) to ask "Is this catalog entry still up to date?" How you determine the answer to this question is up to you. If this method returns YES/TRUE, Quicksilver moves along without doing anything. If this method returns NO/FALSE, Quicksilver will attempt to update the entry by calling the `objectsForEntry:` method.
 
@@ -213,7 +223,9 @@ You can have this method do nothing but return TRUE of FALSE unconditionally, an
 
 **NOTE**: This method is not consulted when your plug-in is first installed or when a user selects the entry in the catalog and hits the "rescan" button manually. In other words, if you're checking for errors with your source here to avoid unnecessary rescans, that's good, but you still need to check for errors in `objectsForEntry:` as well, because it will be called at least once.
 
-#### - (void)setQuickIconForObject:(QSObject *)object
+#### setQuickIconForObject
+
+Example: `- (void)setQuickIconForObject:(QSObject *)object`
 
 If you call `setIcon:` when adding objects to the catalog, they will show up at first but quickly disappear. Calling `setIcon:` from this method instead will work more reliably. Example:
 
@@ -223,7 +235,9 @@ Quicksilver calls this in real-time as objects need to be displayed, which is wh
 
 This method does not seem to be called for `QSObject`s created using `objectWithString:`. That method makes a call to `loadIcon:` internally, which must tell Quicksilver that it already has an icon and doesn't need to go look for one.
 
-#### - (BOOL)loadChildrenForObject:(QSObject *)object
+#### loadChildrenForObject
+
+Example `- (BOOL)loadChildrenForObject:(QSObject *)object`
 
 This is very similar to `objectsForEntry:`, but instead of adding things to the catalog, it loads them on the fly when you right arrow into the parent object. You just need to create an array of `QSObject`s, but instead of returning them, you assign them to the parent object like this:
 
@@ -234,7 +248,9 @@ These can be newly created objects or objects that are already in the catalog. Y
 
 **Read up on identifiers in the QSObject section before creating/using objects as children.**
 
-#### - (BOOL)isVisibleSource
+#### isVisibleSource
+
+Example: `- (BOOL)isVisibleSource`
 
 This method determines whether or not your source shows up on the drop-down list for adding new custom catalog entries. As far as I can tell, the name users see will be something ugly like "QSBlahSource". The mapping that generates pretty names seems to be embedded with Quicksilver itself.
 
@@ -363,6 +379,11 @@ You can set an icon for a `QSObject` using the `setIcon:` method. I'm not even s
 I don't recommend using the `setIcon:` method when adding things to the catalog. (See the note on `setQuickIconForObject:` for an explanation.) However, using this method directly from one of your actions does work if you want to set the icon temporarily for something you're sending back to the Quicksilver UI. (That too will go away, but this is only an issue if the user leaves the object you return up in the first pane.)
 
 FYI, if you want to use one of the standard system icons for something, many can be found in `/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources`. You can refer to them using only the file's name (no path and no ".icns" extension). To use the icon for an application, use its bundle identifier, like `com.apple.Mail`.
+
+<!-- TODO mention that a full path also works with QSResourceManager -->
+<!-- TODO mention getting icons for a file type
+     [object setIcon:[[NSWorkspace sharedWorkspace] iconForFileType:@"pdf"]];
+-->
 
 #### Children ####
 
