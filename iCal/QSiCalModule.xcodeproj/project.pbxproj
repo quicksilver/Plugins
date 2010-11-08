@@ -60,7 +60,6 @@
 				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
-				CDBAD6CA10B9625E000D31A3 /* CalendarStore.framework */,
 			);
 			name = QSiCalModule;
 			sourceTree = "<group>";
@@ -86,8 +85,9 @@
 				14DE8BB310D0A8A800851A6F /* QSPlugIn.xcconfig */,
 				14DE8BB410D0A8A800851A6F /* Release.xcconfig */,
 			);
-			path = Configuration;
-			sourceTree = QS_SOURCE_ROOT;
+			name = Configuration;
+			path = "Apps/QS/blacktree-alchemy/Quicksilver/Configuration";
+			sourceTree = DEVELOPER_DIR;
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -103,6 +103,7 @@
 				7F1BC7C80893F777002F903E /* QSCore.framework */,
 				7F1BC7C90893F777002F903E /* QSFoundation.framework */,
 				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+				CDBAD6CA10B9625E000D31A3 /* CalendarStore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -238,7 +239,7 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Release;
 		};

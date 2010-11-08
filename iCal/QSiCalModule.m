@@ -8,6 +8,9 @@
 
 #import "QSiCalModule.h"
 #import <QSCore/QSLibrarian.h>
+#import <CalendarStore/CalendarStore.h>
+
+
 #define dayAttributes [NSDictionary dictionaryWithObjectsAndKeys:style,NSParagraphStyleAttributeName,[NSFont fontWithName:@"Helvetica Bold" size:54], NSFontAttributeName,[NSColor colorWithCalibratedWhite:0.2 alpha:1.0],NSForegroundColorAttributeName,nil]
 #define monthAttributes [NSDictionary dictionaryWithObjectsAndKeys:style2,NSParagraphStyleAttributeName,[NSNumber numberWithFloat:0.0],NSKernAttributeName,[NSFont fontWithName:@"Helvetica Bold" size:14], NSFontAttributeName,[NSColor whiteColor],NSForegroundColorAttributeName,nil]
 
@@ -58,50 +61,27 @@
 
 - (void)addNodesFromList:(NSArray *)list toArray:(NSMutableArray *)array{
 	
-	NSString *sourcePath=[@"~/Library/Calendars/" stringByStandardizingPath];
+	// get the list of calendars using CalCalendarStore
+	NSArray *listOfCalendars = [[CalCalendarStore defaultCalendarStore] calendars];
 	
-	NSFileManager *fm=[NSFileManager defaultManager];
-	
-	
-	for (NSString *node in list)
-	{
-		//NSLog(@"node %@",node);
-		NSString *subPath=[sourcePath stringByAppendingFormat:@"/%@",node];
-		
-		//NSLog(@"subPath: %@",subPath);
-		
-		NSString *icnsPath = [subPath stringByAppendingFormat:@"/Events/"];
-		NSArray *icnsArray = [fm directoryContentsAtPath:icnsPath];
-		
-		
-		NSDictionary *info=[NSDictionary dictionaryWithContentsOfFile:[subPath stringByAppendingPathComponent:@"/Info.plist"]];
-		if (info){
-			NSString *name=[info objectForKey:@"Title"];
-			if([icnsArray count] != 0)
-			{
-				QSObject *object=[QSObject fileObjectWithPath:[icnsPath stringByAppendingPathComponent:[icnsArray objectAtIndex:0]]];
-				[object setName:name];
-				[object setIdentifier:subPath];
-				[object setDetails:@"Calendar"];
-				[object setObject:name forType:@"QSICalCalendar"];
-				[array addObject:object];
-			}
-			else 
-			{
-				QSObject *object=[QSObject fileObjectWithPath:[subPath stringByAppendingPathComponent:@"Info.plist"]];
-				[object setName:name];
-				[object setIdentifier:subPath];
-				[object setDetails:@"Calendar"];
-				[object setObject:name forType:@"QSICalCalendar"];
-				[array addObject:object];
-			}
-			
-		}
-		//NSArray *sublist=[node objectForKey:@"Subnodes"];
-		//if (sublist) [self addNodesFromList:sublist toArray:array];
-		
+	if (!listOfCalendars) {
+		[[NSAlert alertWithMessageText:@"iCal Error" defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@"You need to upgrade your calendars to a format compatible with Mac OS X Leopard by opening iCal first"] runModal];
 	}
-}
+	for (CalCalendar *eachItem in listOfCalendars)
+	{
+		if(!([[eachItem type] isEqualToString:@"Birthday"]))
+		{
+
+		QSObject *object = [QSObject objectWithName:[eachItem title]];
+		[object setDetails:@"Calendar"];
+		[object setIcon:[[[NSImage alloc] initByReferencingFile:[[NSBundle bundleWithIdentifier:@"com.apple.iCal"] pathForResource:@"bookmark" ofType:@"icns"]] autorelease]];
+		[object setObject:[eachItem title] forType:@"QSICalCalendar"];
+		[array addObject:object];
+		
+		
+		}
+	}
+		}
 
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
 	NSFileManager *fm=[NSFileManager defaultManager];

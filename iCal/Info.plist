@@ -15,9 +15,9 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.2</string>
+	<string>1.0.3</string>
 	<key>CFBundleVersion</key>
-	<string>E4</string>
+	<string>10F</string>
 	<key>NSPrincipalClass</key>
 	<string>QSiCalModule</string>
 	<key>QSActions</key>
