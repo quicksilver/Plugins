@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Cyberduck</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.blacktree.Quicksilver.Cyberduck</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Cyberduck Module</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleVersion</key>
+	<string>37</string>
+	<key>NSPrincipalClass</key>
+	<string>Cyberduck</string>
+	<key>QSPlugIn</key>
+	<dict>
+		<key>author</key>
+		<string>Rob McBroom</string>
+		<key>categories</key>
+		<array>
+			<string>Internet</string>
+		</array>
+		<key>description</key>
+		<string>Cyberduck Module</string>
+		<key>extendedDescription</key>
+		<string>&lt;h2&gt;Cyberduck&lt;/h2&gt;
+
+&lt;p&gt;This plug-in adds your Cyberduck bookmarks to the catalog.&lt;/p&gt;
+
+&lt;p&gt;You can also access your bookmarks by selecting Cyberduck in the first pane and using → or / to go into it.&lt;/p&gt;
+</string>
+		<key>icon</key>
+		<string>ch.sudo.cyberduck</string>
+		<key>qsversion</key>
+		<string>29CC</string>
+		<key>relatedBundles </key>
+		<array>
+			<string>ch.sudo.cyberduck</string>
+		</array>
+		<key>requiresBundle</key>
+		<string>ch.sudo.cyberduck</string>
+	</dict>
+	<key>QSPresetAdditions</key>
+	<array>
+		<dict>
+			<key>ID</key>
+			<string>QSPresetCyberduck</string>
+			<key>enabled</key>
+			<true/>
+			<key>icon</key>
+			<string>ch.sudo.cyberduck</string>
+			<key>name</key>
+			<string>Cyberduck</string>
+			<key>source</key>
+			<string>CyberduckSource</string>
+		</dict>
+	</array>
+	<key>QSRegistration</key>
+	<dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>ch.sudo.cyberduck</key>
+			<string>CyberduckSource</string>
+		</dict>
+		<key>QSObjectSources</key>
+		<dict>
+			<key>CyberduckSource</key>
+			<string>CyberduckSource</string>
+		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>bundles</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>ch.sudo.cyberduck</string>
+				<key>name</key>
+				<string>Cyberduck</string>
+				<key>version</key>
+				<string>3.8</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>
