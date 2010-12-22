@@ -15,6 +15,14 @@ I used the template provided in Ankur Kothari's tutorial (see Links) and it work
   1. Change the SDK to be 10.5 or higher. (If you don't even have the 10.4 SDK installed, like me, you'll see an error that will make this obvious.)
   2. The `BlahAction.h` imports itself. I'm not an expert, but this seems like a mistake and removing the line hasn't made a difference in plug-ins I've worked on.
 
+To compile most plug-ins, you'll need a "developer build" of Quicksilver. This is hard to come by these days, but it's just the normal application with some header files included. You can turn your copy of Quicksilver into a developer version by downloading [the headers](http://qsapp.com/dev/Frameworks.zip) and putting them in `/Applications/Quicksilver.app/Contents/Frameworks/`.
+
+Once you have them in place, you need to tell Xcode about them. Go to the "Source Trees" section in Xcode's preferences and add this:
+
+    Setting Name: QSFrameworks  
+    Display Name: Quicksilver Frameworks  
+    Path:         /Applications/Quicksilver.app/Contents/Frameworks/
+
 Etienne Samson offers this alternate technique:
 
 > For the record, the setup is made easier by the xcconfig files.
