@@ -1,9 +1,9 @@
 About Quicksilver Plugins on Github
 ===================================
 
-This repository contains the current source code of all the Quicksilver Plugins / Modules. If you're having issues with any of the plugins, feel free to log them at the [issue tracker](http://github.com/tiennou/blacktree-elements-public/issues).
+This repository contains the current source code of all the Quicksilver Plugins / Modules. If you're having issues with any of the plugins, feel free to log them at the [issue tracker](https://github.com/quicksilver/Plugins/issues).
 
-Always be sure to check the [Google Groups](http://groups.google.com/group/blacktree-quicksilver/topics?gvc=2) first incase there's a solution to your problem.
+Always be sure to check the [Google Groups](http://groups.google.com/group/blacktree-quicksilver/topics?gvc=2) first incase there's a solution to your problem, as well as the [QSApp.com Wiki](http://qsapp.com/wiki/).
 
 
 Before You Try It Out
@@ -22,7 +22,7 @@ This is easily done by backing up the following folders
 Before Building
 ---------------
 
-Before being able to build any of these plugins, you **MUST** set a new Source Tree for the QSFramework in the XCode Preferences.
+Before being able to build any of these plugins, you **MUST** set a new Source Tree for the `QSFramework` in the XCode Preferences.
 
 This is done by going into the XCode preferences, clicking 'Source Trees' and adding a new one with the following options:
 
@@ -30,12 +30,13 @@ Setting Name: `QSFramework`
 Display Name: a suitable name, e.g. `Quicksilver Frameworks`  
 Path: `/Applications/Quicksilver.app/Contents/Frameworks` (or path of Quicksilver.app if different)
 
-For some plugins to compile correctly a source tree must also be set for QS_SOURCE_ROOT that points to the location of the [Quicksilver source code](http://github.com/tiennou/blacktree-alchemy).
+For some plugins to compile correctly a source tree must also be set for `QS_SOURCE_ROOT` that points to the location of the [Quicksilver source code](https://github.com/quicksilver/Quicksilver) you've downloaded onto your local machine.
 
-Setting Name: 'QS_SOURCE_ROOT'
-Display Name: a suitable name, e.g. 'Quicksilver source code root'
-Path: '/Users/<user>/<path to Quicksilver source code>'
+Setting Name: `QS_SOURCE_ROOT`	
+Display Name: a suitable name, e.g. `Quicksilver source code root`	 
+Path: `/Users/<user>/<path to Quicksilver source code>`
 
+See the QSApp.com wiki for more information on [Building Quicksilver](http://qsapp.com/wiki/Building_Quicksilver).
 
 Legal Stuff 
 -----------
