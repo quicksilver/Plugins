@@ -476,7 +476,7 @@ Some things that helped me.
 
 [Official Docs](http://docs.blacktree.com/quicksilver/development/development) - Almost worth your time. Almost.
 
-[The Existing Plug-ins](http://github.com/tiennou/blacktree-elements) - Loads and loads of undocumented, uncommented examples that you may or may not be able to make sense of.
+[The Existing Plug-ins](http://github.com/quicksilver/Plugins) - Loads and loads of undocumented, uncommented examples that you may or may not be able to make sense of.
 
 [The Remote Hosts Module](http://github.com/skurfer/RemoteHosts) - Not to plug my own work, but it's the only frakking plug-in I've seen with a single frakking comment to explain what's going on, so it might be worth a look.
 
