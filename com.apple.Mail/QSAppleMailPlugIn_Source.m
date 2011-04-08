@@ -10,6 +10,8 @@
 
 @interface QSAppleMailPlugIn_Source (hidden)
 - (QSObject *)makeMailboxObject:(NSString *)mailbox withAccountName:(NSString *)accountName withAccountId:(NSString *)accountId withFile:(NSString *)file withChildren:(BOOL)loadChildren;
+- (NSArray *)mailsForMailbox:(QSObject *)object;
+- (NSArray *)mailContent:(QSObject *)object;
 @end
 
 @implementation QSAppleMailPlugIn_Source
@@ -97,60 +99,16 @@
 		return YES;
 	}
 	if ([[object primaryType]isEqualToString:kQSAppleMailMailboxType]){
-		NSString *mailbox=[object objectForType:kQSAppleMailMailboxType];
-		
-		NSAppleScript *script=[[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
-		
-		id result=[[script executeSubroutine:@"list_messages"
-								   arguments:mailbox
-									   error:nil]objectValue];
-		//NSLog(@"res %@",result);
-		NSArray *ids=[result objectAtIndex:0];
-		NSArray *subjects=[result objectAtIndex:1];
-		NSArray *senders=[result objectAtIndex:2];
-		NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
-		QSObject *newObject;
-		
-		
-		int i;
-		for (i=0;i<[ids count];i++){
-			NSString *messagePath=[NSString stringWithFormat:@"%@//%@",mailbox,[ids objectAtIndex:i]];
-			newObject=[QSObject objectWithName:[subjects objectAtIndex:i]];
-			[newObject setObject:messagePath forType:kQSAppleMailMessageType];
-			[newObject setPrimaryType:kQSAppleMailMessageType];
-			[newObject setDetails:[senders objectAtIndex:i]];
-			[objects addObject:newObject];
-		}
-		
-		[object setChildren:objects];
+		[object setChildren:[self mailsForMailbox:object]];
 		return YES; 
 	}
-	
 	if ([[object primaryType]isEqualToString:kQSAppleMailMessageType]){
-		
-		NSArray *message=[[object objectForType:kQSAppleMailMessageType]componentsSeparatedByString:@"//"];
-		NSAppleScript *script=[[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
-		id result=[[script executeSubroutine:@"get_message_contents" arguments:message error:nil]objectValue];
-		NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
-		QSObject *newObject;
-		if (!result) return NO;
-		newObject=[QSObject objectWithString:[result objectAtIndex:0]];
-		[objects addObject:newObject];
-		
-		newObject=[QSObject objectWithName:[result objectAtIndex:1]];
-		[newObject setObject:[result objectAtIndex:1] forType:QSEmailAddressType];
-		[newObject setPrimaryType:QSEmailAddressType];
-		[objects addObject:newObject];
-		
-		
-		[object setChildren:objects];
+		[object setChildren:[self mailContent:object]];
 		return YES;
 	}
-	
-	
-	
 	return NO;
 }
+
 - (NSArray *) objectsForEntry:(NSDictionary *)theEntry{
 	return [self allMailboxes];
 }
@@ -244,6 +202,52 @@
 	[newObject setObject:[NSNumber numberWithBool:loadChildren] forMeta:@"loadChildren"];
 	[newObject setPrimaryType:kQSAppleMailMailboxType];
 	return newObject;
+}
+
+- (NSArray *)mailsForMailbox:(QSObject *)object {
+	NSString *mailbox=[object objectForType:kQSAppleMailMailboxType];
+
+	NSAppleScript *script=[[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
+
+	id result=[[script executeSubroutine:@"list_messages"
+							   arguments:mailbox
+								   error:nil]objectValue];
+	//NSLog(@"res %@",result);
+	NSArray *ids=[result objectAtIndex:0];
+	NSArray *subjects=[result objectAtIndex:1];
+	NSArray *senders=[result objectAtIndex:2];
+	NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
+	QSObject *newObject;
+
+	int i;
+	for (i=0;i<[ids count];i++){
+		NSString *messagePath=[NSString stringWithFormat:@"%@//%@",mailbox,[ids objectAtIndex:i]];
+		newObject=[QSObject objectWithName:[subjects objectAtIndex:i]];
+		[newObject setObject:messagePath forType:kQSAppleMailMessageType];
+		[newObject setPrimaryType:kQSAppleMailMessageType];
+		[newObject setDetails:[senders objectAtIndex:i]];
+		[objects addObject:newObject];
+	}
+	
+	return objects;
+}
+
+- (NSArray *)mailContent:(QSObject *)object {
+	NSArray *message=[[object objectForType:kQSAppleMailMessageType]componentsSeparatedByString:@"//"];
+	NSAppleScript *script=[[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
+	id result=[[script executeSubroutine:@"get_message_contents" arguments:message error:nil]objectValue];
+	NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
+	QSObject *newObject;
+	if (!result) return NO;
+	newObject=[QSObject objectWithString:[result objectAtIndex:0]];
+	[objects addObject:newObject];
+	
+	newObject=[QSObject objectWithName:[result objectAtIndex:1]];
+	[newObject setObject:[result objectAtIndex:1] forType:QSEmailAddressType];
+	[newObject setPrimaryType:QSEmailAddressType];
+	[objects addObject:newObject];
+
+	return objects;
 }
 
 // Object Handler Methods
