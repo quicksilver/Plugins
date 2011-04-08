@@ -224,7 +224,7 @@
 			<key>bundle</key>
 			<string>com.apple.mail</string>
 			<key>resource</key>
-			<string>mailbox.tiff</string>
+			<string>mbox.icns</string>
 		</dict>
 		<key>MailMailbox-Drafts</key>
 		<dict>
@@ -238,7 +238,7 @@
 			<key>bundle</key>
 			<string>com.apple.mail</string>
 			<key>resource</key>
-			<string>InMailboxLarge.tiff</string>
+			<string>mbox.icns</string>
 		</dict>
 		<key>MailMailbox-Junk</key>
 		<dict>
@@ -261,19 +261,12 @@
 			<key>resource</key>
 			<string>OutMailboxLarge.tiff</string>
 		</dict>
-		<key>MailMailbox-Trash</key>
-		<dict>
-			<key>bundle</key>
-			<string>com.apple.mail</string>
-			<key>resource</key>
-			<string>TrashMailboxLarge.tiff</string>
-		</dict>
 		<key>MailMessage</key>
 		<dict>
 			<key>bundle</key>
 			<string>com.apple.mail</string>
 			<key>resource</key>
-			<string>makePlainText.tiff</string>
+			<string>app.icns</string>
 		</dict>
 	</dict>
 </dict>

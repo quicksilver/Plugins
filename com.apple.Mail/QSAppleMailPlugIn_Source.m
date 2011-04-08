@@ -26,15 +26,29 @@
 }
 
 - (void)setQuickIconForObject:(QSObject *)object{
-	
 	if ([[object primaryType]isEqualToString:kQSAppleMailMailboxType]){
-		[object setIcon:[QSResourceManager imageNamed:@"GenericFolderIcon"]];
-	}else{
-		[object setIcon:[QSResourceManager imageNamed:@"MailMessage"]];
-		
+		NSString *mailboxName = [object objectForType:kQSAppleMailMailboxType];
+		if ([mailboxName rangeOfString:@"Junk" options:NSCaseInsensitiveSearch].location != NSNotFound ||
+			[mailboxName rangeOfString:@"Spam" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+			[object setIcon:[QSResourceManager imageNamed:@"MailMailbox-Junk"]];
+		} else if ([mailboxName rangeOfString:@"Drafts" options:NSCaseInsensitiveSearch].location != NSNotFound){
+			[object setIcon:[QSResourceManager imageNamed:@"MailMailbox-Drafts"]];
+		} else if ([mailboxName rangeOfString:@"Sent" options:NSCaseInsensitiveSearch].location != NSNotFound){
+			[object setIcon:[QSResourceManager imageNamed:@"MailMailbox-Sent"]];
+		} else if ([mailboxName rangeOfString:@"Trash" options:NSCaseInsensitiveSearch].location != NSNotFound ||
+				   [mailboxName rangeOfString:@"Deleted" options:NSCaseInsensitiveSearch].location != NSNotFound){
+			[object setIcon:[QSResourceManager imageNamed:@"TrashIcon"]];
+		} else if ([mailboxName rangeOfString:@"Inbox" options:NSCaseInsensitiveSearch].location != NSNotFound){
+			[object setIcon:[QSResourceManager imageNamed:@"MailMailbox-Inbox"]];
+		} else {
+			[object setIcon:[QSResourceManager imageNamed:@"MailMailbox"]];
+		}
+		return;
 	}
-	return NO;
-	
+	if ([[object primaryType]isEqualToString:kQSAppleMailMessageType]){
+		[object setIcon:[QSResourceManager imageNamed:@"MailMessage"]];
+		return;
+	}
 }
 
 
