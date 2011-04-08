@@ -26,7 +26,7 @@ Before being able to build any of these plugins, you **MUST** set a new Source T
 
 This is done by going into the XCode preferences, clicking 'Source Trees' and adding a new one with the following options:
 
-Setting Name: `QSFramework`  
+Setting Name: `QSFrameworks`  
 Display Name: a suitable name, e.g. `Quicksilver Frameworks`  
 Path: `/Applications/Quicksilver.app/Contents/Frameworks` (or path of Quicksilver.app if different)
 
