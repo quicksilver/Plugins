@@ -55,17 +55,7 @@
 
 
 - (BOOL)loadIconForObject:(QSObject *)object{
-	if ([[object primaryType]isEqualToString:kQSAppleMailMailboxType]){
-//		NSString *mailbox=[object objectForType:kQSAppleMailMailboxType];
-//		
-//		if ([SPECIAL_ARRAY containsObject:mailbox]){
-//			NSImage *image=[QSResourceManager imageNamed:[NSString stringWithFormat:@"MailMailbox-%@",mailbox]];
-//			[object setIcon:image];
-//			return YES;
-//		}
-	}
 	return NO;
-	
 }
 
 
@@ -77,9 +67,7 @@
 	
 	NSMetadataItem *mditem=[NSMetadataItem itemWithPath:filePath];
 	[object setName:[mditem valueForAttribute:kMDItemDisplayName]];
-//	NSLog(@"path:%@ %@",messagePath,[object name]);
 	[object setObject:messagePath forType:kQSAppleMailMessageType];
-//	[object setPrimaryType:kQSAppleMailMessageType];
 	[object setDetails:[[mditem valueForAttribute:kMDItemAuthors]lastObject]];
 	return object;
 	
@@ -360,20 +348,5 @@
 
 	return objects;
 }
-
-// Object Handler Methods
-
-/*
- - (void)setQuickIconForObject:(QSObject *)object{
-	 [object setIcon:nil]; // An icon that is either already in memory or easy to load
- }
- - (BOOL)loadIconForObject:(QSObject *)object{
-	 return NO;
-	 id data=[object objectForType:QSAppleMailPlugInType];
-	 [object setIcon:nil];
-	 return YES;
- }
- */
-
 
 @end

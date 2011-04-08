@@ -10,9 +10,6 @@
 #import "QSAppleMailPlugIn_Source.h"
 @implementation QSAppleMailPlugIn_Action
 
-
-#define kQSAppleMailPlugInAction @"QSAppleMailPlugInAction"
-
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
 	return [[QSReg getClassInstance:@"QSAppleMailPlugIn_Source"] allMailboxes:NO];
 }

@@ -1,9 +1,6 @@
 
-
 #import "QSAppleMailMediator.h"
-
 #import "QSMailMediator.h"
-//#import <QSCore/QSBadgeImage.h>
 @class QSCountBadgeImage;
 
 @implementation QSAppleMailMediator

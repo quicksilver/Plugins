@@ -142,10 +142,10 @@
 				7F3D846B07D76BAE00A1B6A7 /* QSMailMediator.h */,
 				E1C9DC1707099B11001BB625 /* QSAppleMailMediator.h */,
 				E1C9DC1807099B11001BB625 /* QSAppleMailMediator.m */,
-				E1C9DC1D07099B19001BB625 /* QSAppleMailPlugIn_Source.h */,
-				E1C9DC1E07099B19001BB625 /* QSAppleMailPlugIn_Source.m */,
 				E1C9DCEC0709A6FB001BB625 /* QSAppleMailPlugIn_Action.h */,
 				E1C9DCED0709A6FB001BB625 /* QSAppleMailPlugIn_Action.m */,
+				E1C9DC1D07099B19001BB625 /* QSAppleMailPlugIn_Source.h */,
+				E1C9DC1E07099B19001BB625 /* QSAppleMailPlugIn_Source.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
