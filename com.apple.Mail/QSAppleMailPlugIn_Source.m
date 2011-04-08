@@ -7,12 +7,10 @@
 //
 
 #import "QSAppleMailPlugIn_Source.h"
-//#import <QSCore/QSObject.h>
-//
-//#import <QSCore/QSCore.h>
-//#import <QSFoundation/QSFoundation.h>
 
-#define SPECIAL_ARRAY [NSArray arrayWithObjects:@"Inbox",@"Out",@"Drafts",@"Sent",@"Trash",@"Junk",nil]
+@interface QSAppleMailPlugIn_Source (hidden)
+- (QSObject *)makeMailboxObject:(NSString *)mailbox withAccountName:(NSString *)accountName withAccountId:(NSString *)accountId withFile:(NSString *)file withChildren:(BOOL)loadChildren;
+@end
 
 @implementation QSAppleMailPlugIn_Source
 - (BOOL)indexIsValidFromDate:(NSDate *)indexDate forEntry:(NSDictionary *)theEntry{
@@ -42,13 +40,13 @@
 
 - (BOOL)loadIconForObject:(QSObject *)object{
 	if ([[object primaryType]isEqualToString:kQSAppleMailMailboxType]){
-		NSString *mailbox=[object objectForType:kQSAppleMailMailboxType];
-		
-		if ([SPECIAL_ARRAY containsObject:mailbox]){
-			NSImage *image=[QSResourceManager imageNamed:[NSString stringWithFormat:@"MailMailbox-%@",mailbox]];
-			[object setIcon:image];
-			return YES;
-		}
+//		NSString *mailbox=[object objectForType:kQSAppleMailMailboxType];
+//		
+//		if ([SPECIAL_ARRAY containsObject:mailbox]){
+//			NSImage *image=[QSResourceManager imageNamed:[NSString stringWithFormat:@"MailMailbox-%@",mailbox]];
+//			[object setIcon:image];
+//			return YES;
+//		}
 	}
 	return NO;
 	
@@ -142,37 +140,96 @@
 - (NSArray *) objectsForEntry:(NSDictionary *)theEntry{
 	return [self allMailboxes];
 }
-- (NSArray *)allMailboxes{
+
+- (NSArray *)allMailboxes {
+	return [self allMailboxes:YES];
+}
+
+- (NSArray *)allMailboxes:(BOOL)loadChildren{
 	NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
-    QSObject *newObject;
-	
-	NSFileManager *manager=[NSFileManager defaultManager];
-	
-	
-	NSEnumerator *e=[SPECIAL_ARRAY objectEnumerator];
-	
-	NSString *path;
-	while(path=[e nextObject]){
-		newObject=[QSObject objectWithName:path];
-		[newObject setObject:path forType:kQSAppleMailMailboxType];
-		[newObject setPrimaryType:kQSAppleMailMailboxType];
-		[objects addObject:newObject];
-	}
-	
-	
-	NSDirectoryEnumerator *de=[manager enumeratorAtPath:[@"~/Library/Mail/Mailboxes/" stringByStandardizingPath]];
-	
-	while(path=[de nextObject]){
-		if ([[path pathExtension]isEqual:@"mbox"]){
-			newObject=[QSObject objectWithName:[[path lastPathComponent]stringByDeletingPathExtension]];
-			[newObject setObject:[path stringByDeletingPathExtension] forType:kQSAppleMailMailboxType];
-			[newObject setPrimaryType:kQSAppleMailMailboxType];
-			[objects addObject:newObject];
-			[de skipDescendents];
+	QSObject *newObject;
+
+	NSString *path = [MAILPATH stringByStandardizingPath];
+	NSFileManager *fm = [NSFileManager defaultManager];
+	NSDirectoryEnumerator *accountEnum = [fm enumeratorAtPath:path];
+	NSDirectoryEnumerator *mailboxEnum;
+
+	// find real names for accounts
+	NSArray *pl = (NSArray *)CFPreferencesCopyAppValue(CFSTR("MailAccounts"), CFSTR("com.apple.mail"));
+	NSMutableDictionary *realAccountNames = [NSMutableDictionary dictionaryWithCapacity:[pl count]];
+	for(NSDictionary *dict in pl) {
+		if ([dict objectForKey:@"AccountPath"] != nil && [dict objectForKey:@"AccountName"] != nil) {
+			[realAccountNames setObject:[dict objectForKey:@"AccountName"] forKey:[dict objectForKey:@"AccountPath"]];
 		}
 	}
-	
-    return objects;
+
+	NSString *file, *accountName, *accountId, *mb;
+	while (file = [accountEnum nextObject]) {
+		// skip everything that's not a mailbox directory
+		if ([[accountEnum fileAttributes] fileType] != NSFileTypeDirectory ||
+			!([file hasPrefix:@"IMAP-"] || [file hasPrefix:@"Mac-"] || [file hasPrefix:@"POP-"] || [file isEqualToString:@"Mailboxes"])) {
+			[accountEnum skipDescendants];
+			continue;
+		}
+
+		if ([file isEqualToString:@"Mailboxes"]) {
+			accountName = @"Local Mailbox";
+			accountId = accountName;
+		} else {
+			accountName = [realAccountNames objectForKey:[NSString stringWithFormat:@"%@/%@", MAILPATH, file]];
+			accountId = [file substringFromIndex:[file rangeOfString:@"-"].location + 1];
+		}
+
+		// scan account folder
+		mailboxEnum = [fm enumeratorAtPath:[path stringByAppendingPathComponent:file]];
+		while (mb = [mailboxEnum nextObject]) {
+			if ([[mailboxEnum fileAttributes] fileType] != NSFileTypeDirectory) {
+				continue;
+			}
+
+			// IMAP- & MoblieMe-Accounts
+			if ([[mb pathExtension] isEqualToString:@"imapmbox"]) {
+				newObject = [self makeMailboxObject:mb
+									withAccountName:accountName
+									  withAccountId:accountId
+										   withFile:file
+									   withChildren:loadChildren];
+
+				[objects addObject:newObject];
+				[mailboxEnum skipDescendants];
+			}
+
+			// POP-accounts & local mailboxes
+			if ([[mb pathExtension] isEqualToString:@"mbox"]) {
+				newObject = [self makeMailboxObject:mb
+									withAccountName:accountName
+									  withAccountId:accountId
+										   withFile:file
+									   withChildren:loadChildren];
+
+				[objects addObject:newObject];
+				[mailboxEnum skipDescendants];
+			}
+		}
+		[accountEnum skipDescendents];
+	}
+	return objects;
+}
+
+- (QSObject *)makeMailboxObject:(NSString *)mailbox withAccountName:(NSString *)accountName withAccountId:(NSString *)accountId withFile:(NSString *)file withChildren:(BOOL)loadChildren {
+	NSString *mailboxName = [mailbox stringByDeletingPathExtension];
+
+	QSObject *newObject = [QSObject objectWithName:mailboxName];
+	[newObject setObject:mailboxName forType:kQSAppleMailMailboxType];
+	[newObject setLabel:[NSString stringWithFormat:@"%@ %@", accountName, mailboxName]];
+	[newObject setDetails:accountName];
+	[newObject setObject:accountId forMeta:@"accountId"];
+	[newObject setIdentifier:[NSString stringWithFormat:@"mailbox:%@//%@", accountName, mailboxName]];
+	[newObject setObject:[[MAILPATH stringByAppendingPathComponent:file] stringByStandardizingPath] forMeta:@"accountPath"];
+	[newObject setObject:mailboxName forMeta:@"mailboxName"];
+	[newObject setObject:[NSNumber numberWithBool:loadChildren] forMeta:@"loadChildren"];
+	[newObject setPrimaryType:kQSAppleMailMailboxType];
+	return newObject;
 }
 
 // Object Handler Methods
