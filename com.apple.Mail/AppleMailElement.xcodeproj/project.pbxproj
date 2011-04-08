@@ -15,13 +15,13 @@
 		2EB95C05134F34490011C28B /* FMResultSet.h in Resources */ = {isa = PBXBuildFile; fileRef = 2EB95BFC134F33C30011C28B /* FMResultSet.h */; };
 		2EB95CB7134F35C10011C28B /* MailCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB95CB6134F35C10011C28B /* MailCore.framework */; };
 		2EB95D7D134F38650011C28B /* MailCore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB95CB6134F35C10011C28B /* MailCore.framework */; };
+		2EB95DA3134F3D460011C28B /* Mail.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 2EB95DA2134F3D2B0011C28B /* Mail.scpt */; };
 		7F3D846C07D76BAE00A1B6A7 /* QSMailMediator.h in Resources */ = {isa = PBXBuildFile; fileRef = 7F3D846B07D76BAE00A1B6A7 /* QSMailMediator.h */; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		E1C9DC1907099B11001BB625 /* QSAppleMailMediator.h in Resources */ = {isa = PBXBuildFile; fileRef = E1C9DC1707099B11001BB625 /* QSAppleMailMediator.h */; };
 		E1C9DC1A07099B11001BB625 /* QSAppleMailMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C9DC1807099B11001BB625 /* QSAppleMailMediator.m */; };
 		E1C9DC1F07099B19001BB625 /* QSAppleMailPlugIn_Source.h in Resources */ = {isa = PBXBuildFile; fileRef = E1C9DC1D07099B19001BB625 /* QSAppleMailPlugIn_Source.h */; };
 		E1C9DC2007099B19001BB625 /* QSAppleMailPlugIn_Source.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C9DC1E07099B19001BB625 /* QSAppleMailPlugIn_Source.m */; };
-		E1C9DC2207099B20001BB625 /* Mail.scpt in Resources */ = {isa = PBXBuildFile; fileRef = E1C9DC2107099B20001BB625 /* Mail.scpt */; };
 		E1C9DC2707099B27001BB625 /* Scripts in Resources */ = {isa = PBXBuildFile; fileRef = E1C9DC2307099B27001BB625 /* Scripts */; };
 		E1C9DCEE0709A6FB001BB625 /* QSAppleMailPlugIn_Action.h in Resources */ = {isa = PBXBuildFile; fileRef = E1C9DCEC0709A6FB001BB625 /* QSAppleMailPlugIn_Action.h */; };
 		E1C9DCEF0709A6FB001BB625 /* QSAppleMailPlugIn_Action.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C9DCED0709A6FB001BB625 /* QSAppleMailPlugIn_Action.m */; };
@@ -56,6 +56,7 @@
 		2EB95BFC134F33C30011C28B /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		2EB95BFD134F33C30011C28B /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		2EB95CB6134F35C10011C28B /* MailCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MailCore.framework; sourceTree = "<group>"; };
+		2EB95DA2134F3D2B0011C28B /* Mail.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = Mail.scpt; sourceTree = "<group>"; };
 		7F3D846B07D76BAE00A1B6A7 /* QSMailMediator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = QSMailMediator.h; path = ../elements.support.mail/QSMailMediator.h; sourceTree = SOURCE_ROOT; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* Apple Mail Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Apple Mail Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +65,6 @@
 		E1C9DC1807099B11001BB625 /* QSAppleMailMediator.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSAppleMailMediator.m; sourceTree = "<group>"; };
 		E1C9DC1D07099B19001BB625 /* QSAppleMailPlugIn_Source.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSAppleMailPlugIn_Source.h; sourceTree = "<group>"; };
 		E1C9DC1E07099B19001BB625 /* QSAppleMailPlugIn_Source.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSAppleMailPlugIn_Source.m; sourceTree = "<group>"; };
-		E1C9DC2107099B20001BB625 /* Mail.scpt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.scpt; path = Mail.scpt; sourceTree = "<group>"; };
 		E1C9DC2307099B27001BB625 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
 		E1C9DCEC0709A6FB001BB625 /* QSAppleMailPlugIn_Action.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSAppleMailPlugIn_Action.h; sourceTree = "<group>"; };
 		E1C9DCED0709A6FB001BB625 /* QSAppleMailPlugIn_Action.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSAppleMailPlugIn_Action.m; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				E1C9DC2307099B27001BB625 /* Scripts */,
-				E1C9DC2107099B20001BB625 /* Mail.scpt */,
 				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+				2EB95DA2134F3D2B0011C28B /* Mail.scpt */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -222,10 +222,10 @@
 				2EB95C05134F34490011C28B /* FMResultSet.h in Resources */,
 				E1C9DC1907099B11001BB625 /* QSAppleMailMediator.h in Resources */,
 				E1C9DC1F07099B19001BB625 /* QSAppleMailPlugIn_Source.h in Resources */,
-				E1C9DC2207099B20001BB625 /* Mail.scpt in Resources */,
-				E1C9DC2707099B27001BB625 /* Scripts in Resources */,
 				E1C9DCEE0709A6FB001BB625 /* QSAppleMailPlugIn_Action.h in Resources */,
 				7F3D846C07D76BAE00A1B6A7 /* QSMailMediator.h in Resources */,
+				E1C9DC2707099B27001BB625 /* Scripts in Resources */,
+				2EB95DA3134F3D460011C28B /* Mail.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

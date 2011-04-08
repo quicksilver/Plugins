@@ -20,33 +20,65 @@
 
 - (QSObject *)revealMailbox:(QSObject *)dObject{
 	NSString *mailbox=[dObject objectForType:kQSAppleMailMailboxType];
-	NSAppleScript *script=[[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
-	[script executeSubroutine:@"open_mailbox" arguments:mailbox error:nil];
+	NSArray *arguments=[NSArray arrayWithObjects:mailbox,[dObject objectForMeta:@"accountPath"],nil];
+
+	NSAppleScript *script=[(QSAppleMailMediator *)[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
+	NSDictionary *err = nil;
+	[script executeSubroutine:@"open_mailbox" arguments:arguments error:&err];
+	if (err) {
+		NSLog(@"AppleMailPlugin revealMailbox: Applescirpt error %@", err);
+		return nil;
+	}
 	return nil;
 }
 
 - (QSObject *)revealMessage:(QSObject *)dObject{
-	NSArray *message=[[dObject objectForType:kQSAppleMailMessageType]componentsSeparatedByString:@"//"];
-	NSAppleScript *script=[[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
-	[script executeSubroutine:@"open_message" arguments:message error:nil];
+	NSAppleEventDescriptor *arguments = [NSAppleEventDescriptor listDescriptor];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithInt32:[[dObject objectForMeta:@"message_id"] intValue]] atIndex:0];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"mailboxName"]] atIndex:0];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"accountPath"]] atIndex:0];
+
+	NSAppleScript *script=[(QSAppleMailMediator *)[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
+	NSDictionary *err = nil;
+	[script executeSubroutine:@"open_message" arguments:arguments error:&err];
+	if (err) {
+		NSLog(@"AppleMailPlugin revealMessage: Applescirpt error %@", err);
+		return nil;
+	}
 	return nil;
 }
 
 - (QSObject *)deleteMessage:(QSObject *)dObject{
-	NSArray *message=[[dObject objectForType:kQSAppleMailMessageType]componentsSeparatedByString:@"//"];
-	NSAppleScript *script=[[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
-	[script executeSubroutine:@"delete_message" arguments:message error:nil];
+	NSAppleEventDescriptor *arguments = [NSAppleEventDescriptor listDescriptor];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithInt32:[[dObject objectForMeta:@"message_id"] intValue]] atIndex:0];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"mailboxName"]] atIndex:0];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"accountPath"]] atIndex:0];
+
+	NSAppleScript *script=[(QSAppleMailMediator *)[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
+	NSDictionary *err = nil;
+	[script executeSubroutine:@"delete_message" arguments:arguments error:&err];
+	if (err) {
+		NSLog(@"AppleMailPlugin deleteMessage: Applescirpt error %@", err);
+		return nil;
+	}
 	return nil;
 }
 - (QSObject *)moveMessage:(QSObject *)dObject toMailbox:(QSObject *)iObject{
-	NSArray *message=[[dObject objectForType:kQSAppleMailMessageType]componentsSeparatedByString:@"//"];
-	NSMutableArray *arguments=[NSMutableArray arrayWithArray:message];
-	
-	[arguments addObject:[iObject objectForType:kQSAppleMailMailboxType]];
-	NSAppleScript *script=[[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
-	[script executeSubroutine:@"move_message" arguments:arguments error:nil];
+	NSAppleEventDescriptor *arguments = [NSAppleEventDescriptor listDescriptor];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithInt32:[[dObject objectForMeta:@"message_id"] intValue]] atIndex:0];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"mailboxName"]] atIndex:0];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"accountPath"]] atIndex:0];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[iObject objectForMeta:@"mailboxName"]] atIndex:0];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[iObject objectForMeta:@"accountPath"]] atIndex:0];
+
+	NSAppleScript *script=[(QSAppleMailMediator *)[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
+	NSDictionary *err = nil;
+	[script executeSubroutine:@"move_message" arguments:arguments error:&err];
+	if (err) {
+		NSLog(@"AppleMailPlugin moveMessage: Applescirpt error %@", err);
+		return nil;
+	}
 	return nil;
 }
-
 
 @end
