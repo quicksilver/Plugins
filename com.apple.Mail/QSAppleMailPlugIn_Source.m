@@ -106,7 +106,7 @@
 		return NO;
 	}
 
-	if ([[object primaryType]isEqualToString:QSFilePathType] && [NSApp featureLevel]>1){
+	if ([[object primaryType]isEqualToString:QSFilePathType]){
 		[object setChildren:[self objectsForEntry:nil]];
 		return YES;
 	}
