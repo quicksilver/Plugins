@@ -205,30 +205,101 @@
 }
 
 - (NSArray *)mailsForMailbox:(QSObject *)object {
-	NSString *mailbox=[object objectForType:kQSAppleMailMailboxType];
+	NSString *mailboxName=[object objectForType:kQSAppleMailMailboxType];
+	NSString *accountName=[object objectForMeta:@"accountId"];
+	NSString *accountPath=[object objectForMeta:@"accountPath"];
 
-	NSAppleScript *script=[[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
+	// make 'Envelop Index' compatible mailbox-url
+	NSString *mailboxUrl;
+	if ([accountName isEqualToString:@"Local Mailbox"]) {
+		mailboxUrl = [NSString stringWithFormat:@"%@/%@",
+					  @"local://",
+					  [mailboxName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+	} else {
+		// replace special chars with % representation 
+		// but not last @. strange Envelop Index / ~Library/Mail/ format requires that
+		NSRange r = [accountName rangeOfString:@"@" options:NSBackwardsSearch];
+		NSString *p1, *p2;
+		p1 = [accountName substringToIndex:r.location];
+		p1 = [p1 stringByReplacing:@"@" with:@"%40"];
+		p2 = [accountName substringFromIndex:r.location + 1];
+		mailboxUrl = [NSString stringWithFormat:@"%@@%@/%@",
+					  p1,
+					  p2,
+					  [mailboxName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+	}
 
-	id result=[[script executeSubroutine:@"list_messages"
-							   arguments:mailbox
-								   error:nil]objectValue];
-	//NSLog(@"res %@",result);
-	NSArray *ids=[result objectAtIndex:0];
-	NSArray *subjects=[result objectAtIndex:1];
-	NSArray *senders=[result objectAtIndex:2];
-	NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
+	// read mails for mailbox from SQLite DB Envelop Index
+	NSString *dbPath = [[MAILPATH stringByAppendingString:@"/Envelope Index"] stringByStandardizingPath];
+	FMDatabase *db = [FMDatabase databaseWithPath:dbPath];
+	if (![db open]) {
+		NSLog(@"Could not open db.");
+		return NO;
+	}
+	// kind of experimentalish.
+	[db setShouldCacheStatements:YES];
+
+	// build SQL query
+	NSString *subject, *sender, *mailPath, *mailboxType;
+	NSMutableArray *objects=[NSMutableArray arrayWithCapacity:0];
 	QSObject *newObject;
+	NSString *query = [NSString stringWithFormat:@"SELECT "
+					   "mailboxes.url AS url, "
+					   "messages.ROWID AS message_id, "
+					   "messages.subject_prefix AS subject_prefix, "
+					   "subjects.subject AS subject, "
+					   "addresses.address AS sender "
+					   "FROM mailboxes "
+					   "LEFT JOIN messages ON messages.mailbox = mailboxes.ROWID "
+					   "LEFT JOIN subjects ON subjects.ROWID = messages.subject "
+					   "LEFT JOIN addresses ON addresses.ROWID = messages.sender "
+					   "WHERE url LIKE '%%%@'"
+					   "ORDER BY messages.date_received DESC",
+					   mailboxUrl];
+	FMResultSet *rs = [db executeQuery:query];
+	if ([db hadError]) {
+		NSLog(@"Error %d: %@", [db lastErrorCode], [db lastErrorMessage]);
+		return NO;
+	}
+	while ([rs next]) {
+		subject = [[rs stringForColumn:@"subject_prefix"] stringByAppendingString:[rs stringForColumn:@"subject"]];
+		sender = [rs stringForColumn:@"sender"];
+		if ([subject length] == 0 && [sender length] == 0) {
+			// sometimes there is no sender/subject
+			// I don't know why they appear, they are not really messages.
+			// So, just skip them.
+			continue;
+		}
 
-	int i;
-	for (i=0;i<[ids count];i++){
-		NSString *messagePath=[NSString stringWithFormat:@"%@//%@",mailbox,[ids objectAtIndex:i]];
-		newObject=[QSObject objectWithName:[subjects objectAtIndex:i]];
-		[newObject setObject:messagePath forType:kQSAppleMailMessageType];
+		if ([[rs stringForColumn:@"url"] rangeOfString:@"local" options:NSCaseInsensitiveSearch].location != NSNotFound ||
+			[[rs stringForColumn:@"url"] rangeOfString:@"pop" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+			mailboxType = @"mbox";
+		} else {
+			mailboxType = @"imapmbox";
+		}
+
+		mailPath = [NSString stringWithFormat:@"%@/%@.%@/Messages/%@.emlx",
+					accountPath,
+					mailboxName,
+					mailboxType,
+					[rs stringForColumn:@"message_id"]];
+
+		newObject=[QSObject objectWithName:subject];
+		[newObject setObject:subject forType:kQSAppleMailMessageType];
+		[newObject setDetails:sender];
+		[newObject setParentID:[object identifier]];
+		[newObject setIdentifier:[NSString stringWithFormat:@"message:%d", [rs intForColumn:@"message_id"]]];
+		[newObject setObject:mailPath forMeta:@"mailPath"];
+		[newObject setObject:mailPath forMeta:@"mailPath"];
+		[newObject setObject:[rs stringForColumn:@"message_id"] forMeta:@"message_id"];
+		[newObject setObject:mailboxName forMeta:@"mailboxName"];
+		[newObject setObject:accountPath forMeta:@"accountPath"];
 		[newObject setPrimaryType:kQSAppleMailMessageType];
-		[newObject setDetails:[senders objectAtIndex:i]];
 		[objects addObject:newObject];
 	}
-	
+
+	[rs close];
+	[db close];
 	return objects;
 }
 
