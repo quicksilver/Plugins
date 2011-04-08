@@ -33,7 +33,7 @@
 			<key>icon</key>
 			<string>com.apple.mail</string>
 			<key>name</key>
-			<string>Open</string>
+			<string>Open Mailbox</string>
 		</dict>
 		<key>QSAppleMailMessageDeleteAction</key>
 		<dict>
@@ -48,7 +48,7 @@
 			<key>icon</key>
 			<string>com.apple.mail</string>
 			<key>name</key>
-			<string>Delete</string>
+			<string>Delete Message</string>
 		</dict>
 		<key>QSAppleMailMessageMoveAction</key>
 		<dict>
@@ -82,7 +82,7 @@
 			<key>icon</key>
 			<string>com.apple.mail</string>
 			<key>name</key>
-			<string>Open</string>
+			<string>Open Message</string>
 		</dict>
 	</dict>
 	<key>QSPlugIn</key>
@@ -95,9 +95,26 @@
 			<string>Mail &amp; Chat</string>
 		</array>
 		<key>description</key>
-		<string>Enables email actions for Apple Mail</string>
+		<string>Enables browsing and email actions for Apple Mail</string>
 		<key>extendedDescription</key>
-		<string>Enables email actions for &lt;a href="http://www.apple.com/macosx/features/mail/"&gt;Apple Mail&lt;/a&gt;. Allows browsing mailboxes as children of Mail (beta)</string>
+		<string>&lt;h3&gt;Apple Mail.app Plugin&lt;/h3&gt;
+
+&lt;p&gt;This plugin lets you browse your mailboxes and mails contained in &lt;a href=&quot;http://www.apple.com/macosx/features/mail/&quot;&gt;Apple Mail.app&lt;/a&gt; and provides some appropriate actions.&lt;/p&gt;
+
+&lt;p&gt;Just call up &lt;em&gt;Mail.app&lt;/em&gt; in the first pane and &quot;arrow into&quot; it. It will reveal all mailboxes/mail folders for each mail account. Arrowing into a mailbox reveals all mails in that folder and arrowing into a mail shows the body text of a mail as well as the mail address associated with it.&lt;/p&gt;
+
+&lt;p&gt;The plugin provides the following actions:
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Get New Mail&lt;/strong&gt; - Recieves new mails for all accounts.&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Open New Messages&lt;/strong&gt; - Opens all unread messages.&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Open Mailbox&lt;/strong&gt; - When a mailbox is selected in the first pane, this actions opens it in &lt;em&gt;Mail.app&lt;/em&gt;.&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Open Message&lt;/strong&gt; - When a message is selected in the first pane, this actions opens it in its own window in &lt;em&gt;Mail.app&lt;/em&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Move to Mailbox...&lt;/strong&gt; - When a message is selected in the first pane, this action moves the message from the current mailbox into another one. The new mailbox can be selected in the third pane.&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Delete Message&lt;/strong&gt; - Deletes the selected message from a mailbox.&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; It has only been tested with IMAP accounts.&lt;/p&gt;</string>
 		<key>icon</key>
 		<string>com.apple.Mail</string>
 		<key>relatedBundles</key>
@@ -184,7 +201,7 @@
 					</dict>
 				</dict>
 				<key>name</key>
-				<string>Open New Mail</string>
+				<string>Open New Messages</string>
 			</dict>
 		</dict>
 		<key>QSFileObjectCreationHandlers</key>
