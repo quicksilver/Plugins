@@ -304,17 +304,45 @@
 }
 
 - (NSArray *)mailContent:(QSObject *)object {
-	NSArray *message=[[object objectForType:kQSAppleMailMessageType]componentsSeparatedByString:@"//"];
-	NSAppleScript *script=[[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
-	id result=[[script executeSubroutine:@"get_message_contents" arguments:message error:nil]objectValue];
 	NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
 	QSObject *newObject;
-	if (!result) return NO;
-	newObject=[QSObject objectWithString:[result objectAtIndex:0]];
+
+	// read mail file
+	NSError *err = nil;
+	NSString *fileContents = [NSString stringWithContentsOfFile:[object objectForMeta:@"mailPath"] encoding:NSASCIIStringEncoding error:&err];
+	if (!fileContents || err) {
+		NSLog(@"Couldn't read mail. Error: %@ (%i - %@)", [err localizedDescription], [err code], [object objectForMeta:@"mailPath"]);
+		return nil;
+	}
+
+	// remove non-MIME-stuff
+	NSCharacterSet *cs = [NSCharacterSet newlineCharacterSet];
+	NSRange r = [fileContents rangeOfCharacterFromSet:cs];
+	fileContents = [fileContents substringFromIndex:(r.location+r.length)];
+	fileContents = [fileContents substringToIndex:[fileContents rangeOfString:@"<?xml"].location];
+
+	// make sure, it an ASCII string
+	if (![fileContents canBeConvertedToEncoding:NSASCIIStringEncoding]) {
+		NSData *d = [fileContents dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+		fileContents = [[[NSString alloc] initWithData:d encoding:NSASCIIStringEncoding] autorelease];
+	}
+
+	// parse message
+	CTCoreMessage *message =  [[CTCoreMessage alloc] initWithString:fileContents];
+	[message fetchBody];
+
+	// create QSObjects
+	newObject=[QSObject objectWithString:[[message body] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+	[newObject setParentID:[object identifier]];
 	[objects addObject:newObject];
-	
-	newObject=[QSObject objectWithName:[result objectAtIndex:1]];
-	[newObject setObject:[result objectAtIndex:1] forType:QSEmailAddressType];
+
+	CTCoreAddress * from = [[message from] anyObject];
+	[message release];
+
+	newObject=[QSObject objectWithName:[from email]];
+	[newObject setObject:[from email] forType:QSEmailAddressType];
+	[newObject setDetails:[from name]];
+	[newObject setParentID:[object identifier]];
 	[newObject setPrimaryType:QSEmailAddressType];
 	[objects addObject:newObject];
 

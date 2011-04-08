@@ -8,6 +8,7 @@
 
 #import "FMDatabase.h"
 #import "FMResultSet.h"
+#import <MailCore/MailCore.h>
 
 #define kQSAppleMailMailboxType @"qs.mail.mailbox"
 #define kQSAppleMailMessageType @"qs.mail.message"
