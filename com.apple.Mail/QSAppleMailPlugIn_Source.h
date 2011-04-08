@@ -15,5 +15,6 @@
 @interface QSAppleMailPlugIn_Source : NSObject
 {
 }
+- (NSArray *)allMailboxes;
 @end
 

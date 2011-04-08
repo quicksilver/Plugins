@@ -6,4 +6,5 @@
     NSAppleScript *mailScript;
 }
 
+- (NSAppleScript *)mailScript;
 @end
