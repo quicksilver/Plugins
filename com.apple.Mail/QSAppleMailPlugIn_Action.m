@@ -14,8 +14,7 @@
 #define kQSAppleMailPlugInAction @"QSAppleMailPlugInAction"
 
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
-	return [[QSReg getClassInstance:@"QSAppleMailPlugIn_Source"] allMailboxes];
-
+	return [[QSReg getClassInstance:@"QSAppleMailPlugIn_Source"] allMailboxes:NO];
 }
 
 - (QSObject *)revealMailbox:(QSObject *)dObject{
