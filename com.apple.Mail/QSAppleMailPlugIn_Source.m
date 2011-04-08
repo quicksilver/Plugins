@@ -93,7 +93,19 @@
 	}
 	return nil;
 }
+
+- (BOOL)objectHasChildren:(QSObject *)object{
+	if ([object objectForMeta:@"loadChildren"] != nil && ![[object objectForMeta:@"loadChildren"] boolValue]) {
+		return NO;
+	}
+	return YES;
+}
+
 - (BOOL)loadChildrenForObject:(QSObject *)object{
+	if ([object objectForMeta:@"loadChildren"] != nil && ![[object objectForMeta:@"loadChildren"] boolValue]) {
+		return NO;
+	}
+
 	if ([[object primaryType]isEqualToString:QSFilePathType] && [NSApp featureLevel]>1){
 		[object setChildren:[self objectsForEntry:nil]];
 		return YES;
