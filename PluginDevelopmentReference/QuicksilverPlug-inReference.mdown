@@ -256,6 +256,16 @@ These can be newly created objects or objects that are already in the catalog. Y
 
 **Read up on identifiers in the QSObject section before creating/using objects as children.**
 
+#### objectHasChildren
+
+Example `- (BOOL)objectHasChildren:(QSObject *)object`
+
+This method is used to indicate to the user that an object is browsable (can be right arrowed into). If it returns `YES`, a little arrow is displayed on the very right of the object. 
+
+If you used `loadChildrenForObject:` so the user can right arrow into an object, you should indicate that to the user by having this method return 'YES'.
+
+**NOTE**: Not returning `YES` will hide the little arrow indicator, but the user will still be able to arrow into the object, if you provided children for the object by using `loadChildrenForObject:`.
+
 #### isVisibleSource
 
 Example: `- (BOOL)isVisibleSource`
