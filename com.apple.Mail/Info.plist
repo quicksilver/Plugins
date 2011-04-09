@@ -246,9 +246,9 @@
 		<key>MailMailbox-Drafts</key>
 		<dict>
 			<key>bundle</key>
-			<string>com.apple.mail</string>
+			<string>com.blacktree.Quicksilver.QSAppleMailPlugIn</string>
 			<key>resource</key>
-			<string>DraftsMailboxLarge.tiff</string>
+			<string>Drafts.icns</string>
 		</dict>
 		<key>MailMailbox-Inbox</key>
 		<dict>
@@ -260,23 +260,23 @@
 		<key>MailMailbox-Junk</key>
 		<dict>
 			<key>bundle</key>
-			<string>com.apple.mail</string>
+			<string>com.blacktree.Quicksilver.QSAppleMailPlugIn</string>
 			<key>resource</key>
-			<string>junkmail.tiff</string>
+			<string>Junk.icns</string>
 		</dict>
 		<key>MailMailbox-Out</key>
 		<dict>
 			<key>bundle</key>
-			<string>com.apple.mail</string>
+			<string>com.blacktree.Quicksilver.QSAppleMailPlugIn</string>
 			<key>resource</key>
-			<string>ToBeDeliveredMailboxLarge.tiff</string>
+			<string>Out.icns</string>
 		</dict>
 		<key>MailMailbox-Sent</key>
 		<dict>
 			<key>bundle</key>
-			<string>com.apple.mail</string>
+			<string>com.blacktree.Quicksilver.QSAppleMailPlugIn</string>
 			<key>resource</key>
-			<string>OutMailboxLarge.tiff</string>
+			<string>Sent.icns</string>
 		</dict>
 		<key>MailMessage</key>
 		<dict>
