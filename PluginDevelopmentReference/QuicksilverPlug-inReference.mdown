@@ -494,6 +494,33 @@ If you're trying to work on one of the existing plug-ins and you can't get it to
   1. Build Quicksilver from source (Release, not Debug). The process puts a lot of things in `/tmp/QS/build/release/` that the source for the plug-ins expect to find there.
   2. Tell Xcode to do a "Release" build of the plug-in instead of "Debug". (I'm not sure what all the ramifications are with this, but it seems to work.)
 
+### Debugging Plugins ###
+
+To be able to debug plugins using an actual debugger instead of just NSLog() statements, there are a few steps that need to be done. Most of this information is from an [old thread on the QS mailinglist](http://groups.google.com/group/blacktree-quicksilver/browse_thread/thread/ccf43942bc5eb4a1). Some of these steps are already described in the **Getting Started** section in the beginning of this guide, just check again to make sure everything is set up correctly.
+
+  0. Make a backup of everything Quicksilver. <!-- TODO maybe some tips about this? -->
+  1. Disable "Load symbols lazily" in the XCode preferences, under the Debugging tab.
+  2. Build the debug version of Quicksilver
+  3. Make sure you have the Configuration folder from the Quicksilver source included in you project.
+  4. Make the build settings of you project and target "based on" the settings from the Configuration folder:
+    1. Go into the Project settings (Project -> Edit Project Settings), into the Build tab
+    2. On the top left, select *Debug* from the "Configuration:" drop-down.
+    3. Then, on the bottom right, where it say "Based On:" select *Debug* from the drop-down.
+    4. Delete everything that shows up in bold from the list of settings ("Show:" *Settings Defined at This Level* shows all of these settings).
+    5. Go into the Options for the target (⌥⌘E), into the build settings again.
+    6. Select for "Configuration:" *Debug* again.
+    7. Select for "Based On:" *QSPlugIn_Debug*
+    8. Again, delete everything that shows up in bold, **except** the "Product Name". Set the "Product Name" to something meaningful (like the plugin's name :-))
+    9. You might want to do the same steps for the *Release* configuration, but you wont need to just for debugging.
+  5. Build the debug version of the plugin. You should end up with a *.qsplugin in /tmp/QS/build/Debug/.
+  6. Install the newly build plugin (by double-clicking on the .qsplugin file). This ensures that your newly build plugin is loaded in Quicksilver, not a different/older/not-debug-version.
+  7. Quit Quicksilver if running.
+  8. Go into the Quicksilver project in XCode and start debugging (⌥⌘Y).
+  9. Once Quicksilver has started, go into the debugger console and check if the debugger is still running. If not, there should be a message like `Debugger stopped. Program exited with status value:0.` In that case, quit Quicksilver again and start debugging again. This time the debugger should stay active even after Quicksilver finished starting.
+  10. Now, any breakpoints you set in the plugin project should stay blue (instead of turning yellow) and should break when reach.
+
+This sounds quite complicated, but once you have set it up correctly, debugging is pretty straight forward: Build plugin, install plugin, debug Quicksilver.
+
 ## Links ##
 
 Some things that helped me.
