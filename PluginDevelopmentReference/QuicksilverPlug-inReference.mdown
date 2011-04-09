@@ -167,6 +167,15 @@ You'd omit the `actionSelector` for AppleScript actions.
 
 I'm not sure what happens if you send multiple objects (via the comma trick) to an AppleScript action.
 
+### Application Actions ###
+
+*Applications Actions* are actions that only appear in the list of actions when a specific application if selected in the first pane of Quicksilver. Examples of this are the actions "Next Song", "Play - Pause", "Previous Song" that are provided by the iTunes plugin and only appear if iTunes is selected in the first pane. Or the "Get New Mail" and "Open New Mail" actions for Mail.app.
+
+These actions are defined in the `Info.plist` of the plugin, in `QSRegistration` -> `QSApplicationActions` -> bundle identifier -> action identifier. The same pattern can be used as in the normal actions (inside `QSActions`) **OR** a `QSCommand`. A QSCommand is basically an AppleScript that is run without calling any functions in it or passing any arguments. For an example how `QSApplicationActions` and `QSCommands` are defined, see [the Info.plist of the Apple Mail Plugin](https://github.com/quicksilver/Plugins/blob/master/com.apple.Mail/Info.plist).
+<!-- TODO check if QSCommands can also be used as normal actions -->
+
+**Note**: This kind of action was broken after the B54 version of Quicksilver, but will be reintroduced in the B59 version.
+
 ## Adding to the Catalog ##
 
 ### Info.plist ###
