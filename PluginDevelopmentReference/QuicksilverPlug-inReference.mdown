@@ -413,6 +413,18 @@ Usually, you'll load and set children on-the-fly using `loadChildrenForObject:`,
 
 These child objects will appear in the UI if a user select your object and hits → or /.
 
+#### Parent ####
+
+If you have set children for an object so you can right arrow into them, these children should also know about their parent object. This builds a proper hierarchy and helps QS to figure out what to do when you arrow back out of the list of children objects (using ←).
+
+So, before using `[myObject setChildren:children]` to set children for an object, for each of the children `QSObject`s, you should set the parent ID to the identifier of the parent `QSObject`. For example by doing the following for each `QSObject` in the `children` array:
+
+	[childObject setParentID:[myObject identifier]];
+
+Then, once the user arrows back out of the list of children, the correct object will be selected in the main QS pane and also be highlighted in the result list. If this isn't set, the selected child object will remain in the QS pane and the first result will be highlighted in the result list. This can lead to much confusion, so it should be avoided.
+
+<!-- TODO imho this should be done automatically inside the setChildren method, but that isn't done right now :-/ -->
+
 #### Arbitrary Metadata ####
 
 In addition to the standard things like name, label, icon, and type, `QSObject`s provide an `NSMutableDictionary`. You can store just about anything in here, so the possibilities for your plug-in get really interesting with this. If your objects are files, perhaps you want to store their size here. Perhaps you want to store width, height, and resolution for an image. Maybe you want to store a thumbnail image for the object. (It doesn't have to be a string.) Perhaps you just like to waste memory on other people's computers and want to store the lyrics to your favorite song.
