@@ -372,6 +372,8 @@ This is optional, but if you want the text that appears most prominently in the 
 
 This is also the string that Quicksilver matches against when a user is typing, so keep that in mind. You can make things easier (or harder) for users to find in the catalog by messing with the label.
 
+Setting the label will not change the appearance of the search result list, only the main QS panes. In the result list, the label wont be displayed. Instead, the name will still be the most prominent thing displayed.
+
 #### Details ####
 
 The "details" string is the text that appears smaller underneath the label in most Quicksilver interfaces. Set it using `setDetails:@"some string"`.
