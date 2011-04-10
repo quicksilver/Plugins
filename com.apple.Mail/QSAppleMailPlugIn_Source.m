@@ -89,11 +89,14 @@
 	if([[object primaryType] isEqualToString:kQSAppleMailMailboxType])
 	{
 		NSFileManager *fm = [NSFileManager defaultManager];
-		mailPath = 					
+		NSLog(@"file path: %@", [NSString stringWithFormat:@"%@/%@.%@/Messages",
+								 [object objectForMeta:@"accountPath"],
+								 [object objectForMeta:@"mailboxName"],
+								 [object objectForMeta:@"mailboxType"]]);
 		if([fm fileExistsAtPath:[NSString stringWithFormat:@"%@/%@.%@/Messages",
-								 accountPath,
-								 mailboxName,
-								 mailboxType]])
+								 [object objectForMeta:@"accountPath"],
+								 [object objectForMeta:@"mailboxName"],
+								 [object objectForMeta:@"mailboxType"]]])
 			return YES;
 		else {
 			return NO;
@@ -202,6 +205,7 @@
 }
 
 - (QSObject *)makeMailboxObject:(NSString *)mailbox withAccountName:(NSString *)accountName withAccountId:(NSString *)accountId withFile:(NSString *)file withChildren:(BOOL)loadChildren {
+	NSString *mailboxType = [mailbox pathExtension];
 	NSString *mailboxName = [mailbox stringByDeletingPathExtension];
 
 	QSObject *newObject = [QSObject objectWithName:mailboxName];
@@ -209,6 +213,7 @@
 	[newObject setLabel:[NSString stringWithFormat:@"%@ %@", accountName, mailboxName]];
 	[newObject setDetails:accountName];
 	[newObject setObject:accountId forMeta:@"accountId"];
+	[newObject setObject:mailboxType forMeta:@"mailboxType"];
 	[newObject setIdentifier:[NSString stringWithFormat:@"mailbox:%@//%@", accountName, mailboxName]];
 	[newObject setObject:[[MAILPATH stringByAppendingPathComponent:file] stringByStandardizingPath] forMeta:@"accountPath"];
 	[newObject setObject:mailboxName forMeta:@"mailboxName"];
