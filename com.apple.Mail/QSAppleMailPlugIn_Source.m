@@ -86,7 +86,20 @@
 	if ([object objectForMeta:@"loadChildren"] != nil && ![[object objectForMeta:@"loadChildren"] boolValue]) {
 		return NO;
 	}
-	return YES;
+	if([[object primaryType] isEqualToString:kQSAppleMailMailboxType])
+	{
+		NSFileManager *fm = [NSFileManager defaultManager];
+		mailPath = 					
+		if([fm fileExistsAtPath:[NSString stringWithFormat:@"%@/%@.%@/Messages",
+								 accountPath,
+								 mailboxName,
+								 mailboxType]])
+			return YES;
+		else {
+			return NO;
+		}
+}
+	return NO;
 }
 
 - (BOOL)loadChildrenForObject:(QSObject *)object{
@@ -208,7 +221,7 @@
 	NSString *mailboxName=[object objectForType:kQSAppleMailMailboxType];
 	NSString *accountName=[object objectForMeta:@"accountId"];
 	NSString *accountPath=[object objectForMeta:@"accountPath"];
-
+	
 	// make 'Envelop Index' compatible mailbox-url
 	NSString *mailboxUrl;
 	if ([accountName isEqualToString:@"Local Mailbox"]) {
@@ -219,16 +232,25 @@
 		// replace special chars with % representation 
 		// but not last @. strange Envelop Index / ~Library/Mail/ format requires that
 		NSRange r = [accountName rangeOfString:@"@" options:NSBackwardsSearch];
-		NSString *p1, *p2;
-		p1 = [accountName substringToIndex:r.location];
-		p1 = [p1 stringByReplacing:@"@" with:@"%40"];
-		p2 = [accountName substringFromIndex:r.location + 1];
-		mailboxUrl = [NSString stringWithFormat:@"%@@%@/%@",
-					  p1,
-					  p2,
-					  [mailboxName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+		// If there's @ sign existed in the accountName string
+		if(r.location != NSNotFound)
+		{
+			NSString *p1, *p2;
+			p1 = [accountName substringToIndex:r.location];
+			p1 = [p1 stringByReplacing:@"@" with:@"%40"];
+			p2 = [accountName substringFromIndex:r.location + 1];
+			mailboxUrl = [NSString stringWithFormat:@"%@@%@/%@",
+						  p1,
+						  p2,
+						  [mailboxName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+		}
+		// If the @ sign didn't exist (e.g. Mobile Me accounts)
+		else {
+			mailboxUrl =  [NSString stringWithFormat:@"%@@mail.mac.com/%@",accountName,[mailboxName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+		}
 	}
-
+	
+	// NSLog(@"Mailbox URL: %@", mailboxUrl);
 	// read mails for mailbox from SQLite DB Envelop Index
 	NSString *dbPath = [[MAILPATH stringByAppendingString:@"/Envelope Index"] stringByStandardizingPath];
 	FMDatabase *db = [FMDatabase databaseWithPath:dbPath];
@@ -283,7 +305,7 @@
 					mailboxName,
 					mailboxType,
 					[rs stringForColumn:@"message_id"]];
-
+		NSLog(@"MailPath: %@",mailPath);
 		newObject=[QSObject objectWithName:subject];
 		[newObject setObject:subject forType:kQSAppleMailMessageType];
 		[newObject setDetails:sender];
