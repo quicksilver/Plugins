@@ -123,3 +123,19 @@
 
 
 
+@implementation QSObject (Windows)
++ (QSObject *)objectForWindow:(id)aWindow
+{
+  NSString *windowTitle = nil;
+  AXUIElementCopyAttributeValue(aWindow, kAXTitleAttribute, &windowTitle);
+  if (!windowTitle) return nil;
+  return [self objectForWindow:aWindow name:windowTitle];
+}
++ (QSObject *)objectForWindow:(id)aWindow name:(NSString *)name
+{
+  QSObject *object = [QSObject objectWithName:name];
+	[object setObject:aWindow forType:kWindowsType];
+	return object;
+}
+@end
+

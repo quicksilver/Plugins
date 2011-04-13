@@ -8,11 +8,15 @@
 
 
 #import "QSUIAccessPlugIn_Source.h"
-
+#define kWindowsType @"WindowsType"
 @interface QSUIAccessPlugIn_Source : NSObject{
 }
 @end
 
 @interface QSObject (UIElement)
 +(QSObject *)objectForUIElement:(id)element;
+@end
+
+@interface QSObject (Windows)
++ (QSObject *)objectForWindow:(id)aWindow;
 @end
