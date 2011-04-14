@@ -213,6 +213,7 @@
 			isa = PBXProject;
 			buildConfigurationList = 7F07AF72085E432C00E2AFC4 /* Build configuration list for PBXProject "ClipboardElement" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,

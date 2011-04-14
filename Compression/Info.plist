@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>13B</string>
+	<string>14A</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2004, Blacktree, Inc.</string>
 	<key>QSActions</key>
@@ -33,7 +33,7 @@
 			<key>displaysResult</key>
 			<integer>1</integer>
 			<key>icon</key>
-			<string>com.apple.bomarchivehelper</string>
+			<string>com.apple.archiveutility</string>
 			<key>name</key>
 			<string>Compress (Create Archive)</string>
 		</dict>
@@ -50,7 +50,7 @@
 			<key>displaysResult</key>
 			<integer>1</integer>
 			<key>icon</key>
-			<string>com.apple.bomarchivehelper</string>
+			<string>com.apple.archiveutility</string>
 			<key>name</key>
 			<string>Compress Using...</string>
 		</dict>
@@ -73,7 +73,7 @@
 			<key>displaysResult</key>
 			<integer>1</integer>
 			<key>icon</key>
-			<string>com.apple.bomarchivehelper</string>
+			<string>com.apple.archiveutility</string>
 			<key>name</key>
 			<string>Decompress</string>
 			<key>rankModification</key>
