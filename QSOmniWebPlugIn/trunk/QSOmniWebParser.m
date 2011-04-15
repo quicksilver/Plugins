@@ -11,15 +11,13 @@
 @implementation QSOmniWebObjectHandler
 -(id)resolveProxyObject:(id)proxy
 {
-	id res = nil;
-//	if(QSAppIsRunning(@"com.omnigroup.OmniWeb5"))
-	{
-		NSAppleScript* script = [[[NSAppleScript alloc] initWithSource:@"tell application \"OmniWeb\" to if(count browsers) > 0 then address of first browser"] autorelease];
-		NSString* url = [[script executeAndReturnError:nil] stringValue];
-		if(url)
-			res = [QSObject URLObjectWithURL:url title:nil];
-	}
-	return res;
+    id res = nil;
+    if(!QSAppIsRunning(@"com.omnigroup.OmniWeb5")) return nil;
+    NSAppleScript* script = [[[NSAppleScript alloc] initWithSource:@"tell application \"OmniWeb\" to if(count browsers) > 0 then address of first browser"] autorelease];
+    NSString* url = [[script executeAndReturnError:nil] stringValue];
+    if(url)
+        res = [QSObject URLObjectWithURL:url title:nil];
+    return res;
 }
 @end
 
