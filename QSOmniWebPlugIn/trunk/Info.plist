@@ -24,6 +24,25 @@
 		<string>Allan Odgaard and Rob McBroom</string>
 		<key>description</key>
 		<string>Bookmarks, History, Search Queries, and Proxy Object.</string>
+		<key>extendedDescription</key>
+		<string>&lt;h2 id=&quot;omniweb_module&quot;&gt;OmniWeb Module&lt;/h2&gt;
+
+&lt;p&gt;This plug-in allows you to add your Bookmarks, Favorites and History from OmniWeb into Quicksilver&amp;#8217;s catalog. It also provides a proxy object and access to web searches.&lt;/p&gt;
+
+&lt;h3 id=&quot;proxy_object&quot;&gt;Proxy Object&lt;/h3&gt;
+
+&lt;p&gt;If proxy objects are enabled, you can access the URL of the page currently open in OmniWeb by searching for &amp;#8220;Current Web Page&amp;#8221;. Several browsers provide a Current Web Page proxy object, so look for the one with OmniWeb&amp;#8217;s icon.&lt;/p&gt;
+
+&lt;h3 id=&quot;web_searches&quot;&gt;Web Searches&lt;/h3&gt;
+
+&lt;p&gt;Searches defined in OmniWeb&amp;#8217;s Shortcut Preferences can be added to the catalog automatically and used from within Quicksilver. For example, if you define a shortcut with a keyword of &lt;code&gt;google@&lt;/code&gt;, you can do either of the following from within Quicksilver:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;google → Search For… → [search terms]&lt;/li&gt;
+&lt;li&gt;[search terms] → Find With… → google&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This functionality requires the Web Search Module for Quicksilver.&lt;/p&gt;</string>
 		<key>requiresBundle</key>
 		<string>com.omnigroup.OmniWeb5</string>
 		<key>requiresFeature</key>
