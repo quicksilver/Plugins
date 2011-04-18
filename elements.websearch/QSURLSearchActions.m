@@ -60,13 +60,16 @@
 	[[NSClassFromString(@"QSWebSearchController") sharedInstance] searchURL:url];
 	return nil;
 }
+#warning encoding here is returning 'null'
+// The encoding of the object is returning null. This will break in a future release of OS X
 - (QSObject *)doURLSearchForAction:(QSObject *)dObject withString:(QSObject *)iObject{
 	
 	for(NSString * urlString in [dObject arrayForType:QSURLType]){
-		NSURL *url=[NSURL URLWithString:urlString];
+		CFStringEncoding encoding=[[dObject objectForMeta:kQSStringEncoding]intValue];
+		// Make sure characters such as | are escaped
+		NSURL *url=[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:encoding]];
 		
 		NSString *string=[iObject stringValue];
-		CFStringEncoding encoding=[[dObject objectForMeta:kQSStringEncoding]intValue];
 		[[NSClassFromString(@"QSWebSearchController") sharedInstance] searchURL:url forString:string encoding:encoding];
 	}
 	return nil;
