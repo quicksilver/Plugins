@@ -316,6 +316,8 @@
 		<dict>
 			<key>CurrentFocusedWindow</key>
 			<dict>
+				<key>icon</key>
+				<string>WindowIcon</string>
 				<key>name</key>
 				<string>Current Focused Window</string>
 				<key>providerClass</key>
