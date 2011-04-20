@@ -53,7 +53,6 @@
 			<string>Search for text on a web site</string>
 			<key>directTypes</key>
 			<array>
-				<string>Apple URL pasteboard type</string>
 				<string>QSSearchURLType</string>
 			</array>
 			<key>icon</key>
@@ -75,7 +74,6 @@
 			<string>Returns the results of a query directly to the command window</string>
 			<key>directTypes</key>
 			<array>
-				<string>Apple URL pasteboard type</string>
 				<string>QSSearchURLType</string>
 			</array>
 			<key>enabled</key>
@@ -123,9 +121,9 @@
 			<key>settings</key>
 			<dict>
 				<key>contentPrefix</key>
-				<string>&lt;div class="QSWebSearchContentStart"&gt;&lt;/div&gt;</string>
+				<string>&lt;div class=&quot;QSWebSearchContentStart&quot;&gt;&lt;/div&gt;</string>
 				<key>contentSuffix</key>
-				<string>&lt;div class="QSWebSearchContentEnd"&gt;&lt;/div&gt;</string>
+				<string>&lt;div class=&quot;QSWebSearchContentEnd&quot;&gt;&lt;/div&gt;</string>
 				<key>path</key>
 				<string>http://docs.blacktree.com/doku.php?id=quicksilver:web_search_list</string>
 			</dict>
@@ -142,9 +140,9 @@
 			<key>settings</key>
 			<dict>
 				<key>contentPrefix</key>
-				<string>&lt;div class="QSWebSearchContentStart"&gt;&lt;/div&gt;</string>
+				<string>&lt;div class=&quot;QSWebSearchContentStart&quot;&gt;&lt;/div&gt;</string>
 				<key>contentSuffix</key>
-				<string>&lt;div class="QSWebSearchContentEnd"&gt;&lt;/div&gt;</string>
+				<string>&lt;div class=&quot;QSWebSearchContentEnd&quot;&gt;&lt;/div&gt;</string>
 				<key>path</key>
 				<string>http://docs.blacktree.com/quicksilver/extended_web_search_list</string>
 			</dict>
