@@ -72,7 +72,7 @@ NSArray *MenuItemsForElement(AXUIElementRef element, NSInteger depth, NSString *
 	AXUIElementRef app=AXUIElementCreateApplication (pid);	
 	AXUIElementRef menuBar;
 	AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
-	NSArray *items=MenuItemsForElement(menuBar,7,nil,3,process);
+	NSArray *items=MenuItemsForElement(menuBar,4,nil,3,process);
 	
 	[QSPreferredCommandInterface showArray:items];
 	return nil;
@@ -204,7 +204,7 @@ void PressButtonInWindow(id buttonName, id window)
 		AXUIElementRef app=AXUIElementCreateApplication (pid);	
 		AXUIElementRef menuBar;
 		AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
-		NSArray *actions=MenuItemsForElement(menuBar,7,nil,3, process);
+		NSArray *actions=MenuItemsForElement(menuBar,4,nil,3, process);
 		
 		//NSLog(@"actions: %@",actions);
 		return [NSArray arrayWithObjects:[NSNull null],actions,nil];
