@@ -187,6 +187,24 @@ void PressButtonInWindow(id buttonName, id window)
 	return nil;
 }
 
+- (QSObject *)allAppMenus:(QSObject *)dObject
+{
+  NSArray *launchedApps = [[NSWorkspace sharedWorkspace] launchedApplications];
+  NSMutableArray *menus = [NSMutableArray array];
+  for (NSDictionary *process in launchedApps) {
+    pid_t pid = [[process objectForKey:@"NSApplicationProcessIdentifier"] intValue];
+    AXUIElementRef app = AXUIElementCreateApplication(pid);	
+  	AXUIElementRef menuBar;
+  	AXUIElementCopyAttributeValue(app, kAXMenuBarAttribute, &menuBar);
+    QSObject *object = [QSObject objectByMergingObjects:MenuItemsForElement(menuBar,4,nil,3,process)];
+    [object setName:[process objectForKey:@"NSApplicationName"]];
+    [object setIcon:[[NSWorkspace sharedWorkspace] iconForFile:[process objectForKey:@"NSApplicationPath"]]];
+  	[menus addObject:object];
+  }
+	[QSPreferredCommandInterface showArray:menus];
+	return nil;
+}
+
 - (id)resolveProxyObject:(id)proxy{
   if (![[proxy identifier] isEqualToString:@"CurrentFocusedWindow"]) return nil;
   NSDictionary *curAppInfo = [[NSWorkspace sharedWorkspace] activeApplication];

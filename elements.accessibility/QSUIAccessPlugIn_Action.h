@@ -29,6 +29,7 @@
 - (QSObject *)minimizeWindow:(QSObject *)dObject;
 - (QSObject *)closeWindow:(QSObject *)dObject;
 - (QSObject *)allAppWindows:(QSObject *)dObject;
+- (QSObject *)allAppMenus:(QSObject *)dObject;
 - (id)resolveProxyObject:(id)proxy;
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject;
 - (NSArray *) validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject;

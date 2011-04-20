@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>19C</string>
+	<string>19D</string>
 	<key>NSPrincipalClass</key>
 	<string>QSUIAccessPlugIn</string>
 	<key>QSActions</key>
@@ -265,7 +265,7 @@
 		<key>extendedDescription</key>
 		<string>Access the menus and windows of running applications.&lt;P&gt;&lt;h3&gt;Requirements&lt;/h3&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Access for assistive devices must be enabled in Universal Access pane of System Preferences&lt;/ul&gt;</string>
 		<key>icon</key>
-		<string>menu</string>
+		<string>WindowIcon</string>
 	</dict>
 	<key>QSRegistration</key>
 	<dict>
@@ -276,6 +276,18 @@
 		</dict>
 		<key>QSCommands</key>
 		<dict>
+			<key>ShowAllAppMenusCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directID</key>
+					<string>AllAppMenusMessage</string>
+					<key>name</key>
+					<string>Show All Menus</string>
+				</dict>
+			</dict>
 			<key>ShowAllAppWindowsCommand</key>
 			<dict>
 				<key>command</key>
@@ -291,6 +303,19 @@
 		</dict>
 		<key>QSInternalMessages</key>
 		<dict>
+			<key>AllAppMenusMessage</key>
+			<dict>
+				<key>actionClass</key>
+				<string>QSUIAccessPlugIn_Action</string>
+				<key>actionSelector</key>
+				<string>allAppMenus:</string>
+				<key>icon</key>
+				<string>Object</string>
+				<key>name</key>
+				<string>Show All Menus</string>
+				<key>runInMainThread</key>
+				<true/>
+			</dict>
 			<key>AllAppWindowsMessage</key>
 			<dict>
 				<key>actionClass</key>
@@ -353,6 +378,16 @@
 			<string>ShowAllAppWindowsCommand</string>
 			<key>command</key>
 			<string>ShowAllAppWindowsCommand</string>
+			<key>set</key>
+			<string>Quicksilver</string>
+			<key>type</key>
+			<string>QSHotKeyTrigger</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>ShowAllAppMenusCommand</string>
+			<key>command</key>
+			<string>ShowAllAppMenusCommand</string>
 			<key>set</key>
 			<string>Quicksilver</string>
 			<key>type</key>
