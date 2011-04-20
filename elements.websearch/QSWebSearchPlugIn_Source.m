@@ -8,7 +8,6 @@
 
 #import "QSWebSearchPlugIn_Source.h"
 
-
 @implementation QSWebSearchSource
 
 
@@ -30,6 +29,15 @@
     return [QSResourceManager imageNamed:@"Find"];
 }
 
+//- (void)setQuickIconForObject:(QSObject *)object{
+//	[object setIcon:[NSImage imageNamed:@"DefaultBookmarkImage"]];
+//}
+
+//- (BOOL)loadIconForObject:(QSObject *)object{
+//	[object setIcon:[NSImage imageNamed:@"DefaultBookmarkImage"]];
+// return NO;
+// }
+
 - (NSString *)identifierForObject:(id <QSObject>)object{
     return nil;
 }
@@ -40,6 +48,9 @@
     QSObject *newObject;
 	for(NSDictionary * urlDict in urlArray){
 		newObject=[QSObject URLObjectWithURL:[urlDict objectForKey:@"url"] title:[urlDict objectForKey:@"name"]];
+		[newObject setObject:[urlDict objectForKey:@"url"] forType:@"QSSearchURLType"];
+		[newObject setPrimaryType:@"QSSearchURLType"];
+		[newObject setIcon:[NSImage imageNamed:@"DefaultBookmarkIcon"]];
 		NSNumber *encoding=[urlDict objectForKey:@"encoding"];
 		if (encoding)
 			[newObject setObject:encoding forMeta:kQSStringEncoding];
