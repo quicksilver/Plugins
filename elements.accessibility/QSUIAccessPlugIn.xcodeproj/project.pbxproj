@@ -12,6 +12,7 @@
 		7FDB743A0AA8B7C600CCE360 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDB74360AA8B7C600CCE360 /* QSFoundation.framework */; };
 		7FDB743B0AA8B7C600CCE360 /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDB74370AA8B7C600CCE360 /* QSInterface.framework */; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		C92F30B6135F23F100B2D6FE /* WindowIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C92F30B5135F23F100B2D6FE /* WindowIcon.png */; };
 		E11979880705ACA300D49C11 /* QSUIAccessPlugIn_Source.m in Sources */ = {isa = PBXBuildFile; fileRef = E1647F5A0705A7870033D4BF /* QSUIAccessPlugIn_Source.m */; };
 		E1647D710705A3620033D4BF /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1647D700705A3620033D4BF /* Carbon.framework */; };
 		E1647E610705A6120033D4BF /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1647E600705A6120033D4BF /* ApplicationServices.framework */; };
@@ -27,6 +28,7 @@
 		7FDB74370AA8B7C600CCE360 /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* UI Access.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Access.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92F30B5135F23F100B2D6FE /* WindowIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WindowIcon.png; sourceTree = "<group>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E1647D700705A3620033D4BF /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		E1647E600705A6120033D4BF /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
@@ -71,6 +73,7 @@
 		0259C582FE90428111CA0C5A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C92F30B5135F23F100B2D6FE /* WindowIcon.png */,
 				8D1AC9730486D14A00FE50C9 /* Info.plist */,
 			);
 			name = Resources;
@@ -148,7 +151,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 7FFF25AF085E488700266176 /* Build configuration list for PBXProject "QSUIAccessPlugIn" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 0259C574FE90428111CA0C5A /* QSUIAccessPlugIn */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -163,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92F30B6135F23F100B2D6FE /* WindowIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,19 +270,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx;
 			};
 			name = Development;
 		};
 		7FFF25B1085E488700266176 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -282,7 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx;
 			};
 			name = Default;
 		};
