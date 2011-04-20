@@ -12,22 +12,30 @@
 #define kWindowsProcessType @"WindowsProcessInfo"
 
 //#import <QSCore/QSObject.h>
-//#import <QSCore/QSActionProvider.h>
+#import <QSCore/QSActionProvider.h>
 #import "QSUIAccessPlugIn_Action.h"
 #define QSUIAccessPlugIn_Type @"QSUIAccessPlugIn_Type"
-@interface QSUIAccessPlugIn_Action : QSActionProvider
-{
-}
+@interface QSUIAccessPlugIn_Action : QSActionProvider {}
+
+- (QSObject *)getUIElementForApplication:(QSObject *)dObject;
+- (QSObject *)appMenus:(QSObject *)dObject pickItem:(QSObject *)iObject;
+- (QSObject *)searchAppMenus:(QSObject *)dObject;
 - (QSObject *)getWindowsForApp:(QSObject *)dObject;
 - (QSObject *)focusedWindowForApp:(QSObject *)dObject;
-- (QSObject *)appWindows:(QSObject *)dObject raiseWindow:(QSObject *)iObject;
+- (QSObject *)appWindows:(QSObject *)dObject activateWindow:(QSObject *)iObject;
 - (QSObject *)activateWindow:(QSObject *)dObject;
 - (QSObject *)raiseWindow:(QSObject *)dObject;
-- (void)pressButton:(id)button inWindow:(id)window;
 - (QSObject *)zoomWindow:(QSObject *)dObject;
+- (QSObject *)minimizeWindow:(QSObject *)dObject;
+- (QSObject *)closeWindow:(QSObject *)dObject;
 - (QSObject *)allAppWindows:(QSObject *)dObject;
 - (id)resolveProxyObject:(id)proxy;
-
+- (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject;
+- (NSArray *) validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject;
+- (QSObject *)uiElement:(QSObject *)dObject performAction:(QSObject *)iObject;
+- (QSObject *)pressUIElement:(QSObject *)dObject;
+- (void)activateProcessOfElement:(AXUIElementRef) element;
+- (QSObject *)pickUIElement:(QSObject *)dObject;
 - (QSObject *)resolvedProxy:(QSObject *)dObject;
 
 @end

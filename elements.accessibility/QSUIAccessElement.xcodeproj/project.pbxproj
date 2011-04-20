@@ -30,7 +30,7 @@
 		32DBCF980370C29C00C91783 /* QSUIAccessPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSUIAccessPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		7F6E36FA0C11174600303BFE /* element.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D1AC9740486D14A00FE50C9 /* UI Access.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Access.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1AC9740486D14A00FE50C9 /* UI Access.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Access.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E1647D700705A3620033D4BF /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		E1647E600705A6120033D4BF /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
@@ -82,7 +82,7 @@
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1AC9740486D14A00FE50C9 /* UI Access.qsplugin */,
+				8D1AC9740486D14A00FE50C9 /* UI Access.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 			name = "UI Access";
 			productInstallPath = "$(HOME)/Developer/Palettes";
 			productName = QSUIAccessPlugIn;
-			productReference = 8D1AC9740486D14A00FE50C9 /* UI Access.qsplugin */;
+			productReference = 8D1AC9740486D14A00FE50C9 /* UI Access.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -164,7 +164,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 7FFF25AF085E488700266176 /* Build configuration list for PBXProject "QSUIAccessElement" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 0259C574FE90428111CA0C5A /* QSUIAccessPlugIn */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -247,6 +251,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14D9D0E010D0FD1C00BEABA0 /* Debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -254,6 +263,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14D9D0E610D0FD1C00BEABA0 /* Release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
