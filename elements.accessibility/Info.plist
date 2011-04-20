@@ -298,7 +298,7 @@
 				<key>actionSelector</key>
 				<string>allAppWindows:</string>
 				<key>icon</key>
-				<string>Object</string>
+				<string>WindowIcon</string>
 				<key>name</key>
 				<string>Show All Windows</string>
 				<key>runInMainThread</key>
@@ -333,6 +333,16 @@
 		<integer>1</integer>
 		<key>version</key>
 		<string>1337</string>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>WindowIcon</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.blacktree.Quicksilver.QSUIAccessPlugIn</string>
+			<key>resource</key>
+			<string>WindowIcon.png</string>
+		</dict>
 	</dict>
 	<key>QSTriggerAdditions</key>
 	<array>
