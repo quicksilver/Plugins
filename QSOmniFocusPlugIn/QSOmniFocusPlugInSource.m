@@ -6,6 +6,7 @@
 //  Copyright __MyCompanyName__ 2007. All rights reserved.
 //
 
+#import "QSOmniFocusPlugIn_Prefix.pch"
 #import "QSOmniFocusPlugInSource.h"
 #import <QSCore/QSObject.h>
 
