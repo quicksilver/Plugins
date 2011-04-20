@@ -89,8 +89,9 @@ NSArray *WindowsForApp(id process, BOOL appName)
     NSString *windowTitle = nil;
     AXUIElementCopyAttributeValue(aWindow, kAXTitleAttribute, &windowTitle);
     if (!windowTitle) continue;
-    QSObject *object = [QSObject objectForWindow:aWindow name:(appName) ? [windowTitle stringByAppendingFormat:@" — %@",[process objectForKey:@"NSApplicationName"]] : windowTitle process:process];
+    QSObject *object = [QSObject objectForWindow:aWindow name:windowTitle process:process];
     if (!object) continue;
+    if (appName) [object setName:[windowTitle stringByAppendingFormat:@" — %@",[process objectForKey:@"NSApplicationName"]]];
     [object setObject:process forType:kWindowsProcessType];
     [windowObjects addObject:object];
   }

@@ -81,24 +81,50 @@ QSObject * QSObjectForAXUIElementWithNameProcessType(id element, NSString *name,
   QSObject *object = [QSObject objectWithName:name];
 	[object setObject:element forType:type];
 	[object setObject:process forType:kWindowsProcessType];
-	NSString *path = [process objectForKey:@"NSApplicationPath"];
-  if (path) {
-    [object setIcon:[[NSWorkspace sharedWorkspace] iconForFile:path]];
-  }
 	return object;
 }
 
 @implementation QSObject (UIElement)
 + (QSObject *)objectForUIElement:(id)element name:(NSString *)name process:(NSDictionary *)process
 {
-  return QSObjectForAXUIElementWithNameProcessType(element, name, process, kQSUIElementType);
+  QSObject *object = QSObjectForAXUIElementWithNameProcessType(element, name, process, kQSUIElementType);
+  NSString *path = [process objectForKey:@"NSApplicationPath"];
+  if (path) {
+    [object setIcon:[[NSWorkspace sharedWorkspace] iconForFile:path]];
+  }
+  return object;
 }
 @end
 
 @implementation QSObject (Windows)
 + (QSObject *)objectForWindow:(id)element name:(NSString *)name process:(NSDictionary *)process
 {
-  return QSObjectForAXUIElementWithNameProcessType(element, name, process, kWindowsType);
+  QSObject *object = QSObjectForAXUIElementWithNameProcessType(element, name, process, kWindowsType);
+  [object setIcon:[QSResourceManager imageNamed:@"WindowIcon"]];
+  CFArrayRef windows = CGWindowListCopyWindowInfo(kCGWindowListOptionOnScreenOnly | kCGWindowListExcludeDesktopElements, kCGNullWindowID);
+  for (NSDictionary *info in (NSArray *)windows)
+  {
+    if (![(NSNumber *)[info objectForKey:kCGWindowOwnerPID] isEqual:[process objectForKey:@"NSApplicationProcessIdentifier"]]) continue;
+    CFStringRef windowName = [info objectForKey:kCGWindowName];
+    if (!windowName) continue;
+    if ([windowName localizedCompare:name] != 0) continue;
+    CGImageRef windowImage = CGWindowListCreateImage(CGRectNull, kCGWindowListOptionIncludingWindow, [[info objectForKey:kCGWindowNumber] unsignedIntValue], kCGWindowImageBoundsIgnoreFraming);
+    if ((!windowImage) || (CGImageGetWidth(windowImage) < 1) || (CGImageGetHeight(windowImage) < 1)) {
+      continue;
+    }
+    else {
+      NSBitmapImageRep *rep = [[NSBitmapImageRep alloc] initWithCGImage:windowImage];
+      NSImage *icon = [[NSImage alloc] init];
+      [icon addRepresentation:rep];
+      [rep release];
+      [object setIcon:icon];
+      [icon release];
+    }
+    CGImageRelease(windowImage);
+    break;
+  }
+  
+  return object;
 }
 @end
 
