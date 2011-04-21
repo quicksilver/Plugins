@@ -103,7 +103,8 @@ NSArray *WindowsForApp(id process, BOOL appName)
   dObject = [self resolvedProxy:dObject];
   id process = [dObject objectForType:QSProcessType];
   NSArray *windowObjects = WindowsForApp(process, NO);
-  return (windowObjects) ? [QSPreferredCommandInterface showArray:windowObjects] : nil;
+  if (windowObjects) [QSPreferredCommandInterface showArray:windowObjects];
+  return nil;
 }
 
 - (QSObject *)focusedWindowForApp:(QSObject *)dObject{
