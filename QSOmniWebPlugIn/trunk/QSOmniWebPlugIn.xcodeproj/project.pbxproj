@@ -155,7 +155,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 7FAFD13C0C10569B0074ADAB /* Build configuration list for PBXProject "QSOmniWebPlugIn" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0259C574FE90428111CA0C5A /* QSOmniWebPlugIn */;
 			projectDirPath = "";
 			projectRoot = "";
