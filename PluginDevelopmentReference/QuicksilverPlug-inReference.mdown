@@ -48,6 +48,127 @@ This also goes for existing plug-ins that you're updating or fixing. Quicksilver
 
 The best place to document your plug-in is in the `Info.plist` by adding an `extendedDescription` to the `QSPlugIn` section. It can contain HTML.
 
+## Property List Overview ##
+
+Throughout this document are numerous references to things that go in a plug-in's property list. Refer back here if you want to see it all in one place.
+
+### QSPlugIn ###
+
+author (string)
+: Put your name(s) here
+
+description (string)
+: A one-line description of your plug-in's purpose. (I'm not sure where this shows up in Quicksilver's UI)
+
+extendedDescription (string)
+: This is what the user will see when they click the "info" button in the Plug-ins preferences. It can be text or HTML (recommended).
+
+icon (string)
+: An image or bundle ID
+
+categories (array)
+: This is a list of categories you'd like the plug-in to be listed under. The full list of categories can be found under "All Plug-ins" in the Preferences.
+
+hidden (boolean)
+: This is generally only used by internal plug-ins bundled with Quicksilver. It's a boolean that tells whether or not your plug-in should show up on the list in the preferences.
+
+relatedBundles (array)
+: This is a list of bundle IDs for applications or plug-ins that are related
+
+requiresBundle (array)
+: This is a list of bundle IDs for things that are required. Quicksilver won't load the plug-in if these things aren't on the system. For example, the Cyberduck plug-in is no use unless Cyberduck is installed, so it lists `ch.sudo.cyberduck` here.
+
+webIcon (string)
+: You can provide a URL that points to an image here.
+
+infoFile (string)
+: If you want to include a README (text or RTF) with your plug-in, you can specify the file name. I don't think this is accessible through Quicksilver's interface yet though.
+
+### QSActions ###
+
+The QSActions section contains an array of dictionaries. The key should be an internal name for your action, like `MakeStuffBetter`. Each action can have the following children.
+
+name (string)
+: The name the user will see (and search for) in the interface
+
+description
+: A one-line description of what the action does
+
+icon (string)
+: The image that will appear for this action in the interface
+
+directTypes (array)
+: A list of types this action applies to. It won't show up unless the object in the first pane has one of the types on this list.
+
+directFileTypes (array)
+: If one of your direct types is `NSFilenamesPboardType` (files), you can limit the types of files that match by providing a list of extensions here.
+
+indirectTypes (array)
+: The types of objects that are allowed in the third pane (if this action uses it)
+
+indirectOptional (boolean)
+: Specifies whether or not the third pane is required
+
+actionClass (string)
+: The class that contains the method referred to by `actionSelector`
+
+actionSelector (string)
+: The method that does the work for this action. For instance, the `MakeStuffBetter` action might refer to a method called `makeStuffBetter:`. If the action takes an argument (like the name of a cute animal) in the third pane, you specify the name of the argument here as well, as in `makeStuffBetter:usingCuteAnimal:`.
+
+reverseArguments (boolean)
+: If true, the arguments will be sent to the `actionSelector` in the opposite order. Using the example above, an action that allowed cute animals in the first pane and something to make better in the third pane could reuse the `makeStuffBetter:usingCuteAnimal:` method you've already written.
+
+alternateAction (string)
+: The name of the alternate action as it appears in your property list under `QSActions`
+
+validatesObjects (boolean)
+: This tells Quicksilver whether or not to run `validActionsForDirectObject:`. That method gives you much more fine-grained control in cases where simply checking the type isn't sufficient to decide whether or not an action should be available.
+
+displaysResult (boolean)
+: If true, the Quicksilver interface will reappear after your action runs. You would normally only use this if you action returns a `QSObject`.
+
+enabled (boolean)
+: Whether or not this action should be available by default when your plug in is installed for the first time
+
+precedence (float)
+: A number between 0.0 and 4.0. You should generally only use this if the action applies to a new type created by your plug-in, and not for any of the types Quicksilver knows of by default. Most of the built-in default actions have a low precedence and you can very easily overpower them here. Users would not appreciate this action suddenly becoming the default for files or text.
+
+runInMainThread (boolean)
+: If true, this forces the action to be run in the main thread (for timers or actions that calculate a delay)
+
+hidden (boolean)
+: Whether or not the action should be directly usable by the user. You might want to set this for an alternate action.
+
+### QSRegistration ###
+
+This section gives Quicksilver additional information about your plug-in.
+
+#### QSTypeDefinitions ####
+
+This allows your custom type(s) to appear in the Actions section of the preferences. Any new types provided by your plug-in should be described here. The key is the name of a type as defined in your code. Each entry should have two children: `name` and `icon`.
+
+#### QSBundleChildHandlers ####
+
+This lists bundles that should have children provided by your plug-in. (Generally this is used to allow right-arrowing into an existing application like Mail or Address Book.) The key should be the bundle ID, and the value should be the name of a class that contains a `loadChildrenForObject:` method.
+
+#### QSApplicationActions ####
+
+These are actions that only appear when a specific application is in the first pane. The key should be the bundle ID of the application. Under this is a dictionary of actions. I'm not entirely sure how to set this up. See the iTunes module for an example.
+
+#### QSProxies ####
+
+This defines proxy objects provided by the plug-in.
+
+### QSPresetAdditions ###
+
+This section defines catalog entries that should be added by default under Modules in the Catalog preferences.
+
+### QSTriggerAdditions ###
+
+This section defines triggers that should be added by default in the Triggers preferences.
+
+<!-- TODO there's a lot more in the plist -->
+
 ## Actions ##
 
 The information in Ankur's tutorial is pretty good, but there are some things it doesn't mention.
@@ -77,6 +198,21 @@ You create alternate actions just like any other action by adding a section for 
 Alternate actions should be able to take the same number of arguments as the main action. You can't define an alternate that requires something in the third pane for an action that doesn't use the third pane.
 
 To define an alternate for an action, add an item named `alternateAction` to your action's properties in `Info.plist`. The value for `alternateAction` should be the name of another action as it appears under "QSActions" in the same plist.
+
+### Reverse Actions ###
+
+Some actions are reversible. For instance, web searches can be either
+
+    Search Engine → Search For… → [search terms]
+
+or
+
+    [search terms] → Find With… → Search Engine
+
+Reverse actions are added to the plist just like any other action. They should be more or less identical to the "forward" version of the action, with two key changes:
+
+  1. The name of the action should be different.
+  2. There should be a boolean called `reverseArguments` set to TRUE
 
 ### The Comma Trick ###
 
@@ -138,9 +274,9 @@ Keep in mind that Quicksilver has to run this validation code on every object th
 
 Example: `- (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject`
 
-This method doesn't seem to be related to `validatesObjects` in the plist, but the name implies it has something to do with validation. In any case, it can be useful.
+This method gets called when going to the third pane (for actions that provide one). It should return an array of `QSObject`s that are valid for that action. For instance, selecting a file and choosing the "Move To…" action will only show folders in the third pane.
 
-I think it gets called when going to the third pane (for actions that provide one). Personally, I use it to make sure the third pane comes up in text entry mode instead of regular "search" mode. To accomplish that, do something like this:
+Personally, I use it to make sure the third pane comes up in text entry mode instead of regular "search" mode. To accomplish that, do something like this:
 
     return [NSArray arrayWithObject:[QSObject textProxyObjectWithDefaultValue:@""]];
 
@@ -150,6 +286,8 @@ If the third pane will ask for some sort of search text, you should stick to the
 
     NSString *searchString=[[NSPasteboard pasteboardWithName:NSFindPboard] stringForType:NSStringPboardType];
     return [NSArray arrayWithObject:[QSObject textProxyObjectWithDefaultValue:searchString]];
+
+This method doesn't seem to be affected by `validatesObjects` in the plist.
 
 ### AppleScript Actions ###
 
@@ -173,8 +311,6 @@ I'm not sure what happens if you send multiple objects (via the comma trick) to 
 
 These actions are defined in the `Info.plist` of the plugin, in `QSRegistration` -> `QSApplicationActions` -> bundle identifier -> action identifier. The same pattern can be used as in the normal actions (inside `QSActions`) **OR** a `QSCommand`. A QSCommand is basically an AppleScript that is run without calling any functions in it or passing any arguments. For an example how `QSApplicationActions` and `QSCommands` are defined, see [the Info.plist of the Apple Mail Plugin](https://github.com/quicksilver/Plugins/blob/master/com.apple.Mail/Info.plist).
 <!-- TODO check if QSCommands can also be used as normal actions -->
-
-**Note**: This kind of action was broken after the B54 version of Quicksilver, but will be reintroduced in the B59 version.
 
 ## Adding to the Catalog ##
 
@@ -346,7 +482,7 @@ If you choose an identifier that is already in use, you will **replace the exist
 
 To set a type for an object, do something like this:
 
-    [myObject setObject:someObject forType:QSSomeType];
+    [myObject setObject:someObject forType:QSBlahType];
 
 Each `QSObject` has an array of types, so you can call this method multiple times, each with a different type, if you want. That deserves some further discussion. Most actions in Quicksilver only work with certain types. You will probably want to make built-in actions or actions defined in other plug-ins do something useful with your objects, which may be of a new type Quicksilver has never heard of. The "Paste" and "Large Type" actions are prime examples. You can't very well expect various other plug-ins (or Quicksilver itself) to add support for your new type. This is where you want to use an existing type to get things working.
 
@@ -358,7 +494,7 @@ Now, when a user selects this object and uses an action that works with `QSTextT
 
 If you set multiple types, you should also set one as primary.
 
-    [myObject setPrimaryType:QSSomeType];
+    [myObject setPrimaryType:QSBlahType];
 
 I don't think you can use `setPrimaryType:` alone. You must also call `setObject:forType:` using the same type at some point.
 
@@ -407,12 +543,11 @@ You can set an icon for a `QSObject` using the `setIcon:` method. I'm not even s
 
 I don't recommend using the `setIcon:` method when adding things to the catalog. (See the note on `setQuickIconForObject:` for an explanation.) However, using this method directly from one of your actions does work if you want to set the icon temporarily for something you're sending back to the Quicksilver UI. (That too will go away, but this is only an issue if the user leaves the object you return up in the first pane.)
 
-FYI, if you want to use one of the standard system icons for something, many can be found in `/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources`. You can refer to them using only the file's name (no path and no ".icns" extension). To use the icon for an application, use its bundle identifier, like `com.apple.Mail`.
+FYI, if you want to use one of the standard system icons for something, many can be found in `/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources`. You can refer to them using only the file's name (no path and no ".icns" extension). To use the icon for an application, use its bundle identifier, like `com.apple.Mail`. Finally, you can also provide the full path to an image file.
 
-<!-- TODO mention that a full path also works with QSResourceManager -->
-<!-- TODO mention getting icons for a file type
-     [object setIcon:[[NSWorkspace sharedWorkspace] iconForFileType:@"pdf"]];
--->
+If you want to use the icon for a particular file type, here's one method using the extension.
+
+    [myObject setIcon:[[NSWorkspace sharedWorkspace] iconForFileType:@"pdf"]];
 
 #### Children ####
 
@@ -477,13 +612,22 @@ This metadata has many possibilities, but two of the more obvious are:
 
 If a user sends multiple things to your action using the comma trick, then `[dObject stringValue]` will return "combined objects". I give examples of how to loop through one of these combined objects in the Actions section.
 
-#### Getting Specific Objects ####
+#### Getting Specific Objects by ID ####
 
 The `objectWithIdentifier:` method will return an existing `QSObject` if you know what it's ID was set to (probably because you set it yourself). It's a class method, so you don't call it on any particular object.
 
     QSObject *thisGuy = [QSObject objectWithIdentifier:uuid];
 
 The objects are looked up and returned from the object registry. I'm not sure exactly what the relationship is between the object registry and the catalog. Looking at the Quicksilver source indicates that they're independent, but in practice, I haven't been able to request an object by identifier unless it is in the catalog. If that's true, then the object your requesting must have been added to the catalog by `objectsForEntry:` at some prior point.
+
+#### Getting Specific Objects by Type ####
+
+Use `QSLib`
+
+    NSMutableArray *objects=[QSLib scoredArrayForString:nil inSet:[QSLib arrayForType:@"QSBlahType"];
+    return [NSArray arrayWithObjects:[NSNull null],objects,nil];
+
+<!-- TODO write this -->
 
 ### More Information ###
 
