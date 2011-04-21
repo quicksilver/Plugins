@@ -107,7 +107,7 @@ QSObject * QSObjectForAXUIElementWithNameProcessType(id element, NSString *name,
     if (![(NSNumber *)[info objectForKey:kCGWindowOwnerPID] isEqual:[process objectForKey:@"NSApplicationProcessIdentifier"]]) continue;
     CFStringRef windowName = [info objectForKey:kCGWindowName];
     if (!windowName) continue;
-    if ([windowName localizedCompare:name] != 0) continue;
+    if ([windowName localizedCompare:[object name]] != 0) continue;
     CGImageRef windowImage = CGWindowListCreateImage(CGRectNull, kCGWindowListOptionIncludingWindow, [[info objectForKey:kCGWindowNumber] unsignedIntValue], kCGWindowImageBoundsIgnoreFraming);
     if ((!windowImage) || (CGImageGetWidth(windowImage) < 1) || (CGImageGetHeight(windowImage) < 1)) {
       continue;
