@@ -40,18 +40,13 @@
 }
 
 - (NSArray *)validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject{
-	NSString *urlString=[[dObject arrayForType:QSURLType]lastObject];
 	
 	NSMutableArray *newActions=[NSMutableArray arrayWithCapacity:1];
-	if (urlString){
-		CFStringEncoding encoding=[[dObject objectForMeta:kQSStringEncoding]intValue];
-		NSURL *url=[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:encoding]];
-		NSString *query=[url absoluteString];
-		if (query && [query rangeOfString:QUERY_KEY].location!=NSNotFound){
+	if ([[dObject primaryType] isEqualToString:kQSSearchURLType]){
 			[newActions addObject:kURLSearchAction];
 			[newActions addObject:kURLSearchForAction];
 			[newActions addObject:kURLSearchForAndReturnAction];
-		}
+
 		
 	} else if ([dObject containsType:QSTextType] && ![dObject containsType:QSFilePathType]){   
 		[newActions addObject:kURLFindWithAction];
@@ -76,6 +71,8 @@
 	for(NSString * urlString in [dObject arrayForType:QSURLType]){
 		CFStringEncoding encoding=[[dObject objectForMeta:kQSStringEncoding]intValue];
 		// Make sure characters such as | are escaped
+		if(!encoding)
+			encoding = kCFStringEncodingUTF8;
 		NSURL *url=[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:encoding]];
 		
 		NSString *string=[iObject stringValue];
@@ -86,12 +83,13 @@
 - (QSObject *)doURLSearchForAndReturnAction:(QSObject *)dObject withString:(QSObject *)iObject{
 	for(NSString * urlString in [dObject arrayForType:QSURLType]){
 		CFStringEncoding encoding=[[dObject objectForMeta:kQSStringEncoding]intValue];
+		if(!encoding)
+			encoding = kCFStringEncodingUTF8;
 		// get an NSURL, escaping scary characters like |
 		NSURL *url=[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:encoding]];
 		NSString *string=[iObject stringValue];
 		NSString *query=[[NSClassFromString(@"QSWebSearchController") sharedInstance] resolvedURL:url forString:string encoding:encoding];
 		BOOL post=NO;
-		NSURL *queryURL=nil;
 		if ([[url scheme]isEqualToString:@"qssp-http"]){
 			query=[self openPOSTURL:[NSURL URLWithString:[query stringByReplacing:@"qssp-http" with:@"http"]]];  
 		//	return;

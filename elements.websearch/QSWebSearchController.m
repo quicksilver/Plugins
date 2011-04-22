@@ -38,21 +38,24 @@
 
 //kQSStringEncoding
 - (NSString *)resolvedURL:(NSURL *)searchURL forString:(NSString *)string  encoding:(CFStringEncoding)encoding{
-	   NSString *query=[searchURL absoluteString];
-    NSString *searchTerm=[string URLDecoding];
+	if(!encoding)
+		encoding = kCFStringEncodingUTF8;
+
+	NSString *query=[searchURL absoluteString];
+    NSString *searchTerm;
+	// try and replace % in the search term. If none then just keep it as it
+	if(!([string stringByReplacingPercentEscapesUsingEncoding:encoding]))
+		searchTerm = string;
 	
     searchTerm= [searchTerm stringByReplacing:@"+" with:@"/+/"];        
     searchTerm= [searchTerm stringByReplacing:@" " with:@"+"];
-	// NSLog(@"encoding %d",encoding);
-	if (encoding){
-		//	NSLog(@"searchterm %@",searchTerm);	
-    	searchTerm= [searchTerm URLEncodingWithEncoding:encoding];
-		//	NSLog(@"searchterm %@",searchTerm);	
-	}else{
-		searchTerm= [searchTerm URLEncoding];
-	}
-	searchTerm= [searchTerm stringByReplacing:@"/+/" with:@"%2B"];  
-    
+	
+	// Escape the search term
+	searchTerm= [searchTerm stringByAddingPercentEscapesUsingEncoding:encoding];
+
+	searchTerm= [searchTerm stringByReplacing:@"/+/" with:@"%2B"];
+	
+	// Query key set in QSDefines.h - 
     query=[query stringByReplacing:QUERY_KEY with:searchTerm];
 	return query;
 }
