@@ -53,18 +53,18 @@
 }
 
 - (NSArray *)validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject{
-	//[dObject arrayForType:kQSSearchURLType] 
 	NSString *urlString=[[dObject arrayForType:QSURLType]lastObject];
 	
 	NSMutableArray *newActions=[NSMutableArray arrayWithCapacity:1];
 	if (urlString){
-		NSURL *url=[NSURL URLWithString:[urlString URLEncoding]];
+		NSURL *url=[NSURL URLWithString:urlString];
 		NSString *query=[url absoluteString];
 		if (query && [query rangeOfString:QUERY_KEY].location!=NSNotFound){
 			[newActions addObject:kURLSearchAction];
 			[newActions addObject:kURLSearchForAction];
 			[newActions addObject:kURLSearchForAndReturnAction];
 		}
+		
 	} else if ([dObject containsType:QSTextType] && ![dObject containsType:QSFilePathType]){   
 		[newActions addObject:kURLFindWithAction];
 	}

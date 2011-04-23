@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>20B</string>
+	<string>213</string>
 	<key>NSPrincipalClass</key>
 	<string>QSWebSearchPlugIn</string>
 	<key>QSActions</key>
@@ -53,7 +53,7 @@
 			<string>Search for text on a web site</string>
 			<key>directTypes</key>
 			<array>
-				<string>QSSearchURLType</string>
+				<string>Apple URL pasteboard type</string>
 			</array>
 			<key>icon</key>
 			<string>Find</string>
@@ -74,7 +74,7 @@
 			<string>Returns the results of a query directly to the command window</string>
 			<key>directTypes</key>
 			<array>
-				<string>QSSearchURLType</string>
+				<string>Apple URL pasteboard type</string>
 			</array>
 			<key>enabled</key>
 			<string>NO</string>
@@ -113,11 +113,11 @@
 	<array>
 		<dict>
 			<key>ID</key>
-			<string>QSPresetDocWebSearches</string>
+			<string>QSPresetDocWebSearchesSimple</string>
 			<key>enabled</key>
 			<string>YES</string>
 			<key>name</key>
-			<string>Web Searches (from docs.blacktree.com)</string>
+			<string>Web Searches (Simple)</string>
 			<key>settings</key>
 			<dict>
 				<key>contentPrefix</key>
@@ -125,18 +125,18 @@
 				<key>contentSuffix</key>
 				<string>&lt;div class="QSWebSearchContentEnd"&gt;&lt;/div&gt;</string>
 				<key>path</key>
-				<string>http://docs.blacktree.com/doku.php?id=quicksilver:web_search_list</string>
+				<string>http://qs0.qsapp.com/plugin-data/web-search-list.php?type=simple</string>
 			</dict>
 			<key>source</key>
 			<string>QSWebSource</string>
 		</dict>
 		<dict>
 			<key>ID</key>
-			<string>QSPresetDocWebFullListSearches</string>
+			<string>QSPresetDocWebSearches</string>
 			<key>enabled</key>
 			<string>NO</string>
 			<key>name</key>
-			<string>Web Searches - Full List (from docs.blacktree.com)</string>
+			<string>Web Searches (Full List)</string>
 			<key>settings</key>
 			<dict>
 				<key>contentPrefix</key>
@@ -144,7 +144,7 @@
 				<key>contentSuffix</key>
 				<string>&lt;div class="QSWebSearchContentEnd"&gt;&lt;/div&gt;</string>
 				<key>path</key>
-				<string>http://docs.blacktree.com/quicksilver/extended_web_search_list</string>
+				<string>http://qs0.qsapp.com/plugin-data/web-search-list.php?type=full</string>
 			</dict>
 			<key>source</key>
 			<string>QSWebSource</string>
