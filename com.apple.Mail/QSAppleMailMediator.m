@@ -1,9 +1,6 @@
 
-
 #import "QSAppleMailMediator.h"
-
 #import "QSMailMediator.h"
-//#import <QSCore/QSBadgeImage.h>
 @class QSCountBadgeImage;
 
 @implementation QSAppleMailMediator
@@ -81,7 +78,7 @@
 //--------------------
 
 - (BOOL)drawIconForObject:(QSObject *)object inRect:(NSRect)rect flipped:(BOOL)flipped{
-	if (![object objectForType:QSProcessType])return nil;
+	if (![object objectForType:QSProcessType]){ return NO; }
 	
 	int count=[[[self mailScript] executeSubroutine:@"unread_count"
 																   arguments:nil
