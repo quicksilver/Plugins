@@ -57,8 +57,6 @@
 
 - (BOOL)loadChildrenForObject:(QSObject *)object{
   AXUIElementRef element = [object objectForType:kQSUIElementType];
-  NSString *role = nil;
-	AXUIElementCopyAttributeValue(element, kAXRoleAttribute, &role);
 	NSArray *children = [self childrenForElement:element];
   NSDictionary *process = [object objectForType:kWindowsProcessType];
 	[object setChildren:[self objectsForElements:children process:process]];
@@ -123,6 +121,7 @@ QSObject * QSObjectForAXUIElementWithNameProcessType(id element, NSString *name,
     CGImageRelease(windowImage);
     break;
   }
+  [windows release];
   
   return object;
 }

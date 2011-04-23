@@ -22,15 +22,16 @@
   NSDictionary *process = [dObject objectForType:QSProcessType];
 	pid_t pid = [[process objectForKey:@"NSApplicationProcessIdentifier"] intValue];
 	AXUIElementRef app=AXUIElementCreateApplication (pid);
+  [app autorelease];
 	QSObject *object=[QSObject objectForUIElement:app name:nil process:process];
 	[object setObject:app forType:kQSUIElementType];
-	[app release];
 	return object;
 }
 
 NSArray *MenuItemsForElement(AXUIElementRef element, NSInteger depth, NSString *elementName, NSInteger menuIgnoreDepth, NSDictionary *process) {
   NSArray *children = nil;
   AXUIElementCopyAttributeValue(element, kAXChildrenAttribute, &children);
+  [children autorelease];
   NSInteger childrenCount = [children count];
   if (childrenCount < 1 || childrenCount > 50 || depth < 1) {
     QSObject *menuObject = [QSObject objectForUIElement:element name:elementName process:process];
@@ -40,18 +41,29 @@ NSArray *MenuItemsForElement(AXUIElementRef element, NSInteger depth, NSString *
   NSMutableArray *menuItems = [NSMutableArray array];
   BOOL menuSkipped = NO;
   for (id child in children) {
-    CFBooleanRef enabled = NULL;
-    if ((AXUIElementCopyAttributeValue(child, kAXEnabledAttribute, &enabled) != kAXErrorSuccess) || (!CFBooleanGetValue(enabled))) continue;
+    CFTypeRef enabled = NULL;
+    if (AXUIElementCopyAttributeValue(child, kAXEnabledAttribute, &enabled) != kAXErrorSuccess) continue;
+    [enabled autorelease];
+    if (!CFBooleanGetValue(enabled)) continue;
     CFStringRef name = nil;
     
     // try not to get the name attribute and test it unless we really have to
-    if (menuIgnoreDepth > 2 && !menuSkipped && (AXUIElementCopyAttributeValue(child, kAXTitleAttribute, &name) == kAXErrorSuccess) && [name isEqualToString:@"Apple"]) {
-      menuSkipped = YES;
-      continue;
+    if ((menuIgnoreDepth > 2 && !menuSkipped) && (AXUIElementCopyAttributeValue(child, kAXTitleAttribute, &name) == kAXErrorSuccess))
+    {
+      [name autorelease];
+      if ([name isEqualToString:@"Apple"])
+      {
+        menuSkipped = YES;
+        continue;
+      }
     }
-    else if (menuIgnoreDepth > 0 && !menuSkipped && (AXUIElementCopyAttributeValue(child, kAXTitleAttribute, &name) == kAXErrorSuccess) && [name isEqualToString:@"Services"]) {
-      menuSkipped = YES;
-      continue;
+    else if (menuIgnoreDepth > 0 && !menuSkipped && (AXUIElementCopyAttributeValue(child, kAXTitleAttribute, &name) == kAXErrorSuccess)) {
+      [name autorelease];
+      if ([name isEqualToString:@"Services"])
+      {
+        menuSkipped = YES;
+        continue;
+      }
     }
     
     [menuItems addObjectsFromArray:MenuItemsForElement(child,depth - 1,name,menuIgnoreDepth - 1, process)];
@@ -70,6 +82,7 @@ NSArray *MenuItemsForElement(AXUIElementRef element, NSInteger depth, NSString *
   NSDictionary *process = [dObject objectForType:QSProcessType];
 	pid_t pid = [[process objectForKey:@"NSApplicationProcessIdentifier"] intValue];
 	AXUIElementRef app=AXUIElementCreateApplication (pid);	
+  [app autorelease];
 	AXUIElementRef menuBar;
 	AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
 	NSArray *items=MenuItemsForElement(menuBar,4,nil,3,process);
@@ -82,13 +95,16 @@ NSArray *WindowsForApp(id process, BOOL appName)
 {
 	pid_t pid = [[process objectForKey:@"NSApplicationProcessIdentifier"] intValue];
   AXUIElementRef appElement = AXUIElementCreateApplication(pid);
+  [appElement autorelease];
   NSArray *appWindows = nil;
   AXUIElementCopyAttributeValue(appElement, kAXWindowsAttribute, &appWindows);
+  [appWindows autorelease];
   NSMutableArray *windowObjects = [NSMutableArray array];
   for (id aWindow in appWindows) {
     NSString *windowTitle = nil;
     AXUIElementCopyAttributeValue(aWindow, kAXTitleAttribute, &windowTitle);
     if (!windowTitle) continue;
+    [windowTitle autorelease];
     QSObject *object = [QSObject objectForWindow:aWindow name:windowTitle process:process];
     if (!object) continue;
     if (appName) [object setName:[windowTitle stringByAppendingFormat:@" — %@",[process objectForKey:@"NSApplicationName"]]];
@@ -112,8 +128,10 @@ NSArray *WindowsForApp(id process, BOOL appName)
   id process = [dObject objectForType:QSProcessType];
   pid_t pid = [[process objectForKey:@"NSApplicationProcessIdentifier"] intValue];
   AXUIElementRef appElement = AXUIElementCreateApplication(pid);
+  [appElement autorelease];
   id focusedWindow = nil;
   AXUIElementCopyAttributeValue(appElement, kAXFocusedWindowAttribute, &focusedWindow);
+  [focusedWindow autorelease];
   QSObject *window = [QSObject objectForWindow:focusedWindow name:nil process:process];
   return window;
 }
@@ -147,6 +165,7 @@ void PressButtonInWindow(id buttonName, id window)
 {
   AXUIElementRef button;
   AXUIElementCopyAttributeValue(window,buttonName, &button);
+  [button autorelease];
   AXUIElementPerformAction(button,kAXPressAction);
 }
 
@@ -196,8 +215,10 @@ void PressButtonInWindow(id buttonName, id window)
   for (NSDictionary *process in launchedApps) {
     pid_t pid = [[process objectForKey:@"NSApplicationProcessIdentifier"] intValue];
     AXUIElementRef app = AXUIElementCreateApplication(pid);	
+    [app autorelease];
   	AXUIElementRef menuBar;
   	AXUIElementCopyAttributeValue(app, kAXMenuBarAttribute, &menuBar);
+    [menuBar autorelease];
     QSObject *object = [QSObject objectByMergingObjects:MenuItemsForElement(menuBar,4,nil,3,process)];
     [object setName:[process objectForKey:@"NSApplicationName"]];
     [object setIcon:[[NSWorkspace sharedWorkspace] iconForFile:[process objectForKey:@"NSApplicationPath"]]];
@@ -222,8 +243,10 @@ void PressButtonInWindow(id buttonName, id window)
 	  NSDictionary *process = [dObject objectForType:QSProcessType];
 		pid_t pid = [[process objectForKey:@"NSApplicationProcessIdentifier"] intValue];
 		AXUIElementRef app=AXUIElementCreateApplication (pid);	
+    [app autorelease];
 		AXUIElementRef menuBar;
 		AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
+    [menuBar autorelease];
 		NSArray *actions=MenuItemsForElement(menuBar,4,nil,3, process);
 		
 		//NSLog(@"actions: %@",actions);
@@ -234,9 +257,10 @@ void PressButtonInWindow(id buttonName, id window)
 	  NSDictionary *process = [dObject objectForType:QSProcessType];
 		pid_t pid = [[process objectForKey:@"NSApplicationProcessIdentifier"] intValue];
 		AXUIElementRef app=AXUIElementCreateApplication (pid);	
+    [app autorelease];
 		AXUIElementRef menuBar;
 		AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
-	
+    [menuBar autorelease];
 		NSArray *actions=MenuItemsForElement(menuBar,1,nil,0, process);
 				
 		//NSLog(@"actions: %@",actions);
@@ -248,10 +272,10 @@ void PressButtonInWindow(id buttonName, id window)
     NSArray *windowObjects = WindowsForApp(process, NO);
     return (windowObjects) ? [NSArray arrayWithObjects:[NSNull null],windowObjects,nil] : [NSArray array];
 	}else{
-		AXUIElementRef element=[dObject objectForType:kQSUIElementType];
-		NSArray *actions=nil;
-		AXUIElementCopyActionNames (element, &actions);	
-		[actions autorelease];
+    // AXUIElementRef element=[dObject objectForType:kQSUIElementType];
+    // NSArray *actions=nil;
+    // AXUIElementCopyActionNames (element, &actions);  
+    // [actions autorelease];
 		//NSLog(@"actions: %@",actions);
 		return nil;	
 	}
