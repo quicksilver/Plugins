@@ -18,9 +18,9 @@
 
 //- (IBAction) hideSearchView:sender;
 - (IBAction) showSearchView:sender;
-- (void)searchURL:(NSURL *)searchURL;
+- (void)searchURL:(NSString *)searchURL;
 
 - (void)openPOSTURL:(NSURL *)searchURL;
-- (void)searchURL:(NSURL *)searchURL forString:(NSString *)string;
+- (void)searchURL:(NSString *)searchURL forString:(NSString *)string;
 + (id)sharedInstance;
 @end

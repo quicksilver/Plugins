@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>173</string>
+	<string>20B</string>
 	<key>NSPrincipalClass</key>
 	<string>QSWebSearchPlugIn</string>
 	<key>QSActions</key>
@@ -121,9 +121,9 @@
 			<key>settings</key>
 			<dict>
 				<key>contentPrefix</key>
-				<string>&lt;div class=&quot;QSWebSearchContentStart&quot;&gt;&lt;/div&gt;</string>
+				<string>&lt;div class="QSWebSearchContentStart"&gt;&lt;/div&gt;</string>
 				<key>contentSuffix</key>
-				<string>&lt;div class=&quot;QSWebSearchContentEnd&quot;&gt;&lt;/div&gt;</string>
+				<string>&lt;div class="QSWebSearchContentEnd"&gt;&lt;/div&gt;</string>
 				<key>path</key>
 				<string>http://docs.blacktree.com/doku.php?id=quicksilver:web_search_list</string>
 			</dict>
@@ -140,9 +140,9 @@
 			<key>settings</key>
 			<dict>
 				<key>contentPrefix</key>
-				<string>&lt;div class=&quot;QSWebSearchContentStart&quot;&gt;&lt;/div&gt;</string>
+				<string>&lt;div class="QSWebSearchContentStart"&gt;&lt;/div&gt;</string>
 				<key>contentSuffix</key>
-				<string>&lt;div class=&quot;QSWebSearchContentEnd&quot;&gt;&lt;/div&gt;</string>
+				<string>&lt;div class="QSWebSearchContentEnd"&gt;&lt;/div&gt;</string>
 				<key>path</key>
 				<string>http://docs.blacktree.com/quicksilver/extended_web_search_list</string>
 			</dict>
@@ -161,16 +161,6 @@
 		<dict>
 			<key>QSWebSearchSource</key>
 			<string>QSWebSearchSource</string>
-		</dict>
-		<key>QSTypeDefinitions</key>
-		<dict>
-			<key>QSSearchURLType</key>
-			<dict>
-				<key>icon</key>
-				<string>com.blacktree.Quicksilver</string>
-				<key>name</key>
-				<string>Search URLs</string>
-			</dict>
 		</dict>
 	</dict>
 </dict>

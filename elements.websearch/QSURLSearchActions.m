@@ -24,9 +24,22 @@
 
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
 	//  NSLog(@"request");
-	// if it's a 'find with...' action, only return valid URLs with *** in them (type QSSearchURLType)
+	// if it's a 'find with...' action, only return valid URLs with *** in them
 	if ([action isEqualToString:kURLFindWithAction]) {
-		NSMutableArray *objects=[QSLib scoredArrayForString:nil inSet:[QSLib arrayForType:@"QSSearchURLType"]];
+		// Get a list of all 
+		NSMutableArray *urlObjects=[QSLib scoredArrayForString:nil inSet:[QSLib arrayForType:QSURLType]];
+		NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
+		for(QSObject *individual in urlObjects){
+			// For some reason QSLib returns folders as QSURLType. This checks to make sure they're URLs
+			NSString *urlString=[[individual arrayForType:QSURLType]lastObject];
+			if(urlString){
+			NSURL *url=[NSURL URLWithString:[urlString URLEncoding]];
+			NSString *query=[url absoluteString];
+			if ([query rangeOfString:QUERY_KEY].location!=NSNotFound){
+				[objects addObject:individual];
+			}
+			}
+		}
 		return [NSArray arrayWithObjects:[NSNull null],objects,nil];
 	}
 	// if it's a 'search for...' action, return a text bot for text
@@ -40,14 +53,18 @@
 }
 
 - (NSArray *)validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject{
+	//[dObject arrayForType:kQSSearchURLType] 
+	NSString *urlString=[[dObject arrayForType:QSURLType]lastObject];
 	
 	NSMutableArray *newActions=[NSMutableArray arrayWithCapacity:1];
-	if ([[dObject primaryType] isEqualToString:kQSSearchURLType]){
+	if (urlString){
+		NSURL *url=[NSURL URLWithString:[urlString URLEncoding]];
+		NSString *query=[url absoluteString];
+		if (query && [query rangeOfString:QUERY_KEY].location!=NSNotFound){
 			[newActions addObject:kURLSearchAction];
 			[newActions addObject:kURLSearchForAction];
 			[newActions addObject:kURLSearchForAndReturnAction];
-
-		
+		}
 	} else if ([dObject containsType:QSTextType] && ![dObject containsType:QSFilePathType]){   
 		[newActions addObject:kURLFindWithAction];
 	}
@@ -59,9 +76,12 @@
 - (QSObject *)doURLSearchAction:(QSObject *)dObject{
 	// define encoding of the string
 	CFStringEncoding encoding=[[dObject objectForMeta:kQSStringEncoding]intValue];
-	// get an NSURL, escaping the characters
-	NSURL *url=[NSURL URLWithString:[[dObject objectForType:QSURLType] stringByAddingPercentEscapesUsingEncoding:encoding]];
-	[[NSClassFromString(@"QSWebSearchController") sharedInstance] searchURL:url];
+	if(!encoding)
+		encoding = NSUTF8StringEncoding;
+	
+	// get an NSURL
+
+	[[NSClassFromString(@"QSWebSearchController") sharedInstance] searchURL:[dObject objectForType:QSURLType]];
 	return nil;
 }
 #warning encoding here is returning 'null'
@@ -72,11 +92,10 @@
 		CFStringEncoding encoding=[[dObject objectForMeta:kQSStringEncoding]intValue];
 		// Make sure characters such as | are escaped
 		if(!encoding)
-			encoding = kCFStringEncodingUTF8;
-		NSURL *url=[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:encoding]];
-		
+			encoding = NSUTF8StringEncoding;
+
 		NSString *string=[iObject stringValue];
-		[[NSClassFromString(@"QSWebSearchController") sharedInstance] searchURL:url forString:string encoding:encoding];
+		[[NSClassFromString(@"QSWebSearchController") sharedInstance] searchURL:urlString forString:string encoding:encoding];
 	}
 	return nil;
 }
@@ -84,12 +103,13 @@
 	for(NSString * urlString in [dObject arrayForType:QSURLType]){
 		CFStringEncoding encoding=[[dObject objectForMeta:kQSStringEncoding]intValue];
 		if(!encoding)
-			encoding = kCFStringEncodingUTF8;
-		// get an NSURL, escaping scary characters like |
-		NSURL *url=[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:encoding]];
+			encoding = NSUTF8StringEncoding;
+
 		NSString *string=[iObject stringValue];
-		NSString *query=[[NSClassFromString(@"QSWebSearchController") sharedInstance] resolvedURL:url forString:string encoding:encoding];
+		
+		NSString *query=[[NSClassFromString(@"QSWebSearchController") sharedInstance] resolvedURL:urlString forString:string encoding:encoding];
 		BOOL post=NO;
+		NSURL *url = [NSURL URLWithString:query];
 		if ([[url scheme]isEqualToString:@"qssp-http"]){
 			query=[self openPOSTURL:[NSURL URLWithString:[query stringByReplacing:@"qssp-http" with:@"http"]]];  
 		//	return;
