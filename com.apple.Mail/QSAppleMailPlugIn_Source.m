@@ -89,10 +89,10 @@
 	if([[object primaryType] isEqualToString:kQSAppleMailMailboxType])
 	{
 		NSFileManager *fm = [NSFileManager defaultManager];
-		NSLog(@"file path: %@", [NSString stringWithFormat:@"%@/%@.%@/Messages",
+		/* NSLog(@"file path: %@", [NSString stringWithFormat:@"%@/%@.%@/Messages",
 								 [object objectForMeta:@"accountPath"],
 								 [object objectForMeta:@"mailboxName"],
-								 [object objectForMeta:@"mailboxType"]]);
+								 [object objectForMeta:@"mailboxType"]]); */
 		if([fm fileExistsAtPath:[NSString stringWithFormat:@"%@/%@.%@/Messages",
 								 [object objectForMeta:@"accountPath"],
 								 [object objectForMeta:@"mailboxName"],
@@ -310,7 +310,7 @@
 					mailboxName,
 					mailboxType,
 					[rs stringForColumn:@"message_id"]];
-		NSLog(@"MailPath: %@",mailPath);
+
 		newObject=[QSObject objectWithName:subject];
 		[newObject setObject:subject forType:kQSAppleMailMessageType];
 		[newObject setDetails:sender];
