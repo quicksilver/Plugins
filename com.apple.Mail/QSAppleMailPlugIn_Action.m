@@ -48,7 +48,7 @@
 	return nil;
 }
 
-- (QSObject *)deleteMessage:(QSObject *)dObject{
+- (QSBasicObject *)deleteMessage:(QSObject *)dObject{
 	NSAppleEventDescriptor *arguments = [NSAppleEventDescriptor listDescriptor];
 	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithInt32:[[dObject objectForMeta:@"message_id"] intValue]] atIndex:0];
 	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"mailboxName"]] atIndex:0];
@@ -61,8 +61,9 @@
 		NSLog(@"AppleMailPlugin deleteMessage: Applescirpt error %@", err);
 		return nil;
 	}
-	return nil;
+	return [QSObject nullObject];
 }
+
 - (QSObject *)moveMessage:(QSObject *)dObject toMailbox:(QSObject *)iObject{
 	NSAppleEventDescriptor *arguments = [NSAppleEventDescriptor listDescriptor];
 	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithInt32:[[dObject objectForMeta:@"message_id"] intValue]] atIndex:0];
