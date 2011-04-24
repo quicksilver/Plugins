@@ -66,9 +66,9 @@
 	NSString *messagePath=[NSString stringWithFormat:@"%@//%@",mailbox,iden];
 	
 	NSMetadataItem *mditem=[NSMetadataItem itemWithPath:filePath];
-	[object setName:[mditem valueForAttribute:kMDItemDisplayName]];
+	[object setName:[mditem valueForAttribute:(NSString *)kMDItemDisplayName]];
 	[object setObject:messagePath forType:kQSAppleMailMessageType];
-	[object setDetails:[[mditem valueForAttribute:kMDItemAuthors]lastObject]];
+	[object setDetails:[[mditem valueForAttribute:(NSString *)kMDItemAuthors]lastObject]];
 	return object;
 	
 }
@@ -89,16 +89,12 @@
 	if([[object primaryType] isEqualToString:kQSAppleMailMailboxType])
 	{
 		NSFileManager *fm = [NSFileManager defaultManager];
-		/* NSLog(@"file path: %@", [NSString stringWithFormat:@"%@/%@.%@/Messages",
-								 [object objectForMeta:@"accountPath"],
-								 [object objectForMeta:@"mailboxName"],
-								 [object objectForMeta:@"mailboxType"]]); */
 		if([fm fileExistsAtPath:[NSString stringWithFormat:@"%@/%@.%@/Messages",
 								 [object objectForMeta:@"accountPath"],
 								 [object objectForMeta:@"mailboxName"],
-								 [object objectForMeta:@"mailboxType"]]])
+								 [object objectForMeta:@"mailboxType"]]]) {
 			return YES;
-		else {
+		} else {
 			return NO;
 		}
 }
@@ -255,6 +251,14 @@
 		}
 	}
 	
+	NSString *mailboxType;
+	if ([accountName isEqualToString:@"Local Mailbox"] ||
+		[accountPath rangeOfString:@"POP"].location != NSNotFound) {
+		mailboxType = @"mbox";
+	} else {
+		mailboxType = @"imapmbox";
+	}
+	
 	// NSLog(@"Mailbox URL: %@", mailboxUrl);
 	// read mails for mailbox from SQLite DB Envelop Index
 	NSString *dbPath = [[MAILPATH stringByAppendingString:@"/Envelope Index"] stringByStandardizingPath];
@@ -267,7 +271,7 @@
 	[db setShouldCacheStatements:YES];
 
 	// build SQL query
-	NSString *subject, *sender, *mailPath, *mailboxType;
+	NSString *subject, *sender, *mailPath;
 	NSMutableArray *objects=[NSMutableArray arrayWithCapacity:0];
 	QSObject *newObject;
 	NSString *query = [NSString stringWithFormat:@"SELECT "
@@ -296,13 +300,6 @@
 			// I don't know why they appear, they are not really messages.
 			// So, just skip them.
 			continue;
-		}
-
-		if ([[rs stringForColumn:@"url"] rangeOfString:@"local" options:NSCaseInsensitiveSearch].location != NSNotFound ||
-			[[rs stringForColumn:@"url"] rangeOfString:@"pop" options:NSCaseInsensitiveSearch].location != NSNotFound) {
-			mailboxType = @"mbox";
-		} else {
-			mailboxType = @"imapmbox";
 		}
 
 		mailPath = [NSString stringWithFormat:@"%@/%@.%@/Messages/%@.emlx",
