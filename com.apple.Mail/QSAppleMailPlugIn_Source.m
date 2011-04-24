@@ -83,25 +83,34 @@
 }
 
 - (BOOL)objectHasChildren:(QSObject *)object{
+	// when mailbox appears in third pane, you can't arrow into it
 	if ([object objectForMeta:@"loadChildren"] != nil && ![[object objectForMeta:@"loadChildren"] boolValue]) {
 		return NO;
 	}
+	
 	if([[object primaryType] isEqualToString:kQSAppleMailMailboxType])
 	{
 		NSFileManager *fm = [NSFileManager defaultManager];
-		if([fm fileExistsAtPath:[NSString stringWithFormat:@"%@/%@.%@/Messages",
+		// mailbox has a "Messages" folder, with at least 1 message in it
+		if([[fm subpathsAtPath:[NSString stringWithFormat:@"%@/%@.%@/Messages",
 								 [object objectForMeta:@"accountPath"],
 								 [object objectForMeta:@"mailboxName"],
-								 [object objectForMeta:@"mailboxType"]]]) {
+								 [object objectForMeta:@"mailboxType"]]] count] >= 1) {
 			return YES;
 		} else {
 			return NO;
 		}
-}
+	}
+	
+	// messages always have children: body text and from-address
+	if([[object primaryType] isEqualToString:kQSAppleMailMessageType]) {
+		return YES;
+	}
 	return NO;
 }
 
 - (BOOL)loadChildrenForObject:(QSObject *)object{
+	// when mailbox appears in third pane, you can't arrow into it
 	if ([object objectForMeta:@"loadChildren"] != nil && ![[object objectForMeta:@"loadChildren"] boolValue]) {
 		return NO;
 	}
