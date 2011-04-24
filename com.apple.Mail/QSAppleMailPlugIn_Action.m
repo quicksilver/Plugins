@@ -8,6 +8,10 @@
 
 #import "QSAppleMailPlugIn_Action.h"
 #import "QSAppleMailPlugIn_Source.h"
+@interface QSAppleMailPlugIn_Action (hidden)
+- (NSString *)makeAccountPath:(QSObject *)object;
+@end
+
 @implementation QSAppleMailPlugIn_Action
 
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject{
@@ -16,7 +20,7 @@
 
 - (QSObject *)revealMailbox:(QSObject *)dObject{
 	NSString *mailbox=[dObject objectForType:kQSAppleMailMailboxType];
-	NSArray *arguments=[NSArray arrayWithObjects:mailbox,[dObject objectForMeta:@"accountPath"],nil];
+	NSArray *arguments=[NSArray arrayWithObjects:mailbox,[self makeAccountPath:dObject],nil];
 
 	NSAppleScript *script=[(QSAppleMailMediator *)[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
 	NSDictionary *err = nil;
@@ -32,7 +36,7 @@
 	NSAppleEventDescriptor *arguments = [NSAppleEventDescriptor listDescriptor];
 	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithInt32:[[dObject objectForMeta:@"message_id"] intValue]] atIndex:0];
 	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"mailboxName"]] atIndex:0];
-	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"accountPath"]] atIndex:0];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[self makeAccountPath:dObject]] atIndex:0];
 
 	NSAppleScript *script=[(QSAppleMailMediator *)[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
 	NSDictionary *err = nil;
@@ -48,7 +52,7 @@
 	NSAppleEventDescriptor *arguments = [NSAppleEventDescriptor listDescriptor];
 	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithInt32:[[dObject objectForMeta:@"message_id"] intValue]] atIndex:0];
 	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"mailboxName"]] atIndex:0];
-	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"accountPath"]] atIndex:0];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[self makeAccountPath:dObject]] atIndex:0];
 
 	NSAppleScript *script=[(QSAppleMailMediator *)[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
 	NSDictionary *err = nil;
@@ -63,9 +67,9 @@
 	NSAppleEventDescriptor *arguments = [NSAppleEventDescriptor listDescriptor];
 	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithInt32:[[dObject objectForMeta:@"message_id"] intValue]] atIndex:0];
 	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"mailboxName"]] atIndex:0];
-	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[dObject objectForMeta:@"accountPath"]] atIndex:0];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[self makeAccountPath:dObject]] atIndex:0];
 	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[iObject objectForMeta:@"mailboxName"]] atIndex:0];
-	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[iObject objectForMeta:@"accountPath"]] atIndex:0];
+	[arguments insertDescriptor:[NSAppleEventDescriptor descriptorWithString:[self makeAccountPath:iObject]] atIndex:0];
 
 	NSAppleScript *script=[(QSAppleMailMediator *)[QSReg getClassInstance:@"QSAppleMailMediator"] mailScript];
 	NSDictionary *err = nil;
@@ -75,6 +79,14 @@
 		return nil;
 	}
 	return nil;
+}
+
+- (NSString *)makeAccountPath:(QSObject *)object {
+	if ([[object objectForMeta:@"accountId"] isEqualToString:@"Local Mailbox"]) {
+		return @"local";
+	} else {
+		return [object objectForMeta:@"accountPath"];
+	}
 }
 
 @end

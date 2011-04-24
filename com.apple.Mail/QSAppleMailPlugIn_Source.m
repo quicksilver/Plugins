@@ -314,7 +314,7 @@
 		[newObject setParentID:[object identifier]];
 		[newObject setIdentifier:[NSString stringWithFormat:@"message:%d", [rs intForColumn:@"message_id"]]];
 		[newObject setObject:mailPath forMeta:@"mailPath"];
-		[newObject setObject:mailPath forMeta:@"mailPath"];
+		[newObject setObject:accountName forMeta:@"accountId"];
 		[newObject setObject:[rs stringForColumn:@"message_id"] forMeta:@"message_id"];
 		[newObject setObject:mailboxName forMeta:@"mailboxName"];
 		[newObject setObject:accountPath forMeta:@"accountPath"];
