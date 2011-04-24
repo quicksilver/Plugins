@@ -88,18 +88,29 @@
 		return NO;
 	}
 	
+	// check, if mailbox has children
 	if([[object primaryType] isEqualToString:kQSAppleMailMailboxType])
 	{
 		NSFileManager *fm = [NSFileManager defaultManager];
-		// mailbox has a "Messages" folder, with at least 1 message in it
-		if([[fm subpathsAtPath:[NSString stringWithFormat:@"%@/%@.%@/Messages",
-								 [object objectForMeta:@"accountPath"],
-								 [object objectForMeta:@"mailboxName"],
-								 [object objectForMeta:@"mailboxType"]]] count] >= 1) {
-			return YES;
-		} else {
+		NSArray *files = [fm subpathsAtPath:[NSString stringWithFormat:@"%@/%@.%@/Messages",
+												[object objectForMeta:@"accountPath"],
+												[object objectForMeta:@"mailboxName"],
+												[object objectForMeta:@"mailboxType"]]];
+		// mailbox doesn't have a "Messages" folder or there are no files in it, it can't have messages
+		if ([files count] <= 0) {
 			return NO;
 		}
+		
+		// if there are no .emlx files in it, there are also no messages
+		NSUInteger index = [files indexOfObjectPassingTest:^(id obj, NSUInteger idx, BOOL *stop) {
+			return [obj hasSuffix:@".emlx"];
+		}];
+		if(index == NSNotFound) {
+			return NO;
+		}
+		
+		// seems like there are .emlx files, so there are messages, so set the right-arrow indicator
+		return YES;
 	}
 	
 	// messages always have children: body text and from-address
