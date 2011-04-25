@@ -98,9 +98,6 @@
 
         // NSLog(@"url %@",url);
         QSObject *object=[QSObject URLObjectWithURL:url title:key];
-        [object setObject:url forType:@"QSSearchURLType"];
-        [object setPrimaryType:@"QSSearchURLType"];
-        [object setIcon:[NSImage imageNamed:@"DefaultBookmarkIcon"]];
         if (label) [object setLabel:label];
         if (object) [array addObject:object];
     }
