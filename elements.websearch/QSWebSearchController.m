@@ -68,7 +68,7 @@
 		   return;
 	   } else if ([[url scheme]isEqualToString:@"qss-http"]){
 		   query=[query stringByReplacing:@"qss-http" with:@"http"];  
-		   NSURL *queryURL=[NSURL URLWithString:[query stringByAddingPercentEscapesUsingEncoding:encoding]];
+ 		   NSURL *queryURL=[NSURL URLWithString:query];
 		   [workspace openURL:queryURL];
 	   }else{
 		   NSURL *queryURL=[NSURL URLWithString:query];
