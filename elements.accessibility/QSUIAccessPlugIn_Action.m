@@ -85,7 +85,7 @@ NSArray *MenuItemsForElement(AXUIElementRef element, NSInteger depth, NSString *
   [app autorelease];
 	AXUIElementRef menuBar;
 	AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
-	NSArray *items=MenuItemsForElement(menuBar,4,nil,3,process);
+	NSArray *items=MenuItemsForElement(menuBar,5,nil,3,process);
 	
 	[QSPreferredCommandInterface showArray:items];
 	return nil;
@@ -219,7 +219,7 @@ void PressButtonInWindow(id buttonName, id window)
   	AXUIElementRef menuBar;
   	AXUIElementCopyAttributeValue(app, kAXMenuBarAttribute, &menuBar);
     [menuBar autorelease];
-    QSObject *object = [QSObject objectByMergingObjects:MenuItemsForElement(menuBar,4,nil,3,process)];
+    QSObject *object = [QSObject objectByMergingObjects:MenuItemsForElement(menuBar,5,nil,3,process)];
     [object setName:[process objectForKey:@"NSApplicationName"]];
     [object setIcon:[[NSWorkspace sharedWorkspace] iconForFile:[process objectForKey:@"NSApplicationPath"]]];
   	[menus addObject:object];
@@ -247,7 +247,7 @@ void PressButtonInWindow(id buttonName, id window)
 		AXUIElementRef menuBar;
 		AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
     [menuBar autorelease];
-		NSArray *actions=MenuItemsForElement(menuBar,4,nil,3, process);
+		NSArray *actions=MenuItemsForElement(menuBar,5,nil,3, process);
 		
 		//NSLog(@"actions: %@",actions);
 		return [NSArray arrayWithObjects:[NSNull null],actions,nil];
