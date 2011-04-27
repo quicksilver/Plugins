@@ -228,12 +228,14 @@ double substring_score (UniChar* first1, UniChar* last1, UniChar* first2, UniCha
 		originalIndex[i] = map[orgIndex[i]];
 
 	CFRelease(tmpStr);
+	[self setRankedString:aString];
 	return self;
 }
 
 - (void)dealloc
 {
 	[self setValue:nil forKey:@"originalString"];
+	[rankedString release];
 	delete[] string;
 	delete[] originalIndex;
 	[super dealloc];
@@ -330,4 +332,18 @@ double substring_score (UniChar* first1, UniChar* last1, UniChar* first2, UniCha
 
 	return res;
 }
+
+- (NSString*)rankedString
+{
+	return rankedString;
+}
+
+- (void)setRankedString:(NSString*)aString
+{
+	if (rankedString != aString) {
+		[rankedString release];
+		rankedString = [aString copy];
+	}
+}
+
 @end
