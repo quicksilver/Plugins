@@ -7,7 +7,7 @@
 //
 
 #import "QSWebSearchPlugIn_Source.h"
-
+#import <QSCore/QSResourceManager.h>
 
 @implementation QSWebSearchSource
 
@@ -29,6 +29,7 @@
 - (NSImage *) iconForEntry:(NSDictionary *)dict{
     return [QSResourceManager imageNamed:@"Find"];
 }
+
 
 - (NSString *)identifierForObject:(id <QSObject>)object{
     return nil;
