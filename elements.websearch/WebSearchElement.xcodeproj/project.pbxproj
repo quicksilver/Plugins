@@ -226,7 +226,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 7FFF25D0085E488700266176 /* Build configuration list for PBXProject "WebSearchElement" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0259C574FE90428111CA0C5A /* QSWebSearchPlugIn */;
 			projectDirPath = "";
 			projectRoot = "";
