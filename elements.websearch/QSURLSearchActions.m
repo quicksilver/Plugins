@@ -7,7 +7,6 @@
 # define kURLSearchForAction @"QSURLSearchForAction"
 # define kURLSearchForAndReturnAction @"QSURLSearchForAndReturnAction"
 # define kURLFindWithAction @"QSURLFindWithAction"
-# define kQSSearchURLType @"QSSearchURLType"
 
 @implementation QSURLSearchActions
 - (NSString *) defaultWebClient{
@@ -57,7 +56,7 @@
 	
 	NSMutableArray *newActions=[NSMutableArray arrayWithCapacity:1];
 	if (urlString){
-		NSURL *url=[NSURL URLWithString:urlString];
+		NSURL *url=[NSURL URLWithString:[urlString URLEncoding]];
 		NSString *query=[url absoluteString];
 		if (query && [query rangeOfString:QUERY_KEY].location!=NSNotFound){
 			[newActions addObject:kURLSearchAction];
@@ -119,7 +118,9 @@
 			query=[query stringByReplacing:@"http-post" with:@"http"];  
 		//	return;
 		} else if ([[url scheme]isEqualToString:@"qss-http"]){
-			query=[query stringByReplacing:@"qss-http" with:@"http"];  
+			query=[query stringByReplacing:@"qss-http" with:@"http"];
+		} else if ([[url scheme]isEqualToString:@"qss-https"]) {
+			query=[query stringByReplacing:@"qss-https" with:@"https"];  			
 		}else{
 	}
 		

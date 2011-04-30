@@ -70,6 +70,10 @@
 		   query=[query stringByReplacing:@"qss-http" with:@"http"];  
  		   NSURL *queryURL=[NSURL URLWithString:query];
 		   [workspace openURL:queryURL];
+	   } else if ([[url scheme]isEqualToString:@"qss-https"]) {
+		   query=[query stringByReplacing:@"qss-https" with:@"https"];  
+ 		   NSURL *queryURL=[NSURL URLWithString:query];
+		   [workspace openURL:queryURL];
 	   }else{
 		   NSURL *queryURL=[NSURL URLWithString:query];
 		   [workspace openURL:queryURL];
