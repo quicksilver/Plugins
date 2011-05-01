@@ -120,7 +120,7 @@
     } else {
         // right-arrowed into Yojimbo
         // return a list of tags
-        NSMutableArray *tags = [QSLib scoredArrayForString:nil inSet:[QSLib arrayForType:kQSYojimboTagType]];
+        NSArray *tags = [QSLib scoredArrayForString:nil inSet:[QSLib arrayForType:kQSYojimboTagType]];
         [object setChildren:tags];
     }
     return TRUE;
