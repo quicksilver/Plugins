@@ -39,6 +39,14 @@
     return [QSResourceManager imageNamed:@"com.barebones.yojimbo"];
 }
 
+- (BOOL)objectHasChildren:(QSObject *)object {
+    // indicate that tags can be arrowed into
+    if ([object containsType:kQSYojimboTagType])
+    {
+        return YES;
+    }
+}
+
 - (BOOL)loadChildrenForObject:(QSObject *)object{
     if ([object containsType:kQSYojimboTagType])
     {
