@@ -390,20 +390,20 @@ This method does not seem to be called for `QSObject`s created using `objectWith
 
 #### loadChildrenForObject
 
-Example `- (BOOL)loadChildrenForObject:(QSObject *)object`
+Example: `- (BOOL)loadChildrenForObject:(QSObject *)object`
 
 This is very similar to `objectsForEntry:`, but instead of adding things to the catalog, it loads them on the fly when you right arrow into the parent object. You just need to create an array of `QSObject`s, but instead of returning them, you assign them to the parent object like this:
 
     [object setChildren:children];
     return TRUE;
 
-These can be newly created objects or objects that are already in the catalog. You should be able to get existing items using `[QSObject objectWithIdentifier:uuid]` (assuming you know the identifier).
+These can be newly created objects or objects that are already in the catalog. If the children have already been added to the catalog, the most efficient thing to do is to retrieve them instead of recreating them. (See the later sections on getting specific objects by ID and by type.)
 
 **Read up on identifiers in the QSObject section before creating/using objects as children.**
 
 #### objectHasChildren
 
-Example `- (BOOL)objectHasChildren:(QSObject *)object`
+Example: `- (BOOL)objectHasChildren:(QSObject *)object`
 
 This method is used to indicate to the user that an object is browsable (can be right arrowed into). If it returns `YES`, a little arrow is displayed on the very right of the object. 
 
@@ -622,12 +622,15 @@ The objects are looked up and returned from the object registry. I'm not sure ex
 
 #### Getting Specific Objects by Type ####
 
-Use `QSLib`
+You can use `QSLib` to retrieve objects from Quicksilver's catalog by type. The most common uses for this are to restrict the objects that appear in the third pane, and to build up a list of children for another object.
 
-    NSMutableArray *objects=[QSLib scoredArrayForString:nil inSet:[QSLib arrayForType:@"QSBlahType"];
-    return [NSArray arrayWithObjects:[NSNull null],objects,nil];
+To simply get everything of a certain type, call this:
 
-<!-- TODO write this -->
+    NSArray *objects = [QSLib arrayForType:@"QSBlahType"];
+
+To get the same list but sort by rank (typically determined by how often a user accesses the object):
+
+    NSArray *objects=[QSLib scoredArrayForString:nil inSet:[QSLib arrayForType:@"QSBlahType"];
 
 ### More Information ###
 
