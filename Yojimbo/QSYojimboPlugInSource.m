@@ -117,14 +117,7 @@
     } else {
         // right-arrowed into Yojimbo
         // return a list of tags
-        NSMutableArray *tags = [NSMutableArray arrayWithCapacity:1];
-        // FIXME this call currently causes all items to be loaded from disk on every call
-        for (QSObject *yojimboItem in [self objectsForEntry:nil])
-        {
-            if ([[yojimboItem objectForMeta:@"itemKind"] isEqualToString:@"com.barebones.yojimbo.tag"])
-            [tags addObject:yojimboItem];
-        }
-        
+        NSMutableArray *tags = [QSLib scoredArrayForString:nil inSet:[QSLib arrayForType:kQSYojimboTagType]];
         [object setChildren:tags];
     }
     return TRUE;
