@@ -1,6 +1,8 @@
 # Quicksilver (B5X) Plug-ins #
 
-A haphazard reference by Rob McBroom <qsplugins@skurfer.com>.
+A haphazard reference by Rob McBroom <qsplugins@skurfer.com> with contributions from
+
+  * Henning Jungkurth
 
 ## Intro ##
 
@@ -58,7 +60,7 @@ author (string)
 : Put your name(s) here
 
 description (string)
-: A one-line description of your plug-in's purpose. (I'm not sure where this shows up in Quicksilver's UI)
+: A one-line description of your plug-in's purpose. (I'm not sure where this shows up in Quicksilver's UI.)
 
 extendedDescription (string)
 : This is what the user will see when they click the "info" button in the Plug-ins preferences. It can be text or HTML (recommended).
