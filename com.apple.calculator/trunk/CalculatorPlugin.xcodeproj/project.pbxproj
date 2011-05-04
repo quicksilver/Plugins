@@ -12,7 +12,8 @@
 		0AB0246506D0356D0073A3CD /* Info.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AB0246406D0356D0073A3CD /* Info.rtf */; };
 		4DB839FD0D13FAA700A0CA18 /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4DB839FC0D13FAA700A0CA18 /* element.xml */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
-		92D2EABB0D0D5CF8003EB1BD /* CalculatorPrefPane.nib in Resources */ = {isa = PBXBuildFile; fileRef = 92D2EAB90D0D5CF8003EB1BD /* CalculatorPrefPane.nib */; };
+		CD8F6FD7137170A9009F84D5 /* Calculate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8F6FD6137170A9009F84D5 /* Calculate.framework */; };
+		CD8F700413717271009F84D5 /* CalculatorPrefPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8F700313717271009F84D5 /* CalculatorPrefPane.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,9 @@
 		4DB839FC0D13FAA700A0CA18 /* element.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* Calculator Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92D2EAB90D0D5CF8003EB1BD /* CalculatorPrefPane.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = CalculatorPrefPane.nib; sourceTree = "<group>"; };
+		CD8F6F4813716D4C009F84D5 /* CalculatePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalculatePrivate.h; path = Apps/QSPlugins/Plugins/com.apple.calculator/trunk/CalculatePrivate.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		CD8F6FD6137170A9009F84D5 /* Calculate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Calculate.framework; path = /System/Library/PrivateFrameworks/Calculate.framework; sourceTree = "<absolute>"; };
+		CD8F700313717271009F84D5 /* CalculatorPrefPane.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CalculatorPrefPane.xib; path = Apps/QSPlugins/Plugins/com.apple.calculator/trunk/CalculatorPrefPane.xib; sourceTree = SYSTEM_DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				CD8F6FD7137170A9009F84D5 /* Calculate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,9 +77,9 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				92D2EAB90D0D5CF8003EB1BD /* CalculatorPrefPane.nib */,
 				0AB0246406D0356D0073A3CD /* Info.rtf */,
 				4DB839FC0D13FAA700A0CA18 /* element.xml */,
+				CD8F700313717271009F84D5 /* CalculatorPrefPane.xib */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 			);
 			name = Resources;
@@ -84,6 +88,7 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CD8F6F4813716D4C009F84D5 /* CalculatePrivate.h */,
 				0A61AF04067688D900A28BC8 /* CalculatorAction.h */,
 				0A61AF03067688D900A28BC8 /* CalculatorAction.m */,
 				0A83260406B74EBA00F4F4EE /* CalculatorPrefPane.h */,
@@ -95,6 +100,7 @@
 		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD8F6FD6137170A9009F84D5 /* Calculate.framework */,
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -166,7 +172,14 @@
 			isa = PBXProject;
 			buildConfigurationList = BB8B95730C24E834004C6479 /* Build configuration list for PBXProject "CalculatorPlugin" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* TSColloquyPlugin */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -182,8 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AB0246506D0356D0073A3CD /* Info.rtf in Resources */,
-				92D2EABB0D0D5CF8003EB1BD /* CalculatorPrefPane.nib in Resources */,
 				4DB839FD0D13FAA700A0CA18 /* element.xml in Resources */,
+				CD8F700413717271009F84D5 /* CalculatorPrefPane.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +242,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14A8D03C10CE4FDF003857E3 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
 				INFOPLIST_PREPROCESS = NO;
 				PRODUCT_NAME = "Calculator Module";
 			};
@@ -238,6 +256,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14A8D03A10CE4FDF003857E3 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
 				INFOPLIST_PREPROCESS = NO;
 				PRODUCT_NAME = "Calculator Module";
 			};

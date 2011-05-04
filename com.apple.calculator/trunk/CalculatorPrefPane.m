@@ -16,17 +16,10 @@ NSString *CalculatorEnginePref = @"CalculatorEngine";
 
 - (id) init {
 	if ((self = [super init])) {
-		[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:CalculatorDisplayNormal], CalculatorDisplayPref, [NSNumber numberWithInt:CalculatorEngineBC], CalculatorEnginePref, nil]];
+		[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:CalculatorDisplayNormal], CalculatorDisplayPref, nil]];
 	}
 	return self;
 }
 
-- (IBAction)viewManPage:(id)sender {
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"x-man-page://%@", ([[NSUserDefaults standardUserDefaults] integerForKey:@"CalculatorEngine"] == CalculatorEngineDC) ? @"dc" : @"bc"]]];
-}
-
-- (NSString *)helpPage {
-	return @"quicksilver/plug-ins/calculator_plug-in";
-}
 
 @end
