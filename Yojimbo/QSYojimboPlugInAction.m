@@ -151,53 +151,8 @@
     }
     if ([action isEqualToString:@"QSYojimboTagAction"])
     {
-        // FIXME this method currently causes all items to be loaded from disk on every call
         // return a list of tags
-        NSString *path = [@"~/Library/Caches/Metadata/com.barebones.yojimbo" stringByStandardizingPath];
-        NSFileManager *manager = [NSFileManager defaultManager];
-        NSArray *contents = [manager directoryContentsAtPath:path];
-        NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
-        QSObject *tagObject = nil;
-        NSMutableDictionary *tags = [NSMutableDictionary dictionaryWithCapacity:1];
-        
-        // NSLog(@"Yojimbo plug-in hitting the filesystem");
-        for (NSString *topLevelDir in contents) {
-            topLevelDir = [path stringByAppendingPathComponent:topLevelDir];
-            for (NSString *secondLevelDir in [manager directoryContentsAtPath:topLevelDir]) {
-                secondLevelDir = [topLevelDir stringByAppendingPathComponent:secondLevelDir];
-                for (NSString *yojimboItem in [manager directoryContentsAtPath:secondLevelDir]) {
-                    if ([yojimboItem rangeOfString:@"yojimbo"].location == NSNotFound) continue;
-                    yojimboItem = [secondLevelDir stringByAppendingPathComponent:yojimboItem];
-                    NSDictionary *item = [NSDictionary dictionaryWithContentsOfFile:yojimboItem];
-
-                    // get a list of all tags and the associated items
-                    for (NSString *tag in [item valueForKey:@"tags"])
-                    {
-                        if ([[tags allKeys] containsObject:tag])
-                        {
-                            // append to the list
-                            [[tags objectForKey:tag] addObject:[item valueForKey:@"uuid"]];
-                        } else {
-                            // create a list of items for this tag
-                            NSMutableArray *itemsForTag = [NSMutableArray arrayWithObject:[item valueForKey:@"uuid"]];
-                            [tags setObject:itemsForTag forKey:tag];
-                        }
-                    }
-                }
-            }
-        }
-        // add tags to the catalog
-        for (NSString *tag in [tags allKeys])
-        {
-            tagObject = [QSObject objectWithName:tag];
-            [tagObject setObject:tag forType:kQSYojimboTagType];
-            [tagObject setObject:[tags objectForKey:tag] forMeta:@"items"];
-            // tags don't have an official itemKind, but I'm making one up for consistency
-            [tagObject setObject:kQSYojimboTagType forMeta:@"itemKind"];
-            [tagObject setDetails:@"Yojimbo Tag"];
-            [objects addObject:tagObject];
-        }
-        return objects;
+        return [QSLib scoredArrayForString:nil inSet:[QSLib arrayForType:kQSYojimboTagType]];
     }
     // no matches - return empty string
     QSObject *textObject=[QSObject textProxyObjectWithDefaultValue:@""];
