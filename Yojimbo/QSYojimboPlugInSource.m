@@ -45,9 +45,14 @@
     {
         return YES;
     }
+    return NO;
 }
 
 - (BOOL)loadChildrenForObject:(QSObject *)object{
+    // individual items have no children
+    if ([object containsType:kQSYojimboPlugInType]) {
+        return YES;
+    }
     if ([object containsType:kQSYojimboTagType])
     {
         // right-arrowed into a tag
