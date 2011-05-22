@@ -51,7 +51,7 @@
 - (BOOL)loadChildrenForObject:(QSObject *)object{
     // individual items have no children
     if ([object containsType:kQSYojimboPlugInType]) {
-        return YES;
+        return NO;
     }
     if ([object containsType:kQSYojimboTagType])
     {
