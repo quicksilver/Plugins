@@ -1,9 +1,4 @@
-
-
 #import "QSAirPortProvider.h"
-
-
-#import <QSCore/QSCore.h>
 #include <Security/Security.h>
 #include <CoreServices/CoreServices.h>
 
@@ -82,7 +77,7 @@ NSArray *getAvailableNetworks(void)
         NSArray *networks = getAvailableNetworks(); 
         for(NSString *ssid in networks)
         {
-            // TODO indicate connected network
+            // TODO indicate connected network?
             newObject = [QSObject objectWithName:ssid];
             if([preferred containsObject:ssid])
             {
@@ -160,7 +155,7 @@ NSArray *getAvailableNetworks(void)
     return nil;
 }
 
-- (NSString *) passwordForAirPortNetwork:(NSString *)network
+- (NSString *)passwordForAirPortNetwork:(NSString *)network
 {
     void *s = NULL;
     unsigned long l = 0;
