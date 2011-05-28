@@ -77,6 +77,25 @@
 			<key>validatesObjects</key>
 			<true/>
 		</dict>
+		<key>QSAirPortDisassociate</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAirPortNetworkActionProvider</string>
+			<key>actionSelector</key>
+			<string>disassociateAirPort</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSAirPortItemType</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.airport.airportutility</string>
+			<key>name</key>
+			<string>Disconnect Current Network</string>
+			<key>precedence</key>
+			<integer>1</integer>
+			<key>validatesObjects</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>QSPlugIn</key>
 	<dict>

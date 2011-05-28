@@ -116,7 +116,6 @@ NSArray *getAvailableNetworks(void)
     NSError *error = nil;
     CWInterface *wif = [CWInterface interface];
     BOOL setPowerSuccess = [wif setPower:YES error:&error];
-    [wif release];
     
 #ifdef DEBUG
     if (! setPowerSuccess) {
@@ -131,13 +130,18 @@ NSArray *getAvailableNetworks(void)
     NSError *error = nil;
     CWInterface *wif = [CWInterface interface];
     BOOL setPowerSuccess = [wif setPower:NO error:&error];
-    [wif release];
     
 #ifdef DEBUG
     if (! setPowerSuccess) {
         NSLog(@"error disabling airport: %@", error);
     }
 #endif
+    return nil;
+}
+
+- (QSObject *)disassociateAirPort
+{
+    [[CWInterface interface] disassociate];
     return nil;
 }
 
@@ -151,8 +155,12 @@ NSArray *getAvailableNetworks(void)
     CWInterface *wif = [CWInterface interface];
     CWNetwork *net = [dObject objectForType:kQSWirelessNetworkType];
     NSString *password = [self passwordForAirPortNetwork:net.ssid];
+    NSDictionary *params = nil;
+    if (password != nil) {
+        params = [NSDictionary dictionaryWithObjectsAndKeys:password, kCWAssocKeyPassphrase, nil];
+    }
     
-    [wif associateToNetwork:net parameters:nil error:&error];
+    [wif associateToNetwork:net parameters:params error:&error];
     
     return nil;
 }
@@ -174,7 +182,7 @@ NSArray *getAvailableNetworks(void)
     CWInterface *wif = [CWInterface interface];
     if([wif power])
     {
-        return [NSArray arrayWithObject:@"QSAirPortPowerDisable"];
+        return [NSArray arrayWithObjects:@"QSAirPortPowerDisable", @"QSAirPortDisassociate", nil];
     } else {
         return [NSArray arrayWithObject:@"QSAirPortPowerEnable"];
     }
