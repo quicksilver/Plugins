@@ -44,7 +44,7 @@
 			<key>actionClass</key>
 			<string>QSAirPortNetworkActionProvider</string>
 			<key>actionSelector</key>
-			<string>enableAirPort:</string>
+			<string>enableAirPort</string>
 			<key>directTypes</key>
 			<array>
 				<string>QSAirPortItemType</string>
@@ -63,7 +63,7 @@
 			<key>actionClass</key>
 			<string>QSAirPortNetworkActionProvider</string>
 			<key>actionSelector</key>
-			<string>disableAirPort:</string>
+			<string>disableAirPort</string>
 			<key>directTypes</key>
 			<array>
 				<string>QSAirPortItemType</string>

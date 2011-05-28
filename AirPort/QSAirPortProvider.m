@@ -61,13 +61,15 @@ NSArray *getAvailableNetworks(void)
     [airport setDetails:@"AirPort Wireless Networks"];
     [airport setIcon:[QSResourceManager imageNamed:@"com.apple.airport.airportutility"]];
     [airport setObject:@"Virtual AirPort Object" forType:kQSAirPortItemType];
+    [airport setIdentifier:@"AirPortNetworks"];
     [airport setPrimaryType:kQSAirPortItemType];
     return [NSArray arrayWithObject:airport];
 }
 
 - (BOOL)objectHasChildren:(QSObject *)object {
-    // only the virtual AirPort object has children
-    return [object containsType:kQSAirPortItemType];
+    // only the virtual AirPort object has children (not the networks)
+    // nothing to list if the interface is powered off
+    return ([object containsType:kQSAirPortItemType] && [[CWInterface interface] power]);
 }
 
 - (BOOL)loadChildrenForObject:(QSObject *)object
@@ -92,6 +94,7 @@ NSArray *getAvailableNetworks(void)
             }
             [newObject setObject:ssid forType:kQSAirPortNetworkSSIDType];
             [newObject setPrimaryType:kQSAirPortNetworkSSIDType];
+            [newObject setParentID:[object identifier]];
             [newObject setIcon:[QSResourceManager imageNamed:@"com.apple.airport.airportutility"]];
             [objects addObject:newObject];
         }
@@ -110,7 +113,7 @@ NSArray *getAvailableNetworks(void)
 
 @implementation QSAirPortNetworkActionProvider
 
-- (void)enableAirPort:(QSObject *)dObject
+- (QSObject *)enableAirPort
 {
     NSError *error = nil;
     CWInterface *wif = [CWInterface interface];
@@ -122,9 +125,10 @@ NSArray *getAvailableNetworks(void)
         NSLog(@"error enabling airport: %@", error);
     }
 #endif
+    return nil;
 }
 
-- (void)disableAirPort:(QSObject *)dObject
+- (QSObject *)disableAirPort
 {
     NSError *error = nil;
     CWInterface *wif = [CWInterface interface];
@@ -136,9 +140,10 @@ NSArray *getAvailableNetworks(void)
         NSLog(@"error disabling airport: %@", error);
     }
 #endif
+    return nil;
 }
 
-- (QSObject *) selectNetwork:(QSObject *)dObject
+- (QSObject *)selectNetwork:(QSObject *)dObject
 {
 #ifdef DEBUG
     NSLog(@"Switching to network: \"%@\"", [dObject objectForType:kQSAirPortNetworkSSIDType]);
@@ -155,12 +160,13 @@ NSArray *getAvailableNetworks(void)
     return nil;
 }
 
-- (NSString *) passwordForAirPortNetwork:(NSString *)network{
+- (NSString *) passwordForAirPortNetwork:(NSString *)network
+{
     void *s = NULL;
     unsigned long l = 0;
     NSString *where = @"AirPort Network";
     NSString *string = nil;
-    if(noErr==SecKeychainFindGenericPassword( NULL,[where length],[where UTF8String], [network length], [network UTF8String], &l, &s,NULL))
+    if(noErr==SecKeychainFindGenericPassword(NULL, [where length], [where UTF8String], [network length], [network UTF8String], &l, &s, NULL))
         string = [NSString stringWithCString:(const char *)s length:l];
     SecKeychainItemFreeContent(NULL,s);
     return string;
