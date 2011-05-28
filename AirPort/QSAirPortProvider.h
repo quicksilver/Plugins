@@ -1,6 +1,6 @@
 #import <CoreWLAN/CoreWLAN.h>
 
-#define kQSAirPortNetworkSSIDType @"QSAirPortNetworkSSIDType"
+#define kQSWirelessNetworkType @"QSWirelessNetworkType"
 #define kQSAirPortItemType @"QSAirPortItemType"
 
 @interface QSAirPortNetworkObjectSource : QSObjectSource {

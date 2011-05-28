@@ -4,6 +4,7 @@
 
 NSArray *getPreferredNetworks(void)
 {
+    // check stored System Preferences and return SSIDs
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:1];
     @try {
         NSDictionary *config = [NSDictionary dictionaryWithContentsOfFile:@"/Library/Preferences/SystemConfiguration/preferences.plist"];
@@ -33,12 +34,13 @@ NSArray *getPreferredNetworks(void)
 NSArray *getAvailableNetworks(void)
 {
     // scan for currently available wireless networks
+    // retrun the entire network object
     NSMutableArray *available = [NSMutableArray arrayWithCapacity:1];
     NSError *error = nil;
     CWInterface *wif = [CWInterface interface];
     for (CWNetwork *net in [wif scanForNetworksWithParameters:nil error:&error])
     {
-        [available addObject:net.ssid];
+        [available addObject:net];
     }
     return available;
 }
@@ -75,8 +77,9 @@ NSArray *getAvailableNetworks(void)
         NSMutableArray *objects = [NSMutableArray arrayWithCapacity:1];
         QSObject *newObject = nil;
         NSArray *networks = getAvailableNetworks(); 
-        for(NSString *ssid in networks)
+        for(CWNetwork *net in networks)
         {
+            NSString *ssid = net.ssid;
             // TODO indicate connected network?
             newObject = [QSObject objectWithName:ssid];
             if([preferred containsObject:ssid])
@@ -87,8 +90,8 @@ NSArray *getAvailableNetworks(void)
                 // just use the name
                 [newObject setDetails:[NSString stringWithFormat:@"%@ AirPort Network",ssid]];
             }
-            [newObject setObject:ssid forType:kQSAirPortNetworkSSIDType];
-            [newObject setPrimaryType:kQSAirPortNetworkSSIDType];
+            [newObject setObject:net forType:kQSWirelessNetworkType];
+            [newObject setPrimaryType:kQSWirelessNetworkType];
             [newObject setParentID:[object identifier]];
             [newObject setIcon:[QSResourceManager imageNamed:@"com.apple.airport.airportutility"]];
             [objects addObject:newObject];
@@ -141,15 +144,14 @@ NSArray *getAvailableNetworks(void)
 - (QSObject *)selectNetwork:(QSObject *)dObject
 {
 #ifdef DEBUG
-    NSLog(@"Switching to network: \"%@\"", [dObject objectForType:kQSAirPortNetworkSSIDType]);
+    NSLog(@"Switching to network: \"%@\"", [dObject name]);
 #endif
-    
-    NSString *ssid = [dObject objectForType:kQSAirPortNetworkSSIDType];
-    NSString *password = [self passwordForAirPortNetwork:ssid];
     
     NSError *error = nil;
     CWInterface *wif = [CWInterface interface];
-    CWNetwork *net = nil;
+    CWNetwork *net = [dObject objectForType:kQSWirelessNetworkType];
+    NSString *password = [self passwordForAirPortNetwork:net.ssid];
+    
     [wif associateToNetwork:net parameters:nil error:&error];
     
     return nil;

@@ -30,7 +30,7 @@
 			<string>selectNetwork:</string>
 			<key>directTypes</key>
 			<array>
-				<string>QSAirPortNetworkSSIDType</string>
+				<string>QSWirelessNetworkType</string>
 			</array>
 			<key>icon</key>
 			<string>com.apple.airport.airportutility</string>
