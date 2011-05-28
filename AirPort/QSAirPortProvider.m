@@ -4,155 +4,147 @@
 
 
 #import <QSCore/QSCore.h>
-#include "Apple80211.h"
-
 #include <Security/Security.h>
 #include <CoreServices/CoreServices.h>
 
-
-WirelessContextPtr gWirelessContext = NULL;
-//extern char *gProgname;
-
-NSArray *getAPNetworks(void)
+NSArray *getPreferredNetworks(void)
 {
-    WIErr err;
-    WirelessNetworkInfo *data;
-    int i;
-    CFArrayRef list1 = NULL;
-    
-    NSMutableArray *networks=[NSMutableArray arrayWithCapacity:0];
-    
-    err = WirelessScan(gWirelessContext, &list1, 0);
-    
-    if(err) {
-        //fprintf(stderr, "Error: WirelessScan: %d\n", (int) err);
-        return nil;
-    }
-    
-    if(list1 == 0) {
-        // this means either the scan failed, or there were no APs in range. there isn't any way to tell the difference
-
-    } else {
-        
-        for(i=0; i < CFArrayGetCount(list1); i++) {
-            data = (WirelessNetworkInfo *) CFDataGetBytePtr(CFArrayGetValueAtIndex(list1, i));
-            // do something with the data (these are managed networks)
-            [networks addObject:[NSString stringWithCString:data->name]];
-            //printWirelessNetworkInfo(data);
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:1];
+    @try {
+        NSDictionary *config = [NSDictionary dictionaryWithContentsOfFile:@"/Library/Preferences/SystemConfiguration/preferences.plist"];
+        NSDictionary *sets = [config objectForKey:@"Sets"];
+        for (NSString *setKey in sets) {
+            NSDictionary *set = [sets objectForKey:setKey];
+            NSDictionary *network = [set objectForKey:@"Network"];
+            NSDictionary *interface = [network objectForKey:@"Interface"];
+            for(NSString *interfaceKey in interface) {
+                NSDictionary *bsdInterface = [interface objectForKey:interfaceKey];
+                for(NSString *namedInterfaceKey in bsdInterface) {
+                    NSDictionary *namedInterface = [bsdInterface objectForKey:namedInterfaceKey];
+                    NSArray *networks = [namedInterface objectForKey:@"PreferredNetworks"];
+                    for (NSDictionary *network in networks) {
+                        NSString *ssid = [network objectForKey:@"SSID_STR"];
+                        [result addObject:ssid];
+                    }
+                }
+            }
         }
+    } @catch (NSException * e) {
+        NSLog(@"Failed to read known networks: %@", e);
     }
-    
-    return [[NSSet setWithArray:networks]allObjects];
+    return result;
+}
+
+NSArray *getAvailableNetworks(void)
+{
+    // scan for currently available wireless networks
+    NSMutableArray *available = [NSMutableArray arrayWithCapacity:1];
+    NSError *error = nil;
+    CWInterface *wif = [CWInterface interface];
+    for (CWNetwork *net in [wif scanForNetworksWithParameters:nil error:&error])
+    {
+        [available addObject:net.ssid];
+    }
+    return available;
 }
 
 @implementation QSAirPortNetworkObjectSource
-+ (void)registerInstance{
-  //  QSAirPortNetworkObjectSource *source=[[[QSAirPortNetworkObjectSource alloc]init]autorelease];
-    [QSReg registerSource:@"QSAirPortNetworkObjectSource"];
-    [QSReg registerHandler:@"QSAirPortNetworkObjectSource" forType:QSAirPortNetworkSSIDType];
-//    NSLog(@"source: %@",source);
-}
 
-- (id)init{
-    if ((self=[super init])){
-        //      [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange:) name:@"com.apple.system.config.network_change" object:nil];
-        
-        WIErr err = 0;
-        int retVal = 0;
-        int avail = WirelessIsAvailable();
-        
-        //if (avail) printf("wireless is available", avail);
-        
-        if(avail) {
-            err = WirelessAttach(&gWirelessContext, 0);
-            if(err) {
-                printf("Error: WirelessAttach: %d\n", (int) err);
-                exit(-1);
-            }
-        }
-        // getNetworks();
-        if(err != noErr) {
-            //     fprintf(stderr, "%s: Error: %d\n", gProgname, (int) err);
-            retVal = -1;
-        }
-        
-        
-    }
-    return self;
-}
-
-
-    
 - (NSImage *) iconForEntry:(NSDictionary *)dict{
-    return [QSResourceManager imageNamed:@"AirPortIcon"];
+    return [QSResourceManager imageNamed:@"com.apple.airport.airportutility"];
 }
 
-- (NSString *)identifierForObject:(id <QSObject>)object{
-    return [@"[AirPort Network]:"stringByAppendingString:[object objectForType:QSAirPortNetworkSSIDType]];
+- (NSArray *) objectsForEntry:(NSDictionary *)theEntry
+{
+    // create a virtual object representing the AirPort interface
+    QSObject *airport = [QSObject objectWithName:@"AirPort Networks"];
+    [airport setDetails:@"AirPort Wireless Networks"];
+    [airport setIcon:[QSResourceManager imageNamed:@"com.apple.airport.airportutility"]];
+    [airport setObject:@"Virtual AirPort Object" forType:kQSAirPortItemType];
+    [airport setPrimaryType:kQSAirPortItemType];
+    return [NSArray arrayWithObject:airport];
 }
-- (NSArray *) objectsForEntry:(NSDictionary *)theEntry{
-    
-    NSMutableArray *objects=[NSMutableArray arrayWithCapacity:1];
-    QSObject *newObject;
-    NSArray *networks=getAPNetworks(); 
-    NSString *ssid;
-    NSEnumerator *networkEnumerator=[networks objectEnumerator];
-    while(ssid=[networkEnumerator nextObject]){
-        
-        newObject=[QSObject objectWithName:[NSString stringWithFormat:@"%@ AirPort Network",ssid]];
-        [newObject setObject:ssid forType:QSAirPortNetworkSSIDType];
-        [newObject setPrimaryType:QSAirPortNetworkSSIDType];
-        [newObject setIcon:[QSResourceManager imageNamed:@"AirPortDocIcon"]];
-        [objects addObject:newObject];
+
+- (BOOL)objectHasChildren:(QSObject *)object {
+    // only the virtual AirPort object has children
+    return [object containsType:kQSAirPortItemType];
+}
+
+- (BOOL)loadChildrenForObject:(QSObject *)object
+{
+    if ([object containsType:kQSAirPortItemType])
+    {
+        NSArray *preferred = getPreferredNetworks();
+        NSMutableArray *objects = [NSMutableArray arrayWithCapacity:1];
+        QSObject *newObject = nil;
+        NSArray *networks = getAvailableNetworks(); 
+        for(NSString *ssid in networks)
+        {
+            // TODO indicate connected network
+            if([preferred containsObject:ssid])
+            {
+                // indicate that this is a preferred network
+                newObject = [QSObject objectWithName:[NSString stringWithFormat:@"%@ ♥ Preferred", ssid]];
+            } else {
+                // just use the name
+                newObject = [QSObject objectWithName:ssid];
+            }
+            [newObject setObject:ssid forType:kQSAirPortNetworkSSIDType];
+            [newObject setPrimaryType:kQSAirPortNetworkSSIDType];
+            [newObject setDetails:[NSString stringWithFormat:@"%@ AirPort Network",ssid]];
+            [newObject setIcon:[QSResourceManager imageNamed:@"com.apple.airport.airportutility"]];
+            [objects addObject:newObject];
+        }
+        [object setChildren:objects];
+        return YES;
+    } else {
+        return NO;
     }
-    return objects;
+}
 
+- (void)setQuickIconForObject:(QSObject *)object
+{
+    [object setIcon:[QSResourceManager imageNamed:@"com.apple.airport.airportutility"]];
 }
 @end
 
-
-
-
-
-#define kQSAirPortNetworkSelectAction @"QSAirPortNetworkSelectAction"
-
-
 @implementation QSAirPortNetworkActionProvider
 
-- (void)turnAirPortOn{
-	NSLog(@"Turning AirPort On");
-	WirelessSetPower(gWirelessContext,1);	
-}
-
-- (void)turnAirPortOff{
-	NSLog(@"Turning AirPort Off");
-	WirelessSetPower(gWirelessContext,0);	
-}
-
-
-- (QSObject *) selectNetwork:(QSObject *)dObject{
+- (void)toggleAirPort
+{
+    NSError *error = nil;
+    CWInterface *wif = [CWInterface interface];
+    BOOL newPowerState = ![wif power];
+    BOOL setPowerSuccess = [wif setPower:newPowerState error:&error];
     
-    NSLog(@"Switching to network: \"%@\"", [dObject objectForType:QSAirPortNetworkSSIDType]);
-    
-    NSString *ssid=[dObject objectForType:QSAirPortNetworkSSIDType];
-	NSString *password=[self passwordForAirPortNetwork:ssid];
-	
-    WIErr err=0;
-    if (password)
-        err = WirelessJoinWEP(gWirelessContext,(CFStringRef) ssid,(CFStringRef) password);
-    if (err!=noErr || !password)
-        err = WirelessJoin(gWirelessContext,(CFStringRef) ssid);
-	
-    if (err){
-        [[NSAlert alertWithMessageText:@"Unable to join network" defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@"Quicksilver was unable to join the AirPort network \"%@\". If it is protected by a password, please make sure it is stored in your keychain.",ssid]runModal];
+#ifdef DEBUG
+    if (! setPowerSuccess) {
+        NSLog(@"error toggling airport: %@", error);
     }
+#endif
+}
+
+- (QSObject *) selectNetwork:(QSObject *)dObject
+{
+#ifdef DEBUG
+    NSLog(@"Switching to network: \"%@\"", [dObject objectForType:kQSAirPortNetworkSSIDType]);
+#endif
+    
+    NSString *ssid = [dObject objectForType:kQSAirPortNetworkSSIDType];
+    NSString *password = [self passwordForAirPortNetwork:ssid];
+    
+    NSError *error = nil;
+    CWInterface *wif = [CWInterface interface];
+    CWNetwork *net = nil;
+    [wif associateToNetwork:net parameters:nil error:&error];
+    
     return nil;
 }
 
 - (NSString *) passwordForAirPortNetwork:(NSString *)network{
     void *s = NULL;
     unsigned long l = 0;
-    NSString *where=@"AirPort Network";
+    NSString *where = @"AirPort Network";
     NSString *string = nil;
     if(noErr==SecKeychainFindGenericPassword( NULL,[where length],[where UTF8String], [network length], [network UTF8String], &l, &s,NULL))
         string = [NSString stringWithCString:(const char *)s length:l];

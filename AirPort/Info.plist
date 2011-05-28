@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>A5</string>
+	<string>A6</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2004, Blacktree, Inc.</string>
 	<key>NSPrincipalClass</key>
@@ -33,9 +33,26 @@
 				<string>QSAirPortNetworkSSIDType</string>
 			</array>
 			<key>icon</key>
-			<string>AirPortIcon</string>
+			<string>com.apple.airport.airportutility</string>
 			<key>name</key>
 			<string>Select Network</string>
+			<key>precedence</key>
+			<integer>3</integer>
+		</dict>
+		<key>QSAirPortTogglePower</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAirPortNetworkActionProvider</string>
+			<key>actionSelector</key>
+			<string>toggleAirPort</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSAirPortItemType</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.airport.airportutility</string>
+			<key>name</key>
+			<string>Toggle AirPort Power</string>
 			<key>precedence</key>
 			<integer>3</integer>
 		</dict>
@@ -43,7 +60,7 @@
 	<key>QSPlugIn</key>
 	<dict>
 		<key>author</key>
-		<string>Blacktree, Inc.</string>
+		<string>Rob McBroom</string>
 		<key>categories</key>
 		<array>
 			<string>System</string>
@@ -53,15 +70,13 @@
 		<key>extendedDescription</key>
 		<string>Adds a catalog source for AirPort networks as well as actions for selecting them and internal commands disabling Airport (Beta)</string>
 		<key>icon</key>
-		<string>com.apple.airport.adminutility</string>
+		<string>com.apple.airport.airportutility</string>
 	</dict>
 	<key>QSPresetAdditions</key>
 	<array>
 		<dict>
 			<key>ID</key>
 			<string>QSPresetWirelessNetworks</string>
-			<key>catalogPath</key>
-			<string>QSPresetSystemGroup/QSPresetDevices</string>
 			<key>feature</key>
 			<integer>1</integer>
 			<key>name</key>
@@ -104,7 +119,7 @@
 		</dict>
 		<key>QSObjectHandlers</key>
 		<dict>
-			<key>QSAirPortNetworkSSIDType</key>
+			<key>QSAirPortItemType</key>
 			<string>QSAirPortNetworkObjectSource</string>
 		</dict>
 		<key>QSObjectSources</key>
