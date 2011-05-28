@@ -39,12 +39,12 @@
 			<key>precedence</key>
 			<integer>3</integer>
 		</dict>
-		<key>QSAirPortTogglePower</key>
+		<key>QSAirPortPowerEnable</key>
 		<dict>
 			<key>actionClass</key>
 			<string>QSAirPortNetworkActionProvider</string>
 			<key>actionSelector</key>
-			<string>toggleAirPort</string>
+			<string>enableAirPort:</string>
 			<key>directTypes</key>
 			<array>
 				<string>QSAirPortItemType</string>
@@ -52,9 +52,30 @@
 			<key>icon</key>
 			<string>com.apple.airport.airportutility</string>
 			<key>name</key>
-			<string>Toggle AirPort Power</string>
+			<string>Turn AirPort On</string>
 			<key>precedence</key>
 			<integer>3</integer>
+			<key>validatesObjects</key>
+			<true/>
+		</dict>
+		<key>QSAirPortPowerDisable</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAirPortNetworkActionProvider</string>
+			<key>actionSelector</key>
+			<string>disableAirPort:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSAirPortItemType</string>
+			</array>
+			<key>icon</key>
+			<string>com.apple.airport.airportutility</string>
+			<key>name</key>
+			<string>Turn AirPort Off</string>
+			<key>precedence</key>
+			<integer>3</integer>
+			<key>validatesObjects</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>QSPlugIn</key>
@@ -76,11 +97,9 @@
 	<array>
 		<dict>
 			<key>ID</key>
-			<string>QSPresetWirelessNetworks</string>
-			<key>feature</key>
-			<integer>1</integer>
+			<string>QSPresetAirPortModule</string>
 			<key>name</key>
-			<string>AirPort Networks</string>
+			<string>AirPort Interface</string>
 			<key>source</key>
 			<string>QSAirPortNetworkObjectSource</string>
 		</dict>

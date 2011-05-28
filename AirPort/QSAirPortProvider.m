@@ -57,7 +57,7 @@ NSArray *getAvailableNetworks(void)
 - (NSArray *) objectsForEntry:(NSDictionary *)theEntry
 {
     // create a virtual object representing the AirPort interface
-    QSObject *airport = [QSObject objectWithName:@"AirPort Networks"];
+    QSObject *airport = [QSObject objectWithName:@"AirPort"];
     [airport setDetails:@"AirPort Wireless Networks"];
     [airport setIcon:[QSResourceManager imageNamed:@"com.apple.airport.airportutility"]];
     [airport setObject:@"Virtual AirPort Object" forType:kQSAirPortItemType];
@@ -81,17 +81,17 @@ NSArray *getAvailableNetworks(void)
         for(NSString *ssid in networks)
         {
             // TODO indicate connected network
+            newObject = [QSObject objectWithName:ssid];
             if([preferred containsObject:ssid])
             {
                 // indicate that this is a preferred network
-                newObject = [QSObject objectWithName:[NSString stringWithFormat:@"%@ ♥ Preferred", ssid]];
+                [newObject setDetails:[NSString stringWithFormat:@"%@ AirPort Network (Preferred)", ssid]];
             } else {
                 // just use the name
-                newObject = [QSObject objectWithName:ssid];
+                [newObject setDetails:[NSString stringWithFormat:@"%@ AirPort Network",ssid]];
             }
             [newObject setObject:ssid forType:kQSAirPortNetworkSSIDType];
             [newObject setPrimaryType:kQSAirPortNetworkSSIDType];
-            [newObject setDetails:[NSString stringWithFormat:@"%@ AirPort Network",ssid]];
             [newObject setIcon:[QSResourceManager imageNamed:@"com.apple.airport.airportutility"]];
             [objects addObject:newObject];
         }
@@ -110,16 +110,30 @@ NSArray *getAvailableNetworks(void)
 
 @implementation QSAirPortNetworkActionProvider
 
-- (void)toggleAirPort
+- (void)enableAirPort:(QSObject *)dObject
 {
     NSError *error = nil;
     CWInterface *wif = [CWInterface interface];
-    BOOL newPowerState = ![wif power];
-    BOOL setPowerSuccess = [wif setPower:newPowerState error:&error];
+    BOOL setPowerSuccess = [wif setPower:YES error:&error];
+    [wif release];
     
 #ifdef DEBUG
     if (! setPowerSuccess) {
-        NSLog(@"error toggling airport: %@", error);
+        NSLog(@"error enabling airport: %@", error);
+    }
+#endif
+}
+
+- (void)disableAirPort:(QSObject *)dObject
+{
+    NSError *error = nil;
+    CWInterface *wif = [CWInterface interface];
+    BOOL setPowerSuccess = [wif setPower:NO error:&error];
+    [wif release];
+    
+#ifdef DEBUG
+    if (! setPowerSuccess) {
+        NSLog(@"error disabling airport: %@", error);
     }
 #endif
 }
@@ -150,5 +164,16 @@ NSArray *getAvailableNetworks(void)
         string = [NSString stringWithCString:(const char *)s length:l];
     SecKeychainItemFreeContent(NULL,s);
     return string;
+}
+
+- (NSArray *)validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject
+{
+    CWInterface *wif = [CWInterface interface];
+    if([wif power])
+    {
+        return [NSArray arrayWithObject:@"QSAirPortPowerDisable"];
+    } else {
+        return [NSArray arrayWithObject:@"QSAirPortPowerEnable"];
+    }
 }
 @end
