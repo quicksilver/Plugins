@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>19E</string>
+	<string>1D3</string>
 	<key>NSPrincipalClass</key>
 	<string>QSUIAccessPlugIn</string>
 	<key>QSActions</key>
@@ -49,6 +49,25 @@
 			</array>
 			<key>name</key>
 			<string>Close Window</string>
+			<key>validatesObjects</key>
+			<false/>
+		</dict>
+		<key>CurrentDocumentForApp</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSUIAccessPlugIn_Action</string>
+			<key>actionSelector</key>
+			<string>currentDocumentForApp:</string>
+			<key>directTypes</key>
+			<array>
+				<string>qs.process</string>
+			</array>
+			<key>displaysResult</key>
+			<true/>
+			<key>icon</key>
+			<string>Document</string>
+			<key>name</key>
+			<string>Current Document</string>
 			<key>validatesObjects</key>
 			<false/>
 		</dict>
@@ -111,23 +130,6 @@
 			</array>
 			<key>name</key>
 			<string>Minimize Window</string>
-			<key>validatesObjects</key>
-			<false/>
-		</dict>
-		<key>QSGetUIElementsAction</key>
-		<dict>
-			<key>actionClass</key>
-			<string>QSUIAccessPlugIn_Action</string>
-			<key>actionSelector</key>
-			<string>getUIElementForApplication:</string>
-			<key>directTypes</key>
-			<array>
-				<string>qs.process</string>
-			</array>
-			<key>displaysResult</key>
-			<true/>
-			<key>name</key>
-			<string>Get UI Element</string>
 			<key>validatesObjects</key>
 			<false/>
 		</dict>
@@ -339,6 +341,20 @@
 		</dict>
 		<key>QSProxies</key>
 		<dict>
+			<key>CurrentDocument</key>
+			<dict>
+				<key>icon</key>
+				<string>Document</string>
+				<key>name</key>
+				<string>Current Document</string>
+				<key>providerClass</key>
+				<string>QSUIAccessPlugIn_Action</string>
+				<key>types</key>
+				<array>
+					<string>NSFilenamesPboardType</string>
+					<string>Apple URL pasteboard type</string>
+				</array>
+			</dict>
 			<key>CurrentFocusedWindow</key>
 			<dict>
 				<key>icon</key>

@@ -17,16 +17,6 @@
 
 @implementation QSUIAccessPlugIn_Action
 
-- (QSObject *)getUIElementForApplication:(QSObject *)dObject{
-  dObject = [self resolvedProxy:dObject];
-  NSDictionary *process = [dObject objectForType:QSProcessType];
-	pid_t pid = [[process objectForKey:@"NSApplicationProcessIdentifier"] intValue];
-	AXUIElementRef app=AXUIElementCreateApplication (pid);
-  [app autorelease];
-	QSObject *object=[QSObject objectForUIElement:app name:nil process:process];
-	[object setObject:app forType:kQSUIElementType];
-	return object;
-}
 
 NSArray *MenuItemsForElement(AXUIElementRef element, NSInteger depth, NSString *elementName, NSInteger menuIgnoreDepth, NSDictionary *process) {
   NSArray *children = nil;
@@ -228,12 +218,18 @@ void PressButtonInWindow(id buttonName, id window)
 	return nil;
 }
 
-- (id)resolveProxyObject:(id)proxy{
-  if (![[proxy identifier] isEqualToString:@"CurrentFocusedWindow"]) return nil;
+- (QSObject *)activeAppObject
+{
   NSDictionary *curAppInfo = [[NSWorkspace sharedWorkspace] activeApplication];
   QSObject *curAppObject = [QSObject objectWithName:[curAppInfo objectForKey:@"NSApplicationName"]];
   [curAppObject setObject:curAppInfo forType:QSProcessType];
-  return [self focusedWindowForApp:curAppObject];
+  return curAppObject;
+}
+
+- (id)resolveProxyObject:(id)proxy{
+  if ([[proxy identifier] isEqualToString:@"CurrentFocusedWindow"]) return [self focusedWindowForApp:[self activeAppObject]];
+  if ([[proxy identifier] isEqualToString:@"CurrentDocument"]) return [self currentDocumentForApp:[self activeAppObject]];
+  return nil;
 }
 
 
@@ -328,6 +324,66 @@ void PressButtonInWindow(id buttonName, id window)
   if ([dObject respondsToSelector:@selector(resolvedObject)]) return [dObject resolvedObject];
   if ([dObject respondsToSelector:@selector(object)]) return [self resolvedProxy:[dObject object]];
   return dObject;
+}
+
+- (QSObject *)currentDocumentForApp:(QSObject *)appObject
+{
+  NSDictionary *process = [[self resolvedProxy:appObject] objectForType:QSProcessType];
+  pid_t pid = [[process objectForKey:@"NSApplicationProcessIdentifier"] intValue];
+  AXUIElementRef app = AXUIElementCreateApplication(pid);
+  [(id)app autorelease];
+  AXUIElementRef window = nil;
+  AXUIElementCopyAttributeValue(app, kAXFocusedWindowAttribute, &window);
+  [(id)window autorelease];
+  return [self firstDocumentObjectForElement:window depth:3 title:nil];
+}
+
+- (QSObject *)firstDocumentObjectForElement:(AXUIElementRef)element depth:(NSInteger)depth title:(NSString *)title
+{
+  if (depth == 0) return nil;
+  
+  NSString *currentPath = nil;
+  AXUIElementCopyAttributeValue(element, kAXDocumentAttribute, &currentPath);
+  [currentPath autorelease];
+  if (currentPath) return [QSObject fileObjectWithPath:[[NSURL URLWithString:currentPath] path]];
+  
+  if (!title)
+  {
+    AXUIElementCopyAttributeValue(element, kAXTitleAttribute, &title);
+    [title autorelease];
+  }
+  
+  NSURL *currentURL = nil;
+  AXUIElementCopyAttributeValue(element, kAXURLAttribute, &currentURL);
+  [currentURL autorelease];
+  if (currentURL)
+  {
+    if ([currentURL isFileURL]) return [QSObject fileObjectWithPath:[currentURL path]];
+    return [QSObject URLObjectWithURL:[currentURL description] title:title];
+  }
+  
+  NSArray *children = nil;
+  AXUIElementCopyAttributeValue(element, kAXChildrenAttribute, &children);
+  [children autorelease];
+  if ([children count] == 0) return nil;
+  for (id child in children)
+  {
+    AXUIElementCopyAttributeValue(child, kAXDocumentAttribute, &currentPath);
+    [currentPath autorelease];
+    if (currentPath) return [QSObject fileObjectWithPath:[[NSURL URLWithString:currentPath] path]];
+
+    AXUIElementCopyAttributeValue(child, kAXURLAttribute, &currentURL);
+    [currentURL autorelease];
+    if (currentURL)
+    {
+      if ([currentURL isFileURL]) return [QSObject fileObjectWithPath:[currentURL path]];
+      return [QSObject URLObjectWithURL:[currentURL description] title:title];
+    }
+    
+    QSObject *childDoc = [self firstDocumentObjectForElement:child depth:depth - 1 title:title];
+    if (childDoc) return childDoc;
+  }
+  return nil;
 }
 
 @end
