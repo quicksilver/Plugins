@@ -73,21 +73,21 @@ NSArray *getAvailableNetworks(void)
 {
     if ([object containsType:kQSAirPortItemType])
     {
-        NSArray *preferred = getPreferredNetworks();
         NSMutableArray *objects = [NSMutableArray arrayWithCapacity:1];
         QSObject *newObject = nil;
         NSArray *networks = getAvailableNetworks(); 
+        NSArray *preferredNetworks = getPreferredNetworks();
         for(CWNetwork *net in networks)
         {
             NSString *ssid = net.ssid;
-            // TODO indicate connected network?
-            newObject = [QSObject objectWithName:ssid];
-            if([preferred containsObject:ssid])
+            if([preferredNetworks containsObject:ssid])
             {
                 // indicate that this is a preferred network
+                newObject = [QSObject objectWithName:[NSString stringWithFormat:@"%@ ★", ssid]];
                 [newObject setDetails:[NSString stringWithFormat:@"%@ AirPort Network (Preferred)", ssid]];
             } else {
                 // just use the name
+                newObject = [QSObject objectWithName:ssid];
                 [newObject setDetails:[NSString stringWithFormat:@"%@ AirPort Network",ssid]];
             }
             [newObject setObject:net forType:kQSWirelessNetworkType];
