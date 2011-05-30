@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>12A</string>
+	<string>12B</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2004, Blacktree, Inc.</string>
 	<key>QSPlugIn</key>
@@ -133,7 +133,7 @@
 				<key>icon</key>
 				<string>com.apple.safari</string>
 				<key>name</key>
-				<string>Current Web Page</string>
+				<string>Current Web Page (Safari)</string>
 				<key>providerClass</key>
 				<string>QSSafariObjectHandler</string>
 				<key>types</key>

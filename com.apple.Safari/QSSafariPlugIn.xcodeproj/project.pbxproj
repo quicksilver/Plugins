@@ -117,6 +117,7 @@
 			children = (
 				E15F37D0072EF3DC00748E10 /* QSSafariFaviconSource.m */,
 				E15F37D1072EF3DC00748E10 /* QSSafariFaviconSource.h */,
+				E1EAB047068128A800774DFF /* QSSafariPlugIn.h */,
 				E1EAB045068128A200774DFF /* QSSafariPlugIn.m */,
 			);
 			name = Classes;
@@ -126,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				32DBCF980370C29C00C91783 /* QSSafariPlugIn_Prefix.pch */,
-				E1EAB047068128A800774DFF /* QSSafariPlugIn.h */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -160,7 +160,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 7FFF24ED085E488600266176 /* Build configuration list for PBXProject "QSSafariPlugIn" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0259C574FE90428111CA0C5A /* QSSafariPlugIn */;
 			projectDirPath = "";
 			projectRoot = "";
