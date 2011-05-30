@@ -106,9 +106,23 @@
 			<string>System</string>
 		</array>
 		<key>description</key>
-		<string>Adds AirPort networks to the catalog.</string>
+		<string>Control AirPort power and connect to available networks</string>
 		<key>extendedDescription</key>
-		<string>Adds a catalog source for AirPort networks as well as actions for selecting them and internal commands disabling Airport (Beta)</string>
+		<string>&lt;p&gt;This plug-in adds a single item to the catalog called &amp;#8220;AirPort&amp;#8221;.&lt;/p&gt;
+
+&lt;h3 id=&quot;control_airport&quot;&gt;Control AirPort&lt;/h3&gt;
+
+&lt;p&gt;With AirPort selected, you can:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Toggle power on and off&lt;/li&gt;
+&lt;li&gt;Disconnect from the current network while leaving the interface powered on&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;browse_and_connect_to_networks&quot;&gt;Browse and Connect to Networks&lt;/h3&gt;
+
+&lt;p&gt;Selecting AirPort and hitting → or / will scan for available networks and give you a list. (This sometimes takes a minute.) You can then select a network and attempt to connect to it.&lt;/p&gt;
+</string>
 		<key>icon</key>
 		<string>com.apple.airport.airportutility</string>
 	</dict>
