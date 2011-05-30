@@ -171,9 +171,15 @@ NSArray *getAvailableNetworks(void)
     unsigned long l = 0;
     NSString *where = @"AirPort Network";
     NSString *string = nil;
-    if(noErr==SecKeychainFindGenericPassword(NULL, [where length], [where UTF8String], [network length], [network UTF8String], &l, &s, NULL))
+    OSStatus status = SecKeychainFindGenericPassword(
+        NULL,
+        [where length], [where UTF8String],
+        [network length], [network UTF8String],
+        &l, &s,
+        NULL);
+    if(status == noErr)
         string = [NSString stringWithCString:(const char *)s length:l];
-    SecKeychainItemFreeContent(NULL,s);
+    SecKeychainItemFreeContent(NULL, (void *)s);
     return string;
 }
 
