@@ -1,13 +1,14 @@
-
 #import "QSWebSearchPlugInDefines.h"
 #import "QSWebSearchController.h"
 
 
 
 @implementation QSWebSearchController
-+ (id)sharedInstance{
++ (id)sharedInstance {
     static id _sharedInstance;
-    if (!_sharedInstance) _sharedInstance = [[[self class] allocWithZone:[self zone]] init];
+    if (!_sharedInstance) {
+		_sharedInstance = [[[self class] allocWithZone:[self zone]] init];
+	}
     return _sharedInstance;  
 }
 
@@ -19,16 +20,13 @@
     return self;
 }
 
-
 - (void)windowDidLoad {
     [super windowDidLoad];
     [[self window]setHidesOnDeactivate:NO];
 	//    [webSearchWindow setFrameTopLeftPoint:[mainWindow frame].origin];
 }
 
-
-
-- (void)searchURL:(NSURL *)searchURL{
+- (void)searchURL:(NSURL *)searchURL {
 	//    NSLog(@"SEARCH: %@",searchURL);
     [self setWebSearch:searchURL];
     //performingWebSearch=YES;
@@ -37,9 +35,10 @@
 }
 
 //kQSStringEncoding
-- (NSString *)resolvedURL:(NSString *)searchURL forString:(NSString *)string  encoding:(CFStringEncoding)encoding{
-	if(!encoding)
+- (NSString *)resolvedURL:(NSString *)searchURL forString:(NSString *)string  encoding:(CFStringEncoding)encoding {
+	if(!encoding) {
 		encoding = NSUTF8StringEncoding;
+	}
 	
 	// escape URL, but not # or %
 	NSString *query = [searchURL URLEncoding];
@@ -47,43 +46,48 @@
 	// Escape everything in the query string
     NSString *searchTerm = [string stringByAddingPercentEscapesUsingEncoding:encoding];
 	// Query key set in QSDefines.h - QS Code
-    query=[query stringByReplacing:QUERY_KEY with:searchTerm];
+    query = [query stringByReplacing:QUERY_KEY with:searchTerm];
 	return query;
 }
 
-- (void)searchURL:(NSString *)searchURL forString:(NSString *)string  encoding:(CFStringEncoding)encoding{    
+- (void)searchURL:(NSString *)searchURL forString:(NSString *)string  encoding:(CFStringEncoding)encoding {    
     NSPasteboard *findPboard=[NSPasteboard pasteboardWithName:NSFindPboard];
     [findPboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
     [findPboard setString:string forType:NSStringPboardType];
     NSWorkspace *workspace=[NSWorkspace sharedWorkspace];
 	
-	NSString *query=[self resolvedURL:searchURL forString:string encoding:encoding];
+	NSString *query = [self resolvedURL:searchURL forString:string encoding:encoding];
 	NSURL *url = [NSURL URLWithString:query];
-	   if ([[url scheme]isEqualToString:@"qssp-http"]){
-		   //  query=[query stringByReplacing:OLD_QUERY_KEY with:searchTerm]; // allow old query for now
-		   [self openPOSTURL:[NSURL URLWithString:[query stringByReplacing:@"qssp-http" with:@"http"]]];  
-		   return;
-	   } else if ([[url scheme]isEqualToString:@"http-post"]){
-		   [self openPOSTURL:[NSURL URLWithString:[query stringByReplacing:@"http-post" with:@"http"]]];  
-		   return;
-	   } else if ([[url scheme]isEqualToString:@"qss-http"]){
-		   query=[query stringByReplacing:@"qss-http" with:@"http"];  
- 		   NSURL *queryURL=[NSURL URLWithString:query];
-		   [workspace openURL:queryURL];
-	   } else if ([[url scheme]isEqualToString:@"qss-https"]) {
-		   query=[query stringByReplacing:@"qss-https" with:@"https"];  
- 		   NSURL *queryURL=[NSURL URLWithString:query];
-		   [workspace openURL:queryURL];
-	   }else{
-		   NSURL *queryURL=[NSURL URLWithString:query];
-		   [workspace openURL:queryURL];
-	   }
+	if ([[url scheme]isEqualToString:@"qss-http"]){
+		query = [query stringByReplacing:@"qss-http" with:@"http"];  
+		[workspace openURL:[NSURL URLWithString:query]];
+	}
+	else if ([[url scheme] isEqualToString:@"qss-https"]) {
+		query = [query stringByReplacing:@"qss-https" with:@"https"];  
+		[workspace openURL:[NSURL URLWithString:query]];
+	}
+	else if ([[url scheme] isEqualToString:@"qssp-http"]){
+		//  query=[query stringByReplacing:OLD_QUERY_KEY with:searchTerm]; // allow old query for now
+		[self openPOSTURL:[NSURL URLWithString:[query stringByReplacing:@"qssp-http" with:@"http"]]];  
+		return;
+	}
+	else if ([[url scheme] isEqualToString:@"qssp-https"]) {
+		[self openPOSTURL:[NSURL URLWithString:[query stringByReplacing:@"qssp-https" with:@"https"]]];
+		return;
+	}
+	else if ([[url scheme] isEqualToString:@"http-post"]){
+		[self openPOSTURL:[NSURL URLWithString:[query stringByReplacing:@"http-post" with:@"http"]]];  
+		return;
+	}
+	else{
+		NSURL *queryURL=[NSURL URLWithString:query];
+		[workspace openURL:queryURL];
+	}
 }
 
-- (void)searchURL:(NSURL *)searchURL forString:(NSString *)string{    
-	[self searchURL:(NSURL *)searchURL forString:(NSString *)string  encoding:nil];   
+- (void)searchURL:(NSString *)searchURL forString:(NSString *)string{    
+	[self searchURL:(NSString *)searchURL forString:(NSString *)string  encoding:(CFStringEncoding)nil];   
 }
-
 
 - (void)openPOSTURL:(NSURL *)searchURL{
     NSMutableString *form=[NSMutableString stringWithCapacity:100];
@@ -105,8 +109,7 @@
     [[NSWorkspace sharedWorkspace]openFile:postFile];
 }
 
-
-- (IBAction)submitWebSearch:(id)sender{
+- (IBAction)submitWebSearch:(id)sender {
     if ([[webSearchField stringValue]length]){
 		[self searchURL:webSearch forString:[webSearchField stringValue]];
 		[self setWebSearch:nil];
@@ -114,21 +117,16 @@
     }
 }
 
-
-
-- (IBAction) showSearchView:sender{
+- (IBAction) showSearchView:sender {
     NSPasteboard *findPboard=[NSPasteboard pasteboardWithName:NSFindPboard];
     NSString *webSearchString=[findPboard stringForType:NSStringPboardType];
     if (webSearchString) [webSearchField setStringValue:webSearchString];
     [[self window] orderFront:self];
-    
 }
 
-
-- (void)windowDidResignKey:(NSNotification *)aNotification{
+- (void)windowDidResignKey:(NSNotification *)aNotification {
 	[[self window] orderOut:self];
 }
-
 
 - (id)webSearch {
 	return [[webSearch retain] autorelease];

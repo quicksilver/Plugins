@@ -2,6 +2,7 @@
 
 #import "QSWebSearchPlugInDefines.h"
 #import "QSURLSearchActions.h"
+#import "QSWebSearchController.h"
 
 # define kURLSearchAction @"QSURLSearchAction"
 # define kURLSearchForAction @"QSURLSearchForAction"
@@ -80,10 +81,9 @@
 	
 	// get an NSURL
 
-	[[NSClassFromString(@"QSWebSearchController") sharedInstance] searchURL:[dObject objectForType:QSURLType]];
+	[[QSWebSearchController sharedInstance] searchURL:[dObject objectForType:QSURLType]];
 	return nil;
 }
-#warning encoding here is returning 'null'
 // The encoding of the object is returning null. This will break in a future release of OS X
 - (QSObject *)doURLSearchForAction:(QSObject *)dObject withString:(QSObject *)iObject{
 	
@@ -94,7 +94,7 @@
 			encoding = NSUTF8StringEncoding;
 
 		NSString *string=[iObject stringValue];
-		[[NSClassFromString(@"QSWebSearchController") sharedInstance] searchURL:urlString forString:string encoding:encoding];
+		[[QSWebSearchController sharedInstance] searchURL:urlString forString:string encoding:encoding];
 	}
 	return nil;
 }
@@ -106,11 +106,11 @@
 
 		NSString *string=[iObject stringValue];
 		
-		NSString *query=[[NSClassFromString(@"QSWebSearchController") sharedInstance] resolvedURL:urlString forString:string encoding:encoding];
+		NSString *query=[[QSWebSearchController sharedInstance] resolvedURL:urlString forString:string encoding:encoding];
 		BOOL post=NO;
 		NSURL *url = [NSURL URLWithString:query];
 		if ([[url scheme]isEqualToString:@"qssp-http"]){
-			query=[self openPOSTURL:[NSURL URLWithString:[query stringByReplacing:@"qssp-http" with:@"http"]]];  
+			[[QSWebSearchController sharedInstance] openPOSTURL:[NSURL URLWithString:[query stringByReplacing:@"qssp-http" with:@"http"]]];  
 		//	return;
 		} else if ([[url scheme]isEqualToString:@"http-post"]){
 			NSBeep();

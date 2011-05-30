@@ -12,6 +12,10 @@
 }
 - (IBAction)submitWebSearch:(id)sender;
 
+- (NSString *)resolvedURL:(NSString *)searchURL forString:(NSString *)string encoding:(CFStringEncoding)encoding;
+- (void)searchURL:(NSString *)searchURL forString:(NSString *)string encoding:(CFStringEncoding)encoding;
+- (void)searchURL:(NSString *)searchURL forString:(NSString *)string;
+- (void)searchURL:(NSString *)searchURL;
 
 - (id)webSearch;
 - (void)setWebSearch:(id)newWebSearch;
@@ -21,6 +25,5 @@
 - (void)searchURL:(NSString *)searchURL;
 
 - (void)openPOSTURL:(NSURL *)searchURL;
-- (void)searchURL:(NSString *)searchURL forString:(NSString *)string;
 + (id)sharedInstance;
 @end
