@@ -93,7 +93,7 @@ NSArray *getAvailableNetworks(void)
             [newObject setObject:net forType:kQSWirelessNetworkType];
             [newObject setPrimaryType:kQSWirelessNetworkType];
             [newObject setParentID:[object identifier]];
-            [newObject setIcon:[QSResourceManager imageNamed:@"com.apple.airport.airportutility"]];
+            [newObject setIcon:[QSResourceManager imageNamed:@"AirPort" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
             [objects addObject:newObject];
         }
         [object setChildren:objects];

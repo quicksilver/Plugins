@@ -13,6 +13,7 @@
 		7F35FF4207F9ACD90056051D /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3E07F9ACD90056051D /* QSFoundation.framework */; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		D421CB1C138EEFCF00CE5769 /* CoreWLAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D421CB1B138EEFCF00CE5769 /* CoreWLAN.framework */; };
+		D4FC4B051393451700124D0B /* AirPort.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4FC4B041393451700124D0B /* AirPort.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* AirPort Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AirPort Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D421CB1B138EEFCF00CE5769 /* CoreWLAN.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreWLAN.framework; path = /System/Library/Frameworks/CoreWLAN.framework; sourceTree = "<absolute>"; };
+		D4FC4B041393451700124D0B /* AirPort.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AirPort.icns; sourceTree = "<group>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 		0259C582FE90428111CA0C5A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D4FC4B041393451700124D0B /* AirPort.icns */,
 				8D1AC9730486D14A00FE50C9 /* Info.plist */,
 			);
 			name = Resources;
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FC4B051393451700124D0B /* AirPort.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
