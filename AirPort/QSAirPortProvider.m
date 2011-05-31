@@ -45,6 +45,20 @@ NSArray *getAvailableNetworks(void)
     return available;
 }
 
+NSInteger sortNetworkObjects(QSObject *net1, QSObject *net2, void *context)
+{
+    NSNumber *n1 = [net1 objectForMeta:@"priority"];
+    NSNumber *n2 = [net2 objectForMeta:@"priority"];
+    // reverse the sort order
+    if ([n1 isEqualToNumber:n2]) {
+        return NSOrderedSame;
+    } else if ([n1 compare:n2] == NSOrderedDescending) {
+        return NSOrderedAscending;
+    } else {
+        return NSOrderedDescending;
+    }
+}
+
 @implementation QSAirPortNetworkObjectSource
 
 - (NSImage *) iconForEntry:(NSDictionary *)dict{
@@ -80,23 +94,27 @@ NSArray *getAvailableNetworks(void)
         for(CWNetwork *net in networks)
         {
             NSString *ssid = net.ssid;
+            NSNumber *priority = net.rssi;
             if([preferredNetworks containsObject:ssid])
             {
                 // indicate that this is a preferred network
                 newObject = [QSObject objectWithName:[NSString stringWithFormat:@"%@ ★", ssid]];
                 [newObject setDetails:[NSString stringWithFormat:@"%@ AirPort Network (Preferred)", ssid]];
+                // artificially inflate the priority for preferred networks
+                priority = [NSNumber numberWithInt:[priority intValue] + 1000];
             } else {
                 // just use the name
                 newObject = [QSObject objectWithName:ssid];
-                [newObject setDetails:[NSString stringWithFormat:@"%@ AirPort Network",ssid]];
+                [newObject setDetails:[NSString stringWithFormat:@"%@ AirPort Network", ssid]];
             }
+            [newObject setObject:priority forMeta:@"priority"];
             [newObject setObject:net forType:kQSWirelessNetworkType];
             [newObject setPrimaryType:kQSWirelessNetworkType];
             [newObject setParentID:[object identifier]];
             [newObject setIcon:[QSResourceManager imageNamed:@"AirPort" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
             [objects addObject:newObject];
         }
-        [object setChildren:objects];
+        [object setChildren:[objects sortedArrayUsingFunction:sortNetworkObjects context:NULL]];
         return YES;
     } else {
         return NO;
