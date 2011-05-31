@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>213</string>
+	<string>21B</string>
 	<key>NSPrincipalClass</key>
 	<string>QSWebSearchPlugIn</string>
 	<key>QSActions</key>
