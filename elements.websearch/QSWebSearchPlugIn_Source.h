@@ -15,6 +15,8 @@
 }
 
 - (NSMenu *)encodingMenu;
+- (void)setUrlArray:(id)array;
+- (NSMutableArray *)urlArray;
 
 @end
 
