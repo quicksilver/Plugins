@@ -52,7 +52,7 @@
 				<string>QSWirelessNetworkType</string>
 			</array>
 			<key>icon</key>
-			<string>com.apple.airport.airportutility</string>
+			<string>GenericNetworkIcon</string>
 			<key>name</key>
 			<string>Select Network</string>
 			<key>precedence</key>
@@ -122,6 +122,7 @@
 &lt;h3 id=&quot;browse_and_connect_to_networks&quot;&gt;Browse and Connect to Networks&lt;/h3&gt;
 
 &lt;p&gt;Selecting AirPort and hitting → or / will scan for available networks and give you a list. (This sometimes takes a minute.) You can then select a network and attempt to connect to it.&lt;/p&gt;
+&lt;p&gt;The list will be sorted by signal strength with preferred networks listed first.&lt;/p&gt;
 </string>
 		<key>icon</key>
 		<string>com.apple.airport.airportutility</string>
@@ -179,11 +180,16 @@
 			<key>QSAirPortNetworkObjectSource</key>
 			<string>QSAirPortNetworkObjectSource</string>
 		</dict>
-	</dict>
-	<key>QSRequirements</key>
-	<dict>
-		<key>feature</key>
-		<integer>2</integer>
+		<key>QSTypeDefinitions</key>
+		<dict>
+			<key>QSWirelessNetworkType</key>
+			<dict>
+				<key>icon</key>
+				<string>com.apple.airport.airportutility</string>
+				<key>name</key>
+				<string>AirPort Networks</string>
+			</dict>
+		</dict>
 	</dict>
 </dict>
 </plist>
