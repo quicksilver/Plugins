@@ -52,6 +52,7 @@
 	
 	// Query key set in QSDefines.h - QS Code (typically ***)
     query = [query stringByReplacing:QUERY_KEY with:searchTerm];
+	[searchTerm release];
 	return query;
 }
 
