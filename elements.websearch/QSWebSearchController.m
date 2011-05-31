@@ -44,8 +44,13 @@
 	NSString *query = [searchURL URLEncoding];
 		
 	// Escape everything in the query string
-    NSString *searchTerm = [string stringByAddingPercentEscapesUsingEncoding:encoding];
-	// Query key set in QSDefines.h - QS Code
+    NSString *searchTerm = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
+																			   (CFStringRef) string,
+																			   NULL,
+																			   (CFStringRef) @"!*'();:@&=+$,/?%#[]",
+																			   kCFStringEncodingUTF8);
+	
+	// Query key set in QSDefines.h - QS Code (typically ***)
     query = [query stringByReplacing:QUERY_KEY with:searchTerm];
 	return query;
 }
