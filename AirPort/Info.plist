@@ -33,7 +33,7 @@
 				<string>QSAirPortItemType</string>
 			</array>
 			<key>icon</key>
-			<string>AlertStopIcon</string>
+			<string>GenericNetworkIcon</string>
 			<key>name</key>
 			<string>Disconnect Current Network</string>
 			<key>precedence</key>
