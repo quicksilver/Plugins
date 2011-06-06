@@ -17,7 +17,6 @@
 #define QSUIAccessPlugIn_Type @"QSUIAccessPlugIn_Type"
 @interface QSUIAccessPlugIn_Action : QSActionProvider {}
 
-- (QSObject *)getUIElementForApplication:(QSObject *)dObject;
 - (QSObject *)appMenus:(QSObject *)dObject pickItem:(QSObject *)iObject;
 - (QSObject *)searchAppMenus:(QSObject *)dObject;
 - (QSObject *)getWindowsForApp:(QSObject *)dObject;
@@ -30,6 +29,7 @@
 - (QSObject *)closeWindow:(QSObject *)dObject;
 - (QSObject *)allAppWindows:(QSObject *)dObject;
 - (QSObject *)allAppMenus:(QSObject *)dObject;
+- (QSObject *)activeAppObject;
 - (id)resolveProxyObject:(id)proxy;
 - (NSArray *)validIndirectObjectsForAction:(NSString *)action directObject:(QSObject *)dObject;
 - (NSArray *) validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject;
@@ -38,6 +38,8 @@
 - (void)activateProcessOfElement:(AXUIElementRef) element;
 - (QSObject *)pickUIElement:(QSObject *)dObject;
 - (QSObject *)resolvedProxy:(QSObject *)dObject;
+- (QSObject *)currentDocumentForApp:(QSObject *)appObject;
+- (QSObject *)firstDocumentObjectForElement:(AXUIElementRef)element depth:(NSInteger)depth title:(NSString *)title;
 
 @end
 
