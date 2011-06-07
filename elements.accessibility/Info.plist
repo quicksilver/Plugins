@@ -252,12 +252,23 @@
 		<key>description</key>
 		<string>Access the menus and windows of running applications.</string>
 		<key>extendedDescription</key>
-		<string>This plugin adds running application (process), window, and menu item objects to Quicksilver.&lt;br /&gt; &lt;br /&gt; Access for assistive devices must be enabled in Universal Access pane of System Preferences to use this plugin.&lt;br /&gt; &lt;br /&gt; &lt;h3&gt;Processes&lt;/h3&gt; &lt;br /&gt; Processes represent applications which are currently running on your Mac. Any application in Quicksilver&#x27;s catalog can be used as a process if that app is running. The following actions are available for processes: &lt;ul&gt; &lt;li&gt;&lt;b&gt;Show Menu Items&lt;/b&gt; – Generates and displays a searchable list of the app&#x27;s menu items.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Show Windows&lt;/b&gt; – Generates and displays a list of the app&#x27;s windows, searchable by window title.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Focused Window&lt;/b&gt; – Fetches and displays the app&#x27;s focused window – this is usually the most recently used window, and the window which would get keyboard input if you started typing.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Current Document&lt;/b&gt; – Fetches and displays the file which corresponds with the document open in the app&#x27;s focused window.&lt;/li&gt; &lt;/ul&gt; Selecting these objects in the second pane causes the third pane to display the results: &lt;ul&gt; &lt;li&gt;&lt;b&gt;Windows…&lt;/b&gt; – Generates a list of the app&#x27;s windows, searchable by window title. Pressing return on one of these windows is equivalent to using the Activate action on it.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Menu Bar Items…&lt;/b&gt; – Generates a searchable list of the app&#x27;s menu items. Pressing return on one of these menu items is equivalent to using the Press action on it.&lt;/li&gt; &lt;/ul&gt; &lt;br /&gt; &lt;h3&gt;Windows&lt;/h3&gt;&lt;br /&gt; Windows can also have several actions performed on them: &lt;ul&gt; &lt;li&gt;&lt;b&gt;Activate&lt;/b&gt; – Focuses the window, then makes all windows belonging to the app appear in front of all other windows.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Raise&lt;/b&gt; – Makes the window appear in front of all other windows, without changing which app is focused.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Close&lt;/b&gt; – The same as pressing the red Close button in the window&#x27;s title bar.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Minimize Window&lt;/b&gt; – The same as pressing the amber Minimize button in the window&#x27;s title bar.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Zoom&lt;/b&gt; – The same as pressing the green Zoom button in the window&#x27;s title bar.&lt;/li&gt; &lt;/ul&gt; &lt;br /&gt; &lt;h3&gt;Menu Items&lt;/h3&gt;&lt;br /&gt; Menu Items only have one action available: &lt;b&gt;Press&lt;/b&gt;. This has the same effect as clicking the menu item.&lt;br /&gt; &lt;br /&gt; &lt;h3&gt;Triggers&lt;/h3&gt;&lt;br /&gt; When this plugin is installed, the following triggers are available in the Quicksilver section of the Triggers preference pane: &lt;ul&gt; &lt;li&gt;&lt;b&gt;Show All Menus&lt;/b&gt; – Generates and displays a searchable list of the menu items of all running apps, grouped by app.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Show All Windows&lt;/b&gt; – Generates and displays a list of the windows of all running apps, searchable by window title and app name.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Current Application&lt;/b&gt; – Fetches the current app, places it in the first pane of the command window, and selects the second pane of the command window.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Current Focused Window&lt;/b&gt; – Fetches the current app&#x27;s focused window, places it in the first pane of the command window, and selects the second pane of the command window.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Current Document&lt;/b&gt; – Fetches the document open in the current app&#x27;s focused window, places it in the first pane of the command window, and selects the second pane of the command window.&lt;/li&gt; &lt;/ul&gt; &lt;br /&gt; &lt;h3&gt;Proxy Objects&lt;/h3&gt;&lt;br /&gt; When this plugin is installed, the following proxy objects are available in the Proxy Objects source in the Quicksilver section of the Catalog preference pane: &lt;ul&gt; &lt;li&gt;&lt;b&gt;Current Focused Window&lt;/b&gt; – Represents the current app&#x27;s focused window. The current app is whichever app currently has it&#x27;s name in the menu bar. The focused window is usually the most recently used window, and the window which would get keyboard input if you started typing.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Current Document&lt;/b&gt; – Represents the file which corresponds with the document open in the current app&#x27;s focused window.&lt;/li&gt; &lt;/ul&gt;</string>
+		<string>This plugin adds running application (process), window, and menu item objects to Quicksilver.&lt;br /&gt; &lt;br /&gt; Access for assistive devices must be enabled in Universal Access pane of System Preferences to use this plugin.&lt;br /&gt; &lt;br /&gt; &lt;h3&gt;Processes&lt;/h3&gt; &lt;br /&gt; Processes represent applications which are currently running on your Mac. Any application in Quicksilver&#x27;s catalog can be used as a process if that app is running. The following actions are available for processes: &lt;ul&gt; &lt;li&gt;&lt;b&gt;Show Menu Items&lt;/b&gt; – Generates and displays a searchable list of the app&#x27;s menu items.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Show Windows&lt;/b&gt; – Generates and displays a list of the app&#x27;s windows, searchable by window title.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Focused Window&lt;/b&gt; – Fetches and displays the app&#x27;s focused window – this is usually the most recently used window, and the window which would get keyboard input if you started typing.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Current Document&lt;/b&gt; – Fetches and displays the file which corresponds with the document open in the app&#x27;s focused window.&lt;/li&gt; &lt;/ul&gt; Selecting these objects in the second pane causes the third pane to display the results: &lt;ul&gt; &lt;li&gt;&lt;b&gt;Windows…&lt;/b&gt; – Generates a list of the app&#x27;s windows, searchable by window title. Pressing return on one of these windows is equivalent to using the Activate action on it.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Menu Bar Items…&lt;/b&gt; – Generates a searchable list of the app&#x27;s menu items. Pressing return on one of these menu items is equivalent to using the Press action on it.&lt;/li&gt; &lt;/ul&gt; &lt;br /&gt; &lt;h3&gt;Windows&lt;/h3&gt;&lt;br /&gt; Windows can also have several actions performed on them: &lt;ul&gt; &lt;li&gt;&lt;b&gt;Activate&lt;/b&gt; – Focuses the window, then makes all windows belonging to the app appear in front of all other windows.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Raise&lt;/b&gt; – Makes the window appear in front of all other windows, without changing which app is focused.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Close&lt;/b&gt; – The same as pressing the red Close button in the window&#x27;s title bar.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Minimize Window&lt;/b&gt; – The same as pressing the amber Minimize button in the window&#x27;s title bar.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Zoom&lt;/b&gt; – The same as pressing the green Zoom button in the window&#x27;s title bar.&lt;/li&gt; &lt;/ul&gt; &lt;br /&gt; &lt;h3&gt;Menu Items&lt;/h3&gt;&lt;br /&gt; Menu Items only have one action available: &lt;b&gt;Press&lt;/b&gt;. This has the same effect as clicking the menu item.&lt;br /&gt; &lt;br /&gt; &lt;h3&gt;Triggers&lt;/h3&gt;&lt;br /&gt; When this plugin is installed, the following triggers are available in the UI Access section of the Triggers preference pane: &lt;ul&gt; &lt;li&gt;&lt;b&gt;Show All Menus&lt;/b&gt; – Generates and displays a searchable list of the menu items of all running apps, grouped by app.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Show All Windows&lt;/b&gt; – Generates and displays a list of the windows of all running apps, searchable by window title and app name.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Current Application&lt;/b&gt; – Fetches the current app, places it in the first pane of the command window, and selects the second pane of the command window.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Current Focused Window&lt;/b&gt; – Fetches the current app&#x27;s focused window, places it in the first pane of the command window, and selects the second pane of the command window.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Current Document&lt;/b&gt; – Fetches the document open in the current app&#x27;s focused window, places it in the first pane of the command window, and selects the second pane of the command window.&lt;/li&gt; &lt;/ul&gt; &lt;br /&gt; &lt;h3&gt;Proxy Objects&lt;/h3&gt;&lt;br /&gt; When this plugin is installed, the following proxy objects are available in the Proxy Objects source in the Quicksilver section of the Catalog preference pane: &lt;ul&gt; &lt;li&gt;&lt;b&gt;Current Focused Window&lt;/b&gt; – Represents the current app&#x27;s focused window. The current app is whichever app currently has it&#x27;s name in the menu bar. The focused window is usually the most recently used window, and the window which would get keyboard input if you started typing.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Current Document&lt;/b&gt; – Represents the file which corresponds with the document open in the current app&#x27;s focused window.&lt;/li&gt; &lt;/ul&gt;</string>
 		<key>icon</key>
-		<string>WindowIcon</string>
+		<string>UniversalAccessPref</string>
 	</dict>
 	<key>QSRegistration</key>
 	<dict>
+	  <key>QSTriggerSets</key>
+	  <dict>
+        <key>UIAccess</key>
+        <dict>
+            <key>icon</key>
+            <string>UniversalAccessPref</string>
+            <key>name</key>
+            <string>UI Access</string>
+        </dict>
+    </dict>
+	  
 		<key>QSActionProviders</key>
 		<dict>
 			<key>QSUIAccessPlugIn_Action</key>
@@ -448,6 +459,13 @@
 			<key>resource</key>
 			<string>WindowIcon.png</string>
 		</dict>
+		<key>UniversalAccessPref</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.blacktree.Quicksilver.QSUIAccessPlugIn</string>
+			<key>resource</key>
+			<string>UniversalAccessPref.tiff</string>
+		</dict>
 	</dict>
 	<key>QSTriggerAdditions</key>
 	<array>
@@ -457,7 +475,7 @@
 			<key>command</key>
 			<string>ShowAllAppWindowsCommand</string>
 			<key>set</key>
-			<string>Quicksilver</string>
+			<string>UI Access</string>
 			<key>type</key>
 			<string>QSHotKeyTrigger</string>
 		</dict>
@@ -467,7 +485,7 @@
 			<key>command</key>
 			<string>CurrentApplicationCommand</string>
 			<key>set</key>
-			<string>Quicksilver</string>
+			<string>UI Access</string>
 			<key>type</key>
 			<string>QSHotKeyTrigger</string>
 		</dict>
@@ -477,7 +495,7 @@
 			<key>command</key>
 			<string>CurrentDocumentCommand</string>
 			<key>set</key>
-			<string>Quicksilver</string>
+			<string>UI Access</string>
 			<key>type</key>
 			<string>QSHotKeyTrigger</string>
 		</dict>
@@ -487,7 +505,7 @@
 			<key>command</key>
 			<string>CurrentFocusedWindowCommand</string>
 			<key>set</key>
-			<string>Quicksilver</string>
+			<string>UI Access</string>
 			<key>type</key>
 			<string>QSHotKeyTrigger</string>
 		</dict>
@@ -497,7 +515,7 @@
 			<key>command</key>
 			<string>ShowAllAppMenusCommand</string>
 			<key>set</key>
-			<string>Quicksilver</string>
+			<string>UI Access</string>
 			<key>type</key>
 			<string>QSHotKeyTrigger</string>
 		</dict>
