@@ -146,19 +146,6 @@
 			<key>name</key>
 			<string>Menu Bar Items…</string>
 		</dict>
-		<key>QSPickMenusAction</key>
-		<dict>
-			<key>actionClass</key>
-			<string>QSUIAccessPlugIn_Action</string>
-			<key>actionSelector</key>
-			<string>appMenus:pickItem:</string>
-			<key>directTypes</key>
-			<array>
-				<string>qs.process</string>
-			</array>
-			<key>name</key>
-			<string>Menu Bar…</string>
-		</dict>
 		<key>QSSearchMenuItemsAction</key>
 		<dict>
 			<key>actionClass</key>
@@ -278,6 +265,42 @@
 		</dict>
 		<key>QSCommands</key>
 		<dict>
+		  <key>CurrentApplicationCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directID</key>
+					<string>CurrentApplicationMessage</string>
+					<key>name</key>
+					<string>Current Application</string>
+				</dict>
+			</dict>
+			<key>CurrentFocusedWindowCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directID</key>
+					<string>CurrentFocusedWindowMessage</string>
+					<key>name</key>
+					<string>Current Focused Window</string>
+				</dict>
+			</dict>
+			<key>CurrentDocumentCommand</key>
+			<dict>
+				<key>command</key>
+				<dict>
+					<key>actionID</key>
+					<string>QSObjCSendMessageAction</string>
+					<key>directID</key>
+					<string>CurrentDocumentMessage</string>
+					<key>name</key>
+					<string>Current Document</string>
+				</dict>
+			</dict>
 			<key>ShowAllAppMenusCommand</key>
 			<dict>
 				<key>command</key>
@@ -315,6 +338,45 @@
 				<string>Object</string>
 				<key>name</key>
 				<string>Show All Menus</string>
+				<key>runInMainThread</key>
+				<true/>
+			</dict>
+			<key>CurrentApplicationMessage</key>
+			<dict>
+				<key>actionClass</key>
+				<string>QSUIAccessPlugIn_Action</string>
+				<key>actionSelector</key>
+				<string>fetchCurrentApp</string>
+				<key>icon</key>
+				<string>WindowIcon</string>
+				<key>name</key>
+				<string>Current Application</string>
+				<key>runInMainThread</key>
+				<true/>
+			</dict>
+			<key>CurrentDocumentMessage</key>
+			<dict>
+				<key>actionClass</key>
+				<string>QSUIAccessPlugIn_Action</string>
+				<key>actionSelector</key>
+				<string>fetchCurrentDocument</string>
+				<key>icon</key>
+				<string>Document</string>
+				<key>name</key>
+				<string>Current Document</string>
+				<key>runInMainThread</key>
+				<true/>
+			</dict>
+				<key>CurrentFocusedWindowMessage</key>
+			<dict>
+				<key>actionClass</key>
+				<string>QSUIAccessPlugIn_Action</string>
+				<key>actionSelector</key>
+				<string>fetchCurrentFocusedWindow</string>
+				<key>icon</key>
+				<string>WindowIcon</string>
+				<key>name</key>
+				<string>Current Focused Window</string>
 				<key>runInMainThread</key>
 				<true/>
 			</dict>
@@ -394,6 +456,36 @@
 			<string>ShowAllAppWindowsCommand</string>
 			<key>command</key>
 			<string>ShowAllAppWindowsCommand</string>
+			<key>set</key>
+			<string>Quicksilver</string>
+			<key>type</key>
+			<string>QSHotKeyTrigger</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>CurrentApplicationCommand</string>
+			<key>command</key>
+			<string>CurrentApplicationCommand</string>
+			<key>set</key>
+			<string>Quicksilver</string>
+			<key>type</key>
+			<string>QSHotKeyTrigger</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>CurrentDocumentCommand</string>
+			<key>command</key>
+			<string>CurrentDocumentCommand</string>
+			<key>set</key>
+			<string>Quicksilver</string>
+			<key>type</key>
+			<string>QSHotKeyTrigger</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>CurrentFocusedWindowCommand</string>
+			<key>command</key>
+			<string>CurrentFocusedWindowCommand</string>
 			<key>set</key>
 			<string>Quicksilver</string>
 			<key>type</key>
