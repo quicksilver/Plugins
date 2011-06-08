@@ -145,31 +145,6 @@
 			<key>QSAirPortNetworkActionProvider</key>
 			<string>QSAirPortNetworkActionProvider</string>
 		</dict>
-		<key>QSInternalMessages</key>
-		<dict>
-			<key>QSAirPortTurnOff</key>
-			<dict>
-				<key>action</key>
-				<string>turnAirPortOff</string>
-				<key>icon</key>
-				<string>AirPortIcon</string>
-				<key>name</key>
-				<string>Turn AirPort Off</string>
-				<key>target</key>
-				<string>QSAirPortNetworkActionProvider</string>
-			</dict>
-			<key>QSAirPortTurnOn</key>
-			<dict>
-				<key>action</key>
-				<string>turnAirPortOn</string>
-				<key>icon</key>
-				<string>AirPortIcon</string>
-				<key>name</key>
-				<string>Turn AirPort On</string>
-				<key>target</key>
-				<string>QSAirPortNetworkActionProvider</string>
-			</dict>
-		</dict>
 		<key>QSObjectHandlers</key>
 		<dict>
 			<key>QSAirPortItemType</key>
