@@ -3,6 +3,8 @@
 #import <cctype>
 #import "DuffStringRanker.h"
 
+#define IGNORED_SCORE 0.9
+
 UniChar to_lower (UniChar ch)
 {
 	if((ch & ~0x7f) == 0)
@@ -290,7 +292,7 @@ double substring_score (UniChar* first1, UniChar* last1, UniChar* first2, UniCha
 
 	unichar_string str(anAbbreviation);
 	if(str.length == 0 || !is_subset(string, string + length, str.begin(), str.end()))
-		return -1.0;
+		return IGNORED_SCORE;
 
 	double len = str.length;
 	double unit = 1.0 / (len+1.0);
