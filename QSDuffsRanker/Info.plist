@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>20</string>
+	<string>22</string>
 	<key>QSPlugIn</key>
 	<dict>
 		<key>author</key>
