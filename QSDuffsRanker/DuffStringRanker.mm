@@ -288,7 +288,7 @@ double substring_score (UniChar* first1, UniChar* last1, UniChar* first2, UniCha
 */
 
 /**
- * Adapts the given string by removing changing diacritic characters to their base characters, 
+ * Adapts the given string by changing diacritic characters to their base characters, 
  * so that e.g. ö is treated like o etc. 
  *
  * May be extended in the future to support more transformations.
