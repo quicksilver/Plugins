@@ -11,6 +11,9 @@
 #define kWindowsAction @"WindowsAction"
 #define kWindowsProcessType @"WindowsProcessInfo"
 
+#define kCurrentFocusedWindowProxy @"CurrentFocusedWindow"
+#define kCurrentDocumentProxy @"CurrentDocument"
+
 //#import <QSCore/QSObject.h>
 #import <QSCore/QSActionProvider.h>
 #import "QSUIAccessPlugIn_Action.h"
@@ -40,6 +43,10 @@
 - (QSObject *)resolvedProxy:(QSObject *)dObject;
 - (QSObject *)currentDocumentForApp:(QSObject *)appObject;
 - (QSObject *)firstDocumentObjectForElement:(AXUIElementRef)element depth:(NSInteger)depth title:(NSString *)title;
+- (void)selectAndDisplayObject:(QSObject *)object;
+- (QSObject *)fetchCurrentFocusedWindow;
+- (QSObject *)fetchCurrentDocument;
+- (QSObject *)fetchCurrentApp;
 
 @end
 

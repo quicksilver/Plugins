@@ -221,14 +221,25 @@ void PressButtonInWindow(id buttonName, id window)
 - (QSObject *)activeAppObject
 {
   NSDictionary *curAppInfo = [[NSWorkspace sharedWorkspace] activeApplication];
-  QSObject *curAppObject = [QSObject objectWithName:[curAppInfo objectForKey:@"NSApplicationName"]];
+  QSObject *curAppObject = [QSObject fileObjectWithPath:[curAppInfo objectForKey:@"NSApplicationPath"]];
+  [curAppObject setName:[curAppInfo objectForKey:@"NSApplicationName"]];
   [curAppObject setObject:curAppInfo forType:QSProcessType];
   return curAppObject;
 }
 
+- (QSObject *)focusedWindowObject
+{
+  return [self focusedWindowForApp:[self activeAppObject]];
+}
+
+- (QSObject *)currentDocumentObject
+{
+  return [self currentDocumentForApp:[self activeAppObject]];
+}
+
 - (id)resolveProxyObject:(id)proxy{
-  if ([[proxy identifier] isEqualToString:@"CurrentFocusedWindow"]) return [self focusedWindowForApp:[self activeAppObject]];
-  if ([[proxy identifier] isEqualToString:@"CurrentDocument"]) return [self currentDocumentForApp:[self activeAppObject]];
+  if ([[proxy identifier] isEqualToString:kCurrentFocusedWindowProxy]) return [self focusedWindowObject];
+  if ([[proxy identifier] isEqualToString:kCurrentDocumentProxy]) return [self currentDocumentObject];
   return nil;
 }
 
@@ -245,20 +256,6 @@ void PressButtonInWindow(id buttonName, id window)
     [menuBar autorelease];
 		NSArray *actions=MenuItemsForElement(menuBar,5,nil,3, process);
 		
-		//NSLog(@"actions: %@",actions);
-		return [NSArray arrayWithObjects:[NSNull null],actions,nil];
-		return nil;
-	}else if ([action isEqualToString:@"QSPickMenusAction"]){
-	  dObject = [self resolvedProxy:dObject];
-	  NSDictionary *process = [dObject objectForType:QSProcessType];
-		pid_t pid = [[process objectForKey:@"NSApplicationProcessIdentifier"] intValue];
-		AXUIElementRef app=AXUIElementCreateApplication (pid);	
-    [app autorelease];
-		AXUIElementRef menuBar;
-		AXUIElementCopyAttributeValue (app, kAXMenuBarAttribute, &menuBar);
-    [menuBar autorelease];
-		NSArray *actions=MenuItemsForElement(menuBar,1,nil,0, process);
-				
 		//NSLog(@"actions: %@",actions);
 		return [NSArray arrayWithObjects:[NSNull null],actions,nil];
 		return nil;
@@ -383,6 +380,30 @@ void PressButtonInWindow(id buttonName, id window)
     QSObject *childDoc = [self firstDocumentObjectForElement:child depth:depth - 1 title:title];
     if (childDoc) return childDoc;
   }
+  return nil;
+}
+
+- (void)selectAndDisplayObject:(QSObject *)object
+{
+  if (object) [QSPreferredCommandInterface executePartialCommand:[NSArray arrayWithObject:object]];
+  else NSBeep();
+}
+
+- (QSObject *)fetchCurrentFocusedWindow
+{
+  [self selectAndDisplayObject:[self focusedWindowObject]];
+  return nil;
+}
+
+- (QSObject *)fetchCurrentDocument
+{
+  [self selectAndDisplayObject:[self currentDocumentObject]];
+  return nil;
+}
+
+- (QSObject *)fetchCurrentApp
+{
+  [self selectAndDisplayObject:[self activeAppObject]];
   return nil;
 }
 
