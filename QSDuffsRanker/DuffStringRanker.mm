@@ -286,14 +286,32 @@ double substring_score (UniChar* first1, UniChar* last1, UniChar* first2, UniCha
 
 
 */
+
+/**
+ * Adapts the given string by changing diacritic characters to their base characters, 
+ * so that e.g. ö is treated like o etc. 
+ *
+ * May be extended in the future to support more transformations.
+ */
+NSMutableString* adaptedString(NSString* input)
+{
+	NSMutableString *tmp = [[input mutableCopy] autorelease];
+	if (!CFStringTransform((CFMutableStringRef)tmp, NULL, kCFStringTransformStripDiacritics, false))
+		NSLog(@"Tranform not successful");
+	return tmp;
+}
+
 - (double)scoreForAbbreviation:(NSString*)anAbbreviation
 {
 //	NSLog(@"%s %@", _cmd, anAbbreviation);
 
-	unichar_string str(anAbbreviation);
-	if(str.length == 0 || !is_subset(string, string + length, str.begin(), str.end()))
+	if ([anAbbreviation length] == 0)
 		return IGNORED_SCORE;
-
+	
+	unichar_string str(adaptedString(anAbbreviation));
+	if(!is_subset(string, string + length, str.begin(), str.end()))
+		return -1.0;
+	
 	double len = str.length;
 	double unit = 1.0 / (len+1.0);
 
@@ -321,8 +339,11 @@ double substring_score (UniChar* first1, UniChar* last1, UniChar* first2, UniCha
 
 - (NSIndexSet*)maskForAbbreviation:(NSString*)anAbbreviation
 {
-	unichar_string str(anAbbreviation);
-	if(str.length == 0 || !is_subset(string, string + length, str.begin(), str.end()))
+	if ([anAbbreviation length] == 0)
+		return nil;
+	
+	unichar_string str(adaptedString(anAbbreviation));
+	if(!is_subset(string, string + length, str.begin(), str.end()))
 		return nil;
 
 	unsigned indices[str.length];
