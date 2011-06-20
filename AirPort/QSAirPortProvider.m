@@ -111,7 +111,18 @@ NSInteger sortNetworkObjects(QSObject *net1, QSObject *net2, void *context)
             [newObject setObject:net forType:kQSWirelessNetworkType];
             [newObject setPrimaryType:kQSWirelessNetworkType];
             [newObject setParentID:[object identifier]];
-            [newObject setIcon:[QSResourceManager imageNamed:@"AirPort" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+            int signal = [net.rssi intValue];
+            if (signal > -55) {
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirportInMenu4" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+            } else if (signal > -65) {
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirportInMenu3" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+            } else if (signal > -75) {
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirportInMenu2" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+            } else if (signal > -95) {
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirportInMenu1" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+            } else {
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirportInMenu0" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+            }
             [objects addObject:newObject];
         }
         [object setChildren:[objects sortedArrayUsingFunction:sortNetworkObjects context:NULL]];
