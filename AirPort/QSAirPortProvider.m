@@ -134,12 +134,9 @@ NSInteger sortNetworkObjects(QSObject *net1, QSObject *net2, void *context)
     NSError *error = nil;
     CWInterface *wif = [CWInterface interface];
     BOOL setPowerSuccess = [wif setPower:YES error:&error];
-    
-#ifdef DEBUG
     if (! setPowerSuccess) {
         NSLog(@"error enabling airport: %@", error);
     }
-#endif
     return nil;
 }
 
@@ -148,12 +145,9 @@ NSInteger sortNetworkObjects(QSObject *net1, QSObject *net2, void *context)
     NSError *error = nil;
     CWInterface *wif = [CWInterface interface];
     BOOL setPowerSuccess = [wif setPower:NO error:&error];
-    
-#ifdef DEBUG
     if (! setPowerSuccess) {
         NSLog(@"error disabling airport: %@", error);
     }
-#endif
     return nil;
 }
 
