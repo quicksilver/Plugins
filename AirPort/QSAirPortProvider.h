@@ -11,6 +11,5 @@
 
 @interface QSAirPortNetworkActionProvider : QSActionProvider{
 }
-- (NSString *) passwordForAirPortNetwork:(NSString *)network;
 
 @end

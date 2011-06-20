@@ -152,33 +152,15 @@ NSInteger sortNetworkObjects(QSObject *net1, QSObject *net2, void *context)
     NSError *error = nil;
     CWInterface *wif = [CWInterface interface];
     CWNetwork *net = [dObject objectForType:kQSWirelessNetworkType];
-    NSString *password = [self passwordForAirPortNetwork:net.ssid];
+    NSString *passphrase = [net.wirelessProfile passphrase];
     NSDictionary *params = nil;
-    if (password != nil) {
-        params = [NSDictionary dictionaryWithObjectsAndKeys:password, kCWAssocKeyPassphrase, nil];
+    if (passphrase != nil) {
+        params = [NSDictionary dictionaryWithObjectsAndKeys:passphrase, kCWAssocKeyPassphrase, nil];
     }
     
     [wif associateToNetwork:net parameters:params error:&error];
     
     return nil;
-}
-
-- (NSString *)passwordForAirPortNetwork:(NSString *)network
-{
-    void *s = NULL;
-    unsigned long l = 0;
-    NSString *where = @"AirPort Network";
-    NSString *string = nil;
-    OSStatus status = SecKeychainFindGenericPassword(
-        NULL,
-        [where length], [where UTF8String],
-        [network length], [network UTF8String],
-        &l, &s,
-        NULL);
-    if(status == noErr)
-        string = [NSString stringWithCString:(const char *)s length:l];
-    SecKeychainItemFreeContent(NULL, (void *)s);
-    return string;
 }
 
 - (NSArray *)validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject
