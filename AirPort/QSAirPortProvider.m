@@ -2,35 +2,6 @@
 #include <Security/Security.h>
 #include <CoreServices/CoreServices.h>
 
-NSArray *getPreferredNetworks(void)
-{
-    // check stored System Preferences and return SSIDs
-    NSMutableArray *result = [NSMutableArray arrayWithCapacity:1];
-    @try {
-        NSDictionary *config = [NSDictionary dictionaryWithContentsOfFile:@"/Library/Preferences/SystemConfiguration/preferences.plist"];
-        NSDictionary *sets = [config objectForKey:@"Sets"];
-        for (NSString *setKey in sets) {
-            NSDictionary *set = [sets objectForKey:setKey];
-            NSDictionary *network = [set objectForKey:@"Network"];
-            NSDictionary *interface = [network objectForKey:@"Interface"];
-            for(NSString *interfaceKey in interface) {
-                NSDictionary *bsdInterface = [interface objectForKey:interfaceKey];
-                for(NSString *namedInterfaceKey in bsdInterface) {
-                    NSDictionary *namedInterface = [bsdInterface objectForKey:namedInterfaceKey];
-                    NSArray *networks = [namedInterface objectForKey:@"PreferredNetworks"];
-                    for (NSDictionary *network in networks) {
-                        NSString *ssid = [network objectForKey:@"SSID_STR"];
-                        [result addObject:ssid];
-                    }
-                }
-            }
-        }
-    } @catch (NSException * e) {
-        NSLog(@"Failed to read known networks: %@", e);
-    }
-    return result;
-}
-
 NSArray *getAvailableNetworks(void)
 {
     // scan for currently available wireless networks
@@ -90,7 +61,6 @@ NSInteger sortNetworkObjects(QSObject *net1, QSObject *net2, void *context)
         NSMutableArray *objects = [NSMutableArray arrayWithCapacity:1];
         QSObject *newObject = nil;
         NSArray *networks = getAvailableNetworks(); 
-        NSArray *preferredNetworks = getPreferredNetworks();
         for(CWNetwork *net in networks)
         {
             NSString *ssid = net.ssid;
@@ -100,7 +70,7 @@ NSInteger sortNetworkObjects(QSObject *net1, QSObject *net2, void *context)
             if ([net.securityMode intValue] == 0) {
                 securityString = @"";
             }
-            if([preferredNetworks containsObject:ssid])
+            if (net.wirelessProfile)
             {
                 // indicate that this is a preferred network
                 newObject = [QSObject objectWithName:[NSString stringWithFormat:@"%@ ★", ssid]];
