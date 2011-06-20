@@ -95,17 +95,22 @@ NSInteger sortNetworkObjects(QSObject *net1, QSObject *net2, void *context)
         {
             NSString *ssid = net.ssid;
             NSNumber *priority = net.rssi;
+            NSString *securityString = @"Secure ";
+            // this should use kCWSecurityModeOpen instead of 0, but that constant seems to be (null)
+            if ([net.securityMode intValue] == 0) {
+                securityString = @"";
+            }
             if([preferredNetworks containsObject:ssid])
             {
                 // indicate that this is a preferred network
                 newObject = [QSObject objectWithName:[NSString stringWithFormat:@"%@ ★", ssid]];
-                [newObject setDetails:@"AirPort Network (Preferred)"];
+                [newObject setDetails:[NSString stringWithFormat:@"%@AirPort Network (Preferred)", securityString]];
                 // artificially inflate the priority for preferred networks
                 priority = [NSNumber numberWithInt:[priority intValue] + 1000];
             } else {
                 // just use the name
                 newObject = [QSObject objectWithName:ssid];
-                [newObject setDetails:@"AirPort Network"];
+                [newObject setDetails:[NSString stringWithFormat:@"%@AirPort Network", securityString]];
             }
             [newObject setObject:priority forMeta:@"priority"];
             [newObject setObject:net forType:kQSWirelessNetworkType];
