@@ -99,13 +99,13 @@ NSInteger sortNetworkObjects(QSObject *net1, QSObject *net2, void *context)
             {
                 // indicate that this is a preferred network
                 newObject = [QSObject objectWithName:[NSString stringWithFormat:@"%@ ★", ssid]];
-                [newObject setDetails:[NSString stringWithFormat:@"%@ AirPort Network (Preferred)", ssid]];
+                [newObject setDetails:@"AirPort Network (Preferred)"];
                 // artificially inflate the priority for preferred networks
                 priority = [NSNumber numberWithInt:[priority intValue] + 1000];
             } else {
                 // just use the name
                 newObject = [QSObject objectWithName:ssid];
-                [newObject setDetails:[NSString stringWithFormat:@"%@ AirPort Network", ssid]];
+                [newObject setDetails:@"AirPort Network"];
             }
             [newObject setObject:priority forMeta:@"priority"];
             [newObject setObject:net forType:kQSWirelessNetworkType];
