@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
@@ -15,13 +15,32 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>A5</string>
+	<string>A8</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2004, Blacktree, Inc.</string>
 	<key>NSPrincipalClass</key>
 	<string>QSAirPortNetworkObjectSource</string>
 	<key>QSActions</key>
 	<dict>
+		<key>QSAirPortDisassociate</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAirPortNetworkActionProvider</string>
+			<key>actionSelector</key>
+			<string>disassociateAirPort</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSAirPortItemType</string>
+			</array>
+			<key>icon</key>
+			<string>GenericNetworkIcon</string>
+			<key>name</key>
+			<string>Disconnect Current Network</string>
+			<key>precedence</key>
+			<integer>1</integer>
+			<key>validatesObjects</key>
+			<true/>
+		</dict>
 		<key>QSAirPortNetworkSelectAction</key>
 		<dict>
 			<key>actionClass</key>
@@ -30,42 +49,91 @@
 			<string>selectNetwork:</string>
 			<key>directTypes</key>
 			<array>
-				<string>QSAirPortNetworkSSIDType</string>
+				<string>QSWirelessNetworkType</string>
 			</array>
 			<key>icon</key>
-			<string>AirPortIcon</string>
+			<string>GenericNetworkIcon</string>
 			<key>name</key>
 			<string>Select Network</string>
 			<key>precedence</key>
 			<integer>3</integer>
 		</dict>
+		<key>QSAirPortPowerDisable</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAirPortNetworkActionProvider</string>
+			<key>actionSelector</key>
+			<string>disableAirPort</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSAirPortItemType</string>
+			</array>
+			<key>icon</key>
+			<string>Power</string>
+			<key>name</key>
+			<string>Turn AirPort Off</string>
+			<key>precedence</key>
+			<integer>3</integer>
+			<key>validatesObjects</key>
+			<true/>
+		</dict>
+		<key>QSAirPortPowerEnable</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAirPortNetworkActionProvider</string>
+			<key>actionSelector</key>
+			<string>enableAirPort</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSAirPortItemType</string>
+			</array>
+			<key>icon</key>
+			<string>Power</string>
+			<key>name</key>
+			<string>Turn AirPort On</string>
+			<key>precedence</key>
+			<integer>3</integer>
+			<key>validatesObjects</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>QSPlugIn</key>
 	<dict>
 		<key>author</key>
-		<string>Blacktree, Inc.</string>
+		<string>Rob McBroom</string>
 		<key>categories</key>
 		<array>
 			<string>System</string>
 		</array>
 		<key>description</key>
-		<string>Adds AirPort networks to the catalog.</string>
+		<string>Control AirPort power and connect to available networks</string>
 		<key>extendedDescription</key>
-		<string>Adds a catalog source for AirPort networks as well as actions for selecting them and internal commands disabling Airport (Beta)</string>
+		<string>&lt;p&gt;This plug-in adds a single item to the catalog called &amp;#8220;AirPort&amp;#8221;.&lt;/p&gt;
+
+&lt;h3 id=&quot;control_airport&quot;&gt;Control AirPort&lt;/h3&gt;
+
+&lt;p&gt;With AirPort selected, you can:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Toggle power on and off&lt;/li&gt;
+&lt;li&gt;Disconnect from the current network while leaving the interface powered on&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;browse_and_connect_to_networks&quot;&gt;Browse and Connect to Networks&lt;/h3&gt;
+
+&lt;p&gt;Selecting AirPort and hitting → or / will scan for available networks and give you a list. (This sometimes takes a minute.) You can then select a network and attempt to connect to it.&lt;/p&gt;
+&lt;p&gt;The list will be sorted by signal strength with preferred networks listed first.&lt;/p&gt;
+</string>
 		<key>icon</key>
-		<string>com.apple.airport.adminutility</string>
+		<string>com.apple.airport.airportutility</string>
 	</dict>
 	<key>QSPresetAdditions</key>
 	<array>
 		<dict>
 			<key>ID</key>
-			<string>QSPresetWirelessNetworks</string>
-			<key>catalogPath</key>
-			<string>QSPresetSystemGroup/QSPresetDevices</string>
-			<key>feature</key>
-			<integer>1</integer>
+			<string>QSPresetAirPortModule</string>
 			<key>name</key>
-			<string>AirPort Networks</string>
+			<string>AirPort Interface</string>
 			<key>source</key>
 			<string>QSAirPortNetworkObjectSource</string>
 		</dict>
@@ -77,34 +145,9 @@
 			<key>QSAirPortNetworkActionProvider</key>
 			<string>QSAirPortNetworkActionProvider</string>
 		</dict>
-		<key>QSInternalMessages</key>
-		<dict>
-			<key>QSAirPortTurnOff</key>
-			<dict>
-				<key>action</key>
-				<string>turnAirPortOff</string>
-				<key>icon</key>
-				<string>AirPortIcon</string>
-				<key>name</key>
-				<string>Turn AirPort Off</string>
-				<key>target</key>
-				<string>QSAirPortNetworkActionProvider</string>
-			</dict>
-			<key>QSAirPortTurnOn</key>
-			<dict>
-				<key>action</key>
-				<string>turnAirPortOn</string>
-				<key>icon</key>
-				<string>AirPortIcon</string>
-				<key>name</key>
-				<string>Turn AirPort On</string>
-				<key>target</key>
-				<string>QSAirPortNetworkActionProvider</string>
-			</dict>
-		</dict>
 		<key>QSObjectHandlers</key>
 		<dict>
-			<key>QSAirPortNetworkSSIDType</key>
+			<key>QSAirPortItemType</key>
 			<string>QSAirPortNetworkObjectSource</string>
 		</dict>
 		<key>QSObjectSources</key>
@@ -112,11 +155,16 @@
 			<key>QSAirPortNetworkObjectSource</key>
 			<string>QSAirPortNetworkObjectSource</string>
 		</dict>
-	</dict>
-	<key>QSRequirements</key>
-	<dict>
-		<key>feature</key>
-		<integer>2</integer>
+		<key>QSTypeDefinitions</key>
+		<dict>
+			<key>QSWirelessNetworkType</key>
+			<dict>
+				<key>icon</key>
+				<string>com.apple.airport.airportutility</string>
+				<key>name</key>
+				<string>AirPort Networks</string>
+			</dict>
+		</dict>
 	</dict>
 </dict>
 </plist>

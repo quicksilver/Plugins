@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,8 +11,10 @@
 		7F05ECEA08516C8600A8EC0C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F05ECE908516C8600A8EC0C /* Security.framework */; };
 		7F35FF4007F9ACD90056051D /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3C07F9ACD90056051D /* QSCore.framework */; };
 		7F35FF4207F9ACD90056051D /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3E07F9ACD90056051D /* QSFoundation.framework */; };
-		7F840C89096C28A1006E6F0E /* Apple80211.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F840C88096C28A1006E6F0E /* Apple80211.framework */; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		D421CB1C138EEFCF00CE5769 /* CoreWLAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D421CB1B138EEFCF00CE5769 /* CoreWLAN.framework */; };
+		D464FBBA13934D5C0057263F /* Power.icns in Resources */ = {isa = PBXBuildFile; fileRef = D464FBB913934D5C0057263F /* Power.icns */; };
+		D4FC4B051393451700124D0B /* AirPort.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4FC4B041393451700124D0B /* AirPort.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,17 +28,19 @@
 		14A8AA7010CE07BC003857E3 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSAirPortPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAirPortPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		7F05ECE108516C0900A8EC0C /* QSAirPortProvider.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSAirPortProvider.h; sourceTree = "<group>"; };
-		7F05ECE208516C0900A8EC0C /* QSAirPortProvider.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSAirPortProvider.m; sourceTree = "<group>"; };
+		7F05ECE208516C0900A8EC0C /* QSAirPortProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSAirPortProvider.m; sourceTree = "<group>"; };
 		7F05ECE908516C8600A8EC0C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		7F35FF3C07F9ACD90056051D /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
 		7F35FF3D07F9ACD90056051D /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
 		7F35FF3E07F9ACD90056051D /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
 		7F35FF3F07F9ACD90056051D /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
-		7F840C88096C28A1006E6F0E /* Apple80211.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apple80211.framework; path = /System/Library/PrivateFrameworks/Apple80211.framework; sourceTree = "<absolute>"; };
 		7FFA8E9C0816CCCA00A858CD /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
 		7FFA8E9D0816CCCA00A858CD /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* AirPort Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AirPort Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D421CB1B138EEFCF00CE5769 /* CoreWLAN.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreWLAN.framework; path = /System/Library/Frameworks/CoreWLAN.framework; sourceTree = "<absolute>"; };
+		D464FBB913934D5C0057263F /* Power.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Power.icns; sourceTree = "<group>"; };
+		D4FC4B041393451700124D0B /* AirPort.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AirPort.icns; sourceTree = "<group>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +53,7 @@
 				7F35FF4007F9ACD90056051D /* QSCore.framework in Frameworks */,
 				7F35FF4207F9ACD90056051D /* QSFoundation.framework in Frameworks */,
 				7F05ECEA08516C8600A8EC0C /* Security.framework in Frameworks */,
-				7F840C89096C28A1006E6F0E /* Apple80211.framework in Frameworks */,
+				D421CB1C138EEFCF00CE5769 /* CoreWLAN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +69,7 @@
 				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
+				D421CB1B138EEFCF00CE5769 /* CoreWLAN.framework */,
 			);
 			name = QSAirPortPlugIn;
 			sourceTree = "<group>";
@@ -72,6 +77,8 @@
 		0259C582FE90428111CA0C5A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D464FBB913934D5C0057263F /* Power.icns */,
+				D4FC4B041393451700124D0B /* AirPort.icns */,
 				8D1AC9730486D14A00FE50C9 /* Info.plist */,
 			);
 			name = Resources;
@@ -103,7 +110,6 @@
 		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7F840C88096C28A1006E6F0E /* Apple80211.framework */,
 				7F05ECE908516C8600A8EC0C /* Security.framework */,
 				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
 				7F35FF3C07F9ACD90056051D /* QSCore.framework */,
@@ -169,8 +175,15 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7F07AF12085E432900E2AFC4 /* Build configuration list for PBXProject "QSAirPortPlugIn" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0259C574FE90428111CA0C5A /* QSAirPortPlugIn */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,6 +198,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FC4B051393451700124D0B /* AirPort.icns in Resources */,
+				D464FBBA13934D5C0057263F /* Power.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +237,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14A8AA6A10CE07BC003857E3 /* Debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -272,6 +289,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14A8AA7010CE07BC003857E3 /* Release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
