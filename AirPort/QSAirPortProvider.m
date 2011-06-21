@@ -87,16 +87,16 @@ NSInteger sortNetworkObjects(QSObject *net1, QSObject *net2, void *context)
             [newObject setPrimaryType:kQSWirelessNetworkType];
             [newObject setParentID:[object identifier]];
             int signal = [net.rssi intValue];
-            if (signal > -55) {
-                [newObject setIcon:[QSResourceManager imageNamed:@"AirportInMenu4" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
-            } else if (signal > -65) {
-                [newObject setIcon:[QSResourceManager imageNamed:@"AirportInMenu3" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
-            } else if (signal > -75) {
-                [newObject setIcon:[QSResourceManager imageNamed:@"AirportInMenu2" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
-            } else if (signal > -95) {
-                [newObject setIcon:[QSResourceManager imageNamed:@"AirportInMenu1" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+            if (signal > -70) {
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+            } else if (signal > -80) {
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort3" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+            } else if (signal > -90) {
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort2" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+            } else if (signal > -100) {
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort1" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
             } else {
-                [newObject setIcon:[QSResourceManager imageNamed:@"AirportInMenu0" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort0" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
             }
             [objects addObject:newObject];
         }
