@@ -88,15 +88,15 @@ NSInteger sortNetworkObjects(QSObject *net1, QSObject *net2, void *context)
             [newObject setParentID:[object identifier]];
             int signal = [net.rssi intValue];
             if (signal > -70) {
-                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort" inBundle:[NSBundle bundleForClass:[self class]]]];
             } else if (signal > -80) {
-                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort3" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort3" inBundle:[NSBundle bundleForClass:[self class]]]];
             } else if (signal > -90) {
-                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort2" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort2" inBundle:[NSBundle bundleForClass:[self class]]]];
             } else if (signal > -100) {
-                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort1" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort1" inBundle:[NSBundle bundleForClass:[self class]]]];
             } else {
-                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort0" inBundle:[NSBundle bundleWithIdentifier:@"com.blacktree.Quicksilver.QSAirPortPlugIn"]]];
+                [newObject setIcon:[QSResourceManager imageNamed:@"AirPort0" inBundle:[NSBundle bundleForClass:[self class]]]];
             }
             [objects addObject:newObject];
         }
