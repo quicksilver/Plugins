@@ -41,6 +41,25 @@
 			<key>validatesObjects</key>
 			<true/>
 		</dict>
+		<key>QSAirPortNetworkNewConnection</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAirPortNetworkActionProvider</string>
+			<key>actionSelector</key>
+			<string>connectNewNetwork:</string>
+			<key>directTypes</key>
+			<array>
+				<string>QSWirelessNetworkType</string>
+			</array>
+			<key>icon</key>
+			<string>GenericNetworkIcon</string>
+			<key>name</key>
+			<string>Connect to Network (via Menubar)</string>
+			<key>precedence</key>
+			<integer>3</integer>
+			<key>validatesObjects</key>
+			<true/>
+		</dict>
 		<key>QSAirPortNetworkSelectAction</key>
 		<dict>
 			<key>actionClass</key>
@@ -54,9 +73,11 @@
 			<key>icon</key>
 			<string>GenericNetworkIcon</string>
 			<key>name</key>
-			<string>Select Network</string>
+			<string>Connect to Network</string>
 			<key>precedence</key>
 			<integer>3</integer>
+			<key>validatesObjects</key>
+			<true/>
 		</dict>
 		<key>QSAirPortPowerDisable</key>
 		<dict>
@@ -123,6 +144,7 @@
 
 &lt;p&gt;Selecting AirPort and hitting → or / will scan for available networks and give you a list. (This sometimes takes a minute.) You can then select a network and attempt to connect to it.&lt;/p&gt;
 &lt;p&gt;The list will be sorted by signal strength with preferred networks listed first.&lt;/p&gt;
+&lt;p&gt;Preferred networks will be connected automatically. New networks will be &quot;clicked&quot; in the AirPort menubar item, as it provides a good interface for setting up new connections. (The latter action requires &quot;Enable access for assistive devices&quot; in the Universal Access section of System Preferences.)&lt;/p&gt;
 </string>
 		<key>icon</key>
 		<string>com.apple.airport.airportutility</string>

@@ -18,6 +18,7 @@
 		D4551AF613B0CF6800E18C97 /* AirPort2.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4551AF213B0CF6800E18C97 /* AirPort2.icns */; };
 		D4551AF713B0CF6800E18C97 /* AirPort3.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4551AF313B0CF6800E18C97 /* AirPort3.icns */; };
 		D464FBBA13934D5C0057263F /* Power.icns in Resources */ = {isa = PBXBuildFile; fileRef = D464FBB913934D5C0057263F /* Power.icns */; };
+		D476BF7013B2C9A700368D14 /* AirPort.scpt in Resources */ = {isa = PBXBuildFile; fileRef = D476BF6F13B2C87200368D14 /* AirPort.scpt */; };
 		D4FC4B051393451700124D0B /* AirPort.icns in Resources */ = {isa = PBXBuildFile; fileRef = D4FC4B041393451700124D0B /* AirPort.icns */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		D4551AF213B0CF6800E18C97 /* AirPort2.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AirPort2.icns; sourceTree = "<group>"; };
 		D4551AF313B0CF6800E18C97 /* AirPort3.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AirPort3.icns; sourceTree = "<group>"; };
 		D464FBB913934D5C0057263F /* Power.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Power.icns; sourceTree = "<group>"; };
+		D476BF6F13B2C87200368D14 /* AirPort.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = AirPort.scpt; sourceTree = "<group>"; };
 		D4FC4B041393451700124D0B /* AirPort.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AirPort.icns; sourceTree = "<group>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 		0259C582FE90428111CA0C5A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D476BF6F13B2C87200368D14 /* AirPort.scpt */,
 				D4551AF013B0CF6800E18C97 /* AirPort0.icns */,
 				D4551AF113B0CF6800E18C97 /* AirPort1.icns */,
 				D4551AF213B0CF6800E18C97 /* AirPort2.icns */,
@@ -210,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D476BF7013B2C9A700368D14 /* AirPort.scpt in Resources */,
 				D4FC4B051393451700124D0B /* AirPort.icns in Resources */,
 				D464FBBA13934D5C0057263F /* Power.icns in Resources */,
 				D4551AF413B0CF6800E18C97 /* AirPort0.icns in Resources */,

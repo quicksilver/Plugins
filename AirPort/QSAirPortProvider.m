@@ -163,14 +163,41 @@ NSInteger sortNetworkObjects(QSObject *net1, QSObject *net2, void *context)
     return nil;
 }
 
+- (QSObject *)connectNewNetwork:(QSObject *)dObject
+{    
+    CWNetwork *net = [dObject objectForType:kQSWirelessNetworkType];
+    NSString *scriptPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"AirPort" ofType:@"scpt"];
+    NSAppleScript *script = [[NSAppleScript alloc] initWithContentsOfURL:[NSURL fileURLWithPath:scriptPath] error:nil];
+    [script executeSubroutine:@"connect_to_network" arguments:[NSArray arrayWithObjects:net.ssid, nil] error:nil];
+#ifdef DEBUG
+    NSLog(@"Connecting to new network: \"%@\"", net.ssid);
+    NSLog(@"ApleScript path: %@", scriptPath);
+#endif
+    return nil;
+}
+
 - (NSArray *)validActionsForDirectObject:(QSObject *)dObject indirectObject:(QSObject *)iObject
 {
-    CWInterface *wif = [CWInterface interface];
-    if([wif power])
-    {
-        return [NSArray arrayWithObjects:@"QSAirPortPowerDisable", @"QSAirPortDisassociate", nil];
-    } else {
-        return [NSArray arrayWithObject:@"QSAirPortPowerEnable"];
+    if ([dObject containsType:kQSAirPortItemType]) {
+        // the AirPort object
+        CWInterface *wif = [CWInterface interface];
+        if([wif power])
+        {
+            return [NSArray arrayWithObjects:@"QSAirPortPowerDisable", @"QSAirPortDisassociate", nil];
+        } else {
+            return [NSArray arrayWithObject:@"QSAirPortPowerEnable"];
+        }
+    } else if ([dObject containsType:kQSWirelessNetworkType]) {
+        // an AirPort network
+        CWNetwork *net = [dObject objectForType:kQSWirelessNetworkType];
+        if (net.wirelessProfile) {
+            // preferred network
+            return [NSArray arrayWithObject:@"QSAirPortNetworkSelectAction"];
+        } else {
+            return [NSArray arrayWithObject:@"QSAirPortNetworkNewConnection"];
+        }
+
     }
+    return nil;
 }
 @end
