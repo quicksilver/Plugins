@@ -3,17 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0A61AF05067688D900A28BC8 /* CalculatorAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A61AF03067688D900A28BC8 /* CalculatorAction.m */; };
 		0A83260706B74EBA00F4F4EE /* CalculatorPrefPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A83260506B74EBA00F4F4EE /* CalculatorPrefPane.m */; };
 		0AB0246506D0356D0073A3CD /* Info.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AB0246406D0356D0073A3CD /* Info.rtf */; };
-		4DB839FD0D13FAA700A0CA18 /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4DB839FC0D13FAA700A0CA18 /* element.xml */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		CD8F6FD7137170A9009F84D5 /* Calculate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8F6FD6137170A9009F84D5 /* Calculate.framework */; };
 		CD8F700413717271009F84D5 /* CalculatorPrefPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8F700313717271009F84D5 /* CalculatorPrefPane.xib */; };
+		CDF4083213C35E43002F4793 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = CDF4083113C35E43002F4793 /* COPYING */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,12 +31,12 @@
 		14A8D03C10CE4FDF003857E3 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
 		14A8D03D10CE4FDF003857E3 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		14A8D03E10CE4FDF003857E3 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		4DB839FC0D13FAA700A0CA18 /* element.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
-		8D5B49B6048680CD000E48DA /* Calculator Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD8F6F4813716D4C009F84D5 /* CalculatePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalculatePrivate.h; path = Apps/QSPlugins/Plugins/com.apple.calculator/trunk/CalculatePrivate.h; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		CD8F6F4813716D4C009F84D5 /* CalculatePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatePrivate.h; sourceTree = "<group>"; };
 		CD8F6FD6137170A9009F84D5 /* Calculate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Calculate.framework; path = /System/Library/PrivateFrameworks/Calculate.framework; sourceTree = "<absolute>"; };
-		CD8F700313717271009F84D5 /* CalculatorPrefPane.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CalculatorPrefPane.xib; path = Apps/QSPlugins/Plugins/com.apple.calculator/trunk/CalculatorPrefPane.xib; sourceTree = SYSTEM_DEVELOPER_DIR; };
+		CD8F700313717271009F84D5 /* CalculatorPrefPane.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorPrefPane.xib; sourceTree = "<group>"; };
+		CDF4083113C35E43002F4793 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = COPYING; path = Apps/QSPlugins/Plugins/com.apple.calculator/trunk/COPYING.txt; sourceTree = DEVELOPER_DIR; };
+		CDF408F413C36339002F4793 /* Calculator Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,30 +57,20 @@
 			children = (
 				4DB839940D13F43D00A0CA18 /* Configuration */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
-				32C88E010371C26100C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
-				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
-				19C28FB8FE9D52D311CA2CBB /* Products */,
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				CDF408F513C36339002F4793 /* Products */,
 			);
 			name = TSColloquyPlugin;
-			sourceTree = "<group>";
-		};
-		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
-				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
-			);
-			name = "Frameworks and Libraries";
 			sourceTree = "<group>";
 		};
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				0AB0246406D0356D0073A3CD /* Info.rtf */,
-				4DB839FC0D13FAA700A0CA18 /* element.xml */,
 				CD8F700313717271009F84D5 /* CalculatorPrefPane.xib */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
+				CDF4083113C35E43002F4793 /* COPYING */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -88,7 +78,7 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CD8F6F4813716D4C009F84D5 /* CalculatePrivate.h */,
+				CDF408C413C36284002F4793 /* Private */,
 				0A61AF04067688D900A28BC8 /* CalculatorAction.h */,
 				0A61AF03067688D900A28BC8 /* CalculatorAction.m */,
 				0A83260406B74EBA00F4F4EE /* CalculatorPrefPane.h */,
@@ -106,28 +96,6 @@
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
 		};
-		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		19C28FB8FE9D52D311CA2CBB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8D5B49B6048680CD000E48DA /* Calculator Module.qsplugin */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		32C88E010371C26100C91783 /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
 		4DB839940D13F43D00A0CA18 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +110,22 @@
 			);
 			path = Configuration;
 			sourceTree = QS_SOURCE_ROOT;
+		};
+		CDF408C413C36284002F4793 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				CD8F6F4813716D4C009F84D5 /* CalculatePrivate.h */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
+		CDF408F513C36339002F4793 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDF408F413C36339002F4793 /* Calculator Module.qsplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -162,7 +146,7 @@
 			name = "Calculator Module";
 			productInstallPath = "$(HOME)/Library/Bundles";
 			productName = TSColloquyPlugin;
-			productReference = 8D5B49B6048680CD000E48DA /* Calculator Module.qsplugin */;
+			productReference = CDF408F413C36339002F4793 /* Calculator Module.qsplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -171,7 +155,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = BB8B95730C24E834004C6479 /* Build configuration list for PBXProject "CalculatorPlugin" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -181,6 +165,7 @@
 				German,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* TSColloquyPlugin */;
+			productRefGroup = CDF408F513C36339002F4793 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -195,8 +180,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AB0246506D0356D0073A3CD /* Info.rtf in Resources */,
-				4DB839FD0D13FAA700A0CA18 /* element.xml in Resources */,
 				CD8F700413717271009F84D5 /* CalculatorPrefPane.xib in Resources */,
+				CDF4083213C35E43002F4793 /* COPYING in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +220,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14A8D03E10CE4FDF003857E3 /* Release.xcconfig */;
 			buildSettings = {
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -270,6 +256,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14A8D03810CE4FDF003857E3 /* Debug.xcconfig */;
 			buildSettings = {
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
