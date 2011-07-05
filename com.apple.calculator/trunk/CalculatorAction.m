@@ -83,7 +83,7 @@
     answer[0] = '\0';
     int success
 	= CalculatePerformExpression((char *)[fixedQuery UTF8String],
-								 10, 1, answer);
+								 4, 1, answer);
     if (!success) {
 		// calculation failed
 		return dObject;
