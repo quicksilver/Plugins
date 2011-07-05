@@ -150,7 +150,7 @@
 				 [textShadow setShadowBlurRadius:10];
 				 [textShadow setShadowColor:[NSColor colorWithDeviceWhite:0 alpha:0.64]];
 				 
-				NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[NSFont boldSystemFontOfSize:size],NSFontAttributeName,
+				NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[NSFont boldSystemFontOfSize:size-1],NSFontAttributeName,
 											textColor, NSForegroundColorAttributeName,
 											textShadow, NSShadowAttributeName, nil];
 				
