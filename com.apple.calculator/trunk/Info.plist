@@ -6,8 +6,6 @@
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>Calculator Module</string>
-	<key>CFBundleGetInfoString</key>
-	<string>Calculator Module version 1.3.1, Copyright © 2004 TildeSoft.</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.blacktree.quicksilver.TSCalculatorPlugin</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -18,10 +16,8 @@
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.3</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>18F</string>
+	<string>193</string>
 	<key>QSActions</key>
 	<dict>
 		<key>CalculatorCalculateFormulaAction</key>
@@ -68,6 +64,11 @@
 		<key>QSActionProviders</key>
 		<dict>
 			<key>CalculatorActionProvider</key>
+			<string>CalculatorActionProvider</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>QSFormulaType</key>
 			<string>CalculatorActionProvider</string>
 		</dict>
 		<key>QSPreferencePanes</key>
