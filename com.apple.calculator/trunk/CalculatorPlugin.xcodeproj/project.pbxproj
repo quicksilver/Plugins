@@ -32,7 +32,7 @@
 		14A8D03D10CE4FDF003857E3 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		14A8D03E10CE4FDF003857E3 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD6B8C9913C4F508004FF7BB /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = COPYING; path = Apps/QSPlugins/Plugins/com.apple.calculator/trunk/COPYING; sourceTree = DEVELOPER_DIR; };
+		CD6B8C9913C4F508004FF7BB /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		CD8F6F4813716D4C009F84D5 /* CalculatePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatePrivate.h; sourceTree = "<group>"; };
 		CD8F6FD6137170A9009F84D5 /* Calculate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Calculate.framework; path = /System/Library/PrivateFrameworks/Calculate.framework; sourceTree = "<absolute>"; };
 		CD8F700313717271009F84D5 /* CalculatorPrefPane.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorPrefPane.xib; sourceTree = "<group>"; };
