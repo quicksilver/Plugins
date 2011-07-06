@@ -17,7 +17,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.3</string>
 	<key>CFBundleVersion</key>
-	<string>18F</string>
+	<string>192</string>
 	<key>QSActions</key>
 	<dict>
 		<key>CalculatorCalculateFormulaAction</key>
@@ -61,14 +61,14 @@
 	</dict>
 	<key>QSRegistration</key>
 	<dict>
-		<key>QSObjectHandlers</key>
-		<dict>
-			<key>QSFormulaType</key>
-			<string>CalculatorActionProvider</string>
-		</dict>
 		<key>QSActionProviders</key>
 		<dict>
 			<key>CalculatorActionProvider</key>
+			<string>CalculatorActionProvider</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>QSFormulaType</key>
 			<string>CalculatorActionProvider</string>
 		</dict>
 		<key>QSPreferencePanes</key>

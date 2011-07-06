@@ -2,6 +2,8 @@
 //  CalculatorAction.h
 //  Quicksilver
 //
+// Created by Kevin Ballard, modified by Patrick Robertson
+// Copyright QSApp.com 2011
 
 #define CalculatorCalculateAction @"CalculatorCalculateAction"
 

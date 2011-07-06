@@ -2,6 +2,8 @@
 //  CalculatorAction.m
 //  Quicksilver
 //
+// Created by Kevin Ballard, modified by Patrick Robertson
+// Copyright QSApp.com 2011
 
 #import <QSCore/QSLibrarian.h>
 #import <QSCore/QSNotifyMediator.h>
@@ -61,7 +63,7 @@
 		value = [dObject objectForType:QSTextType];
 	}
 	
-	// Source taken from QSB (BELOW) See COPYING in the Resource folder for full qopyright details
+	// Source taken from QSB (BELOW) See COPYING in the Resource folder for full copyright details
 	
 	// Fix up separators and decimals (for current user's locale). The Calculator framework wants
     // '.' for decimals, and no grouping separators.
@@ -103,12 +105,14 @@
 	
 	QSObject *result = [self performCalculation:object];
 	
-	// Still a formula object (i.e. there was a problem with the syntax)
+	// Still a formula object (i.e. there was a problem with the syntax) Use a clip icon
 	if ([[result primaryType] isEqualToString:QSFormulaType]) {
 		[object setIcon:[[NSWorkspace sharedWorkspace] iconForFileType:@"'clpt'"]];
 		return YES;
 	}
+	// Use the result (a number) as the icon
 	else {
+		// Max icon size for the current command interface
 		NSSize maxIconSize = [[QSReg preferredCommandInterface] maxIconSize];
 		NSBitmapImageRep *bitmap = [[[NSBitmapImageRep alloc] initWithBitmapDataPlanes:NULL
 																			pixelsWide:maxIconSize.width
@@ -128,6 +132,9 @@
 
 				NSString *resultString = [result objectForType:QSTextType];
 
+				// Set the object's details to show the result
+				[object setDetails:resultString];
+				
 				// Sort The text format
 				NSData *data = [[NSUserDefaultsController sharedUserDefaultsController] valueForKeyPath:@"values.QSAppearance1T"];
 				NSColor *textColor = [NSUnarchiver unarchiveObjectWithData:data];
@@ -163,6 +170,7 @@
 				NSImage *icon = [[[NSImage alloc] initWithData:[bitmap TIFFRepresentation]] autorelease];
 				[object setIcon:icon];
 				
+				// release objects
 				[textShadow release];
 		
 				return YES;
