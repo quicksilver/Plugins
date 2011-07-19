@@ -194,7 +194,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 7FFF2559085E488700266176 /* Build configuration list for PBXProject "QSSpotlightPlugIn" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0259C574FE90428111CA0C5A /* QSSpotlightPlugIn */;
 			projectDirPath = "";
 			projectRoot = "";

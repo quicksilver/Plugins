@@ -1,9 +1,8 @@
+#import <CoreWLAN/CoreWLAN.h>
 
+#define kQSWirelessNetworkType @"QSWirelessNetworkType"
+#define kQSAirPortItemType @"QSAirPortItemType"
 
-#import <Foundation/Foundation.h>
-#import <QSCore/QSCore.h>
-
-#define QSAirPortNetworkSSIDType @"QSAirPortNetworkSSIDType"
 @interface QSAirPortNetworkObjectSource : QSObjectSource {
 }
 
@@ -12,6 +11,5 @@
 
 @interface QSAirPortNetworkActionProvider : QSActionProvider{
 }
-- (NSString *) passwordForAirPortNetwork:(NSString *)network;
 
 @end
