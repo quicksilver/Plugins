@@ -243,14 +243,14 @@ And then in your action's code, loop through the objects with:
 
 Unlike the first example, this will *only* work if multiple items were passed in by the user, so you need to write code to detect multiple objects and code to handle the single object case. One way to tell if you're dealing with single vs. multiple objects is to look at the string value:
 
-    if ([[dObject stringValue] isEqualToString:@"combined objects"])
+    if ([dObject count] > 1)
     {
         // multiple objects
     } else {
         // single object
     }
 
-That seems shaky to me (what if Quicksilver doesn't always send that string value?), and I don't think it will work if the objects passed in are `QSFilePathType`, but it seems to work for a majority of cases.
+For actions that won't support the comma trick, you should use the object validation process to prevent those actions from ever showing up, rather than checking for multiple objects in the action itself.
 
 For actions that won't support the comma trick, you should use the object validation process to prevent those actions from ever showing up, rather than checking for multiple objects in the action itself.
 
@@ -364,7 +364,9 @@ There are several ways to create a `QSObject`. Here are a couple:
     QSObject *myObject = [QSObject objectWithName:name];
     QSObject *myObject = [QSObject URLObjectWithURL:url];
 
-All of the available ways and the differences between them isn't entirely clear, so experiment and see what works for you. There are also things you may want to do to your objects prior to adding them to the array to be returned, like `setIdentifier:`, `setLabel:`, `setDetails:`, `setObject:forType:` etc. There's a whole section in this document on `QSObject` that provides more details.
+There is a full list of all the methods available for creating objects in the **Creating** section of this manual.
+
+All of the available ways and the differences between them isn't entirely clear, so experiment and see what works for you. There are also things you may want to do to your objects prior to adding them to the array to be returned, like `setIdentifier:`, `setLabel:`, `setDetails:`, `setName:`, `setObject:forType:` etc. There's a whole section in this document on `QSObject` that provides more details.
 
 #### indexIsValidFromDate
 
@@ -459,8 +461,11 @@ You'll need to create `QSObject`s if adding things to the catalog and also if yo
   * objectWithName
   * makeObjectWithIdentifier
   * objectWithURL
+  * fileObjectWithPath
 
-From glancing at the code, it looks like `objectWithName:` simply creates an empty object and stores the name in the object's dictionary of metadata. `objectWithString:` will use the string to set the name, but it also sets the type to `QSTextType` and then does some fancy analysis to figure out if the string should be treated differently in any way. (I think this is how things get turned into URLs automagically. Also of note: The Mac OS X spell checker has no problem with "automagically".)
+
+`objectWithName:` simply creates an empty object and stores the name in the object's dictionary of metadata.
+`objectWithString:` will use the string to set the name, but it also sets the type to `QSTextType` and then does some fancy analysis (using QSObject (StringHandling)'s `sniffString` method) to figure out if the string should be treated differently in any way. This is how strings can be turned into URL objects or file objects automagically. Also of note: The Mac OS X spell checker has no problem with "automagically".)
 
 Most of the time, you probably want to take advantage of Quicksilver's "smarts" and use `objectWithString:` but if for some reason you just want it to take your string and not mess with it, use `objectWithName:`.
 
@@ -479,6 +484,11 @@ If you choose an identifier that is already in use, you will **replace the exist
   1. For objects that just serve some temporary purpose in the UI, don't even set an identifier.
   2. Wherever possible, use existing objects instead of recreating identical ones.
   3. If you want to use an existing object, but modify it in some way, create a new empty `QSObject` and assign it attributes from the existing object as needed.
+
+#### Name ####
+
+If you've created an object using on of QSObject's more 'basic' methods such as `objectWithIdentifier:` or even `[[QSObject alloc] init]` it is important to set the object's name using the `setName:@"some name (often the same as the label)"` method.
+This is typically the most prominent string in the UI, and for some interfaces (BezelHUD) is the **only** visible string in the results list. Like the label, it is usually the string that Quicksilver matches against when a user is typing.
 
 #### Type ####
 
